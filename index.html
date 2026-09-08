@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyWithSTEM — Science, Visualized</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  :root{
+    --navy:#0B2545;
+    --navy-soft:#173A63;
+    --teal:#1B9AA6;
+    --teal-light:#6FE3D0;
+    --bg:#FFFFFF;
+    --bg-soft:#F2F7F8;
+    --ink:#0B2545;
+    --ink-soft:#4C6280;
+    --line:#DCE6EA;
+    --radius-lg:28px;
+    --radius-sm:10px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;
+    color:var(--navy);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  :focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Space Grotesk'; font-weight:700; font-size:1.15rem;}
+  .brand svg{width:32px; height:32px;}
+  .brand .stem{color:var(--teal);}
+  .navlinks{display:flex; gap:36px; font-size:0.95rem; font-weight:500; color:var(--ink-soft);}
+  .navlinks a:hover{color:var(--navy);}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--navy); color:#fff;
+    padding:11px 22px; border-radius:100px;
+    font-weight:600; font-size:0.92rem;
+    border:none; cursor:pointer;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .btn:hover{background:var(--teal); transform:translateY(-2px);}
+  .btn-ghost{
+    background:transparent; color:var(--navy); border:1.5px solid var(--line);
+  }
+  .btn-ghost:hover{background:var(--bg-soft); transform:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:96px 0 60px;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 5vw, 4.1rem);
+    max-width:11ch;
+  }
+  .hero p.lede{
+    margin-top:22px;
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:42ch;
+    line-height:1.55;
+  }
+  .hero .cta-row{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .hero .stats{
+    display:flex; gap:32px; margin-top:52px;
+    padding-top:28px; border-top:1px solid var(--line);
+    max-width:460px;
+  }
+  .hero .stats div b{
+    display:block; font-family:'Space Grotesk'; font-size:1.6rem; color:var(--navy);
+  }
+  .hero .stats div span{font-size:0.85rem; color:var(--ink-soft);}
+
+  .hero-visual{position:relative; height:460px;}
+  .hero-visual svg{width:100%; height:100%;}
+
+  /* ---------- SUBJECT RAIL ---------- */
+  .rail{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+  }
+  .rail-item{
+    position:relative;
+    min-height:220px;
+    padding:36px 30px;
+    color:#fff;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    overflow:hidden;
+  }
+  .rail-item h3{color:#fff; font-size:1.3rem; margin-bottom:6px;}
+  .rail-item p{font-size:0.88rem; color:rgba(255,255,255,0.78); max-width:22ch;}
+  .rail-item .icon{position:absolute; top:26px; left:30px; width:34px; height:34px; opacity:0.9;}
+  .rail-item:nth-child(1){background:linear-gradient(155deg,#12325A,#1B9AA6);}
+  .rail-item:nth-child(2){background:linear-gradient(155deg,#0F2A52,#1B7D8C);}
+  .rail-item:nth-child(3){background:linear-gradient(155deg,#0B2545,#155873);}
+  .rail-item:nth-child(4){background:linear-gradient(155deg,#0B2545,#123A5E);}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{padding:100px 0;}
+  .section.soft{background:var(--bg-soft);}
+  .sec-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:24px; margin-bottom:52px; flex-wrap:wrap;
+  }
+  .sec-head h2{font-size:clamp(1.9rem, 3vw, 2.6rem); max-width:16ch;}
+  .sec-head p{color:var(--ink-soft); max-width:34ch; font-size:1.02rem; line-height:1.55;}
+
+  /* ---------- DROPS ---------- */
+  .drops-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+  .drop-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    transition:box-shadow .3s ease;
+  }
+  .drop-card:hover{box-shadow:0 24px 48px -24px rgba(11,37,69,0.28);}
+  .drop-thumb{
+    height:190px;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .drop-thumb svg{width:64px; height:64px;}
+  .drop-card:nth-child(1) .drop-thumb{background:radial-gradient(circle at 30% 20%, #2FC5B8, #0B2545);}
+  .drop-card:nth-child(2) .drop-thumb{background:radial-gradient(circle at 70% 20%, #6FE3D0, #12325A);}
+  .drop-card:nth-child(3) .drop-thumb{background:radial-gradient(circle at 50% 80%, #1B9AA6, #0B1F3A);}
+  .drop-body{padding:22px 24px 26px;}
+  .drop-tag{font-size:0.78rem; font-weight:600; color:var(--teal); margin-bottom:8px;}
+  .drop-body h3{font-size:1.18rem; margin-bottom:8px;}
+  .drop-body p{font-size:0.92rem; color:var(--ink-soft); line-height:1.5; margin-bottom:16px;}
+  .drop-body .price{display:flex; justify-content:space-between; align-items:center;}
+  .drop-body .price b{font-family:'Space Grotesk'; font-size:1.1rem;}
+  .drop-link{font-size:0.88rem; font-weight:600; color:var(--navy); display:flex; align-items:center; gap:6px;}
+
+  /* ---------- DATA / CHART SECTION ---------- */
+  .data-wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:64px;
+    align-items:center;
+  }
+  .data-wrap h2{font-size:clamp(1.9rem,3vw,2.5rem); margin-bottom:18px; max-width:14ch;}
+  .data-wrap p{color:var(--ink-soft); line-height:1.6; margin-bottom:28px; max-width:40ch;}
+  .metric-list{display:flex; flex-direction:column; gap:18px;}
+  .metric-list li{display:flex; gap:14px; align-items:baseline; list-style:none;}
+  .metric-list b{font-family:'Space Grotesk'; color:var(--teal); font-size:1.3rem; min-width:70px;}
+  .metric-list span{color:var(--ink-soft); font-size:0.95rem;}
+  .chart-card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:32px; box-shadow:0 30px 60px -30px rgba(11,37,69,0.2);
+  }
+
+  /* ---------- SUPPORT / CTA ---------- */
+  .support{
+    background:var(--navy);
+    color:#fff;
+    border-radius:var(--radius-lg);
+    padding:64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .support::after{
+    content:"";
+    position:absolute; right:-80px; top:-80px;
+    width:340px; height:340px; border-radius:50%;
+    background:radial-gradient(circle, rgba(111,227,208,0.25), transparent 70%);
+  }
+  .support-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; position:relative; z-index:1;}
+  .support h2{color:#fff; font-size:clamp(1.9rem,3vw,2.4rem); max-width:14ch; margin-bottom:16px;}
+  .support p{color:rgba(255,255,255,0.75); line-height:1.6; max-width:38ch;}
+  .support .btn{background:var(--teal-light); color:var(--navy); margin-top:26px;}
+  .support .btn:hover{background:#fff;}
+  .tier-list{display:flex; flex-direction:column; gap:14px;}
+  .tier{
+    display:flex; justify-content:space-between; align-items:center;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:var(--radius-sm);
+    padding:18px 22px;
+  }
+  .tier b{font-family:'Space Grotesk'; font-size:1.1rem;}
+  .tier span{font-size:0.85rem; color:rgba(255,255,255,0.65);}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:56px 0 40px;}
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:1px solid var(--line); padding-top:32px;
+    flex-wrap:wrap; gap:20px;
+  }
+  footer .brand{font-size:1rem;}
+  .social{display:flex; gap:18px;}
+  .social a{color:var(--ink-soft); font-size:0.9rem; font-weight:500;}
+  .social a:hover{color:var(--navy);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:940px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-visual{height:320px; order:-1;}
+    .rail{grid-template-columns:repeat(2,1fr);}
+    .drops-grid{grid-template-columns:1fr;}
+    .data-wrap{grid-template-columns:1fr;}
+    .support-grid{grid-template-columns:1fr;}
+    .support{padding:40px 28px;}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 100 100" fill="none">
+        <path d="M35 15 Q50 25 35 35 Q50 45 35 55 Q50 65 35 75 Q50 85 35 95" stroke="#0B2545" stroke-width="6" stroke-linecap="round"/>
+        <path d="M65 15 Q50 25 65 35 Q50 45 65 55 Q50 65 65 75 Q50 85 65 95" stroke="#1B9AA6" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      StudyWith<span class="stem">STEM</span>
+    </div>
+    <div class="navlinks">
+      <a href="#subjects">Subjects</a>
+      <a href="#drops">Drops</a>
+      <a href="#data">Why it works</a>
+    </div>
+    <a class="btn" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener">Support the project</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Science, visualized — not summarized.</h1>
+      <p class="lede">High-res infographics that turn dense biology, chemistry, physics, and math into visuals your brain actually holds onto. New drop every week.</p>
+      <div class="cta-row">
+        <a class="btn" href="#drops">Browse infographics</a>
+        <a class="btn btn-ghost" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener">Buy me a coffee</a>
+      </div>
+      <div class="stats">
+        <div><b>120+</b><span>Infographics made</span></div>
+        <div><b>4</b><span>Subjects covered</span></div>
+        <div><b>Weekly</b><span>New drops</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 420 460" fill="none" id="heroSvg">
+        <!-- DNA helix -->
+        <path id="dnaA" d="M90 40 C140 80 40 110 90 150 C140 190 40 220 90 260 C140 300 40 330 90 370 C140 410 40 430 90 450"
+              stroke="#1B9AA6" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path id="dnaB" d="M130 40 C80 80 180 110 130 150 C80 190 180 220 130 260 C80 300 180 330 130 370 C80 410 180 430 130 450"
+              stroke="#0B2545" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <!-- molecule -->
+        <g id="molecule" stroke="#0B2545" stroke-width="4">
+          <line x1="270" y1="80" x2="320" y2="60"/>
+          <line x1="270" y1="80" x2="320" y2="110"/>
+          <line x1="270" y1="80" x2="240" y2="130"/>
+          <circle cx="270" cy="80" r="12" fill="#1B9AA6" stroke="none"/>
+          <circle cx="320" cy="60" r="9" fill="#fff" stroke="#0B2545"/>
+          <circle cx="320" cy="110" r="9" fill="#fff" stroke="#0B2545"/>
+          <circle cx="240" cy="130" r="9" fill="#fff" stroke="#0B2545"/>
+        </g>
+        <!-- orbit -->
+        <g id="orbit">
+          <ellipse cx="330" cy="260" rx="70" ry="26" stroke="#1B9AA6" stroke-width="3" fill="none" transform="rotate(20 330 260)"/>
+          <ellipse cx="330" cy="260" rx="70" ry="26" stroke="#1B9AA6" stroke-width="3" fill="none" transform="rotate(-20 330 260)"/>
+          <circle cx="330" cy="260" r="14" fill="#0B2545" stroke="none"/>
+          <circle id="orbitDot" cx="400" cy="260" r="6" fill="#1B9AA6" stroke="none"/>
+        </g>
+        <!-- graph wave -->
+        <path id="wave" d="M240 400 Q270 360 300 400 T360 400 T420 400"
+              stroke="#0B2545" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="rail" id="subjects">
+  <div class="rail-item">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M7 3c0 4 10 4 10 9s-10 5-10 9M17 3c0 4-10 4-10 9s10 5 10 9"/></svg>
+    <h3>Biology</h3>
+    <p>Cells, genetics, systems — mapped so structure actually makes sense.</p>
+  </div>
+  <div class="rail-item">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/></svg>
+    <h3>Chemistry</h3>
+    <p>Bonds, reactions, and the periodic table without the memorization dread.</p>
+  </div>
+  <div class="rail-item">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/></svg>
+    <h3>Physics</h3>
+    <p>Forces, motion, and energy shown moving — not frozen in a diagram.</p>
+  </div>
+  <div class="rail-item">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M4 20V10M11 20V4M18 20v-7"/></svg>
+    <h3>Math</h3>
+    <p>Functions and proofs turned into shapes you can actually follow.</p>
+  </div>
+</section>
+
+<section class="section" id="drops">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Latest infographic drops</h2>
+      <p>Every pack is high-res, print-ready, and built to actually stick — not just look good.</p>
+    </div>
+    <div class="drops-grid">
+      <div class="drop-card" data-tilt data-tilt-max="6" data-tilt-glare data-tilt-max-glare="0.15">
+        <div class="drop-thumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M7 3c0 4 10 4 10 9s-10 5-10 9M17 3c0 4-10 4-10 9s10 5 10 9"/></svg>
+        </div>
+        <div class="drop-body">
+          <div class="drop-tag">BIOLOGY · 5-PACK</div>
+          <h3>Cell Biology Essentials</h3>
+          <p>Structure, mitosis, organelles, membrane transport, and DNA replication.</p>
+          <div class="price"><b>$6</b><a class="drop-link" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener">Get the pack</a></div>
+        </div>
+      </div>
+      <div class="drop-card" data-tilt data-tilt-max="6" data-tilt-glare data-tilt-max-glare="0.15">
+        <div class="drop-thumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/></svg>
+        </div>
+        <div class="drop-body">
+          <div class="drop-tag">CHEMISTRY · 6-PACK</div>
+          <h3>Periodic Table Deep Dive</h3>
+          <p>Groups, trends, electron shells, and bonding — laid out to actually retain.</p>
+          <div class="price"><b>$7</b><a class="drop-link" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener">Get the pack</a></div>
+        </div>
+      </div>
+      <div class="drop-card" data-tilt data-tilt-max="6" data-tilt-glare data-tilt-max-glare="0.15">
+        <div class="drop-thumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/></svg>
+        </div>
+        <div class="drop-body">
+          <div class="drop-tag">PHYSICS · 4-PACK</div>
+          <h3>Physics in Motion</h3>
+          <p>Newton's laws, energy transfer, waves, and projectile motion.</p>
+          <div class="price"><b>$5</b><a class="drop-link" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener">Get the pack</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="data">
+  <div class="wrap data-wrap">
+    <div>
+      <h2>Built for how memory actually works</h2>
+      <p>Visual, spatial information sticks longer than plain text. Every StudyWithSTEM infographic is designed around that — clear hierarchy, one idea per panel, color used to encode meaning instead of decorate.</p>
+      <ul class="metric-list">
+        <li><b>4</b><span>Core subjects — biology, chemistry, physics, math</span></li>
+        <li><b>120+</b><span>Infographics released to date</span></li>
+        <li><b>Weekly</b><span>Cadence for new packs</span></li>
+      </ul>
+    </div>
+    <div class="chart-card">
+      <canvas id="subjectChart" height="260"></canvas>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="support">
+      <div class="support-grid">
+        <div>
+          <h2>Help make the next drop</h2>
+          <p>Every infographic takes hours of research and design to get right. Coffees go straight back into new packs, better tools, and requests from the community.</p>
+          <a class="btn" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+        </div>
+        <div class="tier-list">
+          <div class="tier"><div><b>$3</b><br><span>One coffee</span></div><span>Say thanks</span></div>
+          <div class="tier"><div><b>$5 / mo</b><br><span>Membership</span></div><span>New packs first</span></div>
+          <div class="tier"><div><b>$10</b><br><span>Full bundle</span></div><span>All current packs</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">StudyWith<span class="stem" style="color:#1B9AA6">STEM</span></div>
+    <div class="social">
+      <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://x.com/studywithstem" target="_blank" rel="noopener">X</a>
+      <a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener">Buy Me a Coffee</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Hero SVG entrance: one orchestrated draw-in sequence ----
+  const paths = ['#dnaA','#dnaB'];
+  paths.forEach(sel=>{
+    const el = document.querySelector(sel);
+    const len = el.getTotalLength();
+    el.style.strokeDasharray = len;
+    el.style.strokeDashoffset = len;
+  });
+
+  const tl = anime.timeline({easing:'easeInOutSine'});
+  tl.add({
+    targets:'#dnaA, #dnaB',
+    strokeDashoffset:[anime.setDashoffset, 0],
+    duration:1400,
+    delay:anime.stagger(150)
+  }).add({
+    targets:'#molecule',
+    opacity:[0,1],
+    translateY:[16,0],
+    duration:600
+  }, '-=600')
+  .add({
+    targets:'#orbit',
+    opacity:[0,1],
+    scale:[0.85,1],
+    duration:600
+  }, '-=400')
+  .add({
+    targets:'#wave',
+    opacity:[0,1],
+    duration:500
+  }, '-=300');
+
+  // continuous gentle orbit motion (subtle, single element)
+  anime({
+    targets:'#orbitDot',
+    rotate:'360deg',
+    duration:6000,
+    loop:true,
+    easing:'linear',
+    transformOrigin:'330px 260px'
+  });
+
+  // ---- Tilt cards ----
+  if (window.VanillaTilt) {
+    VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+      max: 6, speed: 400, glare: true, 'max-glare': 0.15
+    });
+  }
+
+  // ---- Subject coverage chart ----
+  const ctx = document.getElementById('subjectChart');
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Biology','Chemistry','Physics','Math'],
+      datasets: [{
+        label: 'Packs released',
+        data: [34, 30, 28, 28],
+        backgroundColor: 'rgba(27,154,166,0.18)',
+        borderColor: '#1B9AA6',
+        borderWidth: 2,
+        pointBackgroundColor: '#0B2545',
+        pointRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      animation: { duration: 1200, easing: 'easeOutQuart' },
+      plugins: { legend: { display: false } },
+      scales: {
+        r: {
+          angleLines: { color: '#DCE6EA' },
+          grid: { color: '#DCE6EA' },
+          pointLabels: { font: { family: 'Inter', size: 12 }, color: '#0B2545' },
+          ticks: { display: false },
+          suggestedMin: 0
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
