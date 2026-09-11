@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Power Calculator — Free Online Tool for Exponents, Negative & Fractional Powers, nth Roots, Powers of 10 & Power Tables | StudyWithSTEM</title>
+<meta name="description" content="Free online power calculator for exponents and roots — exact powers with every digit, negative and fractional exponents, nth roots, powers of ten and power tables, with formulas and steps. No sign-up.">
+<meta name="keywords" content="power calculator, exponent calculator, calculate exponents, power of a number, exponential calculator, x to the power of n, negative exponent calculator, fractional exponent calculator, nth root calculator, square root calculator, cube root calculator, powers of 10, scientific notation calculator, power table generator, laws of exponents, free online math tool">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/physics/power-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Power Calculator — Exponents, Roots, Powers of 10 & Tables | StudyWithSTEM">
+<meta property="og:description" content="Free power calculator with four modes — exact exponents with every digit, nth roots, powers of ten and power tables. Instant results with formulas and steps.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/physics/power-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/power-calculator.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM Power Calculator — free online math tool">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Power Calculator — Free Online Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Exponents, nth roots, powers of 10 and power tables — instant exact answers with formulas and steps.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/power-calculator.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "physics", "item": "https://studywithstem.github.io/tools/physics/" },
+    { "@type": "ListItem", "position": 4, "name": "Power Calculator", "item": "https://studywithstem.github.io/tools/physics/power-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Power Calculator",
+  "url": "https://studywithstem.github.io/tools/physics/power-calculator/",
+  "description": "Free online power calculator with four modes: exact exponentiation of any base to any exponent (including negative, fractional and huge integer powers), nth roots with perfect-power detection, powers of ten with SI prefixes and number names, and power tables for any base. Shows formulas and steps for every result.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Exact powers with arbitrary precision — even 2^1000 printed digit by digit",
+    "Negative exponents shown as exact fractions and decimals side by side",
+    "Fractional exponents unravelled into root form",
+    "nth root calculator with perfect-power detection and ± pair notes",
+    "Powers of ten with SI prefixes, number names and full expansions",
+    "Power tables from power 0 to 30 with copy-ready output"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the power of a number?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Multiply the base by itself as many times as the exponent says: b^n = b × b × … × b with n factors. For example 2^4 = 2 × 2 × 2 × 2 = 16. Type the base and exponent into the Power tab and the calculator handles the rest, including negative, fractional and very large exponents." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a negative exponent mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A negative exponent means take the reciprocal: b^-n = 1 / b^n. So 2^-3 = 1/2^3 = 1/8 = 0.125. The result is not negative — it is a fraction. The calculator shows the exact fraction and the decimal side by side." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is anything to the power of 0 equal to 1?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Each time the exponent rises by 1 you multiply by the base once more; each time it falls by 1 you divide by the base. Stepping from b^1 down to b^0 divides by b once, leaving 1. This holds for every non-zero base. 0^0 is the famous exception: undefined in pure physics, but taken as 1 by convention in almost all textbooks and calculators, including this one." }
+    },
+    {
+      "@type": "Question",
+      "name": "How are fractional exponents and roots related?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A fractional exponent is a root in disguise: b^(1/n) is the n-th root of b, and b^(p/q) = (n-th root of b)^p. For example 9^0.5 = sqrt(9) = 3 and 8^(2/3) = (cube root of 8)^2 = 4. Enter 0.5 as an exponent for a square root, 0.25 for a fourth root, or simply use the Root tab." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the calculator show huge powers like 2^1000 exactly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "When the base is an integer and the exponent is a whole number, the tool switches to arbitrary-precision arithmetic and prints every digit — 2^1000 has 302 of them. Scientific notation is shown alongside, and the full exact value can be copied with one click." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a negative base with a fractional exponent give an error?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Because the result is not a real number. An even root of a negative value requires complex numbers: (-4)^0.5 = 2i. Odd roots are fine — (-8)^(1/3) = -2 — and the calculator does compute them whenever the denominator of the exponent is odd." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the base, the exponent and the power?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In b^n the base b is the number being multiplied, the exponent n counts how many times it is multiplied, and the power is the result. In 2^5 = 32: base 2, exponent 5, power 32. In everyday speech the word power is often used for the exponent too." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this calculator free, and is my data sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It is completely free and runs entirely in your browser — nothing you type is uploaded, logged, or sent to a server. No account, no sign-up, no limits." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= POWER CALCULATOR (page-specific layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.tool-tabs{display:flex; border-bottom:1px solid var(--edge); overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.tool-tabs::-webkit-scrollbar{display:none;}
+.ttab{
+  flex:1 0 auto; padding:17px 18px; background:none; border:none; cursor:pointer; white-space:nowrap;
+  position:relative; margin-bottom:-1px; font:600 .82rem/1.1 var(--f-sans); color:var(--muted);
+  transition:color .25s, background .25s;
+}
+.ttab .mono{font:700 .58rem var(--f-mono); letter-spacing:.08em; color:var(--faint); margin-right:9px;}
+.ttab::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--accent); transform:scaleX(0); transition:transform .3s ease;}
+.ttab:hover{color:var(--ink); background:var(--panel);}
+.ttab.active{color:var(--accent);}
+.ttab.active .mono{color:var(--accent);}
+.ttab.active::after{transform:scaleX(1);}
+
+.tpanel{display:none; padding:30px;}
+.tpanel.active{display:block;}
+.tool-grid{display:grid; grid-template-columns:.92fr 1.08fr; gap:32px; align-items:start;}
+
+.t-field{margin-bottom:20px;}
+.t-field:last-child{margin-bottom:0;}
+.t-field>label{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;}
+.t-field .hint{font:.76rem/1.5 var(--f-sans); color:var(--faint); margin-top:7px;}
+
+.t-num{position:relative;}
+.t-num input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 58px 13px 15px; color:var(--ink); font:600 1.04rem var(--f-mono); transition:border-color .25s;
+}
+.t-num input:focus{outline:none; border-color:var(--accent);}
+.t-num .suf{position:absolute; right:14px; top:50%; transform:translateY(-50%); font:700 .68rem var(--f-mono); letter-spacing:.06em; color:var(--faint); pointer-events:none;}
+
+.t-select{position:relative;}
+.t-select select{
+  width:100%; appearance:none; -webkit-appearance:none; cursor:pointer;
+  background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 42px 13px 15px; color:var(--ink); font:.9rem var(--f-sans); transition:border-color .25s;
+}
+.t-select select:focus{outline:none; border-color:var(--accent);}
+.t-select select option{background:var(--bg); color:var(--ink);}
+.t-select svg{position:absolute; right:14px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--faint); pointer-events:none; transition:color .25s;}
+.t-select:focus-within svg{color:var(--accent);}
+
+.t-examples{display:flex; flex-wrap:wrap; gap:8px;}
+.t-chip{
+  font:700 .6rem var(--f-mono); letter-spacing:.07em; color:var(--muted); white-space:nowrap; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:8px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.t-chip:hover{color:var(--accent); border-color:var(--accent);}
+
+.t-err{
+  display:none; margin-top:16px; font:600 .72rem/1.6 var(--f-mono); color:var(--amber);
+  border:1px dashed var(--amber); border-radius:10px; padding:11px 13px;
+}
+.t-err.show{display:block;}
+
+.t-results{
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px;
+  padding:20px 20px 16px; position:sticky; top:calc(var(--navh) + 18px);
+}
+.res-head{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:2px 2px 14px; border-bottom:1px dashed var(--edge-strong);}
+.res-head .rl{font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint);}
+
+.t-copy{
+  display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  font:700 .6rem var(--f-mono); letter-spacing:.1em; color:var(--muted);
+  border:1px solid var(--edge-strong); background:var(--panel); border-radius:8px; padding:8px 11px;
+  transition:color .25s, border-color .25s;
+}
+.t-copy svg{width:12px; height:12px;}
+.t-copy:hover, .t-copy.done{color:var(--accent); border-color:var(--accent);}
+
+.res-hero{padding:18px 2px 14px;}
+.res-hero .rl{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);}
+.res-hero .rv{display:block; font:700 clamp(1.9rem, 4.5vw, 2.5rem)/1.05 var(--f-mono); color:var(--accent); margin-top:8px; letter-spacing:-.02em; word-break:break-word;}
+.res-hero .rv sup{font-size:.55em;}
+.res-hero .rs{display:block; font:600 .76rem/1.6 var(--f-mono); color:var(--muted); margin-top:7px; word-break:break-word;}
+.res-hero .rs sup{font-size:.6em;}
+.res-heroes{display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:16px 0 8px;}
+.res-heroes .res-hero{padding:0;}
+
+.res-row{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:11px 2px; border-top:1px dashed var(--edge);}
+.res-row .rk{font:.82rem var(--f-sans); color:var(--muted);}
+.res-row .rvv{font:700 .84rem var(--f-mono); color:var(--ink); text-align:right; word-break:break-word;}
+.res-row .rvv small{display:block; font:600 .64rem/1.5 var(--f-mono); color:var(--faint); margin-top:3px;}
+.res-row .rvv sup, .res-formula sup{font-size:.6em;}
+
+.res-formula{
+  margin:14px 2px 4px; padding:12px 14px; border:1px dashed var(--edge-strong); border-radius:10px;
+  font:600 .72rem/1.8 var(--f-mono); color:var(--muted); overflow-x:auto; white-space:nowrap;
+}
+.res-formula b{color:var(--accent);}
+
+/* exact big-value block (arbitrary precision results) */
+.res-exact{
+  margin:14px 2px 4px; padding:12px 14px; border:1px dashed var(--edge-strong); border-radius:10px;
+  font:600 .72rem/1.8 var(--f-mono); color:var(--muted);
+  max-height:170px; overflow:auto; word-break:break-all;
+}
+.res-exact .xlab{display:block; font:700 .58rem var(--f-mono); letter-spacing:.14em; color:var(--accent); margin-bottom:6px; text-transform:uppercase;}
+
+/* power table */
+.table-scroll{margin:14px 2px 4px; border:1px dashed var(--edge-strong); border-radius:10px; max-height:400px; overflow:auto;}
+.ptable{width:100%; border-collapse:collapse; font:600 .74rem/1.5 var(--f-mono);}
+.ptable th{
+  position:sticky; top:0; background:var(--bg); z-index:1;
+  font:700 .58rem var(--f-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--faint);
+  padding:10px 14px; border-bottom:1px solid var(--edge-strong); text-align:left;
+}
+.ptable td{padding:8px 14px; border-bottom:1px dashed var(--edge); vertical-align:top;}
+.ptable tr:last-child td{border-bottom:none;}
+.ptable td:first-child{color:var(--accent); white-space:nowrap;}
+.ptable td.pw{color:var(--ink); white-space:nowrap;}
+.ptable td:last-child{word-break:break-all; min-width:110px;}
+
+.t-wait{
+  margin:14px 2px 6px; padding:30px 16px; border:1px dashed var(--edge); border-radius:10px;
+  font:600 .7rem var(--f-mono); letter-spacing:.08em; color:var(--faint); text-align:center;
+}
+
+.t-seg{display:flex; border:1px solid var(--edge-strong); border-radius:10px; overflow:hidden; margin-bottom:20px;}
+.t-seg button{
+  flex:1; padding:11px 10px; background:none; border:none; cursor:pointer;
+  font:600 .78rem/1.2 var(--f-sans); color:var(--muted); transition:background .25s, color .25s;
+}
+.t-seg button + button{border-left:1px solid var(--edge-strong);}
+.t-seg button.active{background:var(--accent); color:var(--accent-ink); font-weight:700;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
+}
+.fx .formula sup{font-size:.6em;}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .tool-grid{grid-template-columns:1fr; gap:24px;}
+  .t-results{position:static;}
+  .tpanel{padding:22px 18px 26px;}
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .res-heroes{grid-template-columns:1fr; gap:10px;}
+  .ttab{padding:15px 13px; font-size:.76rem;}
+  .t-num input{padding:12px 52px 12px 14px; font-size:.98rem;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · physics</p>
+    <h1>Power Calculator</h1>
+    <p class="lede">Exponents and roots worked out instantly — exact answers, scientific notation and the multiplication behind every result, shown right next to it.</p>
+    <span class="updated"><i></i>4 MODES · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE CALCULATOR</span>
+      <h2>Four calculators, one panel.</h2>
+      <p>Pick a mode below — everything recalculates live as you type, and every result explains itself.</p>
+    </div>
+
+    <div class="tool-shell">
+
+      <div class="tool-tabs" role="tablist" aria-label="Power calculator modes">
+        <button class="ttab active" id="tab-power" role="tab" aria-selected="true"  data-tab="power" type="button"><span class="mono">01</span>Power bⁿ</button>
+        <button class="ttab" id="tab-root"  role="tab" aria-selected="false" data-tab="root"  type="button"><span class="mono">02</span>Root ⁿ√x</button>
+        <button class="ttab" id="tab-ten"   role="tab" aria-selected="false" data-tab="ten"   type="button"><span class="mono">03</span>Powers of 10</button>
+        <button class="ttab" id="tab-table" role="tab" aria-selected="false" data-tab="table" type="button"><span class="mono">04</span>Power table</button>
+      </div>
+
+      <!-- ========== PANEL 1 · POWER bⁿ ========== -->
+      <div class="tpanel active" id="panel-power" role="tabpanel" aria-labelledby="tab-power">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="p-base">Base (b)</label>
+              <div class="t-num">
+                <input type="number" id="p-base" value="2" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">B</span>
+              </div>
+              <p class="hint">The number being multiplied by itself — whole, decimal, positive or negative.</p>
+            </div>
+            <div class="t-field">
+              <label for="p-exp">Exponent (n)</label>
+              <div class="t-num">
+                <input type="number" id="p-exp" value="10" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">N</span>
+              </div>
+              <p class="hint">How many times — negatives give reciprocals, decimals like 0.5 give roots.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-b="2" data-n="10">2^10 · CLASSIC</button>
+                <button type="button" class="t-chip" data-b="2" data-n="100">2^100 · EVERY DIGIT</button>
+                <button type="button" class="t-chip" data-b="2" data-n="-5">2^-5 · RECIPROCAL</button>
+                <button type="button" class="t-chip" data-b="9" data-n="0.5">9^0.5 · ROOT FORM</button>
+                <button type="button" class="t-chip" data-b="-2" data-n="7">(-2)^7 · NEG BASE</button>
+              </div>
+            </div>
+            <p class="t-err" id="p-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="p-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="p-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 2 · ROOT ⁿ√x ========== -->
+      <div class="tpanel" id="panel-root" role="tabpanel" aria-labelledby="tab-root">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="r-num">Number (x)</label>
+              <div class="t-num">
+                <input type="number" id="r-num" value="144" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">X</span>
+              </div>
+              <p class="hint">The value under the radical sign — e.g. 144, 27, 2 or −8.</p>
+            </div>
+            <div class="t-field">
+              <label for="r-deg">Root degree (n)</label>
+              <div class="t-num">
+                <input type="number" id="r-deg" value="2" min="1" step="1" inputmode="numeric" autocomplete="off">
+                <span class="suf">N</span>
+              </div>
+              <p class="hint">2 = square root, 3 = cube root, 4 = fourth root… must be a whole number.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-x="144" data-d="2">√144 · SQUARE</button>
+                <button type="button" class="t-chip" data-x="27" data-d="3">∛27 · CUBE</button>
+                <button type="button" class="t-chip" data-x="2" data-d="2">√2 · IRRATIONAL</button>
+                <button type="button" class="t-chip" data-x="-8" data-d="3">∛-8 · ODD ROOT</button>
+                <button type="button" class="t-chip" data-x="65536" data-d="4">⁴√65536 · 16</button>
+              </div>
+            </div>
+            <p class="t-err" id="r-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="r-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="r-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 3 · POWERS OF 10 ========== -->
+      <div class="tpanel" id="panel-ten" role="tabpanel" aria-labelledby="tab-ten">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="t-exp">Exponent (n)</label>
+              <div class="t-num">
+                <input type="number" id="t-exp" value="6" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">N</span>
+              </div>
+              <p class="hint">Positive for large numbers, negative for small ones — decimals allowed.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-n="6">10^6 · MILLION</button>
+                <button type="button" class="t-chip" data-n="9">10^9 · BILLION</button>
+                <button type="button" class="t-chip" data-n="-3">10^-3 · THOUSANDTH</button>
+                <button type="button" class="t-chip" data-n="-6">10^-6 · MILLIONTH</button>
+                <button type="button" class="t-chip" data-n="100">10^100 · GOOGOL</button>
+              </div>
+            </div>
+            <p class="t-err" id="t-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="t-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="t-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 4 · POWER TABLE ========== -->
+      <div class="tpanel" id="panel-table" role="tabpanel" aria-labelledby="tab-table">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="tb-base">Base (b)</label>
+              <div class="t-num">
+                <input type="number" id="tb-base" value="2" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">B</span>
+              </div>
+              <p class="hint">Any number — integer bases give exact values, digit by digit.</p>
+            </div>
+            <div class="t-field">
+              <label for="tb-k">Highest power (k)</label>
+              <div class="t-num">
+                <input type="number" id="tb-k" value="10" min="1" max="30" step="1" inputmode="numeric" autocomplete="off">
+                <span class="suf">N</span>
+              </div>
+              <p class="hint">The table runs from power 0 up to this — a whole number from 1 to 30.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-b="2" data-k="10">POWERS OF 2</button>
+                <button type="button" class="t-chip" data-b="3" data-k="10">POWERS OF 3</button>
+                <button type="button" class="t-chip" data-b="10" data-k="10">POWERS OF 10</button>
+                <button type="button" class="t-chip" data-b="5" data-k="8">POWERS OF 5</button>
+              </div>
+            </div>
+            <p class="t-err" id="tb-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="tb-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="tb-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE</span>
+      <h2>Four steps, ten seconds.</h2>
+      <p>No manual needed — this is the whole workflow, start to finish.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n mono">STEP 01</span>
+        <h3>Pick a mode</h3>
+        <p>Power, root, powers of ten or a full table — the tabs at the top of the calculator switch instantly, and each one keeps its own inputs.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 02</span>
+        <h3>Type your numbers</h3>
+        <p>Enter a base and an exponent — or a number and a root degree. Results update live on every keystroke; there is no calculate button to hunt for.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 03</span>
+        <h3>Read the full answer</h3>
+        <p>Every result shows the exact value, scientific notation, the fraction or root form where relevant, and the formula that produced it.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 04</span>
+        <h3>Copy or explore</h3>
+        <p>Hit COPY to take the whole result with you, or tap an example chip to load a worked case instantly and see how the numbers behave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE MATH ============ -->
+<section class="sec" id="formulas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · THE MATH</span>
+      <h2>The laws behind the buttons.</h2>
+      <p>Six rules cover almost every power you will ever meet — the calculator applies all of them for you.</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>The basic power</h3>
+        <div class="formula">bⁿ = b × b × ⋯ × b&nbsp;&nbsp;(n factors)</div>
+        <p>The exponent counts how many copies of the base get multiplied. 2⁵ = 2 × 2 × 2 × 2 × 2 = 32.</p>
+      </div>
+      <div class="fx">
+        <h3>The zero power</h3>
+        <div class="formula">b⁰ = 1</div>
+        <p>Multiply zero copies of the base and you are left with the empty product — 1. It holds for every non-zero base.</p>
+      </div>
+      <div class="fx">
+        <h3>Negative powers</h3>
+        <div class="formula">b⁻ⁿ = 1 / bⁿ</div>
+        <p>A negative exponent flips the base into its reciprocal: 2⁻³ = 1/2³ = 1/8 = 0.125. The result is small, not negative.</p>
+      </div>
+      <div class="fx">
+        <h3>Fractional powers</h3>
+        <div class="formula">b^(p/q) = ( q√b )^p</div>
+        <p>A fractional exponent is a root in disguise: 8^(2/3) = (∛8)² = 2² = 4, and 9^0.5 is simply √9 = 3.</p>
+      </div>
+      <div class="fx">
+        <h3>Roots as powers</h3>
+        <div class="formula">ⁿ√x = x^(1/n)</div>
+        <p>Every root is a power with a reciprocal exponent. ∛64 = 64^(1/3) = 4, because 4³ = 64.</p>
+      </div>
+      <div class="fx">
+        <h3>Combining powers</h3>
+        <div class="formula">bᵐ · bⁿ = b^(m+n)&nbsp;&nbsp;·&nbsp;&nbsp;(bᵐ)ⁿ = b^(mn)</div>
+        <p>Multiply same-base powers by adding exponents; raise a power to a power by multiplying them. 2³ · 2² = 2⁵ = 32.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="sec-head">
+        <span class="sec-idx mono">04 · FAQ</span>
+        <h2>Questions, answered.</h2>
+        <p>The eight things people ask most about powers, roots and this calculator — answered plainly.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How do I calculate the power of a number?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Multiply the base by itself as many times as the exponent says: <code>bⁿ = b × b × ⋯ × b</code> with n factors. For example <code>2⁴ = 2 × 2 × 2 × 2 = 16</code>. Type the base and exponent into the Power tab and the calculator handles the rest — including negative, fractional and very large exponents.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What does a negative exponent mean?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>A negative exponent means "take the reciprocal": <code>b⁻ⁿ = 1 / bⁿ</code>. So <code>2⁻³ = 1/2³ = 1/8 = 0.125</code>. The result is not negative — it is a fraction. The calculator shows the exact fraction and the decimal side by side.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why is anything to the power of 0 equal to 1?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Each time the exponent rises by 1 you multiply by the base once more; each time it falls by 1 you divide by the base. Stepping from <code>b¹</code> down to <code>b⁰</code> divides by b once, leaving 1 — true for every non-zero base.</p>
+            <p><code>0⁰</code> is the famous exception: undefined in pure physics, but taken as 1 by convention in almost all textbooks and calculators, including this one.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How are fractional exponents and roots related?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>A fractional exponent is a root in disguise: <code>b^(1/n)</code> is the n-th root of b, and <code>b^(p/q) = (ⁿ√b)^p</code>. For example <code>9^0.5 = √9 = 3</code> and <code>8^(2/3) = (∛8)² = 4</code>.</p>
+            <p>Enter 0.5 as an exponent for a square root, 0.25 for a fourth root — or simply use the Root tab.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How does the calculator show huge powers like 2¹⁰⁰⁰ exactly?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>When the base is an integer and the exponent is a whole number, the tool switches to arbitrary-precision arithmetic and prints every digit — <code>2¹⁰⁰⁰</code> has 302 of them. Scientific notation is shown alongside, and the full exact value can be copied with one click.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why does a negative base with a fractional exponent give an error?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Because the result is not a real number. An even root of a negative value requires complex numbers: <code>(−4)^0.5 = 2i</code>. Odd roots are fine — <code>(−8)^(1/3) = −2</code> — and the calculator does compute them whenever the denominator of the exponent is odd.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between the base, the exponent and the power?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>In <code>bⁿ</code>, the base b is the number being multiplied, the exponent n counts how many times it is multiplied, and the power is the result. In <code>2⁵ = 32</code>: base 2, exponent 5, power 32. In everyday speech "power" is often used for the exponent too — context makes it clear.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this calculator free, and is my data sent anywhere?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>It is completely free and runs entirely in your browser — nothing you type is uploaded, logged, or sent to a server. No account, no sign-up, no limits.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ SUBSCRIBE STRIP (upper footer — shared block, keep as on live site) ============ -->
+<section class="pre-footer">
+  <div class="wrap">
+    <div class="pre-footer-inner">
+      <div class="pf-text">
+        <span class="sec-idx mono">THE DISPATCH</span>
+        <h2>One email. <span class="hl">Every week.</span></h2>
+        <p>New tools, new posts and the best of STEM — straight to your inbox. No noise, unsubscribe anytime.</p>
+      </div>
+      <form class="pf-form" id="subForm" novalidate>
+        <input type="text" placeholder="Your name" aria-label="Your name" autocomplete="name">
+        <input type="email" placeholder="you@email.com" aria-label="Your email" autocomplete="email" required>
+        <label class="pf-check">
+          <input type="checkbox" required>
+          <span>I agree to the privacy policy and to receive the weekly newsletter.</span>
+        </label>
+        <button class="btn-ticket" type="submit">
+          <span>Subscribe</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (shared block, keep as on live site) ============ -->
+<footer>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand" aria-label="StudyWithSTEM home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Free tools and plain-English explainers across physics, physics and engineering — built for students, checked twice.</p>
+        <span class="foot-terminal"><span class="p">$</span> study --with-stem<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/tools/physics/">physics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          <li><a href="/tools/physics/">Physics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          <li><a href="/tools/">All tools <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/posts/">Posts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          <li><a href="/page/contact/">Contact <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          <li><a href="/page/subscription/">Subscription <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">Instagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">Buy me a coffee <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>π = 3.14159265</span><span>e = 2.71828183</span><span>√2 = 1.41421356</span><span>φ = 1.61803399</span><span>c = 299 792 458 m/s</span><span>h = 6.62607015 × 10⁻³⁴ J·s</span><span>Nᴀ = 6.02214076 × 10²³ mol⁻¹</span><span>G = 6.67430 × 10⁻¹¹ m³·kg⁻¹·s⁻²</span><span>g = 9.80665 m/s²</span><span>1 eV = 1.60217663 × 10⁻¹⁹ J</span>
+        <span>π = 3.14159265</span><span>e = 2.71828183</span><span>√2 = 1.41421356</span><span>φ = 1.61803399</span><span>c = 299 792 458 m/s</span><span>h = 6.62607015 × 10⁻³⁴ J·s</span><span>Nᴀ = 6.02214076 × 10²³ mol⁻¹</span><span>G = 6.67430 × 10⁻¹¹ m³·kg⁻¹·s⁻²</span><span>g = 9.80665 m/s²</span><span>1 eV = 1.60217663 × 10⁻¹⁹ J</span>
+      </div>
+    </div>
+
+    <div class="foot-mid">
+      <span class="foot-meta">© 2025 STUDYWITHSTEM · BUILT FOR CURIOUS MINDS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SITE SCRIPTS (theme, nav, menu, footer — shared behaviour) ============ -->
+<script>
+(function(){
+'use strict';
+
+/* ---------- theme toggle ---------- */
+var tt = document.getElementById('themeToggle');
+function applyTheme(t){
+  document.documentElement.dataset.theme = t;
+  if (tt) tt.setAttribute('aria-pressed', t === 'light' ? 'true' : 'false');
+}
+applyTheme(document.documentElement.dataset.theme || 'dark');
+if (tt){
+  tt.addEventListener('click', function(){
+    var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.body.classList.add('theme-anim');
+    applyTheme(next);
+    try{ localStorage.setItem('sws-theme', next); }catch(e){}
+    setTimeout(function(){ document.body.classList.remove('theme-anim'); }, 550);
+  });
+}
+
+/* ---------- nav: hide on scroll down, progress comet ---------- */
+var nav = document.getElementById('nav');
+var navProg = document.getElementById('navProg');
+var lastY = window.scrollY || 0;
+function onScroll(){
+  var y = window.scrollY || 0;
+  if (nav){
+    nav.classList.toggle('scrolled', y > 8);
+    if (y > 140 && y > lastY + 4) nav.classList.add('hide');
+    else if (y < lastY - 4 || y <= 140) nav.classList.remove('hide');
+  }
+  if (navProg){
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+    var w = navProg.parentNode.clientWidth || 0;
+    navProg.style.transform = 'translateX(' + (-90 + p * (w + 100)) + 'px)';
+  }
+  lastY = y;
+}
+window.addEventListener('scroll', onScroll, { passive:true });
+window.addEventListener('resize', onScroll);
+onScroll();
+
+/* ---------- mobile menu ---------- */
+var burger = document.getElementById('burger');
+function closeMenu(){
+  document.body.classList.remove('menu-open', 'locked');
+  if (burger) burger.setAttribute('aria-expanded', 'false');
+}
+if (burger){
+  burger.addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu-open');
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
+var mmenu = document.getElementById('mmenu');
+if (mmenu){
+  Array.prototype.forEach.call(mmenu.querySelectorAll('a'), function(a){
+    a.addEventListener('click', closeMenu);
+  });
+}
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') closeMenu();
+});
+
+/* ---------- back to top ---------- */
+var backTop = document.getElementById('backTop');
+if (backTop){
+  backTop.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
+}
+
+/* ---------- footer staggered reveal ---------- */
+var footer = document.querySelector('footer');
+if (footer){
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ footer.classList.add('in'); obs.disconnect(); }
+      });
+    }, { threshold: 0.12 });
+    io.observe(footer);
+  } else footer.classList.add('in');
+}
+
+/* ---------- starfield ---------- */
+var cv = document.getElementById('starfield');
+if (cv && cv.getContext){
+  var ctx = cv.getContext('2d');
+  var stars = [], W = 1, H = 1;
+  var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function sizeField(){
+    var rect = cv.getBoundingClientRect();
+    W = cv.width = Math.max(1, Math.floor(rect.width));
+    H = cv.height = Math.max(1, Math.floor(rect.height));
+    var count = Math.min(240, Math.floor((W * H) / 9000));
+    stars = [];
+    for (var i = 0; i < count; i++){
+      stars.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.3 + 0.3,
+        p: Math.random() * Math.PI * 2,
+        s: 0.4 + Math.random() * 1.2
+      });
+    }
+  }
+  function drawField(t){
+    ctx.clearRect(0, 0, W, H);
+    var light = document.documentElement.dataset.theme === 'light';
+    for (var i = 0; i < stars.length; i++){
+      var st = stars[i];
+      var a = 0.25 + 0.75 * Math.abs(Math.sin(t / 1000 * st.s + st.p));
+      ctx.beginPath();
+      ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+      ctx.fillStyle = light ? 'rgba(11,37,69,' + (a * 0.5).toFixed(3) + ')' : 'rgba(241,237,226,' + a.toFixed(3) + ')';
+      ctx.fill();
+    }
+    if (!reduced) requestAnimationFrame(drawField);
+  }
+  sizeField();
+  window.addEventListener('resize', sizeField);
+  requestAnimationFrame(drawField);
+}
+
+/* ---------- subscribe strip ---------- */
+var subForm = document.getElementById('subForm');
+if (subForm){
+  subForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = subForm.querySelector('input[type="email"]');
+    var label = subForm.querySelector('.btn-ticket span');
+    if (!email || !email.value || email.value.indexOf('@') === -1){
+      if (email) email.focus();
+      return;
+    }
+    subForm.reset();
+    if (label){
+      label.textContent = 'You are on the list ✓';
+      setTimeout(function(){ label.textContent = 'Subscribe'; }, 4000);
+    }
+  });
+}
+})();
+</script>
+
+<!-- ============ POWER CALCULATOR LOGIC ============ -->
+<script>
+(function(){
+'use strict';
+var $ = function(id){ return document.getElementById(id); };
+
+/* ---------- display helpers ---------- */
+function sup(x){ return '<sup>' + x + '</sup>'; }
+function mm(s){ return String(s).replace(/-/g, '−'); }
+function numStr(v){ return String(v); }
+
+function groupDigits(str){
+  str = String(str);
+  var neg = str.charAt(0) === '-';
+  if (neg) str = str.slice(1);
+  var frac = '', dot = str.indexOf('.');
+  if (dot !== -1){ frac = str.slice(dot); str = str.slice(0, dot); }
+  str = str.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return (neg ? '-' : '') + str + frac;
+}
+function trimMant(m){ return m.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, ''); }
+
+function fmtSciHTML(v){
+  if (v === 0) return '0';
+  if (!isFinite(v)) return (v > 0 ? '∞' : '−∞');
+  var neg = v < 0, a = Math.abs(v);
+  var exp = Math.floor(Math.log10(a));
+  var m = (a / Math.pow(10, exp)).toFixed(6);
+  if (parseFloat(m) >= 10){ exp += 1; m = (a / Math.pow(10, exp)).toFixed(6); }
+  return (neg ? '-' : '') + trimMant(m) + ' × 10' + sup(mm(exp));
+}
+function fmtSciText(v){
+  if (v === 0) return '0';
+  var neg = v < 0, a = Math.abs(v);
+  var exp = Math.floor(Math.log10(a));
+  var m = (a / Math.pow(10, exp)).toFixed(6);
+  if (parseFloat(m) >= 10){ exp += 1; m = (a / Math.pow(10, exp)).toFixed(6); }
+  return (neg ? '-' : '') + trimMant(m) + ' x 10^' + exp;
+}
+function fmtNumHTML(v){
+  if (isNaN(v)) return '—';
+  if (!isFinite(v)) return (v > 0 ? '∞' : '−∞');
+  if (v === 0) return '0';
+  var a = Math.abs(v);
+  if (Number.isInteger(v) && a < 1e15) return groupDigits(String(v));
+  if (a >= 1e12 || a < 1e-7) return fmtSciHTML(v);
+  var s = v.toPrecision(12);
+  if (/e/i.test(s)) return fmtSciHTML(v);
+  return groupDigits(trimMant(s));
+}
+function fmtNumText(v){
+  if (isNaN(v) || !isFinite(v)) return String(v);
+  if (v === 0) return '0';
+  var a = Math.abs(v);
+  if (Number.isInteger(v) && a < 1e15) return String(v);
+  if (a >= 1e12 || a < 1e-7) return fmtSciText(v);
+  var s = v.toPrecision(12);
+  if (/e/i.test(s)) return fmtSciText(v);
+  return trimMant(s);
+}
+function bigSciParts(str){
+  str = String(str);
+  var neg = str.charAt(0) === '-';
+  if (neg) str = str.slice(1);
+  if (str === '0') return { html:'0', text:'0' };
+  var exp = str.length - 1;
+  var mant = str.charAt(0);
+  if (str.length > 1){
+    var rest = str.slice(1, 8).replace(/0+$/, '');
+    if (rest) mant += '.' + rest;
+  }
+  return { html:(neg ? '-' : '') + mant + ' × 10' + sup(mm(exp)), text:(neg ? '-' : '') + mant + ' x 10^' + exp };
+}
+function powLogSciParts(b, n){
+  var logv = n * Math.log10(Math.abs(b));
+  if (!isFinite(logv)) return null;
+  var exp = Math.floor(logv);
+  var m = Math.pow(10, logv - exp).toFixed(6);
+  if (parseFloat(m) >= 10){ exp += 1; m = Math.pow(10, logv - exp).toFixed(6); }
+  var neg = (b < 0 && Math.abs(n) % 2 === 1);
+  return { html:(neg ? '-' : '') + trimMant(m) + ' × 10' + sup(mm(exp)), text:(neg ? '-' : '') + trimMant(m) + ' x 10^' + exp };
+}
+function gcd(a, b){ while (b){ var t = a % b; a = b; b = t; } return a; }
+function asFraction(n){
+  if (Number.isInteger(n)) return { p:n, q:1 };
+  var sign = n < 0 ? -1 : 1, a = Math.abs(n);
+  for (var q = 2; q <= 12; q++){
+    for (var p = 1; p <= 60; p++){
+      if (Math.abs(a - p / q) < 1e-9){
+        var g = gcd(p, q) || 1;
+        return { p: sign * (p / g), q: q / g };
+      }
+    }
+  }
+  return null;
+}
+
+/* ---------- render building blocks ---------- */
+function heroBlock(lab, val, sub){
+  return '<div class="res-hero"><span class="rl">' + lab + '</span><span class="rv">' + val + '</span>' + (sub ? '<span class="rs">' + sub + '</span>' : '') + '</div>';
+}
+function heroes2(h1, h2){ return '<div class="res-heroes">' + h1 + h2 + '</div>'; }
+function rowHTML(k, v, small){
+  return '<div class="res-row"><span class="rk">' + k + '</span><span class="rvv">' + v + (small ? '<small>' + small + '</small>' : '') + '</span></div>';
+}
+function formulaHTML(inner){ return '<div class="res-formula">' + inner + '</div>'; }
+function waitBox(msg){ return '<div class="t-wait">' + (msg || 'WAITING FOR INPUT') + '</div>'; }
+function exactBlock(label, content){ return '<div class="res-exact"><span class="xlab">' + label + '</span>' + content + '</div>'; }
+function factorStr(b){ return b < 0 ? '(' + numStr(b) + ')' : numStr(b); }
+function expDisplay(n, fr){
+  if (fr && fr.q >= 2) return '(' + fr.p + '/' + fr.q + ')';
+  if (Number.isInteger(n)) return mm(String(n));
+  return mm(String(parseFloat(n.toFixed(6))));
+}
+function powerLabel(b, n, fr){ return factorStr(b) + sup(expDisplay(n, fr)); }
+function chainFactors(fb, count){
+  if (count < 1) return fb;
+  if (count <= 8){
+    var arr = [];
+    for (var i = 0; i < count; i++) arr.push(fb);
+    return arr.join(' × ');
+  }
+  return fb + ' × ' + fb + ' × … × ' + fb;
+}
+
+/* =================== MODE 1 · POWER bⁿ =================== */
+function computePower(b, n){
+  var intExp = Number.isInteger(n);
+  var intBase = Number.isInteger(b);
+
+  if (b === 0){
+    if (n > 0) return { ok:true, kind:'zero', b:b, n:n };
+    if (n === 0) return { ok:true, kind:'zero-zero', b:b, n:n };
+    return { ok:false, err:'0 cannot be raised to a negative power — that would mean 1 ÷ 0, which is division by zero. Use a non-negative exponent, or change the base.' };
+  }
+  if (n === 0) return { ok:true, kind:'zero-exp', b:b, n:n };
+  if (intBase && Math.abs(b) === 1){
+    if (b === 1 || intExp) return { ok:true, kind:'unit', b:b, n:n };
+    return { ok:false, err:'(−1) raised to a fractional power gives a complex number — use a whole-number exponent such as 3 or −2.' };
+  }
+
+  /* integer base + whole exponent → exact arbitrary-precision path */
+  if (intExp && intBase && Math.abs(b) >= 2){
+    var ab = Math.abs(b);
+    var digits = Math.floor(Math.abs(n) * Math.log10(ab)) + 1;
+    if (digits <= 5000){
+      var mag = (BigInt(ab) ** BigInt(Math.abs(n))).toString();
+      var negRes = (b < 0 && Math.abs(n) % 2 === 1);
+      if (n > 0) return { ok:true, kind:'exact-pos', b:b, n:n, mag:mag, exact:(negRes ? '-' : '') + mag, digits:digits };
+      return { ok:true, kind:'exact-neg', b:b, n:n, mag:mag, denom:(negRes ? '-' : '') + mag, digits:digits };
+    }
+    var sci = powLogSciParts(b, n);
+    if (!sci) return { ok:false, err:'That exponent is too extreme to process — keep it within roughly a billion.' };
+    return { ok:true, kind:'huge', b:b, n:n, sci:sci, digits:digits };
+  }
+
+  /* fractional exponent */
+  if (!intExp){
+    if (b < 0){
+      var fr = asFraction(n);
+      if (fr && fr.q % 2 === 1){
+        var vn = Math.pow(-b, n) * ((Math.abs(fr.p) % 2 === 1) ? -1 : 1);
+        return { ok:true, kind:'frac-neg', b:b, n:n, fr:fr, value:vn };
+      }
+      return { ok:false, err:'A negative base raised to a fractional exponent has no real answer — the result is a complex number. Use a positive base, or a whole-number exponent such as 3 or −2.' };
+    }
+    var vf = Math.pow(b, n);
+    if (isNaN(vf)) return { ok:false, err:'These inputs do not give a real result.' };
+    if (!isFinite(vf)) return { ok:false, err:'The result overflows — beyond roughly 1.8 × 10³⁰⁸. Lower the exponent, or use an integer base with a whole-number exponent to unlock exact big-number mode.' };
+    return { ok:true, kind:'frac', b:b, n:n, value:vf, fr:asFraction(n) };
+  }
+
+  /* whole exponent, non-integer base */
+  var vp = Math.pow(b, n);
+  if (!isFinite(vp)) return { ok:false, err:'The result is out of range — beyond roughly 1.8 × 10³⁰⁸. Lower the exponent, or bring the base closer to 1.' };
+  if (vp === 0) return { ok:true, kind:'underflow', b:b, n:n };
+  return { ok:true, kind:'plain', b:b, n:n, value:vp };
+}
+
+var powerCopy = '';
+
+function renderPower(){
+  var out = $('p-out'), errEl = $('p-err');
+  errEl.classList.remove('show');
+  var bRaw = $('p-base').value.trim();
+  var nRaw = $('p-exp').value.trim();
+  if (bRaw === '' || nRaw === ''){
+    out.innerHTML = waitBox('ENTER A BASE AND AN EXPONENT');
+    powerCopy = '';
+    return;
+  }
+  var b = Number(bRaw), n = Number(nRaw);
+  var bad = function(msg){
+    errEl.textContent = msg;
+    errEl.classList.add('show');
+    out.innerHTML = waitBox('WAITING FOR VALID NUMBERS');
+    powerCopy = '';
+  };
+  if (!isFinite(b) || !isFinite(n)){ bad('Enter valid numbers for the base and the exponent — both must sit within standard numeric range.'); return; }
+
+  var R = computePower(b, n);
+  if (!R.ok){ bad(R.err); return; }
+
+  var bStr = numStr(b), nStr = numStr(n);
+  var fb = factorStr(b);
+  var lab = powerLabel(b, n, R.fr);
+  var H = '';
+  var C = ['Power Calculator — StudyWithSTEM'];
+
+  if (R.kind === 'exact-pos'){
+    var grouped = groupDigits(R.exact);
+    var sci = bigSciParts(R.exact);
+    var shortH = R.digits <= 15 ? grouped : sci.html;
+    var sub = (n === 1) ? 'the base, used once' : fb + ' multiplied by itself ' + n + ' times';
+    H += heroBlock(lab, shortH, sub);
+    if (R.digits > 15) H += exactBlock('EXACT VALUE · ' + R.digits + ' DIGITS', grouped);
+    var rows = rowHTML('Base', bStr) + rowHTML('Exponent', nStr) + rowHTML('Scientific notation', sci.html);
+    if (b < 0) rows += rowHTML('Result sign', R.exact.charAt(0) === '-' ? 'negative' : 'positive', (Math.abs(n) % 2 === 1 ? 'odd' : 'even') + ' power of a negative base');
+    if (R.digits > 15) rows += rowHTML('Digits', String(R.digits), 'every one shown above');
+    H += rows;
+    H += formulaHTML('<b>' + lab + '</b> = ' + chainFactors(fb, n) + (n > 8 ? ' (' + n + ' factors)' : ''));
+    C.push(bStr + '^' + nStr + ' = ' + R.exact);
+    C.push('Scientific: ' + sci.text);
+    C.push('Steps: ' + bStr + ' multiplied by itself ' + n + ' times');
+  }
+  else if (R.kind === 'exact-neg'){
+    var negDen = R.denom.charAt(0) === '-';
+    var fracH = (negDen ? '−1 / ' : '1 / ') + groupDigits(R.mag);
+    var fracT = (negDen ? '-1/' : '1/') + R.mag;
+    var dec = Math.pow(b, n);
+    var sciP = powLogSciParts(b, n);
+    var decH = (dec !== 0 && Math.abs(dec) >= 1e-7) ? fmtNumHTML(dec) : (sciP ? sciP.html : '≈ 0');
+    var decT = (dec !== 0 && Math.abs(dec) >= 1e-7) ? fmtNumText(dec) : (sciP ? sciP.text : '~0');
+    var sciDecH = (dec !== 0) ? fmtSciHTML(dec) : (sciP ? sciP.html : '0');
+    if (R.digits <= 15){
+      H += heroes2(
+        heroBlock('EXACT FRACTION', fracH, 'b⁻ⁿ = 1 / bⁿ'),
+        heroBlock('DECIMAL', decH, '≈ ' + sciDecH)
+      );
+    } else {
+      H += heroBlock(lab, decH, 'a reciprocal — 1 divided by ' + powerLabel(b, Math.abs(n)));
+      H += exactBlock('EXACT FRACTION · ' + R.digits + '-DIGIT DENOMINATOR', fracH);
+    }
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', nStr);
+    H += rowHTML('Reciprocal of', powerLabel(b, Math.abs(n)) + ' = ' + groupDigits(R.denom));
+    H += rowHTML('Decimal', decH, dec === 0 ? 'underflows toward zero in standard arithmetic' : '') + rowHTML('Scientific notation', sciDecH);
+    H += formulaHTML('<b>' + lab + '</b> = 1 / ' + powerLabel(b, Math.abs(n)) + ' = ' + (negDen ? '−1/' : '1/') + groupDigits(R.mag) + (dec !== 0 ? ' = ' + decH : ''));
+    C.push(bStr + '^' + nStr + ' = ' + fracT + ' = ' + decT);
+    C.push('Decimal: ' + decT);
+    C.push('Scientific: ' + (dec !== 0 ? fmtSciText(dec) : (sciP ? sciP.text : '0')));
+  }
+  else if (R.kind === 'zero-exp'){
+    H += heroBlock(lab, '1', 'Any non-zero number to the power 0 is exactly 1.');
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', '0');
+    H += formulaHTML('<b>b<sup>0</sup> = 1</b> — the empty product: zero copies of the base still multiply to 1');
+    C.push(bStr + '^0 = 1');
+  }
+  else if (R.kind === 'zero-zero'){
+    H += heroBlock('0<sup>0</sup>', '1', '0⁰ has no single agreed value in pure physics — nearly all textbooks, calculators and programs take it as 1, and so does this tool.');
+    H += rowHTML('Base', '0') + rowHTML('Exponent', '0');
+    H += formulaHTML('<b>0<sup>0</sup> ≝ 1</b> — by convention');
+    C.push('0^0 = 1 (by convention)');
+  }
+  else if (R.kind === 'zero'){
+    H += heroBlock(lab, '0', 'Zero multiplied by itself any number of times stays zero.');
+    H += rowHTML('Base', '0') + rowHTML('Exponent', nStr);
+    H += formulaHTML('<b>0<sup>n</sup> = 0</b> for every n > 0');
+    C.push('0^' + nStr + ' = 0');
+  }
+  else if (R.kind === 'unit'){
+    if (b === 1){
+      H += heroBlock(lab, '1', '1 multiplied by itself any number of times is still 1.');
+      H += formulaHTML('<b>1<sup>n</sup> = 1</b> for every exponent');
+    } else {
+      var uv = (Math.abs(n) % 2 === 0) ? 1 : -1;
+      H += heroBlock(lab, uv === 1 ? '1' : '−1', uv === 1 ? '(−1) to an even power is +1.' : '(−1) to an odd power is −1.');
+      H += formulaHTML('<b>(−1)<sup>n</sup></b> = +1 when n is even, −1 when n is odd');
+    }
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', nStr);
+    C.push(bStr + '^' + nStr + ' = ' + ((b === 1) ? '1' : String((Math.abs(n) % 2 === 0) ? 1 : -1)));
+  }
+  else if (R.kind === 'huge'){
+    H += heroBlock(lab, R.sci.html, n > 0 ? fb + ' multiplied by itself ' + n + ' times' : '1 divided by ' + powerLabel(b, Math.abs(n)));
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', nStr);
+    H += rowHTML('Digits', groupDigits(String(R.digits)), 'too many to print in full') + rowHTML('Scientific notation', R.sci.html);
+    H += formulaHTML('<b>b<sup>n</sup> = b × b × ⋯ × b</b> — ' + Math.abs(n) + ' factors' + (n < 0 ? ' of ' + fb + ' in the denominator' : ''));
+    C.push(bStr + '^' + nStr + ' ≈ ' + R.sci.text);
+    C.push('Estimated digits: ' + R.digits);
+  }
+  else if (R.kind === 'underflow'){
+    var est = powLogSciParts(b, n);
+    H += heroBlock(lab, '0', 'The exact value is about ' + (est ? est.html : '10⁻³²⁴') + ' — smaller than standard arithmetic can hold, so it rounds to 0.');
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', nStr);
+    H += formulaHTML('<b>' + lab + '</b> underflows below ≈ 10⁻³²⁴');
+    C.push(bStr + '^' + nStr + ' ≈ ' + (est ? est.text : '0'));
+  }
+  else if (R.kind === 'frac'){
+    var vH = fmtNumHTML(R.value), vT = fmtNumText(R.value);
+    var fr = R.fr;
+    H += heroBlock(lab, vH, (fr && fr.q >= 2) ? 'a fractional exponent — it unwraps into a root' : 'a decimal exponent — the answer lies between the whole powers on either side');
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', nStr) + rowHTML('Scientific notation', fmtSciHTML(R.value));
+    if (fr && fr.q >= 2 && Math.abs(fr.p) <= 40){
+      var p = Math.abs(fr.p), q = fr.q;
+      var rootV = Math.pow(b, 1 / q);
+      var rootR = Math.round(rootV);
+      var rootExact = Math.abs(rootR - rootV) < 1e-9;
+      var inner = (q === 2 ? '√' : '<sup>' + q + '</sup>√') + factorStr(b);
+      var f = '<b>b<sup>p/q</sup> = ( <sup>q</sup>√b )<sup>p</sup></b> → ' + lab + ' = (' + inner + ')' + (p !== 1 ? sup(p) : '');
+      if (rootExact && p === 1) f += ' = ' + groupDigits(String(rootR));
+      else if (rootExact) f += ' = ' + groupDigits(String(rootR)) + sup(p) + ' = ' + vH;
+      else f += ' ≈ ' + vH;
+      H += formulaHTML(f);
+    } else {
+      H += formulaHTML('<b>b<sup>x</sup> = e<sup>x · ln b</sup></b> — decimal exponents are computed directly');
+    }
+    C.push(bStr + '^' + nStr + ' = ' + vT);
+    C.push('Scientific: ' + fmtSciText(R.value));
+  }
+  else if (R.kind === 'frac-neg'){
+    var vH2 = fmtNumHTML(R.value), vT2 = fmtNumText(R.value);
+    var p2 = Math.abs(R.fr.p), q2 = R.fr.q;
+    var sub2 = (p2 === 1)
+      ? 'check: (' + fmtNumHTML(R.value) + ')' + sup(q2) + ' = ' + bStr
+      : 'real because the root degree ' + q2 + ' is odd — an even root of a negative would be complex';
+    H += heroBlock(lab, vH2, sub2);
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', nStr) + rowHTML('Root degree', String(q2), 'odd — so the answer is real') + rowHTML('Scientific notation', fmtSciHTML(R.value));
+    var inner2 = (q2 === 2 ? '√' : '<sup>' + q2 + '</sup>√') + factorStr(b);
+    H += formulaHTML('<b>(−b)<sup>p/q</sup> = ± ( <sup>q</sup>√b )<sup>p</sup></b> (q odd) → ' + lab + ' = (' + inner2 + ')' + (p2 !== 1 ? sup(p2) : '') + ' = ' + vH2);
+    C.push(bStr + '^' + nStr + ' = ' + vT2);
+  }
+  else { /* plain */
+    var vH3 = fmtNumHTML(R.value), vT3 = fmtNumText(R.value);
+    H += heroBlock(lab, vH3, n > 0 ? fb + ' multiplied by itself ' + n + ' times' : 'the reciprocal of ' + powerLabel(b, Math.abs(n)));
+    H += rowHTML('Base', bStr) + rowHTML('Exponent', nStr) + rowHTML('Scientific notation', fmtSciHTML(R.value));
+    var cf = chainFactors(fb, Math.abs(n));
+    H += formulaHTML('<b>' + lab + '</b> = ' + (n > 0 ? cf : '1 / (' + cf + ')') + (Math.abs(n) > 8 ? ' (' + Math.abs(n) + ' factors)' : ''));
+    C.push(bStr + '^' + nStr + ' = ' + vT3);
+    C.push('Scientific: ' + fmtSciText(R.value));
+  }
+
+  powerCopy = C.join('\n');
+  out.innerHTML = H;
+}
+
+/* =================== MODE 2 · ROOT ⁿ√x =================== */
+var rootCopy = '';
+
+function degName(d){
+  if (d === 2) return 'square';
+  if (d === 3) return 'cube';
+  if (d === 4) return 'fourth';
+  if (d === 5) return 'fifth';
+  return d + 'th';
+}
+
+function renderRoot(){
+  var out = $('r-out'), errEl = $('r-err');
+  errEl.classList.remove('show');
+  var xRaw = $('r-num').value.trim();
+  var dRaw = $('r-deg').value.trim();
+  if (xRaw === '' || dRaw === ''){
+    out.innerHTML = waitBox('ENTER A NUMBER AND A ROOT DEGREE');
+    rootCopy = '';
+    return;
+  }
+  var x = Number(xRaw), deg = Number(dRaw);
+  var bad = function(msg){
+    errEl.textContent = msg; errEl.classList.add('show');
+    out.innerHTML = waitBox('WAITING FOR VALID NUMBERS');
+    rootCopy = '';
+  };
+  if (!isFinite(x)){ bad('Enter a valid number to take the root of.'); return; }
+  if (!isFinite(deg) || !Number.isInteger(deg) || deg < 1){
+    bad('Root degree must be a whole number of at least 1 — 2 for square root, 3 for cube root, 4 for fourth root and so on.');
+    return;
+  }
+
+  var r;
+  if (x === 0) r = 0;
+  else if (x > 0) r = Math.pow(x, 1 / deg);
+  else {
+    if (deg % 2 === 0){
+      bad('An even root of a negative number is not a real number — no real value raised to an even power gives a negative result. Try an odd degree (3, 5, 7…) or a positive number.');
+      return;
+    }
+    r = -Math.pow(-x, 1 / deg);
+  }
+
+  var xStr = numStr(x);
+  var xLbl = x < 0 ? '(' + xStr + ')' : xStr;
+  var radLab = (deg === 1) ? xLbl : (deg === 2 ? '√' : '<sup>' + deg + '</sup>√') + xLbl;
+
+  /* perfect-power detection */
+  var exact = null;
+  if (Number.isInteger(x)){
+    var rc = Math.round(r);
+    if (Math.abs(rc - r) < 1e-9){
+      var chk = Math.pow(rc, deg);
+      if (chk === x || Math.abs(chk - x) < 1e-9) exact = rc;
+    }
+  }
+
+  var valH = exact !== null ? groupDigits(String(exact)) : fmtNumHTML(r);
+  var valT = exact !== null ? String(exact) : fmtNumText(r);
+  var exLbl = exact !== null && exact < 0 ? '(' + exact + ')' : String(exact);
+
+  var H = '';
+  var sub;
+  if (deg === 1) sub = 'the 1st root of any number is the number itself';
+  else if (exact !== null) sub = 'check: ' + exLbl + sup(deg) + ' = ' + xStr;
+  else sub = 'check: ' + fmtNumHTML(r) + sup(deg) + ' ≈ ' + fmtNumHTML(Math.pow(r, deg));
+
+  H += heroBlock(radLab, valH, sub);
+  H += rowHTML('Number', xStr);
+  H += rowHTML('Root degree', String(deg), degName(deg) + ' root');
+  H += rowHTML('Exponent form', xLbl + sup('1/' + deg) + ' = ' + valH);
+  H += rowHTML('Perfect power', exact !== null ? 'yes — ' + exLbl + sup(deg) + ' = ' + xStr : 'no', exact === null ? 'so the decimal shown is rounded' : '');
+  if (x > 0 && deg % 2 === 0){
+    H += rowHTML('Second real root', exact !== null ? groupDigits(String(-exact)) : fmtNumHTML(-r), 'even roots come in ± pairs');
+  }
+  H += formulaHTML('<b><sup>n</sup>√x = x<sup>1/n</sup></b> → ' + radLab + ' = ' + xLbl + sup('1/' + deg) + ' = ' + valH);
+
+  var name = deg === 1 ? '1st root' : (deg === 2 ? 'Square root' : deg === 3 ? 'Cube root' : degName(deg).charAt(0).toUpperCase() + degName(deg).slice(1) + ' root');
+  rootCopy = ['Root Calculator — StudyWithSTEM',
+    name + ' of ' + xStr + ' = ' + valT,
+    'Exponent form: ' + xStr + '^(1/' + deg + ') = ' + valT,
+    exact !== null ? 'Perfect power: yes (' + exact + '^' + deg + ' = ' + xStr + ')' : ''
+  ].filter(Boolean).join('\n');
+  out.innerHTML = H;
+}
+
+/* =================== MODE 3 · POWERS OF 10 =================== */
+var tenCopy = '';
+
+var PREFIX = {
+  '-12':'pico (p) — SI for 10⁻¹²', '-9':'nano (n) — SI for 10⁻⁹', '-6':'micro (µ) — SI for 10⁻⁶', '-3':'milli (m) — SI for 10⁻³', '-2':'centi (c) — SI for 10⁻²', '-1':'deci (d) — SI for 10⁻¹',
+  '1':'deka (da) — SI for 10¹', '2':'hecto (h) — SI for 10²', '3':'kilo (k) — SI for 10³', '6':'mega (M) — SI for 10⁶', '9':'giga (G) — SI for 10⁹', '12':'tera (T) — SI for 10¹²',
+  '15':'peta (P) — SI for 10¹⁵', '18':'exa (E) — SI for 10¹⁸', '21':'zetta (Z) — SI for 10²¹', '24':'yotta (Y) — SI for 10²⁴'
+};
+var NAMES = { '0':'one', '1':'ten', '2':'one hundred', '3':'thousand', '6':'million', '9':'billion', '12':'trillion', '15':'quadrillion', '18':'quintillion', '21':'sextillion', '24':'septillion', '27':'octillion', '30':'nonillion', '33':'decillion' };
+var NAMES_NEG = { '1':'one tenth', '2':'one hundredth', '3':'one thousandth', '6':'one millionth', '9':'one billionth', '12':'one trillionth', '15':'one quadrillionth' };
+
+function renderTen(){
+  var out = $('t-out'), errEl = $('t-err');
+  errEl.classList.remove('show');
+  var raw = $('t-exp').value.trim();
+  if (raw === ''){
+    out.innerHTML = waitBox('ENTER AN EXPONENT');
+    tenCopy = '';
+    return;
+  }
+  var n = Number(raw);
+  var bad = function(msg){
+    errEl.textContent = msg; errEl.classList.add('show');
+    out.innerHTML = waitBox('WAITING FOR VALID NUMBERS');
+    tenCopy = '';
+  };
+  if (!isFinite(n)){ bad('Enter a valid exponent — whole numbers from −1,000,000 to 1,000,000, or any decimal.'); return; }
+
+  var lab = '10' + sup(expDisplay(n, null));
+  var H = '';
+  var C = ['Power of 10 — StudyWithSTEM'];
+
+  if (Number.isInteger(n) && Math.abs(n) > 1000000){
+    bad('Keep the exponent between −1,000,000 and 1,000,000 — or use a decimal exponent.');
+    return;
+  }
+
+  if (Number.isInteger(n)){
+    var sciH = '1 × 10' + sup(mm(n));
+    if (Math.abs(n) <= 1000){
+      var exactStr, sub;
+      if (n >= 0){
+        exactStr = n === 0 ? '1' : '1' + '0'.repeat(n);
+        sub = n === 0 ? 'no zeros at all — just 1' : (n === 1 ? 'a 1 followed by one zero' : '1 followed by ' + n + ' zeros');
+      } else {
+        exactStr = '0.' + '0'.repeat(-n - 1) + '1';
+        sub = n === -1 ? 'a 1 immediately after the decimal point' : '1 preceded by ' + (-n - 1) + ' zeros after the decimal point';
+      }
+      var disp = exactStr.length <= 21 ? (n >= 0 ? groupDigits(exactStr) : exactStr) : sciH;
+      H += heroBlock(lab, disp, sub);
+      if (exactStr.length > 21) H += exactBlock('FULL EXPANSION · ' + exactStr.length + ' CHARACTERS', groupDigits(exactStr));
+      H += rowHTML('Exponent', numStr(n)) + rowHTML('Scientific notation', sciH);
+      H += rowHTML('SI prefix', PREFIX[n] || '— not an SI step —');
+      H += rowHTML('Number name', n >= 0 ? (NAMES[n] || '— no single word —') : (NAMES_NEG[-n] || '— no single word —'));
+      H += formulaHTML('<b>10<sup>n</sup> = 1 followed by n zeros</b>' + (n < 0 ? ' — negative n puts the zeros after the decimal point' : ''));
+      C.push('10^' + n + ' = ' + exactStr);
+      C.push('Scientific: 1 x 10^' + n);
+    } else {
+      H += heroBlock(lab, sciH, n > 0 ? '1 followed by ' + groupDigits(String(n)) + ' zeros — too many to print here' : 'a 1 that is ' + groupDigits(String(-n)) + ' places after the decimal point — too many to print here');
+      H += rowHTML('Exponent', numStr(n)) + rowHTML('Scientific notation', sciH);
+      H += rowHTML('Zeros', groupDigits(String(Math.abs(n))), n > 0 ? 'after the 1' : 'between the decimal point and the 1');
+      H += formulaHTML('<b>10<sup>n</sup></b> — the expansion has more than 1,000 characters, so it is not printed');
+      C.push('10^' + n + ' = 1 x 10^' + n);
+    }
+  } else {
+    var v = Math.pow(10, n);
+    if (!isFinite(v)){ bad('That power of ten overflows standard arithmetic — keep the exponent under about 308.'); return; }
+    H += heroBlock(lab, fmtNumHTML(v), 'a decimal exponent — the answer is not a tidy row of zeros');
+    H += rowHTML('Exponent', numStr(n)) + rowHTML('Scientific notation', fmtSciHTML(v));
+    H += rowHTML('Between', powerLabel(10, Math.floor(n)) + ' and ' + powerLabel(10, Math.ceil(n)));
+    H += formulaHTML('<b>10<sup>x</sup> = e<sup>x · ln 10</sup></b> — decimal exponents are computed directly');
+    C.push('10^' + numStr(n) + ' = ' + fmtNumText(v));
+    C.push('Scientific: ' + fmtSciText(v));
+  }
+
+  tenCopy = C.join('\n');
+  out.innerHTML = H;
+}
+
+/* =================== MODE 4 · POWER TABLE =================== */
+var tableCopy = '';
+
+function renderTable(){
+  var out = $('tb-out'), errEl = $('tb-err');
+  errEl.classList.remove('show');
+  var bRaw = $('tb-base').value.trim();
+  var kRaw = $('tb-k').value.trim();
+  if (bRaw === '' || kRaw === ''){
+    out.innerHTML = waitBox('ENTER A BASE AND A HIGHEST POWER');
+    tableCopy = '';
+    return;
+  }
+  var b = Number(bRaw), k = Number(kRaw);
+  var bad = function(msg){
+    errEl.textContent = msg; errEl.classList.add('show');
+    out.innerHTML = waitBox('WAITING FOR VALID NUMBERS');
+    tableCopy = '';
+  };
+  if (!isFinite(b)){ bad('Enter a valid number for the base.'); return; }
+  if (!isFinite(k) || !Number.isInteger(k) || k < 1 || k > 30){
+    bad('Highest power must be a whole number from 1 to 30 — plenty for any classroom table.');
+    return;
+  }
+
+  var bStr = numStr(b);
+  var intBase = Number.isInteger(b) && Math.abs(b) >= 2;
+  var rowsHtml = '', rowsTxt = [];
+  var lastH = '1', lastT = '1';
+
+  for (var i = 0; i <= k; i++){
+    var cellH, cellT;
+    if (intBase){
+      var digits = (i === 0) ? 1 : Math.floor(i * Math.log10(Math.abs(b))) + 1;
+      if (digits <= 2000){
+        var ex = (BigInt(b) ** BigInt(i)).toString();
+        cellT = ex;
+        cellH = digits <= 24 ? groupDigits(ex) : bigSciParts(ex).html;
+      } else {
+        var sp = powLogSciParts(b, i);
+        cellH = sp ? sp.html : '—';
+        cellT = sp ? sp.text : '—';
+      }
+    } else {
+      var v = Math.pow(b, i);
+      if (!isFinite(v)){
+        var sp2 = powLogSciParts(b, i);
+        cellH = sp2 ? sp2.html : '∞';
+        cellT = cellH;
+      } else {
+        cellH = fmtNumHTML(v);
+        cellT = fmtNumText(v);
+      }
+    }
+    rowsHtml += '<tr><td>' + i + '</td><td class="pw">' + powerLabel(b, i) + '</td><td>' + cellH + '</td></tr>';
+    rowsTxt.push(bStr + '^' + i + ' = ' + cellT);
+    if (i === k){ lastH = cellH; lastT = cellT; }
+  }
+
+  var H = '';
+  H += heroBlock(powerLabel(b, 0) + ' … ' + powerLabel(b, k), lastH, (k + 1) + ' rows · base ' + bStr + ' · every result live');
+  H += rowHTML('Base', bStr) + rowHTML('Powers', '0 to ' + k) + rowHTML('Largest value', lastH);
+  H += formulaHTML('<b>b<sup>n</sup></b> for n = 0, 1, 2, …, ' + k + ' — every table starts at b<sup>0</sup> = 1');
+  H += '<div class="table-scroll"><table class="ptable"><thead><tr><th>N</th><th>Power</th><th>Value</th></tr></thead><tbody>' + rowsHtml + '</tbody></table></div>';
+
+  tableCopy = ['Power Table — StudyWithSTEM', 'Base ' + bStr + ' · powers 0 to ' + k].concat(rowsTxt).join('\n');
+  out.innerHTML = H;
+}
+
+/* =================== WIRING =================== */
+/* tabs */
+var tabs = document.querySelectorAll('.ttab');
+Array.prototype.forEach.call(tabs, function(t){
+  t.addEventListener('click', function(){
+    Array.prototype.forEach.call(tabs, function(x){
+      var on = (x === t);
+      x.classList.toggle('active', on);
+      x.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    var target = 'panel-' + t.dataset.tab;
+    ['panel-power','panel-root','panel-ten','panel-table'].forEach(function(id){
+      var p = $(id);
+      if (p) p.classList.toggle('active', id === target);
+    });
+  });
+});
+
+/* live inputs */
+ $('p-base').addEventListener('input', renderPower);
+ $('p-exp').addEventListener('input', renderPower);
+ $('r-num').addEventListener('input', renderRoot);
+ $('r-deg').addEventListener('input', renderRoot);
+ $('t-exp').addEventListener('input', renderTen);
+ $('tb-base').addEventListener('input', renderTable);
+ $('tb-k').addEventListener('input', renderTable);
+
+/* example chips */
+function chipSet(panelId, pairs, render){
+  var panel = $(panelId);
+  if (!panel) return;
+  Array.prototype.forEach.call(panel.querySelectorAll('.t-chip'), function(ch){
+    ch.addEventListener('click', function(){
+      pairs.forEach(function(pair){
+        if (ch.dataset[pair.k] !== undefined) $(pair.id).value = ch.dataset[pair.k];
+      });
+      render();
+    });
+  });
+}
+chipSet('panel-power', [{k:'b',id:'p-base'},{k:'n',id:'p-exp'}], renderPower);
+chipSet('panel-root',  [{k:'x',id:'r-num'},{k:'d',id:'r-deg'}], renderRoot);
+chipSet('panel-ten',   [{k:'n',id:'t-exp'}], renderTen);
+chipSet('panel-table', [{k:'b',id:'tb-base'},{k:'k',id:'tb-k'}], renderTable);
+
+/* copy buttons */
+function legacyCopy(txt, mark){
+  var ta = document.createElement('textarea');
+  ta.value = txt;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try{ document.execCommand('copy'); mark(); }catch(e){}
+  document.body.removeChild(ta);
+}
+function copyText(txt, btn){
+  var mark = function(){
+    btn.classList.add('done');
+    var lbl = btn.querySelector('span');
+    if (lbl){
+      var old = lbl.textContent;
+      lbl.textContent = 'COPIED';
+      setTimeout(function(){ lbl.textContent = old; btn.classList.remove('done'); }, 1500);
+    }
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(mark, function(){ legacyCopy(txt, mark); });
+  } else legacyCopy(txt, mark);
+}
+ $('p-copy').addEventListener('click', function(){ if (powerCopy) copyText(powerCopy, this); });
+ $('r-copy').addEventListener('click', function(){ if (rootCopy) copyText(rootCopy, this); });
+ $('t-copy').addEventListener('click', function(){ if (tenCopy) copyText(tenCopy, this); });
+ $('tb-copy').addEventListener('click', function(){ if (tableCopy) copyText(tableCopy, this); });
+
+/* first paint */
+renderPower();
+renderRoot();
+renderTen();
+renderTable();
+})();
+</script>
+</body>
+</html>
