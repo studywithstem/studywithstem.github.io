@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Geometric Sequence Calculator — Nth Term, Common Ratio & Sum with Steps | StudyWithSTEM</title>
+<meta name="description" content="Free geometric sequence calculator: find the nth term, common ratio, sum of n terms, and infinite series — with exact fractions, step-by-step working, and a live chart. No signup; runs in your browser.">
+<meta name="keywords" content="geometric sequence calculator, geometric series calculator, geometric progression, nth term calculator, common ratio calculator, sum of geometric series, infinite geometric series calculator, geometric sequence formula, geometric sum formula">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/mathematics/geometric-sequence/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Geometric Sequence Calculator — Nth Term, Common Ratio & Sum with Steps">
+<meta property="og:description" content="Find the nth term, common ratio, finite and infinite sums of any geometric sequence — exact fractions, step-by-step working, and a live chart. Free, no signup.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/mathematics/geometric-sequence/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/geometric-sequence.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM geometric sequence calculator — nth term, common ratio and sum">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Geometric Sequence Calculator — Nth Term, Common Ratio & Sum with Steps">
+<meta name="twitter:description" content="Find the nth term, common ratio, finite and infinite sums of any geometric sequence — exact fractions, step-by-step working, and a live chart. Free, no signup.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/geometric-sequence.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Mathematics", "item": "https://studywithstem.github.io/tools/mathematics/" },
+    { "@type": "ListItem", "position": 4, "name": "Geometric Sequence Calculator", "item": "https://studywithstem.github.io/tools/mathematics/geometric-sequence/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Geometric Sequence Calculator",
+  "url": "https://studywithstem.github.io/tools/mathematics/geometric-sequence/",
+  "description": "Free online geometric sequence calculator: find the nth term, common ratio, sum of n terms, and infinite series — exact fractions with step-by-step working.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "nth term calculator",
+    "sum of the first n terms",
+    "infinite geometric series sum",
+    "common ratio finder from two terms",
+    "term position solver",
+    "exact fraction arithmetic",
+    "step-by-step working"
+  ],
+  "publisher": { "@type": "Organization", "name": "StudyWithSTEM", "url": "https://studywithstem.github.io/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Geometric Sequence Calculator — FAQs",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a geometric sequence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A geometric sequence is a list of numbers where each term after the first comes from multiplying the previous one by a fixed number called the common ratio, r. For example, 2, 6, 18, 54 is geometric with first term a1 = 2 and r = 3. The ratio can be negative (alternating signs) or a fraction (terms shrinking toward zero)." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the nth term of a geometric sequence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the formula an = a1 × r^(n−1): the first term multiplied by the ratio raised to one less than the position. For a1 = 2 and r = 3, the 10th term is 2 × 3^9 = 39,366. The calculator's Sequence & Sum tab applies this formula with exact fractions and shows every step." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the common ratio of a geometric sequence?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide any term by the term before it: r = a(n+1)/a(n). If the two terms you know are not consecutive, use r = (a(n)/a(m))^(1/(n−m)), raising the quotient to the power of one over the gap in positions. The Find Ratio tab handles both cases, including the ± ambiguity when the gap is even." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the sum of the first n terms of a geometric series?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For r ≠ 1 the sum is Sn = a1(1 − r^n)/(1 − r). When r = 1 every term equals a1, so the sum is simply n × a1. Example: 2 + 6 + 18 + … + 39,366 (10 terms, r = 3) gives S10 = 59,048." }
+    },
+    {
+      "@type": "Question",
+      "name": "When does an infinite geometric series converge?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only when the ratio shrinks, meaning |r| < 1. Then the terms approach zero and the infinite sum exists: S∞ = a1/(1 − r). If |r| ≥ 1 the terms do not approach zero, so the series diverges and has no finite sum. For example, with a1 = 8 and r = 1/2, S∞ = 16." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the common ratio be negative or a fraction?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. A negative ratio makes the signs alternate, as in 3, −6, 12, −24 (r = −2). A ratio between −1 and 1, like 1/2 or −1/3, makes the terms shrink in magnitude toward zero. The calculator accepts any ratio, including fractions such as 3/4, and computes exactly." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data stored or sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Every calculation runs locally in your browser — nothing you type is sent to a server, saved, or logged. The tool is free, needs no signup, and works offline once the page has loaded." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D, used for legal/info pages) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+
+/* ================= TOOL PAGE (page-specific) ================= */
+.page-hero h1{max-width:20ch;}
+.hero-chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
+.fchip{font:600 .78rem var(--f-mono); color:var(--muted); border:1px solid var(--edge-strong); background:var(--panel); border-radius:8px; padding:9px 13px; letter-spacing:.01em;}
+.fchip b{color:var(--accent); font-weight:700;}
+.fchip sub,.fchip sup{font-size:.68em;}
+.hero-pill{margin-top:22px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.hero-pill i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+.tool{padding:64px 0 26px;}
+.tool-head{margin-bottom:26px; max-width:64ch;}
+.tool-head h2{font:600 clamp(1.5rem, 2.6vw, 2.05rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.tool-head p{color:var(--muted);}
+
+.tool-shell{border:1px solid var(--edge-strong); background:var(--panel); clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);}
+.tool-tabs{display:flex; flex-wrap:wrap; border-bottom:1px solid var(--edge);}
+.ttab{
+  flex:1 1 25%; min-width:0; appearance:none; background:none; border:none; border-right:1px solid var(--edge);
+  padding:15px 8px 14px; cursor:pointer; color:var(--muted);
+  font:600 .72rem/1.3 var(--f-mono); letter-spacing:.09em; text-transform:uppercase;
+  position:relative; display:flex; align-items:center; justify-content:center; gap:8px;
+  transition:color .25s, background .25s;
+}
+.ttab:last-child{border-right:none;}
+.ttab i{font:700 .6rem var(--f-mono); font-style:normal; color:var(--accent); opacity:.5; transition:opacity .25s;}
+.ttab:hover{color:var(--ink); background:var(--panel);}
+.ttab.active{color:var(--ink);}
+.ttab.active i{opacity:1;}
+.ttab.active::after{content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--accent);}
+@media (max-width:700px){
+  .ttab{flex:1 1 50%; border-bottom:1px solid var(--edge); padding:13px 8px 12px;}
+  .ttab:nth-child(even){border-right:none;}
+}
+
+.tpanel{display:none;}
+.tpanel.active{display:block;}
+.tool-grid{display:grid; grid-template-columns:minmax(280px, 2fr) 3fr; align-items:start;}
+.t-inputs{padding:24px 26px 26px; border-right:1px solid var(--edge); position:sticky; top:calc(var(--navh) + 18px); min-width:0;}
+.t-results{padding:24px 26px 26px; min-width:0;}
+.t-results [hidden]{display:none !important;}
+@media (max-width:880px){
+  .tool-grid{grid-template-columns:1fr;}
+  .t-inputs{position:static; border-right:none; border-bottom:1px solid var(--edge);}
+  .t-results{padding:22px 20px 24px;}
+  .t-inputs{padding:22px 20px 24px;}
+}
+
+.ihead{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:18px; font:700 .64rem var(--f-mono); letter-spacing:.16em; color:var(--faint);}
+.ihead .live{display:inline-flex; align-items:center; gap:6px; color:var(--accent); font-size:.58rem; letter-spacing:.14em;}
+.ihead .live::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent); animation:livepulse 2.2s ease infinite;}
+@keyframes livepulse{0%,100%{opacity:1;} 50%{opacity:.25;}}
+
+.field{margin-bottom:15px;}
+.field label{display:block; font:700 .64rem var(--f-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;}
+.field input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:12px 14px; color:var(--ink); font:600 .95rem var(--f-mono); transition:border-color .25s;
+}
+.field input:focus{outline:none; border-color:var(--accent);}
+.field input::placeholder{color:var(--faint); font-weight:400;}
+.fmsg{min-height:1.15em; margin-top:6px; font:600 .68rem/1.4 var(--f-mono); color:var(--faint); letter-spacing:.02em; overflow-wrap:anywhere;}
+.fmsg.err{color:var(--amber);}
+.duo{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+@media (max-width:420px){ .duo{grid-template-columns:1fr;} }
+
+.presets{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:20px;}
+.plabel{font:700 .6rem var(--f-mono); letter-spacing:.16em; color:var(--faint);}
+.preset{border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:7px 13px; font:600 .68rem var(--f-mono); color:var(--muted); cursor:pointer; transition:color .25s, border-color .25s;}
+.preset:hover{color:var(--accent); border-color:var(--accent);}
+.tip{margin-top:18px; font:.76rem/1.6 var(--f-sans); color:var(--faint); border-top:1px dashed var(--edge); padding-top:14px;}
+
+.rstat{font:600 .8rem/1.6 var(--f-sans); color:var(--amber); border:1px dashed var(--edge-strong); border-radius:10px; padding:14px 16px;}
+.rstat.soft{color:var(--muted); border-style:solid;}
+.rbody > *{margin-bottom:16px;}
+.rbody > :last-child{margin-bottom:0;}
+
+.rwarn{font:.82rem/1.6 var(--f-sans); color:var(--amber); border:1px solid var(--edge-strong); border-left:3px solid var(--amber); background:var(--bg); border-radius:0 10px 10px 0; padding:11px 14px; overflow-wrap:anywhere;}
+.rok{font:.82rem/1.6 var(--f-sans); color:var(--accent); border:1px solid var(--edge-strong); border-left:3px solid var(--accent); background:var(--bg); border-radius:0 10px 10px 0; padding:11px 14px; overflow-wrap:anywhere;}
+
+.stats{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+.stat{border:1px solid var(--edge); background:var(--bg); border-radius:10px; padding:14px 16px; min-width:0;}
+.stat.wide{grid-column:1 / -1;}
+.s-lab{display:block; font:700 .6rem var(--f-mono); letter-spacing:.15em; color:var(--faint); margin-bottom:8px; text-transform:uppercase;}
+.s-val{display:block; font:600 clamp(1.2rem, 2.4vw, 1.7rem)/1.25 var(--f-disp); letter-spacing:-.01em; overflow-wrap:anywhere;}
+.s-val sub,.s-val sup{font-size:.6em;}
+@media (max-width:520px){ .stats{grid-template-columns:1fr;} }
+
+.rblock{border-top:1px dashed var(--edge); padding-top:14px;}
+.rlabel{font:700 .6rem var(--f-mono); letter-spacing:.16em; color:var(--accent); margin-bottom:10px; text-transform:uppercase; display:flex; align-items:center; gap:10px;}
+.rlabel::after{content:""; flex:1; height:1px; background:var(--edge);}
+.rnote{margin-top:9px; font:.72rem/1.55 var(--f-sans); color:var(--faint); overflow-wrap:anywhere;}
+
+.terms{display:flex; flex-wrap:wrap; gap:7px; max-height:250px; overflow-y:auto; padding:2px;}
+.tchip{display:inline-flex; align-items:baseline; gap:7px; border:1px solid var(--edge-strong); background:var(--bg); border-radius:7px; padding:5px 10px; font:600 .74rem/1.5 var(--f-mono); overflow-wrap:anywhere; max-width:100%;}
+.tchip b{color:var(--faint); font-weight:700;}
+.tchip b sub{font-size:.7em;}
+
+.chart{border:1px solid var(--edge); background:var(--bg); border-radius:10px; padding:10px 10px 6px;}
+.chart svg{width:100%; height:auto; display:block;}
+.chart .cl{fill:none; stroke:var(--accent); stroke-width:2; stroke-linejoin:round; stroke-linecap:round;}
+.chart .cd{fill:var(--accent);}
+.chart .cz{stroke:var(--edge-strong); stroke-width:1; stroke-dasharray:3 5;}
+.chart .ct{fill:var(--faint); font-family:var(--f-mono); font-size:9px;}
+.chart-skip{font:600 .72rem/1.6 var(--f-mono); color:var(--faint); padding:14px; text-align:center;}
+
+.steps{border:1px solid var(--edge); background:var(--bg); border-radius:10px; padding:14px 16px; font:600 .78rem/2 var(--f-mono); overflow-wrap:anywhere;}
+.steps .sl{white-space:pre-wrap;}
+.steps .sl sub,.steps .sl sup{font-size:.68em;}
+.steps .fin-v{color:var(--accent);}
+
+.rbody .btn-ticket{padding:11px 18px; font-size:.8rem;}
+.btn-ticket.done{border-color:var(--accent); color:var(--accent);}
+
+/* ================= HOW TO USE ================= */
+.howto{padding:74px 0; border-top:1px solid var(--edge);}
+.howto h2, .faq h2{font:600 clamp(1.5rem, 2.6vw, 2.05rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.howto .lede, .faq .lede{color:var(--muted); max-width:56ch;}
+.howto-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin-top:30px;}
+.h-card{border:1px solid var(--edge); background:var(--panel); clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%); padding:20px 20px 22px;}
+.h-num{font:700 .66rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.h-card h3{font:600 1.12rem/1.2 var(--f-disp); margin:12px 0 8px; letter-spacing:-.01em;}
+.h-card p{font:.86rem/1.65 var(--f-sans); color:var(--muted);}
+@media (max-width:1020px){ .howto-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:620px){ .howto-grid{grid-template-columns:1fr;} }
+
+/* ================= FAQ ================= */
+.faq{padding:74px 0 100px; border-top:1px solid var(--edge);}
+.faq-list{display:grid; gap:10px; margin-top:30px;}
+.faq-item{border:1px solid var(--edge); background:var(--panel);}
+.faq-item.open{border-color:var(--edge-strong);}
+.faq-q{width:100%; display:flex; align-items:center; gap:14px; padding:17px 20px; background:none; border:none; cursor:pointer; color:var(--ink); text-align:left; font:600 .98rem/1.35 var(--f-sans); transition:background .25s;}
+.faq-q:hover{background:var(--bg);}
+.faq-q .qi{font:700 .62rem var(--f-mono); color:var(--accent); letter-spacing:.12em; flex:none;}
+.faq-q .qt{flex:1;}
+.faq-q .qx{flex:none; width:22px; height:22px; display:grid; place-items:center; border:1px solid var(--edge-strong); border-radius:50%; font:400 1rem/1 var(--f-sans); color:var(--muted); transition:transform .3s, color .3s, border-color .3s;}
+.faq-item.open .qx{transform:rotate(45deg); color:var(--accent); border-color:var(--accent);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .4s ease;}
+.faq-a p{padding:2px 20px 20px 46px; color:var(--muted); font:.88rem/1.7 var(--f-sans); max-width:74ch;}
+.faq-a p sub,.faq-a p sup{font-size:.72em;}
+@media (max-width:560px){ .faq-a p{padding-left:20px;} }
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE MATHEMATICS TOOL</p>
+    <h1>Geometric Sequence Calculator</h1>
+    <p class="lede">Find the nth term, the common ratio, and finite or infinite sums of any geometric sequence — exact fractions, full working, and a live chart, right in your browser.</p>
+    <div class="hero-chips" aria-label="The three geometric sequence formulas">
+      <span class="fchip"><b>aₙ</b> = a₁·r<sup>n−1</sup></span>
+      <span class="fchip"><b>Sₙ</b> = a₁(1−r<sup>n</sup>)/(1−r)</span>
+      <span class="fchip"><b>S∞</b> = a₁/(1−r)</span>
+    </div>
+    <span class="hero-pill"><i></i>FREE · NO SIGNUP · NOTHING LEAVES YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+  <section class="tool" id="calculator">
+    <div class="wrap">
+      <div class="tool-head">
+        <span class="sec-idx mono">01 — THE TOOL</span>
+        <h2>Four modes. Every geometric answer.</h2>
+        <p>Terms, sums, ratios, and “which term hits this value” — each mode keeps its own numbers, and everything recalculates as you type.</p>
+      </div>
+
+      <div class="tool-shell">
+        <div class="tool-tabs" role="tablist" aria-label="Calculator modes">
+          <button class="ttab active" id="tab-seq" role="tab" aria-selected="true" aria-controls="panel-seq" data-tab="seq" type="button"><i>01</i>Sequence &amp; Sum</button>
+          <button class="ttab" id="tab-inf" role="tab" aria-selected="false" aria-controls="panel-inf" data-tab="inf" type="button"><i>02</i>Infinite Sum</button>
+          <button class="ttab" id="tab-ratio" role="tab" aria-selected="false" aria-controls="panel-ratio" data-tab="ratio" type="button"><i>03</i>Find Ratio</button>
+          <button class="ttab" id="tab-which" role="tab" aria-selected="false" aria-controls="panel-which" data-tab="which" type="button"><i>04</i>Find Term</button>
+        </div>
+
+        <noscript><p style="padding:16px 22px; font:600 .78rem/1.6 var(--f-mono); color:var(--amber);">This calculator needs JavaScript — everything runs locally in your browser, nothing is uploaded.</p></noscript>
+
+        <!-- ===== PANEL 1 : SEQUENCE & SUM ===== -->
+        <div class="tpanel active" id="panel-seq" role="tabpanel" aria-labelledby="tab-seq">
+          <div class="tool-grid">
+            <div class="t-inputs">
+              <div class="ihead"><span>INPUT</span><span class="live">LIVE</span></div>
+              <div class="field">
+                <label for="sq-a1">First term a₁</label>
+                <input id="sq-a1" type="text" value="2" placeholder="e.g. 2, −5, or 3/4" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <p class="fmsg" id="sq-a1-msg"></p>
+              </div>
+              <div class="field">
+                <label for="sq-r">Common ratio r</label>
+                <input id="sq-r" type="text" value="3" placeholder="e.g. 3, −2, or 1/2" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <p class="fmsg" id="sq-r-msg"></p>
+              </div>
+              <div class="field">
+                <label for="sq-n">Number of terms n</label>
+                <input id="sq-n" type="text" inputmode="numeric" value="10" placeholder="1 to 10000" autocomplete="off" autocapitalize="off">
+                <p class="fmsg" id="sq-n-msg"></p>
+              </div>
+              <div class="presets" aria-label="Example presets">
+                <span class="plabel">TRY</span>
+                <button class="preset" type="button" data-a="1" data-r="2" data-n="10" title="a₁ = 1, r = 2, n = 10">doubling</button>
+                <button class="preset" type="button" data-a="8" data-r="1/2" data-n="8" title="a₁ = 8, r = 1/2, n = 8">halving</button>
+                <button class="preset" type="button" data-a="3" data-r="-2" data-n="8" title="a₁ = 3, r = −2, n = 8">alternating</button>
+                <button class="preset" type="button" data-a="1" data-r="1/3" data-n="7" title="a₁ = 1, r = 1/3, n = 7">thirds</button>
+              </div>
+              <p class="tip">Fractions stay exact — try r = 1/3 and watch the working keep perfect fractions.</p>
+            </div>
+            <div class="t-results">
+              <div class="rstat" id="rs-seq" role="status" aria-live="polite" hidden></div>
+              <div class="rbody" id="rb-seq"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PANEL 2 : INFINITE SUM ===== -->
+        <div class="tpanel" id="panel-inf" role="tabpanel" aria-labelledby="tab-inf">
+          <div class="tool-grid">
+            <div class="t-inputs">
+              <div class="ihead"><span>INPUT</span><span class="live">LIVE</span></div>
+              <div class="field">
+                <label for="inf-a1">First term a₁</label>
+                <input id="inf-a1" type="text" value="8" placeholder="e.g. 8 or 3/4" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <p class="fmsg" id="inf-a1-msg"></p>
+              </div>
+              <div class="field">
+                <label for="inf-r">Common ratio r</label>
+                <input id="inf-r" type="text" value="1/2" placeholder="e.g. 1/2, 0.25, or −1/3" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <p class="fmsg" id="inf-r-msg"></p>
+              </div>
+              <p class="tip">The infinite series converges whenever |r| &lt; 1 — try 0.5, 1/3, or −0.25. Anything at |r| ≥ 1 diverges, and the tool will tell you why.</p>
+            </div>
+            <div class="t-results">
+              <div class="rstat" id="rs-inf" role="status" aria-live="polite" hidden></div>
+              <div class="rbody" id="rb-inf"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PANEL 3 : FIND RATIO ===== -->
+        <div class="tpanel" id="panel-ratio" role="tabpanel" aria-labelledby="tab-ratio">
+          <div class="tool-grid">
+            <div class="t-inputs">
+              <div class="ihead"><span>INPUT</span><span class="live">LIVE</span></div>
+              <div class="duo">
+                <div class="field">
+                  <label for="rt-av">Term value</label>
+                  <input id="rt-av" type="text" value="2" placeholder="e.g. 2" autocomplete="off" autocapitalize="off" spellcheck="false">
+                  <p class="fmsg" id="rt-av-msg"></p>
+                </div>
+                <div class="field">
+                  <label for="rt-mp">at position m</label>
+                  <input id="rt-mp" type="text" inputmode="numeric" value="1" placeholder="e.g. 1" autocomplete="off" autocapitalize="off">
+                  <p class="fmsg" id="rt-mp-msg"></p>
+                </div>
+              </div>
+              <div class="duo">
+                <div class="field">
+                  <label for="rt-bv">Term value</label>
+                  <input id="rt-bv" type="text" value="54" placeholder="e.g. 54" autocomplete="off" autocapitalize="off" spellcheck="false">
+                  <p class="fmsg" id="rt-bv-msg"></p>
+                </div>
+                <div class="field">
+                  <label for="rt-np">at position n</label>
+                  <input id="rt-np" type="text" inputmode="numeric" value="4" placeholder="e.g. 4" autocomplete="off" autocapitalize="off">
+                  <p class="fmsg" id="rt-np-msg"></p>
+                </div>
+              </div>
+              <p class="tip">The positions don’t have to be consecutive — the gap n − m is handled, including the ± case when the gap is even.</p>
+            </div>
+            <div class="t-results">
+              <div class="rstat" id="rs-ratio" role="status" aria-live="polite" hidden></div>
+              <div class="rbody" id="rb-ratio"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PANEL 4 : FIND TERM ===== -->
+        <div class="tpanel" id="panel-which" role="tabpanel" aria-labelledby="tab-which">
+          <div class="tool-grid">
+            <div class="t-inputs">
+              <div class="ihead"><span>INPUT</span><span class="live">LIVE</span></div>
+              <div class="field">
+                <label for="wh-a1">First term a₁</label>
+                <input id="wh-a1" type="text" value="2" placeholder="e.g. 2" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <p class="fmsg" id="wh-a1-msg"></p>
+              </div>
+              <div class="field">
+                <label for="wh-r">Common ratio r</label>
+                <input id="wh-r" type="text" value="3" placeholder="e.g. 3 or −2" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <p class="fmsg" id="wh-r-msg"></p>
+              </div>
+              <div class="field">
+                <label for="wh-t">Target value</label>
+                <input id="wh-t" type="text" value="4374" placeholder="which term equals this?" autocomplete="off" autocapitalize="off" spellcheck="false">
+                <p class="fmsg" id="wh-t-msg"></p>
+              </div>
+              <p class="tip">Works with negative and fractional ratios too — signs and parity are checked exactly, not approximately.</p>
+            </div>
+            <div class="t-results">
+              <div class="rstat" id="rs-which" role="status" aria-live="polite" hidden></div>
+              <div class="rbody" id="rb-which"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW TO USE ============ -->
+  <section class="howto" id="how-to-use">
+    <div class="wrap">
+      <span class="sec-idx mono">02 — HOW TO USE IT</span>
+      <h2>How to use the calculator</h2>
+      <p class="lede">Thirty seconds from question to answer — no manual required.</p>
+      <div class="howto-grid">
+        <article class="h-card">
+          <span class="h-num">01</span>
+          <h3>Pick a mode</h3>
+          <p>Four tabs, four questions: list terms and sums, evaluate an infinite series, recover the ratio from two known terms, or find which term hits a target value.</p>
+        </article>
+        <article class="h-card">
+          <span class="h-num">02</span>
+          <h3>Enter what you know</h3>
+          <p>First term and ratio for most modes. Decimals, negatives, and fractions like 1/2 or 3/4 all work — the arithmetic stays exact, never approximated.</p>
+        </article>
+        <article class="h-card">
+          <span class="h-num">03</span>
+          <h3>Read the results</h3>
+          <p>The nth term, the sum, every listed term, a shape chart, and line-by-line working — all recomputed live as you type.</p>
+        </article>
+        <article class="h-card">
+          <span class="h-num">04</span>
+          <h3>Copy &amp; tweak</h3>
+          <p>One click copies the full worked solution for your notes or homework. Change any input and everything updates instantly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <span class="sec-idx mono">03 — FAQ</span>
+      <h2>Frequently asked questions</h2>
+      <p class="lede">The short answers to the questions students actually ask.</p>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="fa1" type="button">
+            <span class="qi">Q1</span>
+            <span class="qt">What is a geometric sequence?</span>
+            <span class="qx" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="fa1"><p>A geometric sequence is a list of numbers where each term after the first comes from multiplying the one before it by a fixed number called the <strong>common ratio</strong>, r. For example, 2, 6, 18, 54 is geometric with first term a₁ = 2 and r = 3, because 2×3 = 6, 6×3 = 18, and so on. The ratio can also be negative (alternating signs) or a fraction (terms shrinking toward zero).</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="fa2" type="button">
+            <span class="qi">Q2</span>
+            <span class="qt">How do I find the nth term of a geometric sequence?</span>
+            <span class="qx" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="fa2"><p>Use the formula <strong>aₙ = a₁ × rⁿ⁻¹</strong> — the first term multiplied by the ratio raised to one less than the position. For a₁ = 2 and r = 3, the 10th term is 2 × 3⁹ = 39,366. The calculator’s <em>Sequence &amp; Sum</em> tab applies this formula with exact fractions and shows every step.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="fa3" type="button">
+            <span class="qi">Q3</span>
+            <span class="qt">How do I find the common ratio?</span>
+            <span class="qx" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="fa3"><p>Divide any term by the term before it: <strong>r = aₙ₊₁ / aₙ</strong>. If the two terms you know aren’t consecutive, use <strong>r = (aₙ / aₘ)^(1/(n−m))</strong> — raise the quotient to the power of one over the gap in positions. The <em>Find Ratio</em> tab handles both, including the ± ambiguity when the position gap is even.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="fa4" type="button">
+            <span class="qi">Q4</span>
+            <span class="qt">What is the sum of the first n terms?</span>
+            <span class="qx" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="fa4"><p>For r ≠ 1 the sum is <strong>Sₙ = a₁(1 − rⁿ) / (1 − r)</strong>. When r = 1 every term equals a₁, so the sum is simply n × a₁. Example: 2 + 6 + 18 + … + 39,366 (10 terms, r = 3) gives S₁₀ = 59,048.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="fa5" type="button">
+            <span class="qi">Q5</span>
+            <span class="qt">When does an infinite geometric series converge?</span>
+            <span class="qx" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="fa5"><p>Only when the ratio shrinks — that is, <strong>|r| &lt; 1</strong>. Then the terms approach zero and the infinite sum exists: <strong>S∞ = a₁ / (1 − r)</strong>. If |r| ≥ 1 the terms don’t approach zero, so the series diverges and has no finite sum. Try 8 with r = 1/2: S∞ = 16.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="fa6" type="button">
+            <span class="qi">Q6</span>
+            <span class="qt">Can the common ratio be negative or a fraction?</span>
+            <span class="qx" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="fa6"><p>Yes. A negative ratio makes the signs alternate, as in 3, −6, 12, −24 (r = −2). A ratio between −1 and 1 — like 1/2 or −1/3 — makes the terms shrink in magnitude toward zero. The calculator accepts any ratio, including fractions like 3/4, and computes exactly.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="fa7" type="button">
+            <span class="qi">Q7</span>
+            <span class="qt">Is my data stored or sent anywhere?</span>
+            <span class="qx" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="fa7"><p>No. Every calculation runs locally in your browser — nothing you type is sent to a server, saved, or logged. The tool is free, needs no signup, and works offline once the page has loaded.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER — same footer as every page ============ -->
+<!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
+<section class="pre-footer" id="subscribe">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">SUBSCRIBE</span>
+      <h2>Never miss a <span class="hl">drop.</span></h2>
+      <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
+      <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Poster-deep STEM infographics, engineered to stick. New drop every Friday.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span>studywithstem@gmail.com<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Post</a></li>
+          <li><a href="/page/about/">About</a></li>
+          <li><a href="/page/faq/">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/page/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="/page/copyrights/">Copyrights</a></li>
+          <li><a href="/page/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/></svg>
+            Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="foot-mid">
+      <span class="foot-meta" id="footYear">© STUDYWITHSTEM</span>
+      <span class="foot-meta">DESIGNED &amp; ENGINEERED FOR THE CURIOUS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================
+   BASICS
+========================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS3D = typeof THREE !== 'undefined';
+
+/* =========================================================
+   THEME SYSTEM — one source of truth for CSS *and* WebGL
+   (only the footer starfield uses Three.js on this page).
+========================================================= */
+let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
+let themeTarget = themeMix;
+const themed = [];
+
+function applyRec(r, mix){
+  r.m.color.copy(r.d).lerp(r.l, mix);
+  r.m.opacity = r.dOp + (r.lOp - r.dOp) * mix;
+  r.m.blending = mix < .5 ? THREE.AdditiveBlending : THREE.NormalBlending;
+}
+function themedMat(mat, darkHex, lightHex, darkOp, lightOp){
+  const rec = { m: mat, d: new THREE.Color(darkHex), l: new THREE.Color(lightHex), dOp: darkOp, lOp: lightOp };
+  mat.transparent = true;
+  themed.push(rec);
+  applyRec(rec, themeMix);
+  return mat;
+}
+function tickTheme(){
+  if (themeMix === themeTarget) return;
+  if (RM) themeMix = themeTarget;
+  else {
+    themeMix += (themeTarget - themeMix) * .1;
+    if (Math.abs(themeTarget - themeMix) < .001) themeMix = themeTarget;
+  }
+  themed.forEach(r => applyRec(r, themeMix));
+}
+
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  themeTarget = t === 'light' ? 1 : 0;
+  try{ localStorage.setItem('sws-theme', t); }catch(e){}
+  const b = $('#themeToggle');
+  if (b) b.setAttribute('aria-pressed', String(t === 'light'));
+  const root = document.documentElement;
+  root.classList.add('theme-anim');
+  clearTimeout(setTheme._t);
+  setTheme._t = setTimeout(() => root.classList.remove('theme-anim'), 650);
+}
+(function(){
+  const b = $('#themeToggle');
+  if (b){
+    b.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+    b.addEventListener('click', () =>
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+  }
+})();
+
+let SPRITE = null;
+if (HAS3D){
+  try{
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const x = c.getContext('2d');
+    const g = x.createRadialGradient(32, 32, 0, 32, 32, 30);
+    g.addColorStop(0, 'rgba(255,255,255,1)');
+    g.addColorStop(.5, 'rgba(255,255,255,.45)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+    SPRITE = new THREE.CanvasTexture(c);
+  }catch(e){}
+}
+
+/* =========================================================
+   NAV — hide on scroll down, scroll-progress segment.
+========================================================= */
+const nav = $('#nav');
+const progBar = $('.nav-progress');
+const progSeg = $('#navProg');
+let lastY = 0, sTick = false;
+
+function updProg(){
+  if (!progSeg || !progBar) return;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const p = max > 0 ? Math.min(1, scrollY / max) : 0;
+  const bw = progBar.clientWidth;
+  if (!bw) return;
+  const sw = Math.max(40, Math.min(90, bw * .12));
+  progSeg.style.width = sw + 'px';
+  progSeg.style.transform = 'translateX(' + (p * (bw - sw)) + 'px)';
+}
+function onScroll(){
+  const y = scrollY;
+  nav.classList.toggle('scrolled', y > 8);
+  const menuOpen = document.body.classList.contains('menu-open');
+  if (y > lastY && y > 180 && !menuOpen) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  updProg();
+}
+addEventListener('scroll', () => {
+  if (!sTick){ sTick = true; requestAnimationFrame(() => { onScroll(); sTick = false; }); }
+}, { passive: true });
+addEventListener('resize', updProg);
+addEventListener('load', updProg);
+onScroll();
+
+/* mobile menu */
+(function(){
+  const burger = $('#burger');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('#mmenu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+})();
+
+/* footer reveal + back-to-top + year */
+(function(){
+  const foot = $('#footer');
+  if (foot) new IntersectionObserver((es, o) => {
+    es.forEach(e => { if (e.isIntersecting){ foot.classList.add('in'); o.disconnect(); } });
+  }, { threshold: .12 }).observe(foot);
+
+  const bt = $('#backTop');
+  if (bt) bt.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+  const yr = $('#footYear');
+  if (yr) yr.textContent = '© ' + new Date().getFullYear() + ' STUDYWITHSTEM';
+})();
+
+/* =========================================================
+   FOOTER STARFIELD — quiet drifting points behind the footer
+========================================================= */
+(function(){
+  const cvs = $('#starfield');
+  if (!cvs) return;
+  if (!HAS3D || !SPRITE){ cvs.style.display = 'none'; return; }
+  let renderer;
+  try{
+    renderer = new THREE.WebGLRenderer({ canvas: cvs, alpha: true, antialias: false, powerPreference: 'low-power' });
+    renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  }catch(e){ cvs.style.display = 'none'; return; }
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(55, 1, .1, 100);
+  camera.position.z = 13;
+
+  const N = 240, pos = new Float32Array(N * 3);
+  for (let i = 0; i < N; i++){
+    pos[i*3]   = (Math.random() - .5) * 36;
+    pos[i*3+1] = (Math.random() - .5) * 22;
+    pos[i*3+2] = (Math.random() - .5) * 18;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const mat = new THREE.PointsMaterial({ map: SPRITE, size: .32, transparent: true, opacity: .9, depthWrite: false, sizeAttenuation: true });
+  themedMat(mat, 0x9FEFE0, 0x0E7C87, .9, .5);
+  const stars = new THREE.Points(geo, mat);
+  scene.add(stars);
+
+  function resize(){
+    const w = cvs.clientWidth, h = cvs.clientHeight;
+    if (!w || !h) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  addEventListener('resize', resize);
+
+  let vis = false;
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; }, { threshold: 0 }).observe(cvs);
+
+  let t = 0;
+  (function frame(){
+    requestAnimationFrame(frame);
+    if (!vis) return;
+    tickTheme();
+    if (!RM) t += .0016;
+    stars.rotation.y = t;
+    stars.rotation.x = Math.sin(t * .6) * .07;
+    renderer.render(scene, camera);
+  })();
+})();
+
+/* =========================================================
+   GEOMETRIC SEQUENCE CALCULATOR
+   Exact fraction engine (BigInt) + four live modes.
+   Everything runs locally — nothing is uploaded.
+========================================================= */
+(function(){
+'use strict';
+
+/* ---------- exact fractions on BigInt ---------- */
+const F = (function(){
+  const absB = x => (x < 0n ? -x : x);
+  function gcd(a, b){ while (b){ const t = a % b; a = b; b = t; } return a; }
+  function make(n, d){
+    if (d === undefined) d = 1n;
+    n = BigInt(n); d = BigInt(d);
+    if (d === 0n) throw new Error('DIV0');
+    if (d < 0n){ n = -n; d = -d; }
+    if (n === 0n) return { n: 0n, d: 1n };
+    const g = gcd(absB(n), d);
+    return g === 1n ? { n: n, d: d } : { n: n / g, d: d / g };
+  }
+  const add = (a, b) => (a.d === 1n && b.d === 1n) ? { n: a.n + b.n, d: 1n } : make(a.n * b.d + b.n * a.d, a.d * b.d);
+  const sub = (a, b) => (a.d === 1n && b.d === 1n) ? { n: a.n - b.n, d: 1n } : make(a.n * b.d - b.n * a.d, a.d * b.d);
+  const mul = (a, b) => (a.d === 1n && b.d === 1n) ? { n: a.n * b.n, d: 1n } : make(a.n * b.n, a.d * b.d);
+  const div = (a, b) => { if (b.n === 0n) throw new Error('DIV0'); return make(a.n * b.d, a.d * b.n); };
+  const neg = a => ({ n: -a.n, d: a.d });
+  const absF = a => ({ n: absB(a.n), d: a.d });
+  const isZero = a => a.n === 0n;
+  const sign = a => (a.n > 0n ? 1 : a.n < 0n ? -1 : 0);
+  const eq = (a, b) => a.n === b.n && a.d === b.d;
+  const cmp = (a, b) => { const l = a.n * b.d, r = b.n * a.d; return l < r ? -1 : l > r ? 1 : 0; };
+  function pow(a, e){
+    if (e < 0) throw new Error('NEGPOW');
+    if (a.d === 1n){
+      const m = powBigInt(absB(a.n), e);
+      return { n: (a.n < 0n && e % 2 === 1) ? -m : m, d: 1n };
+    }
+    let out = { n: 1n, d: 1n }, base = a;
+    while (e > 0){
+      if (e & 1) out = mul(out, base);
+      e >>>= 1;
+      if (e > 0) base = mul(base, base);
+    }
+    return out;
+  }
+  const ONE = make(1n), ZERO = make(0n);
+  return { make, add, sub, mul, div, neg, absF, isZero, sign, eq, cmp, pow, ONE, ZERO };
+})();
+
+/* ---------- input parsing (decimals, sci-notation, fractions) ---------- */
+const NUM_RX  = /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/;
+const FRAC_RX = /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?\/[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/;
+
+function decimalToFrac(tok){
+  let m = tok, ex = 0;
+  const ei = m.search(/[eE]/);
+  if (ei >= 0){ ex = parseInt(m.slice(ei + 1), 10) || 0; m = m.slice(0, ei); }
+  let neg = false;
+  if (m[0] === '+') m = m.slice(1);
+  else if (m[0] === '-'){ neg = true; m = m.slice(1); }
+  const dot = m.indexOf('.');
+  const ip = dot < 0 ? m : m.slice(0, dot);
+  const fp = dot < 0 ? '' : m.slice(dot + 1);
+  const digits = (ip || '0') + fp;
+  let num = BigInt(digits === '' ? '0' : digits);
+  const shift = fp.length - ex;
+  if (Math.abs(shift) > 5000) return null;
+  if (shift >= 0) return F.make(neg ? -num : num, 10n ** BigInt(shift));
+  num = num * (10n ** BigInt(-shift));
+  return F.make(neg ? -num : num, 1n);
+}
+
+function parseNum(v){
+  let s = String(v).trim().replace(/[\u2212\u2013\u2014]/g, '-').replace(/\s+/g, '');
+  if (/^[+-]?\d{1,3}(,\d{3})+(\.\d*)?$/.test(s)) s = s.replace(/,/g, '');
+  if (s === '') return { empty: true };
+  if (FRAC_RX.test(s)){
+    const parts = s.split('/');
+    const a = decimalToFrac(parts[0]), b = decimalToFrac(parts[1]);
+    if (!a || !b) return { huge: true };
+    if (b.n === 0n) return { div0: true };
+    return { f: F.div(a, b) };
+  }
+  if (NUM_RX.test(s)){
+    const f = decimalToFrac(s);
+    if (!f) return { huge: true };
+    return { f: f };
+  }
+  return { bad: true };
+}
+
+/* ---------- number formatting (exact where possible) ---------- */
+function termPlaces(d){
+  let x = d, t2 = 0, t5 = 0;
+  while (x % 2n === 0n){ x /= 2n; t2++; }
+  while (x % 5n === 0n){ x /= 5n; t5++; }
+  return x === 1n ? Math.max(t2, t5) : null;
+}
+function bigToNumber(x){
+  const neg = x < 0n;
+  const s = (neg ? -x : x).toString();
+  const L = s.length;
+  if (L <= 15) return (neg ? -1 : 1) * Number(s);
+  const mant = Number(s.slice(0, 15) + (L > 15 ? '.' + s.slice(15, 20) : ''));
+  return (neg ? -1 : 1) * mant * Math.pow(10, L - 15);
+}
+function bigLog10(x){
+  if (x <= 0n) return -Infinity;
+  const s = x.toString(), L = s.length;
+  if (L <= 15) return Math.log10(Number(s));
+  return Math.log10(Number(s.slice(0, 16))) + (L - 16);
+}
+function cleanNum(s){
+  if (s.search(/e/i) < 0) return s.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+  const i = s.search(/e/i);
+  let m = s.slice(0, i), e = s.slice(i);
+  m = m.replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '');
+  return m + e;
+}
+function numToApprox(x){
+  if (!isFinite(x)) return null;
+  if (x === 0) return '0';
+  const a = Math.abs(x);
+  if (a >= 1e-6 && a < 1e16){
+    const s = x.toPrecision(10);
+    return s.search(/e/i) < 0 ? cleanNum(s) : cleanNum(x.toExponential(6));
+  }
+  return cleanNum(x.toExponential(6));
+}
+function sciOut(digits, exp10, neg){
+  const L = digits.length;
+  const head = digits.slice(0, 7), rest = digits.slice(7);
+  const isExact = /^0*$/.test(rest);
+  let mant = head[0];
+  const fracS = head.slice(1).replace(/0+$/, '');
+  if (fracS) mant += '.' + fracS;
+  const e = exp10 + L - 1;
+  return {
+    html: (isExact ? '' : '≈ ') + (neg ? '−' : '') + mant + '×10<sup>' + e + '</sup>',
+    plain: (isExact ? '' : '≈') + (neg ? '-' : '') + mant + 'e' + (e >= 0 ? '+' : '') + e,
+    exact: isExact
+  };
+}
+/* compact core value — for use inside formulas */
+function fmt(f){
+  const neg = f.n < 0n;
+  const N = neg ? -f.n : f.n;
+  const D = f.d;
+  const negH = neg ? '−' : '', negP = neg ? '-' : '';
+  if (D === 1n){
+    const s = N.toString();
+    if (s.length <= 21) return { html: negH + s, plain: negP + s, exact: true };
+    return sciOut(s, 0, neg);
+  }
+  const ns = N.toString(), ds = D.toString();
+  if (ns.length <= 15 && ds.length <= 15)
+    return { html: negH + ns + '/' + ds, plain: negP + ns + '/' + ds, exact: true };
+  const tp = termPlaces(D);
+  if (tp !== null && tp <= 20){
+    const S = (N * (10n ** BigInt(tp))) / D;
+    const s = S.toString();
+    if (s.length <= 34){
+      const padded = s.padStart(tp + 1, '0');
+      const dec = padded.slice(0, padded.length - tp) + (tp ? '.' + padded.slice(padded.length - tp) : '');
+      return { html: negH + dec, plain: negP + dec, exact: true };
+    }
+    return sciOut(s, -tp, neg);
+  }
+  const lg = bigLog10(N) - bigLog10(D);
+  let e = Math.floor(lg), mant = Math.pow(10, lg - e);
+  if (mant > 9.999999){ mant /= 10; e += 1; }
+  const ms = cleanNum(mant.toPrecision(7));
+  return { html: '≈ ' + negH + ms + '×10<sup>' + e + '</sup>', plain: '≈' + negP + ms + 'e' + (e >= 0 ? '+' : '') + e, exact: false };
+}
+/* full value — core plus decimal companion where informative */
+function fmtFull(f){
+  const c = fmt(f);
+  if (f.d === 1n) return c;
+  if (!c.exact) return c;
+  const N = f.n < 0n ? -f.n : f.n, D = f.d;
+  const ns = N.toString(), ds = D.toString();
+  if (ns.length > 15 || ds.length > 15) return c;
+  const tp = termPlaces(D);
+  if (tp !== null && tp <= 12){
+    const S = (N * (10n ** BigInt(tp))) / D;
+    const s = S.toString();
+    if (s.length <= 17){
+      const padded = s.padStart(tp + 1, '0');
+      const comp = padded.slice(0, padded.length - tp) + (tp ? '.' + padded.slice(padded.length - tp) : '');
+      return { html: c.html + ' = ' + comp, plain: c.plain + ' = ' + comp, exact: true };
+    }
+  }
+  const ap = numToApprox(bigToNumber(N) / bigToNumber(D));
+  if (ap === null) return c;
+  return { html: c.html + ' ≈ ' + ap, plain: c.plain + ' ≈ ' + ap, exact: false };
+}
+const fracToNumber = f => bigToNumber(f.n) / bigToNumber(f.d);
+
+/* rough digit-growth cost of f^e — used to block pathological inputs */
+function powCost(f, e){
+  const a = F.absF(f);
+  if (a.n === 0n) return 0;
+  const ln = bigLog10(a.n), ld = bigLog10(a.d);
+  return a.d === 1n ? e * ln : e * (ln + ld);
+}
+const costLimit = f => (F.absF(f).d === 1n ? 20000 : 8000);
+
+/* ---------- integer k-th roots (exact when possible) ---------- */
+function powBigInt(b, k){ let r = 1n, base = b; while (k > 0){ if (k & 1) r *= base; k >>>= 1; if (k > 0) base *= base; } return r; }
+function nthRootFloor(x, k){
+  if (x < 2n) return x;
+  const bl = x.toString(2).length;
+  let hi = 1n << BigInt(Math.ceil(bl / k) + 1), lo = 1n;
+  while (lo < hi){
+    const mid = (lo + hi + 1n) / 2n;
+    if (powBigInt(mid, k) <= x) lo = mid; else hi = mid - 1n;
+  }
+  return lo;
+}
+function nthRootExact(x, k){
+  if (x === 1n) return 1n;
+  const r = nthRootFloor(x, k);
+  return powBigInt(r, k) === x ? r : null;
+}
+function exactRoot(q, k){
+  if (k === 1) return q;
+  const rn = nthRootExact(q.n, k), rd = nthRootExact(q.d, k);
+  if (rn === null || rd === null) return null;
+  return F.make(rn, rd);
+}
+
+/* ---------- small display helpers ---------- */
+const $id = id => document.getElementById(id);
+const stat  = (lab, val) => '<div class="stat"><span class="s-lab">' + lab + '</span><span class="s-val">' + val + '</span></div>';
+const statW = (lab, val) => '<div class="stat wide"><span class="s-lab">' + lab + '</span><span class="s-val">' + val + '</span></div>';
+const chip  = (i, f) => '<span class="tchip"><b>a<sub>' + i + '</sub></b> = ' + fmtFull(f).html + '</span>';
+const wrapPow = (f, html) => (f.d !== 1n || f.n < 0n) ? '(' + html + ')' : html;
+const lineDiv = l => '<div class="sl">' + l + '</div>';
+const finLine = o => '<span class="fin-v">' + (o.exact ? '= ' : '') + o.html + '</span>';
+function ordinal(n){
+  const sfx = ['th', 'st', 'nd', 'rd'], v = n % 100;
+  return n + (sfx[(v - 20) % 10] || sfx[v] || sfx[0]);
+}
+const copyBtn = tab =>
+  '<button class="btn-ticket copybtn" type="button" data-tab="' + tab + '">' +
+  '<span>Copy results</span>' +
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>';
+
+function toPlain(html){
+  return html
+    .replace(/<svg[\s\S]*?<\/svg>/g, '')
+    .replace(/<sub>/g, '_').replace(/<\/sub>/g, '')
+    .replace(/<sup>/g, '^').replace(/<\/sup>/g, '')
+    .replace(/<\/(div|p)>/g, '\n')
+    .replace(/<[^>]*>/g, '')
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/−/g, '-').replace(/×/g, '*').replace(/·/g, '*')
+    .replace(/≈/g, '~').replace(/→/g, '->').replace(/…/g, '...')
+    .replace(/’/g, "'").replace(/✓/g, '(ok)')
+    .replace(/\n\s*\n\s*\n+/g, '\n\n')
+    .replace(/[ \t]+\n/g, '\n')
+    .trim();
+}
+
+function copyText(btn, text){
+  const span = btn.querySelector('span');
+  if (!span) return;
+  const orig = 'Copy results';
+  if (!text){
+    span.textContent = 'Nothing to copy';
+    setTimeout(() => { span.textContent = orig; }, 1400);
+    return;
+  }
+  const done = () => {
+    span.textContent = 'Copied ✓';
+    btn.classList.add('done');
+    setTimeout(() => { span.textContent = orig; btn.classList.remove('done'); }, 1600);
+  };
+  const fallback = () => {
+    try{
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      done();
+    }catch(e){}
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done, fallback);
+  } else fallback();
+}
+
+/* ---------- field reading + inline messages ---------- */
+function readFrac(id){
+  const r = parseNum($id(id).value);
+  if (r.empty) return { empty: true };
+  if (r.div0) return { err: 'A fraction can’t divide by zero' };
+  if (r.bad)  return { err: 'Enter a number — e.g. 3, −2.5, or 1/2' };
+  if (r.huge) return { err: 'That exponent is too extreme' };
+  return { f: r.f };
+}
+function readInt(id, lo, hi, label){
+  const s = $id(id).value.trim().replace(/\u2212/g, '-').replace(/,/g, '');
+  if (s === '') return { empty: true };
+  if (!/^\d+$/.test(s)) return { err: (label || 'This field') + ' must be a whole number' };
+  const v = parseInt(s, 10);
+  if (v < lo || v > hi) return { err: (label || 'It') + ' must be between ' + lo + ' and ' + hi };
+  return { v: v };
+}
+function fieldMsg(id, res){
+  const m = $id(id + '-msg');
+  if (!m) return;
+  m.classList.remove('err');
+  if (res.err){ m.textContent = res.err; m.classList.add('err'); return; }
+  if (res.empty || res.f === undefined){ m.textContent = ''; return; }
+  const plain = fmt(res.f).plain;
+  const typed = $id(id).value.trim();
+  m.textContent = (plain !== typed && typed !== '') ? (plain.charAt(0) === '≈' ? plain : '= ' + plain) : '';
+}
+
+/* ---------- panel renderer ---------- */
+const LAST = { seq: '', inf: '', ratio: '', which: '' };
+function renderPanel(statId, bodyId, statMsg, bodyHtml, soft){
+  const tab = statId.replace(/^rs-/, '');
+  const st = $id(statId), bd = $id(bodyId);
+  if (!st || !bd) return;
+  if (statMsg){
+    LAST[tab] = '';
+    st.textContent = statMsg;
+    st.className = 'rstat' + (soft ? ' soft' : '');
+    st.hidden = false;
+    bd.hidden = true;
+  } else {
+    LAST[tab] = 'StudyWithSTEM · Geometric Sequence Calculator\n\n' + toPlain(bodyHtml);
+    st.hidden = true;
+    bd.hidden = false;
+    bd.innerHTML = bodyHtml + copyBtn(tab);
+  }
+}
+
+/* ---------- SVG chart of the first terms ---------- */
+function chartSVG(terms){
+  const vals = terms.map(fracToNumber);
+  if (vals.some(v => !isFinite(v)))
+    return '<div class="chart-skip">chart skipped — values are beyond chart range</div>';
+  const lo = Math.min(0, Math.min.apply(null, vals));
+  const hi = Math.max(0, Math.max.apply(null, vals));
+  if (hi === lo)
+    return '<div class="chart-skip">chart skipped — every plotted term is zero</div>';
+  const m = vals.length;
+  const x0 = 52, x1 = 548, y0 = 16, y1 = 176;
+  const yOf = v => y1 - (v - lo) / (hi - lo) * (y1 - y0);
+  const xOf = i => (m === 1 ? (x0 + x1) / 2 : x0 + i * (x1 - x0) / (m - 1));
+  const zeroY = yOf(0);
+  let out = '<div class="chart"><svg viewBox="0 0 560 210" role="img" aria-label="Chart of the first ' + m + ' term' + (m > 1 ? 's' : '') + '">';
+  out += '<line class="cz" x1="' + x0 + '" y1="' + zeroY.toFixed(1) + '" x2="' + x1 + '" y2="' + zeroY.toFixed(1) + '"/>';
+  if (m > 1){
+    out += '<polyline class="cl" points="' + vals.map((v, i) => xOf(i).toFixed(1) + ',' + yOf(v).toFixed(1)).join(' ') + '"/>';
+  }
+  vals.forEach((v, i) => {
+    out += '<circle class="cd" cx="' + xOf(i).toFixed(1) + '" cy="' + yOf(v).toFixed(1) + '" r="3.2"/>';
+    out += '<text class="ct" x="' + xOf(i).toFixed(1) + '" y="' + (y1 + 18) + '" text-anchor="middle">' + (i + 1) + '</text>';
+  });
+  if (hi > 0) out += '<text class="ct" x="' + (x0 - 8) + '" y="' + (y0 + 4) + '" text-anchor="end">' + numToApprox(hi) + '</text>';
+  if (lo < 0) out += '<text class="ct" x="' + (x0 - 8) + '" y="' + (y1 + 4) + '" text-anchor="end">' + numToApprox(lo) + '</text>';
+  out += '<text class="ct" x="' + (x0 - 8) + '" y="' + (zeroY + 3).toFixed(1) + '" text-anchor="end">0</text>';
+  out += '</svg></div>';
+  return out;
+}
+
+/* =========================================================
+   MODE 1 — SEQUENCE & SUM
+========================================================= */
+function calcSeq(){
+  const ra = readFrac('sq-a1'), rr = readFrac('sq-r'), rn = readInt('sq-n', 1, 10000, 'n');
+  fieldMsg('sq-a1', ra); fieldMsg('sq-r', rr); fieldMsg('sq-n', rn);
+  const bad = ra.err || rr.err || rn.err;
+  if (bad){ renderPanel('rs-seq', 'rb-seq', bad, '', false); return; }
+  if (ra.empty || rr.empty || rn.v === undefined){
+    renderPanel('rs-seq', 'rb-seq', 'Enter a first term, a ratio, and how many terms — results appear as you type.', '', true);
+    return;
+  }
+  const a1 = ra.f, r = rr.f, n = rn.v;
+
+  if (powCost(r, n) > costLimit(r)){
+    renderPanel('rs-seq', 'rb-seq', 'That mix of r and n produces numbers too large to compute quickly — try a smaller n.', '', false);
+    return;
+  }
+
+  const k = n - 1;
+  const rk = F.pow(r, k);
+  const an = F.mul(a1, rk);
+  const Sn = F.eq(r, F.ONE) ? F.mul(a1, F.make(n))
+           : F.div(F.mul(a1, F.sub(F.ONE, F.pow(r, n))), F.sub(F.ONE, r));
+
+  const showN = Math.min(n, 20);
+  const terms = [];
+  let t = a1;
+  for (let i = 0; i < showN; i++){ terms.push(t); t = F.mul(t, r); }
+  const chartTerms = terms.slice(0, Math.min(n, 12));
+
+  const fa1 = fmtFull(a1), fr = fmtFull(r), fan = fmtFull(an), fSn = fmtFull(Sn);
+  const a1c = fmt(a1).html, rc = fmt(r).html;
+  const a1p = wrapPow(a1, a1c), rrp = wrapPow(r, rc);
+
+  const s = [];
+  s.push('a<sub>' + n + '</sub> = a<sub>1</sub> · r<sup>n−1</sup>');
+  s.push('a<sub>' + n + '</sub> = ' + a1p + ' · ' + rrp + '<sup>' + k + '</sup>');
+  s.push('= ' + a1c + ' · ' + fmt(rk).html);
+  s.push(finLine(fan));
+  s.push('&nbsp;');
+  if (F.eq(r, F.ONE)){
+    s.push('S<sub>' + n + '</sub> = n · a<sub>1</sub> &nbsp;(r = 1 → every term equals a₁)');
+    s.push('S<sub>' + n + '</sub> = ' + n + ' · ' + a1c);
+  } else {
+    s.push('S<sub>' + n + '</sub> = a<sub>1</sub>(1 − r<sup>n</sup>) / (1 − r)');
+    s.push('S<sub>' + n + '</sub> = ' + a1p + ' · (1 − ' + rrp + '<sup>' + n + '</sup>) / (1 − ' + rrp + ')');
+  }
+  s.push(finLine(fSn));
+
+  let shapeNote = '';
+  if (!F.isZero(a1)){
+    const absR = F.absF(r);
+    if (F.sign(r) < 0) shapeNote = 'Negative ratio — the signs alternate term by term.';
+    else if (F.cmp(absR, F.ONE) < 0) shapeNote = '|r| &lt; 1 — the terms shrink toward zero.';
+    else if (F.cmp(absR, F.ONE) > 0) shapeNote = '|r| &gt; 1 — the terms grow without bound.';
+  }
+
+  const chips = terms.map((f, i) => chip(i + 1, f)).join(' ');
+
+  const body =
+    '<div class="stats">' +
+      stat('a<sub>1</sub> — first term', fa1.html) +
+      stat('r — common ratio', fr.html) +
+      stat('a<sub>' + n + '</sub> — ' + ordinal(n) + ' term', fan.html) +
+      stat('S<sub>' + n + '</sub> — sum of ' + n + (n === 1 ? ' term' : ' terms'), fSn.html) +
+    '</div>' +
+    '<div class="rblock"><div class="rlabel">FIRST ' + showN + ' TERM' + (showN > 1 ? 'S' : '') + (n > 20 ? ' — OF ' + n : '') + '</div>' +
+      '<div class="terms">' + chips + '</div>' +
+      (n > 20 ? '<p class="rnote">…and ' + (n - 20) + ' more, up to a<sub>' + n + '</sub> = ' + fan.html + '.</p>' : '') +
+    '</div>' +
+    '<div class="rblock"><div class="rlabel">SHAPE — FIRST ' + chartTerms.length + ' TERM' + (chartTerms.length > 1 ? 'S' : '') + '</div>' +
+      chartSVG(chartTerms) +
+      (shapeNote ? '<p class="rnote">' + shapeNote + '</p>' : '') +
+    '</div>' +
+    '<div class="rblock"><div class="rlabel">WORKING</div><div class="steps">' + s.map(lineDiv).join('') + '</div></div>';
+
+  renderPanel('rs-seq', 'rb-seq', null, body);
+}
+
+/* =========================================================
+   MODE 2 — INFINITE SUM
+========================================================= */
+function calcInf(){
+  const ra = readFrac('inf-a1'), rr = readFrac('inf-r');
+  fieldMsg('inf-a1', ra); fieldMsg('inf-r', rr);
+  const bad = ra.err || rr.err;
+  if (bad){ renderPanel('rs-inf', 'rb-inf', bad, '', false); return; }
+  if (ra.empty || rr.empty){
+    renderPanel('rs-inf', 'rb-inf', 'Enter a first term and a ratio — the infinite sum updates as you type.', '', true);
+    return;
+  }
+  const a1 = ra.f, r = rr.f;
+  const ar = F.absF(r);
+
+  if (!(F.cmp(ar, F.ONE) < 0)){
+    let why;
+    if (F.eq(r, F.ONE))
+      why = 'r = 1, so every term equals a₁ and the partial sums grow forever.';
+    else if (F.eq(r, F.neg(F.ONE)))
+      why = 'r = −1, so the partial sums oscillate between a₁ and 0 forever — no limit exists.';
+    else
+      why = '|r| = ' + fmtFull(ar).html + ' ≥ 1, so the terms never shrink to zero and the running total never settles.';
+    renderPanel('rs-inf', 'rb-inf', 'This infinite series diverges — ' + why, '', false);
+    return;
+  }
+
+  const denom = F.sub(F.ONE, r);
+  const S = F.div(a1, denom);
+  const fa1 = fmtFull(a1), fr = fmtFull(r), fS = fmtFull(S), far = fmtFull(ar);
+  const rrp = wrapPow(r, fmt(r).html);
+
+  const s = [];
+  s.push('|r| = ' + far.html + ' &lt; 1 → terms shrink to zero → S∞ exists');
+  s.push('S∞ = a<sub>1</sub> / (1 − r)');
+  s.push('S∞ = ' + fmt(a1).html + ' / (1 − ' + rrp + ')');
+  s.push(finLine(fS));
+
+  const partials = [1, 2, 3, 4, 5, 6, 10];
+  const pchips = partials.map(nn => {
+    const Sn = F.div(F.mul(a1, F.sub(F.ONE, F.pow(r, nn))), denom);
+    return '<span class="tchip"><b>S<sub>' + nn + '</sub></b> = ' + fmtFull(Sn).html + '</span>';
+  }).join(' ');
+
+  const body =
+    '<div class="stats">' +
+      stat('a<sub>1</sub> — first term', fa1.html) +
+      stat('r — common ratio', fr.html) +
+      statW('S∞ — sum of all terms', fS.html) +
+    '</div>' +
+    '<div class="rblock"><div class="rlabel">PARTIAL SUMS CLOSING IN</div><div class="terms">' + pchips + '</div>' +
+      '<p class="rnote">Each Sₙ adds one more term — because |r| &lt; 1 the leftover tail keeps shrinking, so the partial sums home in on S∞.</p></div>' +
+    '<div class="rblock"><div class="rlabel">WORKING</div><div class="steps">' + s.map(lineDiv).join('') + '</div></div>';
+
+  renderPanel('rs-inf', 'rb-inf', null, body);
+}
+
+/* =========================================================
+   MODE 3 — FIND RATIO (from two known terms)
+========================================================= */
+function calcRatio(){
+  const rav = readFrac('rt-av'), rmp = readInt('rt-mp', 1, 10000, 'Position m'),
+        rbv = readFrac('rt-bv'), rnp = readInt('rt-np', 1, 10000, 'Position n');
+  fieldMsg('rt-av', rav); fieldMsg('rt-mp', rmp);
+  fieldMsg('rt-bv', rbv); fieldMsg('rt-np', rnp);
+  const bad = rav.err || rbv.err || rmp.err || rnp.err;
+  if (bad){ renderPanel('rs-ratio', 'rb-ratio', bad, '', false); return; }
+  if (rav.empty || rbv.empty || rmp.v === undefined || rnp.v === undefined){
+    renderPanel('rs-ratio', 'rb-ratio', 'Enter two known terms and their positions — the ratio updates as you type.', '', true);
+    return;
+  }
+
+  if (rmp.v === rnp.v){
+    if (F.eq(rav.f, rbv.f))
+      renderPanel('rs-ratio', 'rb-ratio', 'Both terms sit at the same position — one term alone can’t pin down a ratio. Use two different positions.', '', true);
+    else
+      renderPanel('rs-ratio', 'rb-ratio', 'Impossible — the same position can’t hold two different values.', '', false);
+    return;
+  }
+
+  let loV = rav.f, loP = rmp.v, hiV = rbv.f, hiP = rnp.v;
+  if (loP > hiP){ loV = rbv.f; loP = rnp.v; hiV = rav.f; hiP = rmp.v; }
+  const k = hiP - loP;
+
+  if (F.isZero(loV) || F.isZero(hiV)){
+    renderPanel('rs-ratio', 'rb-ratio', 'Both known terms must be nonzero — a zero term can’t pin down a ratio.', '', false);
+    return;
+  }
+
+  const q = F.div(hiV, loV);            /* q = r^k */
+  const qPos = F.sign(q) > 0;
+  const aq = F.absF(q);
+  const floC = fmt(loV).html, fhiC = fmt(hiV).html;
+  const floV = fmtFull(loV), fhiV = fmtFull(hiV), fq = fmtFull(q), fqC = fmt(q);
+
+  const results = [];
+  if (k % 2 === 1){
+    const root = exactRoot(aq, k);
+    if (root) results.push({ r: qPos ? root : F.neg(root), exact: true });
+    else {
+      const qn = fracToNumber(q);
+      if (!isFinite(qn) || qn === 0){
+        renderPanel('rs-ratio', 'rb-ratio', 'That quotient is too extreme to take a root of.', '', false);
+        return;
+      }
+      results.push({ rNum: Math.sign(qn) * Math.pow(Math.abs(qn), 1 / k), exact: false });
+    }
+  } else {
+    if (!qPos){
+      renderPanel('rs-ratio', 'rb-ratio', 'No real ratio — these positions sit an even number of steps apart, and an even power of any real ratio is never negative. Yet b/a came out negative, so no real r can produce both terms.', '', false);
+      return;
+    }
+    const root = exactRoot(q, k);
+    if (root){
+      results.push({ r: root, exact: true });
+      results.push({ r: F.neg(root), exact: true });
+    } else {
+      const qn = fracToNumber(q);
+      if (!isFinite(qn) || qn === 0){
+        renderPanel('rs-ratio', 'rb-ratio', 'That quotient is too extreme to take a root of.', '', false);
+        return;
+      }
+      const mag = Math.pow(qn, 1 / k);
+      results.push({ rNum: mag, exact: false });
+      results.push({ rNum: -mag, exact: false });
+    }
+  }
+
+  const blocks = results.map(function(res, i){
+    const multi = results.length > 1;
+    if (res.exact){
+      const fr = fmtFull(res.r), frc = fmt(res.r);
+      const deep = powCost(res.r, loP) > costLimit(res.r);
+      const b = ['<div class="rblock">'];
+      b.push('<div class="rlabel">' + (multi ? 'OPTION ' + (i + 1) : 'RESULT') + ' — r = ' + fr.html + '</div>');
+      b.push('<div class="stats">' + statW('r — common ratio', fr.html) + '</div>');
+      const s = [];
+      if (k === 1){
+        s.push('r = a<sub>' + hiP + '</sub> / a<sub>' + loP + '</sub>');
+        s.push('r = ' + fhiC + ' / ' + floC);
+      } else {
+        s.push('r<sup>' + k + '</sup> = a<sub>' + hiP + '</sub> / a<sub>' + loP + '</sub> = ' + fhiC + ' / ' + floC + ' = ' + fqC.html);
+        s.push('r = (' + fqC.html + ')<sup>1/' + k + '</sup>');
+      }
+      s.push(finLine(fr));
+      b.push('<div class="steps">' + s.map(lineDiv).join('') + '</div>');
+      if (!deep){
+        const a1F = F.div(loV, F.pow(res.r, loP - 1));
+        const fa1 = fmtFull(a1F);
+        const s2 = [];
+        s2.push('a<sub>1</sub> = a<sub>' + loP + '</sub> / r<sup>' + (loP - 1) + '</sup> = ' + floC + ' / ' + wrapPow(res.r, frc.html) + '<sup>' + (loP - 1) + '</sup>');
+        s2.push(finLine(fa1));
+        const showN = Math.min(Math.max(loP, hiP) + 2, 12);
+        const tch = [];
+        let t = a1F;
+        for (let j = 1; j <= showN; j++){ tch.push(chip(j, t)); t = F.mul(t, res.r); }
+        b.push('<div class="rlabel" style="margin-top:16px;">IMPLIED SEQUENCE' + (multi ? ' — OPTION ' + (i + 1) : '') + '</div>');
+        b.push('<div class="stats">' + statW('a<sub>1</sub> — implied first term', fa1.html) + '</div>');
+        b.push('<div class="steps">' + s2.map(lineDiv).join('') + '</div>');
+        b.push('<div class="terms" style="margin-top:12px;">' + tch.join(' ') + '</div>');
+        b.push('<p class="rnote">check: a<sub>' + loP + '</sub> = ' + floV.html + ' and a<sub>' + hiP + '</sub> = ' + fhiV.html + ' — both given terms land exactly.</p>');
+      } else {
+        b.push('<p class="rnote">These positions are too deep to expand the full sequence here — the ratio above is exact, though.</p>');
+      }
+      b.push('</div>');
+      return b.join('');
+    }
+    const frn = numToApprox(res.rNum) || String(res.rNum);
+    const b = ['<div class="rblock">'];
+    b.push('<div class="rlabel">' + (multi ? 'OPTION ' + (i + 1) : 'RESULT') + ' — r ≈ ' + frn + '</div>');
+    b.push('<div class="stats">' + statW('r — common ratio (approximate)', '≈ ' + frn) + '</div>');
+    b.push('<div class="steps">' + lineDiv('r<sup>' + k + '</sup> = ' + fq.html) + lineDiv('r ≈ ' + frn) + '</div>');
+    b.push('<p class="rnote">No exact rational ratio fits these two terms — this is the real-number answer, rounded. The sequence it implies won’t hit both given terms exactly.</p>');
+    b.push('</div>');
+    return b.join('');
+  });
+
+  renderPanel('rs-ratio', 'rb-ratio', null, blocks.join(''));
+}
+
+/* =========================================================
+   MODE 4 — FIND TERM (which n hits the target)
+========================================================= */
+function calcWhich(){
+  const ra = readFrac('wh-a1'), rr = readFrac('wh-r'), rt = readFrac('wh-t');
+  fieldMsg('wh-a1', ra); fieldMsg('wh-r', rr); fieldMsg('wh-t', rt);
+  const bad = ra.err || rr.err || rt.err;
+  if (bad){ renderPanel('rs-which', 'rb-which', bad, '', false); return; }
+  if (ra.empty || rr.empty || rt.empty){
+    renderPanel('rs-which', 'rb-which', 'Enter a first term, a ratio, and a target — the position updates as you type.', '', true);
+    return;
+  }
+  const a1 = ra.f, r = rr.f, T = rt.f;
+
+  if (F.isZero(a1)){
+    if (F.isZero(T))
+      renderPanel('rs-which', 'rb-which', 'a₁ = 0 makes every term 0 — the target 0 is matched at every position, and n = 1 already works.', '', true);
+    else
+      renderPanel('rs-which', 'rb-which', 'No solution — with a₁ = 0 every term is 0, so the sequence never reaches a nonzero target.', '', false);
+    return;
+  }
+  if (F.isZero(r)){
+    if (F.eq(T, a1))
+      renderPanel('rs-which', 'rb-which', 'r = 0 → the sequence is a₁, 0, 0, … Only the 1st term equals a₁, so n = 1.', '', true);
+    else if (F.isZero(T))
+      renderPanel('rs-which', 'rb-which', 'r = 0 → every term from the 2nd onward is 0, so the smallest n hitting the target is n = 2.', '', true);
+    else
+      renderPanel('rs-which', 'rb-which', 'No solution — the sequence only contains a₁ and 0, and the target is neither.', '', false);
+    return;
+  }
+  if (F.eq(r, F.ONE)){
+    if (F.eq(T, a1))
+      renderPanel('rs-which', 'rb-which', 'r = 1 → constant sequence: every term equals a₁, so any n works (n = 1 is the smallest).', '', true);
+    else
+      renderPanel('rs-which', 'rb-which', 'No solution — r = 1 makes every term equal a₁, and the target differs from a₁.', '', false);
+    return;
+  }
+  if (F.eq(r, F.neg(F.ONE))){
+    if (F.eq(T, a1))
+      renderPanel('rs-which', 'rb-which', 'r = −1 → the sequence alternates a₁, −a₁, a₁, … The target equals a₁ at every odd position; smallest n = 1.', '', true);
+    else if (F.eq(T, F.neg(a1)))
+      renderPanel('rs-which', 'rb-which', 'r = −1 → the sequence alternates a₁, −a₁, a₁, … The target equals −a₁ at every even position; smallest n = 2.', '', true);
+    else
+      renderPanel('rs-which', 'rb-which', 'No solution — with r = −1 the sequence only ever visits a₁ and −a₁.', '', false);
+    return;
+  }
+
+  const q = F.div(T, a1);               /* q = r^(n−1) */
+  if (F.isZero(q)){
+    renderPanel('rs-which', 'rb-which', 'No solution — a nonzero first term with a nonzero ratio never produces a zero term.', '', false);
+    return;
+  }
+  const rPos = F.sign(r) > 0, qPos = F.sign(q) > 0;
+  if (rPos && !qPos){
+    renderPanel('rs-which', 'rb-which', 'No solution — a positive ratio never flips signs, so the sequence and the target sit on opposite sides of zero.', '', false);
+    return;
+  }
+
+  const aq = F.absF(q), ar = F.absF(r);
+  const lq = bigLog10(aq.n) - bigLog10(aq.d);
+  const lr = bigLog10(ar.n) - bigLog10(ar.d);
+  const lim = costLimit(r);
+  const base = lq / lr;
+  const cands = [];
+  if (isFinite(base)){
+    cands.push(Math.floor(base), Math.ceil(base), Math.round(base), Math.floor(base) - 1, Math.ceil(base) + 1);
+  }
+  cands.push(0);
+  let found = -1;
+  for (let ci = 0; ci < cands.length; ci++){
+    const c = cands[ci];
+    if (c < 0 || c > 1000000) continue;
+    if (powCost(r, c) > lim) continue;
+    if (!rPos){
+      if (qPos && c % 2 !== 0) continue;
+      if (!qPos && c % 2 !== 1) continue;
+    }
+    if (F.eq(F.pow(ar, c), aq)){ found = c; break; }
+  }
+  if (found < 0){
+    renderPanel('rs-which', 'rb-which', 'No solution — no whole-number position n makes a₁ · rⁿ⁻¹ equal the target. The target simply isn’t a term of this sequence.', '', false);
+    return;
+  }
+
+  const k = found, nPos = k + 1;
+  const fa1 = fmtFull(a1), fr = fmtFull(r), fT = fmtFull(T);
+  const fa1c = fmt(a1).html, fqc = fmt(q).html;
+  const rrp = wrapPow(r, fmt(r).html);
+
+  const s = [];
+  s.push('a<sub>n</sub> = a<sub>1</sub> · r<sup>n−1</sup> = ' + fT.html + ' — find n');
+  s.push('T / a<sub>1</sub> = ' + fT.html + ' / ' + fa1.html + ' = ' + fqc + ' = r<sup>n−1</sup>');
+  s.push('|T/a<sub>1</sub>| = |r|<sup>n−1</sup> → n − 1 = ' + k);
+  if (!rPos)
+    s.push('sign check: r &lt; 0, T/a<sub>1</sub> is ' + (qPos ? 'positive → n − 1 must be even' : 'negative → n − 1 must be odd') + ' (' + k + (k % 2 === 0 ? ' is even' : ' is odd') + ')');
+  s.push('&nbsp;');
+  s.push('<span class="fin-v">n = ' + nPos + ' → a<sub>' + nPos + '</sub> = ' + fa1c + ' · ' + rrp + '<sup>' + k + '</sup> = ' + fT.html + '</span>');
+
+  const showN = Math.min(nPos, 20);
+  const terms = [];
+  let t = a1;
+  for (let j = 0; j < showN; j++){ terms.push(t); t = F.mul(t, r); }
+  const chipsHtml = terms.map((f, i) => {
+    const c = chip(i + 1, f);
+    return (i + 1 === nPos) ? c.replace('class="tchip"', 'class="tchip" style="border-color:var(--accent)"') : c;
+  }).join(' ');
+
+  const body =
+    '<div class="rok">Match — the ' + ordinal(nPos) + ' term equals the target exactly.</div>' +
+    '<div class="stats">' +
+      stat('a<sub>1</sub> — first term', fa1.html) +
+      stat('r — common ratio', fr.html) +
+      statW('n — position of the target', 'n = ' + nPos) +
+    '</div>' +
+    '<div class="rblock"><div class="rlabel">' + (nPos > 20 ? 'FIRST 20 TERMS — MATCH AT n = ' + nPos : 'TERMS UP TO THE MATCH') + '</div>' +
+      '<div class="terms">' + chipsHtml + '</div>' +
+      (nPos > 20 ? '<p class="rnote">…the ' + ordinal(nPos) + ' term, a<sub>' + nPos + '</sub> = ' + fT.html + ', is the match.</p>' : '') +
+    '</div>' +
+    '<div class="rblock"><div class="rlabel">WORKING</div><div class="steps">' + s.map(lineDiv).join('') + '</div></div>';
+
+  renderPanel('rs-which', 'rb-which', null, body);
+}
+
+/* ---------- wiring: live inputs (debounced while typing) ---------- */
+function live(fn){
+  let tm = null;
+  return function(){
+    clearTimeout(tm);
+    tm = setTimeout(fn, 120);
+  };
+}
+[['sq-a1', calcSeq], ['sq-r', calcSeq], ['sq-n', calcSeq],
+ ['inf-a1', calcInf], ['inf-r', calcInf],
+ ['rt-av', calcRatio], ['rt-mp', calcRatio], ['rt-bv', calcRatio], ['rt-np', calcRatio],
+ ['wh-a1', calcWhich], ['wh-r', calcWhich], ['wh-t', calcWhich]].forEach(function(pair){
+  const el = $id(pair[0]);
+  if (el){
+    el.addEventListener('input', live(pair[1]));
+    el.addEventListener('change', pair[1]);
+  }
+});
+
+/* ---------- wiring: presets ---------- */
+ $$('.preset').forEach(b => b.addEventListener('click', () => {
+  $id('sq-a1').value = b.dataset.a;
+  $id('sq-r').value  = b.dataset.r;
+  $id('sq-n').value  = b.dataset.n;
+  calcSeq();
+}));
+
+/* ---------- wiring: tabs ---------- */
+const CALC = { seq: calcSeq, inf: calcInf, ratio: calcRatio, which: calcWhich };
+ $$('.ttab').forEach(tabEl => tabEl.addEventListener('click', () => {
+  $$('.ttab').forEach(t => {
+    const on = t === tabEl;
+    t.classList.toggle('active', on);
+    t.setAttribute('aria-selected', String(on));
+  });
+  $$('.tpanel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + tabEl.dataset.tab));
+  if (CALC[tabEl.dataset.tab]) CALC[tabEl.dataset.tab]();
+}));
+
+/* ---------- wiring: copy buttons ---------- */
+document.addEventListener('click', e => {
+  const btn = (e.target && e.target.closest) ? e.target.closest('.copybtn') : null;
+  if (btn) copyText(btn, LAST[btn.dataset.tab] || '');
+});
+
+/* ---------- first render ---------- */
+calcSeq();
+calcInf();
+calcRatio();
+calcWhich();
+})();
+
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
+(function(){
+  $$('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const open = item.classList.contains('open');
+      item.classList.toggle('open', !open);
+      q.setAttribute('aria-expanded', String(!open));
+      const a = document.getElementById(q.getAttribute('aria-controls'));
+      if (!a) return;
+      if (!open){
+        a.style.maxHeight = a.scrollHeight + 'px';
+        setTimeout(() => { if (item.classList.contains('open')) a.style.maxHeight = 'none'; }, 420);
+      } else {
+        a.style.maxHeight = a.scrollHeight + 'px';
+        requestAnimationFrame(() => { a.style.maxHeight = ''; });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
