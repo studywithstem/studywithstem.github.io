@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Limit Calculator — Solve Limits with Step-by-Step Solutions: Direct Substitution, 0/0 Indeterminate Forms, Factor &amp; Cancel, Trig Limits sin(x)/x, Limits at Infinity, One-Sided Limits &amp; Numeric Tables | StudyWithSTEM</title>
+<meta name="description" content="Free online limit calculator with step-by-step solutions — evaluate limits by direct substitution, resolve 0/0 indeterminate forms by factoring and canceling, apply the standard equivalences (sin u ~ u, 1 − cos u ~ u²/2, e^u − 1 ~ u, ln(1+u) ~ u), compare degrees for limits at infinity, and read one-sided limits with live numeric tables. Exact rational arithmetic, works offline, no sign-up.">
+<meta name="keywords" content="limit calculator, limit solver with steps, evaluate limits online, 0/0 indeterminate form calculator, factor and cancel limits, sin(x)/x limit, trig limits calculator, limits at infinity, one sided limit calculator, squeeze theorem, epsilon delta definition, rationalize conjugate limits, lhopitals rule, lim x approaches, StudyWithSTEM tools">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/mathematics/limit-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Limit Calculator with Steps — Free Online Tool | StudyWithSTEM">
+<meta property="og:description" content="Type any one-variable limit — 0/0 forms, trig, radicals, exponents, one-sided approaches, infinity — and watch it substitute, factor, cancel, apply the classic equivalences, or converge in a live numeric table.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/mathematics/limit-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/limit-calculator.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="StudyWithSTEM Limit Calculator — free online tool with step-by-step limit solutions">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Limit Calculator with Steps — Free Online Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Solve any one-variable limit with the whole proof on record — substitution, 0/0 factoring, classic equivalences, degree rules at infinity, and live numeric tables.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/limit-calculator.jpg">
+<meta name="twitter:image:alt" content="StudyWithSTEM Limit Calculator — free online math tool">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Mathematics", "item": "https://studywithstem.github.io/tools/mathematics/" },
+    { "@type": "ListItem", "position": 4, "name": "Limit Calculator", "item": "https://studywithstem.github.io/tools/mathematics/limit-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Limit Calculator",
+  "url": "https://studywithstem.github.io/tools/mathematics/limit-calculator/",
+  "description": "Free online limit calculator with step-by-step solutions: direct substitution, 0/0 indeterminate forms resolved by factoring and canceling, standard equivalences (sin u ~ u, 1 − cos u ~ u²/2, e^u − 1 ~ u, ln(1+u) ~ u), degree rules for limits at infinity, one-sided limits with exact sign analysis, and live numeric tables with closed-form recognition.",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Calculator",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "StudyWithSTEM", "url": "https://studywithstem.github.io/" },
+  "featureList": [
+    "Solve any one-variable limit: 0/0 forms, trig, radicals, exponents, one-sided approaches, infinity",
+    "Live step-by-step proof: substitute, detect 0/0, factor with displayed factorizations, cancel",
+    "Standard equivalence toolbox: sin u ~ u, tan u ~ u, 1 − cos u ~ u²/2, e^u − 1 ~ u, ln(1+u) ~ u",
+    "Degree rules for limits at infinity with the divide-by-highest-power move displayed",
+    "One-sided limits with exact rational sign analysis at poles",
+    "Live numeric tables with Aitken extrapolation and closed-form recognition",
+    "Three honest verdicts: a value, an infinity, or does-not-exist — always with the reason",
+    "Exact BigInt rational arithmetic core — no floating point until the decimal row",
+    "Works offline after load; nothing leaves the page"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to use the StudyWithSTEM limit calculator",
+  "totalTime": "PT2M",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Type f(x)", "text": "One box takes the whole expression — constants, decimals, fractions, parentheses, powers, π and e, and the functions sin, cos, tan, sqrt, ln, exp and abs. Any single letter works as the variable." },
+    { "@type": "HowToStep", "position": 2, "name": "Set the approach", "text": "The approach point accepts any number — 3, −1, 0.5, pi/2, sqrt(2) — or inf / -inf for limits at infinity." },
+    { "@type": "HowToStep", "position": 3, "name": "Choose a side", "text": "Two-sided by default, or restrict to the left (x → c⁻) or the right (x → c⁺) for one-sided limits." },
+    { "@type": "HowToStep", "position": 4, "name": "Watch it solve live", "text": "There is no equals button — the screen normalizes the limit the moment it parses, and the work beneath writes the full proof." },
+    { "@type": "HowToStep", "position": 5, "name": "Follow the written proof", "text": "Direct substitution, 0/0 detection, factorization at the root, cancellation, the equivalence toolbox, degree comparison at infinity — or a live numeric table when algebra runs out." },
+    { "@type": "HowToStep", "position": 6, "name": "Learn from the chips", "text": "Every example chip is a classic lesson: factoring, sin(3x)/x, 1 − cos x over x², the conjugate trick, degree rules, poles and the squeeze theorem." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How do I solve a limit step by step?", "acceptedAnswer": { "@type": "Answer", "text": "Try direct substitution first — if f(c) is defined, the limit is f(c). If you get 0/0, factor the numerator and denominator, cancel the common (x − c) factor, and substitute again. For trig and exponential forms use the standard equivalences; at infinity compare degrees; otherwise build a table of values. For (x² − 9)/(x − 3) at 3: substitution gives 0/0, factor to (x − 3)(x + 3)/(x − 3), cancel to x + 3, substitute to get 6. The calculator writes exactly these lines." } },
+    { "@type": "Question", "name": "What does lim x→c f(x) = L actually mean?", "acceptedAnswer": { "@type": "Answer", "text": "The ε–δ idea: f(x) can be forced as close to L as anyone demands, just by taking x close enough to c — from both sides, but never AT c. The value f(c) is irrelevant to the limit and may not even exist. That is why (x² − 9)/(x − 3) has limit 6 at x = 3 even though the fraction is undefined exactly there." } },
+    { "@type": "Question", "name": "What is the 0/0 indeterminate form?", "acceptedAnswer": { "@type": "Answer", "text": "When substitution makes both the numerator and the denominator zero, the limit is genuinely hidden — 0/0 can equal anything: x/x → 1, x²/x → 0, sin(3x)/x → 3, (1 − cos x)/x² → 1/2. Indeterminate means the answer is decided by how fast each side approaches zero, not that no answer exists. Factor and cancel, or use the standard equivalences." } },
+    { "@type": "Question", "name": "How do I evaluate limits at infinity?", "acceptedAnswer": { "@type": "Answer", "text": "For rational functions use the degree rules: equal degrees → the ratio of leading coefficients, so (3x² + 1)/(5x² − 2) → 3/5; smaller degree on top → 0; bigger degree on top → ±∞. In general, divide everything by the highest power of x and let every 1/x term die. The tool displays this divide-by-x^n move line by line." } },
+    { "@type": "Question", "name": "When does a limit not exist?", "acceptedAnswer": { "@type": "Answer", "text": "Three classic ways: the two sides disagree — 1/x at 0 goes to −∞ from the left and +∞ from the right; unbounded growth — 1/x² at 0 blows up to +∞ (usually reported as an infinite limit rather than a failure); and oscillation — sin(1/x) at 0 never settles on any value. The solver announces which of the three verdicts your limit earns, with the evidence." } },
+    { "@type": "Question", "name": "What are the standard limit equivalences?", "acceptedAnswer": { "@type": "Answer", "text": "As u → 0: sin u ~ u, tan u ~ u, 1 − cos u ~ u²/2, e^u − 1 ~ u, and ln(1 + u) ~ u. Each means the ratio of the two sides tends to 1, so you may swap them in a quotient. Example: sin(3x)/x → 3x/x → 3. The solver applies exactly these swaps, and shows each one before continuing." } },
+    { "@type": "Question", "name": "How do one-sided limits work?", "acceptedAnswer": { "@type": "Answer", "text": "x → c⁻ approaches c from below, x → c⁺ from above. The two-sided limit exists only when both one-sided limits exist and agree. For √x at 0 the left-hand limit does not exist (the function is undefined for x < 0), so the two-sided limit fails while the right-hand limit is 0. Use the LEFT and RIGHT modes of the tool for these." } },
+    { "@type": "Question", "name": "What about L'Hôpital's rule?", "acceptedAnswer": { "@type": "Answer", "text": "For genuine 0/0 or ∞/∞ forms you may differentiate the numerator and denominator separately and retry. It is powerful, but the algebraic routes — factor and cancel, the equivalence toolbox, conjugates, degree rules — usually come first in class, and that is the order this solver follows. The numeric table serves as ground truth either way." } },
+    { "@type": "Question", "name": "Is it free, and does my input leave the page?", "acceptedAnswer": { "@type": "Answer", "text": "Completely free — no sign-up, no locked steps. All parsing and arithmetic run locally in your browser; nothing is recorded or transmitted, and the page keeps working offline once loaded." } }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+sup{font-size:.62em; line-height:0;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+.btn-ticket.big{padding:15px 26px; font-size:.95rem;}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:0; background:var(--accent);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= TOOL HERO ================= */
+.tool-hero{position:relative; padding:84px 0 66px; border-bottom:1px solid var(--edge); overflow:hidden;}
+.tool-hero::before{
+  content:""; position:absolute; top:-140px; right:-140px; width:460px; height:460px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.15; pointer-events:none;
+}
+.tool-hero .wrap{position:relative; z-index:2;}
+.crumbs{display:flex; align-items:center; gap:10px; flex-wrap:wrap; font:600 .64rem var(--f-mono); letter-spacing:.12em; color:var(--faint); margin-bottom:26px;}
+.crumbs a{color:var(--muted); transition:color .25s;}
+.crumbs a:hover{color:var(--accent);}
+.crumbs b{color:var(--accent); font-weight:600;}
+.tool-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.tool-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.tool-hero h1{font:600 clamp(2.4rem, 5.6vw, 4rem)/1.05 var(--f-disp); letter-spacing:-.02em; margin:20px 0 16px; max-width:18ch;}
+.tool-hero h1 em{color:var(--accent);}
+.tool-hero .lede{max-width:64ch; color:var(--muted); font-size:1.04rem;}
+.hero-chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
+.chip{
+  display:inline-flex; align-items:center; gap:9px; font:700 .6rem var(--f-mono); letter-spacing:.14em;
+  color:var(--muted); border:1px solid var(--edge-strong); border-radius:999px; padding:8px 14px;
+}
+.chip i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+.hero-cta{display:flex; align-items:center; gap:24px; margin-top:32px; flex-wrap:wrap;}
+.hero-ghost{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--muted); text-decoration:underline; text-underline-offset:5px; transition:color .25s;}
+.hero-ghost:hover{color:var(--accent);}
+.tool-hero .updated{
+  margin-top:34px; display:inline-flex; align-items:center; gap:8px;
+  font:600 .64rem var(--f-mono); letter-spacing:.1em; color:var(--faint);
+  border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;
+}
+.tool-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+.hero-glyphs{position:absolute; inset:0; z-index:0; pointer-events:none; user-select:none;}
+.hero-glyphs span{
+  position:absolute; font-family:var(--f-disp); font-style:italic; font-weight:600;
+  color:var(--accent); opacity:.09; animation:glyphFloat 16s ease-in-out infinite;
+}
+@keyframes glyphFloat{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-26px) rotate(4deg);}}
+/* epsilon-band tableau — converging bands drawing themselves in */
+.hero-bars{position:absolute; left:0; bottom:-6px; width:100%; height:110px; color:var(--accent); opacity:.3; pointer-events:none; z-index:0;}
+.hero-bars line{stroke:currentColor; stroke-width:2.5; stroke-linecap:round; stroke-dasharray:1; stroke-dashoffset:1; animation:barDraw 1s cubic-bezier(.65,0,.2,1) forwards;}
+.hero-bars line:nth-child(2){animation-delay:.15s;}
+.hero-bars line:nth-child(3){animation-delay:.3s;}
+.hero-bars line:nth-child(4){animation-delay:.45s;}
+.hero-bars line:nth-child(5){animation-delay:.6s;}
+.hero-bars line:nth-child(6){animation-delay:.75s;}
+@keyframes barDraw{to{stroke-dashoffset:0;}}
+
+/* ================= SECTION SCAFFOLDING ================= */
+.sm-sec{padding:80px 0; border-top:1px solid var(--edge); scroll-margin-top:90px;}
+main > .sm-sec:first-of-type{border-top:none; padding-top:70px;}
+.sm-head{display:flex; align-items:baseline; gap:18px;}
+.sm-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent); flex:none;}
+.sm-head h2{font:600 clamp(1.7rem, 3.2vw, 2.45rem)/1.12 var(--f-disp); letter-spacing:-.012em;}
+.sm-lede{color:var(--muted); max-width:66ch; margin-top:14px; font-size:1.02rem;}
+
+/* reveal-on-scroll */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .75s ease var(--d,0s), transform .75s cubic-bezier(.2,.7,.3,1) var(--d,0s);}
+.reveal.in{opacity:1; transform:none;}
+
+/* ================= 01 — THE INSTRUMENT (limit calculator) ================= */
+.tool-grid{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr); gap:22px; max-width:980px; margin:48px auto 0; align-items:start;}
+.calc{
+  position:relative; border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+.calc-top{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid var(--edge); flex-wrap:wrap;}
+.calc-modes{display:flex; gap:7px; flex-wrap:wrap;}
+.cmode{
+  font:700 .62rem var(--f-mono); letter-spacing:.1em; color:var(--muted); cursor:pointer;
+  background:transparent; border:1px solid var(--edge-strong); border-radius:4px; padding:7px 11px;
+  transition:color .22s, border-color .22s, background .22s;
+}
+.cmode:hover{color:var(--accent); border-color:var(--accent);}
+.cmode.on{color:var(--accent-ink); background:var(--accent); border-color:var(--accent);}
+.calc-id{font:700 .6rem var(--f-mono); letter-spacing:.14em; color:var(--faint);}
+
+/* ---- inputs: f(x) + approach ---- */
+.eq-row{display:flex; flex-direction:column; align-items:center; gap:11px; padding:26px 16px 8px;}
+.eqin{
+  width:100%; max-width:560px; text-align:center; background:transparent; border:none;
+  border-bottom:3px solid var(--edge-strong); color:var(--ink);
+  font:700 clamp(1.2rem,3.2vw,1.6rem)/1.35 var(--f-mono); padding:5px 10px;
+  transition:border-color .25s;
+}
+.eqin:focus{outline:none; border-bottom-color:var(--accent);}
+.eqin::placeholder{color:var(--faint); opacity:.5; font-weight:400;}
+.eq-hint{font:700 .54rem var(--f-mono); letter-spacing:.14em; color:var(--faint); text-align:center;}
+.appr-row{display:flex; align-items:center; justify-content:center; gap:12px; padding:2px 16px 20px; flex-wrap:wrap;}
+.appr-lbl{font:700 .66rem var(--f-mono); letter-spacing:.16em; color:var(--faint);}
+.cin{
+  width:180px; text-align:center; background:transparent; border:none;
+  border-bottom:3px solid var(--edge-strong); color:var(--ink);
+  font:700 1.3rem/1.3 var(--f-mono); padding:2px 6px; transition:border-color .25s;
+}
+.cin:focus{outline:none; border-bottom-color:var(--accent);}
+.cin::placeholder{color:var(--faint); opacity:.5; font-weight:400;}
+
+/* example chips */
+.ex-row{display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; padding:6px 14px 18px; border-bottom:1px solid var(--edge);}
+.ex-row > .lbl{font:700 .58rem var(--f-mono); letter-spacing:.16em; color:var(--faint);}
+.exchip{
+  cursor:pointer; background:none; border:1px solid var(--edge-strong); border-radius:999px;
+  color:var(--muted); font:700 .68rem var(--f-mono); padding:6px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.exchip:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* ---- screen ---- */
+.calc-screen{padding:16px 18px 18px; border-bottom:1px solid var(--edge);}
+.calc-screen.err{animation:calcShake .38s ease;}
+@keyframes calcShake{20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
+.fc-echo{text-align:center; font:600 1.02rem var(--f-mono); color:var(--muted); min-height:1.6em; line-height:1.9;}
+.fc-echo .eop{color:var(--accent); font-weight:700; padding:0 .28em;}
+.fc-echo .eempty{color:var(--faint); font-size:.72rem; letter-spacing:.16em;}
+.fc-big{display:flex; align-items:center; justify-content:center; min-height:96px; padding:8px 0 2px; flex-wrap:wrap;}
+.bigin{display:inline-flex; align-items:center; line-height:1; color:var(--ink); flex-wrap:wrap; justify-content:center;}
+.bint{font:700 clamp(2.1rem,6vw,2.9rem) var(--f-mono); letter-spacing:-.02em;}
+.bsmall{font-size:clamp(1.3rem,4.2vw,2rem); letter-spacing:.01em;}
+.bsmaller{font-size:clamp(1.7rem,4.6vw,2.5rem);}
+.bneg{font:700 2rem var(--f-mono); margin-right:.14em;}
+.bapprox{font:700 1.7rem var(--f-mono); color:var(--faint); margin-right:.22em;}
+.bfrac{display:inline-flex; flex-direction:column; align-items:center; margin-left:.3em;}
+.bfn{font:700 clamp(1.3rem,3.6vw,1.8rem) var(--f-mono); padding:0 .3em .1em; border-bottom:.14em solid var(--ink); min-width:1.5em; text-align:center;}
+.bfd{font:700 clamp(1.3rem,3.6vw,1.8rem) var(--f-mono); padding:.1em .3em 0; min-width:1.5em; text-align:center;}
+.brest{font:700 2.4rem var(--f-mono); color:var(--faint);}
+.berr{font:600 .95rem var(--f-sans); color:var(--amber-deep); text-align:center; padding:0 12px; max-width:40ch;}
+.fc-rows{display:flex; justify-content:center; flex-wrap:wrap; gap:2px 0; margin-top:14px; border-top:1px dashed var(--edge); padding-top:13px;}
+.fc-rows:empty{display:none; margin:0; padding:0; border:none;}
+.frow{display:flex; align-items:center; gap:10px; padding:4px 16px; position:relative;}
+.frow + .frow::before{content:""; position:absolute; left:0; top:22%; bottom:22%; width:1px; background:var(--edge);}
+.fl{font-size:.56rem; letter-spacing:.14em; color:var(--faint);}
+.fv{font:600 1.02rem var(--f-mono); color:var(--muted); display:flex; align-items:center; line-height:1.45;}
+.fv .mfrac, .fv .mnum{color:var(--ink);}
+
+/* lim notation, math italics, radical */
+.limbox{display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle; margin-right:.6em; line-height:1;}
+.limword{font:italic 600 1.35rem var(--f-disp);}
+.limsub{font:700 .62rem var(--f-mono); color:var(--muted); border-top:1.5px solid var(--edge-strong); padding:2px .45em 0; margin-top:3px; letter-spacing:.05em; white-space:nowrap;}
+.mvar{font-family:var(--f-disp); font-style:italic; font-weight:600;}
+.rad{border-top:.09em solid currentColor; padding:0 .2em 0 .12em; margin-left:.05em;}
+
+/* inline mini fractions + repeating decimals */
+.mnum{font-family:var(--f-mono); font-weight:600;}
+.mfrac{
+  display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle;
+  margin:0 .14em; font-family:var(--f-mono); font-weight:600; line-height:1.18;
+}
+.mfrac .mn{border-bottom:.09em solid currentColor; padding:0 .24em .05em;}
+.mfrac .md{padding:.05em .24em 0;}
+.ovl{color:var(--accent); text-decoration:overline; text-decoration-thickness:.09em; padding:0 .02em;}
+
+/* ---- the work: step-by-step proof ---- */
+.work{border-top:1px solid var(--edge); padding:16px 22px 20px;}
+.work-title{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint); text-transform:uppercase;
+  padding-bottom:10px; border-bottom:1px solid var(--edge); margin-bottom:4px;
+}
+.work-title .live{color:var(--accent); display:inline-flex; align-items:center; gap:8px;}
+.livedot{width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block; animation:lpulse 2.2s ease-in-out infinite;}
+@keyframes lpulse{0%,100%{opacity:1; transform:scale(1);}50%{opacity:.35; transform:scale(.72);}}
+.wstep{display:flex; gap:14px; padding:11px 2px; border-bottom:1px dashed var(--edge); font-size:.92rem; color:var(--muted); line-height:1.75;}
+.wstep:last-child{border-bottom:none;}
+.wstep .wi{font-size:.62rem; letter-spacing:.1em; color:var(--accent); padding-top:.45em; flex:none; min-width:74px;}
+.wstep .wt b{font-family:var(--f-mono); color:var(--ink); font-weight:600;}
+.wstep .mfrac, .wstep .mnum, .wstep .mvar{color:var(--ink);}
+.wstep .limbox{vertical-align:middle;}
+.wempty{color:var(--faint); font-size:.66rem; letter-spacing:.14em; padding:12px 2px;}
+
+/* numeric convergence tables */
+.ttables{display:flex; gap:22px; flex-wrap:wrap; margin-top:8px;}
+.ttable{min-width:240px; flex:1;}
+.tt-head{font:700 .58rem var(--f-mono); letter-spacing:.16em; color:var(--accent); padding-bottom:6px; border-bottom:1px solid var(--edge-strong); margin-bottom:5px;}
+.trow{display:flex; align-items:baseline; gap:10px; font:600 .78rem var(--f-mono); color:var(--muted); padding:3px 0; border-bottom:1px dashed var(--edge);}
+.trow .tx{color:var(--ink); min-width:92px;}
+.trow .tarr{color:var(--accent); flex:none;}
+.trow .tv{flex:1; text-align:right; color:var(--ink); word-break:break-all;}
+
+/* field notes panel */
+.notes{
+  border:1px solid var(--edge-strong); background:var(--panel); padding:24px 24px 20px;
+  clip-path:polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+.notes h3{
+  font:700 .66rem var(--f-mono); letter-spacing:.18em; color:var(--accent); text-transform:uppercase;
+  padding-bottom:14px; border-bottom:1px solid var(--edge); margin-bottom:14px;
+  display:flex; justify-content:space-between; gap:10px;
+}
+.notes h3 span:last-child{color:var(--faint);}
+.notes ul{display:grid; gap:14px;}
+.notes li{position:relative; padding-left:20px; color:var(--muted); font-size:.88rem; line-height:1.55;}
+.notes li::before{content:"▸"; position:absolute; left:0; top:0; color:var(--accent); font-size:.8rem;}
+.notes li b{color:var(--ink); font-weight:600;}
+
+.tool-specs{
+  display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap;
+  margin-top:28px; font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--faint); text-transform:uppercase;
+}
+
+/* ================= 02 — HOW TO USE (steps + worked example) ================= */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:46px; max-width:1080px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:26px 24px 22px;
+  clip-path:polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  transition:border-color .3s, transform .3s;
+}
+.step:hover{border-color:var(--edge-strong); transform:translateY(-4px);}
+.step .n{font:700 .62rem var(--f-mono); letter-spacing:.16em; color:var(--accent);}
+.step h3{font:600 1.3rem/1.18 var(--f-disp); letter-spacing:-.008em; margin:12px 0 9px;}
+.step p{color:var(--muted); font-size:.92rem;}
+.step-demo{margin-top:16px; padding-top:12px; border-top:1px dashed var(--edge-strong);
+  font:600 .8rem var(--f-mono); color:var(--muted);}
+.step-demo b{color:var(--accent); font-weight:700;}
+
+/* worked example — terminal file-tree look */
+.sm-tree{
+  margin-top:46px; max-width:760px; border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  padding:26px 30px 24px;
+}
+.sm-tree-title{
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+  font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);
+  padding-bottom:15px; border-bottom:1px solid var(--edge); margin-bottom:12px;
+}
+.sm-tree-title .root{color:var(--accent);}
+.tree-root{display:block; font:600 .95rem var(--f-mono); color:var(--accent); padding:5px 0 3px;}
+.tree-line{display:flex; align-items:baseline; padding:7px 0;}
+.tl-name{font:600 .85rem var(--f-mono); color:var(--muted); white-space:nowrap;}
+.tl-dots{flex:1; min-width:18px; border-bottom:1px dotted var(--edge-strong); margin:0 12px; transform:translateY(-3px);}
+.tl-note{font:700 .58rem var(--f-mono); letter-spacing:.14em; color:var(--faint); text-transform:uppercase; white-space:nowrap;}
+.tree-sum{
+  display:flex; align-items:center; gap:10px; margin-top:14px; padding-top:14px; border-top:1px solid var(--edge);
+  font:700 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint); text-transform:uppercase;
+}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+/* ================= 03 — FAQ ================= */
+.faq{margin-top:46px; border-top:1px solid var(--edge-strong); max-width:860px;}
+.faq-item{border-bottom:1px solid var(--edge);}
+.faq-item summary{list-style:none; cursor:pointer; display:flex; align-items:baseline; gap:18px; padding:22px 6px;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.q-n{font:700 .62rem var(--f-mono); letter-spacing:.12em; color:var(--accent); flex:none;}
+.q-t{font:600 1.16rem/1.3 var(--f-disp); letter-spacing:-.005em; flex:1; transition:color .25s;}
+.q-x{position:relative; width:14px; height:14px; flex:none; align-self:center;}
+.q-x::before, .q-x::after{content:""; position:absolute; background:var(--faint); transition:transform .3s ease, background .3s;}
+.q-x::before{top:6px; left:0; width:14px; height:2px;}
+.q-x::after{left:6px; top:0; width:2px; height:14px;}
+.faq-item[open] .q-x::before, .faq-item[open] .q-x::after{background:var(--accent);}
+.faq-item[open] .q-x::after{transform:rotate(90deg);}
+.faq-item .a{padding:2px 6px 26px 44px; color:var(--muted); max-width:70ch; font-size:.95rem; animation:faqIn .4s ease;}
+.faq-item .a b{color:var(--ink); font-weight:600;}
+@keyframes faqIn{from{opacity:0; transform:translateY(-6px);} to{opacity:1; transform:none;}}
+
+/* ================= SUBSCRIBE STRIP ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap; padding-right:14px;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);}}
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:980px){
+  .tool-grid{grid-template-columns:1fr; max-width:640px;}
+  .steps{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps{grid-template-columns:1fr;}
+  .sm-sec{padding:62px 0;}
+  .sm-tree{padding:20px 18px 18px;}
+  .tl-note{display:none;}
+  .tl-dots{margin:0 8px;}
+  .faq-item .a{padding-left:6px;}
+  .eqin{font-size:1.1rem;}
+  .cin{width:150px; font-size:1.12rem;}
+  .frow{padding:4px 10px;}
+  .work{padding:14px 16px 18px;}
+  .fc-echo{font-size:.92rem;}
+  .ttable{min-width:100%;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ TOOL HERO ============ -->
+<header class="tool-hero">
+  <div class="hero-glyphs" aria-hidden="true">
+    <span style="left:4%;  top:16%;     font-size:150px; animation-duration:18s;">lim</span>
+    <span style="right:6%; top:10%;     font-size:130px; animation-duration:22s; animation-delay:-5s; color:var(--amber);">∞</span>
+    <span style="left:10%; bottom:10%;  font-size:100px; animation-duration:15s; animation-delay:-3s;">x→0</span>
+    <span style="right:16%; bottom:16%; font-size:130px; animation-duration:19s; animation-delay:-8s; color:var(--amber);">ε</span>
+    <span style="left:36%; top:4%;     font-size:80px;  animation-duration:13s; animation-delay:-2s;">δ</span>
+    <span style="right:38%; bottom:6%; font-size:92px;  animation-duration:17s; animation-delay:-6s; color:var(--amber);">0/0</span>
+    <span style="right:3%; bottom:46%; font-size:90px;  animation-duration:20s; animation-delay:-4s;">Δ</span>
+    <span style="left:54%; top:10%;    font-size:64px;  animation-duration:12s; animation-delay:-7s; color:var(--amber);">sin x / x</span>
+  </div>
+  <svg class="hero-bars" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <line pathLength="1" x1="70"   y1="40" x2="430"  y2="40"/>
+    <line pathLength="1" x1="70"   y1="62" x2="430"  y2="62"/>
+    <line pathLength="1" x1="520"  y1="40" x2="760"  y2="40"/>
+    <line pathLength="1" x1="520"  y1="62" x2="760"  y2="62"/>
+    <line pathLength="1" x1="960"  y1="40" x2="1360" y2="40"/>
+    <line pathLength="1" x1="960"  y1="62" x2="1360" y2="62"/>
+  </svg>
+  <div class="wrap">
+    <div class="crumbs">
+      <a href="/">HOME</a><span>/</span>
+      <a href="/tools/">TOOLS</a><span>/</span>
+      <a href="/tools/mathematics/">MATHEMATICS</a><span>/</span>
+      <b>LIMIT CALCULATOR</b>
+    </div>
+    <p class="kicker">MATHEMATICS · CALCULUS · 01</p>
+    <h1>Limit calculator with <em>every step shown</em></h1>
+    <p class="lede">Type any one-variable limit — 0/0 forms, trig, radicals, exponents, one-sided approaches, infinity — and watch it substitute, factor, cancel, apply the classic equivalences, or converge in a live numeric table. Exact rational arithmetic, three honest verdicts (a value, an infinity, or does-not-exist), nothing leaves the page.</p>
+    <div class="hero-chips">
+      <span class="chip"><i></i>SOLVES AS YOU TYPE</span>
+      <span class="chip"><i></i>0/0 DETECTION</span>
+      <span class="chip"><i></i>LIMITS AT ∞</span>
+      <span class="chip"><i></i>WORKS OFFLINE</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn-ticket big" href="#instrument">
+        <span>Evaluate a limit</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+      <a class="hero-ghost" href="#faq">READ THE FAQ ↓</a>
+    </div>
+    <div class="updated"><i></i>UPDATED · 2025 — NOTHING ROUNDS, NOTHING LEAVES</div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 01 — THE INSTRUMENT ============ -->
+<section class="sm-sec" id="instrument">
+  <div class="wrap">
+    <div class="sm-head reveal"><span class="sm-idx">01</span><h2>The instrument</h2></div>
+    <p class="sm-lede reveal" style="--d:.08s">One input, zero buttons. The moment your limit parses, the screen normalizes it, the verdict lands in big type, and the work beneath is the complete written proof — substitution, 0/0 detection, factorization, cancellation, equivalences, degree rules, or the numeric table.</p>
+
+    <div class="tool-grid">
+      <div class="calc reveal" id="calc" data-mode="solve">
+        <div class="calc-top">
+          <div class="calc-modes">
+            <button class="cmode on" data-side="both" type="button">TWO-SIDED</button>
+            <button class="cmode" data-side="left" type="button">x → c⁻</button>
+            <button class="cmode" data-side="right" type="button">x → c⁺</button>
+          </div>
+          <span class="calc-id">SWS · LIM-01</span>
+        </div>
+
+        <div class="eq-row">
+          <input id="fInput" class="eqin" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="(x^2 - 9)/(x - 3)" aria-label="Type the function f of x">
+          <span class="eq-hint">ONE VARIABLE · sin cos tan sqrt ln exp abs · ^ FOR POWERS · π AND e OK</span>
+        </div>
+
+        <div class="appr-row">
+          <span class="appr-lbl">x →</span>
+          <input id="cInput" class="cin" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="3" aria-label="Where x approaches">
+          <span class="appr-lbl">· OR inf / -inf</span>
+        </div>
+
+        <div class="ex-row">
+          <span class="lbl">TRY</span>
+          <button class="exchip" type="button" data-f="(x^2 - 9)/(x - 3)" data-c="3">(x²−9)/(x−3) · x→3</button>
+          <button class="exchip" type="button" data-f="sin(3x)/x" data-c="0">sin(3x)/x · x→0</button>
+          <button class="exchip" type="button" data-f="(1 - cos(x))/x^2" data-c="0">(1−cos x)/x² · x→0</button>
+          <button class="exchip" type="button" data-f="(sqrt(x+7) - 3)/(x - 2)" data-c="2">(√(x+7)−3)/(x−2) · x→2</button>
+          <button class="exchip" type="button" data-f="(3x^2 + 1)/(5x^2 - 2)" data-c="inf">(3x²+1)/(5x²−2) · x→∞</button>
+          <button class="exchip" type="button" data-f="1/x^2" data-c="0">1/x² · x→0</button>
+          <button class="exchip" type="button" data-f="(e^x - 1)/x" data-c="0">(eˣ−1)/x · x→0</button>
+          <button class="exchip" type="button" data-f="x*sin(1/x)" data-c="0">x·sin(1/x) · x→0</button>
+          <button class="exchip" type="button" data-f="tan(2x)/(3x)" data-c="0">tan(2x)/(3x) · x→0</button>
+        </div>
+
+        <!-- screen -->
+        <div class="calc-screen" id="calcScreen">
+          <div class="fc-echo" id="fcEcho"></div>
+          <div class="fc-big" id="fcBig"></div>
+          <div class="fc-rows" id="fcRows"></div>
+        </div>
+
+        <!-- the work -->
+        <div class="work">
+          <div class="work-title"><span>THE WORK — FULL PROOF</span><span class="live"><i class="livedot"></i>LIVE</span></div>
+          <div id="steps"></div>
+        </div>
+        <noscript><div class="work" style="color:var(--amber-deep);">This solver needs JavaScript — everything runs locally in your browser.</div></noscript>
+      </div>
+
+      <aside class="notes reveal" style="--d:.12s">
+        <h3><span>FIELD NOTES</span><span>LIM·01</span></h3>
+        <ul>
+          <li><b>No equals button.</b> The screen solves the moment your limit parses — the work beneath is the full written proof.</li>
+          <li><b>Exact rational core.</b> BigInt fractions all the way — 0.5 is 1/2 at the door, and 0/0 cases are factored, never approximated.</li>
+          <li><b>Three possible verdicts:</b> a value, an infinity, or does-not-exist — always with the reason and the evidence.</li>
+          <li><b>The equivalence toolbox:</b> sin u ~ u, tan u ~ u, 1 − cos u ~ u²/2, e^u − 1 ~ u, ln(1+u) ~ u — each swap is displayed before it is used.</li>
+          <li><b>One-sided mode</b> flips to x → c⁻ or x → c⁺ with exact sign analysis at poles.</li>
+          <li><b>When algebra runs out,</b> a live numeric table converges before your eyes — and the closed form is recognized if one exists.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="tool-specs reveal">
+      <span>EXACT RATIONAL CORE</span><span>·</span>
+      <span>0/0 DETECTION</span><span>·</span>
+      <span>EQUIVALENCE TOOLBOX</span><span>·</span>
+      <span>NUMERIC TABLE FALLBACK</span><span>·</span>
+      <span>NOTHING LEAVES THE PAGE</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 — HOW TO USE IT ============ -->
+<section class="sm-sec" id="how-to">
+  <div class="wrap">
+    <div class="sm-head reveal"><span class="sm-idx">02</span><h2>How to use it</h2></div>
+    <p class="sm-lede reveal" style="--d:.08s">Six moves and you're fluent. The tool is designed to be read as much as used — every chip teaches, every step is copyable.</p>
+
+    <div class="steps">
+      <article class="step reveal">
+        <span class="n">01</span>
+        <h3>Type f(x)</h3>
+        <p>One box, total freedom — constants, decimals, fractions, parentheses, powers, π and e, and the functions sin, cos, tan, sqrt, ln, exp and abs. Any single letter works as the variable.</p>
+        <div class="step-demo">sin(3x)/x <b>✓ parses</b></div>
+      </article>
+      <article class="step reveal" style="--d:.06s">
+        <span class="n">02</span>
+        <h3>Set the approach</h3>
+        <p>Where does x go? Any number — 3, −1, 0.5, pi/2, sqrt(2) — or inf and -inf for limits at infinity. The echo line renders the full lim notation live.</p>
+        <div class="step-demo">x → 3 · x → π/2 · <b>x → ∞</b></div>
+      </article>
+      <article class="step reveal" style="--d:.12s">
+        <span class="n">03</span>
+        <h3>Choose a side</h3>
+        <p>Two-sided by default. Flip to x → c⁻ or x → c⁺ for one-sided limits — poles get exact sign analysis, and the verdict reports each side separately.</p>
+        <div class="step-demo">1/x at 0: left <b>−∞</b> · right <b>+∞</b></div>
+      </article>
+      <article class="step reveal" style="--d:.18s">
+        <span class="n">04</span>
+        <h3>Watch it solve live</h3>
+        <p>No equals button. The moment your input parses, the screen normalizes it and the work area begins writing — substitution first, then whatever the form demands.</p>
+        <div class="step-demo">keystroke → parsed → <b>solved</b></div>
+      </article>
+      <article class="step reveal" style="--d:.24s">
+        <span class="n">05</span>
+        <h3>Follow the written proof</h3>
+        <p>Direct substitution, 0/0 detection, factorization at the root with every factor shown, cancellation, the equivalence swaps, degree rules at infinity — or the numeric table.</p>
+        <div class="step-demo">0/0 → factor → cancel → <b>6</b></div>
+      </article>
+      <article class="step reveal" style="--d:.3s">
+        <span class="n">06</span>
+        <h3>Learn from the chips</h3>
+        <p>Every example chip is a classic lesson: factoring, sin(3x)/x, 1 − cos x over x², the conjugate trick, degree rules, poles and the squeeze theorem.</p>
+        <div class="step-demo">tap a chip → <b>watch the proof</b></div>
+      </article>
+    </div>
+
+    <div class="sm-tree reveal">
+      <div class="sm-tree-title"><span><span class="root">case-file</span> · worked example</span><span>EXACT · NO ROUNDING</span></div>
+      <span class="tree-root">limit-calculator/</span>
+      <div class="tree-line"><span class="tl-name">lim x→3 (x² − 9)/(x − 3)</span><span class="tl-dots"></span><span class="tl-note">INPUT</span></div>
+      <div class="tree-line"><span class="tl-name">0/0</span><span class="tl-dots"></span><span class="tl-note">DIRECT · INDETERMINATE</span></div>
+      <div class="tree-line"><span class="tl-name">x² − 9 = (x − 3)(x + 3)</span><span class="tl-dots"></span><span class="tl-note">FACTOR</span></div>
+      <div class="tree-line"><span class="tl-name">x + 3</span><span class="tl-dots"></span><span class="tl-note">CANCEL</span></div>
+      <div class="tree-line"><span class="tl-name">6</span><span class="tl-dots"></span><span class="tl-note">SUBSTITUTE</span></div>
+      <div class="tree-line"><span class="tl-name">6.001 / 5.999</span><span class="tl-dots"></span><span class="tl-note">CHECK ✓</span></div>
+      <div class="tree-line"><span class="tl-name">6</span><span class="tl-dots"></span><span class="tl-note">LIMIT</span></div>
+      <div class="tree-sum"><span>1 LIMIT EVALUATED · 0 GUESSES MADE</span><span class="cursor"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 — FAQ ============ -->
+<section class="sm-sec" id="faq">
+  <div class="wrap">
+    <div class="sm-head reveal"><span class="sm-idx">03</span><h2>Frequently asked questions</h2></div>
+    <p class="sm-lede reveal" style="--d:.08s">The questions every calculus student asks about limits — answered with worked numbers.</p>
+
+    <div class="faq reveal">
+      <details class="faq-item">
+        <summary><span class="q-n">Q1</span><span class="q-t">How do I solve a limit step by step?</span><span class="q-x"></span></summary>
+        <div class="a">Try <b>direct substitution</b> first — if f(c) is defined, the limit is f(c). If you get <b>0/0</b>, factor the numerator and denominator, cancel the common (x − c) factor, and substitute again. For trig and exponential forms use the <b>standard equivalences</b>; at infinity compare <b>degrees</b>; otherwise build a table of values. For (x² − 9)/(x − 3) at 3: substitution gives 0/0, factor to (x − 3)(x + 3)/(x − 3), cancel to x + 3, substitute to get <b>6</b>. The calculator writes exactly these lines.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q2</span><span class="q-t">What does lim x→c f(x) = L actually mean?</span><span class="q-x"></span></summary>
+        <div class="a">The <b>ε–δ idea</b>: f(x) can be forced as close to L as anyone demands, just by taking x close enough to c — from both sides, but never <i>at</i> c. The value f(c) is irrelevant to the limit and may not even exist. That is why (x² − 9)/(x − 3) has limit <b>6</b> at x = 3 even though the fraction is undefined exactly there.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q3</span><span class="q-t">What is the 0/0 indeterminate form?</span><span class="q-x"></span></summary>
+        <div class="a">When substitution makes both the numerator and the denominator zero, the limit is genuinely hidden — 0/0 can equal anything: <b>x/x → 1</b>, <b>x²/x → 0</b>, <b>sin(3x)/x → 3</b>, <b>(1 − cos x)/x² → 1/2</b>. Indeterminate means the answer is decided by <i>how fast</i> each side approaches zero, not that no answer exists. Factor and cancel, or use the standard equivalences.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q4</span><span class="q-t">How do I evaluate limits at infinity?</span><span class="q-x"></span></summary>
+        <div class="a">For rational functions use the <b>degree rules</b>: equal degrees → the ratio of leading coefficients, so (3x² + 1)/(5x² − 2) → <b>3/5</b>; smaller degree on top → <b>0</b>; bigger degree on top → <b>±∞</b>. In general, divide everything by the highest power of x and let every 1/x term die. The tool displays this divide-by-xⁿ move line by line.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q5</span><span class="q-t">When does a limit not exist?</span><span class="q-x"></span></summary>
+        <div class="a">Three classic ways: the <b>two sides disagree</b> — 1/x at 0 goes to −∞ from the left and +∞ from the right; <b>unbounded growth</b> — 1/x² at 0 blows up to +∞ (usually reported as an infinite limit rather than a failure); and <b>oscillation</b> — sin(1/x) at 0 never settles on any value. The solver announces which of the three verdicts your limit earns, with the evidence.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q6</span><span class="q-t">What are the standard limit equivalences?</span><span class="q-x"></span></summary>
+        <div class="a">As u → 0: <b>sin u ~ u</b>, <b>tan u ~ u</b>, <b>1 − cos u ~ u²/2</b>, <b>e^u − 1 ~ u</b>, and <b>ln(1 + u) ~ u</b>. Each means the ratio of the two sides tends to 1, so you may swap them in a quotient. Example: sin(3x)/x → 3x/x → <b>3</b>. The solver applies exactly these swaps, and shows each one before continuing.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q7</span><span class="q-t">How do one-sided limits work?</span><span class="q-x"></span></summary>
+        <div class="a"><b>x → c⁻</b> approaches c from below, <b>x → c⁺</b> from above. The two-sided limit exists only when both one-sided limits exist and agree. For √x at 0 the left-hand limit does not exist (the function is undefined for x &lt; 0), so the two-sided limit fails while the right-hand limit is <b>0</b>. Use the LEFT and RIGHT modes of the tool for these.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q8</span><span class="q-t">What about L'Hôpital's rule?</span><span class="q-x"></span></summary>
+        <div class="a">For genuine 0/0 or ∞/∞ forms you may <b>differentiate the numerator and denominator separately</b> and retry. It is powerful, but the algebraic routes — factor and cancel, the equivalence toolbox, conjugates, degree rules — usually come first in class, and that is the order this solver follows. The numeric table serves as ground truth either way.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q9</span><span class="q-t">Is it free, and does my input leave the page?</span><span class="q-x"></span></summary>
+        <div class="a">Completely free — no sign-up, no locked steps. All parsing and arithmetic run locally in your browser; nothing is recorded or transmitted, and the page keeps working offline once loaded.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SUBSCRIBE STRIP ============ -->
+<section class="pre-footer">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx">04 — STAY SHARP</span>
+      <h2>New tools, <span class="hl">before anyone else</span></h2>
+      <p>One email whenever a new solver, converter or visualizer ships — with the field notes and the math behind it. No noise, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="subForm">
+      <input type="text" id="subName" placeholder="Your name" autocomplete="name">
+      <input type="email" id="subEmail" placeholder="you@school.edu" autocomplete="email" required>
+      <label class="pf-check"><input type="checkbox" required><span>I agree to be emailed about new tools — <a href="/page/subscription/">details</a>.</span></label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand" aria-label="StudyWithSTEM home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Free, exact, in-browser STEM tools — built for students who want the work shown, not just the answer.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span> lim x→3 (x²−9)/(x−3) → 6</span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Home</a></li>
+          <li><a href="/tools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Tools</a></li>
+          <li><a href="/posts/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Posts</a></li>
+          <li><a href="/page/contact/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Contact</a></li>
+          <li><a href="/page/subscription/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Subscription</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/tools/mathematics/fraction-calculator/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Fraction Calculator</a></li>
+          <li><a href="/tools/mathematics/linear-equation-solver/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Linear Equation Solver</a></li>
+          <li><a href="/tools/mathematics/limit-calculator/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Limit Calculator</a></li>
+          <li><a href="/tools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>All tools</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>X / Twitter</a></li>
+          <li><a href="mailto:studywithstem@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z"/><path d="M16 9h2a2 2 0 0 1 0 4h-2"/><path d="M7.5 4c0 1 1 1 1 2M11.5 4c0 1 1 1 1 2"/></svg>Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>π <b>= 3.14159265…</b></span>
+        <span>e <b>= 2.71828183…</b></span>
+        <span>φ <b>= 1.61803399…</b></span>
+        <span>√2 <b>= 1.41421356…</b></span>
+        <span>γ <b>= 0.57721566…</b></span>
+        <span>e^iπ + 1 <b>= 0</b></span>
+        <span>c <b>= 299 792 458 m/s</b></span>
+        <span>h <b>= 6.62607015×10⁻³⁴ J·s</b></span>
+        <span>Nᴀ <b>= 6.02214076×10²³ mol⁻¹</b></span>
+        <span>0! <b>= 1</b></span>
+        <span>τ <b>= 6.28318530…</b></span>
+        <!-- duplicate for seamless loop -->
+        <span>π <b>= 3.14159265…</b></span>
+        <span>e <b>= 2.71828183…</b></span>
+        <span>φ <b>= 1.61803399…</b></span>
+        <span>√2 <b>= 1.41421356…</b></span>
+        <span>γ <b>= 0.57721566…</b></span>
+        <span>e^iπ + 1 <b>= 0</b></span>
+        <span>c <b>= 299 792 458 m/s</b></span>
+        <span>h <b>= 6.62607015×10⁻³⁴ J·s</b></span>
+        <span>Nᴀ <b>= 6.02214076×10²³ mol⁻¹</b></span>
+        <span>0! <b>= 1</b></span>
+        <span>τ <b>= 6.28318530…</b></span>
+      </div>
+    </div>
+
+    <div class="foot-mid">
+      <span class="foot-meta">© 2025 STUDYWITHSTEM · EVERY TOOL FREE, FOREVER</span>
+      <button id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================================================================
+   LIMIT CALCULATOR — exact rational engine + equivalence toolbox
+   + numeric table fallback, all in one closure
+   ================================================================ */
+(function(){
+'use strict';
+
+/* ---------- exact rational core (BigInt) ---------- */
+function bgcd(a,b){ a=a<0n?-a:a; b=b<0n?-b:b; while(b){ const t=a%b; a=b; b=t; } return a||1n; }
+function Frac(n,d){
+  if(d===undefined) d=1n;
+  n=typeof n==='bigint'?n:BigInt(n);
+  d=typeof d==='bigint'?d:BigInt(d);
+  if(d===0n) throw new Error('division by zero');
+  if(d<0n){ n=-n; d=-d; }
+  const g=bgcd(n,d);
+  this.n=n/g; this.d=d/g;
+}
+Frac.prototype.add=function(o){return new Frac(this.n*o.d+o.n*this.d,this.d*o.d);};
+Frac.prototype.sub=function(o){return new Frac(this.n*o.d-o.n*this.d,this.d*o.d);};
+Frac.prototype.mul=function(o){return new Frac(this.n*o.n,this.d*o.d);};
+Frac.prototype.div=function(o){ if(o.n===0n) throw new Error('division by zero'); return new Frac(this.n*o.d,this.d*o.n);};
+Frac.prototype.neg=function(){return new Frac(-this.n,this.d);};
+Frac.prototype.isZero=function(){return this.n===0n;};
+Frac.prototype.isNeg=function(){return this.n<0n;};
+Frac.prototype.eq=function(o){return this.n===o.n&&this.d===o.d;};
+Frac.prototype.num=function(){return Number(this.n)/Number(this.d);};
+const FZ=new Frac(0n), FO=new Frac(1n), FM=new Frac(-1n);
+function FI(k){return new Frac(BigInt(k));}
+function sgnF(f){ return f.isZero()?0:(f.isNeg()?-1:1); }
+
+/* exact decimal with repeating-block detection (long division) */
+function decStr(f){
+  const sign=f.n<0n?'−':'';
+  let n=f.n<0n?-f.n:f.n, d=f.d;
+  const ip=n/d, rem=n%d;
+  if(rem===0n) return sign+ip.toString();
+  const seen=new Map(), digs=[];
+  let r=rem;
+  while(r!==0n && !seen.has(r) && digs.length<80){
+    seen.set(r,digs.length);
+    r*=10n; digs.push((r/d).toString()); r%=d;
+  }
+  let out=sign+ip.toString()+'.';
+  if(seen.has(r)){
+    const s=seen.get(r);
+    out+=digs.slice(0,s).join('')+'<span class="ovl">'+digs.slice(s).join('')+'</span>';
+  } else out+=digs.join('')+'…';
+  return out;
+}
+
+/* ---------- polynomials over BigInt fractions ---------- */
+function pnorm(P){ while(P.length && P[P.length-1].isZero()) P.pop(); return P; }
+function padd(A,B){ const n=Math.max(A.length,B.length), R=[]; for(let i=0;i<n;i++) R.push((A[i]||FZ).add(B[i]||FZ)); return pnorm(R); }
+function psub(A,B){ const n=Math.max(A.length,B.length), R=[]; for(let i=0;i<n;i++) R.push((A[i]||FZ).sub(B[i]||FZ)); return pnorm(R); }
+function pmul(A,B){ if(!A.length||!B.length) return []; const R=new Array(A.length+B.length-1).fill(FZ); for(let i=0;i<A.length;i++)for(let j=0;j<B.length;j++) R[i+j]=R[i+j].add(A[i].mul(B[j])); return pnorm(R); }
+function pscale(A,f){ return A.map(c=>c.mul(f)); }
+function ppow(A,k){ let R=[FO]; for(let i=0;i<k;i++) R=pmul(R,A); return R; }
+function peval(A,c){ let acc=FZ; for(let i=A.length-1;i>=0;i--) acc=acc.mul(c).add(A[i]); return acc; }
+function pdivLin(P,c){ /* synthetic division by (x − c), caller verifies P(c)=0 */
+  const n=P.length;
+  if(n<=1) return [];
+  const q=new Array(n-1);
+  let b=P[n-1];
+  q[n-2]=b;
+  for(let i=n-2;i>=1;i--){ b=P[i].add(b.mul(c)); q[i-1]=b; }
+  return pnorm(q);
+}
+function extractFac(P,c){
+  let Q=pnorm(P.slice()), m=0;
+  while(Q.length>0 && peval(Q,c).isZero() && m<12){ Q=pnorm(pdivLin(Q,c)); m++; }
+  return {m:m,Q:Q};
+}
+
+/* ---------- AST → rational function ---------- */
+function toRational(node){
+  switch(node.k){
+    case 'num': return {P:[node.f],Q:[FO]};
+    case 'var': return {P:[FZ,FO],Q:[FO]};
+    case 'const': case 'fn': throw {trans:true};
+    case 'neg': { const r=toRational(node.e); return {P:pscale(r.P,FM),Q:r.Q}; }
+    case 'add': { const a=toRational(node.l), b=toRational(node.r);
+      return {P:padd(pmul(a.P,b.Q),pmul(b.P,a.Q)), Q:pmul(a.Q,b.Q)}; }
+    case 'sub': { const a=toRational(node.l), b=toRational(node.r);
+      return {P:psub(pmul(a.P,b.Q),pmul(b.P,a.Q)), Q:pmul(a.Q,b.Q)}; }
+    case 'mul': { const a=toRational(node.l), b=toRational(node.r);
+      return {P:pmul(a.P,b.P),Q:pmul(a.Q,b.Q)}; }
+    case 'div': { const a=toRational(node.l), b=toRational(node.r);
+      if(!b.P.length) throw new Error('division by zero — the denominator is 0');
+      return {P:pmul(a.P,b.Q),Q:pmul(a.Q,b.P)}; }
+    case 'pow': { const a=toRational(node.l);
+      if(node.r.k!=='num') throw {trans:true};
+      const e=node.r.f; if(e.d!==1n) throw {trans:true};
+      const k=Number(e.n); if(Math.abs(k)>12) throw {trans:true};
+      if(k>=0) return {P:ppow(a.P,k),Q:ppow(a.Q,k)};
+      if(!a.P.length) throw new Error('division by zero — zero to a negative power');
+      return {P:ppow(a.Q,-k),Q:ppow(a.P,-k)};
+    }
+  }
+}
+
+/* ---------- tokenizer (numbers, functions, constants, variable) ---------- */
+const FUNCS={sin:1,cos:1,tan:1,sqrt:1,ln:1,log:1,exp:1,abs:1};
+const CONSTS={pi:1,e:1};
+function tokenize(str,vars){
+  const toks=[]; let i=0;
+  const isD=c=>c>='0'&&c<='9';
+  while(i<str.length){
+    const c=str[i];
+    if(c===' '||c==='\t'){i++;continue;}
+    if(isD(c)||c==='.'){
+      let j=i,dots=0;
+      while(j<str.length&&(isD(str[j])||str[j]==='.')){ if(str[j]==='.')dots++; j++; }
+      if(dots>1)throw new Error('too many dots in one number');
+      toks.push({t:'num',raw:str.slice(i,j)}); i=j; continue;
+    }
+    if(/[a-z]/i.test(c)){
+      let j=i; while(j<str.length&&/[a-z]/i.test(str[j]))j++;
+      const w=str.slice(i,j).toLowerCase();
+      if(FUNCS[w]){toks.push({t:'fn',name:w});}
+      else if(CONSTS[w]){toks.push({t:'const',name:w});}
+      else if(w.length===1){toks.push({t:'var',v:w}); if(vars)vars.add(w);}
+      else throw new Error('I don\u2019t recognize \u201c'+w+'\u201d — a misspelled function?');
+      i=j; continue;
+    }
+    if(c==='π'){toks.push({t:'const',name:'pi'});i++;continue;}
+    if(c==='√'){toks.push({t:'fn',name:'sqrt'});i++;continue;}
+    if('+-*/^()'.indexOf(c)>=0){toks.push({t:c});i++;continue;}
+    if(c==='−'||c==='–'||c==='—'){toks.push({t:'-'});i++;continue;}
+    if(c==='×'||c==='·'||c==='⋅'){toks.push({t:'*'});i++;continue;}
+    if(c==='÷'||c===':'){toks.push({t:'/'});i++;continue;}
+    if(c==='['){toks.push({t:'('});i++;continue;}
+    if(c===']'){toks.push({t:')'});i++;continue;}
+    if(c==='∞')throw new Error('∞ belongs in the approach box — type inf there');
+    if(c==='=')throw new Error('this is a limit, not an equation — no \u201c=\u201d needed');
+    if(c===','||c===';')throw new Error('unexpected \u201c'+c+'\u201d');
+    throw new Error('I don\u2019t recognize the character \u201c'+c+'\u201d');
+  }
+  return toks;
+}
+function numFrac(raw){
+  if(raw==='.')throw new Error('a lone \u201c.\u201d is not a number');
+  const parts=raw.split('.');
+  if(parts.length===1) return new Frac(BigInt(parts[0]||'0'),1n);
+  const ip=parts[0]===''?0n:BigInt(parts[0]);
+  const fp=parts[1]===''?0n:BigInt(parts[1]);
+  const den=10n**BigInt(parts[1].length);
+  return new Frac(ip*den+fp,den);
+}
+
+/* ---------- recursive-descent parser ---------- */
+function parseTokens(toks){
+  let i=0;
+  const peek=()=>toks[i]||null;
+  function expr(){
+    let l=term(); if(l===null)return null;
+    for(let p=peek();p&&(p.t==='+'||p.t==='-');p=peek()){
+      const op=toks[i++].t, r=term();
+      if(r===null)throw new Error('an operator dangles — the expression stops short');
+      l=op==='+'?{k:'add',l,r}:{k:'sub',l,r};
+    }
+    return l;
+  }
+  function term(){
+    let l=factor(); if(l===null)return null;
+    for(let p=peek();p;p=peek()){
+      if(p.t==='*'||p.t==='/'){
+        i++; const r=factor();
+        if(r===null)throw new Error('an operator dangles — the expression stops short');
+        l=p.t==='*'?{k:'mul',l,r}:{k:'div',l,r};
+      } else if(p.t==='num'||p.t==='var'||p.t==='const'||p.t==='fn'||p.t==='('){
+        const r=factor();
+        if(r===null)throw new Error('something is missing after the last term');
+        l={k:'mul',l,r};
+      } else break;
+    }
+    return l;
+  }
+  function factor(){
+    const p=peek(); if(!p)return null;
+    if(p.t==='-'){i++;const e=factor();if(e===null)throw new Error('a \u201c−\u201d with nothing after it');return {k:'neg',e};}
+    if(p.t==='+'){i++;return factor();}
+    return postfix();
+  }
+  function postfix(){
+    let base=primary();
+    for(let p=peek();p&&p.t==='^';p=peek()){
+      i++;
+      const e=factor();
+      if(e===null)throw new Error('\u201c^\u201d needs an exponent after it');
+      base={k:'pow',l:base,r:e};
+    }
+    return base;
+  }
+  function primary(){
+    const p=peek(); if(!p)return null;
+    if(p.t==='num'){i++;return {k:'num',f:numFrac(p.raw)};}
+    if(p.t==='var'){i++;return {k:'var',v:p.v};}
+    if(p.t==='const'){i++;return {k:'const',name:p.name};}
+    if(p.t==='fn'){
+      i++;
+      const q=peek();
+      if(!q||q.t!=='(')throw new Error(p.name+' needs its argument in parentheses — '+p.name+'(...)');
+      i++;
+      const a=expr();
+      if(a===null)throw new Error('empty parentheses — nothing inside ( )');
+      const r=peek();
+      if(!r||r.t!==')')throw new Error('a \u201c(\u201d is missing its \u201c)\u201d');
+      i++;
+      return {k:'fn',name:p.name,arg:a};
+    }
+    if(p.t==='('){
+      i++;
+      const e=expr();
+      if(e===null)throw new Error('empty parentheses — nothing inside ( )');
+      const q=peek();
+      if(!q||q.t!==')')throw new Error('a \u201c(\u201d is missing its \u201c)\u201d');
+      i++; return e;
+    }
+    if(p.t===')')throw new Error('a \u201c)\u201d with no matching \u201c(\u201d');
+    if(p.t==='^')throw new Error('\u201c^\u201d needs a base before it');
+    throw new Error('I don\u2019t recognize \u201c'+p.t+'\u201d here');
+  }
+  const root=expr();
+  if(root!==null&&i<toks.length)throw new Error('unexpected \u201c'+toks[i].t+'\u201d left over');
+  return root;
+}
+
+/* ---------- compile AST → numeric closure ---------- */
+function compile(node){
+  switch(node.k){
+    case 'num':{ const v=node.f.num(); return ()=>v; }
+    case 'var': return x=>x;
+    case 'const':{ const v=node.name==='pi'?Math.PI:Math.E; return ()=>v; }
+    case 'neg':{ const A=compile(node.e); return x=>-A(x); }
+    case 'add':{ const A=compile(node.l),Bc=compile(node.r); return x=>A(x)+Bc(x); }
+    case 'sub':{ const A=compile(node.l),Bc=compile(node.r); return x=>A(x)-Bc(x); }
+    case 'mul':{ const A=compile(node.l),Bc=compile(node.r); return x=>A(x)*Bc(x); }
+    case 'div':{ const A=compile(node.l),Bc=compile(node.r); return x=>A(x)/Bc(x); }
+    case 'pow':{ const A=compile(node.l),Bc=compile(node.r); return x=>Math.pow(A(x),Bc(x)); }
+    case 'fn':{
+      const A=compile(node.arg);
+      const fn=node.name==='sqrt'?Math.sqrt:(node.name==='ln'||node.name==='log')?Math.log:node.name==='exp'?Math.exp:node.name==='abs'?Math.abs:node.name==='sin'?Math.sin:node.name==='cos'?Math.cos:Math.tan;
+      return x=>fn(A(x));
+    }
+  }
+}
+
+/* ---------- pretty printer ---------- */
+function fracHTML(f){
+  if(f.d===1n) return '<span class="mnum">'+f.n.toString()+'</span>';
+  return (f.n<0n?'−':'')+'<span class="mfrac"><span class="mn">'+(f.n<0n?-f.n:f.n).toString()+'</span><span class="md">'+f.d.toString()+'</span></span>';
+}
+function varHTML(v,i){ return '<span class="mvar">'+v+'</span>'+(i===1?'':'<sup>'+i+'</sup>'); }
+const WRAP={add:1,sub:1,neg:1,div:1,mul:1};
+function wrapIf(n){ return WRAP[n.k]?'('+pretty(n)+')':pretty(n); }
+function parenSum(x){ return (x.k==='add'||x.k==='sub'||x.k==='neg')?'('+pretty(x)+')':pretty(x); }
+function mulDisp(n){
+  const l=n.l, r=n.r;
+  const dl=wrapIf(l), dr=wrapIf(r);
+  if(l.k==='num') return dl+dr;                                   /* 2x · 2π · 2sin(x) · 2(x+1) */
+  if(WRAP[l.k]||WRAP[r.k]) return dl+dr;                          /* (x+1)(x+2) · x(x+1) */
+  if((l.k==='var'||l.k==='const')&&r.k==='fn') return dl+'&thinsp;'+dr;
+  return dl+'·'+dr;                                               /* x·x · sin(x)·x · e·x */
+}
+function pretty(n){
+  switch(n.k){
+    case 'num': return fracHTML(n.f);
+    case 'var': return '<span class="mvar">'+n.v+'</span>';
+    case 'const': return '<span class="mnum">'+(n.name==='pi'?'π':'e')+'</span>';
+    case 'fn':{
+      const a=pretty(n.arg);
+      if(n.name==='sqrt')return '<span class="mnum">√</span><span class="rad">'+a+'</span>';
+      if(n.name==='exp')return '<span class="mnum">e</span><sup>'+a+'</sup>';
+      if(n.name==='abs')return '<span class="mnum">|</span>'+a+'<span class="mnum">|</span>';
+      return '<span class="mnum">'+n.name+'</span><span class="mnum">(</span>'+a+'<span class="mnum">)</span>';
+    }
+    case 'neg':{
+      const a=pretty(n.e);
+      return (n.e.k==='add'||n.e.k==='sub'||n.e.k==='neg')?'−('+a+')':'−'+a;
+    }
+    case 'add': return pretty(n.l)+' + '+parenSum(n.r);
+    case 'sub': return pretty(n.l)+' − '+parenSum(n.r);
+    case 'mul': return mulDisp(n);
+    case 'div': return '<span class="mfrac"><span class="mn">'+pretty(n.l)+'</span><span class="md">'+pretty(n.r)+'</span></span>';
+    case 'pow':{
+      const wrapBase=WRAP[n.l.k]||(n.l.k==='fn'&&(n.l.name==='sqrt'||n.l.name==='exp'));
+      const b=wrapBase?'('+pretty(n.l)+')':pretty(n.l);
+      return b+'<sup>'+pretty(n.r)+'</sup>';
+    }
+  }
+}
+function polyHTML(P,v){
+  P=pnorm(P.slice());
+  if(!P.length) return '<span class="mnum">0</span>';
+  let out='';
+  for(let i=P.length-1;i>=0;i--){
+    const c=P[i]; if(c.isZero())continue;
+    const neg=c.isNeg(), a=neg?c.neg():c;
+    let core;
+    if(i===0) core=fracHTML(a);
+    else if(a.n===1n&&a.d===1n) core=varHTML(v,i);
+    else core=fracHTML(a)+varHTML(v,i);
+    out+=(out===''?(neg?'−':''):(neg?' − ':' + '))+core;
+  }
+  return out;
+}
+function linFacHTML(c,m,v){
+  let base;
+  if(c.isZero()) base='<span class="mvar">'+v+'</span>';
+  else{
+    const a=c.isNeg()?c.neg():c;
+    const op=c.isNeg()?'+':'−';
+    base='<span class="mnum">(</span><span class="mvar">'+v+'</span> '+op+' '+fracHTML(a)+'<span class="mnum">)</span>';
+  }
+  return base+(m>1?'<sup>'+m+'</sup>':'');
+}
+function facHTML(P,ex,c,v){
+  if(!ex.Q.length) return polyHTML(P,v)+' <span class="mnum">=</span> '+linFacHTML(c,ex.m,v);
+  if(ex.Q.length===1){
+    const k=ex.Q[0];
+    if(k.eq(FO)) return polyHTML(P,v)+' <span class="mnum">=</span> '+linFacHTML(c,ex.m,v);
+    return polyHTML(P,v)+' <span class="mnum">=</span> '+fracHTML(k)+(c.isZero()?'·':'')+linFacHTML(c,ex.m,v);
+  }
+  return polyHTML(P,v)+' <span class="mnum">=</span> '+linFacHTML(c,ex.m,v)+'&thinsp;'+polyHTML(ex.Q,v);
+}
+function fracDisp(Pa,Qa,v){
+  if(Qa.length===1&&Qa[0].eq(FO)) return polyHTML(Pa,v);
+  return '<span class="mfrac"><span class="mn">'+polyHTML(Pa,v)+'</span><span class="md">'+polyHTML(Qa,v)+'</span></span>';
+}
+
+/* ---------- number formatting & recognition ---------- */
+function fmt(v){
+  if(v===Infinity)return '∞';
+  if(v===-Infinity)return '−∞';
+  if(isNaN(v))return 'undef';
+  if(v===0)return '0';
+  const a=Math.abs(v);
+  if(a>=1e7||a<1e-5) return v.toExponential(4);
+  return String(parseFloat(v.toPrecision(7)));
+}
+const CONST_LIST=[
+  {v:Math.PI,s:'π'},{v:Math.PI/2,s:'π/2'},{v:Math.PI/3,s:'π/3'},{v:Math.PI/4,s:'π/4'},{v:Math.PI/6,s:'π/6'},{v:2*Math.PI,s:'2π'},
+  {v:Math.E,s:'e'},{v:Math.E/2,s:'e/2'},{v:1/Math.E,s:'1/e'},
+  {v:Math.sqrt(2),s:'√2'},{v:Math.sqrt(2)/2,s:'√2/2'},{v:2*Math.sqrt(2),s:'2√2'},{v:Math.sqrt(2)-1,s:'√2 − 1'},
+  {v:Math.sqrt(3),s:'√3'},{v:Math.sqrt(3)/2,s:'√3/2'},{v:Math.sqrt(3)/3,s:'√3/3'},{v:Math.sqrt(5),s:'√5'},
+  {v:(1+Math.sqrt(5))/2,s:'φ'},{v:Math.log(2),s:'ln 2'},{v:Math.log(10),s:'ln 10'}
+];
+function recognize(L){
+  if(!isFinite(L)) return {type:'approx',val:L};
+  const sc=Math.max(1,Math.abs(L));
+  if(Math.abs(L)<1e-11) return {type:'frac',frac:FZ};
+  const r=Math.round(L);
+  if(Math.abs(L-r)<1e-6*sc) return {type:'frac',frac:new Frac(BigInt(r),1n)};
+  for(const c of CONST_LIST){ if(Math.abs(L-c.v)<1e-8*sc) return {type:'const',cst:c}; }
+  for(let den=2;den<=999;den++){
+    const p=Math.round(L*den);
+    if(Math.abs(L-p/den)<1e-8*sc) return {type:'frac',frac:new Frac(BigInt(p),BigInt(den))};
+  }
+  return {type:'approx',val:L};
+}
+function recHtml(rec){
+  if(rec.type==='frac')return fracHTML(rec.frac);
+  if(rec.type==='const')return '<span class="mnum">'+rec.cst.s+'</span>';
+  return '≈ '+fmt(rec.val);
+}
+function recWhy(rec){
+  if(rec.type==='frac')return 'recognized exactly';
+  if(rec.type==='const')return 'matches the constant '+rec.cst.s+' exactly';
+  return 'no simple closed form detected — the table is the answer';
+}
+function recResult(rec,form){
+  if(rec.type==='frac')return {kind:'value',disp:{type:'frac',frac:rec.frac},form:form};
+  if(rec.type==='const')return {kind:'value',disp:{type:'const',cst:rec.cst},form:form};
+  return {kind:'value',disp:{type:'approx',val:rec.val},form:form};
+}
+
+/* ---------- equivalence toolbox (safe, multiplicative contexts only) ---------- */
+function sqHalf(u){ return {k:'div',l:{k:'mul',l:u,r:u},r:{k:'num',f:FI(2)}}; }
+function matchEquiv(node,cv){
+  const near0=u=>{ try{const v=compile(u)(cv); return isFinite(v)&&Math.abs(v)<1e-7;}catch(e){return false;} };
+  const near1=w=>{ try{const v=compile(w)(cv); return isFinite(v)&&Math.abs(v-1)<1e-7;}catch(e){return false;} };
+  const isOne=n=>n.k==='num'&&n.f.eq(FO);
+  if(node.k==='fn'){
+    if((node.name==='sin'||node.name==='tan')&&near0(node.arg)) return node.arg;
+    if(node.name==='ln'&&near1(node.arg)) return {k:'sub',l:node.arg,r:{k:'num',f:FO}};
+    if(node.name==='exp'&&near0(node.arg)) return {k:'add',l:node.arg,r:{k:'num',f:FO}};
+  }
+  if(node.k==='pow'&&node.l.k==='const'&&node.l.name==='e'&&near0(node.r))
+    return {k:'add',l:node.r,r:{k:'num',f:FO}};
+  if(node.k==='sub'){
+    const l=node.l, r=node.r;
+    if(l.k==='fn'&&l.name==='exp'&&near0(l.arg)&&isOne(r)) return l.arg;
+    if(l.k==='pow'&&l.l.k==='const'&&l.l.name==='e'&&near0(l.r)&&isOne(r)) return l.r;
+    if(isOne(l)&&r.k==='fn'&&r.name==='exp'&&near0(r.arg)) return {k:'neg',e:r.arg};
+    if(isOne(l)&&r.k==='pow'&&r.l.k==='const'&&r.l.name==='e'&&near0(r.r)) return {k:'neg',e:r.r};
+    if(isOne(l)&&r.k==='fn'&&r.name==='cos'&&near0(r.arg)) return sqHalf(r.arg);
+    if(l.k==='fn'&&l.name==='cos'&&near0(l.arg)&&isOne(r)) return {k:'neg',e:sqHalf(l.arg)};
+  }
+  return null;
+}
+function rewriteMult(node,cv,list){
+  if(node.k==='mul'){
+    const l=rewriteMult(node.l,cv,list), r=rewriteMult(node.r,cv,list);
+    return (l!==node.l||r!==node.r)?{k:'mul',l,r}:node;
+  }
+  if(node.k==='div'){
+    const l=rewriteMult(node.l,cv,list), r=rewriteMult(node.r,cv,list);
+    return (l!==node.l||r!==node.r)?{k:'div',l,r}:node;
+  }
+  if(node.k==='neg'){
+    const e=rewriteMult(node.e,cv,list);
+    return e!==node.e?{k:'neg',e}:node;
+  }
+  const m=matchEquiv(node,cv);
+  if(m){ list.push({from:pretty(node),to:pretty(m)}); return m; }
+  return node;
+}
+
+/* ---------- numeric sequence analyzer ---------- */
+function analyzeSeq(vs){
+  const hasInf=vs.some(v=>v===Infinity||v===-Infinity);
+  if(hasInf){
+    const signs=vs.filter(v=>v===Infinity||v===-Infinity).map(v=>v===Infinity?1:-1);
+    if(signs.every(s=>s===signs[0])) return {kind:'inf',sign:signs[0]};
+    return {kind:'osc'};
+  }
+  const finIdx=[]; vs.forEach((v,i)=>{ if(isFinite(v)) finIdx.push(i); });
+  if(finIdx.length<3) return {kind:'nodata'};
+  const vals=finIdx.slice(-6).map(i=>vs[i]);
+  const ds=[]; for(let j=0;j<vals.length-1;j++) ds.push(vals[j+1]-vals[j]);
+  const scale=Math.max(1,...vals.map(Math.abs));
+  const minD=Math.min(...ds.map(Math.abs));
+  if(minD<=1e-4*scale){
+    let bj=0, bd=Math.abs(ds[0]);
+    ds.forEach((d,j)=>{ const a=Math.abs(d); if(a<bd){bd=a;bj=j;} });
+    const v1=vals[bj], v2=vals[bj+1];
+    let L=(10*v2-v1)/9;
+    if(!isFinite(L)||Math.abs(L-v2)>1e-3*Math.max(1,Math.abs(v2),Math.abs(L))) L=v2;
+    return {kind:'value',val:L};
+  }
+  const last=vals[vals.length-1], prev=vals[vals.length-2];
+  if(Math.abs(last)>=1e8&&Math.abs(last)>=4*Math.abs(prev)) return {kind:'inf',sign:Math.sign(last)};
+  const allPos=ds.every(d=>d>1e-4), allNeg=ds.every(d=>d<-1e-4);
+  if(allPos||allNeg){
+    const ads=ds.map(Math.abs);
+    const mn=Math.min(...ads), mx=Math.max(...ads);
+    const nonDec=ads.every((a,j)=>j===0||a>=0.9*ads[j-1]);
+    if(mn>=0.25*mx||nonDec) return {kind:'inf',sign:allPos?1:-1};
+    return {kind:'slow',val:last};
+  }
+  return {kind:'osc'};
+}
+
+/* ================================================================
+   SOLVER ORCHESTRATION
+   ================================================================ */
+const fInput=document.getElementById('fInput');
+const cInput=document.getElementById('cInput');
+const fcEcho=document.getElementById('fcEcho');
+const fcBig=document.getElementById('fcBig');
+const fcRows=document.getElementById('fcRows');
+const stepsEl=document.getElementById('steps');
+const screen=document.getElementById('calcScreen');
+let prevValid=true, SIDE='both', CURVAR='x', steps=[];
+
+const V=()=>'<span class="mvar">'+CURVAR+'</span>';
+const infS=s=>s>0?'+∞':'−∞';
+function limEchoHTML(C){
+  let sideMark='';
+  if(!C.inf){
+    if(SIDE==='left')sideMark='<sup>−</sup>';
+    if(SIDE==='right')sideMark='<sup>+</sup>';
+  }
+  return '<span class="limbox"><span class="limword">lim</span><span class="limsub">'+V()+' → '+(C.inf?C.disp:C.disp)+sideMark+'</span></span>';
+}
+function parseC(str){
+  let s=str.trim().toLowerCase().replace(/∞/g,'inf').replace(/[−–—]/g,'-');
+  if(!s) throw new Error('where does x go? type a number — or inf');
+  if(/^(\+?inf(inity)?)$/.test(s)) return {inf:1,disp:'∞'};
+  if(/^(-inf(inity)?)$/.test(s)) return {inf:-1,disp:'−∞'};
+  if(/inf/.test(s)) throw new Error('inf works alone — try just inf or -inf');
+  const vars=new Set();
+  const toks=tokenize(s,vars);
+  if(!toks.length) throw new Error('the approach box looks empty');
+  if(vars.size) throw new Error('the approach point should be a plain number — I see a variable in there');
+  const astC=parseTokens(toks);
+  if(astC===null) throw new Error('the approach box looks empty');
+  const val=compile(astC)();
+  if(!isFinite(val)) throw new Error('that approach point doesn\u2019t evaluate to a finite number');
+  let exact;
+  try{
+    const r=toRational(astC);
+    if(r.P.length===1&&r.Q.length===1) exact=r.P[0].div(r.Q[0]);
+  }catch(e){}
+  return {inf:0,val:val,exact:exact,disp:pretty(astC)};
+}
+
+/* ---------- rational limit at a finite rational c ---------- */
+function rationalFinite(RF,cF,skipDirect){
+  const v=CURVAR;
+  const P=pnorm(RF.P.slice()), Q=pnorm(RF.Q.slice());
+  if(!Q.length) throw new Error('the denominator simplifies to 0 — division by zero');
+  if(!P.length){
+    if(!skipDirect) steps.push({l:'DIRECT',h:'the numerator is identically zero, so the whole expression is 0 wherever it is defined.'});
+    return {kind:'value',disp:{type:'frac',frac:FZ},form:'ZERO NUMERATOR'};
+  }
+  const pc=peval(P,cF), qc=peval(Q,cF);
+  if(!qc.isZero()){
+    const val=pc.div(qc);
+    if(!skipDirect) steps.push({l:'DIRECT',h:'substitute '+V()+' = '+fracHTML(cF)+': the denominator lands on '+fracHTML(qc)+' ≠ 0 — the expression is defined and continuous here, so the limit is simply the value.'});
+    steps.push({l:'SOLUTION',h:'the limit is <b>'+fracHTML(val)+'</b>'});
+    return {kind:'value',disp:{type:'frac',frac:val},form:'CONTINUOUS — DIRECT'};
+  }
+  const eps=new Frac(1n,1000000n);
+  if(!pc.isZero()){
+    if(!skipDirect) steps.push({l:'DIRECT',h:'substitute: the numerator → '+fracHTML(pc)+' ≠ 0 while the denominator → 0 — a division by zero. The expression blows up; the question is only the <b>sign</b> on each side.'});
+    const sr=sgnF(pc)*sgnF(peval(Q,cF.add(eps)));
+    const sl=sgnF(pc)*sgnF(peval(Q,cF.sub(eps)));
+    steps.push({l:'SIGN',h:'probe the sign exactly at '+V()+' = '+fracHTML(cF)+' ± 0.000001: from the right the fraction has sign <b>'+(sr>0?'+':'−')+'</b>, from the left <b>'+(sl>0?'+':'−')+'</b>.'});
+    if(SIDE!=='both'){
+      const s=SIDE==='left'?sl:sr;
+      steps.push({l:'VERDICT',h:'from the '+(SIDE==='left'?'left':'right')+' the expression → <b>'+infS(s)+'</b>.'});
+      return {kind:'inf',sign:s,form:'POLE — SIGN ANALYSIS'};
+    }
+    if(sl===sr){
+      steps.push({l:'VERDICT',h:'the sign is the same on both sides — the expression grows without bound: <b>'+infS(sl)+'</b>.'});
+      return {kind:'inf',sign:sl,form:'POLE — SIGN ANALYSIS'};
+    }
+    steps.push({l:'VERDICT',h:'the signs oppose: from the left <b>'+infS(sl)+'</b>, from the right <b>'+infS(sr)+'</b>. The two sides disagree — <b>the two-sided limit does not exist</b>.'});
+    return {kind:'dne',form:'POLE — SIDES DISAGREE',lDisp:infS(sl),rDisp:infS(sr)};
+  }
+  /* 0/0 */
+  if(!skipDirect) steps.push({l:'DIRECT',h:'substitute: <b>0/0</b> — the indeterminate form. Both sides vanish; the limit is hiding in a common factor.'});
+  const eP=extractFac(P,cF), eQ=extractFac(Q,cF);
+  steps.push({l:'INSPECT',h:'a polynomial that vanishes at '+V()+' = '+fracHTML(cF)+' is divisible by '+linFacHTML(cF,1,v)+'. Divide both out:<br>'+facHTML(P,eP,cF,v)+'<br>'+facHTML(Q,eQ,cF,v)});
+  const m=Math.min(eP.m,eQ.m);
+  let Pa=P.slice(), Qa=Q.slice();
+  for(let t=0;t<m;t++){ Pa=pnorm(pdivLin(pnorm(Pa),cF)); Qa=pnorm(pdivLin(pnorm(Qa),cF)); }
+  steps.push({l:'CANCEL',h:'cancel '+linFacHTML(cF,m,v)+' from top and bottom:<br><b>'+fracDisp(pnorm(Pa),pnorm(Qa),v)+'</b>'});
+  const qc2=peval(pnorm(Qa),cF), pc2=peval(pnorm(Pa),cF);
+  if(!qc2.isZero()){
+    const val=pc2.div(qc2);
+    steps.push({l:'SUBSTITUTE',h:'now substitute '+V()+' = '+fracHTML(cF)+': <b>'+fracHTML(val)+'</b>'});
+    steps.push({l:'SOLUTION',h:'the limit is <b>'+fracHTML(val)+'</b>'});
+    return {kind:'value',disp:{type:'frac',frac:val},form:'0/0 — FACTORED & CANCELED'};
+  }
+  /* pole after cancellation */
+  const sr=sgnF(pc2)*sgnF(peval(pnorm(Qa),cF.add(eps)));
+  const sl=sgnF(pc2)*sgnF(peval(pnorm(Qa),cF.sub(eps)));
+  steps.push({l:'SIGN',h:'after the cancel the denominator still → 0 while the numerator → '+fracHTML(pc2)+' — infinite again. Probe the signs: right <b>'+(sr>0?'+':'−')+'</b>, left <b>'+(sl>0?'+':'−')+'</b>.'});
+  if(SIDE!=='both'){
+    const s=SIDE==='left'?sl:sr;
+    return {kind:'inf',sign:s,form:'0/0 — CANCELED TO A POLE'};
+  }
+  if(sl===sr) return {kind:'inf',sign:sl,form:'0/0 — CANCELED TO A POLE'};
+  return {kind:'dne',form:'POLE — SIDES DISAGREE',lDisp:infS(sl),rDisp:infS(sr)};
+}
+
+/* ---------- transcendental pipeline at a finite c ---------- */
+function solveFinite(ast,C){
+  const cv=C.val;
+  let RF=null;
+  try{ RF=toRational(ast); }catch(e){ if(!(e&&e.trans)) throw e; }
+  if(RF&&C.exact!==undefined) return rationalFinite(RF,C.exact,false);
+  const f=compile(ast);
+  const fc=f(cv);
+  if(isFinite(fc)){
+    const d1=1e-6, probes=[];
+    if(SIDE!=='right'){ probes.push(f(cv-d1)); probes.push(f(cv-d1*0.1)); }
+    if(SIDE!=='left'){ probes.push(f(cv+d1)); probes.push(f(cv+d1*0.1)); }
+    const stable=probes.every(p=>isFinite(p)&&Math.abs(p-fc)<=1e-3*Math.max(1,Math.abs(fc)));
+    if(stable){
+      steps.push({l:'DIRECT',h:'substitute '+V()+' = '+C.disp+': f is defined here (value '+fmt(fc)+'), and the neighbouring values agree — f is continuous at this point, so the limit is simply the value.'});
+      const rec=recognize(fc);
+      steps.push({l:'SOLUTION',h:'the limit is <b>'+recHtml(rec)+'</b> — '+recWhy(rec)+'.'});
+      return recResult(rec,'CONTINUOUS — DIRECT');
+    }
+    steps.push({l:'DIRECT',h:'substitution lands on '+fmt(fc)+' but the values nearby refuse to settle — no continuity to lean on. Table time.'});
+    return numFinite(f,cv);
+  }
+  if(ast.k==='div'){
+    const fA=compile(ast.l), fB=compile(ast.r);
+    const av=fA(cv), bv=fB(cv);
+    let formHtml;
+    if(Math.abs(bv)<1e-9&&Math.abs(av)<1e-9) formHtml='<b>0/0</b> — the indeterminate form.';
+    else if(Math.abs(bv)<1e-9&&isFinite(av)) formHtml=fmt(av)+'/0 — a division by zero: infinite behavior, sign to be determined.';
+    else formHtml='substitution gives an undefined value.';
+    steps.push({l:'DIRECT',h:'substitute: '+formHtml});
+    const list=[];
+    const nl=rewriteMult(ast.l,cv,list);
+    const nr=rewriteMult(ast.r,cv,list);
+    if(list.length){
+      const newAst={k:'div',l:nl,r:nr};
+      steps.push({l:'EQUIV',h:list.map(w=>'<b>'+w.from+'</b> behaves like <b>'+w.to+'</b> near this point').join('; ')+' — swap the equivalents in:<br><b>'+pretty(newAst)+'</b>'});
+      try{
+        const RF2=toRational(newAst);
+        if(C.exact!==undefined) return rationalFinite(RF2,C.exact,true);
+      }catch(e){ if(!(e&&e.trans)) throw e; }
+    }
+    return numFinite(f,cv);
+  }
+  steps.push({l:'DIRECT',h:'substitution gives an undefined value — the table method settles it.'});
+  return numFinite(f,cv);
+}
+
+/* ---------- numeric table path at a finite c ---------- */
+function tableHTML(head,xs,vs){
+  let rows='';
+  for(let k=2;k<=7;k++){
+    const i=k-1;
+    rows+='<div class="trow"><span class="tx">'+fmt(xs[i])+'</span><span class="tarr">→</span><span class="tv">'+fmt(vs[i])+'</span></div>';
+  }
+  return '<div class="ttable"><div class="tt-head">'+head+'</div>'+rows+'</div>';
+}
+function sideWord(d){
+  if(d.kind==='value')return fmt(d.val);
+  if(d.kind==='inf')return infS(d.sign);
+  if(d.kind==='slow')return '≈ '+fmt(d.val);
+  if(d.kind==='osc')return 'oscillates';
+  return 'undef';
+}
+function sideToResult(d,notePrefix){
+  if(d.kind==='value'){
+    const rec=recognize(d.val);
+    const r=recResult(rec,'NUMERIC — TABLE');
+    r.note=notePrefix+' the values home in on <b>'+recHtml(rec)+'</b> — '+recWhy(rec)+'.';
+    return r;
+  }
+  if(d.kind==='slow'){
+    return {kind:'value',disp:{type:'approx',val:d.val},form:'NUMERIC — SLOW CONVERGENCE',slow:true,
+      note:notePrefix+' the values creep toward <b>≈ '+fmt(d.val)+'</b> — converging very slowly; treat as approximate.'};
+  }
+  if(d.kind==='inf'){
+    return {kind:'inf',sign:d.sign,form:'NUMERIC — DIVERGENCE',
+      note:notePrefix+' the values grow without bound — sign <b>'+(d.sign>0?'+':'−')+'</b>.'};
+  }
+  if(d.kind==='osc'){
+    return {kind:'dne',form:'OSCILLATION',
+      note:notePrefix+' the values oscillate and never settle — <b>the limit does not exist</b>.'};
+  }
+  return {kind:'dne',form:'OUT OF DOMAIN',
+    note:notePrefix+' f is not defined on this side near the point — no limit from here.'};
+}
+function numFinite(f,cv){
+  const sides=[];
+  if(SIDE!=='right')sides.push({key:'left',head:'FROM THE LEFT',s:-1});
+  if(SIDE!=='left')sides.push({key:'right',head:'FROM THE RIGHT',s:1});
+  const info={};
+  for(const sd of sides){
+    const xs=[],vs=[];
+    for(let k=1;k<=9;k++){ const x=cv+sd.s*Math.pow(10,-k); xs.push(x); vs.push(f(x)); }
+    info[sd.key]={xs:xs,vs:vs,res:analyzeSeq(vs)};
+  }
+  steps.push({l:'TABLE',h:'watch the trend as '+V()+' closes in:<div class="ttables">'+sides.map(sd=>tableHTML(sd.head,info[sd.key].xs,info[sd.key].vs)).join('')+'</div>'});
+  let res;
+  if(SIDE!=='both'){
+    res=sideToResult(info[SIDE].res,'as '+V()+' approaches from the '+(SIDE==='left'?'left':'right')+':');
+  }else{
+    const L=info.left.res, R=info.right.res;
+    if(L.kind==='nodata'&&R.kind==='nodata'){
+      res={kind:'dne',form:'OUT OF DOMAIN',lDisp:'undef',rDisp:'undef',
+        note:'f is undefined on both sides of the point — no limit to speak of.'};
+    }else if(L.kind==='nodata'||R.kind==='nodata'){
+      const other=L.kind==='nodata'?R:L;
+      res={kind:'dne',form:'OUT OF DOMAIN',lDisp:sideWord(L),rDisp:sideWord(R),
+        note:'f is undefined on the '+(L.kind==='nodata'?'left':'right')+' of the point, so the two-sided limit cannot exist'+(other.kind==='value'?' — the other side alone → '+fmt(other.val):'')+'.'};
+    }else if((L.kind==='value'||L.kind==='slow')&&(R.kind==='value'||R.kind==='slow')){
+      const a=L.val, b=R.val;
+      if(Math.abs(a-b)<=(L.kind==='slow'||R.kind==='slow'?1e-3:1e-5)*Math.max(1,Math.abs(a),Math.abs(b))){
+        const rec=recognize((a+b)/2);
+        const r=recResult(rec,(L.kind==='slow'||R.kind==='slow')?'NUMERIC — SLOW CONVERGENCE':'NUMERIC — TABLE');
+        if(L.kind==='slow'||R.kind==='slow')r.slow=true;
+        r.lDisp=fmt(a); r.rDisp=fmt(b);
+        r.note='both sides home in on <b>'+recHtml(rec)+'</b> — '+recWhy(rec)+'.';
+        res=r;
+      }else{
+        res={kind:'dne',form:'SIDES DISAGREE',lDisp:fmt(a),rDisp:fmt(b),
+          note:'the left approach → <b>'+fmt(a)+'</b> but the right → <b>'+fmt(b)+'</b> — they disagree, so the two-sided limit does not exist.'};
+      }
+    }else if(L.kind==='inf'&&R.kind==='inf'){
+      if(L.sign===R.sign){
+        res={kind:'inf',sign:L.sign,form:'NUMERIC — DIVERGENCE',lDisp:infS(L),rDisp:infS(R),
+          note:'both sides grow without bound, sign <b>'+(L.sign>0?'+':'−')+'</b>.'};
+      }else{
+        res={kind:'dne',form:'SIDES DISAGREE',lDisp:infS(L),rDisp:infS(R),
+          note:'left → '+infS(L)+', right → '+infS(R)+' — the sides fly apart; no two-sided limit.'};
+      }
+    }else if(L.kind==='inf'||R.kind==='inf'){
+      const I=L.kind==='inf'?L:R, o=L.kind==='inf'?R:L;
+      res={kind:'dne',form:'SIDES DISAGREE',lDisp:sideWord(L),rDisp:sideWord(R),
+        note:'one side runs to '+infS(I)+' while the other '+(o.kind==='value'||o.kind==='slow'?'settles at '+fmt(o.val):'behaves differently')+' — no two-sided limit.'};
+    }else{
+      res={kind:'dne',form:'OSCILLATION',lDisp:sideWord(L),rDisp:sideWord(R),
+        note:'the values refuse to settle (oscillation) — <b>the limit does not exist</b>.'};
+    }
+  }
+  steps.push({l:'PATTERN',h:res.note||'the table is the evidence.'});
+  if(res.kind==='value') steps.push({l:'SOLUTION',h:'the limit is <b>'+dispHtml(res)+'</b>'});
+  return res;
+}
+
+/* ---------- limit at infinity ---------- */
+function divideDisplay(P,d,v){
+  let out='';
+  for(let k=P.length-1;k>=0;k--){
+    const c=P[k]; if(c.isZero())continue;
+    const dk=d-k;
+    let core;
+    if(dk===0) core=fracHTML(c);
+    else{
+      const a=c.isNeg()?c.neg():c;
+      core='<span class="mfrac"><span class="mn">'+fracHTML(a)+'</span><span class="md">'+varHTML(v,dk)+'</span></span>';
+    }
+    out+=(out===''?(c.isNeg()?'−':''):(c.isNeg()?' − ':' + '))+core;
+  }
+  return out||'<span class="mnum">0</span>';
+}
+function solveInf(ast,C){
+  const dir=C.inf, v=CURVAR;
+  let RF=null;
+  try{ RF=toRational(ast); }catch(e){ if(!(e&&e.trans)) throw e; }
+  if(RF){
+    const P=pnorm(RF.P.slice()), Q=pnorm(RF.Q.slice());
+    if(!Q.length) throw new Error('the denominator simplifies to 0 — division by zero');
+    if(!P.length) return {kind:'value',disp:{type:'frac',frac:FZ},form:'ZERO NUMERATOR'};
+    const dP=P.length-1, dQ=Q.length-1;
+    const lcP=P[dP], lcQ=Q[dQ];
+    if(dP<dQ){
+      steps.push({l:'FORM',h:'the denominator (degree '+dQ+') outgrows the numerator (degree '+dP+') — dividing everything by '+varHTML(v,dQ)+' leaves only dying terms on top.'});
+      steps.push({l:'LIMIT',h:'every term in the numerator carries at least one extra factor of 1/'+V()+' — the whole fraction → <b>0</b>.'});
+      return {kind:'value',disp:{type:'frac',frac:FZ},form:'DEGREES: TOP < BOTTOM'};
+    }
+    if(dP===dQ){
+      steps.push({l:'FORM',h:'equal degrees ('+dP+') — the limit is the ratio of the leading coefficients.'});
+      steps.push({l:'DIVIDE',h:'divide top and bottom by '+varHTML(v,dQ)+':<br><span class="mfrac"><span class="mn">'+divideDisplay(P,dQ,v)+'</span><span class="md">'+divideDisplay(Q,dQ,v)+'</span></span><br>as '+V()+' → '+(dir>0?'∞':'−∞')+', every 1/'+V()+' term dies.'});
+      const val=lcP.div(lcQ);
+      steps.push({l:'LIMIT',h:'only the leading pair survives: <b>'+fracHTML(val)+'</b>'});
+      return {kind:'value',disp:{type:'frac',frac:val},form:'DEGREES EQUAL — LEADING RATIO'};
+    }
+    let s=sgnF(lcP)*sgnF(lcQ);
+    if(dir<0&&(dP-dQ)%2===1) s=-s;
+    steps.push({l:'FORM',h:'the numerator (degree '+dP+') outgrows the denominator (degree '+dQ+') — infinite behavior; the sign comes from the leading terms'+(dir<0?' as '+V()+' → −∞':'')+'.'});
+    steps.push({l:'SIGN',h:'leading terms: '+fracHTML(lcP)+varHTML(v,dP)+' over '+fracHTML(lcQ)+varHTML(v,dQ)+' → sign <b>'+(s>0?'+':'−')+'</b>.'});
+    steps.push({l:'VERDICT',h:'the expression runs to <b>'+infS(s)+'</b>.'});
+    return {kind:'inf',sign:s,form:'DEGREES: TOP > BOTTOM'};
+  }
+  const f=compile(ast);
+  steps.push({l:'DIRECT',h:'no algebraic shortcut applies here — sample the function at powers of ten and watch the trend.'});
+  const xs=[],vs=[];
+  for(let k=1;k<=9;k++){ const x=dir*Math.pow(10,k); xs.push(x); vs.push(f(x)); }
+  const d=analyzeSeq(vs);
+  steps.push({l:'TABLE',h:'<div class="ttables">'+tableHTML('AS '+V()+' → '+(dir>0?'∞':'−∞'),xs,vs)+'</div>'});
+  const res=sideToResult(d,'as '+V()+' → '+(dir>0?'∞':'−∞')+':');
+  steps.push({l:'PATTERN',h:res.note});
+  if(res.kind==='value') steps.push({l:'SOLUTION',h:'the limit is <b>'+dispHtml(res)+'</b>'});
+  return res;
+}
+
+/* ---------- final rendering ---------- */
+function dispHtml(res){
+  if(res.disp.type==='frac')return fracHTML(res.disp.frac);
+  if(res.disp.type==='const')return '<span class="mnum">'+res.disp.cst.s+'</span>';
+  return '≈ '+fmt(res.disp.val);
+}
+function bigValue(d){
+  if(d.type==='frac'){
+    const f=d.frac;
+    if(f.d===1n) return '<span class="bint">'+f.n.toString()+'</span>';
+    return (f.n<0n?'<span class="bneg">−</span>':'')+'<span class="bfrac"><span class="bfn">'+(f.n<0n?-f.n:f.n).toString()+'</span><span class="bfd">'+f.d.toString()+'</span></span>';
+  }
+  if(d.type==='const') return '<span class="bint'+(d.cst.s.length>2?' bsmaller':'')+'">'+d.cst.s+'</span>';
+  return '<span class="bapprox">≈</span><span class="bint bsmaller">'+fmt(d.val)+'</span>';
+}
+function pushCheck(ast,C,res){
+  const f=compile(ast);
+  let h='';
+  try{
+    if(C.inf){
+      const x=C.inf*1e6;
+      h=V()+' = '+fmt(x)+' → '+fmt(f(x))+(res.kind==='value'?' — right on target ✓':'');
+    }else if(res.kind==='value'){
+      h=V()+' = '+fmt(C.val-1e-6)+' → '+fmt(f(C.val-1e-6))+' · '+V()+' = '+fmt(C.val+1e-6)+' → '+fmt(f(C.val+1e-6))+' ✓';
+    }else if(res.kind==='inf'){
+      h='probe: '+fmt(f(C.val-1e-6))+' and '+fmt(f(C.val+1e-6))+' — the blow-up is real';
+    }else{
+      h='the table above is the evidence — the two behaviours speak for themselves';
+    }
+  }catch(e){ h='—'; }
+  steps.push({l:'CHECK',h:h});
+  return h;
+}
+function renderResult(res,ast,C){
+  const checkH=pushCheck(ast,C,res);
+  let big='', rows=[];
+  if(res.kind==='value'){
+    big=bigValue(res.disp);
+    rows.push({l:'FORM',v:res.form});
+    if(res.lDisp!==undefined)rows.push({l:'LEFT',v:'<span class="mnum">'+res.lDisp+'</span>'});
+    if(res.rDisp!==undefined)rows.push({l:'RIGHT',v:'<span class="mnum">'+res.rDisp+'</span>'});
+    if(res.disp.type==='frac'&&res.disp.frac.d!==1n)rows.push({l:'AS DECIMAL',v:'<span class="mnum">'+decStr(res.disp.frac)+'</span>'});
+    if(res.disp.type==='const')rows.push({l:'AS DECIMAL',v:'<span class="mnum">'+fmt(res.disp.cst.v)+'</span>'});
+    if(res.slow)rows.push({l:'CAUTION',v:'SLOW CONVERGENCE — APPROXIMATE'});
+  }else if(res.kind==='inf'){
+    big=(res.sign<0?'<span class="bneg">−</span>':'')+'<span class="bint">∞</span>';
+    rows.push({l:'FORM',v:res.form});
+    if(res.lDisp!==undefined)rows.push({l:'LEFT',v:'<span class="mnum">'+res.lDisp+'</span>'});
+    if(res.rDisp!==undefined)rows.push({l:'RIGHT',v:'<span class="mnum">'+res.rDisp+'</span>'});
+    rows.push({l:'NOTE',v:'AN INFINITE LIMIT — NOT A FINITE VALUE'});
+  }else{
+    big='<span class="bint bsmall">DOES NOT EXIST</span>';
+    rows.push({l:'FORM',v:res.form});
+    if(res.lDisp!==undefined)rows.push({l:'LEFT',v:'<span class="mnum">'+res.lDisp+'</span>'});
+    if(res.rDisp!==undefined)rows.push({l:'RIGHT',v:'<span class="mnum">'+res.rDisp+'</span>'});
+  }
+  rows.push({l:'CHECK',v:checkH});
+  fcBig.innerHTML='<span class="bigin">'+big+'</span>';
+  fcRows.innerHTML=rows.map(r=>'<div class="frow"><span class="fl">'+r.l+'</span><span class="fv">'+r.v+'</span></div>').join('');
+  renderSteps();
+}
+function renderSteps(){
+  stepsEl.innerHTML=steps.map(s=>'<div class="wstep"><span class="wi">'+s.l+'</span><div class="wt">'+s.h+'</div></div>').join('');
+}
+function idle(msg){
+  prevValid=true;
+  fcEcho.innerHTML='<span class="eempty">'+msg+'</span>';
+  fcBig.innerHTML='<span class="brest">lim = ?</span>';
+  fcRows.innerHTML='';
+  stepsEl.innerHTML='<div class="wempty">WAITING FOR INPUT…</div>';
+}
+function showError(msg){
+  fcEcho.innerHTML='<span class="eempty">PARSE ERROR</span>';
+  fcBig.innerHTML='<div class="berr">'+msg+'</div>';
+  fcRows.innerHTML='';
+  stepsEl.innerHTML='<div class="wempty">FIX THE INPUT AND THE PROOF CONTINUES</div>';
+  if(prevValid){ screen.classList.remove('err'); void screen.offsetWidth; screen.classList.add('err'); }
+  prevValid=false;
+}
+function renderLimit(){
+  const fRaw=fInput.value, cRaw=cInput.value;
+  if(!fRaw.trim()||!cRaw.trim()){ idle('TYPE f(x) AND WHERE x GOES — IT SOLVES AS YOU TYPE'); return; }
+  let ast;
+  try{
+    const vars=new Set();
+    const toks=tokenize(fRaw,vars);
+    if(!toks.length) throw new Error('nothing to solve yet');
+    ast=parseTokens(toks);
+    if(ast===null) throw new Error('nothing to solve yet');
+    if(vars.size===0) throw new Error('no variable — I need one letter like x (e and π are constants here)');
+    if(vars.size>1) throw new Error('one variable at a time — I can see {'+[...vars].join(', ')+'}');
+    CURVAR=[...vars][0];
+  }catch(err){ showError(err.message||String(err)); return; }
+  let C;
+  try{ C=parseC(cRaw); }catch(err){ showError(err.message||String(err)); return; }
+  steps=[];
+  try{
+    steps.push({l:'GIVEN',h:'<b>'+limEchoHTML(C)+' '+pretty(ast)+'</b>'});
+    const res=C.inf?solveInf(ast,C):solveFinite(ast,C);
+    prevValid=true;
+    fcEcho.innerHTML=limEchoHTML(C)+' '+pretty(ast);
+    renderResult(res,ast,C);
+  }catch(err){
+    showError(err.message||String(err));
+  }
+}
+
+/* ---------- wiring ---------- */
+document.querySelectorAll('.cmode').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.cmode').forEach(x=>x.classList.toggle('on',x===b));
+  SIDE=b.dataset.side;
+  prevValid=true;
+  renderLimit();
+}));
+fInput.addEventListener('input',renderLimit);
+cInput.addEventListener('input',renderLimit);
+document.querySelectorAll('.exchip[data-f]').forEach(b=>b.addEventListener('click',()=>{
+  fInput.value=b.dataset.f;
+  cInput.value=b.dataset.c;
+  renderLimit();
+  fInput.focus();
+}));
+renderLimit();
+})();
+
+/* ================================================================
+   SITE UI — theme, nav, menu, reveal, starfield, back-top
+   ================================================================ */
+(function(){
+'use strict';
+/* theme toggle */
+const tt=document.getElementById('themeToggle');
+function syncPressed(){tt.setAttribute('aria-pressed',document.documentElement.dataset.theme==='light');}
+syncPressed();
+tt.addEventListener('click',()=>{
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  document.documentElement.classList.add('theme-anim');
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('sws-theme',next);}catch(e){}
+  syncPressed();
+  if(window.__sfRefresh)window.__sfRefresh();
+  setTimeout(()=>document.documentElement.classList.remove('theme-anim'),600);
+});
+
+/* nav: hide on scroll down, progress hairline */
+const nav=document.getElementById('nav'),navProg=document.getElementById('navProg');
+let lastY=window.scrollY;
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  nav.classList.toggle('scrolled',y>10);
+  if(y>lastY&&y>140&&!document.body.classList.contains('menu-open'))nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY=y;
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  navProg.style.width=(h>0?Math.min(100,y/h*100):0)+'%';
+},{passive:true});
+
+/* burger + mobile menu */
+const burger=document.getElementById('burger'),mmenu=document.getElementById('mmenu');
+function closeMenu(){
+  document.body.classList.remove('menu-open','locked');
+  burger.setAttribute('aria-expanded','false');
+}
+burger.addEventListener('click',()=>{
+  const open=document.body.classList.toggle('menu-open');
+  document.body.classList.toggle('locked',open);
+  burger.setAttribute('aria-expanded',open);
+});
+mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+/* reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const footer=document.getElementById('footer');
+if(footer){
+  const fo=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){footer.classList.add('in');fo.unobserve(footer);}
+  }),{threshold:.05});
+  fo.observe(footer);
+}
+
+/* back to top */
+const bt=document.getElementById('backTop');
+if(bt)bt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* subscribe form (static-site friendly) */
+const sf=document.getElementById('subForm');
+if(sf)sf.addEventListener('submit',e=>{
+  e.preventDefault();
+  const span=sf.querySelector('.btn-ticket span');
+  if(span)span.textContent='✓ Subscribed — see you in the inbox';
+});
+
+/* footer starfield */
+(function(){
+  const cv=document.getElementById('starfield');
+  if(!cv)return;
+  const ctx=cv.getContext('2d');
+  let W=0,H=0,stars=[],ink=[241,237,226],acc=[111,227,208];
+  function hex(h){h=h.trim().replace('#','');if(h.length===3)h=h.split('').map(c=>c+c).join('');const n=parseInt(h,16);return[(n>>16)&255,(n>>8)&255,n&255];}
+  function colors(){
+    const cs=getComputedStyle(document.documentElement);
+    ink=hex(cs.getPropertyValue('--ink'));
+    acc=hex(cs.getPropertyValue('--accent'));
+  }
+  function resize(){
+    const r=cv.getBoundingClientRect(),dpr=Math.min(window.devicePixelRatio||1,2);
+    W=r.width;H=r.height;
+    cv.width=Math.max(1,W*dpr);cv.height=Math.max(1,H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    stars=[];
+    const n=Math.round(W*H/9000);
+    for(let i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.3+.4,p:Math.random()*Math.PI*2,s:Math.random()*.05+.015,a:Math.random()<.16});
+  }
+  let raf=null;
+  function frame(t){
+    ctx.clearRect(0,0,W,H);
+    for(const s of stars){
+      s.y-=s.s;s.x+=s.s*.25;
+      if(s.y<-4)s.y=H+4;
+      if(s.x>W+4)s.x=-4;
+      const tw=.3+.7*Math.abs(Math.sin(t/1500+s.p));
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.2832);
+      ctx.fillStyle=s.a?'rgba('+acc[0]+','+acc[1]+','+acc[2]+','+(tw*.85)+')':'rgba('+ink[0]+','+ink[1]+','+ink[2]+','+(tw*.35)+')';
+      ctx.fill();
+    }
+    raf=requestAnimationFrame(frame);
+  }
+  colors();resize();
+  window.__sfRefresh=colors;
+  window.addEventListener('resize',resize);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){frame(0);cancelAnimationFrame(raf);}
+  else frame(0);
+})();
+})();
+</script>
+</body>
+</html>
