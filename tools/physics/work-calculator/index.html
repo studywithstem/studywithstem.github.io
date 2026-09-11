@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Work Calculator — Free Online Physics Tool for Work Done from Force &amp; Distance, the Work-Energy Theorem, Lifting Work &amp; Power | StudyWithSTEM</title>
+<meta name="description" content="Free online work calculator for force × distance at any angle, the work-energy theorem, lifting work mgh and power — instant answers with formulas, steps and full unit checks. No sign-up.">
+<meta name="keywords" content="work calculator, calculate work done, work formula, work done by a force, force times distance calculator, work energy theorem calculator, lifting work calculator, mgh calculator, gravitational work calculator, power from work calculator, joules converter, free online physics tool">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools//work-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Work Calculator — Force × Distance, Work-Energy Theorem, Lifting &amp; Power | StudyWithSTEM">
+<meta property="og:description" content="Free work calculator with four modes — force &amp; distance at any angle, the work-energy theorem, lifting work and power. Instant results with formulas and steps.">
+<meta property="og:url" content="https://studywithstem.github.io/tools//work-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/work-calculator.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM Work Calculator — free online physics tool">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Work Calculator — Free Online Physics Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Work from force &amp; distance, the work-energy theorem, lifting work and power — instant answers with formulas and steps.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/work-calculator.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "", "item": "https://studywithstem.github.io/tools//" },
+    { "@type": "ListItem", "position": 4, "name": "Work Calculator", "item": "https://studywithstem.github.io/tools//work-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Work Calculator",
+  "url": "https://studywithstem.github.io/tools//work-calculator/",
+  "description": "Free online work calculator with four modes: work from force and displacement at any angle, the work-energy theorem, lifting work against gravity, and power from work and time. Shows formulas and steps for every result.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Work from force, distance and angle with automatic unit conversion",
+    "Work-energy theorem from mass and the change in speed",
+    "Lifting work mgh with gravity presets for Earth, Moon, Mars and Jupiter",
+    "Power mode that solves for power, work or time"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula for work done?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Work equals force times displacement times the cosine of the angle between them: W = F · d · cos θ. Pushing a box with 150 N across 8 m of floor (force straight along the motion, θ = 0°) does W = 150 × 8 × 1 = 1,200 J. Whenever force is in newtons and distance in metres, work comes out in joules." }
+    },
+    {
+      "@type": "Question",
+      "name": "When is work done equal to zero?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Three ways: the force is zero, the displacement is zero, or the force is perpendicular to the motion (θ = 90° or 270°, where cos θ = 0). The last one is the classic trap — carrying a heavy bag horizontally at constant speed does zero work on it, because the upward supporting force never acts along the horizontal motion." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the work formula include cos θ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only the component of the force that points along the displacement does any work, and that component is F · cos θ. Pulling a sled with a rope angled 30° above the ground, only cos 30° ≈ 0.866 of the pull moves the sled forward — the rest just lifts slightly. Enter the angle and the calculator applies the cosine automatically." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can work be negative?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whenever the force has a component opposing the motion (90° < θ < 270°), cos θ is negative and so is the work. Friction acting on a sliding box does negative work, and so do brakes — they remove kinetic energy instead of adding it. Negative work is how moving things slow down." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the work-energy theorem?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The total (net) work done on an object equals its change in kinetic energy: W = ½m·v₂² − ½m·v₁². Speeding a 1,200 kg car from rest to 20 m/s takes ½ × 1200 × 20² = 240,000 J of work; braking it back to rest gives net work of −240,000 J." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the work done against gravity?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use W = m · g · h — mass times gravitational acceleration times height. Lifting 10 kg through 2 m on Earth takes 10 × 9.81 × 2 ≈ 196 J, exactly the gravitational potential energy gained. Lowering the same mass gives the same amount back as negative work." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between work and power?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Work is an amount of energy transferred, measured in joules; power is how fast it is transferred, measured in watts (1 W = 1 J per second). Climbing the same staircase does the same work whether you sprint or stroll — only the power output differs. The calculator’s Power mode converts between work, power and time." }
+    },
+    {
+      "@type": "Question",
+      "name": "What units does work use, and how do I convert them?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The SI unit is the joule: 1 J = 1 N·m. Common conversions: 1 kJ = 1,000 J; 1 calorie = 4.184 J; 1 food calorie (kcal) = 4,184 J; 1 watt-hour = 3,600 J; 1 foot-pound ≈ 1.356 J. The calculator converts every result into these units automatically." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this calculator free, and is my data sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It is completely free and runs entirely in your browser — nothing you type is uploaded, logged or sent to a server. No account, no sign-up, no limits." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= WORK CALCULATOR (page-specific layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.tool-tabs{display:flex; border-bottom:1px solid var(--edge); overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.tool-tabs::-webkit-scrollbar{display:none;}
+.ttab{
+  flex:1 0 auto; padding:17px 18px; background:none; border:none; cursor:pointer; white-space:nowrap;
+  position:relative; margin-bottom:-1px; font:600 .82rem/1.1 var(--f-sans); color:var(--muted);
+  transition:color .25s, background .25s;
+}
+.ttab .mono{font:700 .58rem var(--f-mono); letter-spacing:.08em; color:var(--faint); margin-right:9px;}
+.ttab::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--accent); transform:scaleX(0); transition:transform .3s ease;}
+.ttab:hover{color:var(--ink); background:var(--panel);}
+.ttab.active{color:var(--accent);}
+.ttab.active .mono{color:var(--accent);}
+.ttab.active::after{transform:scaleX(1);}
+
+.tpanel{display:none; padding:30px;}
+.tpanel.active{display:block;}
+.tool-grid{display:grid; grid-template-columns:.92fr 1.08fr; gap:32px; align-items:start;}
+
+.t-field{margin-bottom:20px;}
+.t-field:last-child{margin-bottom:0;}
+.t-field>label{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;}
+.t-field .hint{font:.76rem/1.5 var(--f-sans); color:var(--faint); margin-top:7px;}
+
+.t-num{position:relative;}
+.t-num input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 58px 13px 15px; color:var(--ink); font:600 1.04rem var(--f-mono); transition:border-color .25s;
+}
+.t-num input:focus{outline:none; border-color:var(--accent);}
+.t-num .suf{position:absolute; right:14px; top:50%; transform:translateY(-50%); font:700 .68rem var(--f-mono); letter-spacing:.06em; color:var(--faint); pointer-events:none;}
+
+.t-select{position:relative;}
+.t-select select{
+  width:100%; appearance:none; -webkit-appearance:none; cursor:pointer;
+  background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 42px 13px 15px; color:var(--ink); font:.9rem var(--f-sans); transition:border-color .25s;
+}
+.t-select select:focus{outline:none; border-color:var(--accent);}
+.t-select select option{background:var(--bg); color:var(--ink);}
+.t-select svg{position:absolute; right:14px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--faint); pointer-events:none; transition:color .25s;}
+.t-select:focus-within svg{color:var(--accent);}
+
+/* number input with a unit dropdown beside it */
+.t-duo{display:flex; gap:8px; align-items:stretch;}
+.t-duo .t-num{flex:1; min-width:0; display:flex;}
+.t-duo .t-num input{flex:1; width:100%; padding-right:15px;}
+.t-duo .t-select{width:112px; flex:none; display:flex;}
+.t-duo .t-select select{width:100%; padding:13px 32px 13px 11px; font:700 .72rem var(--f-mono); letter-spacing:.04em;}
+
+.t-examples{display:flex; flex-wrap:wrap; gap:8px;}
+.t-chip{
+  font:700 .6rem var(--f-mono); letter-spacing:.07em; color:var(--muted); white-space:nowrap; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:8px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.t-chip:hover{color:var(--accent); border-color:var(--accent);}
+
+.t-err{
+  display:none; margin-top:16px; font:600 .72rem/1.6 var(--f-mono); color:var(--amber);
+  border:1px dashed var(--amber); border-radius:10px; padding:11px 13px;
+}
+.t-err.show{display:block;}
+
+.t-results{
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px;
+  padding:20px 20px 16px; position:sticky; top:calc(var(--navh) + 18px);
+}
+.res-head{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:2px 2px 14px; border-bottom:1px dashed var(--edge-strong);}
+.res-head .rl{font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint);}
+
+.t-copy{
+  display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  font:700 .6rem var(--f-mono); letter-spacing:.1em; color:var(--muted);
+  border:1px solid var(--edge-strong); background:var(--panel); border-radius:8px; padding:8px 11px;
+  transition:color .25s, border-color .25s;
+}
+.t-copy svg{width:12px; height:12px;}
+.t-copy:hover, .t-copy.done{color:var(--accent); border-color:var(--accent);}
+
+.res-hero{padding:18px 2px 14px;}
+.res-hero .rl{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);}
+.res-hero .rv{display:block; font:700 clamp(1.9rem, 4.5vw, 2.5rem)/1.05 var(--f-mono); color:var(--accent); margin-top:8px; letter-spacing:-.02em; word-break:break-word;}
+.res-hero .rv sup{font-size:.55em;}
+.res-hero .rs{display:block; font:600 .76rem/1.6 var(--f-mono); color:var(--muted); margin-top:7px; word-break:break-word;}
+.res-hero .rs sup{font-size:.6em;}
+.res-heroes{display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:16px 0 8px;}
+.res-heroes .res-hero{padding:0;}
+
+.res-row{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:11px 2px; border-top:1px dashed var(--edge);}
+.res-row .rk{font:.82rem var(--f-sans); color:var(--muted);}
+.res-row .rvv{font:700 .84rem var(--f-mono); color:var(--ink); text-align:right; word-break:break-word;}
+.res-row .rvv small{display:block; font:600 .64rem/1.5 var(--f-mono); color:var(--faint); margin-top:3px;}
+.res-row .rvv sup, .res-formula sup{font-size:.6em;}
+
+.res-formula{
+  margin:14px 2px 4px; padding:12px 14px; border:1px dashed var(--edge-strong); border-radius:10px;
+  font:600 .72rem/1.8 var(--f-mono); color:var(--muted); overflow-x:auto; white-space:nowrap;
+}
+.res-formula b{color:var(--accent);}
+
+.res-note{
+  margin:12px 2px 0; padding:9px 12px; border:1px dashed var(--edge-strong); border-radius:8px;
+  font:600 .68rem/1.6 var(--f-mono); letter-spacing:.02em; color:var(--muted);
+}
+
+.t-wait{
+  margin:14px 2px 6px; padding:30px 16px; border:1px dashed var(--edge); border-radius:10px;
+  font:600 .7rem var(--f-mono); letter-spacing:.08em; color:var(--faint); text-align:center;
+}
+
+.t-seg{display:flex; border:1px solid var(--edge-strong); border-radius:10px; overflow:hidden; margin-bottom:20px;}
+.t-seg button{
+  flex:1; padding:11px 10px; background:none; border:none; cursor:pointer;
+  font:600 .78rem/1.2 var(--f-sans); color:var(--muted); transition:background .25s, color .25s;
+}
+.t-seg button + button{border-left:1px solid var(--edge-strong);}
+.t-seg button.active{background:var(--accent); color:var(--accent-ink); font-weight:700;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
+}
+.fx .formula sup{font-size:.6em;}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-side{position:sticky; top:calc(var(--navh) + 24px);}
+.faq-side h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.faq-side p{color:var(--muted); max-width:38ch;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .tool-grid{grid-template-columns:1fr; gap:24px;}
+  .t-results{position:static;}
+  .tpanel{padding:22px 18px 26px;}
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+  .faq-side{position:static;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .res-heroes{grid-template-columns:1fr; gap:10px;}
+  .ttab{padding:15px 13px; font-size:.76rem;}
+  .t-num input{padding:12px 52px 12px 14px; font-size:.98rem;}
+}
+@media (max-width:520px){
+  .t-duo .t-select{width:92px;}
+  .t-duo .t-select select{padding:13px 28px 13px 9px; font-size:.68rem;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · PHYSICS</p>
+    <h1>Work Calculator</h1>
+    <p class="lede">Force × distance, the work-energy theorem, lifting work and power — worked out instantly, with the formula and the substituted numbers shown right beside every answer.</p>
+    <span class="updated"><i></i>4 MODES · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE CALCULATOR</span>
+      <h2>Four modes, zero guesswork.</h2>
+      <p>Pick a tab and type your values — everything recalculates live as you type, and every result shows the formula and the numbers behind it.</p>
+    </div>
+
+    <div class="tool-shell">
+
+      <div class="tool-tabs" role="tablist" aria-label="Work calculator modes">
+        <button class="ttab active" id="tab-fd" role="tab" aria-selected="true"  data-tab="fd" type="button"><span class="mono">01</span>Force &amp; distance</button>
+        <button class="ttab" id="tab-ke" role="tab" aria-selected="false" data-tab="ke" type="button"><span class="mono">02</span>Work-energy</button>
+        <button class="ttab" id="tab-li" role="tab" aria-selected="false" data-tab="li" type="button"><span class="mono">03</span>Lifting</button>
+        <button class="ttab" id="tab-pw" role="tab" aria-selected="false" data-tab="pw" type="button"><span class="mono">04</span>Power &amp; time</button>
+      </div>
+
+      <!-- ========== PANEL 1 · FORCE & DISTANCE ========== -->
+      <div class="tpanel active" id="panel-fd" role="tabpanel" aria-labelledby="tab-fd">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="fd-f">Force (F)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="fd-f" value="150" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="fd-f-u" aria-label="Force unit">
+                    <option value="N" selected>N</option>
+                    <option value="kN">kN</option>
+                    <option value="lbf">lbf</option>
+                    <option value="kgf">kgf</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The push or pull — 150 N slides a heavy box, about 1 N lifts a small apple.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="fd-d">Displacement (d)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="fd-d" value="8" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="fd-d-u" aria-label="Distance unit">
+                    <option value="m" selected>m</option>
+                    <option value="cm">cm</option>
+                    <option value="mm">mm</option>
+                    <option value="km">km</option>
+                    <option value="ft">ft</option>
+                    <option value="in">in</option>
+                    <option value="yd">yd</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">How far the object moves while the force acts — 8 m of floor, 2 m of ramp.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="fd-a">Angle between force &amp; motion (θ)</label>
+              <div class="t-num">
+                <input type="number" id="fd-a" value="0" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">DEG</span>
+              </div>
+              <p class="hint">0° pushes straight along the motion · 90° is sideways (zero work) · 180° pushes against it (negative work).</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-f="150" data-fu="N" data-d="8" data-du="m" data-a="0">BOX · 150 N × 8 M</button>
+                <button type="button" class="t-chip" data-f="200" data-fu="N" data-d="10" data-du="m" data-a="30">SLED · 200 N · 30°</button>
+                <button type="button" class="t-chip" data-f="80" data-fu="N" data-d="20" data-du="m" data-a="90">CARRY · 90° = 0 J</button>
+                <button type="button" class="t-chip" data-f="50" data-fu="N" data-d="4" data-du="m" data-a="180">DRAG · 180° = NEG.</button>
+                <button type="button" class="t-chip" data-f="40" data-fu="lbf" data-d="50" data-du="ft" data-a="0">40 LBF × 50 FT</button>
+              </div>
+            </div>
+
+            <p class="t-err" id="fd-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="fd-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="fd-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 2 · WORK-ENERGY THEOREM ========== -->
+      <div class="tpanel" id="panel-ke" role="tabpanel" aria-labelledby="tab-ke">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="ke-m">Mass (m)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="ke-m" value="1200" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="ke-m-u" aria-label="Mass unit">
+                    <option value="kg" selected>kg</option>
+                    <option value="g">g</option>
+                    <option value="lb">lb</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The object being pushed or braked — a small car is about 1,200 kg.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="ke-v1">Initial speed (v₁)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="ke-v1" value="0" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="ke-v1-u" aria-label="Initial speed unit">
+                    <option value="m/s" selected>m/s</option>
+                    <option value="km/h">km/h</option>
+                    <option value="mph">mph</option>
+                    <option value="ft/s">ft/s</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">Speed before the push — 0 if the object starts at rest.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="ke-v2">Final speed (v₂)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="ke-v2" value="20" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="ke-v2-u" aria-label="Final speed unit">
+                    <option value="m/s" selected>m/s</option>
+                    <option value="km/h">km/h</option>
+                    <option value="mph">mph</option>
+                    <option value="ft/s">ft/s</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">Speed after it — bigger than v₁ means positive work, smaller means braking.</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-m="1200" data-mu="kg" data-v1="0" data-v1u="m/s" data-v2="20" data-v2u="m/s">CAR · 1200 KG · 0 → 20 M/S</button>
+                <button type="button" class="t-chip" data-m="0.145" data-mu="kg" data-v1="0" data-v1u="m/s" data-v2="40" data-v2u="m/s">BASEBALL · 0.145 KG → 40 M/S</button>
+                <button type="button" class="t-chip" data-m="1500" data-mu="kg" data-v1="30" data-v1u="m/s" data-v2="0" data-v2u="m/s">BRAKING · 1500 KG · 30 → 0</button>
+                <button type="button" class="t-chip" data-m="85" data-mu="kg" data-v1="5" data-v1u="m/s" data-v2="10" data-v2u="m/s">BIKE · 85 KG · 5 → 10 M/S</button>
+              </div>
+            </div>
+
+            <p class="t-err" id="ke-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="ke-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="ke-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 3 · LIFTING WORK (mgh) ========== -->
+      <div class="tpanel" id="panel-li" role="tabpanel" aria-labelledby="tab-li">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="li-m">Mass (m)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="li-m" value="10" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="li-m-u" aria-label="Mass unit">
+                    <option value="kg" selected>kg</option>
+                    <option value="g">g</option>
+                    <option value="lb">lb</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">What you’re lifting — 10 kg is about a full bucket of water.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="li-h">Height lifted (h)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="li-h" value="2" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="li-h-u" aria-label="Height unit">
+                    <option value="m" selected>m</option>
+                    <option value="cm">cm</option>
+                    <option value="ft">ft</option>
+                    <option value="in">in</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The vertical distance raised — 2 m is a tall shelf, 3 m a flight of stairs.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="li-g">Gravity (g)</label>
+              <div class="t-select">
+                <select id="li-g">
+                  <option value="earth" selected>Earth — 9.81 m/s²</option>
+                  <option value="moon">Moon — 1.62 m/s²</option>
+                  <option value="mars">Mars — 3.71 m/s²</option>
+                  <option value="jupiter">Jupiter — 24.79 m/s²</option>
+                  <option value="custom">Custom…</option>
+                </select>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <p class="hint">Where the lifting happens — pick a world, or enter your own g.</p>
+            </div>
+
+            <div class="t-field" id="li-gc-wrap" hidden>
+              <label for="li-gc">Custom gravity (g)</label>
+              <div class="t-num">
+                <input type="number" id="li-gc" value="9.81" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">M/S²</span>
+              </div>
+              <p class="hint">Any positive value — 3.7 for Mars, or 12 for a stronger fictional world.</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-m="10" data-mu="kg" data-h="2" data-hu="m" data-g="earth">10 KG · 2 M · EARTH</button>
+                <button type="button" class="t-chip" data-m="70" data-mu="kg" data-h="3" data-hu="m" data-g="earth">PERSON · 70 KG · 3 M</button>
+                <button type="button" class="t-chip" data-m="10" data-mu="kg" data-h="2" data-hu="m" data-g="moon">10 KG · 2 M · MOON</button>
+                <button type="button" class="t-chip" data-m="10" data-mu="kg" data-h="2" data-hu="m" data-g="jupiter">10 KG · 2 M · JUPITER</button>
+              </div>
+            </div>
+
+            <p class="t-err" id="li-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="li-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="li-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 4 · POWER & TIME ========== -->
+      <div class="tpanel" id="panel-pw" role="tabpanel" aria-labelledby="tab-pw">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label id="pw-seg-label">Solve for</label>
+              <div class="t-seg" id="pw-seg" role="group" aria-labelledby="pw-seg-label">
+                <button type="button" class="active" data-mode="power" aria-pressed="true">Power</button>
+                <button type="button" data-mode="work" aria-pressed="false">Work</button>
+                <button type="button" data-mode="time" aria-pressed="false">Time</button>
+              </div>
+              <p class="hint">Pick what you want out — the other two become the inputs.</p>
+            </div>
+
+            <div class="t-field" id="pw-w-field">
+              <label for="pw-w">Work done (W)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="pw-w" value="2000" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="pw-w-u" aria-label="Work unit">
+                    <option value="J" selected>J</option>
+                    <option value="kJ">kJ</option>
+                    <option value="cal">cal</option>
+                    <option value="kcal">kcal</option>
+                    <option value="Wh">Wh</option>
+                    <option value="ft·lbf">ft·lbf</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">Energy in or out — 2,000 J lifts a 100 kg mass about 2 m.</p>
+            </div>
+
+            <div class="t-field" id="pw-t-field">
+              <label for="pw-t">Time (t)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="pw-t" value="10" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="pw-t-u" aria-label="Time unit">
+                    <option value="s" selected>s</option>
+                    <option value="min">min</option>
+                    <option value="h">h</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">How long the work takes, or how long the power runs.</p>
+            </div>
+
+            <div class="t-field" id="pw-p-field" hidden>
+              <label for="pw-p">Power (P)</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="pw-p" value="100" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="pw-p-u" aria-label="Power unit">
+                    <option value="W" selected>W</option>
+                    <option value="kW">kW</option>
+                    <option value="MW">MW</option>
+                    <option value="hp">hp</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The rate of transfer — 100 W is a bright old bulb, 2,000 W a kettle.</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-mode="power" data-w="2000" data-wu="J" data-t="10" data-tu="s">MOTOR · 2,000 J / 10 S</button>
+                <button type="button" class="t-chip" data-mode="work" data-p="2000" data-pu="W" data-t="3" data-tu="min">KETTLE · 2,000 W · 3 MIN</button>
+                <button type="button" class="t-chip" data-mode="time" data-w="450" data-wu="kJ" data-p="1500" data-pu="W">HEATER · 450 KJ / 1,500 W</button>
+                <button type="button" class="t-chip" data-mode="work" data-p="100" data-pu="W" data-t="1" data-tu="h">CYCLIST · 100 W · 1 H</button>
+              </div>
+            </div>
+
+            <p class="t-err" id="pw-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="pw-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="pw-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE IT</span>
+      <h2>Question to answer in under a minute.</h2>
+      <p>A thirty-second tour, in case you like knowing exactly what will happen.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n">STEP 01</span>
+        <h3>Pick your mode</h3>
+        <p>Four tabs: force &amp; distance, work-energy, lifting, or power. Each one is a full calculator with its own examples.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 02</span>
+        <h3>Type what you know</h3>
+        <p>Enter values and choose units from the dropdowns — newtons or pound-force, metres or feet. Everything converts automatically.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 03</span>
+        <h3>Watch it solve live</h3>
+        <p>Results update as you type: the big answer, the formula with your numbers substituted in, and conversions to kJ, calories and watt-hours.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 04</span>
+        <h3>Copy or learn</h3>
+        <p>One click copies the full working. Impossible inputs get a friendly explanation instead of a wrong answer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULAS ============ -->
+<section class="sec" id="formulas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · THE FORMULAS</span>
+      <h2>Every mode, one line each.</h2>
+      <p>The four formulas this calculator runs on — plus two rearrangements you’ll meet in homework.</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>Work from force</h3>
+        <div class="formula">W = F · d · cos θ</div>
+        <p>Force × displacement × the cosine of the angle between them. A 150 N push along 8 m of floor does 1,200 J.</p>
+      </div>
+      <div class="fx">
+        <h3>Work-energy theorem</h3>
+        <div class="formula">W = ½m(v₂² − v₁²)</div>
+        <p>Net work equals the change in kinetic energy — speeding up is positive work, braking is negative.</p>
+      </div>
+      <div class="fx">
+        <h3>Lifting work</h3>
+        <div class="formula">W = m · g · h</div>
+        <p>Raising 10 kg by 2 m on Earth takes 10 × 9.81 × 2 ≈ 196 J — exactly the potential energy gained.</p>
+      </div>
+      <div class="fx">
+        <h3>Power</h3>
+        <div class="formula">P = W / t</div>
+        <p>Work per unit of time, in watts. Delivering 1,000 J in 10 s means 100 W of power.</p>
+      </div>
+      <div class="fx">
+        <h3>Solving for force</h3>
+        <div class="formula">F = W / (d · cos θ)</div>
+        <p>The rearrangement for when the work is known — say, putting 600 J into a 4 m push at 0°.</p>
+      </div>
+      <div class="fx">
+        <h3>The joule</h3>
+        <div class="formula">1 J = 1 N·m = 1 W·s</div>
+        <p>One joule is a one-newton push over one metre — roughly lifting an apple up to table height.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="faq-side">
+        <span class="sec-idx mono">04 · FAQ</span>
+        <h2>Work, minus the confusion.</h2>
+        <p>The questions that come up in every physics class, answered in plain language with the numbers to back them up.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What is the formula for work done?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Work equals force × displacement × the cosine of the angle between them: <code>W = F · d · cos θ</code>. Pushing a box with 150 N across 8 m of floor (force straight along the motion, θ = 0°) does <code>W = 150 × 8 × 1 = 1,200 J</code>. Whenever force is in newtons and distance in metres, work comes out in joules.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>When is work done equal to zero?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Three ways: the force is zero, the displacement is zero, or the force is perpendicular to the motion (θ = 90° or 270°, where <code>cos θ = 0</code>). The last one is the classic trap — carrying a heavy bag horizontally at constant speed does zero work on it, because the upward supporting force never acts along the horizontal motion.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why does the work formula include cos θ?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Only the component of the force that points along the displacement does any work, and that component is <code>F · cos θ</code>. Pulling a sled with a rope angled 30° above the ground, only <code>cos 30° ≈ 0.866</code> of the pull moves the sled forward — the rest just lifts slightly. Enter the angle and the calculator applies the cosine automatically.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can work be negative?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Yes. Whenever the force has a component opposing the motion (90° &lt; θ &lt; 270°), cos θ is negative and so is the work. Friction acting on a sliding box does negative work, and so do brakes — they remove kinetic energy instead of adding it. Negative work is how moving things slow down.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the work-energy theorem?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>The total (net) work done on an object equals its change in kinetic energy: <code>W = ½m·v₂² − ½m·v₁²</code>. Speeding a 1,200 kg car from rest to 20 m/s takes <code>½ × 1200 × 20² = 240,000 J</code> of work; braking it back to rest gives net work of −240,000 J.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I calculate the work done against gravity?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Use <code>W = m · g · h</code> — mass × gravitational acceleration × height. Lifting 10 kg through 2 m on Earth takes <code>10 × 9.81 × 2 ≈ 196 J</code>, exactly the gravitational potential energy gained. Lowering the same mass gives the same amount back as negative work.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between work and power?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Work is an <em>amount</em> of energy transferred, measured in joules; power is how <em>fast</em> it is transferred, measured in watts (<code>1 W = 1 J per second</code>). Climbing the same staircase does the same work whether you sprint or stroll — only the power output differs. The calculator’s Power mode converts between work, power and time.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What units does work use, and how do I convert them?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>The SI unit is the joule: <code>1 J = 1 N·m</code>. Common conversions: <code>1 kJ = 1,000 J</code>, <code>1 cal = 4.184 J</code>, <code>1 kcal = 4,184 J</code>, <code>1 Wh = 3,600 J</code>, <code>1 ft·lbf ≈ 1.356 J</code>. The calculator converts every result into these units automatically.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this calculator free, and is my data sent anywhere?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>It is completely free and runs entirely in your browser — nothing you type is uploaded, logged or sent to a server. No account, no sign-up, no limits.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ SUBSCRIBE STRIP (upper footer — unchanged) ============ -->
+<section class="pre-footer">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">THE NEWSLETTER</span>
+      <h2>New tools and posts, <span class="hl">straight to your inbox.</span></h2>
+      <p>No spam, no noise — just the best of StudyWithSTEM, once in a while. Unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="pf-form" novalidate>
+      <input type="text" name="name" placeholder="Your name" aria-label="Your name" autocomplete="name">
+      <input type="email" name="email" placeholder="you@email.com" aria-label="Your email" autocomplete="email" required>
+      <label class="pf-check">
+        <input type="checkbox" required>
+        <span>I agree to receive the newsletter and accept the <a href="/page/privacy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER — unchanged ============ -->
+<footer>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand" aria-label="StudyWithSTEM home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Free calculators, converters and study tools for STEM students — built to be fast, honest and ad-free.</p>
+        <div class="foot-terminal"><span class="p">$</span> study --with-stem <span class="cursor"></span></div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/tools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>All tools</a></li>
+          <li><a href="/tools//"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/posts/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Posts</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/page/contact/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Contact</a></li>
+          <li><a href="/page/subscription/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Subscription</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Membership</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>X (Twitter)</a></li>
+          <li><a href="mailto:studywithstem@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Email</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span><b>π</b> = 3.14159&nbsp;·&nbsp;</span><span><b>e</b> = 2.71828&nbsp;·&nbsp;</span><span><b>φ</b> = 1.61803&nbsp;·&nbsp;</span><span><b>√2</b> = 1.41421&nbsp;·&nbsp;</span><span><b>c</b> = 299,792,458 m/s&nbsp;·&nbsp;</span><span><b>g</b> = 9.81 m/s²&nbsp;·&nbsp;</span><span><b>G</b> = 6.674×10⁻¹¹&nbsp;·&nbsp;</span><span><b>h</b> = 6.626×10⁻³⁴ J·s&nbsp;·&nbsp;</span><span><b>Nₐ</b> = 6.022×10²³ mol⁻¹&nbsp;·&nbsp;</span><span><b>1 eV</b> = 1.602×10⁻¹⁹ J&nbsp;·&nbsp;</span>
+        <span><b>π</b> = 3.14159&nbsp;·&nbsp;</span><span><b>e</b> = 2.71828&nbsp;·&nbsp;</span><span><b>φ</b> = 1.61803&nbsp;·&nbsp;</span><span><b>√2</b> = 1.41421&nbsp;·&nbsp;</span><span><b>c</b> = 299,792,458 m/s&nbsp;·&nbsp;</span><span><b>g</b> = 9.81 m/s²&nbsp;·&nbsp;</span><span><b>G</b> = 6.674×10⁻¹¹&nbsp;·&nbsp;</span><span><b>h</b> = 6.626×10⁻³⁴ J·s&nbsp;·&nbsp;</span><span><b>Nₐ</b> = 6.022×10²³ mol⁻¹&nbsp;·&nbsp;</span><span><b>1 eV</b> = 1.602×10⁻¹⁹ J&nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="foot-mid">
+      <span class="foot-meta">© 2025 STUDYWITHSTEM · BUILT FOR CURIOUS MINDS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= PAGE CHROME (nav, menu, theme, footer) ================= */
+(function(){
+  var nav = document.getElementById('nav');
+  var prog = document.getElementById('navProg');
+  var lastY = window.pageYOffset || 0;
+
+  function onScroll(){
+    var y = window.pageYOffset || 0;
+    nav.classList.toggle('scrolled', y > 8);
+    if (y > lastY + 4 && y > 140 && !document.body.classList.contains('menu-open')) nav.classList.add('hide');
+    else if (y < lastY - 4 || y <= 140) nav.classList.remove('hide');
+    lastY = y;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+    var bar = prog.parentElement.clientWidth || 0;
+    prog.style.transform = 'translateX(' + (-90 + p * (bar + 10)) + 'px)';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+})();
+
+/* mobile menu */
+(function(){
+  var burger = document.getElementById('burger');
+  var body = document.body;
+  burger.addEventListener('click', function(){
+    var open = body.classList.toggle('menu-open');
+    body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  document.querySelectorAll('.mmenu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      body.classList.remove('menu-open', 'locked');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+/* theme toggle */
+(function(){
+  var btn = document.getElementById('themeToggle');
+  function setPressed(){ btn.setAttribute('aria-pressed', document.documentElement.dataset.theme === 'light' ? 'true' : 'false'); }
+  setPressed();
+  btn.addEventListener('click', function(){
+    var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.body.classList.add('theme-anim');
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('sws-theme', next); } catch(e){}
+    setPressed();
+    setTimeout(function(){ document.body.classList.remove('theme-anim'); }, 600);
+  });
+})();
+
+/* footer reveal + starfield + back-to-top + subscribe */
+(function(){
+  var footer = document.querySelector('footer');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(en){ if (en.isIntersecting){ footer.classList.add('in'); obs.disconnect(); } });
+    }, { threshold: 0.12 });
+    io.observe(footer);
+  } else { footer.classList.add('in'); }
+
+  var cvs = document.getElementById('starfield');
+  if (cvs && cvs.getContext){
+    var ctx = cvs.getContext('2d');
+    var stars = [], W = 0, H = 0;
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function resize(){
+      var r = cvs.getBoundingClientRect();
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = r.width; H = r.height;
+      cvs.width = Math.max(1, Math.round(W * dpr));
+      cvs.height = Math.max(1, Math.round(H * dpr));
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = Math.min(170, Math.max(40, Math.round(W * H / 9000)));
+      stars = [];
+      for (var i = 0; i < n; i++){
+        stars.push({
+          x: Math.random() * W, y: Math.random() * H,
+          r: Math.random() * 1.3 + 0.3,
+          p: Math.random() * Math.PI * 2,
+          s: 0.4 + Math.random() * 1.3
+        });
+      }
+      if (reduced) draw(0);
+    }
+    function draw(t){
+      var rgb = document.documentElement.dataset.theme === 'dark' ? '241,237,226' : '11,37,69';
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < stars.length; i++){
+        var s = stars[i];
+        var a = 0.22 + 0.5 * (0.5 + 0.5 * Math.sin(t / 1000 * s.s + s.p));
+        ctx.fillStyle = 'rgba(' + rgb + ',' + a.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, 6.28318);
+        ctx.fill();
+      }
+      if (!reduced) requestAnimationFrame(draw);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    if (!reduced) requestAnimationFrame(draw);
+  }
+
+  document.getElementById('backTop').addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  var pf = document.getElementById('pf-form');
+  if (pf){
+    var pfEmail = pf.querySelector('input[type="email"]');
+    var pfBox = pf.querySelector('input[type="checkbox"]');
+    pf.addEventListener('submit', function(e){
+      e.preventDefault();
+      var okE = pfEmail.value.trim().length > 3 && pfEmail.value.indexOf('@') > 0;
+      var okC = pfBox.checked;
+      pfEmail.style.borderColor = okE ? '' : 'var(--amber)';
+      pfBox.parentElement.style.color = okC ? '' : 'var(--amber)';
+      if (okE && okC) pf.querySelector('.btn-ticket span').textContent = 'You’re in ✓';
+    });
+    pfEmail.addEventListener('input', function(){ pfEmail.style.borderColor = ''; });
+    pfBox.addEventListener('change', function(){ pfBox.parentElement.style.color = ''; });
+  }
+})();
+</script>
+
+<script>
+/* ================= WORK CALCULATOR ================= */
+(function(){
+  'use strict';
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  /* unit tables — everything converts to SI */
+  var FORCE  = { 'N':1, 'kN':1000, 'lbf':4.4482216153, 'kgf':9.80665 };
+  var DIST   = { 'm':1, 'cm':0.01, 'mm':0.001, 'km':1000, 'ft':0.3048, 'in':0.0254, 'yd':0.9144 };
+  var MASS   = { 'kg':1, 'g':0.001, 'lb':0.45359237 };
+  var SPEED  = { 'm/s':1, 'km/h':1/3.6, 'mph':0.44704, 'ft/s':0.3048 };
+  var ENERGY = { 'J':1, 'kJ':1000, 'cal':4.184, 'kcal':4184, 'Wh':3600, 'ft·lbf':1.3558179483 };
+  var POWERU = { 'W':1, 'kW':1000, 'MW':1000000, 'hp':745.699872 };
+  var TIMEU  = { 's':1, 'min':60, 'h':3600 };
+  var GRAV   = { 'earth':9.81, 'moon':1.62, 'mars':3.71, 'jupiter':24.79 };
+  var FT_LBF = 1.3558179483;
+
+  /* formatting */
+  function fmt(x, sig){
+    sig = sig || 6;
+    if (x === null || x === undefined || !isFinite(x)) return '—';
+    if (x === 0) return '0';
+    var a = Math.abs(x);
+    if (a >= 1e9 || a < 1e-4) return x.toExponential(3);
+    return x.toLocaleString('en-US', { maximumSignificantDigits: sig });
+  }
+  function num(el){
+    var v = el.value.trim();
+    if (v === '') return null;
+    var n = Number(v);
+    return isFinite(n) ? n : NaN;
+  }
+
+  /* result builders */
+  function hero(l, v, s){ return '<div class="res-hero"><span class="rl">' + l + '</span><span class="rv">' + v + '</span><span class="rs">' + s + '</span></div>'; }
+  function row(k, v, note){ return '<div class="res-row"><span class="rk">' + k + '</span><span class="rvv">' + v + (note ? '<small>' + note + '</small>' : '') + '</span></div>'; }
+  function formula(h){ return '<div class="res-formula">' + h + '</div>'; }
+  function noteBox(t){ return '<div class="res-note">' + t + '</div>'; }
+  function waitBox(){ return '<div class="t-wait">WAITING FOR INPUTS — TYPE ABOVE TO SEE RESULTS</div>'; }
+  function fail(errEl, outEl, msg){ errEl.textContent = msg; errEl.classList.add('show'); outEl.innerHTML = waitBox(); }
+
+  var copies = {};
+
+  /* ---------- tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.ttab'));
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){
+        var on = (x === t);
+        x.classList.toggle('active', on);
+        x.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      document.querySelectorAll('.tpanel').forEach(function(p){
+        p.classList.toggle('active', p.id === 'panel-' + t.dataset.tab);
+      });
+    });
+  });
+
+  /* ---------- panel 1 · force & distance (W = F·d·cosθ) ---------- */
+  function calcFD(){
+    var errEl = $('fd-err'), out = $('fd-out');
+    errEl.classList.remove('show');
+    var F = num($('fd-f')), D = num($('fd-d')), A = num($('fd-a'));
+    if (F === null || D === null || A === null){ out.innerHTML = waitBox(); return; }
+    if (isNaN(F) || isNaN(D) || isNaN(A)){ fail(errEl, out, 'One of those values isn’t a number — check what you typed.'); return; }
+    if (F < 0){ fail(errEl, out, 'Force can’t be negative here — enter its size, and let the angle set the direction.'); return; }
+    if (D < 0){ fail(errEl, out, 'Distance can’t be negative — the angle handles direction, so enter distance as a size.'); return; }
+
+    var Fsi = F * FORCE[$('fd-f-u').value];
+    var Dsi = D * DIST[$('fd-d-u').value];
+    var th = A % 360; if (th < 0) th += 360;
+    var c = Math.cos(th * Math.PI / 180);
+    if (Math.abs(c) < 1e-12) c = 0;
+    else if (Math.abs(c - 1) < 1e-12) c = 1;
+    else if (Math.abs(c + 1) < 1e-12) c = -1;
+    var W = Fsi * Dsi * c;
+
+    var extra = '';
+    if (c === 0) extra = noteBox('θ = 90° or 270° → the force is perpendicular to the motion, so it does zero work.');
+    else if (c < 0) extra = noteBox('90° &lt; θ &lt; 270° → the force opposes the motion, so the work is negative.');
+
+    out.innerHTML =
+      hero('Work done', fmt(W) + ' J', 'W = ' + fmt(Fsi) + ' N × ' + fmt(Dsi) + ' m × cos ' + fmt(th) + '°') +
+      extra +
+      row('Force along the motion', fmt(Fsi * c) + ' N', 'F · cos θ') +
+      row('In kilojoules', fmt(W / 1000) + ' kJ') +
+      row('In calories', fmt(W / 4.184) + ' cal') +
+      row('In watt-hours', fmt(W / 3600) + ' Wh') +
+      row('In foot-pounds', fmt(W / FT_LBF) + ' ft·lbf') +
+      formula('<b>W</b> = F · d · cos θ — only the force component along the motion does work');
+
+    copies.fd = 'Work done = ' + fmt(W) + ' J  (' + fmt(W / 1000) + ' kJ · ' + fmt(W / 4.184) + ' cal · ' + fmt(W / 3600) + ' Wh · ' + fmt(W / FT_LBF) + ' ft·lbf)\n' +
+      'W = F · d · cos θ = ' + fmt(Fsi) + ' N × ' + fmt(Dsi) + ' m × cos ' + fmt(th) + '°\n' +
+      '— StudyWithSTEM Work Calculator';
+  }
+
+  /* ---------- panel 2 · work-energy theorem (W = ΔKE) ---------- */
+  function calcKE(){
+    var errEl = $('ke-err'), out = $('ke-out');
+    errEl.classList.remove('show');
+    var M = num($('ke-m')), V1 = num($('ke-v1')), V2 = num($('ke-v2'));
+    if (M === null || V1 === null || V2 === null){ out.innerHTML = waitBox(); return; }
+    if (isNaN(M) || isNaN(V1) || isNaN(V2)){ fail(errEl, out, 'One of those values isn’t a number — check what you typed.'); return; }
+    if (M <= 0){ fail(errEl, out, 'Mass must be greater than zero — a massless object has no kinetic energy to change.'); return; }
+    if (V1 < 0 || V2 < 0){ fail(errEl, out, 'Enter speeds as non-negative numbers — which speed is larger decides the sign of the work.'); return; }
+
+    var m  = M  * MASS[$('ke-m-u').value];
+    var v1 = V1 * SPEED[$('ke-v1-u').value];
+    var v2 = V2 * SPEED[$('ke-v2-u').value];
+    var ke1 = 0.5 * m * v1 * v1;
+    var ke2 = 0.5 * m * v2 * v2;
+    var W = ke2 - ke1;
+
+    var extra;
+    if (W > 0) extra = noteBox('Speeding up — positive net work adds kinetic energy.');
+    else if (W < 0) extra = noteBox('Slowing down — negative net work removes kinetic energy.');
+    else extra = noteBox('Speed unchanged — the net work done is zero.');
+
+    out.innerHTML =
+      hero('Net work', fmt(W) + ' J', 'W = ½ × ' + fmt(m) + ' kg × (' + fmt(v2) + '² − ' + fmt(v1) + '²) m²/s²') +
+      extra +
+      row('Initial kinetic energy', fmt(ke1) + ' J', '½ · m · v₁²') +
+      row('Final kinetic energy', fmt(ke2) + ' J', '½ · m · v₂²') +
+      row('Change in kinetic energy', fmt(ke2 - ke1) + ' J', 'ΔKE — this equals the net work') +
+      row('In kilojoules', fmt(W / 1000) + ' kJ') +
+      row('In food calories', fmt(W / 4184) + ' kcal') +
+      formula('<b>W</b> = ΔKE = ½·m·v₂² − ½·m·v₁² — the work-energy theorem');
+
+    copies.ke = 'Net work = ' + fmt(W) + ' J\n' +
+      'W = ½·m·(v₂² − v₁²) = ½ × ' + fmt(m) + ' kg × (' + fmt(v2) + '² − ' + fmt(v1) + '²)\n' +
+      'KE₁ = ' + fmt(ke1) + ' J · KE₂ = ' + fmt(ke2) + ' J\n' +
+      '— StudyWithSTEM Work Calculator';
+  }
+
+  /* ---------- panel 3 · lifting work (W = mgh) ---------- */
+  function calcLI(){
+    var errEl = $('li-err'), out = $('li-out');
+    errEl.classList.remove('show');
+    var gSel = $('li-g').value;
+    var g = null;
+    if (gSel === 'custom'){
+      g = num($('li-gc'));
+      if (g === null){ out.innerHTML = waitBox(); return; }
+      if (isNaN(g)){ fail(errEl, out, 'Gravity isn’t a number — re-check the custom value.'); return; }
+      if (g <= 0){ fail(errEl, out, 'Gravity must be a positive number in m/s² — zero or negative gravity doesn’t pull anything down.'); return; }
+    } else {
+      g = GRAV[gSel];
+    }
+    var M = num($('li-m')), H = num($('li-h'));
+    if (M === null || H === null){ out.innerHTML = waitBox(); return; }
+    if (isNaN(M) || isNaN(H)){ fail(errEl, out, 'One of those values isn’t a number — check what you typed.'); return; }
+    if (M <= 0){ fail(errEl, out, 'Mass must be greater than zero.'); return; }
+    if (H < 0){ fail(errEl, out, 'Height can’t be negative for lifting — lowering the mass would give energy back instead.'); return; }
+
+    var m = M * MASS[$('li-m-u').value];
+    var h = H * DIST[$('li-h-u').value];
+    var wgt = m * g;
+    var W = wgt * h;
+
+    var extra = (h === 0) ? noteBox('Height is zero — nothing is raised, so no work is done against gravity.') : '';
+
+    out.innerHTML =
+      hero('Lifting work', fmt(W) + ' J', 'W = ' + fmt(m) + ' kg × ' + fmt(g) + ' m/s² × ' + fmt(h) + ' m') +
+      extra +
+      row('Weight — the force of gravity', fmt(wgt) + ' N', 'm · g') +
+      row('In kilojoules', fmt(W / 1000) + ' kJ') +
+      row('In food calories', fmt(W / 4184) + ' kcal') +
+      row('In watt-hours', fmt(W / 3600) + ' Wh') +
+      row('In foot-pounds', fmt(W / FT_LBF) + ' ft·lbf') +
+      formula('<b>W</b> = m · g · h — equals the gravitational potential energy gained');
+
+    copies.li = 'Lifting work = ' + fmt(W) + ' J\n' +
+      'W = m · g · h = ' + fmt(m) + ' kg × ' + fmt(g) + ' m/s² × ' + fmt(h) + ' m\n' +
+      'Weight = ' + fmt(wgt) + ' N\n' +
+      '— StudyWithSTEM Work Calculator';
+  }
+
+  /* ---------- panel 4 · power (solve for power, work or time) ---------- */
+  var pwMode = 'power';
+
+  function calcPW(){
+    var errEl = $('pw-err'), out = $('pw-out');
+    errEl.classList.remove('show');
+
+    if (pwMode === 'power'){
+      var Wv = num($('pw-w')), Tv = num($('pw-t'));
+      if (Wv === null || Tv === null){ out.innerHTML = waitBox(); return; }
+      if (isNaN(Wv) || isNaN(Tv)){ fail(errEl, out, 'One of those values isn’t a number — check what you typed.'); return; }
+      if (Tv <= 0){ fail(errEl, out, 'Time must be greater than zero — power is work divided by time.'); return; }
+      var Wsi = Wv * ENERGY[$('pw-w-u').value];
+      var Tsi = Tv * TIMEU[$('pw-t-u').value];
+      var P = Wsi / Tsi;
+      out.innerHTML =
+        hero('Power', fmt(P) + ' W', 'P = ' + fmt(Wsi) + ' J ÷ ' + fmt(Tsi) + ' s') +
+        row('In kilowatts', fmt(P / 1000) + ' kW') +
+        row('In horsepower', fmt(P / 745.699872) + ' hp') +
+        row('Work delivered per minute', fmt(P * 60) + ' J/min') +
+        formula('<b>P</b> = W ÷ t — one watt is one joule per second');
+      copies.pw = 'Power = ' + fmt(P) + ' W  (' + fmt(P / 1000) + ' kW · ' + fmt(P / 745.699872) + ' hp)\n' +
+        'P = W ÷ t = ' + fmt(Wsi) + ' J ÷ ' + fmt(Tsi) + ' s\n— StudyWithSTEM Work Calculator';
+
+    } else if (pwMode === 'work'){
+      var Pv = num($('pw-p')), Tv2 = num($('pw-t'));
+      if (Pv === null || Tv2 === null){ out.innerHTML = waitBox(); return; }
+      if (isNaN(Pv) || isNaN(Tv2)){ fail(errEl, out, 'One of those values isn’t a number — check what you typed.'); return; }
+      if (Tv2 < 0){ fail(errEl, out, 'Time can’t be negative.'); return; }
+      var Psi = Pv * POWERU[$('pw-p-u').value];
+      var Tsi2 = Tv2 * TIMEU[$('pw-t-u').value];
+      var Wout = Psi * Tsi2;
+      out.innerHTML =
+        hero('Work done', fmt(Wout) + ' J', 'W = ' + fmt(Psi) + ' W × ' + fmt(Tsi2) + ' s') +
+        row('In kilojoules', fmt(Wout / 1000) + ' kJ') +
+        row('In watt-hours', fmt(Wout / 3600) + ' Wh') +
+        row('In food calories', fmt(Wout / 4184) + ' kcal') +
+        row('In foot-pounds', fmt(Wout / FT_LBF) + ' ft·lbf') +
+        formula('<b>W</b> = P × t — power sustained over time transfers this much energy');
+      copies.pw = 'Work = ' + fmt(Wout) + ' J\n' +
+        'W = P × t = ' + fmt(Psi) + ' W × ' + fmt(Tsi2) + ' s\n— StudyWithSTEM Work Calculator';
+
+    } else {
+      var Wv2 = num($('pw-w')), Pv2 = num($('pw-p'));
+      if (Wv2 === null || Pv2 === null){ out.innerHTML = waitBox(); return; }
+      if (isNaN(Wv2) || isNaN(Pv2)){ fail(errEl, out, 'One of those values isn’t a number — check what you typed.'); return; }
+      var Wsi2 = Wv2 * ENERGY[$('pw-w-u').value];
+      var Psi2 = Pv2 * POWERU[$('pw-p-u').value];
+      if (Psi2 === 0){ fail(errEl, out, 'Power can’t be zero — with no power, the work is never delivered.'); return; }
+      var T = Wsi2 / Psi2;
+      if (T < 0){ fail(errEl, out, 'That would need negative time — work and power must have the same sign.'); return; }
+      var hv, hu;
+      if (T >= 5400){ hv = T / 3600; hu = 'h'; }
+      else if (T >= 90){ hv = T / 60; hu = 'min'; }
+      else { hv = T; hu = 's'; }
+      out.innerHTML =
+        hero('Time needed', fmt(hv) + ' ' + hu, 't = ' + fmt(Wsi2) + ' J ÷ ' + fmt(Psi2) + ' W') +
+        row('In seconds', fmt(T) + ' s') +
+        row('In minutes', fmt(T / 60) + ' min') +
+        row('In hours', fmt(T / 3600) + ' h') +
+        formula('<b>t</b> = W ÷ P — how long that power must run to deliver the work');
+      copies.pw = 'Time = ' + fmt(T) + ' s  (' + fmt(T / 60) + ' min · ' + fmt(T / 3600) + ' h)\n' +
+        't = W ÷ P = ' + fmt(Wsi2) + ' J ÷ ' + fmt(Psi2) + ' W\n— StudyWithSTEM Work Calculator';
+    }
+  }
+
+  function setPMode(mode){
+    pwMode = mode;
+    document.querySelectorAll('#pw-seg button').forEach(function(b){
+      var on = (b.dataset.mode === mode);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    $('pw-w-field').hidden = (mode === 'work');
+    $('pw-t-field').hidden = (mode === 'time');
+    $('pw-p-field').hidden = (mode === 'power');
+    calcPW();
+  }
+  document.querySelectorAll('#pw-seg button').forEach(function(b){
+    b.addEventListener('click', function(){ setPMode(b.dataset.mode); });
+  });
+
+  /* gravity select reveals the custom-g field */
+  $('li-g').addEventListener('change', function(){
+    $('li-gc-wrap').hidden = (this.value !== 'custom');
+  });
+
+  /* one-click example chips */
+  document.querySelectorAll('#panel-fd .t-chip').forEach(function(ch){
+    ch.addEventListener('click', function(){
+      var d = ch.dataset;
+      if (d.f !== undefined){ $('fd-f').value = d.f; $('fd-f-u').value = d.fu || 'N'; }
+      if (d.d !== undefined){ $('fd-d').value = d.d; $('fd-d-u').value = d.du || 'm'; }
+      if (d.a !== undefined){ $('fd-a').value = d.a; }
+      calcFD();
+    });
+  });
+  document.querySelectorAll('#panel-ke .t-chip').forEach(function(ch){
+    ch.addEventListener('click', function(){
+      var d = ch.dataset;
+      if (d.m !== undefined){ $('ke-m').value = d.m; $('ke-m-u').value = d.mu || 'kg'; }
+      if (d.v1 !== undefined){ $('ke-v1').value = d.v1; $('ke-v1-u').value = d.v1u || 'm/s'; }
+      if (d.v2 !== undefined){ $('ke-v2').value = d.v2; $('ke-v2-u').value = d.v2u || 'm/s'; }
+      calcKE();
+    });
+  });
+  document.querySelectorAll('#panel-li .t-chip').forEach(function(ch){
+    ch.addEventListener('click', function(){
+      var d = ch.dataset;
+      if (d.m !== undefined){ $('li-m').value = d.m; $('li-m-u').value = d.mu || 'kg'; }
+      if (d.h !== undefined){ $('li-h').value = d.h; $('li-h-u').value = d.hu || 'm'; }
+      if (d.g !== undefined){ $('li-g').value = d.g; $('li-gc-wrap').hidden = (d.g !== 'custom'); }
+      calcLI();
+    });
+  });
+  document.querySelectorAll('#panel-pw .t-chip').forEach(function(ch){
+    ch.addEventListener('click', function(){
+      var d = ch.dataset;
+      if (d.mode) setPMode(d.mode);
+      if (d.w !== undefined){ $('pw-w').value = d.w; $('pw-w-u').value = d.wu || 'J'; }
+      if (d.t !== undefined){ $('pw-t').value = d.t; $('pw-t-u').value = d.tu || 's'; }
+      if (d.p !== undefined){ $('pw-p').value = d.p; $('pw-p-u').value = d.pu || 'W'; }
+      calcPW();
+    });
+  });
+
+  /* live recalculation */
+  function live(ids, fn){
+    ids.forEach(function(id){
+      var el = $(id);
+      el.addEventListener('input', fn);
+      el.addEventListener('change', fn);
+    });
+  }
+  live(['fd-f','fd-f-u','fd-d','fd-d-u','fd-a'], calcFD);
+  live(['ke-m','ke-m-u','ke-v1','ke-v1-u','ke-v2','ke-v2-u'], calcKE);
+  live(['li-m','li-m-u','li-h','li-h-u','li-g','li-gc'], calcLI);
+  live(['pw-w','pw-w-u','pw-t','pw-t-u','pw-p','pw-p-u'], calcPW);
+
+  /* copy buttons (clipboard with fallback) */
+  function fallbackCopy(text, done){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch(e){}
+    document.body.removeChild(ta);
+  }
+  function wireCopy(btnId, key){
+    var btn = $(btnId);
+    btn.addEventListener('click', function(){
+      var text = copies[key];
+      if (!text) return;
+      var label = btn.querySelector('span');
+      function done(){
+        btn.classList.add('done');
+        label.textContent = 'COPIED';
+        setTimeout(function(){
+          btn.classList.remove('done');
+          label.textContent = 'COPY';
+        }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text, done); });
+      } else {
+        fallbackCopy(text, done);
+      }
+    });
+  }
+  wireCopy('fd-copy', 'fd');
+  wireCopy('ke-copy', 'ke');
+  wireCopy('li-copy', 'li');
+  wireCopy('pw-copy', 'pw');
+
+  /* first paint */
+  calcFD();
+  calcKE();
+  calcLI();
+  setPMode('power');
+})();
+</script>
+</body>
+</html>
