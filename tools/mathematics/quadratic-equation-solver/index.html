@@ -1,1 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
 
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Quadratic Equation Solver — Solve ax² + bx + c = 0 with the Quadratic Formula, Discriminant, Roots, Vertex &amp; Step-by-Step Solutions | StudyWithSTEM</title>
+<meta name="description" content="Free online quadratic equation solver with step-by-step solutions — enter a, b, c and get exact roots (rational, surd or complex), the discriminant, vertex, axis of symmetry, Vieta's sums and a live parabola graph. Works in your browser, no sign-up.">
+<meta name="keywords" content="quadratic equation solver, quadratic formula calculator, discriminant calculator, roots of quadratic equation, solve ax2+bx+c, vertex calculator, axis of symmetry calculator, complex roots calculator, imaginary roots, sum and product of roots, Vieta's formulas, parabola grapher, factoring quadratics, StudyWithSTEM tools">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/mathematics/quadratic-equation-solver/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Quadratic Equation Solver with Steps — Free Online Tool | StudyWithSTEM">
+<meta property="og:description" content="Enter a, b and c — get both roots in exact form (fractions, surds or complex conjugates), the discriminant verdict, vertex, axis of symmetry, Vieta's checks and a live parabola graph, with the quadratic formula written out line by line.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/mathematics/quadratic-equation-solver/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/quadratic-equation-solver.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="StudyWithSTEM Quadratic Equation Solver — free online tool with exact roots, discriminant and step-by-step quadratic formula">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Quadratic Equation Solver with Steps — Free Online Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Enter a, b and c — get both roots in exact form (fractions, surds or complex conjugates), the discriminant verdict, vertex, axis of symmetry, Vieta's checks and a live parabola graph.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/quadratic-equation-solver.jpg">
+<meta name="twitter:image:alt" content="StudyWithSTEM Quadratic Equation Solver — free online math tool">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Mathematics", "item": "https://studywithstem.github.io/tools/mathematics/" },
+    { "@type": "ListItem", "position": 4, "name": "Quadratic Equation Solver", "item": "https://studywithstem.github.io/tools/mathematics/quadratic-equation-solver/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Quadratic Equation Solver",
+  "url": "https://studywithstem.github.io/tools/mathematics/quadratic-equation-solver/",
+  "description": "Free online quadratic equation solver with step-by-step solutions: exact rational, surd and complex-conjugate roots, live discriminant interpretation, vertex, axis of symmetry, Vieta's formulas, factored form and an auto-fitted parabola graph.",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Calculator",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "StudyWithSTEM", "url": "https://studywithstem.github.io/" },
+  "featureList": [
+    "Solves ax² + bx + c = 0 live, as you type",
+    "Exact rational, surd and complex-conjugate roots — no rounding",
+    "Discriminant computed and interpreted on every keystroke",
+    "Vertex, axis of symmetry, y-intercept, Vieta's sum and product",
+    "Step-by-step quadratic formula work: substitution, surd simplification, gcd reduction",
+    "Factored form shown automatically when roots are rational",
+    "Live parabola graph with roots, vertex and axis marked",
+    "Handles a = 0 gracefully as a linear equation",
+    "Works offline after load; nothing leaves the page"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to use the StudyWithSTEM quadratic equation solver",
+  "totalTime": "PT1M",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Enter the coefficients", "text": "Type a, b and c into the three boxes of ax² + bx + c = 0. Negatives and decimals are welcome; the equation line above rewrites itself with proper signs." },
+    { "@type": "HowToStep", "position": 2, "name": "Watch the discriminant", "text": "The Δ = b² − 4ac row updates live. Its sign predicts the roots before any formula runs: two real, one repeated, or a complex pair." },
+    { "@type": "HowToStep", "position": 3, "name": "Read the exact roots", "text": "The big line shows the friendliest exact form — reduced fractions, simplified surds, or a conjugate pair with i. Decimals appear only as a reference row." },
+    { "@type": "HowToStep", "position": 4, "name": "Follow the written proof", "text": "The work panel writes every line: substitution into the quadratic formula, squares pulled out of the radical, the gcd divided through, and Vieta's checks at the end." },
+    { "@type": "HowToStep", "position": 5, "name": "Flip to the graph", "text": "The GRAPH tab draws the parabola around your roots — vertex, axis of symmetry and y-intercept marked, with an auto-fitted window." },
+    { "@type": "HowToStep", "position": 6, "name": "Use the example chips", "text": "One tap loads a factorable case, a surd case, a double root and a complex case — the four personalities of a quadratic." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the quadratic formula?", "acceptedAnswer": { "@type": "Answer", "text": "x = (−b ± √(b² − 4ac)) / 2a solves every quadratic ax² + bx + c = 0 with a ≠ 0. It comes from completing the square once, symbolically — so it works even when factoring fails. This tool substitutes your a, b, c and writes out each line of the result." } },
+    { "@type": "Question", "name": "What does the discriminant Δ = b² − 4ac tell me?", "acceptedAnswer": { "@type": "Answer", "text": "Its sign predicts the roots: Δ > 0 means two distinct real roots (the parabola crosses the x-axis twice); Δ = 0 means one repeated root with the vertex on the axis; Δ < 0 means no real roots — a complex conjugate pair. If Δ is positive and a perfect square (with integer coefficients), both roots are rational, which is when factoring is easy." } },
+    { "@type": "Question", "name": "How do I solve a quadratic by factoring?", "acceptedAnswer": { "@type": "Answer", "text": "Find two numbers that multiply to a·c and add to b. For x² − 5x + 6 the numbers are −2 and −3, giving (x − 2)(x − 3) and roots x = 2, 3. Factoring only works cleanly when the roots are rational; otherwise use the quadratic formula. The solver displays the factored form automatically whenever it exists." } },
+    { "@type": "Question", "name": "What are complex roots — what if the discriminant is negative?", "acceptedAnswer": { "@type": "Answer", "text": "Taking the square root of a negative number introduces i, where i² = −1. The roots then come as a conjugate pair p ± qi: for example x² + x + 1 = 0 gives x = −1/2 ± (√3/2)i. Geometrically, the parabola never touches the x-axis. The solver keeps the exact surd part of the imaginary component." } },
+    { "@type": "Question", "name": "How do I find the vertex and axis of symmetry?", "acceptedAnswer": { "@type": "Answer", "text": "The vertex is at h = −b/2a, k = −Δ/4a, and the axis of symmetry is the vertical line x = h. If a > 0 the parabola opens upward and the vertex is the minimum; if a < 0 it opens downward and the vertex is the maximum. The GRAPH tab marks all of these live." } },
+    { "@type": "Question", "name": "What happens if a = 0?", "acceptedAnswer": { "@type": "Answer", "text": "The equation is not quadratic — it becomes the line bx + c = 0 with root x = −c/b. The solver detects this, labels the equation linear and solves it anyway. If b is also 0, it tells you whether there is no solution or every x is a solution." } },
+    { "@type": "Question", "name": "What are Vieta's formulas?", "acceptedAnswer": { "@type": "Answer", "text": "Vieta's formulas state x₁ + x₂ = −b/a and x₁·x₂ = c/a. They hold exactly — even for surd and complex roots, where the radical parts cancel. They are a fast sanity check: x² − 5x + 6 must have roots summing to 5 and multiplying to 6, so 2 and 3." } },
+    { "@type": "Question", "name": "Is the tool free, exact and private?", "acceptedAnswer": { "@type": "Answer", "text": "Completely free, no sign-up. Integer coefficients are solved with integer arithmetic — fractions reduced, radicals simplified, no rounding anywhere. Decimal inputs are computed to 9 significant figures and marked with ≈. Everything runs locally in your browser, and the page keeps working offline once loaded." } }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+sub{font-size:.62em; line-height:0; vertical-align:-.16em;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+.btn-ticket.big{padding:15px 26px; font-size:.95rem;}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:0; background:var(--accent);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= TOOL HERO ================= */
+.tool-hero{position:relative; padding:84px 0 66px; border-bottom:1px solid var(--edge); overflow:hidden;}
+.tool-hero::before{
+  content:""; position:absolute; top:-140px; right:-140px; width:460px; height:460px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.15; pointer-events:none;
+}
+.tool-hero .wrap{position:relative; z-index:2;}
+.crumbs{display:flex; align-items:center; gap:10px; flex-wrap:wrap; font:600 .64rem var(--f-mono); letter-spacing:.12em; color:var(--faint); margin-bottom:26px;}
+.crumbs a{color:var(--muted); transition:color .25s;}
+.crumbs a:hover{color:var(--accent);}
+.crumbs b{color:var(--accent); font-weight:600;}
+.tool-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.tool-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.tool-hero h1{font:600 clamp(2.4rem, 5.6vw, 4rem)/1.05 var(--f-disp); letter-spacing:-.02em; margin:20px 0 16px; max-width:18ch;}
+.tool-hero h1 em{color:var(--accent);}
+.tool-hero .lede{max-width:64ch; color:var(--muted); font-size:1.04rem;}
+.hero-chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
+.chip{
+  display:inline-flex; align-items:center; gap:9px; font:700 .6rem var(--f-mono); letter-spacing:.14em;
+  color:var(--muted); border:1px solid var(--edge-strong); border-radius:999px; padding:8px 14px;
+}
+.chip i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+.hero-cta{display:flex; align-items:center; gap:24px; margin-top:32px; flex-wrap:wrap;}
+.hero-ghost{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--muted); text-decoration:underline; text-underline-offset:5px; transition:color .25s;}
+.hero-ghost:hover{color:var(--accent);}
+.tool-hero .updated{
+  margin-top:34px; display:inline-flex; align-items:center; gap:8px;
+  font:600 .64rem var(--f-mono); letter-spacing:.1em; color:var(--faint);
+  border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;
+}
+.tool-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+.hero-glyphs{position:absolute; inset:0; z-index:0; pointer-events:none; user-select:none;}
+.hero-glyphs span{
+  position:absolute; font-family:var(--f-disp); font-style:italic; font-weight:600;
+  color:var(--accent); opacity:.09; animation:glyphFloat 16s ease-in-out infinite;
+}
+@keyframes glyphFloat{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-26px) rotate(4deg);}}
+
+/* parabola tableau — the curve draws itself in at the hero's feet */
+.hero-parab{position:absolute; left:0; bottom:-8px; width:100%; height:150px; color:var(--accent); opacity:.3; pointer-events:none; z-index:0;}
+.hero-parab path{fill:none; stroke:currentColor; stroke-width:2.5; stroke-linecap:round; stroke-dasharray:1; stroke-dashoffset:1; animation:barDraw 1.5s cubic-bezier(.65,0,.2,1) .2s forwards;}
+.hero-parab path.p2{animation-delay:.55s; opacity:.5;}
+.hero-parab line{stroke:currentColor; stroke-width:1.4; stroke-dasharray:4 8; opacity:0; animation:fadeIn 1s ease 1.2s forwards;}
+.hero-parab circle{fill:var(--amber); opacity:0; animation:dotIn .6s ease 1.6s forwards;}
+@keyframes barDraw{to{stroke-dashoffset:0;}}
+@keyframes fadeIn{to{opacity:.7;}}
+@keyframes dotIn{to{opacity:.95;}}
+
+/* ================= SECTION SCAFFOLDING ================= */
+.sm-sec{padding:80px 0; border-top:1px solid var(--edge); scroll-margin-top:90px;}
+main > .sm-sec:first-of-type{border-top:none; padding-top:70px;}
+.sm-head{display:flex; align-items:baseline; gap:18px;}
+.sm-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent); flex:none;}
+.sm-head h2{font:600 clamp(1.7rem, 3.2vw, 2.45rem)/1.12 var(--f-disp); letter-spacing:-.012em;}
+.sm-lede{color:var(--muted); max-width:66ch; margin-top:14px; font-size:1.02rem;}
+
+/* reveal-on-scroll */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .75s ease var(--d,0s), transform .75s cubic-bezier(.2,.7,.3,1) var(--d,0s);}
+.reveal.in{opacity:1; transform:none;}
+
+/* ================= 01 — THE INSTRUMENT (quadratic solver) ================= */
+.tool-grid{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr); gap:22px; max-width:980px; margin:48px auto 0; align-items:start;}
+.calc{
+  position:relative; border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+.calc-top{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid var(--edge); flex-wrap:wrap;}
+.calc-modes{display:flex; gap:7px;}
+.cmode{
+  font:700 .62rem var(--f-mono); letter-spacing:.1em; color:var(--muted); cursor:pointer;
+  background:transparent; border:1px solid var(--edge-strong); border-radius:4px; padding:7px 11px;
+  transition:color .22s, border-color .22s, background .22s;
+}
+.cmode:hover{color:var(--accent); border-color:var(--accent);}
+.cmode.on{color:var(--accent-ink); background:var(--accent); border-color:var(--accent);}
+.calc-id{font:700 .6rem var(--f-mono); letter-spacing:.14em; color:var(--faint);}
+
+/* mode visibility */
+.calc[data-mode="solve"] .mode-graph{display:none;}
+.calc[data-mode="graph"] .mode-solve{display:none;}
+
+/* ---- input row:  [a] x² + [b] x + [c] = 0 ---- */
+.fc-row{display:flex; align-items:baseline; justify-content:center; gap:14px; padding:30px 16px 6px; flex-wrap:wrap;}
+.term{display:flex; align-items:baseline; gap:7px;}
+.qin{width:92px; border-bottom:3px solid var(--edge-strong); transition:border-color .25s;}
+.term:focus-within .qin{border-color:var(--accent);}
+.tlabel{font:700 1.28rem var(--f-mono); color:var(--faint); transition:color .25s; white-space:nowrap;}
+.term:focus-within .tlabel{color:var(--muted);}
+.tsep{font:700 1.45rem var(--f-mono); color:var(--faint);}
+.tsep.teq{color:var(--muted);}
+.slot-hint{font:700 .54rem var(--f-mono); letter-spacing:.14em; color:var(--faint); text-align:center; padding:8px 14px 12px;}
+
+/* example chips */
+.ex-row{display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; padding:2px 14px 18px; border-bottom:1px solid var(--edge);}
+.ex-row > .lbl{font:700 .58rem var(--f-mono); letter-spacing:.16em; color:var(--faint);}
+.ex-chips{display:flex; gap:8px; flex-wrap:wrap; justify-content:center;}
+.exchip{
+  cursor:pointer; background:none; border:1px solid var(--edge-strong); border-radius:999px;
+  color:var(--muted); font:700 .68rem var(--f-mono); padding:6px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.exchip:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* ---- screen: echo + big result + readout rows ---- */
+.calc-screen{padding:16px 18px 18px; border-bottom:1px solid var(--edge);}
+.calc-screen.err{animation:calcShake .38s ease;}
+@keyframes calcShake{20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
+.fc-echo{text-align:center; font:600 1.02rem var(--f-mono); color:var(--muted); min-height:1.5em;}
+.fc-echo .eop{color:var(--accent); font-weight:700; padding:0 .22em;}
+.fc-echo .eempty{color:var(--faint); font-size:.72rem; letter-spacing:.16em;}
+.fc-big{display:flex; align-items:center; justify-content:center; gap:12px 44px; flex-wrap:wrap; min-height:96px; padding:8px 0 2px;}
+.bigin{display:inline-flex; align-items:center; line-height:1; color:var(--ink);}
+.bint{font:700 clamp(2.1rem,6vw,2.9rem) var(--f-mono); letter-spacing:-.02em;}
+.bwhole{font:700 clamp(2.1rem,6vw,2.9rem) var(--f-mono);}
+.bneg{font:700 2rem var(--f-mono); margin-right:.14em;}
+.bfrac{display:inline-flex; flex-direction:column; align-items:center; margin-left:.3em;}
+.bfn{font:700 clamp(1.3rem,3.6vw,1.8rem) var(--f-mono); padding:0 .3em .1em; border-bottom:.14em solid var(--ink); min-width:1.5em; text-align:center;}
+.bfd{font:700 clamp(1.3rem,3.6vw,1.8rem) var(--f-mono); padding:.1em .3em 0; min-width:1.5em; text-align:center;}
+.brest{font:700 2.4rem var(--f-mono); color:var(--faint);}
+.berr{font:600 .95rem var(--f-sans); color:var(--amber-deep); text-align:center; padding:0 12px; max-width:44ch;}
+.bwait{font:600 .95rem var(--f-sans); color:var(--faint); text-align:center; padding:0 12px; max-width:44ch;}
+.bwait b{color:var(--muted);}
+.bmult{font:700 .95rem var(--f-mono); color:var(--faint); margin-left:.6em; border:1px solid var(--edge-strong); border-radius:999px; padding:4px 10px; align-self:center;}
+.fc-rows{display:flex; justify-content:center; flex-wrap:wrap; gap:2px 0; margin-top:14px; border-top:1px dashed var(--edge); padding-top:13px;}
+.fc-rows:empty{display:none; margin:0; padding:0; border:none;}
+.frow{display:flex; align-items:center; gap:10px; padding:4px 16px; position:relative;}
+.frow + .frow::before{content:""; position:absolute; left:0; top:22%; bottom:22%; width:1px; background:var(--edge);}
+.fl{font-size:.56rem; letter-spacing:.14em; color:var(--faint);}
+.fv{font:600 1.02rem var(--f-mono); color:var(--muted); display:flex; align-items:center; line-height:1.45;}
+.fv .mfrac, .fv .mnum{color:var(--ink);}
+
+/* inline mini fractions (echo / rows / steps) */
+.mnum{font-family:var(--f-mono); font-weight:600;}
+.mfrac{
+  display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle;
+  margin:0 .14em; font-family:var(--f-mono); font-weight:600; line-height:1.18;
+}
+.mfrac .mn{border-bottom:.09em solid currentColor; padding:0 .24em .05em;}
+.mfrac .md{padding:.05em .24em 0;}
+.ovl{color:var(--accent); text-decoration:overline; text-decoration-thickness:.09em; padding:0 .02em;}
+.rad{text-decoration:overline; text-decoration-thickness:.09em; padding:0 .04em;}
+
+/* ---- the work: step-by-step proof ---- */
+.work{border-top:1px solid var(--edge); padding:16px 22px 20px;}
+.work-title{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint); text-transform:uppercase;
+  padding-bottom:10px; border-bottom:1px solid var(--edge); margin-bottom:4px;
+}
+.work-title .live{color:var(--accent); display:inline-flex; align-items:center; gap:8px;}
+.work-title .live::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent); animation:pulse 2.2s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+.wstep{display:flex; gap:14px; padding:11px 2px; border-bottom:1px dashed var(--edge); font-size:.92rem; color:var(--muted); line-height:1.75;}
+.wstep:last-child{border-bottom:none;}
+.wstep .wi{font-size:.62rem; letter-spacing:.1em; color:var(--accent); padding-top:.45em; flex:none;}
+.wstep .wt b{font-family:var(--f-mono); color:var(--ink); font-weight:700;}
+.wstep .mfrac, .wstep .mnum{color:var(--ink);}
+.wempty{color:var(--faint); font-size:.66rem; letter-spacing:.14em;}
+.wcode{color:var(--accent); font-size:.82em; word-break:break-word;}
+
+/* ---- graph mode ---- */
+.gframe{position:relative; margin:18px 18px 2px; border:1px solid var(--edge-strong); background:var(--panel);}
+.gframe canvas{display:block; width:100%; height:330px;}
+.gcorner{position:absolute; top:8px; left:8px; width:14px; height:14px; border-left:2px solid var(--accent); border-top:2px solid var(--accent); opacity:.7; pointer-events:none;}
+.gtag{
+  position:absolute; top:12px; right:14px; font:700 .6rem var(--f-mono); letter-spacing:.14em;
+  color:var(--accent); background:var(--bg); border:1px solid var(--edge-strong); border-radius:999px; padding:6px 11px;
+}
+.g-rows{margin-top:0 !important; padding:12px 18px 18px !important;}
+
+/* field notes panel */
+.notes{
+  border:1px solid var(--edge-strong); background:var(--panel); padding:24px 24px 20px;
+  clip-path:polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+.notes h3{
+  font:700 .66rem var(--f-mono); letter-spacing:.18em; color:var(--accent); text-transform:uppercase;
+  padding-bottom:14px; border-bottom:1px solid var(--edge); margin-bottom:14px;
+  display:flex; justify-content:space-between; gap:10px;
+}
+.notes h3 span:last-child{color:var(--faint);}
+.notes ul{display:grid; gap:14px;}
+.notes li{position:relative; padding-left:20px; color:var(--muted); font-size:.88rem; line-height:1.55;}
+.notes li::before{content:"▸"; position:absolute; left:0; top:0; color:var(--accent); font-size:.8rem;}
+.notes li b{color:var(--ink); font-weight:600;}
+
+.tool-specs{
+  display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap;
+  margin-top:28px; font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--faint); text-transform:uppercase;
+}
+
+/* ================= 02 — HOW TO USE (steps + worked example) ================= */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:46px; max-width:1080px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:26px 24px 22px;
+  clip-path:polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  transition:border-color .3s, transform .3s;
+}
+.step:hover{border-color:var(--edge-strong); transform:translateY(-4px);}
+.step .n{font:700 .62rem var(--f-mono); letter-spacing:.16em; color:var(--accent);}
+.step h3{font:600 1.3rem/1.18 var(--f-disp); letter-spacing:-.008em; margin:12px 0 9px;}
+.step p{color:var(--muted); font-size:.92rem;}
+.step-demo{margin-top:16px; padding-top:12px; border-top:1px dashed var(--edge-strong);
+  font:600 .8rem var(--f-mono); color:var(--muted);}
+.step-demo b{color:var(--accent); font-weight:700;}
+
+/* worked example — terminal file-tree look */
+.sm-tree{
+  margin-top:46px; max-width:760px; border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  padding:26px 30px 24px;
+}
+.sm-tree-title{
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+  font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);
+  padding-bottom:15px; border-bottom:1px solid var(--edge); margin-bottom:12px;
+}
+.sm-tree-title .root{color:var(--accent);}
+.tree-root{display:block; font:600 .95rem var(--f-mono); color:var(--accent); padding:5px 0 3px;}
+.tree-line{display:flex; align-items:baseline; padding:7px 0;}
+.tl-name{font:600 .85rem var(--f-mono); color:var(--muted); white-space:nowrap;}
+.tl-dots{flex:1; min-width:18px; border-bottom:1px dotted var(--edge-strong); margin:0 12px; transform:translateY(-3px);}
+.tl-note{font:700 .58rem var(--f-mono); letter-spacing:.14em; color:var(--faint); text-transform:uppercase; white-space:nowrap;}
+.tree-sum{
+  display:flex; align-items:center; gap:10px; margin-top:14px; padding-top:14px; border-top:1px solid var(--edge);
+  font:700 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint); text-transform:uppercase;
+}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+/* ================= 03 — FAQ ================= */
+.faq{margin-top:46px; border-top:1px solid var(--edge-strong); max-width:860px;}
+.faq-item{border-bottom:1px solid var(--edge);}
+.faq-item summary{list-style:none; cursor:pointer; display:flex; align-items:baseline; gap:18px; padding:22px 6px;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.q-n{font:700 .62rem var(--f-mono); letter-spacing:.12em; color:var(--accent); flex:none;}
+.q-t{font:600 1.16rem/1.3 var(--f-disp); letter-spacing:-.005em; flex:1; transition:color .25s;}
+.q-x{position:relative; width:14px; height:14px; flex:none; align-self:center;}
+.q-x::before, .q-x::after{content:""; position:absolute; background:var(--faint); transition:transform .3s ease, background .3s;}
+.q-x::before{top:6px; left:0; width:14px; height:2px;}
+.q-x::after{left:6px; top:0; width:2px; height:14px;}
+.faq-item[open] .q-x::before, .faq-item[open] .q-x::after{background:var(--accent);}
+.faq-item[open] .q-x::after{transform:rotate(90deg);}
+.faq-item .a{padding:2px 6px 26px 44px; color:var(--muted); max-width:70ch; font-size:.95rem; animation:faqIn .4s ease;}
+.faq-item .a b{color:var(--ink); font-weight:600;}
+@keyframes faqIn{from{opacity:0; transform:translateY(-6px);} to{opacity:1; transform:none;}}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);}}
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:980px){
+  .tool-grid{grid-template-columns:1fr; max-width:640px;}
+  .steps{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps{grid-template-columns:1fr;}
+  .sm-sec{padding:62px 0;}
+  .sm-tree{padding:20px 18px 18px;}
+  .tl-note{display:none;}
+  .tl-dots{margin:0 8px;}
+  .faq-item .a{padding-left:6px;}
+  .fc-row{gap:10px; padding:22px 10px 4px;}
+  .qin{width:74px; font-size:1.3rem;}
+  .tlabel{font-size:1.05rem;}
+  .tsep{font-size:1.2rem;}
+  .frow{padding:4px 10px;}
+  .work{padding:14px 16px 18px;}
+  .fc-echo{font-size:.92rem;}
+  .gframe{margin:14px 12px 2px;}
+  .gframe canvas{height:250px;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ TOOL HERO ============ -->
+<header class="tool-hero">
+  <div class="hero-glyphs" aria-hidden="true">
+    <span style="left:5%;  top:16%;     font-size:120px; animation-duration:17s;">x²</span>
+    <span style="right:7%; top:11%;     font-size:130px; animation-duration:21s; animation-delay:-6s; color:var(--amber);">Δ</span>
+    <span style="left:14%; bottom:14%;  font-size:92px;  animation-duration:14s; animation-delay:-3s;">√</span>
+    <span style="right:16%; bottom:20%; font-size:84px;  animation-duration:19s; animation-delay:-9s; color:var(--amber);">±</span>
+    <span style="left:40%; top:8%;      font-size:64px;  animation-duration:12s; animation-delay:-2s;">x₁</span>
+    <span style="right:38%; bottom:6%;  font-size:70px;  animation-duration:16s; animation-delay:-5s;">x₂</span>
+    <span style="right:4%; bottom:48%;  font-size:74px;  animation-duration:18s; animation-delay:-4s; color:var(--amber);">b²−4ac</span>
+    <span style="left:56%; top:12%;     font-size:56px;  animation-duration:13s; animation-delay:-7s;">−b/2a</span>
+  </div>
+  <svg class="hero-parab" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+    <path pathLength="1" d="M80 25 Q 720 251 1360 25"/>
+    <path pathLength="1" class="p2" d="M310 128 Q 720 -88 1130 128"/>
+    <line x1="720" y1="6" x2="720" y2="144"/>
+    <circle cx="303" cy="90" r="5"/>
+    <circle cx="1137" cy="90" r="5"/>
+  </svg>
+  <div class="wrap">
+    <div class="crumbs">
+      <a href="/">HOME</a> / <a href="/tools/">TOOLS</a> / <a href="/tools/mathematics/">MATHEMATICS</a> / <b>QUADRATIC EQUATION SOLVER</b>
+    </div>
+    <div class="kicker">MATHEMATICS — QUADRATIC SOLVER</div>
+    <h1>Every quadratic, <em>solved to the root</em>.</h1>
+    <p class="lede">
+      Type <b>a</b>, <b>b</b> and <b>c</b> — the discriminant renders its verdict, the quadratic formula runs end-to-end,
+      and both roots land in exact form: clean fractions, simplified surds, or a conjugate pair. The parabola bends into
+      place beside them. Nothing rounds, nothing waits, nothing leaves your browser.
+    </p>
+    <div class="hero-chips">
+      <span class="chip"><i></i>EXACT ROOTS — NO ROUNDING</span>
+      <span class="chip"><i></i>SURDS &amp; COMPLEX HANDLED</span>
+      <span class="chip"><i></i>LIVE PARABOLA GRAPH</span>
+      <span class="chip"><i></i>WORKS OFFLINE</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn-ticket big" href="#solver">
+        <span>Run the solver</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+      <a class="hero-ghost" href="#howto">or read the method first</a>
+    </div>
+    <div class="updated"><i></i>UPDATED · 2025 · SOLVER v1</div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 01 — THE INSTRUMENT ============ -->
+<section class="sm-sec" id="solver">
+  <div class="wrap">
+    <div class="sm-head reveal"><span class="sm-idx">01</span><h2>The instrument</h2></div>
+    <p class="sm-lede reveal" style="--d:.06s">
+      Three coefficients in; the discriminant, both roots — exact — the vertex and the parabola out.
+      No equals button: the proof writes itself as you type.
+    </p>
+
+    <div class="tool-grid">
+      <div class="calc reveal" id="qcalc" data-mode="solve">
+        <div class="calc-top">
+          <div class="calc-modes">
+            <button class="cmode on" data-m="solve" type="button">SOLVE</button>
+            <button class="cmode" data-m="graph" type="button">GRAPH</button>
+          </div>
+          <span class="calc-id">SWQ-01 · QUADRATIC</span>
+        </div>
+
+        <!-- input row -->
+        <div class="fc-row">
+          <div class="term">
+            <input id="qa" class="finput qin" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="1" placeholder="a" aria-label="coefficient a">
+            <span class="tlabel">x²</span>
+          </div>
+          <span class="tsep">+</span>
+          <div class="term">
+            <input id="qb" class="finput qin" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="-5" placeholder="b" aria-label="coefficient b">
+            <span class="tlabel">x</span>
+          </div>
+          <span class="tsep">+</span>
+          <div class="term">
+            <input id="qc" class="finput qin" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="6" placeholder="c" aria-label="coefficient c">
+          </div>
+          <span class="tsep teq">= 0</span>
+        </div>
+        <div class="slot-hint">COEFFICIENTS a · b · c — NEGATIVES &amp; DECIMALS WELCOME · SOLVES AS YOU TYPE</div>
+
+        <!-- example chips -->
+        <div class="ex-row">
+          <span class="lbl">TRY:</span>
+          <div class="ex-chips" id="qChips"></div>
+        </div>
+
+        <!-- SOLVE mode -->
+        <div class="mode-solve">
+          <div class="calc-screen" id="qScreen">
+            <div class="fc-echo" id="qEcho"></div>
+            <div class="fc-big" id="qBig"></div>
+            <div class="fc-rows" id="qRows"></div>
+          </div>
+          <div class="work">
+            <div class="work-title"><span>THE WORK — QUADRATIC FORMULA, LINE BY LINE</span><span class="live">LIVE</span></div>
+            <div id="qWork"></div>
+          </div>
+        </div>
+
+        <!-- GRAPH mode -->
+        <div class="mode-graph">
+          <div class="gframe">
+            <span class="gcorner"></span>
+            <canvas id="paraCanvas"></canvas>
+            <span class="gtag" id="gTag">Δ</span>
+          </div>
+          <div class="fc-rows g-rows" id="gRows"></div>
+        </div>
+      </div>
+
+      <aside class="notes reveal" style="--d:.12s">
+        <h3><span>FIELD NOTES</span><span>Δ = b²−4ac</span></h3>
+        <ul>
+          <li><b>Δ &gt; 0</b> — two distinct real roots; the parabola cuts the x-axis twice. Rational if Δ is a perfect square, surds otherwise.</li>
+          <li><b>Δ = 0</b> — one repeated root; the vertex rests exactly on the axis — a perfect-square trinomial.</li>
+          <li><b>Δ &lt; 0</b> — a conjugate pair p ± qi; the curve misses the axis entirely.</li>
+          <li><b>Vieta's shortcut</b> — sum of roots = −b/a, product = c/a. Read them before you solve; use them after, to check.</li>
+          <li><b>Why the formula works</b> — complete the square on ax² + bx, balance both sides, and x = (−b ± √Δ)/2a falls out. Every run of this tool is that derivation with your numbers.</li>
+          <li><b>Exactness rule</b> — integer coefficients stay integers to the last line; radicals are simplified (2√3, never √12) and fractions reduced.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="tool-specs reveal">INTEGER-EXACT CORE · LIVE SOLVE · AUTO-FIT GRAPH · NOTHING LEAVES THE PAGE</div>
+  </div>
+</section>
+
+<!-- ============ 02 — HOW TO USE ============ -->
+<section class="sm-sec" id="howto">
+  <div class="wrap">
+    <div class="sm-head reveal"><span class="sm-idx">02</span><h2>How to use it</h2></div>
+    <p class="sm-lede reveal" style="--d:.06s">
+      Sixty seconds to mastery. The solver is live from the first keystroke — here is how to read everything it shows you.
+    </p>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">STEP 01</span>
+        <h3>Enter a, b, c</h3>
+        <p>Three boxes, one equation. Type 1, −5, 6 and you're solving x² − 5x + 6 = 0 — the echo line rewrites itself with proper signs as you go.</p>
+        <div class="step-demo">a = <b>1</b> · b = <b>−5</b> · c = <b>6</b></div>
+      </div>
+      <div class="step reveal" style="--d:.07s">
+        <span class="n">STEP 02</span>
+        <h3>Watch Δ render its verdict</h3>
+        <p>The discriminant row updates on every keystroke. Its sign tells you the fate of the roots before any formula runs: two real, one double, or a complex pair.</p>
+        <div class="step-demo">Δ = 25 − 24 = <b>1</b> → 2 real</div>
+      </div>
+      <div class="step reveal" style="--d:.14s">
+        <span class="n">STEP 03</span>
+        <h3>Read the exact roots</h3>
+        <p>The big line never rounds: reduced fractions, simplified surds like −1 ± √2, or a conjugate pair with i. Decimals appear only as a reference row.</p>
+        <div class="step-demo">x<sub>1</sub> = <b>3</b> · x<sub>2</sub> = <b>2</b></div>
+      </div>
+      <div class="step reveal" style="--d:.07s">
+        <span class="n">STEP 04</span>
+        <h3>Follow the written proof</h3>
+        <p>Under the screen, the full work: substitution into the formula, squares pulled out of the radical, the gcd divided through, Vieta's checks at the end.</p>
+        <div class="step-demo">x = (5 ± 1)/2 <b>✓</b></div>
+      </div>
+      <div class="step reveal" style="--d:.14s">
+        <span class="n">STEP 05</span>
+        <h3>Flip to GRAPH</h3>
+        <p>The parabola draws itself around your roots: vertex, axis of symmetry and y-intercept marked, window auto-fitted, complex case flagged honestly.</p>
+        <div class="step-demo">V(<b>2.5</b>, <b>−0.25</b>) · opens up</div>
+      </div>
+      <div class="step reveal" style="--d:.21s">
+        <span class="n">STEP 06</span>
+        <h3>Learn from the chips</h3>
+        <p>One tap loads a factorable, a surd, a double-root and a complex case — the four personalities of a quadratic. Watch how Δ changes for each.</p>
+        <div class="step-demo">x²+x+1 → −½ ± (√3/2)<b>i</b></div>
+      </div>
+    </div>
+
+    <!-- worked example — terminal session -->
+    <div class="sm-tree reveal">
+      <div class="sm-tree-title"><span class="root">~/studywithstem/sessions</span><span>quadratic.txt</span></div>
+      <span class="tree-root">SESSION — solve x² − 5x + 6 = 0</span>
+      <div class="tree-line"><span class="tl-name">├── read</span><span class="tl-dots"></span><span class="tl-note">a = 1 · b = −5 · c = 6</span></div>
+      <div class="tree-line"><span class="tl-name">├── discriminant</span><span class="tl-dots"></span><span class="tl-note">Δ = 25 − 24 = 1 → perfect square</span></div>
+      <div class="tree-line"><span class="tl-name">├── formula</span><span class="tl-dots"></span><span class="tl-note">x = (5 ± √1) / 2</span></div>
+      <div class="tree-line"><span class="tl-name">├── roots</span><span class="tl-dots"></span><span class="tl-note">x₁ = 3 · x₂ = 2</span></div>
+      <div class="tree-line"><span class="tl-name">├── factored</span><span class="tl-dots"></span><span class="tl-note">(x − 2)(x − 3)</span></div>
+      <div class="tree-line"><span class="tl-name">├── vieta</span><span class="tl-dots"></span><span class="tl-note">sum 5 ✓ · product 6 ✓</span></div>
+      <div class="tree-line"><span class="tl-name">└── graph</span><span class="tl-dots"></span><span class="tl-note">vertex (2.5, −0.25) · opens up</span></div>
+      <div class="tree-sum"><span>PROOF COMPLETE — 0 ERRORS</span><span class="cursor"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 — FAQ ============ -->
+<section class="sm-sec" id="faq">
+  <div class="wrap">
+    <div class="sm-head reveal"><span class="sm-idx">03</span><h2>Questions, answered</h2></div>
+    <p class="sm-lede reveal" style="--d:.06s">
+      The discriminant, the formula, complex roots, Vieta's checks — the quadratic, from every angle.
+    </p>
+
+    <div class="faq reveal">
+      <details class="faq-item">
+        <summary><span class="q-n">Q.01</span><span class="q-t">What is the quadratic formula?</span><span class="q-x"></span></summary>
+        <div class="a"><b>x = (−b ± √(b² − 4ac)) / 2a</b> solves every quadratic ax² + bx + c = 0 with a ≠ 0. It comes from completing the square once, symbolically — so it works even when factoring fails. This tool substitutes your a, b, c and writes out each line of the result.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q.02</span><span class="q-t">What does the discriminant Δ = b² − 4ac tell me?</span><span class="q-x"></span></summary>
+        <div class="a">Its sign predicts the roots: <b>Δ &gt; 0</b> means two distinct real roots (the parabola crosses the x-axis twice); <b>Δ = 0</b> means one repeated root with the vertex on the axis; <b>Δ &lt; 0</b> means no real roots — a complex conjugate pair. If Δ is positive <b>and a perfect square</b> (with integer coefficients), both roots are rational, which is exactly when factoring is easy.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q.03</span><span class="q-t">How do I solve a quadratic by factoring?</span><span class="q-x"></span></summary>
+        <div class="a">Find two numbers that multiply to <b>a·c</b> and add to <b>b</b>. For x² − 5x + 6 the numbers are −2 and −3, giving <b>(x − 2)(x − 3)</b> and roots x = 2, 3. Factoring only works cleanly when the roots are rational; otherwise the quadratic formula is the way. The solver displays the factored form automatically whenever it exists.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q.04</span><span class="q-t">What are complex roots — what if Δ is negative?</span><span class="q-x"></span></summary>
+        <div class="a">Taking the square root of a negative number introduces <b>i</b>, where i² = −1. The roots then come as a conjugate pair <b>p ± qi</b>: for example x² + x + 1 = 0 gives x = <b>−1/2 ± (√3/2)i</b>. Geometrically, the parabola never touches the x-axis. The solver keeps the exact surd part of the imaginary component — no rounding.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q.05</span><span class="q-t">How do I find the vertex and axis of symmetry?</span><span class="q-x"></span></summary>
+        <div class="a">The vertex is at <b>h = −b/2a, k = −Δ/4a</b>, and the axis of symmetry is the vertical line <b>x = h</b>. If a &gt; 0 the parabola opens upward and the vertex is the minimum; if a &lt; 0 it opens downward and the vertex is the maximum. The GRAPH tab marks all of these live.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q.06</span><span class="q-t">What happens if a = 0?</span><span class="q-x"></span></summary>
+        <div class="a">The equation is not quadratic — it becomes the line <b>bx + c = 0</b> with root x = −c/b. The solver detects this, labels the equation linear and solves it anyway. If b is also 0, it tells you whether there is <b>no solution</b> (0 = c ≠ 0) or <b>every x is a solution</b> (0 = 0).</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q.07</span><span class="q-t">What are Vieta's formulas?</span><span class="q-x"></span></summary>
+        <div class="a"><b>x₁ + x₂ = −b/a</b> and <b>x₁·x₂ = c/a</b>. They hold exactly — even for surd and complex roots, where the radical parts cancel. They are a fast sanity check: x² − 5x + 6 must have roots summing to 5 and multiplying to 6, so 2 and 3.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">Q.08</span><span class="q-t">Is the tool free, exact and private?</span><span class="q-x"></span></summary>
+        <div class="a">Completely free, no sign-up. Integer coefficients are solved with <b>integer arithmetic</b> — fractions reduced, radicals simplified, no rounding anywhere. Decimal inputs are computed to 9 significant figures and marked with ≈. Everything runs locally in your browser, and the page keeps working offline once loaded.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ SUBSCRIBE STRIP ============ -->
+<div class="pre-footer">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx">TRANSMISSION</span>
+      <h2>New tools, straight to your <span class="hl">inbox</span></h2>
+      <p>Join the list — every new solver, cheat-sheet and deep-dive lands in your mailbox first. No noise, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="subForm">
+      <input type="text" placeholder="Your name" aria-label="Your name" required>
+      <input type="email" placeholder="you@example.com" aria-label="Your email" required>
+      <label class="pf-check">
+        <input type="checkbox" required>
+        <span>I agree to the <a href="/page/contact/">privacy terms</a> — no spam, ever.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Join the list</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand" aria-label="StudyWithSTEM home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Free, exact, in-browser tools for mathematics &amp; science — built for students, teachers and the incurably curious.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span> x = (−b ± √Δ)/2a</span>
+      </div>
+      <div class="foot-col">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Posts</a></li>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/subscription/">Subscription</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Toolkit</h4>
+        <ul>
+          <li><a href="/tools/mathematics/fraction-calculator/">Fraction Calculator</a></li>
+          <li><a href="/tools/mathematics/quadratic-equation-solver/">Quadratic Solver</a></li>
+          <li><a href="/tools/mathematics/">Mathematics Tools</a></li>
+          <li><a href="/tools/">Browse All Tools</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Email</a></li>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>X</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a3 3 0 0 1 0 6h-1M3 8h14v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 2v2M11 2v2M15 2v2"/></svg>Buy us a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>π = 3.14159… · <b>e</b> = 2.71828… · φ = 1.61803… · <b>√2</b> = 1.41421… · <b>i²</b> = −1 · <b>Δ</b> = b² − 4ac · x = (<b>−b ± √Δ</b>)/2a · x₁+x₂ = <b>−b/a</b> · x₁·x₂ = <b>c/a</b> · 0! = <b>1</b> · γ = 0.57721… · τ = 2π ·&nbsp;</span>
+        <span>π = 3.14159… · <b>e</b> = 2.71828… · φ = 1.61803… · <b>√2</b> = 1.41421… · <b>i²</b> = −1 · <b>Δ</b> = b² − 4ac · x = (<b>−b ± √Δ</b>)/2a · x₁+x₂ = <b>−b/a</b> · x₁·x₂ = <b>c/a</b> · 0! = <b>1</b> · γ = 0.57721… · τ = 2π ·&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="foot-mid">
+      <span class="foot-meta">© 2025 STUDYWITHSTEM · MADE FOR CURIOUS MINDS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var MINUS='\u2212';
+
+/* ================= PAGE CHROME ================= */
+var nav=document.getElementById('nav'), navProg=document.getElementById('navProg'), lastY=window.scrollY;
+window.addEventListener('scroll',function(){
+  var y=window.scrollY;
+  nav.classList.toggle('scrolled',y>10);
+  if(y>lastY&&y>140&&!document.body.classList.contains('menu-open')) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY=y;
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  navProg.style.width=(h>0?(y/h*100):0)+'%';
+},{passive:true});
+
+var tt=document.getElementById('themeToggle');
+tt.setAttribute('aria-pressed',document.documentElement.dataset.theme==='light');
+tt.addEventListener('click',function(){
+  document.body.classList.add('theme-anim');
+  var next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  document.documentElement.dataset.theme=next;
+  tt.setAttribute('aria-pressed',next==='light');
+  try{localStorage.setItem('sws-theme',next);}catch(e){}
+  setTimeout(function(){document.body.classList.remove('theme-anim');},600);
+  setTimeout(drawGraph,560);
+});
+
+var burger=document.getElementById('burger'), mmenu=document.getElementById('mmenu');
+burger.addEventListener('click',function(){
+  var open=document.body.classList.toggle('menu-open');
+  burger.setAttribute('aria-expanded',open);
+  document.body.classList.toggle('locked',open);
+});
+mmenu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.body.classList.remove('menu-open','locked');
+    burger.setAttribute('aria-expanded','false');
+  });
+});
+
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+var foot=document.querySelector('footer'), footVis=false;
+if(foot){
+  var fio=new IntersectionObserver(function(es){
+    es.forEach(function(e){ footVis=e.isIntersecting; if(e.isIntersecting) foot.classList.add('in'); });
+  },{threshold:.06});
+  fio.observe(foot);
+}
+
+/* starfield */
+var sf=document.getElementById('starfield');
+if(sf){
+  var sctx=sf.getContext('2d'), stars=[], SW=0, SH=0, dpr=Math.min(window.devicePixelRatio||1,2);
+  function sfSize(){
+    SW=sf.clientWidth; SH=sf.clientHeight;
+    if(!SW||!SH) return;
+    sf.width=Math.round(SW*dpr); sf.height=Math.round(SH*dpr);
+    sctx.setTransform(dpr,0,0,dpr,0,0);
+    stars=[];
+    for(var i=0;i<110;i++) stars.push({x:Math.random()*SW,y:Math.random()*SH,r:Math.random()*1.4+.3,p:Math.random()*Math.PI*2,s:.4+Math.random()*1.2});
+  }
+  sfSize();
+  window.addEventListener('resize',sfSize);
+  (function loop(t){
+    requestAnimationFrame(loop);
+    if(!footVis||!SW) return;
+    sctx.clearRect(0,0,SW,SH);
+    var dark=document.documentElement.dataset.theme==='dark';
+    sctx.fillStyle=dark?'#F1EDE2':'#0B2545';
+    for(var i=0;i<stars.length;i++){
+      var s=stars[i];
+      sctx.globalAlpha=dark?(.2+.75*Math.abs(Math.sin(s.p+t*.0004*s.s))):(.15+.3*Math.abs(Math.sin(s.p+t*.0004*s.s)));
+      sctx.beginPath(); sctx.arc(s.x,s.y,s.r,0,7); sctx.fill();
+    }
+    sctx.globalAlpha=1;
+  })(0);
+}
+
+document.getElementById('backTop').addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+document.getElementById('subForm').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var btn=this.querySelector('.btn-ticket span');
+  btn.textContent='Welcome aboard — check your inbox';
+});
+
+/* ================= QUADRATIC SOLVER ================= */
+var calcRoot=document.getElementById('qcalc');
+var inA=document.getElementById('qa'), inB=document.getElementById('qb'), inC=document.getElementById('qc');
+var echoEl=document.getElementById('qEcho'), bigEl=document.getElementById('qBig'),
+    rowsEl=document.getElementById('qRows'), workEl=document.getElementById('qWork'),
+    screenEl=document.getElementById('qScreen'),
+    gCv=document.getElementById('paraCanvas'), gTag=document.getElementById('gTag'), gRowsEl=document.getElementById('gRows');
+var state={empty:true};
+
+/* ---- helpers ---- */
+function fmt(n){
+  if(!isFinite(n)) return '—';
+  if(n===0) return '0';
+  if(Number.isInteger(n)) return (n<0?MINUS:'')+Math.abs(n);
+  var a=Math.abs(n), s;
+  if(a>=1e10||a<1e-7) s=a.toExponential(3);
+  else s=parseFloat(a.toPrecision(9)).toString();
+  return (n<0?MINUS:'')+s;
+}
+function fmtP(n){
+  var t=parseFloat(n.toPrecision(4));
+  return (t<0?MINUS:'')+Math.abs(t);
+}
+function gcd(a,b){ a=Math.abs(a); b=Math.abs(b); while(b){ var t=a%b; a=b; b=t; } return a; }
+function reduce(n,d){ if(d<0){ n=-n; d=-d; } var g=gcd(n,d)||1; return [n/g,d/g]; }
+function mfrac(n,d){
+  var r=reduce(n,d);
+  return r[1]===1?'<span class="mnum">'+fmt(r[0])+'</span>'
+    :'<span class="mfrac"><span class="mn">'+fmt(r[0])+'</span><span class="md">'+fmt(r[1])+'</span></span>';
+}
+function bfrac(n,d){
+  var r=reduce(n,d);
+  return r[1]===1?'<span class="bint">'+fmt(r[0])+'</span>'
+    :'<span class="bfrac"><span class="bfn">'+fmt(r[0])+'</span><span class="bfd">'+fmt(r[1])+'</span></span>';
+}
+function mfracStr(numHTML,den){
+  return '<span class="mfrac"><span class="mn">'+numHTML+'</span><span class="md">'+fmt(den)+'</span></span>';
+}
+function isSq(n){ var s=Math.round(Math.sqrt(n)); return s*s===n; }
+function simpSurd(n){
+  var k=1, r=n;
+  for(var p=2;p*p<=r;){
+    if(r%(p*p)===0){ r/=p*p; k*=p; } else p++;
+  }
+  return [k,r];
+}
+function surdS(k,r){ return (k===1?'':fmt(k))+'√<span class="rad">'+fmt(r)+'</span>'; }
+function wstep(tag,html){ return '<div class="wstep"><span class="wi">'+tag+'</span><div class="wt">'+html+'</div></div>'; }
+function rowHTML(label,val){ return '<div class="frow"><span class="fl">'+label+'</span><span class="fv">'+val+'</span></div>'; }
+
+/* ---- parsing ---- */
+function parseCoef(el){
+  var s=el.value.trim().replace(/\u2212/g,'-').replace(/\s+/g,'').replace(/,/g,'.');
+  if(s==='') return {empty:true};
+  if(/^[-+]?(\d+\.?\d*|\.\d+)$/.test(s)) return {v:Number(s)};
+  return {bad:true};
+}
+
+/* ---- core solve ---- */
+function solveAll(a,b,c){
+  var ints=[a,b,c].every(function(v){ return Number.isInteger(v); });
+  if(a===0){
+    if(b===0) return c===0?{type:'allzero'}:{type:'nosol',c:c};
+    return {type:'linear',b:b,c:c,ints:ints,root:ints?reduce(-c,b):null,rootN:-c/b};
+  }
+  var D=b*b-4*a*c;
+  var base={type:'quad',a:a,b:b,c:c,D:D,ints:ints,h:-b/(2*a)};
+  if(D>0){ base.r1n=(-b+Math.sqrt(D))/(2*a); base.r2n=(-b-Math.sqrt(D))/(2*a); }
+  else if(D===0){ base.r1n=base.r2n=(-b)/(2*a); }
+  else{ base.reN=(-b)/(2*a); base.imN=Math.sqrt(-D)/(2*a); }
+  if(!ints) return Object.assign(base,{subtype:'numeric'});
+  if(D>0&&isSq(D)){
+    var s=Math.round(Math.sqrt(D));
+    return Object.assign(base,{subtype:'rational',s:s,r1:reduce(-b+s,2*a),r2:reduce(-b-s,2*a)});
+  }
+  if(D===0) return Object.assign(base,{subtype:'double',root:reduce(-b,2*a)});
+  if(D>0){
+    var S0=simpSurd(D), p=-b, k=S0[0], r=S0[1], q=2*a;
+    var g=gcd(gcd(p,k),q)||1;
+    p/=g; k/=g; q/=g;
+    if(q<0){ p=-p; q=-q; }
+    return Object.assign(base,{subtype:'surd',K:S0[0],R0:S0[1],g:g,p:p,k:k,r:r,q:q});
+  }
+  var C0=simpSurd(-D), ck=C0[0], cr=C0[1], den=Math.abs(2*a);
+  var cg=gcd(ck,den)||1;
+  return Object.assign(base,{subtype:'complex',K:C0[0],R0:C0[1],g:cg,re:reduce(-b,2*a),im:{k:ck/cg,r:cr,den:den/cg}});
+}
+
+/* ---- echo: pretty standard form ---- */
+function renderEcho(a,b,c){
+  var parts=[];
+  if(a!==0) parts.push({v:a,sym:'x²'});
+  if(b!==0) parts.push({v:b,sym:'x'});
+  if(c!==0||parts.length===0) parts.push({v:c,sym:''});
+  var out='';
+  parts.forEach(function(t,i){
+    var mag=Math.abs(t.v);
+    var coef=(t.sym&&mag===1)?'':fmt(mag);
+    if(i===0) out+=(t.v<0?MINUS:'')+coef+t.sym;
+    else out+=' <span class="eop">'+(t.v<0?MINUS:'+')+'</span> '+coef+t.sym;
+  });
+  echoEl.innerHTML=out+' <span class="eop">= 0</span>';
+}
+
+/* ---- big result ---- */
+function renderBig(R){
+  if(R.type==='allzero'){ bigEl.innerHTML='<div class="bwait">0 = 0 — every real number is a solution.</div>'; return; }
+  if(R.type==='nosol'){ bigEl.innerHTML='<div class="berr">No solution — the equation reduces to 0 = '+fmt(R.c)+'.</div>'; return; }
+  if(R.type==='linear'){
+    var rh=R.ints?bfrac(R.root[0],R.root[1]):'<span class="bint">≈ '+fmt(R.rootN)+'</span>';
+    bigEl.innerHTML='<div class="bigin"><span class="bint">x =</span> '+rh+'</div><div class="bigin"><span class="bint" style="font-size:1.05rem;color:var(--faint)">linear · a = 0</span></div>';
+    return;
+  }
+  if(R.subtype==='rational'){
+    bigEl.innerHTML='<div class="bigin"><span class="bint">x<sub>1</sub> =</span> '+bfrac(R.r1[0],R.r1[1])+'</div>'+
+                    '<div class="bigin"><span class="bint">x<sub>2</sub> =</span> '+bfrac(R.r2[0],R.r2[1])+'</div>';
+  } else if(R.subtype==='double'){
+    bigEl.innerHTML='<div class="bigin"><span class="bint">x<sub>1</sub> = x<sub>2</sub> =</span> '+bfrac(R.root[0],R.root[1])+'<span class="bmult">×2</span></div>';
+  } else if(R.subtype==='surd'){
+    var core=(R.q===1)
+      ?'<span class="bint">'+(R.p===0?'':fmt(R.p)+' ')+'± '+surdS(R.k,R.r)+'</span>'
+      :'<span class="bfrac"><span class="bfn">'+(R.p===0?'':fmt(R.p)+' ')+'± '+surdS(R.k,R.r)+'</span><span class="bfd">'+fmt(R.q)+'</span></span>';
+    bigEl.innerHTML='<div class="bigin"><span class="bint">x =</span> '+core+'</div>';
+  } else if(R.subtype==='complex'){
+    var imH=(R.im.den===1)
+      ?'<span class="bint">'+surdS(R.im.k,R.im.r)+'</span>'
+      :'<span class="bfrac"><span class="bfn">'+surdS(R.im.k,R.im.r)+'</span><span class="bfd">'+fmt(R.im.den)+'</span></span>';
+    var reH=(R.re[0]===0)?'':bfrac(R.re[0],R.re[1])+' ';
+    bigEl.innerHTML='<div class="bigin"><span class="bint">x =</span> '+reH+'<span class="bint">±</span> '+imH+'<span class="bint"><i>i</i></span></div>';
+  } else {
+    if(R.D>0){
+      bigEl.innerHTML='<div class="bigin"><span class="bint">x<sub>1</sub> ≈</span> <span class="bint">'+fmt(R.r1n)+'</span></div>'+
+                      '<div class="bigin"><span class="bint">x<sub>2</sub> ≈</span> <span class="bint">'+fmt(R.r2n)+'</span></div>';
+    } else if(R.D===0){
+      bigEl.innerHTML='<div class="bigin"><span class="bint">x<sub>1</sub> = x<sub>2</sub> ≈</span> <span class="bint">'+fmt(R.r1n)+'</span><span class="bmult">×2</span></div>';
+    } else {
+      bigEl.innerHTML='<div class="bigin"><span class="bint">x =</span> <span class="bint">'+fmt(R.reN)+'</span> <span class="bint">±</span> <span class="bint">'+fmt(R.imN)+'</span><span class="bint"><i>i</i></span></div>';
+    }
+  }
+}
+
+/* ---- readout rows ---- */
+function verdict(R){
+  if(R.subtype==='rational'||R.subtype==='surd') return '2 · REAL';
+  if(R.subtype==='double') return '1 · ×2';
+  if(R.subtype==='complex') return '2 · COMPLEX';
+  if(R.D>0) return '2 · REAL ≈';
+  if(R.D===0) return '1 · ×2 ≈';
+  return '2 · COMPLEX ≈';
+}
+function renderRows(R){
+  var out=[];
+  if(R.type==='linear'){
+    out.push(rowHTML('KIND','LINEAR — a = 0'));
+    out.push(rowHTML('ROOT x',R.ints?mfrac(R.root[0],R.root[1]):'<span class="mnum">≈ '+fmt(R.rootN)+'</span>'));
+    out.push(rowHTML('SLOPE','<span class="mnum">'+fmt(R.b)+'</span>'));
+  } else if(R.type==='quad'){
+    var ex=R.ints;
+    var hF=ex?mfrac(-R.b,2*R.a):'<span class="mnum">≈ '+fmt(R.h)+'</span>';
+    var kF=ex?mfrac(-R.D,4*R.a):'<span class="mnum">≈ '+fmt(-R.D/(4*R.a))+'</span>';
+    out.push(rowHTML('Δ = b²−4ac','<span class="mnum">'+fmt(R.D)+'</span>'));
+    out.push(rowHTML('ROOTS',verdict(R)));
+    out.push(rowHTML('VERTEX','( '+hF+' , '+kF+' )'));
+    out.push(rowHTML('AXIS','x = '+hF));
+    out.push(rowHTML('SUM x₁+x₂',ex?mfrac(-R.b,R.a):'<span class="mnum">≈ '+fmt(-R.b/R.a)+'</span>'));
+    out.push(rowHTML('PRODUCT x₁·x₂',ex?mfrac(R.c,R.a):'<span class="mnum">≈ '+fmt(R.c/R.a)+'</span>'));
+    out.push(rowHTML('OPENS',R.a>0?'UP ↑':'DOWN ↓'));
+    if(R.ints){
+      if(R.subtype==='surd') out.push(rowHTML('DECIMALS','x₁ ≈ '+fmt(R.r1n)+' · x₂ ≈ '+fmt(R.r2n)));
+      if(R.subtype==='complex') out.push(rowHTML('DECIMALS','x ≈ '+fmt(R.reN)+' ± '+fmt(R.imN)+'<i>i</i>'));
+      if(R.subtype==='rational'&&(R.r1[1]!==1||R.r2[1]!==1)) out.push(rowHTML('DECIMALS','x₁ ≈ '+fmt(R.r1n)+' · x₂ ≈ '+fmt(R.r2n)));
+      if(R.subtype==='double'&&R.root[1]!==1) out.push(rowHTML('DECIMALS','x ≈ '+fmt(R.r1n)));
+    }
+  }
+  rowsEl.innerHTML=out.join('');
+}
+
+/* ---- the work ---- */
+function rootTerm(rt){
+  var n=rt[0], d=rt[1];
+  if(n===0) return '';
+  var m=(d===1)?fmt(Math.abs(n)):mfrac(Math.abs(n),d);
+  return (n>0?MINUS:'+')+' '+m;
+}
+function renderWork(R){
+  if(R.type==='allzero'){ workEl.innerHTML='<div class="wempty">0 = 0 — IDENTICALLY TRUE · EVERY x IS A SOLUTION</div>'; return; }
+  if(R.type==='nosol'){ workEl.innerHTML='<div class="wempty">0 = '+fmt(R.c)+' — CONTRADICTION · NO SOLUTION</div>'; return; }
+  var steps=[];
+  if(R.type==='linear'){
+    steps.push(wstep('01','Coefficient <b>a = 0</b> — not quadratic. The equation is the line <b>'+fmt(R.b)+'x '+(R.c<0?MINUS:'+')+' '+fmt(Math.abs(R.c))+' = 0</b>.'));
+    steps.push(wstep('02','Solve directly: <b>x = −c/b = '+fmt(-R.c)+' / '+fmt(R.b)+'</b> = '+(R.ints?mfrac(R.root[0],R.root[1]):'<span class="mnum">≈ '+fmt(R.rootN)+'</span>')+'.'));
+    workEl.innerHTML=steps.join(''); return;
+  }
+  var a=R.a,b=R.b,c=R.c,D=R.D;
+  var op=(4*a*c<0)?'+':MINUS, mag=fmt(Math.abs(4*a*c));
+  steps.push(wstep('01','Standard form <b>ax² + bx + c = 0</b> → read off <b>a = '+fmt(a)+'</b>, <b>b = '+fmt(b)+'</b>, <b>c = '+fmt(c)+'</b>.'+(R.ints?'':' <span class="wcode">decimal coefficients — values below carry ≈ (9 s.f.)</span>')));
+  var sub='('+fmt(b)+')² '+op+' '+mag;
+  if(R.subtype==='rational'){
+    steps.push(wstep('02','Discriminant: <b>Δ = b² − 4ac = '+sub+' = '+fmt(D)+'</b> — positive and a <b>perfect square</b> → two distinct rational roots; the parabola cuts the x-axis twice.'));
+    steps.push(wstep('03','Quadratic formula: <b>x = '+mfracStr('−b ± √Δ','2a')+'</b> = '+mfracStr(fmt(-b)+' ± √'+fmt(D),2*a)));
+    steps.push(wstep('04','√'+fmt(D)+' = <b>'+fmt(R.s)+'</b> exactly → <b>x₁</b> = '+mfracStr(fmt(-b+R.s),2*a)+' = '+mfrac(-b+R.s,2*a)+' · <b>x₂</b> = '+mfracStr(fmt(-b-R.s),2*a)+' = '+mfrac(-b-R.s,2*a)+'.'));
+    steps.push(wstep('05','Factors over the rationals: <b>'+(a===1?'':fmt(a)+'·')+'(x '+rootTerm(R.r1)+')(x '+rootTerm(R.r2)+')</b>.'));
+    steps.push(wstep('06','Vieta check: <b>x₁ + x₂</b> = −b/a = '+mfrac(-b,a)+' · <b>x₁·x₂</b> = c/a = '+mfrac(c,a)+' <b>✓</b>'));
+  } else if(R.subtype==='double'){
+    steps.push(wstep('02','Discriminant: <b>Δ = b² − 4ac = '+sub+' = 0</b> — one <b>repeated root</b> (multiplicity 2); the vertex rests exactly on the axis — a perfect-square trinomial.'));
+    steps.push(wstep('03','Quadratic formula: <b>x = '+mfracStr('−b ± √0','2a')+'</b> = '+mfracStr(fmt(-b),2*a)+' — the ± collapses.'));
+    steps.push(wstep('04','<b>x = −b/2a = '+mfrac(-b,2*a)+'</b> (×2). The trinomial is the perfect square <b>'+(a===1?'':fmt(a)+'·')+'(x '+rootTerm(R.root)+')²</b>.'));
+    steps.push(wstep('05','Vieta: <b>x₁ + x₂</b> = 2·root = '+mfrac(-b,a)+' · <b>x₁·x₂</b> = root² = '+mfrac(c,a)+' <b>✓</b> (both roots coincide).'));
+  } else if(R.subtype==='surd'){
+    steps.push(wstep('02','Discriminant: <b>Δ = b² − 4ac = '+sub+' = '+fmt(D)+'</b> — positive but <b>not a perfect square</b> → two distinct real, irrational (surd) roots.'));
+    steps.push(wstep('03','Quadratic formula: <b>x = '+mfracStr('−b ± √Δ','2a')+'</b> = '+mfracStr(fmt(-b)+' ± √'+fmt(D),2*a)+'.'));
+    var sim='';
+    if(R.K>1) sim='Simplify the radical: <b>√'+fmt(D)+' = √('+fmt(R.K*R.K)+'·'+fmt(R.R0)+') = '+surdS(R.K,R.R0)+'</b>. ';
+    var gtxt=(R.g>1)?'Common factor gcd('+fmt(Math.abs(-b))+', '+fmt(R.K)+', '+fmt(Math.abs(2*a))+') = <b>'+fmt(R.g)+'</b> → divide numerator and denominator. ':'No common factor left to pull out. ';
+    var fin=(R.q===1)?('<b>x = '+(R.p===0?'':fmt(R.p)+' ')+'± '+surdS(R.k,R.r)+'</b>'):('<b>x = '+mfracStr((R.p===0?'':fmt(R.p)+' ')+'± '+surdS(R.k,R.r),R.q)+'</b>');
+    steps.push(wstep('04',sim+gtxt+fin));
+    steps.push(wstep('05','Vieta (exact — the surds cancel): <b>x₁ + x₂</b> = '+mfrac(-b,a)+' · <b>x₁·x₂</b> = '+mfrac(c,a)+' <b>✓</b>'));
+    steps.push(wstep('06','For reference only: <b>x₁ ≈ '+fmt(R.r1n)+'</b> · <b>x₂ ≈ '+fmt(R.r2n)+'</b>.'));
+  } else if(R.subtype==='complex'){
+    steps.push(wstep('02','Discriminant: <b>Δ = b² − 4ac = '+sub+' = '+fmt(D)+'</b> — <b>negative</b> → no real roots; a complex conjugate pair, and the parabola never touches the x-axis.'));
+    steps.push(wstep('03','Quadratic formula with <b>√Δ = √('+fmt(D)+') = '+surdS(R.K,R.R0)+' <i>i</i></b> (since i² = −1).'));
+    var imFrac=(R.im.den===1)?surdS(R.im.k,R.im.r):mfracStr(surdS(R.im.k,R.im.r),R.im.den);
+    var gline=(R.g>1)?'Reduce the imaginary part by gcd '+fmt(R.g)+'. ':'';
+    steps.push(wstep('04','Real and imaginary parts split: <b>x = −b/2a ± (√(−Δ)/2a)·i</b> = '+mfrac(R.re[0],R.re[1])+' ± '+imFrac+' <i>i</i>. '+gline+'The pair is conjugate — same real part, opposite signs.'));
+    steps.push(wstep('05','Vieta (holds exactly): <b>x₁ + x₂</b> = '+mfrac(-b,a)+' · <b>x₁·x₂</b> = '+mfrac(c,a)+' <b>✓</b>'));
+    steps.push(wstep('06','For reference only: <b>x ≈ '+fmt(R.reN)+' ± '+fmt(R.imN)+' i</b>.'));
+  } else { /* numeric */
+    if(D>0){
+      steps.push(wstep('02','Discriminant: <b>Δ ≈ '+fmt(D)+'</b> — '+(D>0?'positive → two distinct real roots.':(D===0?'zero → one repeated root.':'negative → complex conjugate pair.'))));
+      steps.push(wstep('03','Quadratic formula: <b>x = '+mfracStr('−b ± √Δ','2a')+'</b> = '+mfracStr(fmt(-b)+' ± √'+fmt(D),2*a)+'.'));
+      steps.push(wstep('04','<b>x₁ ≈ '+fmt(R.r1n)+'</b> · <b>x₂ ≈ '+fmt(R.r2n)+'</b>.'));
+    } else if(D===0){
+      steps.push(wstep('02','Discriminant: <b>Δ ≈ 0</b> — one repeated root.'));
+      steps.push(wstep('03','Quadratic formula: <b>x = −b/2a</b> = '+fmt(-b)+'/'+fmt(2*a)+'.'));
+      steps.push(wstep('04','<b>x ≈ '+fmt(R.r1n)+'</b> (×2).'));
+    } else {
+      steps.push(wstep('02','Discriminant: <b>Δ ≈ '+fmt(D)+'</b> — negative → complex conjugate pair; the parabola misses the axis.'));
+      steps.push(wstep('03','Split real and imaginary parts: <b>−b/2a</b> and <b>√(−Δ)/2a</b>.'));
+      steps.push(wstep('04','<b>x ≈ '+fmt(R.reN)+' ± '+fmt(R.imN)+' i</b>.'));
+    }
+    steps.push(wstep('05','Vieta: <b>x₁ + x₂</b> ≈ '+fmt(-b/a)+' · <b>x₁·x₂</b> ≈ '+fmt(c/a)+' <b>✓</b>'));
+  }
+  workEl.innerHTML=steps.join('');
+}
+
+/* ---- live update ---- */
+function shake(){
+  screenEl.classList.remove('err'); void screenEl.offsetWidth; screenEl.classList.add('err');
+}
+screenEl.addEventListener('animationend',function(){ screenEl.classList.remove('err'); });
+
+function update(){
+  var A=parseCoef(inA), B=parseCoef(inB), C=parseCoef(inC);
+  if(A.bad||B.bad||C.bad){
+    state={err:true};
+    echoEl.innerHTML='<span class="eempty">INPUT ERROR</span>';
+    bigEl.innerHTML='<div class="berr">Numbers only — try 1, −5, 6 or 2, 3, −2. Decimals like 1.5 are welcome.</div>';
+    rowsEl.innerHTML=''; workEl.innerHTML='<div class="wempty">FIX THE COEFFICIENTS — THE SOLVER IS WAITING</div>';
+    shake(); drawGraph(); return;
+  }
+  if(A.empty&&B.empty&&C.empty){
+    state={empty:true};
+    echoEl.innerHTML='<span class="eempty">LIVE — TYPE a, b, c</span>';
+    bigEl.innerHTML='<div class="bwait">the screen is live — enter <b>a</b>, <b>b</b> and <b>c</b> above</div>';
+    rowsEl.innerHTML=''; workEl.innerHTML='<div class="wempty">AWAITING COEFFICIENTS — THE PROOF WRITES ITSELF ONCE YOU TYPE</div>';
+    drawGraph(); return;
+  }
+  var a=A.v||0, b=B.v||0, c=C.v||0;
+  renderEcho(a,b,c);
+  var R=solveAll(a,b,c);
+  state={a:a,b:b,c:c,R:R};
+  renderBig(R); renderRows(R); renderWork(R);
+  drawGraph();
+}
+[inA,inB,inC].forEach(function(el){
+  el.addEventListener('input',update);
+  el.addEventListener('focus',function(){ el.select(); });
+});
+
+/* ---- example chips ---- */
+var EX=[
+  {a:'1',b:'-5',c:'6', t:'x²−5x+6'},
+  {a:'2',b:'3', c:'-2',t:'2x²+3x−2'},
+  {a:'1',b:'0', c:'-2',t:'x²−2'},
+  {a:'1',b:'-4',c:'4', t:'x²−4x+4'},
+  {a:'1',b:'1', c:'1', t:'x²+x+1'}
+];
+var chipsWrap=document.getElementById('qChips');
+EX.forEach(function(ex){
+  var btn=document.createElement('button');
+  btn.type='button'; btn.className='exchip'; btn.textContent=ex.t;
+  btn.addEventListener('click',function(){ inA.value=ex.a; inB.value=ex.b; inC.value=ex.c; update(); });
+  chipsWrap.appendChild(btn);
+});
+
+/* ---- mode tabs ---- */
+document.querySelectorAll('.cmode').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    calcRoot.dataset.mode=btn.dataset.m;
+    document.querySelectorAll('.cmode').forEach(function(b){ b.classList.toggle('on',b===btn); });
+    drawGraph();
+  });
+});
+
+/* ---- parabola graph ---- */
+function niceStep(span){
+  var raw=span/8, mag=Math.pow(10,Math.floor(Math.log10(raw))), n=raw/mag;
+  return (n<1.5?1:n<3.5?2:n<7.5?5:10)*mag;
+}
+function tick(v){ if(Math.abs(v)<1e-12) return '0'; var t=parseFloat(v.toPrecision(6)); return (t<0?MINUS:'')+Math.abs(t); }
+function rootsLabel(R){
+  if(R.subtype==='rational') return 'x₁ = '+mfrac(R.r1[0],R.r1[1])+' · x₂ = '+mfrac(R.r2[0],R.r2[1]);
+  if(R.subtype==='double') return 'x = '+mfrac(R.root[0],R.root[1])+' ×2';
+  if(R.subtype==='surd') return (R.q===1)?('x = '+(R.p===0?'':fmt(R.p)+' ')+'± '+surdS(R.k,R.r)):('x = '+mfracStr((R.p===0?'':fmt(R.p)+' ')+'± '+surdS(R.k,R.r),R.q));
+  if(R.subtype==='complex'){ var im=(R.im.den===1)?surdS(R.im.k,R.im.r):mfracStr(surdS(R.im.k,R.im.r),R.im.den); return 'x = '+(R.re[0]!==0?mfrac(R.re[0],R.re[1]):'')+' ± '+im+' i'; }
+  if(R.D>0) return 'x₁ ≈ '+fmt(R.r1n)+' · x₂ ≈ '+fmt(R.r2n);
+  if(R.D===0) return 'x ≈ '+fmt(R.r1n)+' ×2';
+  return 'x ≈ '+fmt(R.reN)+' ± '+fmt(R.imN)+' i';
+}
+function drawGraph(){
+  if(!gCv||calcRoot.dataset.mode!=='graph') return;
+  var dpr=Math.min(window.devicePixelRatio||1,2);
+  var W=gCv.clientWidth, H=gCv.clientHeight;
+  if(!W||!H) return;
+  gCv.width=Math.round(W*dpr); gCv.height=Math.round(H*dpr);
+  var ctx=gCv.getContext('2d');
+  ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H);
+  var cs=getComputedStyle(document.documentElement);
+  var INK=cs.getPropertyValue('--ink').trim(), MUT=cs.getPropertyValue('--muted').trim(),
+      FAINT=cs.getPropertyValue('--faint').trim(), EDGE=cs.getPropertyValue('--edge').trim(),
+      ACC=cs.getPropertyValue('--accent').trim(), AMB=cs.getPropertyValue('--amber').trim(),
+      BG=cs.getPropertyValue('--bg').trim();
+  ctx.font='10px "Space Mono",monospace';
+  if(state.empty||state.err){
+    ctx.fillStyle=FAINT; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText('ENTER COEFFICIENTS — THE PARABOLA DRAWS ITSELF',W/2,H/2);
+    gTag.textContent='—'; gRowsEl.innerHTML=''; return;
+  }
+  var a=state.a, b=state.b, c=state.c, R=state.R;
+  if(a===0&&b===0){
+    ctx.fillStyle=FAINT; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText(c===0?'0 = 0 — NOTHING TO DRAW':'CONSTANT — NO CURVE, NO ROOTS',W/2,H/2);
+    gTag.textContent='CONST'; gRowsEl.innerHTML=''; return;
+  }
+  var f=function(x){ return a*x*x+b*x+c; };
+  var xs=[0];
+  if(a!==0){
+    xs.push(R.h);
+    if(R.type==='quad'&&R.D>=0){ xs.push(R.r1n); if(R.r2n!==R.r1n) xs.push(R.r2n); }
+  } else { xs.push(-c/b); }
+  var x0=Math.min.apply(null,xs), x1=Math.max.apply(null,xs);
+  var span=(x1-x0)||1, padX=Math.max(span*.3,1.2);
+  x0-=padX; x1+=padX;
+  var N=240, y0=Infinity, y1=-Infinity, i, x, y;
+  for(i=0;i<=N;i++){ y=f(x0+(x1-x0)*i/N); if(y<y0)y0=y; if(y>y1)y1=y; }
+  y0=Math.min(y0,0); y1=Math.max(y1,0);
+  var padY=Math.max((y1-y0)*.18,.8); y0-=padY; y1+=padY;
+  var L=46, Rt=W-14, T=16, B=H-28;
+  var X=function(v){ return L+(v-x0)/(x1-x0)*(Rt-L); };
+  var Y=function(v){ return B-(v-y0)/(y1-y0)*(B-T); };
+  /* grid */
+  ctx.lineWidth=1; ctx.strokeStyle=EDGE;
+  var sx=niceStep(x1-x0), sy=niceStep(y1-y0);
+  ctx.fillStyle=MUT; ctx.textAlign='center'; ctx.textBaseline='top';
+  for(i=Math.ceil(x0/sx); i*sx<=x1+1e-9; i++){
+    x=i*sx; var px=X(x);
+    ctx.beginPath(); ctx.moveTo(px,T); ctx.lineTo(px,B); ctx.stroke();
+    ctx.fillText(tick(x),px,B+6);
+  }
+  ctx.textAlign='right'; ctx.textBaseline='middle';
+  for(i=Math.ceil(y0/sy); i*sy<=y1+1e-9; i++){
+    y=i*sy; if(Math.abs(y)<1e-12) continue;
+    var py=Y(y);
+    ctx.beginPath(); ctx.moveTo(L,py); ctx.lineTo(Rt,py); ctx.stroke();
+    ctx.fillText(tick(y),L-6,py);
+  }
+  /* axes */
+  ctx.strokeStyle=FAINT; ctx.lineWidth=1.4;
+  if(x0<=0&&0<=x1){ ctx.beginPath(); ctx.moveTo(X(0),T); ctx.lineTo(X(0),B); ctx.stroke(); }
+  if(y0<=0&&0<=y1){ ctx.beginPath(); ctx.moveTo(L,Y(0)); ctx.lineTo(Rt,Y(0)); ctx.stroke(); }
+  /* axis of symmetry */
+  if(a!==0){
+    ctx.save(); ctx.strokeStyle=FAINT; ctx.setLineDash([5,7]); ctx.lineWidth=1.2;
+    ctx.beginPath(); ctx.moveTo(X(R.h),T); ctx.lineTo(X(R.h),B); ctx.stroke(); ctx.restore();
+  }
+  /* curve */
+  ctx.strokeStyle=ACC; ctx.lineWidth=2.6; ctx.lineJoin='round';
+  ctx.beginPath();
+  for(i=0;i<=N;i++){
+    x=x0+(x1-x0)*i/N;
+    var cx=X(x), cy=Y(f(x));
+    if(i) ctx.lineTo(cx,cy); else ctx.moveTo(cx,cy);
+  }
+  ctx.stroke();
+  /* roots */
+  ctx.font='700 10px "Space Mono",monospace';
+  if(a!==0&&R.type==='quad'&&R.D>=0){
+    var roots=(R.r1n===R.r2n)?[R.r1n]:[R.r1n,R.r2n];
+    roots.forEach(function(rx,j){
+      ctx.beginPath(); ctx.arc(X(rx),Y(0),5.5,0,7);
+      ctx.fillStyle=AMB; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=BG; ctx.stroke();
+      ctx.fillStyle=AMB; ctx.textAlign='center'; ctx.textBaseline='bottom';
+      ctx.fillText((roots.length===1?'x = ':'x'+(j===0?'₁':'₂')+' = ')+fmtP(rx),X(rx),Y(0)-9);
+    });
+  } else if(a===0){
+    var rx=-c/b;
+    ctx.beginPath(); ctx.arc(X(rx),Y(0),5.5,0,7);
+    ctx.fillStyle=AMB; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=BG; ctx.stroke();
+    ctx.fillStyle=AMB; ctx.textAlign='center'; ctx.textBaseline='bottom';
+    ctx.fillText('x = '+fmtP(rx),X(rx),Y(0)-9);
+  }
+  /* vertex */
+  if(a!==0){
+    var k=f(R.h);
+    ctx.beginPath(); ctx.arc(X(R.h),Y(k),5,0,7);
+    ctx.fillStyle=INK; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=BG; ctx.stroke();
+    ctx.fillStyle=MUT; ctx.textAlign='left'; ctx.textBaseline='middle';
+    ctx.fillText('V('+fmtP(R.h)+', '+fmtP(k)+')',X(R.h)+10,Y(k)+(a>0?-12:12));
+  }
+  /* y-intercept */
+  ctx.beginPath(); ctx.arc(X(0),Y(c),3.6,0,7);
+  ctx.fillStyle=BG; ctx.fill(); ctx.strokeStyle=MUT; ctx.lineWidth=1.6; ctx.stroke();
+  /* complex note */
+  if(a!==0&&R.type==='quad'&&R.D<0){
+    ctx.fillStyle=FAINT; ctx.textAlign='center'; ctx.textBaseline='top';
+    ctx.fillText('Δ < 0 · NO REAL ROOTS — THE CURVE MISSES THE AXIS',(L+Rt)/2,T+8);
+  }
+  /* tag + rows */
+  gTag.textContent=(a===0)?'LINEAR':('Δ = '+fmt(R.D));
+  var gr=[];
+  if(R.type==='quad'){
+    gr.push(rowHTML('ROOTS',rootsLabel(R)));
+    gr.push(rowHTML('VERTEX','( '+fmtP(R.h)+' , '+fmtP(-R.D/(4*a))+' )'));
+    gr.push(rowHTML('AXIS','x = '+fmtP(R.h)));
+    gr.push(rowHTML('Y-INT','( 0 , '+fmt(c)+' )'));
+  } else if(R.type==='linear'){
+    gr.push(rowHTML('ROOT','x = '+fmtP(R.rootN)));
+    gr.push(rowHTML('Y-INT','( 0 , '+fmt(c)+' )'));
+  }
+  gRowsEl.innerHTML=gr.join('');
+}
+var rz=null;
+window.addEventListener('resize',function(){ clearTimeout(rz); rz=setTimeout(drawGraph,150); });
+
+/* boot */
+update();
+})();
+</script>
+</body>
+</html>
