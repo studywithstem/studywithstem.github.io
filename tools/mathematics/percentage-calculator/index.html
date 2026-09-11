@@ -1,1 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
 
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Percentage Calculator — Percent of a Number, Percentage Increase &amp; Decrease, Percent Change &amp; What Percent X Is of Y | StudyWithSTEM</title>
+<meta name="description" content="Free online percentage calculator with step-by-step solutions — find what percent X is of Y, calculate percentage increase and decrease, add or subtract a percentage from any number, and convert fractions to percentages. Live, in-browser, no sign-up.">
+<meta name="keywords" content="percentage calculator, percent calculator, percent of a number, what percent of, percentage increase calculator, percentage decrease calculator, percent change formula, add percentage to number, subtract percentage, discount calculator, fraction to percent, percentage difference, StudyWithSTEM tools">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/mathematics/percentage-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Percentage Calculator with Steps — Free Online Tool | StudyWithSTEM">
+<meta property="og:description" content="Four questions, one engine — X% of Y, what percent X is of Y, percent change, and adding or subtracting a percentage. Live step-by-step solutions with exact decimals. Free, no sign-up.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/mathematics/percentage-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/percentage-calculator.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="StudyWithSTEM Percentage Calculator — free online tool with step-by-step solutions">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Percentage Calculator with Steps — Free Online Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Four questions, one engine — X% of Y, what percent X is of Y, percent change, and adding or subtracting a percentage. Live step-by-step solutions with exact decimals. Free, no sign-up.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/percentage-calculator.jpg">
+<meta name="twitter:image:alt" content="StudyWithSTEM Percentage Calculator — free online math tool">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Mathematics", "item": "https://studywithstem.github.io/tools/mathematics/" },
+    { "@type": "ListItem", "position": 4, "name": "Percentage Calculator", "item": "https://studywithstem.github.io/tools/mathematics/percentage-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Percentage Calculator",
+  "url": "https://studywithstem.github.io/tools/mathematics/percentage-calculator/",
+  "description": "Free online percentage calculator with step-by-step solutions: find X% of any number, calculate what percent one number is of another, measure percentage increase and decrease, and add or subtract a percentage — with exact repeating-decimal detection and a check that proves every answer backwards.",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Calculator",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "StudyWithSTEM", "url": "https://studywithstem.github.io/" },
+  "featureList": [
+    "Four question modes: X% of Y, X is what % of Y, percent change, X ± Y%",
+    "Live step-by-step solutions with the check that proves each answer",
+    "Exact rational arithmetic core — no floating-point drift",
+    "Exact repeating-decimal detection with overline notation",
+    "Decimal and negative inputs supported",
+    "Works offline after load; nothing leaves the page"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to use the StudyWithSTEM percentage calculator",
+  "totalTime": "PT2M",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Pick the question", "text": "Four tabs are four questions: FIND (what is X% of Y), IS (X is what percent of Y), CHANGE (the percent change from X to Y) and ADJUST (X plus or minus Y%). The sentence at the top rewrites itself to match." },
+    { "@type": "HowToStep", "position": 2, "name": "Fill the blanks", "text": "Type straight into the sentence — decimals and negative numbers included. The slots grow to fit what you type, and everything recomputes on every keystroke." },
+    { "@type": "HowToStep", "position": 3, "name": "No equals needed", "text": "The screen solves live. The big line is the answer, and the sentence above echoes exactly what you asked." },
+    { "@type": "HowToStep", "position": 4, "name": "Read it every way", "text": "Below the answer: the fraction or decimal form, the multiplier where it applies, and a CHECK row that proves the result by running it backwards." },
+    { "@type": "HowToStep", "position": 5, "name": "Follow the work", "text": "THE WORK panel beneath the screen writes the full method line by line: percent to fraction, the multiplication, any cancellation, and the check." },
+    { "@type": "HowToStep", "position": 6, "name": "Steal the shortcuts", "text": "The field notes pin the mental-math tricks: 10% is one decimal-slide left, 5% is half of that, 25% is half of a half, 50% is just half." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How do I calculate a percentage of a number?", "acceptedAnswer": { "@type": "Answer", "text": "Turn the percent into a decimal (divide it by 100) and multiply. For 15% of 200: 15 ÷ 100 = 0.15, then 0.15 × 200 = 30. The FIND tab does exactly this and shows every line." } },
+    { "@type": "Question", "name": "How do I calculate what percent one number is of another?", "acceptedAnswer": { "@type": "Answer", "text": "Part over whole, times 100. For 30 is what percent of 200: 30 ÷ 200 = 0.15, and 0.15 × 100 = 15%. The IS tab writes these steps live." } },
+    { "@type": "Question", "name": "How do I calculate percentage increase or decrease?", "acceptedAnswer": { "@type": "Answer", "text": "Change divided by the original, times 100. From 40 to 50: the change is +10, the original is 40, so 10 ÷ 40 × 100 = 25 — a 25% increase. A negative result means a decrease." } },
+    { "@type": "Question", "name": "How do I add or subtract a percentage from a number?", "acceptedAnswer": { "@type": "Answer", "text": "Find the percentage of the number, then add or subtract it: 200 + 15% means 15% of 200 = 30, then 200 + 30 = 230. Shortcut: multiply by 1.15 (or 0.85 for minus). The ADJUST tab shows both routes." } },
+    { "@type": "Question", "name": "Why does percent change divide by the original value?", "acceptedAnswer": { "@type": "Answer", "text": "Because percent means 'per hundred of something' — and that something is where you started. The same distance gives different percentages from different starting points: 40 to 50 is a 25% increase, but 50 to 40 is only a 20% decrease. Same 10, different base." } },
+    { "@type": "Question", "name": "What is the difference between percent change and percent difference?", "acceptedAnswer": { "@type": "Answer", "text": "Percent change is directional — it measures the new value against the old one, so order matters. Percent difference is symmetric — it measures two values against their average, and is used when neither is 'the original', such as comparing two experimental results. This tool computes percent change." } },
+    { "@type": "Question", "name": "What does the line over some decimals mean?", "acceptedAnswer": { "@type": "Answer", "text": "It marks a repeating decimal: 33.3 with a bar over the final 3 means 33.333…%, forever, with no rounding. Results like 1 ÷ 3 never terminate, so the calculator shows the exact repeating block instead of pretending it's 33.33." } },
+    { "@type": "Question", "name": "Is it free, and does my input leave the page?", "acceptedAnswer": { "@type": "Answer", "text": "Completely free — no sign-up, no locked features. All arithmetic runs locally in your browser; nothing is recorded or transmitted, and the page keeps working offline once it has loaded." } }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+.btn-ticket.big{padding:15px 26px; font-size:.95rem;}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:0; background:var(--accent);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= TOOL HERO ================= */
+.tool-hero{position:relative; padding:84px 0 66px; border-bottom:1px solid var(--edge); overflow:hidden;}
+.tool-hero::before{
+  content:""; position:absolute; top:-140px; right:-140px; width:460px; height:460px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.15; pointer-events:none;
+}
+.tool-hero .wrap{position:relative; z-index:2;}
+.crumbs{display:flex; align-items:center; gap:10px; flex-wrap:wrap; font:600 .64rem var(--f-mono); letter-spacing:.12em; color:var(--faint); margin-bottom:26px;}
+.crumbs a{color:var(--muted); transition:color .25s;}
+.crumbs a:hover{color:var(--accent);}
+.crumbs b{color:var(--accent); font-weight:600;}
+.tool-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.tool-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.tool-hero h1{font:600 clamp(2.4rem, 5.6vw, 4rem)/1.05 var(--f-disp); letter-spacing:-.02em; margin:20px 0 16px; max-width:18ch;}
+.tool-hero h1 em{color:var(--accent);}
+.tool-hero .lede{max-width:64ch; color:var(--muted); font-size:1.04rem;}
+.hero-chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
+.chip{
+  display:inline-flex; align-items:center; gap:9px; font:700 .6rem var(--f-mono); letter-spacing:.14em;
+  color:var(--muted); border:1px solid var(--edge-strong); border-radius:999px; padding:8px 14px;
+}
+.chip i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+.hero-cta{display:flex; align-items:center; gap:24px; margin-top:32px; flex-wrap:wrap;}
+.hero-ghost{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--muted); text-decoration:underline; text-underline-offset:5px; transition:color .25s;}
+.hero-ghost:hover{color:var(--accent);}
+.tool-hero .updated{
+  margin-top:34px; display:inline-flex; align-items:center; gap:8px;
+  font:600 .64rem var(--f-mono); letter-spacing:.1em; color:var(--faint);
+  border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;
+}
+.tool-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+.hero-glyphs{position:absolute; inset:0; z-index:0; pointer-events:none; user-select:none;}
+.hero-glyphs span{
+  position:absolute; font-family:var(--f-disp); font-style:italic; font-weight:600;
+  color:var(--accent); opacity:.09; animation:glyphFloat 16s ease-in-out infinite;
+}
+@keyframes glyphFloat{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-26px) rotate(4deg);}}
+/* bar chart tableau — columns filling to their percentages */
+.hero-chart{position:absolute; left:0; bottom:-4px; width:100%; height:120px; opacity:.28; pointer-events:none; z-index:0; color:var(--accent);}
+.hero-chart rect{
+  fill:currentColor; transform-box:fill-box; transform-origin:bottom center;
+  transform:scaleY(0); animation:barGrow 1.1s cubic-bezier(.65,0,.2,1) forwards;
+}
+.hero-chart rect:nth-child(1){animation-delay:.08s}
+.hero-chart rect:nth-child(2){animation-delay:.18s}
+.hero-chart rect:nth-child(3){animation-delay:.28s}
+.hero-chart rect:nth-child(4){animation-delay:.38s}
+.hero-chart rect:nth-child(5){animation-delay:.3s}
+.hero-chart rect:nth-child(6){animation-delay:.42s}
+.hero-chart rect:nth-child(7){animation-delay:.54s}
+.hero-chart rect:nth-child(8){animation-delay:.66s}
+@keyframes barGrow{to{transform:scaleY(1);}}
+
+/* ================= SECTION SCAFFOLDING ================= */
+.sm-sec{padding:80px 0; border-top:1px solid var(--edge); scroll-margin-top:90px;}
+main > .sm-sec:first-of-type{border-top:none; padding-top:70px;}
+.sm-head{display:flex; align-items:baseline; gap:18px;}
+.sm-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent); flex:none;}
+.sm-head h2{font:600 clamp(1.7rem, 3.2vw, 2.45rem)/1.12 var(--f-disp); letter-spacing:-.012em;}
+.sm-lede{color:var(--muted); max-width:66ch; margin-top:14px; font-size:1.02rem;}
+
+/* reveal-on-scroll */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .75s ease var(--d,0s), transform .75s cubic-bezier(.2,.7,.3,1) var(--d,0s);}
+.reveal.in{opacity:1; transform:none;}
+
+/* ================= 01 — THE INSTRUMENT (percentage calculator) ================= */
+.tool-grid{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr); gap:22px; max-width:980px; margin:48px auto 0; align-items:start;}
+.calc{
+  position:relative; border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+.calc-top{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid var(--edge); flex-wrap:wrap;}
+.calc-modes{display:flex; gap:7px; flex-wrap:wrap;}
+.cmode{
+  font:700 .62rem var(--f-mono); letter-spacing:.1em; color:var(--muted); cursor:pointer;
+  background:transparent; border:1px solid var(--edge-strong); border-radius:4px; padding:7px 11px;
+  transition:color .22s, border-color .22s, background .22s;
+}
+.cmode:hover{color:var(--accent); border-color:var(--accent);}
+.cmode.on{color:var(--accent-ink); background:var(--accent); border-color:var(--accent);}
+.calc-id{font:700 .6rem var(--f-mono); letter-spacing:.14em; color:var(--faint);}
+
+/* ---- the sentence: question-shaped input row ---- */
+.q-row{
+  display:none; align-items:center; justify-content:center; flex-wrap:wrap;
+  gap:12px 14px; padding:36px 18px 24px;
+  font:500 1.16rem/1.5 var(--f-sans); color:var(--muted);
+}
+.calc[data-mode="find"]   .q-find,
+.calc[data-mode="is"]      .q-is,
+.calc[data-mode="change"]  .q-change,
+.calc[data-mode="adj"]     .q-adj{display:flex;}
+.q-slot{display:inline-flex; align-items:baseline; gap:1px;}
+.q-slot input{
+  width:3ch; min-width:2ch; max-width:10ch; text-align:center;
+  background:transparent; border:none; border-bottom:3px solid var(--edge-strong);
+  color:var(--ink); font:700 1.5rem/1.3 var(--f-mono); padding:0 .18em;
+  transition:border-color .25s;
+}
+.q-slot input:focus{outline:none; border-color:var(--accent);}
+.q-slot input::placeholder{color:var(--faint); font-weight:400; font-size:1rem;}
+.q-unit{font:700 1.3rem var(--f-mono); color:var(--muted);}
+.pmbtn{
+  width:44px; height:44px; flex:none; display:grid; place-items:center; cursor:pointer;
+  background:var(--panel); border:1px solid var(--edge-strong); border-radius:50%;
+  color:var(--muted); font:700 1.5rem/1 var(--f-sans);
+  transition:color .2s, border-color .2s, background .2s, transform .12s;
+}
+.pmbtn:hover{color:var(--accent); border-color:var(--accent); transform:translateY(-1px);}
+.pmbtn:active{transform:scale(.92);}
+.pmbtn.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);}
+
+/* example chips */
+.ex-row{display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap; padding:4px 14px 18px; border-bottom:1px solid var(--edge);}
+.ex-row > .lbl{font:700 .58rem var(--f-mono); letter-spacing:.16em; color:var(--faint);}
+.exchip{
+  cursor:pointer; background:none; border:1px solid var(--edge-strong); border-radius:999px;
+  color:var(--muted); font:700 .68rem var(--f-mono); padding:6px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.exchip:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* ---- screen: echo + big result + equivalent rows ---- */
+.calc-screen{padding:16px 18px 18px; border-bottom:1px solid var(--edge);}
+.calc-screen.err{animation:calcShake .38s ease;}
+@keyframes calcShake{20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
+.fc-echo{text-align:center; font:600 1.02rem var(--f-mono); color:var(--muted); min-height:1.5em;}
+.fc-echo .eop{color:var(--accent); font-weight:700; padding:0 .28em;}
+.fc-echo .eempty{color:var(--faint); font-size:.72rem; letter-spacing:.16em;}
+.ev{color:var(--ink); font-weight:700;}
+.fc-big{display:flex; align-items:center; justify-content:center; min-height:96px; padding:8px 0 2px;}
+.bigin{display:inline-flex; align-items:baseline; line-height:1; color:var(--ink);}
+.bint{font:700 clamp(2.1rem,6vw,2.9rem) var(--f-mono); letter-spacing:-.02em;}
+.bunit{font:700 clamp(1.5rem,4vw,2.1rem) var(--f-mono); color:var(--faint); margin-left:.16em;}
+.brest{font:700 2.4rem var(--f-mono); color:var(--faint);}
+.berr{font:600 .95rem var(--f-sans); color:var(--amber-deep); text-align:center; padding:0 12px; max-width:40ch;}
+.fc-rows{display:flex; justify-content:center; flex-wrap:wrap; gap:2px 0; margin-top:14px; border-top:1px dashed var(--edge); padding-top:13px;}
+.fc-rows:empty{display:none; margin:0; padding:0; border:none;}
+.frow{display:flex; align-items:center; gap:10px; padding:4px 16px; position:relative;}
+.frow + .frow::before{content:""; position:absolute; left:0; top:22%; bottom:22%; width:1px; background:var(--edge);}
+.fl{font-size:.56rem; letter-spacing:.14em; color:var(--faint);}
+.fv{font:600 1.02rem var(--f-mono); color:var(--muted); display:flex; align-items:center; line-height:1.45;}
+.fv .mfrac, .fv .mnum{color:var(--ink);}
+.ok{color:var(--accent); font-weight:700;}
+
+/* inline mini fractions (work / rows) */
+.mnum{font-family:var(--f-mono); font-weight:600;}
+.mfrac{
+  display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle;
+  margin:0 .14em; font-family:var(--f-mono); font-weight:600; line-height:1.18;
+}
+.mfrac .mn{border-bottom:.09em solid currentColor; padding:0 .24em .05em;}
+.mfrac .md{padding:.05em .24em 0;}
+.ovl{color:var(--accent); text-decoration:overline; text-decoration-thickness:.09em; padding:0 .02em;}
+
+/* ---- the work: step-by-step proof ---- */
+.work{border-top:1px solid var(--edge); padding:16px 22px 20px;}
+.work-title{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint); text-transform:uppercase;
+  padding-bottom:10px; border-bottom:1px solid var(--edge); margin-bottom:4px;
+}
+.work-title .live{color:var(--accent); display:inline-flex; align-items:center; gap:8px;}
+.wstep{display:flex; gap:14px; padding:11px 2px; border-bottom:1px dashed var(--edge); font-size:.92rem; color:var(--muted); line-height:1.75;}
+.wstep:last-child{border-bottom:none;}
+.wstep .wi{font-size:.62rem; letter-spacing:.1em; color:var(--accent); padding-top:.45em; flex:none;}
+.wstep .wt b{font-family:var(--f-mono); color:var(--ink);}
+.wstep .wt i{font-style:italic;}
+.wstep .mfrac, .wstep .mnum{color:var(--ink);}
+.wempty{color:var(--faint); font-size:.66rem; letter-spacing:.14em;}
+
+/* field notes panel */
+.notes{
+  border:1px solid var(--edge-strong); background:var(--panel); padding:24px 24px 20px;
+  clip-path:polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+.notes h3{
+  font:700 .66rem var(--f-mono); letter-spacing:.18em; color:var(--accent); text-transform:uppercase;
+  padding-bottom:14px; border-bottom:1px solid var(--edge); margin-bottom:14px;
+  display:flex; justify-content:space-between; gap:10px;
+}
+.notes h3 span:last-child{color:var(--faint);}
+.notes ul{display:grid; gap:14px;}
+.notes li{position:relative; padding-left:20px; color:var(--muted); font-size:.88rem; line-height:1.55;}
+.notes li::before{content:"▸"; position:absolute; left:0; top:0; color:var(--accent); font-size:.8rem;}
+.notes li b{color:var(--ink); font-weight:600;}
+
+.tool-specs{
+  display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap;
+  margin-top:28px; font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--faint); text-transform:uppercase;
+}
+
+/* ================= 02 — HOW TO USE (steps + worked example) ================= */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:46px; max-width:1080px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:26px 24px 22px;
+  clip-path:polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  transition:border-color .3s, transform .3s;
+}
+.step:hover{border-color:var(--edge-strong); transform:translateY(-4px);}
+.step .n{font:700 .62rem var(--f-mono); letter-spacing:.16em; color:var(--accent);}
+.step h3{font:600 1.3rem/1.18 var(--f-disp); letter-spacing:-.008em; margin:12px 0 9px;}
+.step p{color:var(--muted); font-size:.92rem;}
+.step-demo{margin-top:16px; padding-top:12px; border-top:1px dashed var(--edge-strong);
+  font:600 .8rem var(--f-mono); color:var(--muted);}
+.step-demo b{color:var(--accent); font-weight:700;}
+
+/* worked example — terminal file-tree look */
+.sm-tree{
+  margin-top:46px; max-width:760px; border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  padding:26px 30px 24px;
+}
+.sm-tree-title{
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+  font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);
+  padding-bottom:15px; border-bottom:1px solid var(--edge); margin-bottom:12px;
+}
+.sm-tree-title .root{color:var(--accent);}
+.tree-root{display:block; font:600 .95rem var(--f-mono); color:var(--accent); padding:5px 0 3px;}
+.tree-line{display:flex; align-items:baseline; padding:7px 0;}
+.tl-name{font:600 .85rem var(--f-mono); color:var(--muted); white-space:nowrap;}
+.tl-dots{flex:1; min-width:18px; border-bottom:1px dotted var(--edge-strong); margin:0 12px; transform:translateY(-3px);}
+.tl-note{font:700 .58rem var(--f-mono); letter-spacing:.14em; color:var(--faint); text-transform:uppercase; white-space:nowrap;}
+.tree-sum{
+  display:flex; align-items:center; gap:10px; margin-top:14px; padding-top:14px; border-top:1px solid var(--edge);
+  font:700 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint); text-transform:uppercase;
+}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+/* ================= 03 — FAQ ================= */
+.faq{margin-top:46px; border-top:1px solid var(--edge-strong); max-width:860px;}
+.faq-item{border-bottom:1px solid var(--edge);}
+.faq-item summary{list-style:none; cursor:pointer; display:flex; align-items:baseline; gap:18px; padding:22px 6px;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.q-n{font:700 .62rem var(--f-mono); letter-spacing:.12em; color:var(--accent); flex:none;}
+.q-t{font:600 1.16rem/1.3 var(--f-disp); letter-spacing:-.005em; flex:1; transition:color .25s;}
+.q-x{position:relative; width:14px; height:14px; flex:none; align-self:center;}
+.q-x::before, .q-x::after{content:""; position:absolute; background:var(--faint); transition:transform .3s ease, background .3s;}
+.q-x::before{top:6px; left:0; width:14px; height:2px;}
+.q-x::after{left:6px; top:0; width:2px; height:14px;}
+.faq-item[open] .q-x::before, .faq-item[open] .q-x::after{background:var(--accent);}
+.faq-item[open] .q-x::after{transform:rotate(90deg);}
+.faq-item .a{padding:2px 6px 26px 44px; color:var(--muted); max-width:70ch; font-size:.95rem; animation:faqIn .4s ease;}
+.faq-item .a b{color:var(--ink); font-weight:600;}
+@keyframes faqIn{from{opacity:0; transform:translateY(-6px);} to{opacity:1; transform:none;}}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);}}
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:980px){
+  .tool-grid{grid-template-columns:1fr; max-width:640px;}
+  .steps{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps{grid-template-columns:1fr;}
+  .sm-sec{padding:62px 0;}
+  .sm-tree{padding:20px 18px 18px;}
+  .tl-note{display:none;}
+  .tl-dots{margin:0 8px;}
+  .faq-item .a{padding-left:6px;}
+  .q-row{font-size:1rem; gap:8px 10px; padding:26px 12px 18px;}
+  .q-slot input{font-size:1.2rem;}
+  .q-unit{font-size:1.05rem;}
+  .pmbtn{width:38px; height:38px; font-size:1.25rem;}
+  .frow{padding:4px 10px;}
+  .work{padding:14px 16px 18px;}
+  .fc-echo{font-size:.92rem;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ TOOL HERO ============ -->
+<header class="tool-hero">
+  <div class="hero-glyphs" aria-hidden="true">
+    <span style="left:5%;  top:18%;     font-size:150px; animation-duration:17s;">%</span>
+    <span style="right:7%; top:12%;     font-size:170px; animation-duration:21s; animation-delay:-6s; color:var(--amber);">%</span>
+    <span style="left:12%; bottom:14%;  font-size:110px; animation-duration:14s; animation-delay:-3s;">½</span>
+    <span style="right:18%; bottom:20%; font-size:96px;  animation-duration:19s; animation-delay:-9s; color:var(--amber);">¼</span>
+    <span style="left:38%; top:8%;     font-size:76px;  animation-duration:12s; animation-delay:-2s;">¾</span>
+    <span style="right:40%; bottom:10%; font-size:84px;  animation-duration:16s; animation-delay:-5s;">⅕</span>
+    <span style="right:3%; bottom:48%; font-size:96px;  animation-duration:18s; animation-delay:-4s; color:var(--amber);">‰</span>
+    <span style="left:55%; top:12%;    font-size:66px;  animation-duration:13s; animation-delay:-7s; color:var(--amber);">⅓</span>
+  </div>
+  <svg class="hero-chart" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true">
+    <rect x="80"   width="76" height="26"  y="104"/>
+    <rect x="200"  width="76" height="52"  y="78"/>
+    <rect x="320"  width="76" height="78"  y="52"/>
+    <rect x="440"  width="76" height="104" y="26"/>
+    <rect x="940"  width="76" height="39"  y="91"/>
+    <rect x="1060" width="76" height="65"  y="65"/>
+    <rect x="1180" width="76" height="91"  y="39"/>
+    <rect x="1300" width="76" height="130" y="0"/>
+  </svg>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">HOME</a><span>/</span><a href="/tools/">TOOLS</a><span>/</span><a href="/tools/mathematics/">MATHEMATICS</a><span>/</span><b>PERCENTAGE-CALCULATOR</b>
+    </nav>
+    <p class="kicker">TOOL Nº 03 — MATHEMATICS</p>
+    <h1>The percentage <em>calculator.</em></h1>
+    <p class="lede">Four questions, one engine. Find any percent of a number, work out what percent one number is of another, measure the change from one value to another, or add and subtract a percentage — every answer arrives live as you type, with the full worked method beneath it: the fraction conversion, the multiplication, the cancellation, and the check that proves it backwards. Free forever, no sign-up, and nothing you type ever leaves the page.</p>
+    <div class="hero-chips">
+      <span class="chip"><i></i>FREE FOREVER</span>
+      <span class="chip"><i></i>NO SIGN-UP</span>
+      <span class="chip"><i></i>4 QUESTION MODES</span>
+      <span class="chip"><i></i>LIVE WORKED SOLUTION</span>
+      <span class="chip"><i></i>EXACT DECIMALS</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn-ticket big" href="#calculator">
+        <span>Open the calculator</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+      <a class="hero-ghost" href="#how-to">HOW IT WORKS ↓</a>
+    </div>
+    <span class="updated"><i></i>4 MODES · 2 BLANKS · EXACT RATIONAL ARITHMETIC · 0 TRACKING</span>
+  </div>
+</header>
+
+<!-- ============ TOOL + HOW-TO + FAQ ============ -->
+<main>
+
+  <!-- ============ 01 — THE INSTRUMENT ============ -->
+  <section class="sm-sec" id="calculator">
+    <div class="wrap">
+      <div class="sm-head reveal">
+        <span class="sm-idx mono">01</span>
+        <h2>The instrument.</h2>
+      </div>
+      <p class="sm-lede reveal" style="--d:.06s">Pick a question, fill the blanks — the sentence is the interface. The answer solves live on every keystroke, and beneath the screen the complete written proof assembles itself: percent to fraction, the arithmetic, any cancellation, and the check that runs the result backwards.</p>
+
+      <noscript>
+        <p style="text-align:center; color:var(--amber-deep); font:600 .95rem var(--f-sans); padding:18px 0;">This calculator runs on JavaScript — enable it to compute.</p>
+      </noscript>
+
+      <div class="tool-grid">
+        <div class="reveal" style="--d:.1s">
+          <div class="calc" id="pctCalc" data-mode="find">
+
+            <div class="calc-top">
+              <div class="calc-modes">
+                <button type="button" class="cmode on" data-mode="find" aria-pressed="true">FIND</button>
+                <button type="button" class="cmode" data-mode="is" aria-pressed="false">IS</button>
+                <button type="button" class="cmode" data-mode="change" aria-pressed="false">CHANGE</button>
+                <button type="button" class="cmode" data-mode="adj" aria-pressed="false">ADJUST</button>
+              </div>
+              <span class="calc-id mono">SWS-PC/01 · 4 QUESTIONS</span>
+            </div>
+
+            <!-- FIND: what is X% of Y? -->
+            <div class="q-row q-find">
+              <span>What is</span>
+              <span class="q-slot"><input id="fa" type="text" inputmode="decimal" value="15" maxlength="6" placeholder="—" aria-label="The percent" autocomplete="off"><span class="q-unit">%</span></span>
+              <span>of</span>
+              <span class="q-slot"><input id="fb" type="text" inputmode="decimal" value="200" maxlength="6" placeholder="—" aria-label="The number" autocomplete="off"></span>
+              <span>?</span>
+            </div>
+
+            <!-- IS: X is what percent of Y? -->
+            <div class="q-row q-is">
+              <span class="q-slot"><input id="ia" type="text" inputmode="decimal" value="30" maxlength="6" placeholder="—" aria-label="The part" autocomplete="off"></span>
+              <span>is what percent of</span>
+              <span class="q-slot"><input id="ib" type="text" inputmode="decimal" value="200" maxlength="6" placeholder="—" aria-label="The whole" autocomplete="off"></span>
+              <span>?</span>
+            </div>
+
+            <!-- CHANGE: percent change from X to Y -->
+            <div class="q-row q-change">
+              <span>Percent change from</span>
+              <span class="q-slot"><input id="ca" type="text" inputmode="decimal" value="40" maxlength="6" placeholder="—" aria-label="The original value" autocomplete="off"></span>
+              <span>to</span>
+              <span class="q-slot"><input id="cb" type="text" inputmode="decimal" value="50" maxlength="6" placeholder="—" aria-label="The new value" autocomplete="off"></span>
+              <span>?</span>
+            </div>
+
+            <!-- ADJUST: X ± Y% -->
+            <div class="q-row q-adj">
+              <span class="q-slot"><input id="aa" type="text" inputmode="decimal" value="200" maxlength="6" placeholder="—" aria-label="The number" autocomplete="off"></span>
+              <button type="button" class="pmbtn on" id="pmBtn" aria-label="Switch between adding and subtracting the percentage">+</button>
+              <span class="q-slot"><input id="ab" type="text" inputmode="decimal" value="15" maxlength="6" placeholder="—" aria-label="The percentage to add or subtract" autocomplete="off"><span class="q-unit">%</span></span>
+            </div>
+
+            <!-- example chips -->
+            <div class="ex-row">
+              <span class="lbl mono">TRY</span>
+              <button type="button" class="exchip mono" data-ex="0">15% OF 200</button>
+              <button type="button" class="exchip mono" data-ex="1">30 IS ?% OF 200</button>
+              <button type="button" class="exchip mono" data-ex="2">40 → 50</button>
+              <button type="button" class="exchip mono" data-ex="3">200 + 15%</button>
+              <button type="button" class="exchip mono" data-ex="4">80 → 50</button>
+            </div>
+
+            <!-- screen -->
+            <div class="calc-screen" id="fcScreen">
+              <div class="fc-echo" id="fcEcho"></div>
+              <div class="fc-big" id="fcBig" role="status" aria-live="polite"></div>
+              <div class="fc-rows" id="fcRows"></div>
+            </div>
+
+            <!-- the work -->
+            <div class="work">
+              <div class="work-title">
+                <span>THE WORK — STEP BY STEP</span>
+                <span class="live">LIVE<span class="cursor"></span></span>
+              </div>
+              <ol id="workList"></ol>
+            </div>
+
+          </div>
+        </div>
+
+        <aside class="notes reveal" style="--d:.16s">
+          <h3><span>FIELD NOTES</span><span>PC/01</span></h3>
+          <ul>
+            <li><b>The tool is sentence-shaped.</b> Read the question, fill the blanks, done — the sentence rewrites itself for each tab.</li>
+            <li><b>There is no equals button.</b> Everything recomputes on every keystroke — the work below the screen is the proof, not decoration.</li>
+            <li><b>Every result is checked backwards.</b> The CHECK row runs the answer in reverse — if it doesn't land back on your input, something's wrong.</li>
+            <li><b>Repeating results wear an overline.</b> 33.3̄% means 33.333…%, forever — exact, never rounded.</li>
+            <li><b>The core is exact rational arithmetic.</b> No floating point touches the numbers until the display, and even there it's long division, not rounding.</li>
+            <li><b>Mental math, pinned:</b> 10% is one decimal-slide left · 5% is half of that · 15% is 10% + half of 5% · 25% is half of a half · 50% is just half.</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="tool-specs mono reveal" style="--d:.2s">
+        <span>SWS-PC/01</span><span>·</span><span>4 QUESTION MODES</span><span>·</span><span>EXACT RATIONAL CORE</span><span>·</span><span>0 TRACKING</span>
+        <span class="cursor"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 — HOW TO USE IT ============ -->
+  <section class="sm-sec" id="how-to">
+    <div class="wrap">
+      <div class="sm-head reveal">
+        <span class="sm-idx mono">02</span>
+        <h2>How to use it.</h2>
+      </div>
+      <p class="sm-lede reveal" style="--d:.06s">Ninety seconds to full fluency — the interface is a sentence. If you can ask the question, you can already use the tool.</p>
+
+      <div class="steps">
+        <article class="step reveal" style="--d:.08s">
+          <span class="n mono">STEP 01</span>
+          <h3>Pick the question.</h3>
+          <p>Four tabs, four questions: FIND (what is X% of Y), IS (X is what % of Y), CHANGE (percent change from X to Y) and ADJUST (X ± Y%). The sentence at the top rewrites itself to match.</p>
+          <p class="step-demo">TAB <b>→ SENTENCE</b></p>
+        </article>
+
+        <article class="step reveal" style="--d:.12s">
+          <span class="n mono">STEP 02</span>
+          <h3>Fill the blanks.</h3>
+          <p>Type straight into the sentence — decimals and negative numbers included. The slots grow and shrink to fit exactly what you type.</p>
+          <p class="step-demo">15 · 200 <b>→ 15% OF 200</b></p>
+        </article>
+
+        <article class="step reveal" style="--d:.16s">
+          <span class="n mono">STEP 03</span>
+          <h3>No equals needed.</h3>
+          <p>The screen solves live on every keystroke. The big line is the answer; the sentence above echoes exactly what you asked, so you can always see the question and its result together.</p>
+          <p class="step-demo">15% OF 200 <b>→ 30</b></p>
+        </article>
+
+        <article class="step reveal" style="--d:.2s">
+          <span class="n mono">STEP 04</span>
+          <h3>Read it every way.</h3>
+          <p>Below the answer: the fraction or decimal form, the multiplier where it applies, and a CHECK row that proves the result by running it backwards.</p>
+          <p class="step-demo">CHECK: 30 ÷ 200 <b>= 15% ✓</b></p>
+        </article>
+
+        <article class="step reveal" style="--d:.24s">
+          <span class="n mono">STEP 05</span>
+          <h3>Follow the work.</h3>
+          <p>THE WORK panel writes the method the way a margin would — percent to fraction, the multiplication, any cancellation, and the check. Switch tabs freely; each question remembers its own numbers.</p>
+          <p class="step-demo">15% = 3/20 × 200 <b>= 30</b></p>
+        </article>
+
+        <article class="step reveal" style="--d:.28s">
+          <span class="n mono">STEP 06</span>
+          <h3>Steal the shortcuts.</h3>
+          <p>The field notes pin the mental-math tricks: 10% is one decimal-slide left, 5% is half of that, 25% is half of a half, 50% is just half. Compute in your head; verify here.</p>
+          <p class="step-demo">10% OF 63 <b>= 6.3</b></p>
+        </article>
+      </div>
+
+      <div class="sm-tree reveal" style="--d:.1s">
+        <div class="sm-tree-title">
+          <span class="root mono">studywithstem:worked-example</span>
+          <span class="mono">ONE CALCULATION</span>
+        </div>
+
+        <span class="tree-root mono">15% of 200</span>
+
+        <div class="tree-line"><span class="tl-name mono">├── percent</span><span class="tl-dots"></span><span class="tl-note mono">15/100 = 3/20</span></div>
+        <div class="tree-line"><span class="tl-name mono">├── of</span><span class="tl-dots"></span><span class="tl-note mono">multiply: 3/20 × 200</span></div>
+        <div class="tree-line"><span class="tl-name mono">├── cancel</span><span class="tl-dots"></span><span class="tl-note mono">200 ÷ 20 = 10</span></div>
+        <div class="tree-line"><span class="tl-name mono">├── multiply</span><span class="tl-dots"></span><span class="tl-note mono">3 × 10 = 30</span></div>
+        <div class="tree-line"><span class="tl-name mono">└── check</span><span class="tl-dots"></span><span class="tl-note mono">30 ÷ 200 = 15%</span></div>
+
+        <div class="tree-sum">
+          <span class="mono">RESULT 30 · EXACT · CHECKED BOTH WAYS</span>
+          <span class="cursor"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 — FAQ ============ -->
+  <section class="sm-sec" id="faq">
+    <div class="wrap">
+      <div class="sm-head reveal">
+        <span class="sm-idx mono">03</span>
+        <h2>Frequently asked.</h2>
+      </div>
+      <p class="sm-lede reveal" style="--d:.06s">The questions that keep coming back about percentages — answered once, in full.</p>
+
+      <div class="faq">
+        <details class="faq-item reveal" style="--d:.06s">
+          <summary>
+            <span class="q-n mono">Q1</span>
+            <span class="q-t">How do I calculate a percentage of a number?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p>Turn the percent into a decimal (divide it by 100) and multiply. For <b>15% of 200</b>: 15 ÷ 100 = 0.15, then 0.15 × 200 = <b>30</b>. The FIND tab does exactly this and shows every line.</p></div>
+        </details>
+
+        <details class="faq-item reveal" style="--d:.09s">
+          <summary>
+            <span class="q-n mono">Q2</span>
+            <span class="q-t">How do I calculate what percent one number is of another?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p><b>Part over whole, times 100.</b> For 30 is what percent of 200: 30 ÷ 200 = 0.15, and 0.15 × 100 = <b>15%</b>. The IS tab writes these steps live.</p></div>
+        </details>
+
+        <details class="faq-item reveal" style="--d:.12s">
+          <summary>
+            <span class="q-n mono">Q3</span>
+            <span class="q-t">How do I calculate percentage increase or decrease?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p><b>Change divided by the original, times 100.</b> From 40 to 50: the change is +10, the original is 40, so 10 ÷ 40 × 100 = <b>25%</b> — a 25% increase. A negative result means a decrease. The CHANGE tab measures and checks both.</p></div>
+        </details>
+
+        <details class="faq-item reveal" style="--d:.15s">
+          <summary>
+            <span class="q-n mono">Q4</span>
+            <span class="q-t">How do I add or subtract a percentage from a number?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p>Find the percentage of the number, then add or subtract it: 200 + 15% means 15% of 200 = 30, then 200 + 30 = <b>230</b>. Shortcut: multiply by <b>1.15</b> (or 0.85 for minus). The ADJUST tab shows both routes, every time.</p></div>
+        </details>
+
+        <details class="faq-item reveal" style="--d:.18s">
+          <summary>
+            <span class="q-n mono">Q5</span>
+            <span class="q-t">Why does percent change divide by the original value?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p>Because percent means <b>"per hundred of something"</b> — and that something is where you started. The same distance gives different percentages from different starting points: 40 → 50 is a 25% increase, but 50 → 40 is only a 20% decrease. Same 10, different base.</p></div>
+        </details>
+
+        <details class="faq-item reveal" style="--d:.21s">
+          <summary>
+            <span class="q-n mono">Q6</span>
+            <span class="q-t">What is the difference between percent change and percent difference?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p><b>Percent change</b> is directional — it measures the new value against the old one, so order matters. <b>Percent difference</b> is symmetric — it measures two values against their average, and is used when neither is "the original", such as comparing two experimental results. This tool computes percent change.</p></div>
+        </details>
+
+        <details class="faq-item reveal" style="--d:.24s">
+          <summary>
+            <span class="q-n mono">Q7</span>
+            <span class="q-t">What does the line over some decimals mean?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p>It marks a <b>repeating decimal</b>: 33.3 with a bar over the final 3 means 33.333…%, forever, with no rounding. Results like 1 ÷ 3 never terminate, so the calculator shows the exact repeating block instead of pretending it's 33.33.</p></div>
+        </details>
+
+        <details class="faq-item reveal" style="--d:.27s">
+          <summary>
+            <span class="q-n mono">Q8</span>
+            <span class="q-t">Is it free, and does my input leave the page?</span>
+            <span class="q-x" aria-hidden="true"></span>
+          </summary>
+          <div class="a"><p><b>Completely free</b> — no sign-up, no locked features. All arithmetic runs locally in your browser; nothing is recorded or transmitted, and the page keeps working offline once it has loaded.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER — same footer as every page ============ -->
+<!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
+<section class="pre-footer" id="subscribe">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">SUBSCRIBE</span>
+      <h2>Never miss a <span class="hl">drop.</span></h2>
+      <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
+      <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Poster-deep STEM infographics, engineered to stick. New drop every Friday.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span>studywithstem@gmail.com<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Post</a></li>
+          <li><a href="/page/about/">About</a></li>
+          <li><a href="/page/faq/">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/page/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="/page/copyrights/">Copyrights</a></li>
+          <li><a href="/page/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/></svg>
+            Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="foot-mid">
+      <span class="foot-meta" id="footYear">© STUDYWITHSTEM</span>
+      <span class="foot-meta">DESIGNED &amp; ENGINEERED FOR THE CURIOUS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================
+   BASICS
+========================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS3D = typeof THREE !== 'undefined';
+
+/* =========================================================
+   THEME SYSTEM — one source of truth for CSS *and* WebGL
+========================================================= */
+let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
+let themeTarget = themeMix;
+const themed = [];
+
+function applyRec(r, mix){
+  r.m.color.copy(r.d).lerp(r.l, mix);
+  r.m.opacity = r.dOp + (r.lOp - r.dOp) * mix;
+}
+function themedMat(mat, darkHex, lightHex, darkOp, lightOp){
+  const rec = { m: mat, d: new THREE.Color(darkHex), l: new THREE.Color(lightHex), dOp: darkOp, lOp: lightOp };
+  mat.transparent = true;
+  themed.push(rec);
+  applyRec(rec, themeMix);
+  return mat;
+}
+
+const themeBtn = $('#themeToggle');
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem('sws-theme', t); } catch(e){}
+  themeTarget = t === 'light' ? 1 : 0;
+  if (themeBtn) themeBtn.setAttribute('aria-pressed', t === 'light');
+  document.body.classList.add('theme-anim');
+  clearTimeout(setTheme._t);
+  setTheme._t = setTimeout(() => document.body.classList.remove('theme-anim'), 600);
+}
+themeBtn && themeBtn.addEventListener('click', () =>
+  setTheme(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'));
+
+/* =========================================================
+   NAV — hide on scroll down, progress hairline
+========================================================= */
+const nav = $('#nav');
+let lastY = scrollY;
+addEventListener('scroll', () => {
+  const y = scrollY;
+  nav.classList.toggle('scrolled', y > 8);
+  if (y > lastY && y > 220 && !document.body.classList.contains('menu-open')) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  const h = document.documentElement;
+  const p = h.scrollHeight - innerHeight;
+  const bar = $('#navProg');
+  if (bar) bar.style.width = (p > 0 ? Math.min(y / p, 1) * 100 : 0) + '%';
+}, { passive: true });
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+const burger = $('#burger');
+burger && burger.addEventListener('click', () => {
+  const open = document.body.classList.toggle('menu-open');
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+ $$('#mmenu a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('menu-open')));
+
+/* =========================================================
+   REVEAL-ON-SCROLL (+ footer stagger)
+========================================================= */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .12 });
+ $$('.reveal').forEach(el => io.observe(el));
+const footer = $('#footer');
+footer && io.observe(footer);
+
+/* =========================================================
+   FOOT YEAR + BACK TOP
+========================================================= */
+const fy = $('#footYear');
+if (fy) fy.textContent = '© ' + new Date().getFullYear() + ' STUDYWITHSTEM';
+const bt = $('#backTop');
+bt && bt.addEventListener('click', () => scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+/* =========================================================
+   STARFIELD — footer canvas (Three.js)
+========================================================= */
+(function(){
+  const canvas = $('#starfield');
+  if (!HAS3D || RM || !canvas){ if (canvas) canvas.style.display = 'none'; return; }
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, 2, .1, 200);
+  camera.position.set(0, 0, 26);
+
+  function cloud(n, spread, size, dHex, lHex, dOp, lOp){
+    const geo = new THREE.BufferGeometry();
+    const pos = new Float32Array(n * 3);
+    for (let i = 0; i < n; i++){
+      pos[i*3]   = (Math.random() - .5) * spread;
+      pos[i*3+1] = (Math.random() - .5) * spread * .5;
+      pos[i*3+2] = (Math.random() - .5) * spread * .8;
+    }
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const mat = new THREE.PointsMaterial({ size, sizeAttenuation: true, depthWrite: false, transparent: true });
+    themedMat(mat, dHex, lHex, dOp, lOp);
+    const p = new THREE.Points(geo, mat);
+    scene.add(p);
+    return p;
+  }
+
+  const stars = cloud(520, 90, .16, 0x6FE3D0, 0x0E7C87, .75, .5);
+  const dust  = cloud(240, 90, .07, 0xF1EDE2, 0x0B2545, .5, .35);
+
+  const ringGeo = new THREE.BufferGeometry().setFromPoints(
+    Array.from({ length: 120 }, (_, i) => {
+      const a = i / 119 * Math.PI * 2;
+      return new THREE.Vector3(Math.cos(a) * 22, Math.sin(a) * 7, -4);
+    })
+  );
+  const ringMat = new THREE.LineBasicMaterial({ transparent: true });
+  themedMat(ringMat, 0x3ED9B5, 0x1B9AA6, .28, .3);
+  const ring = new THREE.LineLoop(ringGeo, ringMat);
+  ring.rotation.z = .18;
+  scene.add(ring);
+
+  let mx = 0, my = 0;
+  addEventListener('pointermove', e => {
+    mx = e.clientX / innerWidth - .5;
+    my = e.clientY / innerHeight - .5;
+  }, { passive: true });
+
+  let visible = true;
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; }, { threshold: .02 }).observe(canvas);
+
+  function resize(){
+    const w = canvas.clientWidth || 1, h = canvas.clientHeight || 1;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  addEventListener('resize', resize);
+
+  let t = 0;
+  (function loop(){
+    requestAnimationFrame(loop);
+    if (!visible) return;
+    t += .0018;
+    stars.rotation.y =  t * .6;
+    dust.rotation.y  = -t * .4;
+    ring.rotation.z  = .18 + t * .15;
+    camera.position.x += ( mx * 3 - camera.position.x) * .04;
+    camera.position.y += (-my * 2 - camera.position.y) * .04;
+    camera.lookAt(0, 0, 0);
+    if (themeMix !== themeTarget){
+      themeMix += (themeTarget - themeMix) * .09;
+      if (Math.abs(themeTarget - themeMix) < .001) themeMix = themeTarget;
+      themed.forEach(r => applyRec(r, themeMix));
+    }
+    renderer.render(scene, camera);
+  })();
+})();
+
+/* =========================================================
+   PERCENTAGE CALCULATOR — SWS-PC/01
+   Four questions, one exact rational engine. Inputs parse
+   to {n, d}; every operation is integer-exact. Decimals
+   appear only at the display — via long division, with
+   repeating blocks overlined, never silently rounded.
+========================================================= */
+(function(){
+  'use strict';
+
+  const calcEl = document.getElementById('pctCalc');
+  if (!calcEl) return;
+  const echoEl = document.getElementById('fcEcho');
+  const bigEl  = document.getElementById('fcBig');
+  const rowsEl = document.getElementById('fcRows');
+  const listEl = document.getElementById('workList');
+  const scrEl  = document.getElementById('fcScreen');
+  const pmBtn  = document.getElementById('pmBtn');
+  const $i = id => document.getElementById(id);
+
+  let MODE = 'find';
+  let SIGN = '+';
+  let lastErr = '';
+  const H = { n: 100, d: 1 };   // one hundred
+  const ONE = { n: 1, d: 1 };
+
+  /* ---------- exact rational core ---------- */
+  function gcd(a, b){ a = Math.abs(a); b = Math.abs(b); while (b){ const t = a % b; a = b; b = t; } return a || 1; }
+  function chk(r){
+    if (!isFinite(r.n) || !isFinite(r.d) || Math.abs(r.n) > 9e15 || Math.abs(r.d) > 9e15) return { n: NaN, d: 1 };
+    return r;
+  }
+  function simp(r){
+    if (r.d < 0) r = { n: -r.n, d: -r.d };
+    if (r.n === 0) return { n: 0, d: 1 };
+    const g = gcd(r.n, r.d);
+    return { n: r.n / g, d: r.d / g };
+  }
+  const rmul = (a, b) => chk(simp({ n: a.n * b.n, d: a.d * b.d }));
+  const rdiv = (a, b) => chk(simp({ n: a.n * b.d, d: a.d * b.n }));
+  const radd = (a, b) => chk(simp({ n: a.n * b.d + b.n * a.d, d: a.d * b.d }));
+  const rsub = (a, b) => chk(simp({ n: a.n * b.d - b.n * a.d, d: a.d * b.d }));
+  const negR = r => ({ n: -r.n, d: r.d });
+  const fmtInt = n => (n < 0 ? '−' + Math.abs(n) : String(n));
+
+  function parseR(s){
+    s = String(s).trim();
+    if (!s || s === '-' || s === '.') return null;
+    if (!/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return null;
+    const negIn = s.charAt(0) === '-';
+    if (negIn) s = s.slice(1);
+    const parts = s.split('.');
+    const ip = parts[0] || '0', fp = parts[1] || '';
+    const n = parseInt(ip + fp, 10);
+    const d = Math.pow(10, fp.length);
+    if (!Number.isFinite(n) || !Number.isFinite(d)) return null;
+    return { n: negIn ? -n : n, d };
+  }
+
+  /* ---------- long-division decimal expansion (exact) ---------- */
+  function expand(n, d){
+    const neg = n < 0; n = Math.abs(n);
+    const int = Math.floor(n / d);
+    let rem = n % d;
+    if (rem === 0) return { neg, int, pre: '', rep: '', done: true };
+    const seen = new Map();
+    let digits = '', guard = 0;
+    while (rem !== 0 && !seen.has(rem) && guard < 2000){
+      seen.set(rem, digits.length);
+      rem *= 10;
+      digits += Math.floor(rem / d);
+      rem %= d;
+      guard++;
+    }
+    if (rem === 0) return { neg, int, pre: digits, rep: '', done: true };
+    if (seen.has(rem)){
+      const s = seen.get(rem);
+      return { neg, int, pre: digits.slice(0, s), rep: digits.slice(s), done: false };
+    }
+    const v = n / d;
+    return { neg, int, pre: (v.toFixed(10).split('.')[1] || '').replace(/0+$/, ''), rep: '', done: true, approx: true };
+  }
+
+  /* ---------- rendering helpers ---------- */
+  function fHTML(n, d){
+    if (d === 1) return '<span class="mnum">' + fmtInt(n) + '</span>';
+    return '<span class="mfrac"><span class="mn">' + fmtInt(n) + '</span><span class="md">' + fmtInt(d) + '</span></span>';
+  }
+  function decStr(r){
+    if (r.d === 1) return fmtInt(r.n);
+    const ex = expand(r.n, r.d);
+    const neg = ex.neg ? '−' : '';
+    if (ex.done){
+      let pre = ex.pre;
+      if (pre.length > 12) pre = pre.slice(0, 12) + '…';
+      return (ex.approx ? '≈ ' : '') + neg + ex.int + (pre ? '.' + pre : '');
+    }
+    let rep = ex.rep, tail = '';
+    if (rep.length > 8){ rep = rep.slice(0, 8); tail = '…'; }
+    return neg + ex.int + '.' + ex.pre + '<span class="ovl">' + rep + '</span>' + tail;
+  }
+  const num  = r => (r.d === 1 ? fmtInt(r.n) : decStr(r));
+  const pctOf = r => rmul(r, H);            // ratio → percent value
+
+  /* ---------- screen states ---------- */
+  function placeholderStep(){
+    return '<li class="wstep"><span class="wi mono">··</span><span class="wempty mono">FILL BOTH BLANKS — THE WORK APPEARS HERE</span></li>';
+  }
+  function ev(r){ return r ? '<span class="ev">' + num(r) + '</span>' : '<span class="eempty">—</span>'; }
+  function evP(r){ return r ? '<span class="ev">' + num(r) + '%</span>' : '<span class="eempty">—</span>'; }
+  const EQ = ' <span class="eop">=</span>';
+
+  function renderSteps(steps){
+    listEl.innerHTML = steps.map((h, i) =>
+      '<li class="wstep"><span class="wi mono">' + String(i + 1).padStart(2, '0') + '</span><span class="wt">' + h + '</span></li>').join('');
+  }
+  function renderRows(rows){
+    rowsEl.innerHTML = rows.map(r =>
+      '<div class="frow"><span class="fl mono">' + r[0] + '</span><span class="fv">' + r[1] + '</span></div>').join('');
+  }
+  function showError(msg){
+    const fresh = msg !== lastErr;
+    lastErr = msg;
+    echoEl.innerHTML = '';
+    bigEl.innerHTML = '<span class="berr">' + msg + '</span>';
+    rowsEl.innerHTML = '';
+    listEl.innerHTML = placeholderStep();
+    if (fresh){ scrEl.classList.remove('err'); void scrEl.offsetWidth; scrEl.classList.add('err'); }
+  }
+  function resting(){
+    lastErr = '';
+    echoEl.innerHTML = '<span class="eempty">FILL THE BLANKS</span>';
+    bigEl.innerHTML = '<span class="brest">—</span>';
+    rowsEl.innerHTML = '';
+    listEl.innerHTML = placeholderStep();
+  }
+  function waiting(){
+    lastErr = '';
+    bigEl.innerHTML = '<span class="brest">—</span>';
+    rowsEl.innerHTML = '';
+    listEl.innerHTML = placeholderStep();
+  }
+  function bigOK(inner){ lastErr = ''; bigEl.innerHTML = '<span class="bigin">' + inner + '</span>'; }
+
+  /* ---------- work builders ---------- */
+  function findWork(X, Y, p, Z){
+    const s = [];
+    let t = 'Percent means <i>per hundred</i> — write <b>' + num(X) + '%</b> as the fraction ' + fHTML(X.n, X.d * 100);
+    if (X.n !== 0 && (p.n !== X.n || p.d !== X.d * 100)) t += ', which reduces to ' + fHTML(p.n, p.d);
+    t += ' — as a decimal, ' + decStr(p) + '.';
+    s.push(t);
+    s.push('&ldquo;Of&rdquo; is multiplication — <b>' + num(X) + '%</b> of <b>' + num(Y) + '</b> is ' + fHTML(p.n, p.d) + ' × ' + num(Y) + '.');
+    if (Y.n === 0 || p.n === 0){
+      s.push('The answer is <b>0</b>' + (p.n === 0 ? ' — zero percent of anything is nothing.' : '.'));
+    } else if (p.d === 1 && Y.d === 1){
+      s.push('Multiply straight through: <b>' + fmtInt(p.n) + ' × ' + fmtInt(Y.n) + ' = ' + num(Z) + '</b>.');
+    } else if (Y.d === 1){
+      const g = gcd(p.d, Y.n);
+      if (g > 1){
+        s.push('The ' + fmtInt(p.d) + ' and the ' + fmtInt(Y.n) + ' share a factor of <b>' + g + '</b> — cancel to ' + (p.d / g) + ' and ' + (Y.n / g) + ', then <b>' + fmtInt(p.n) + ' × ' + (Y.n / g) + ' ÷ ' + (p.d / g) + ' = ' + num(Z) + '</b>.');
+      } else {
+        s.push('Multiply: (' + fmtInt(p.n) + ' × ' + fmtInt(Y.n) + ') ÷ ' + fmtInt(p.d) + ' = ' + fmtInt(p.n * Y.n) + ' ÷ ' + fmtInt(p.d) + ' = <b>' + num(Z) + '</b>.');
+      }
+    } else {
+      s.push('Multiply tops and bottoms: ' + fHTML(p.n * Y.n, p.d * Y.d) + ' = <b>' + num(Z) + '</b>.');
+    }
+    if (Y.n !== 0) s.push('Check it backwards: ' + num(Z) + ' ÷ ' + num(Y) + ' = ' + decStr(p) + ' = <b>' + num(X) + '%</b>. <span class="ok">✓</span>');
+    return s;
+  }
+
+  function isWork(X, Y, ratio, pct){
+    const s = [];
+    s.push('A percent is a fraction out of 100 — set up <i>part over whole</i>: ' + num(X) + ' ÷ ' + num(Y) + '.');
+    if (X.d === 1 && Y.d === 1 && X.n !== 0 && gcd(X.n, Y.n) > 1)
+      s.push('Reduce the fraction first: ' + fHTML(X.n, Y.n) + ' = ' + fHTML(ratio.n, ratio.d) + '.');
+    s.push('Divide: ' + num(X) + ' ÷ ' + num(Y) + ' = ' + decStr(ratio) + '.');
+    s.push('Multiply by 100 to make it a percent: ' + decStr(ratio) + ' × 100 = <b>' + decStr(pct) + '%</b>.');
+    s.push('Check: ' + num(Y) + ' × ' + decStr(pct) + '% = ' + num(X) + '. <span class="ok">✓</span>');
+    return s;
+  }
+
+  function changeWork(X, Y, D, ratio, pct, mult){
+    const s = [];
+    const up = D.n > 0;
+    s.push('Find the absolute change: ' + num(Y) + ' − ' + num(X) + ' = <b>' + num(D) + '</b> — an ' + (up ? 'increase' : 'decrease') + ' of ' + num({ n: Math.abs(D.n), d: D.d }) + '.');
+    s.push('Percent change is measured against the <i>original</i> — where you started: ' + num(X) + '.');
+    s.push('Divide the change by the original: ' + num(D) + ' ÷ ' + num(X) + ' = ' + decStr(ratio) + '.');
+    s.push('Multiply by 100: ' + decStr(ratio) + ' × 100 = <b>' + (up ? '+' : '') + decStr(pct) + '%</b> — a ' + (up ? 'increase' : 'decrease') + '.');
+    s.push('Check: ' + num(X) + ' × ' + decStr(mult) + ' = ' + num(Y) + '. <span class="ok">✓</span>');
+    return s;
+  }
+
+  function adjWork(X, P, p, amt, Z, mult){
+    const s = [];
+    s.push('First find ' + num(P) + '% of ' + num(X) + ': ' + num(P) + '% = ' + decStr(p) + ', and ' + decStr(p) + ' × ' + num(X) + ' = <b>' + num(amt) + '</b>.');
+    s.push((SIGN === '+' ? 'Add it on' : 'Take it off') + ': ' + num(X) + (SIGN === '+' ? ' + ' : ' − ') + num(amt) + ' = <b>' + num(Z) + '</b>.');
+    s.push('Shortcut for next time — multiply in one move: ' + num(X) + ' × ' + decStr(mult) + ' = <b>' + num(Z) + '</b>.');
+    s.push('Check: ' + num(Z) + ' ÷ ' + decStr(mult) + ' = ' + num(X) + '. <span class="ok">✓</span>');
+    return s;
+  }
+
+  /* ---------- the four questions ---------- */
+  function uFind(){
+    const X = parseR($i('fa').value), Y = parseR($i('fb').value);
+    echoEl.innerHTML = 'what is ' + evP(X) + ' of ' + ev(Y) + EQ;
+    if (!X && !Y) return resting();
+    if (!X || !Y) return waiting();
+    if (isNaN(X.n) || isNaN(Y.n)) return showError('The numbers got too large — keep each under a million.');
+    const p = simp({ n: X.n, d: X.d * 100 });
+    const Z = rmul(p, Y);
+    if (isNaN(Z.n)) return showError('The numbers got too large — keep each under a million.');
+    bigOK('<span class="bint">' + num(Z) + '</span>');
+    const rows = [];
+    if (p.d > 1 && p.n !== 0) rows.push(['AS A FRACTION', fHTML(p.n, p.d)]);
+    rows.push(['AS A DECIMAL', decStr(p)]);
+    if (Y.n !== 0) rows.push(['CHECK', num(Z) + ' ÷ ' + num(Y) + ' = ' + decStr(p) + ' = <b>' + num(X) + '%</b> <span class="ok">✓</span>']);
+    renderRows(rows);
+    renderSteps(findWork(X, Y, p, Z));
+  }
+
+  function uIs(){
+    const X = parseR($i('ia').value), Y = parseR($i('ib').value);
+    echoEl.innerHTML = ev(X) + ' is what % of ' + ev(Y) + EQ;
+    if (!X && !Y) return resting();
+    if (!X || !Y) return waiting();
+    if (isNaN(X.n) || isNaN(Y.n)) return showError('The numbers got too large — keep each under a million.');
+    if (Y.n === 0) return showError('The whole can\u2019t be zero — a percent of nothing has no meaning.');
+    const ratio = rdiv(X, Y);
+    const pct = pctOf(ratio);
+    if (isNaN(pct.n)) return showError('The numbers got too large — keep each under a million.');
+    bigOK('<span class="bint">' + decStr(pct) + '</span><span class="bunit">%</span>');
+    const rows = [];
+    if (ratio.d > 1 && ratio.n !== 0) rows.push(['AS A FRACTION', fHTML(ratio.n, ratio.d)]);
+    rows.push(['AS A DECIMAL', decStr(ratio)]);
+    rows.push(['CHECK', num(Y) + ' × ' + decStr(pct) + '% = <b>' + num(X) + '</b> <span class="ok">✓</span>']);
+    renderRows(rows);
+    renderSteps(isWork(X, Y, ratio, pct));
+  }
+
+  function uChange(){
+    const X = parseR($i('ca').value), Y = parseR($i('cb').value);
+    echoEl.innerHTML = '% change from ' + ev(X) + ' to ' + ev(Y) + EQ;
+    if (!X && !Y) return resting();
+    if (!X || !Y) return waiting();
+    if (isNaN(X.n) || isNaN(Y.n)) return showError('The numbers got too large — keep each under a million.');
+    if (X.n === 0) return showError('Percent change needs a nonzero start — there is no &ldquo;per hundred&rdquo; of zero.');
+    const D = rsub(Y, X);
+    if (D.n === 0){
+      bigOK('<span class="bint">0</span><span class="bunit">%</span>');
+      renderRows([
+        ['ABSOLUTE CHANGE', '0'],
+        ['AS A MULTIPLIER', '× 1'],
+        ['CHECK', num(X) + ' × 1 = <b>' + num(X) + '</b> <span class="ok">✓</span>']
+      ]);
+      renderSteps(['From ' + num(X) + ' to ' + num(Y) + ' — the same number in, the same number out. No change: <b>0%</b>.']);
+      return;
+    }
+    const ratio = rdiv(D, X);
+    const pct = pctOf(ratio);
+    const mult = radd(ONE, ratio);
+    if (isNaN(pct.n) || isNaN(mult.n)) return showError('The numbers got too large — keep each under a million.');
+    const up = D.n > 0;
+    bigOK('<span class="bint">' + (up ? '+' : '') + decStr(pct) + '</span><span class="bunit">%</span>');
+    renderRows([
+      ['ABSOLUTE CHANGE', (up ? '+' : '') + num(D)],
+      ['AS A MULTIPLIER', '× ' + decStr(mult)],
+      ['CHECK', num(X) + ' × ' + decStr(mult) + ' = <b>' + num(Y) + '</b> <span class="ok">✓</span>']
+    ]);
+    renderSteps(changeWork(X, Y, D, ratio, pct, mult));
+  }
+
+  function uAdj(){
+    const X = parseR($i('aa').value), P = parseR($i('ab').value);
+    echoEl.innerHTML = ev(X) + ' <span class="eop">' + (SIGN === '+' ? '+' : '−') + '</span> ' + evP(P) + EQ;
+    if (!X && !P) return resting();
+    if (!X || !P) return waiting();
+    if (isNaN(X.n) || isNaN(P.n)) return showError('The numbers got too large — keep each under a million.');
+    const p = rdiv(P, H);
+    const amt = rmul(X, p);
+    const Z = SIGN === '+' ? radd(X, amt) : rsub(X, amt);
+    const mult = SIGN === '+' ? radd(ONE, p) : rsub(ONE, p);
+    if (isNaN(Z.n) || isNaN(mult.n)) return showError('The numbers got too large — keep each under a million.');
+    const delta = SIGN === '+' ? amt : negR(amt);
+    bigOK('<span class="bint">' + num(Z) + '</span>');
+    renderRows([
+      ['THE CHANGE', (delta.n > 0 ? '+' : '') + num(delta)],
+      ['AS A MULTIPLIER', '× ' + decStr(mult)],
+      ['CHECK', num(Z) + ' ÷ ' + decStr(mult) + ' = <b>' + num(X) + '</b> <span class="ok">✓</span>']
+    ]);
+    renderSteps(adjWork(X, P, p, amt, Z, mult));
+  }
+
+  function update(){
+    if (MODE === 'find') return uFind();
+    if (MODE === 'is') return uIs();
+    if (MODE === 'change') return uChange();
+    return uAdj();
+  }
+
+  /* ---------- controls ---------- */
+  function setMode(m){
+    MODE = m;
+    calcEl.dataset.mode = m;
+    $$('.cmode[data-mode]', calcEl).forEach(b => {
+      const on = b.dataset.mode === m;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+    update();
+  }
+  $$('.cmode[data-mode]', calcEl).forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+
+  pmBtn && pmBtn.addEventListener('click', () => {
+    SIGN = SIGN === '+' ? '-' : '+';
+    pmBtn.textContent = SIGN === '+' ? '+' : '−';
+    pmBtn.setAttribute('aria-label', SIGN === '+' ? 'Switch to subtracting the percentage' : 'Switch to adding the percentage');
+    update();
+  });
+
+  /* ---------- input handling ---------- */
+  function sanitize(el){
+    let v = el.value.replace(/[^\d.\-−]/g, '').replace(/−/g, '-');
+    const neg = v.charAt(0) === '-';
+    v = v.replace(/-/g, '');
+    const i = v.indexOf('.');
+    if (i !== -1) v = v.slice(0, i + 1) + v.slice(i + 1).replace(/\./g, '');
+    el.value = (neg ? '-' : '') + v;
+  }
+  function fit(el){
+    el.style.width = Math.min(9, Math.max(2, (el.value.length || 0) + 1)) + 'ch';
+  }
+  $$('.q-slot input', calcEl).forEach(inp => {
+    inp.addEventListener('input', () => { sanitize(inp); fit(inp); update(); });
+    inp.addEventListener('focus', () => inp.select());
+  });
+  calcEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter'){ e.preventDefault(); if (document.activeElement) document.activeElement.blur(); }
+  });
+
+  /* ---------- example chips ---------- */
+  const EXAMPLES = [
+    { m: 'find',   v: { fa: '15', fb: '200' } },
+    { m: 'is',     v: { ia: '30', ib: '200' } },
+    { m: 'change', v: { ca: '40', cb: '50' } },
+    { m: 'adj',    v: { aa: '200', ab: '15' }, s: '+' },
+    { m: 'change', v: { ca: '80', cb: '50' } }
+  ];
+  $$('.exchip', calcEl).forEach(ch => ch.addEventListener('click', () => {
+    const ex = EXAMPLES[+ch.dataset.ex];
+    if (!ex) return;
+    for (const k in ex.v){
+      const el = $i(k);
+      el.value = ex.v[k];
+      fit(el);
+    }
+    if (ex.s){ SIGN = ex.s; pmBtn.textContent = SIGN === '+' ? '+' : '−'; }
+    setMode(ex.m);
+  }));
+
+  /* ---------- init: land on a solved question, never a dead screen ---------- */
+  $$('.q-slot input', calcEl).forEach(fit);
+  setMode('find');
+})();
+</script>
+</body>
+</html>
