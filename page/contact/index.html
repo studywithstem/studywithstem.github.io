@@ -633,8 +633,10 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
         <label for="cMsg">Message</label>
         <textarea id="cMsg" name="message" placeholder="What's on your mind? Topic requests and corrections are especially welcome." required></textarea>
 
-        <!-- hCaptcha widget appears here once a sitekey is set in the CONTACT config -->
-        <div id="hcap-slot" class="hcap-slot"></div>
+        <!-- hCaptcha widget — Web3Forms zero-config: the container just needs the h-captcha
+             class + data-captcha="true"; Web3Forms' own client script finds it, renders it
+             with their shared free-plan sitekey, and verifies server-side automatically. -->
+        <div id="hcap-slot" class="hcap-slot h-captcha" data-captcha="true"></div>
 
         <button class="btn-ticket" type="submit">
           <span>Send message</span>
@@ -893,16 +895,19 @@ onScroll();
 })();
 
 /* =========================================================
-   CONTACT FORM — Web3Forms + hCaptcha
-   ▼▼▼ PASTE YOUR KEYS HERE (both from their dashboards) ▼▼▼
-   web3forms_key → https://web3forms.com  (access key)
-   hcaptcha_key  → https://dashboard.hcaptcha.com (sitekey)
-   With the keys in place, everything else wires itself:
-   the hidden access key, the captcha widget, and submit.
+   CONTACT FORM — Web3Forms + hCaptcha (zero-config)
+   ▼▼▼ PASTE YOUR ACCESS KEY HERE ▼▼▼
+   web3forms_key → https://web3forms.com dashboard (access key)
+   hCaptcha itself needs NO key from you on the free plan —
+   Web3Forms' own client script (loaded below) finds the
+   .h-captcha[data-captcha="true"] div in the form, renders
+   the widget with their shared sitekey, and verifies the
+   solve server-side automatically. Just make sure hCaptcha
+   is toggled ON as the spam-block method for this form in
+   your Web3Forms dashboard.
 ========================================================= */
 const CONTACT = {
-  web3forms_key : 'b2018ba9-424b-4560-a51a-afc7a4e0839b',
-  hcaptcha_key  : 'ce4acd36-a470-4ebe-a482-f4e48ad613ca'
+  web3forms_key : 'b2018ba9-424b-4560-a51a-afc7a4e0839b'
 };
 
 (function(){
@@ -916,15 +921,12 @@ const CONTACT = {
     status.className = 'c-status show' + (kind ? ' ' + kind : '');
   }
 
-  /* inject the hCaptcha widget only once a sitekey is configured */
+  /* load Web3Forms' own client script — it auto-detects the
+     .h-captcha[data-captcha="true"] div and wires up hCaptcha
+     end-to-end (render + verification), no sitekey needed. */
   (function(){
-    const slot = $('#hcap-slot');
-    if (!slot || !CONTACT.hcaptcha_key) return;
-    slot.classList.add('h-captcha');
-    slot.dataset.sitekey = CONTACT.hcaptcha_key;
-    slot.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
     const s = document.createElement('script');
-    s.src = 'https://js.hcaptcha.com/1/api.js';
+    s.src = 'https://web3forms.com/client/script.js';
     s.async = true; s.defer = true;
     document.head.appendChild(s);
   })();
@@ -936,12 +938,10 @@ const CONTACT = {
       say('FORM NOT CONFIGURED YET — no API key set. Email studywithstem@gmail.com directly.', 'err');
       return;
     }
-    if (CONTACT.hcaptcha_key){
-      const tok = form.querySelector('[name="h-captcha-response"]');
-      if (!tok || !tok.value){
-        say('HUMAN CHECK INCOMPLETE — solve the checkbox, then try again.', 'err');
-        return;
-      }
+    const tok = form.querySelector('[name="h-captcha-response"]');
+    if (!tok || !tok.value){
+      say('HUMAN CHECK INCOMPLETE — solve the checkbox, then try again.', 'err');
+      return;
     }
 
     say('TRANSMITTING…');
