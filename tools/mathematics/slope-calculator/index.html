@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Slope Calculator — Find the Slope Between Two Points, Angle & Line Equation | StudyWithSTEM</title>
+<meta name="description" content="Free slope calculator — find the slope from two points, a point & slope, or a line equation. Get the angle, percentage grade, intercepts, distance, midpoint, step-by-step solution and a live graph.">
+<meta name="keywords" content="slope calculator, calculate slope between two points, slope formula, rise over run, gradient calculator, slope from two points, slope intercept form calculator, angle of inclination calculator, percentage grade calculator, perpendicular slope, math tools, StudyWithSTEM tools">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/mathematics/slope-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Slope Calculator — Find the Slope Between Two Points, Angle & Line Equation | StudyWithSTEM">
+<meta property="og:description" content="Free slope calculator — find the slope from two points, a point & slope, or a line equation. Get the angle, percentage grade, intercepts, distance, midpoint, step-by-step solution and a live graph.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/mathematics/slope-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/slope-calculator.jpg">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Slope Calculator — Find the Slope Between Two Points, Angle & Line Equation | StudyWithSTEM">
+<meta name="twitter:description" content="Free slope calculator — find the slope from two points, a point & slope, or a line equation. Get the angle, percentage grade, intercepts, distance, midpoint, step-by-step solution and a live graph.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/slope-calculator.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Mathematics", "item": "https://studywithstem.github.io/tools/mathematics/" },
+    { "@type": "ListItem", "position": 4, "name": "Slope Calculator", "item": "https://studywithstem.github.io/tools/mathematics/slope-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Slope Calculator",
+  "url": "https://studywithstem.github.io/tools/mathematics/slope-calculator/",
+  "description": "Free online slope calculator — find the slope from two points, a slope and a point, or a line equation. Returns slope, angle, percentage grade, intercepts, distance, midpoint, a step-by-step solution and an interactive graph.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "StudyWithSTEM", "url": "https://studywithstem.github.io/" },
+  "featureList": [
+    "Slope from two points",
+    "Slope and point mode",
+    "Standard form Ax + By = C input",
+    "Angle in degrees and radians",
+    "Percentage grade",
+    "Slope-intercept, standard and point-slope equations",
+    "y-intercept and x-intercept",
+    "Distance and midpoint between points",
+    "Perpendicular slope",
+    "Interactive graph with pan and zoom",
+    "Step-by-step solution",
+    "Copyable results"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the slope between two points?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the slope formula m = (y₂ − y₁) / (x₂ − x₁). Subtract the y-coordinates (the rise), subtract the x-coordinates (the run), then divide. For example, with points (2, 3) and (5, 11): m = (11 − 3) / (5 − 2) = 8/3 ≈ 2.667." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the slope value actually mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Slope measures steepness and direction. A slope of 2 means the line climbs 2 units for every 1 unit you move right. A negative slope falls to the right, zero is perfectly flat, and an undefined slope means the line is vertical." }
+    },
+    {
+      "@type": "Question",
+      "name": "When is a slope undefined?",
+      "acceptedAnswer": { "@type": "Answer", "text": "When the two points have the same x-coordinate. The run Δx = x₂ − x₁ becomes zero, and dividing by zero is undefined. The line is vertical (x = constant) with an inclination angle of exactly 90°." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the slope of a horizontal line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Zero. The rise Δy = 0, so m = 0. Every point on a horizontal line has the same y-value, so its equation is simply y = b." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert a slope to an angle or a percentage grade?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Angle: θ = arctan(m). A slope of 1 is a 45° angle; a slope of 0.5 is about 26.57°. Percentage grade (used for roads and ramps): grade = m × 100. A 0.25 slope is a 25% grade — it rises 25 units per 100 units of run." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the three forms of a line equation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Slope-intercept: y = mx + b (fastest for reading m and b). Point-slope: y − y₁ = m(x − x₁) (best when you know one point and the slope). Standard: Ax + By = C (best for intercepts and exact integer arithmetic). All three describe the same line." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find a parallel or perpendicular slope?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Parallel lines share the same slope: m₂ = m₁. Perpendicular lines (at 90° to each other) have slopes that multiply to −1: m₂ = −1/m₁ — flip the fraction and change the sign. So a line perpendicular to m = 2 has slope −1/2." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the order of my two points matter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. (y₂ − y₁)/(x₂ − x₁) and (y₁ − y₂)/(x₁ − x₂) give the same slope — the sign flips in both numerator and denominator and cancels. Just be consistent and don't mix the points up mid-calculation." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D, used for legal/info pages) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= SLOPE TOOL (page-specific layout) ================= */
+.tool{padding:64px 0 72px;}
+.tool-layout{display:grid; grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); gap:26px; align-items:start;}
+
+.tool-card{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  padding:26px 26px 28px;
+}
+.tool-card.flash{animation:cardflash .9s ease;}
+@keyframes cardflash{0%,100%{border-color:var(--edge-strong);}40%{border-color:var(--accent);}}
+.card-kicker{font:700 .64rem var(--f-mono); letter-spacing:.15em; color:var(--faint); text-transform:uppercase;}
+.card-title{font:600 1.35rem/1.2 var(--f-disp); margin:6px 0 4px;}
+
+/* mode tabs */
+.mode-tabs{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:18px 0 20px;}
+.mode-tab{
+  display:flex; flex-direction:column; align-items:center; gap:5px;
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:9px;
+  padding:11px 6px; cursor:pointer; color:var(--muted);
+  font:600 .74rem/1.3 var(--f-sans); text-align:center;
+  transition:color .25s, border-color .25s, background .25s;
+}
+.mode-tab .mono{font-size:.58rem; letter-spacing:.06em; color:var(--faint);}
+.mode-tab:hover{color:var(--ink); border-color:var(--accent);}
+.mode-tab.active{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);}
+.mode-tab.active .mono{color:var(--accent-ink); opacity:.75;}
+
+/* input groups */
+.fgroup{border:1px solid var(--edge); border-radius:12px; padding:14px 14px 16px; background:var(--bg);}
+.fgroup + .fgroup{margin-top:12px;}
+.glabel{font:700 .62rem var(--f-mono); letter-spacing:.14em; color:var(--accent); text-transform:uppercase; display:block; margin-bottom:10px;}
+.fpair{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.ftrio{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+.fld label{display:block; font:700 .68rem var(--f-mono); color:var(--faint); margin-bottom:6px;}
+.fld input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:12px 13px; color:var(--ink); font:600 1.05rem var(--f-mono);
+  transition:border-color .25s;
+}
+.fld input::placeholder{color:var(--faint); font-weight:400; opacity:.7;}
+.fld input:focus{outline:none; border-color:var(--accent);}
+.fld input.bad{border-color:var(--amber);}
+
+/* options row */
+.tool-opts{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:16px; flex-wrap:wrap;}
+.opt-prec{display:flex; align-items:center; gap:9px; font:700 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+.opt-prec select{
+  background:var(--bg); color:var(--ink); border:1px solid var(--edge-strong); border-radius:8px;
+  font:600 .78rem var(--f-mono); padding:7px 8px; cursor:pointer;
+}
+.opt-prec select:focus{outline:none; border-color:var(--accent);}
+.btn-ghost{
+  padding:10px 16px; border:1px solid var(--edge-strong); border-radius:9px; background:var(--bg);
+  color:var(--muted); font:600 .78rem var(--f-sans); cursor:pointer;
+  transition:color .25s, border-color .25s;
+}
+.btn-ghost:hover{color:var(--ink); border-color:var(--accent);}
+
+/* example chips + status */
+.ex-chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; align-items:center;}
+.ex-title{font:700 .6rem var(--f-mono); letter-spacing:.14em; color:var(--faint);}
+.ex-chip{
+  font:600 .68rem var(--f-mono); padding:7px 11px; cursor:pointer;
+  border:1px dashed var(--edge-strong); border-radius:999px;
+  color:var(--muted); background:transparent; transition:color .25s, border-color .25s, border-style .25s;
+}
+.ex-chip:hover{color:var(--accent); border-color:var(--accent); border-style:solid;}
+.tool-status{margin-top:16px; font:700 .68rem/1.7 var(--f-mono); letter-spacing:.06em; color:var(--faint);}
+.tool-status.ok{color:var(--accent);}
+.tool-status.err{color:var(--amber);}
+.tool-noscript{margin-top:14px; font:700 .72rem var(--f-mono); color:var(--amber); border:1px dashed var(--amber); padding:12px 14px; border-radius:10px;}
+
+/* results column */
+.res-top{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px;}
+.btn-copy{padding:9px 13px; font:600 .72rem/1 var(--f-sans); gap:7px;}
+.btn-copy svg{width:12px; height:12px;}
+.slope-head{display:flex; justify-content:space-between; align-items:flex-start; gap:14px; flex-wrap:wrap; margin-top:4px;}
+.slope-label{display:block; font:700 .62rem var(--f-mono); letter-spacing:.16em; color:var(--faint); margin-bottom:2px;}
+.slope-val{font:600 clamp(2.2rem,4.5vw,3.2rem)/1.05 var(--f-disp); color:var(--accent); letter-spacing:-.01em; overflow-wrap:anywhere;}
+.slope-val.undef{color:var(--amber);}
+.slope-sub{color:var(--muted); font-size:.9rem; margin-top:8px; max-width:52ch;}
+.frac-line{margin-top:10px; font:600 .82rem/1.6 var(--f-mono); color:var(--muted); overflow-wrap:anywhere;}
+.type-badge{
+  font:700 .62rem var(--f-mono); letter-spacing:.12em; padding:7px 11px;
+  border:1px solid var(--edge-strong); border-radius:999px; color:var(--muted); white-space:nowrap; margin-top:6px;
+}
+.type-badge.b-pos{border-color:var(--accent); color:var(--accent);}
+.type-badge.b-neg{border-color:var(--teal); color:var(--teal);}
+.type-badge.b-zero{border-color:var(--edge-strong); color:var(--muted);}
+.type-badge.b-undef{border-color:var(--amber); color:var(--amber); border-style:dashed;}
+
+.eq-box{margin-top:20px; border:1px solid var(--edge); border-radius:12px; background:var(--bg); overflow:hidden;}
+.eq-row{display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:12px 16px;}
+.eq-row + .eq-row{border-top:1px solid var(--edge);}
+.eq-row .k{font:700 .6rem var(--f-mono); letter-spacing:.13em; color:var(--faint); text-transform:uppercase; white-space:nowrap;}
+.eq-row .v{font:600 1.02rem var(--f-mono); text-align:right; overflow-wrap:anywhere;}
+
+.stat-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:20px;}
+.stat{border:1px solid var(--edge); border-radius:12px; background:var(--bg); padding:12px 14px;}
+.stat .k{font:700 .58rem var(--f-mono); letter-spacing:.13em; color:var(--faint); text-transform:uppercase; display:block;}
+.stat .v{font:600 1.06rem var(--f-mono); margin-top:5px; overflow-wrap:anywhere;}
+.stat .s{font:.7rem var(--f-sans); color:var(--faint); margin-top:3px; display:block;}
+
+/* graph */
+.graph-card{margin-top:26px; border:1px solid var(--edge-strong); border-radius:14px; background:var(--panel); padding:14px;}
+.graph-top{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px;}
+.graph-toggle{display:inline-flex; align-items:center; gap:8px; font:600 .72rem var(--f-sans); color:var(--muted); cursor:pointer; user-select:none;}
+.graph-toggle input{accent-color:var(--accent); width:15px; height:15px; cursor:pointer;}
+.graph-btns{display:flex; gap:8px;}
+.gbtn{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge-strong); border-radius:9px; background:var(--bg); color:var(--muted); cursor:pointer; transition:color .25s, border-color .25s;}
+.gbtn:hover{color:var(--accent); border-color:var(--accent);}
+.gbtn svg{width:14px; height:14px;}
+.graph-wrap{position:relative; border:1px solid var(--edge); border-radius:10px; overflow:hidden; background:var(--bg);}
+#slopeGraph{width:100%; height:100%; aspect-ratio:16/9; display:block; cursor:grab; touch-action:none;}
+#slopeGraph:active{cursor:grabbing;}
+.graph-hint{margin-top:10px; font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+
+/* steps */
+.steps-card{margin-top:26px;}
+.step{display:flex; gap:14px; padding:13px 0; border-top:1px dashed var(--edge);}
+.step:first-child{border-top:none; padding-top:4px;}
+.step .n{font:700 .68rem var(--f-mono); color:var(--accent); border:1px solid var(--edge-strong); width:26px; height:26px; border-radius:50%; display:grid; place-items:center; flex:none; margin-top:2px;}
+.step .sk{display:block; font:700 .58rem var(--f-mono); letter-spacing:.13em; color:var(--accent); text-transform:uppercase; margin-bottom:3px;}
+.step .t{font:600 .93rem/1.65 var(--f-mono); color:var(--ink); overflow-wrap:anywhere;}
+
+/* how to use */
+.howto{padding:64px 0 72px; border-top:1px solid var(--edge);}
+.sec-h{font:600 clamp(1.5rem,2.6vw,2.05rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 26px;}
+.howto-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:8px;}
+.how-card{border:1px solid var(--edge); border-top:2px solid var(--accent); background:var(--panel); padding:20px; clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);}
+.how-n{font:700 .68rem var(--f-mono); color:var(--accent); letter-spacing:.14em;}
+.how-card h3{font:600 1.08rem/1.3 var(--f-disp); margin:10px 0 8px;}
+.how-card p{color:var(--muted); font-size:.88rem;}
+code{font-family:var(--f-mono); font-size:.85em; color:var(--accent); background:var(--panel); border:1px solid var(--edge); padding:1px 6px; border-radius:6px;}
+
+/* formula */
+.formula{padding:64px 0 72px; border-top:1px solid var(--edge);}
+.formula-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:44px; align-items:start;}
+.formula-box{border:1px solid var(--edge-strong); background:var(--bg); padding:30px 26px; clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);}
+.f-eq{display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; font:600 clamp(1.25rem,3vw,1.85rem)/1.2 var(--f-mono); color:var(--ink);}
+.f-op{color:var(--faint);}
+.frac{display:inline-flex; flex-direction:column; align-items:center; gap:5px;}
+.frac b{font-weight:600; white-space:nowrap;}
+.frac b:first-child{border-bottom:2px solid var(--ink); padding-bottom:5px; width:100%; text-align:center;}
+.formula-p{color:var(--muted); font-size:.95rem; margin-top:20px; max-width:52ch;}
+.dir-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px;}
+.dir-card{border:1px solid var(--edge); background:var(--panel); padding:16px; display:flex; gap:14px; align-items:center;}
+.dir-card svg{width:54px; height:54px; flex:none;}
+.dir-card h4{font:600 .98rem var(--f-disp);}
+.dir-card .mval{font:700 .62rem var(--f-mono); color:var(--accent); letter-spacing:.1em; display:block; margin-top:2px;}
+.dir-card p{font:.82rem var(--f-sans); color:var(--muted); margin-top:4px;}
+
+/* faq */
+.faq{padding:64px 0 110px; border-top:1px solid var(--edge);}
+.faq-layout{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:50px; align-items:start;}
+.faq-lede{color:var(--muted); max-width:40ch;}
+.faq-list details{border:1px solid var(--edge); border-radius:12px; background:var(--panel); margin-bottom:10px; overflow:hidden;}
+.faq-list summary{list-style:none; cursor:pointer; padding:16px 18px; font:600 .95rem var(--f-sans); display:flex; justify-content:space-between; align-items:center; gap:12px; transition:color .25s;}
+.faq-list summary:hover{color:var(--accent);}
+.faq-list summary::-webkit-details-marker{display:none;}
+.faq-list summary::after{content:"+"; font:700 1.1rem var(--f-mono); color:var(--accent); transition:transform .3s; flex:none;}
+.faq-list details[open] summary::after{transform:rotate(45deg);}
+.faq-list details[open] summary{border-bottom:1px dashed var(--edge);}
+.faq-a{padding:14px 18px 18px; color:var(--muted); font-size:.9rem; line-height:1.7;}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);}}
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+}
+/* — slope-tool responsive — */
+@media (max-width:980px){
+  .tool-layout{grid-template-columns:1fr;}
+  .howto-grid{grid-template-columns:1fr 1fr;}
+  .formula-grid{grid-template-columns:1fr; gap:30px;}
+  .faq-layout{grid-template-columns:1fr; gap:30px;}
+}
+@media (max-width:600px){
+  .howto-grid{grid-template-columns:1fr;}
+  .dir-grid{grid-template-columns:1fr;}
+  .tool-card{padding:20px 18px 22px;}
+  .mode-tab{font-size:.68rem; padding:10px 4px;}
+  #slopeGraph{aspect-ratio:4/3;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">MATHEMATICS · INTERACTIVE TOOL</p>
+    <h1>Slope Calculator</h1>
+    <p class="lede">Two points in, everything out — slope, angle, percentage grade, intercepts and the full line equation, with step-by-step working and an interactive graph.</p>
+    <span class="updated"><i></i>FREE — NO SIGN-UP · RUNS ENTIRELY IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ SLOPE CALCULATOR ============ -->
+<main>
+<section class="tool" id="calculator">
+  <div class="wrap">
+    <div class="tool-layout">
+
+      <!-- ============ INPUT CARD ============ -->
+      <div class="tool-card" id="inputCard">
+        <span class="card-kicker">SLOPE CALCULATOR</span>
+        <h2 class="card-title">Enter your values</h2>
+
+        <div class="mode-tabs" role="tablist" aria-label="Input mode">
+          <button class="mode-tab active" data-mode="points" type="button" role="tab" aria-selected="true"><span>Two points</span><span class="mono">(x₁,y₁) (x₂,y₂)</span></button>
+          <button class="mode-tab" data-mode="slope" type="button" role="tab" aria-selected="false"><span>Slope &amp; point</span><span class="mono">m + (x₁,y₁)</span></button>
+          <button class="mode-tab" data-mode="equation" type="button" role="tab" aria-selected="false"><span>Line equation</span><span class="mono">Ax + By = C</span></button>
+        </div>
+
+        <div class="fgroup" data-only="slope" hidden>
+          <span class="glabel">Slope m</span>
+          <div class="fld">
+            <label for="mIn">any form — 2 · −0.75 · 3/4</label>
+            <input type="text" id="mIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="3/4">
+          </div>
+        </div>
+
+        <div class="fgroup" data-only="points slope">
+          <span class="glabel">Point 1</span>
+          <div class="fpair">
+            <div class="fld"><label for="x1">x₁</label><input type="text" id="x1" value="1" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="1"></div>
+            <div class="fld"><label for="y1">y₁</label><input type="text" id="y1" value="2" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="2"></div>
+          </div>
+        </div>
+
+        <div class="fgroup" data-only="points">
+          <span class="glabel">Point 2</span>
+          <div class="fpair">
+            <div class="fld"><label for="x2">x₂</label><input type="text" id="x2" value="4" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="4"></div>
+            <div class="fld"><label for="y2">y₂</label><input type="text" id="y2" value="8" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="8"></div>
+          </div>
+        </div>
+
+        <div class="fgroup" data-only="equation" hidden>
+          <span class="glabel">Standard form · A x + B y = C</span>
+          <div class="ftrio">
+            <div class="fld"><label for="aIn">A</label><input type="text" id="aIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="2"></div>
+            <div class="fld"><label for="bIn">B</label><input type="text" id="bIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="−4"></div>
+            <div class="fld"><label for="cIn">C</label><input type="text" id="cIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="8"></div>
+          </div>
+        </div>
+
+        <div class="tool-opts">
+          <label class="opt-prec">DECIMALS
+            <select id="precSel" aria-label="Decimal places">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <button class="btn-ghost" id="resetBtn" type="button">Reset</button>
+        </div>
+
+        <div class="ex-chips">
+          <span class="ex-title">TRY —</span>
+          <button class="ex-chip" data-ex="e1" type="button">(1, 2) → (4, 8)</button>
+          <button class="ex-chip" data-ex="e2" type="button">(−1, 4) → (3, −8)</button>
+          <button class="ex-chip" data-ex="e3" type="button">(3, 1) → (3, −4) · vertical</button>
+          <button class="ex-chip" data-ex="e4" type="button">(−2, −3) → (2, −3) · flat</button>
+          <button class="ex-chip" data-ex="e5" type="button">m = 3/4 at (−2, 1)</button>
+          <button class="ex-chip" data-ex="e6" type="button">2x − 4y = 8</button>
+        </div>
+
+        <p class="tool-status" id="toolStatus" role="status" aria-live="polite">WAITING FOR INPUT — RESULTS UPDATE AS YOU TYPE</p>
+
+        <noscript><p class="tool-noscript">This calculator runs entirely in your browser — please enable JavaScript to use it.</p></noscript>
+      </div>
+
+      <!-- ============ RESULTS + GRAPH + STEPS ============ -->
+      <div class="res-col">
+
+        <div class="tool-card">
+          <div class="res-top">
+            <span class="card-kicker">RESULT</span>
+            <button class="btn-ticket btn-copy" id="copyBtn" type="button">
+              <span id="copyLbl">Copy results</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+          </div>
+
+          <div class="slope-head">
+            <div>
+              <span class="slope-label">SLOPE&nbsp;m</span>
+              <div class="slope-val" id="slopeVal">—</div>
+            </div>
+            <span class="type-badge" id="typeBadge">—</span>
+          </div>
+          <div class="slope-sub" id="slopeSub">Enter values to begin — results update as you type.</div>
+          <p class="frac-line mono" id="fracLine" hidden></p>
+
+          <div class="eq-box">
+            <div class="eq-row"><span class="k">Slope–intercept</span><span class="v" id="eqSi">—</span></div>
+            <div class="eq-row"><span class="k">Standard form</span><span class="v" id="eqStd">—</span></div>
+            <div class="eq-row"><span class="k">Point–slope</span><span class="v" id="eqPs">—</span></div>
+          </div>
+
+          <div class="stat-grid">
+            <div class="stat"><span class="k">Angle</span><span class="v" id="stAngle">—</span><span class="s" id="stAngleRad"></span></div>
+            <div class="stat"><span class="k">Grade</span><span class="v" id="stGrade">—</span><span class="s">rise per 100 of run</span></div>
+            <div class="stat"><span class="k">y-Intercept</span><span class="v" id="stYint">—</span><span class="s">where x = 0</span></div>
+            <div class="stat"><span class="k">x-Intercept</span><span class="v" id="stXint">—</span><span class="s">where y = 0</span></div>
+            <div class="stat"><span class="k">Perpendicular</span><span class="v" id="stPerp">—</span><span class="s">slope · −1/m</span></div>
+            <div class="stat"><span class="k">Direction</span><span class="v" id="stDir">—</span><span class="s">reading left to right</span></div>
+            <div class="stat"><span class="k">Distance</span><span class="v" id="stDist">—</span><span class="s">between the two points</span></div>
+            <div class="stat"><span class="k">Midpoint</span><span class="v" id="stMid">—</span><span class="s">between the two points</span></div>
+          </div>
+        </div>
+
+        <div class="graph-card">
+          <div class="graph-top">
+            <label class="graph-toggle" id="rrToggleWrap"><input type="checkbox" id="rrToggle" checked> Show rise / run triangle</label>
+            <div class="graph-btns">
+              <button class="gbtn" id="zoomIn" type="button" aria-label="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+              <button class="gbtn" id="zoomOut" type="button" aria-label="Zoom out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+              <button class="gbtn" id="fitBtn" type="button" aria-label="Fit view to the line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
+            </div>
+          </div>
+          <div class="graph-wrap">
+            <canvas id="slopeGraph" role="img" aria-label="Interactive graph of the line — drag to pan, scroll or pinch to zoom"></canvas>
+          </div>
+          <p class="graph-hint">DRAG TO PAN · SCROLL OR PINCH TO ZOOM · HOVER FOR COORDINATES</p>
+        </div>
+
+        <div class="tool-card steps-card" id="stepsCard" hidden>
+          <span class="card-kicker">STEP BY STEP</span>
+          <div id="stepsList"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="howto" id="how-to-use">
+  <div class="wrap">
+    <span class="sec-idx mono">HOW TO USE</span>
+    <h2 class="sec-h">Four steps. Zero friction.</h2>
+    <div class="howto-grid">
+      <article class="how-card">
+        <span class="how-n">01</span>
+        <h3>Choose a mode</h3>
+        <p><strong>Two points</strong> finds the slope between them. <strong>Slope &amp; point</strong> builds the line from m and one point. <strong>Line equation</strong> converts <code>Ax + By = C</code> into slope and intercepts.</p>
+      </article>
+      <article class="how-card">
+        <span class="how-n">02</span>
+        <h3>Enter your values</h3>
+        <p>Plain numbers, negatives, decimals like <code>0.75</code> and fractions like <code>3/4</code> all work. Everything recalculates live as you type — no calculate button needed.</p>
+      </article>
+      <article class="how-card">
+        <span class="how-n">03</span>
+        <h3>Read the results</h3>
+        <p>Slope, angle, percentage grade, both intercepts, perpendicular slope, distance and midpoint — plus the line written in slope-intercept, standard and point-slope form.</p>
+      </article>
+      <article class="how-card">
+        <span class="how-n">04</span>
+        <h3>Play with the graph</h3>
+        <p>Drag to pan, scroll or pinch to zoom, toggle the rise/run triangle — then copy the full step-by-step solution wherever you need it with one click.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE MATH ============ -->
+<section class="formula" id="formula">
+  <div class="wrap">
+    <span class="sec-idx mono">THE MATH</span>
+    <h2 class="sec-h">Rise over run, formalised.</h2>
+    <div class="formula-grid">
+      <div>
+        <div class="formula-box">
+          <div class="f-eq">
+            <span>m</span>
+            <span class="f-op">=</span>
+            <span class="frac"><b>y₂ − y₁</b><b>x₂ − x₁</b></span>
+            <span class="f-op">=</span>
+            <span class="frac"><b>Δy = rise</b><b>Δx = run</b></span>
+          </div>
+        </div>
+        <p class="formula-p">Slope is the ratio of vertical change to horizontal change between two points on a line — rise over run. Subtract the y-coordinates to get the rise Δy, subtract the x-coordinates to get the run Δx, and divide. The steeper the line, the bigger the magnitude; the sign tells you which way it leans. Two facts worth memorising: parallel lines always share the same slope, and perpendicular slopes multiply to −1.</p>
+      </div>
+      <div class="dir-grid">
+        <div class="dir-card">
+          <svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M8 8v40M8 48h40" stroke="var(--edge-strong)" stroke-width="1.5"/><path d="M14 44L44 12" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div><h4>Positive</h4><span class="mval">m &gt; 0</span><p>Rises left to right. Example: y = 2x has slope 2.</p></div>
+        </div>
+        <div class="dir-card">
+          <svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M8 8v40M8 48h40" stroke="var(--edge-strong)" stroke-width="1.5"/><path d="M14 12L44 44" stroke="var(--amber)" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div><h4>Negative</h4><span class="mval">m &lt; 0</span><p>Falls left to right. Example: y = −x + 3 has slope −1.</p></div>
+        </div>
+        <div class="dir-card">
+          <svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M8 8v40M8 48h40" stroke="var(--edge-strong)" stroke-width="1.5"/><path d="M12 28h32" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div><h4>Zero</h4><span class="mval">m = 0</span><p>Perfectly horizontal. Example: y = 5 has slope 0.</p></div>
+        </div>
+        <div class="dir-card">
+          <svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M8 8v40M8 48h40" stroke="var(--edge-strong)" stroke-width="1.5"/><path d="M28 12v32" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div><h4>Undefined</h4><span class="mval">run = 0</span><p>Perfectly vertical. Example: x = 4 — division by zero.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-layout">
+    <div>
+      <span class="sec-idx mono">FAQ</span>
+      <h2 class="sec-h">Slope, decoded.</h2>
+      <p class="faq-lede">The questions people actually ask about slope — answered in plain language.</p>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>How do I calculate the slope between two points?</summary>
+        <div class="faq-a">Use the slope formula: <code>m = (y₂ − y₁) / (x₂ − x₁)</code>. Subtract the y-coordinates (that's the rise), subtract the x-coordinates (that's the run), then divide. For example, with points (2, 3) and (5, 11): m = (11 − 3) / (5 − 2) = 8/3 ≈ 2.667. The calculator above does this instantly — and shows every step.</div>
+      </details>
+      <details>
+        <summary>What does the slope value actually mean?</summary>
+        <div class="faq-a">Slope measures steepness and direction. A slope of 2 means the line climbs 2 units for every 1 unit you move right. A negative slope falls to the right, zero is perfectly flat, and an undefined slope means the line is vertical.</div>
+      </details>
+      <details>
+        <summary>When is a slope undefined?</summary>
+        <div class="faq-a">When the two points have the same x-coordinate. The run <code>Δx = x₂ − x₁</code> becomes zero, and dividing by zero is undefined. The line is vertical (x = constant) with an inclination angle of exactly 90°.</div>
+      </details>
+      <details>
+        <summary>What is the slope of a horizontal line?</summary>
+        <div class="faq-a">Zero. The rise Δy = 0, so m = 0/run = 0. Every point on a horizontal line has the same y-value, so its equation is simply <code>y = b</code>.</div>
+      </details>
+      <details>
+        <summary>How do I convert a slope to an angle or a percentage grade?</summary>
+        <div class="faq-a">Angle: <code>θ = arctan(m)</code>. A slope of 1 is a 45° angle; a slope of 0.5 is about 26.57°. Percentage grade (used for roads and ramps): <code>grade = m × 100</code>. A 0.25 slope is a 25% grade — it rises 25 units per 100 units of run.</div>
+      </details>
+      <details>
+        <summary>What are the three forms of a line equation?</summary>
+        <div class="faq-a"><strong>Slope-intercept:</strong> <code>y = mx + b</code> — fastest for reading m and b. <strong>Point-slope:</strong> <code>y − y₁ = m(x − x₁)</code> — best when you know one point and the slope. <strong>Standard:</strong> <code>Ax + By = C</code> — best for intercepts and exact integer arithmetic. All three describe the same line; this calculator shows all of them.</div>
+      </details>
+      <details>
+        <summary>How do I find a parallel or perpendicular slope?</summary>
+        <div class="faq-a">Parallel lines share the same slope: <code>m₂ = m₁</code>. Perpendicular lines (at 90° to each other) have slopes that multiply to −1: <code>m₂ = −1/m₁</code> — flip the fraction and change the sign. So a line perpendicular to m = 2 has slope −1/2.</div>
+      </details>
+      <details>
+        <summary>Does the order of my two points matter?</summary>
+        <div class="faq-a">No. <code>(y₂ − y₁)/(x₂ − x₁)</code> and <code>(y₁ − y₂)/(x₁ − x₂)</code> give the same slope — the sign flips in both numerator and denominator and cancels. Just be consistent: don't mix the points up mid-calculation.</div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER — same footer as every page ============ -->
+<!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
+<section class="pre-footer" id="subscribe">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">SUBSCRIBE</span>
+      <h2>Never miss a <span class="hl">drop.</span></h2>
+      <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
+      <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Poster-deep STEM infographics, engineered to stick. New drop every Friday.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span>studywithstem@gmail.com<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Post</a></li>
+          <li><a href="/page/about/">About</a></li>
+          <li><a href="/page/faq/">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/page/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="/page/copyrights/">Copyrights</a></li>
+          <li><a href="/page/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/></svg>
+            Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="foot-mid">
+      <span class="foot-meta" id="footYear">© STUDYWITHSTEM</span>
+      <span class="foot-meta">DESIGNED &amp; ENGINEERED FOR THE CURIOUS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================
+   BASICS
+========================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS3D = typeof THREE !== 'undefined';
+
+/* =========================================================
+   THEME SYSTEM — one source of truth for CSS *and* WebGL
+   (only the footer starfield uses Three.js on this page).
+========================================================= */
+let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
+let themeTarget = themeMix;
+const themed = [];
+
+function applyRec(r, mix){
+  r.m.color.copy(r.d).lerp(r.l, mix);
+  r.m.opacity = r.dOp + (r.lOp - r.dOp) * mix;
+  r.m.blending = mix < .5 ? THREE.AdditiveBlending : THREE.NormalBlending;
+}
+function themedMat(mat, darkHex, lightHex, darkOp, lightOp){
+  const rec = { m: mat, d: new THREE.Color(darkHex), l: new THREE.Color(lightHex), dOp: darkOp, lOp: lightOp };
+  mat.transparent = true;
+  themed.push(rec);
+  applyRec(rec, themeMix);
+  return mat;
+}
+function tickTheme(){
+  if (themeMix === themeTarget) return;
+  if (RM) themeMix = themeTarget;
+  else {
+    themeMix += (themeTarget - themeMix) * .1;
+    if (Math.abs(themeTarget - themeMix) < .001) themeMix = themeTarget;
+  }
+  themed.forEach(r => applyRec(r, themeMix));
+}
+
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  themeTarget = t === 'light' ? 1 : 0;
+  try{ localStorage.setItem('sws-theme', t); }catch(e){}
+  const b = $('#themeToggle');
+  if (b) b.setAttribute('aria-pressed', String(t === 'light'));
+  const root = document.documentElement;
+  root.classList.add('theme-anim');
+  clearTimeout(setTheme._t);
+  setTheme._t = setTimeout(() => root.classList.remove('theme-anim'), 650);
+}
+(function(){
+  const b = $('#themeToggle');
+  if (b){
+    b.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+    b.addEventListener('click', () =>
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+  }
+})();
+
+let SPRITE = null;
+if (HAS3D){
+  try{
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const x = c.getContext('2d');
+    const g = x.createRadialGradient(32, 32, 0, 32, 32, 30);
+    g.addColorStop(0, 'rgba(255,255,255,1)');
+    g.addColorStop(.5, 'rgba(255,255,255,.45)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+    SPRITE = new THREE.CanvasTexture(c);
+  }catch(e){}
+}
+
+/* =========================================================
+   NAV — hide on scroll down, scroll-progress segment.
+========================================================= */
+const nav = $('#nav');
+const progBar = $('.nav-progress');
+const progSeg = $('#navProg');
+let lastY = 0, sTick = false;
+
+function updProg(){
+  if (!progSeg || !progBar) return;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const p = max > 0 ? Math.min(1, scrollY / max) : 0;
+  const bw = progBar.clientWidth;
+  if (!bw) return;
+  const sw = Math.max(40, Math.min(90, bw * .12));
+  progSeg.style.width = sw + 'px';
+  progSeg.style.transform = 'translateX(' + (p * (bw - sw)) + 'px)';
+}
+function onScroll(){
+  const y = scrollY;
+  nav.classList.toggle('scrolled', y > 8);
+  const menuOpen = document.body.classList.contains('menu-open');
+  if (y > lastY && y > 180 && !menuOpen) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  updProg();
+}
+addEventListener('scroll', () => {
+  if (!sTick){ sTick = true; requestAnimationFrame(() => { onScroll(); sTick = false; }); }
+}, { passive: true });
+addEventListener('resize', updProg);
+addEventListener('load', updProg);
+onScroll();
+
+/* mobile menu */
+(function(){
+  const burger = $('#burger');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('#mmenu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+})();
+
+/* footer reveal + back-to-top + year */
+(function(){
+  const foot = $('#footer');
+  if (foot) new IntersectionObserver((es, o) => {
+    es.forEach(e => { if (e.isIntersecting){ foot.classList.add('in'); o.disconnect(); } });
+  }, { threshold: .12 }).observe(foot);
+
+  const bt = $('#backTop');
+  if (bt) bt.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+  const yr = $('#footYear');
+  if (yr) yr.textContent = '© ' + new Date().getFullYear() + ' STUDYWITHSTEM';
+})();
+
+/* =========================================================
+   SLOPE CALCULATOR — everything below is page-specific
+========================================================= */
+(function(){
+'use strict';
+
+/* ---------- pure helpers (self-tested at the bottom) ---------- */
+function gcd(a, b){ a = Math.abs(a); b = Math.abs(b); while (b){ [a, b] = [b, a % b]; } return a; }
+
+function parseVal(raw){
+  if (raw === null || raw === undefined) return null;
+  let s = String(raw).trim().replace(/\s+/g, '').replace(/[\u2212\u2013]/g, '-').replace(/,/g, '.');
+  if (s === '') return null;
+  const fm = s.match(/^(-?\d*\.?\d+)\/(-?\d*\.?\d+)$/);
+  if (fm){
+    const n = parseFloat(fm[1]), d = parseFloat(fm[2]);
+    if (!isFinite(n) || !isFinite(d)) return NaN;
+    return d === 0 ? NaN : n / d;
+  }
+  const v = Number(s);
+  return isFinite(v) ? v : NaN;
+}
+
+function fmt(v, dp){
+  if (v === undefined || v === null || typeof v !== 'number' || !Number.isFinite(v)) return '—';
+  if (Object.is(v, -0)) v = 0;
+  if (dp === undefined) dp = state.dp;
+  if (v !== 0 && Math.abs(v) < Math.pow(10, -dp)) return trimExp(v);
+  if (Math.abs(v) >= 1e15) return trimExp(v);
+  if (Number.isInteger(v)) return String(v).replace(/-/g, '−');
+  let s = v.toFixed(dp);
+  if (s.indexOf('.') > -1) s = s.replace(/0+$/, '').replace(/\.$/, '');
+  return (s === '-0' ? '0' : s).replace(/-/g, '−');
+}
+function trimExp(v){
+  return v.toExponential(4).replace(/\.?0+e/, 'e');
+}
+const fmtG = v => fmt(v, 2);
+
+/* pure compute cores */
+function computeFromPoints(x1, y1, x2, y2){
+  const dx = x2 - x1, dy = y2 - y1;
+  const vertical = dx === 0;
+  const m = vertical ? undefined : dy / dx;
+  const b = vertical ? undefined : y1 - m * x1;
+  return { mode: 'points', x1, y1, x2, y2, dx, dy, vertical, horizontal: !vertical && dy === 0, m, b, xLine: vertical ? x1 : undefined };
+}
+function computeFromSlopePoint(m, x1, y1){
+  return { mode: 'slope', m, x1, y1, b: y1 - m * x1, vertical: false, horizontal: m === 0 };
+}
+function computeFromEquation(A, B, C){
+  if (A === 0 && B === 0) return null;
+  const vertical = B === 0;
+  return { mode: 'equation', A, B, C, vertical, m: vertical ? undefined : -A / B, b: vertical ? undefined : C / B, xLine: vertical ? C / A : undefined, horizontal: !vertical && -A / B === 0 };
+}
+function deriveExtras(r){
+  r.angDeg = angleOf(r);
+  r.angRad = r.angDeg * Math.PI / 180;
+  if (r.vertical) r.xInt = r.xLine;
+  else if (r.m === 0) r.xInt = r.b === 0 ? 0 : null;
+  else r.xInt = -r.b / r.m;
+  if (r.mode === 'points'){
+    r.dist = Math.hypot(r.dx, r.dy);
+    r.midX = (r.x1 + r.x2) / 2;
+    r.midY = (r.y1 + r.y2) / 2;
+  }
+  return r;
+}
+function angleOf(r){
+  if (r.vertical) return 90;
+  let a = Math.atan(r.m) * 180 / Math.PI;
+  if (a < 0) a += 180;
+  return a;
+}
+function perpSlope(r){
+  return r.vertical ? 0 : (r.m === 0 ? undefined : -1 / r.m);
+}
+function stdFrom(r){
+  if (r.vertical) return [1, 0, r.mode === 'equation' ? r.C / r.A : r.xLine];
+  if (r.mode === 'points') return [r.dy, -r.dx, r.dy * r.x1 - r.dx * r.y1];
+  if (r.mode === 'slope') return [-r.m, 1, r.b];
+  return [r.A, r.B, r.C];
+}
+function termStr(coef, v, first){
+  const neg = coef < 0;
+  const a = Math.abs(coef);
+  const cs = (a === 1 ? '' : fmt(a));
+  if (first) return (neg ? '−' : '') + cs + v;
+  return (neg ? ' − ' : ' + ') + cs + v;
+}
+function standardStr(A, B, C){
+  let a = A, b = B, c = C;
+  if (![a, b, c].every(Number.isFinite)) return null;
+  if (a === 0 && b === 0) return null;
+  if (!(Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c))){
+    for (let k = 1; k <= 4; k++){
+      const s = Math.pow(10, k);
+      if ([a, b, c].every(v => Math.abs(v * s - Math.round(v * s)) < 1e-9)){
+        a = Math.round(a * s); b = Math.round(b * s); c = Math.round(c * s); break;
+      }
+    }
+  }
+  if (Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c)){
+    let g = gcd(gcd(Math.abs(a), Math.abs(b)), Math.abs(c));
+    if (g > 1){ a /= g; b /= g; c /= g; }
+    if (a < 0 || (a === 0 && b < 0)){ a = -a; b = -b; c = -c; }
+  }
+  let s = '';
+  if (a !== 0) s += termStr(a, 'x', true);
+  if (b !== 0) s += termStr(b, 'y', s !== '');
+  if (s === '') s = '0';
+  return s + ' = ' + fmt(c);
+}
+function slopeInterceptStr(m, b){
+  if (m === undefined) return null;
+  if (m === 0) return 'y = ' + fmt(b);
+  let s = 'y = ';
+  if (m === 1) s += 'x';
+  else if (m === -1) s += '−x';
+  else s += fmt(m) + 'x';
+  if (b !== 0) s += (b > 0 ? ' + ' : ' − ') + fmt(Math.abs(b));
+  return s;
+}
+function pointSlopeStr(m, x1, y1){
+  if (m === undefined) return null;
+  let s = 'y';
+  if (y1 !== 0) s += (y1 > 0 ? ' − ' + fmt(y1) : ' + ' + fmt(Math.abs(y1)));
+  s += ' = ';
+  if (m !== 1){ s += (m === -1 ? '−' : fmt(m)); }
+  s += '(x';
+  if (x1 !== 0) s += (x1 > 0 ? ' − ' + fmt(x1) : ' + ' + fmt(Math.abs(x1)));
+  return s + ')';
+}
+
+/* ---------- state + elements ---------- */
+const state = { mode: 'points', dp: 4, showRR: true };
+const inputs = { x1: $('#x1'), y1: $('#y1'), x2: $('#x2'), y2: $('#y2'), m: $('#mIn'), a: $('#aIn'), b: $('#bIn'), c: $('#cIn') };
+const E = {
+  slopeVal: $('#slopeVal'), slopeSub: $('#slopeSub'), typeBadge: $('#typeBadge'), fracLine: $('#fracLine'),
+  eqSi: $('#eqSi'), eqStd: $('#eqStd'), eqPs: $('#eqPs'),
+  stAngle: $('#stAngle'), stAngleRad: $('#stAngleRad'), stGrade: $('#stGrade'), stYint: $('#stYint'),
+  stXint: $('#stXint'), stPerp: $('#stPerp'), stDist: $('#stDist'), stMid: $('#stMid'), stDir: $('#stDir'),
+  stepsCard: $('#stepsCard'), stepsList: $('#stepsList'), status: $('#toolStatus'), copyLbl: $('#copyLbl')
+};
+let lastCopy = null;
+
+function setStatus(msg, cls){ E.status.textContent = msg; E.status.className = 'tool-status' + (cls ? ' ' + cls : ''); }
+
+/* ---------- interactive graph ---------- */
+const gcv = $('#slopeGraph');
+const gctx = gcv.getContext('2d');
+const DEFAULT_VIEW = { x0: -10, x1: 10, y0: -6.25, y1: 6.25 };
+const GPAD = { l: 46, r: 14, t: 14, b: 28 };
+let GW = 0, GH = 0;
+let view = { ...DEFAULT_VIEW };
+let gdata = null;
+let gcol = {};
+let gHover = null;
+let userMoved = false;
+let drawRaf = null;
+
+function readGColors(){
+  const cs = getComputedStyle(document.documentElement);
+  const v = n => cs.getPropertyValue(n).trim();
+  gcol = { ink: v('--ink'), muted: v('--muted'), faint: v('--faint'), accent: v('--accent'), amber: v('--amber'), edge: v('--edge'), edgeS: v('--edge-strong'), bg: v('--bg') };
+}
+readGColors();
+
+function greq(){ if (!drawRaf) drawRaf = requestAnimationFrame(() => { drawRaf = null; gdraw(); }); }
+function gplot(){ return { x: GPAD.l, y: GPAD.t, w: Math.max(10, GW - GPAD.l - GPAD.r), h: Math.max(10, GH - GPAD.t - GPAD.b) }; }
+const xToPx = x => { const p = gplot(); return p.x + (x - view.x0) / (view.x1 - view.x0) * p.w; };
+const yToPx = y => { const p = gplot(); return p.y + (view.y1 - y) / (view.y1 - view.y0) * p.h; };
+const pxToX = px => { const p = gplot(); return view.x0 + (px - p.x) / p.w * (view.x1 - view.x0); };
+const pxToY = py => { const p = gplot(); return view.y1 - (py - p.y) / p.h * (view.y1 - view.y0); };
+
+function niceStep(range, target){
+  const raw = range / target;
+  if (!isFinite(raw) || raw <= 0) return 1;
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const n = raw / mag;
+  return (n < 1.5 ? 1 : n < 3.5 ? 2 : n < 7.5 ? 5 : 10) * mag;
+}
+function tickStr(v){
+  const r = Math.round(v * 1e9) / 1e9;
+  const s = String(r);
+  return s.length > 9 ? r.toExponential(1) : s;
+}
+
+function gfit(){
+  const xs = [0], ys = [0];
+  if (gdata){
+    gdata.pts.forEach(pt => { xs.push(pt.x); ys.push(pt.y); });
+    const spanX0 = Math.max(...xs) - Math.min(...xs);
+    const spanY0 = Math.max(...ys) - Math.min(...ys);
+    const sx = Math.max(spanX0, 1e-6), sy = Math.max(spanY0, 1e-6);
+    if (gdata.line && !gdata.line.vertical && Number.isFinite(gdata.line.b) && Math.abs(gdata.line.b) < Math.max(sy * 4, 10)) ys.push(gdata.line.b);
+    if (gdata.xInt !== null && gdata.xInt !== undefined && Number.isFinite(gdata.xInt) && Math.abs(gdata.xInt) < Math.max(sx * 4, 10)) xs.push(gdata.xInt);
+  }
+  let x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  let w = x1 - x0, h = y1 - y0;
+  if (w < 1e-9){ const c = (x0 + x1) / 2; x0 = c - 5; x1 = c + 5; w = 10; }
+  if (h < 1e-9){ const c = (y0 + y1) / 2; y0 = c - 5; y1 = c + 5; h = 10; }
+  x0 -= w * .3; x1 += w * .3; y0 -= h * .3; y1 += h * .3;
+  const p = gplot();
+  const ar = p.w / p.h;
+  if (w / h > ar){ const nh = w / ar; const c = (y0 + y1) / 2; y0 = c - nh / 2; y1 = c + nh / 2; }
+  else { const nw = h * ar; const c = (x0 + x1) / 2; x0 = c - nw / 2; x1 = c + nw / 2; }
+  view = { x0, x1, y0, y1 };
+  greq();
+}
+
+function gdraw(){
+  if (!GW || !GH) return;
+  const p = gplot();
+  gctx.clearRect(0, 0, GW, GH);
+  gctx.fillStyle = gcol.bg;
+  gctx.fillRect(0, 0, GW, GH);
+
+  gctx.save();
+  gctx.beginPath();
+  gctx.rect(p.x, p.y, p.w, p.h);
+  gctx.clip();
+
+  const spanX = view.x1 - view.x0, spanY = view.y1 - view.y0;
+  const step = niceStep(Math.max(spanX, spanY), 8);
+
+  const drawGrid = (st, alpha) => {
+    gctx.strokeStyle = gcol.edge;
+    gctx.globalAlpha = alpha;
+    gctx.lineWidth = 1;
+    gctx.beginPath();
+    for (let i = Math.ceil(view.x0 / st); i * st <= view.x1; i++){
+      const px = Math.round(p.x + (i * st - view.x0) / spanX * p.w) + .5;
+      gctx.moveTo(px, p.y); gctx.lineTo(px, p.y + p.h);
+    }
+    for (let i = Math.ceil(view.y0 / st); i * st <= view.y1; i++){
+      const py = Math.round(p.y + (view.y1 - i * st) / spanY * p.h) + .5;
+      gctx.moveTo(p.x, py); gctx.lineTo(p.x + p.w, py);
+    }
+    gctx.stroke();
+    gctx.globalAlpha = 1;
+  };
+  drawGrid(step / 5, .55);
+  drawGrid(step, 1);
+
+  /* axes */
+  const ax = xToPx(0), ay = yToPx(0);
+  gctx.strokeStyle = gcol.muted;
+  gctx.lineWidth = 1.4;
+  gctx.beginPath();
+  if (ax >= p.x && ax <= p.x + p.w){ gctx.moveTo(ax, p.y); gctx.lineTo(ax, p.y + p.h); }
+  if (ay >= p.y && ay <= p.y + p.h){ gctx.moveTo(p.x, ay); gctx.lineTo(p.x + p.w, ay); }
+  gctx.stroke();
+
+  /* tick labels */
+  gctx.font = '10px "Space Mono", ui-monospace, monospace';
+  gctx.fillStyle = gcol.faint;
+  const labY = Math.min(Math.max(ay, p.y + 10), p.y + p.h - 18);
+  const labX = Math.min(Math.max(ax, p.x + 38), p.x + p.w - 8);
+  gctx.textAlign = 'center';
+  for (let i = Math.ceil(view.x0 / step); i * step <= view.x1; i++){
+    const v = i * step; if (v === 0) continue;
+    const px = xToPx(v);
+    if (px < p.x + 2 || px > p.x + p.w - 2) continue;
+    gctx.fillText(tickStr(v), px, labY + 14);
+  }
+  gctx.textAlign = 'right';
+  for (let i = Math.ceil(view.y0 / step); i * step <= view.y1; i++){
+    const v = i * step; if (v === 0) continue;
+    const py = yToPx(v);
+    if (py < p.y + 10 || py > p.y + p.h - 2) continue;
+    gctx.fillText(tickStr(v), labX - 7, py + 3);
+  }
+  if (ax >= p.x && ax <= p.x + p.w && ay >= p.y && ay <= p.y + p.h){
+    gctx.fillText('0', labX - 7, labY + 14);
+  }
+
+  /* rise / run triangle */
+  if (gdata && gdata.rr && state.showRR){
+    const R = gdata.rr;
+    const p1x = xToPx(R.x1), p1y = yToPx(R.y1), p2x = xToPx(R.x2), p2y = yToPx(R.y2);
+    gctx.setLineDash([5, 4]);
+    gctx.lineWidth = 1.5;
+    gctx.strokeStyle = gcol.accent;
+    gctx.beginPath(); gctx.moveTo(p1x, p1y); gctx.lineTo(p2x, p1y); gctx.stroke();
+    gctx.strokeStyle = gcol.amber;
+    gctx.beginPath(); gctx.moveTo(p2x, p1y); gctx.lineTo(p2x, p2y); gctx.stroke();
+    gctx.setLineDash([]);
+    gctx.font = '700 10px "Space Mono", ui-monospace, monospace';
+    if (Math.abs(p2x - p1x) > 52){
+      gctx.fillStyle = gcol.accent;
+      gctx.textAlign = 'center';
+      gctx.fillText('run Δx = ' + fmtG(R.x2 - R.x1), (p1x + p2x) / 2, p1y + (R.y2 >= R.y1 ? 16 : -9));
+    }
+    if (Math.abs(p2y - p1y) > 44){
+      gctx.fillStyle = gcol.amber;
+      gctx.textAlign = R.x2 >= R.x1 ? 'left' : 'right';
+      gctx.fillText('rise Δy = ' + fmtG(R.y2 - R.y1), p2x + (R.x2 >= R.x1 ? 8 : -8), (p1y + p2y) / 2 + 3);
+    }
+  }
+
+  /* the line */
+  if (gdata && gdata.line){
+    gctx.strokeStyle = gcol.accent;
+    gctx.lineWidth = 2.4;
+    gctx.lineCap = 'round';
+    gctx.beginPath();
+    if (gdata.line.vertical){
+      const px = xToPx(gdata.line.x);
+      gctx.moveTo(px, p.y - 2); gctx.lineTo(px, p.y + p.h + 2);
+    } else {
+      const m = gdata.line.m, b = gdata.line.b;
+      const LIM = 1e5;
+      let pyA = yToPx(m * pxToX(p.x) + b);
+      let pyB = yToPx(m * pxToX(p.x + p.w) + b);
+      pyA = Math.max(-LIM, Math.min(LIM, pyA));
+      pyB = Math.max(-LIM, Math.min(LIM, pyB));
+      gctx.moveTo(p.x - 2, pyA); gctx.lineTo(p.x + p.w + 2, pyB);
+    }
+    gctx.stroke();
+  }
+
+  /* points */
+  if (gdata && gdata.pts){
+    gdata.pts.forEach(pt => {
+      const px = xToPx(pt.x), py = yToPx(pt.y);
+      if (px < p.x - 30 || px > p.x + p.w + 30 || py < p.y - 30 || py > p.y + p.h + 30) return;
+      gctx.beginPath();
+      gctx.arc(px, py, 5.5, 0, 6.2832);
+      gctx.fillStyle = gcol.bg; gctx.fill();
+      gctx.lineWidth = 2.4; gctx.strokeStyle = gcol.ink; gctx.stroke();
+      gctx.fillStyle = gcol.ink;
+      gctx.font = '700 10.5px "Space Mono", ui-monospace, monospace';
+      const left = px > p.x + p.w - 90;
+      gctx.textAlign = left ? 'right' : 'left';
+      let ly = py - 9;
+      if (py < p.y + 20) ly = py + 20;
+      gctx.fillText(pt.label, px + (left ? -10 : 10), ly);
+    });
+  }
+
+  /* hover crosshair + readout */
+  if (gHover){
+    gctx.strokeStyle = gcol.faint;
+    gctx.lineWidth = 1;
+    gctx.setLineDash([3, 3]);
+    gctx.beginPath();
+    gctx.moveTo(gHover.x, p.y); gctx.lineTo(gHover.x, p.y + p.h);
+    gctx.moveTo(p.x, gHover.y); gctx.lineTo(p.x + p.w, gHover.y);
+    gctx.stroke();
+    gctx.setLineDash([]);
+    const gx = pxToX(gHover.x), gy = pxToY(gHover.y);
+    let txt = '(' + fmtG(gx) + ', ' + fmtG(gy) + ')';
+    if (gdata && gdata.line && !gdata.line.vertical) txt += '   y(' + fmtG(gx) + ') = ' + fmtG(gdata.line.m * gx + gdata.line.b);
+    gctx.font = '700 10px "Space Mono", ui-monospace, monospace';
+    gctx.textAlign = 'left';
+    gctx.fillStyle = gcol.muted;
+    gctx.fillText(txt, p.x + 9, p.y + 15);
+  }
+
+  /* empty state */
+  if (!gdata){
+    gctx.font = '700 11px "Space Mono", ui-monospace, monospace';
+    gctx.textAlign = 'center';
+    gctx.fillStyle = gcol.faint;
+    gctx.fillText('ENTER VALUES TO PLOT THE LINE', p.x + p.w / 2, p.y + p.h / 2);
+  }
+
+  gctx.restore();
+}
+
+function gzoomAt(px, py, f){
+  const nspanX = (view.x1 - view.x0) * f, nspanY = (view.y1 - view.y0) * f;
+  if (nspanX < 1e-4 || nspanY < 1e-4 || nspanX > 1e9) return;
+  const x = pxToX(px), y = pxToY(py);
+  view.x0 = x + (view.x0 - x) * f; view.x1 = x + (view.x1 - x) * f;
+  view.y0 = y + (view.y0 - y) * f; view.y1 = y + (view.y1 - y) * f;
+  userMoved = true;
+  greq();
+}
+function gpan(dx, dy){
+  const p = gplot();
+  const ux = dx / p.w * (view.x1 - view.x0);
+  const uy = dy / p.h * (view.y1 - view.y0);
+  view.x0 -= ux; view.x1 -= ux;
+  view.y0 += uy; view.y1 += uy;
+  userMoved = true;
+  greq();
+}
+function gresize(){
+  const rect = gcv.getBoundingClientRect();
+  if (!rect.width || !rect.height) return;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  GW = rect.width; GH = rect.height;
+  gcv.width = Math.round(GW * dpr);
+  gcv.height = Math.round(GH * dpr);
+  gctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  if (!userMoved && gdata) gfit();
+  else greq();
+}
+function gsetData(r){
+  if (!r){ gdata = null; view = { ...DEFAULT_VIEW }; userMoved = false; greq(); return; }
+  const pts = [];
+  if (r.mode === 'points'){
+    pts.push({ x: r.x1, y: r.y1, label: 'P₁ (' + fmtG(r.x1) + ', ' + fmtG(r.y1) + ')' });
+    pts.push({ x: r.x2, y: r.y2, label: 'P₂ (' + fmtG(r.x2) + ', ' + fmtG(r.y2) + ')' });
+  } else if (r.mode === 'slope'){
+    pts.push({ x: r.x1, y: r.y1, label: 'P (' + fmtG(r.x1) + ', ' + fmtG(r.y1) + ')' });
+  } else {
+    if (!r.vertical) pts.push({ x: 0, y: r.b, label: '(0, ' + fmtG(r.b) + ')' });
+    if (r.xInt !== null && r.xInt !== undefined) pts.push({ x: r.xInt, y: 0, label: '(' + fmtG(r.xInt) + ', 0)' });
+  }
+  let line, xIntV;
+  if (r.vertical){ line = { vertical: true, x: r.xLine }; xIntV = r.xLine; }
+  else { line = { m: r.m, b: r.b }; xIntV = (r.m === 0) ? null : r.xInt; }
+  gdata = { line, pts, xInt: xIntV, rr: (r.mode === 'points' && !r.vertical) ? r : null };
+  greq();
+}
+
+/* graph interactions — pan (pointer), zoom (wheel + buttons), pinch (two pointers) */
+const gptr = new Map();
+let pinchD = 0;
+gcv.addEventListener('pointerdown', e => {
+  gcv.setPointerCapture(e.pointerId);
+  gptr.set(e.pointerId, { x: e.offsetX, y: e.offsetY });
+  if (gptr.size === 2){
+    const [a, b] = [...gptr.values()];
+    pinchD = Math.hypot(a.x - b.x, a.y - b.y);
+  }
+});
+gcv.addEventListener('pointermove', e => {
+  if (gptr.has(e.pointerId)){
+    if (gptr.size === 1){
+      const prev = gptr.get(e.pointerId);
+      gpan(e.offsetX - prev.x, e.offsetY - prev.y);
+    } else if (gptr.size === 2){
+      gptr.set(e.pointerId, { x: e.offsetX, y: e.offsetY });
+      const [a, b] = [...gptr.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (pinchD > 0 && d > 0) gzoomAt((a.x + b.x) / 2, (a.y + b.y) / 2, pinchD / d);
+      pinchD = d;
+      return;
+    }
+    gptr.set(e.pointerId, { x: e.offsetX, y: e.offsetY });
+  } else if (!gptr.size){
+    gHover = { x: e.offsetX, y: e.offsetY };
+    greq();
+  }
+});
+const gend = e => { gptr.delete(e.pointerId); if (gptr.size < 2) pinchD = 0; };
+gcv.addEventListener('pointerup', gend);
+gcv.addEventListener('pointercancel', gend);
+gcv.addEventListener('pointerleave', () => { if (!gptr.size){ gHover = null; greq(); } });
+gcv.addEventListener('wheel', e => {
+  e.preventDefault();
+  gzoomAt(e.offsetX, e.offsetY, e.deltaY < 0 ? .88 : 1 / .88);
+}, { passive: false });
+ $('#zoomIn').addEventListener('click', () => gzoomAt(GW / 2, GH / 2, .8));
+ $('#zoomOut').addEventListener('click', () => gzoomAt(GW / 2, GH / 2, 1.25));
+ $('#fitBtn').addEventListener('click', () => { userMoved = false; gfit(); });
+if ('ResizeObserver' in window) new ResizeObserver(gresize).observe(gcv);
+else addEventListener('resize', gresize);
+gresize();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => greq());
+new MutationObserver(() => { readGColors(); greq(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+/* ---------- solve + render ---------- */
+function solve(){
+  $$('.fld input').forEach(i => i.classList.remove('bad'));
+  let waiting = false, bad = false;
+  const get = id => {
+    const v = parseVal(inputs[id].value);
+    if (v === null){ waiting = true; return null; }
+    if (!Number.isFinite(v) || Math.abs(v) >= 1e12){ inputs[id].classList.add('bad'); bad = true; return null; }
+    return v;
+  };
+  let r = null;
+  if (state.mode === 'points'){
+    const x1 = get('x1'), y1 = get('y1'), x2 = get('x2'), y2 = get('y2');
+    if (!bad && !waiting) r = computeFromPoints(x1, y1, x2, y2);
+  } else if (state.mode === 'slope'){
+    const m = get('m'), x1 = get('x1'), y1 = get('y1');
+    if (!bad && !waiting) r = computeFromSlopePoint(m, x1, y1);
+  } else {
+    const A = get('a'), B = get('b'), C = get('c');
+    if (!bad && !waiting) r = computeFromEquation(A, B, C);
+    if (r === null && !bad && !waiting) return { error: 'AN EQUATION NEEDS A OR B (OR BOTH) TO BE NON-ZERO' };
+  }
+  if (bad) return { error: true };
+  if (waiting) return { waiting: true };
+  return { r: deriveExtras(r) };
+}
+
+function subSentence(r){
+  if (r.vertical) return 'a vertical line at x = ' + fmt(r.xLine);
+  if (r.m === 0) return 'a horizontal line — y is always ' + fmt(r.b);
+  const a = Math.abs(r.m);
+  return 'for every 1 unit of run, the line ' + (r.m > 0 ? 'rises' : 'falls') + ' ' + fmt(a) + (a === 1 ? ' unit' : ' units');
+}
+function fracChain(r){
+  if (r.vertical) return 'm = Δy/Δx = ' + fmt(r.dy) + ' / 0  →  division by zero — m is undefined';
+  let s = 'm = Δy/Δx = ' + fmt(r.dy) + ' / ' + fmt(r.dx);
+  if (Number.isInteger(r.dy) && Number.isInteger(r.dx)){
+    let n = r.dy, d = r.dx;
+    if (d < 0){ n = -n; d = -d; }
+    const g = gcd(Math.abs(n), d) || 1;
+    const rn = n / g, rd = d / g;
+    if (rd === 1){ if (rn !== r.dy) s += ' = ' + rn; }
+    else if (rn !== r.dy || rd !== Math.abs(r.dx)) s += ' = ' + rn + '/' + rd;
+  }
+  return s;
+}
+function buildSteps(r, eqs){
+  const S = [];
+  const pn = v => (v < 0 ? '(' + fmt(v) + ')' : fmt(v));
+  if (r.mode === 'points'){
+    S.push({ k: 'Slope formula', t: 'm = (y₂ − y₁) / (x₂ − x₁)' });
+    S.push({ k: 'Substitute your points', t: 'm = (' + pn(r.y2) + ' − ' + pn(r.y1) + ') / (' + pn(r.x2) + ' − ' + pn(r.x1) + ')' });
+    if (r.vertical){
+      S.push({ k: 'Check the run', t: 'Δx = ' + fmt(r.x2) + ' − ' + pn(r.x1) + ' = 0  →  division by zero — the slope is undefined and the line is vertical (x = ' + fmt(r.xLine) + ')' });
+      S.push({ k: 'Angle', t: 'θ = 90° — the line points straight up' });
+    } else {
+      S.push({ k: 'Subtract', t: 'Δy = ' + fmt(r.dy) + '   and   Δx = ' + fmt(r.dx) });
+      const exact = Math.abs(r.m * r.dx - r.dy) < 1e-12 * Math.max(1, Math.abs(r.dy));
+      S.push({ k: 'Divide', t: 'm = ' + fmt(r.dy) + ' / ' + fmt(r.dx) + (exact ? ' = ' : ' ≈ ') + fmt(r.m) });
+      if (r.m === 0) S.push({ k: 'Zero slope', t: 'Δy = 0, so m = 0 — the line is horizontal and y is constant' });
+      S.push({ k: 'y-intercept', t: 'b = y₁ − m·x₁ = ' + fmt(r.y1) + ' − ' + pn(r.m) + '·' + pn(r.x1) + ' = ' + fmt(r.b) });
+      S.push({ k: 'Line equation', t: eqs.si });
+      S.push({ k: 'Angle', t: 'θ = arctan(m) = arctan(' + fmt(r.m) + ') ≈ ' + fmt(r.angDeg) + '°' });
+    }
+  } else if (r.mode === 'slope'){
+    S.push({ k: 'Start from', t: 'y = m·x + b' });
+    S.push({ k: 'Substitute the point', t: fmt(r.y1) + ' = ' + pn(r.m) + '·' + pn(r.x1) + ' + b' });
+    S.push({ k: 'Solve for b', t: 'b = ' + fmt(r.y1) + ' − ' + pn(r.m) + '·' + pn(r.x1) + ' = ' + fmt(r.b) });
+    S.push({ k: 'Line equation', t: eqs.si });
+    S.push({ k: 'Angle', t: 'θ = arctan(' + fmt(r.m) + ') ≈ ' + fmt(r.angDeg) + '°' });
+  } else {
+    S.push({ k: 'Given (standard form)', t: eqs.std });
+    if (r.vertical){
+      S.push({ k: 'B = 0', t: 'y vanishes from the equation — the line is vertical: x = ' + fmt(r.xLine) });
+      S.push({ k: 'Slope', t: 'm is undefined — vertical lines have no slope' });
+      S.push({ k: 'Angle', t: 'θ = 90°' });
+    } else {
+      S.push({ k: 'Solve for y', t: 'y = −(A/B)·x + C/B' });
+      S.push({ k: 'Read off', t: 'm = −A/B = ' + fmt(r.m) + '    b = C/B = ' + fmt(r.b) });
+      S.push({ k: 'Line equation', t: eqs.si });
+      S.push({ k: 'Angle', t: 'θ = arctan(' + fmt(r.m) + ') ≈ ' + fmt(r.angDeg) + '°' });
+    }
+  }
+  return S;
+}
+
+function renderWaiting(){
+  E.slopeVal.textContent = '—';
+  E.slopeVal.classList.remove('undef');
+  E.slopeSub.textContent = 'Enter values to begin — results update as you type.';
+  E.typeBadge.textContent = '—';
+  E.typeBadge.className = 'type-badge';
+  E.fracLine.hidden = true;
+  E.eqSi.textContent = E.eqStd.textContent = E.eqPs.textContent = '—';
+  ['stAngle', 'stGrade', 'stYint', 'stXint', 'stPerp', 'stDist', 'stMid', 'stDir'].forEach(id => { E[id].textContent = '—'; });
+  E.stAngleRad.textContent = '';
+  E.stepsCard.hidden = true;
+  lastCopy = null;
+}
+
+function renderResult(r){
+  const mStr = r.vertical ? 'undefined' : fmt(r.m);
+  const si = r.vertical ? null : slopeInterceptStr(r.m, r.b);
+  const std = standardStr.apply(null, stdFrom(r));
+  let px1 = 0, py1 = r.b;
+  if (r.mode !== 'equation'){ px1 = r.x1; py1 = r.y1; }
+  const ps = r.vertical ? null : pointSlopeStr(r.m, px1, py1);
+
+  E.slopeVal.textContent = mStr;
+  E.slopeVal.classList.toggle('undef', r.vertical);
+  E.slopeSub.textContent = subSentence(r);
+
+  const bt = r.vertical ? ['UNDEFINED — VERTICAL', 'b-undef'] :
+             r.m === 0 ? ['ZERO — HORIZONTAL', 'b-zero'] :
+             r.m > 0 ? ['POSITIVE ↗', 'b-pos'] : ['NEGATIVE ↘', 'b-neg'];
+  E.typeBadge.textContent = bt[0];
+  E.typeBadge.className = 'type-badge ' + bt[1];
+
+  if (r.mode === 'points'){ E.fracLine.hidden = false; E.fracLine.textContent = fracChain(r); }
+  else E.fracLine.hidden = true;
+
+  E.eqSi.textContent = si || 'none — vertical line';
+  E.eqStd.textContent = std || '—';
+  E.eqPs.textContent = ps || 'none — vertical line';
+
+  E.stAngle.textContent = fmt(r.angDeg) + '°';
+  E.stAngleRad.textContent = fmt(r.angRad) + ' rad';
+  E.stGrade.textContent = r.vertical ? '∞' : fmt(r.m * 100) + '%';
+  E.stYint.textContent = r.vertical ? 'none' : '(0, ' + fmt(r.b) + ')';
+  E.stXint.textContent = r.vertical ? '(' + fmt(r.xInt) + ', 0)' :
+                          (r.m === 0 ? (r.b === 0 ? 'every x' : 'none') : '(' + fmt(r.xInt) + ', 0)');
+  const pv = perpSlope(r);
+  E.stPerp.textContent = pv === undefined ? 'undefined' : fmt(pv);
+  E.stDist.textContent = r.mode === 'points' ? fmt(r.dist) : '—';
+  E.stMid.textContent = r.mode === 'points' ? '(' + fmt(r.midX) + ', ' + fmt(r.midY) + ')' : '—';
+  E.stDir.textContent = r.vertical ? 'vertical' : (r.m > 0 ? 'rises ↗' : r.m < 0 ? 'falls ↘' : 'flat →');
+
+  const steps = buildSteps(r, { si, std, ps });
+  E.stepsList.innerHTML = steps.map((s, i) =>
+    '<div class="step"><span class="n">' + (i + 1) + '</span><div><span class="sk">' + s.k + '</span><span class="t">' + s.t + '</span></div></div>'
+  ).join('');
+  E.stepsCard.hidden = false;
+
+  lastCopy = {
+    mode: r.mode,
+    pts: r.mode === 'points' ? '(' + fmt(r.x1) + ', ' + fmt(r.y1) + ') and (' + fmt(r.x2) + ', ' + fmt(r.y2) + ')' : '',
+    given: r.mode === 'slope' ? 'm = ' + mStr + ' · point (' + fmt(r.x1) + ', ' + fmt(r.y1) + ')' : (r.mode === 'equation' ? std : ''),
+    vertical: r.vertical, mStr, badge: bt[0],
+    angStr: fmt(r.angDeg) + '°', radStr: fmt(r.angRad),
+    gradeStr: r.vertical ? '∞' : fmt(r.m * 100) + '%',
+    yintStr: r.vertical ? 'none' : '(0, ' + fmt(r.b) + ')',
+    xintStr: E.stXint.textContent, perpStr: E.stPerp.textContent,
+    distStr: r.mode === 'points' ? fmt(r.dist) : '—',
+    midStr: r.mode === 'points' ? '(' + fmt(r.midX) + ', ' + fmt(r.midY) + ')' : '—',
+    si: si || 'none (vertical line)', std: std || '—', ps: ps || '', steps
+  };
+}
+
+function recalc(forceFit){
+  const res = solve();
+  if (res.error){
+    setStatus(typeof res.error === 'string' ? res.error :
+      'CHECK THE HIGHLIGHTED FIELDS — DECIMALS (0.5), FRACTIONS (3/4) AND NEGATIVES ALL WORK', 'err');
+    return;
+  }
+  if (res.waiting){
+    renderWaiting();
+    setStatus('WAITING FOR INPUT — RESULTS UPDATE AS YOU TYPE', '');
+    gsetData(null);
+    return;
+  }
+  renderResult(res.r);
+  setStatus('SOLVED — RESULTS, GRAPH AND STEPS ARE LIVE', 'ok');
+  const wasReady = !!gdata;
+  gsetData(res.r);
+  if (forceFit || !wasReady) gfit();
+}
+
+/* ---------- wiring ---------- */
+function applyMode(mode){
+  state.mode = mode;
+  $$('.mode-tab').forEach(t => {
+    const on = t.dataset.mode === mode;
+    t.classList.toggle('active', on);
+    t.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  $$('[data-only]').forEach(g => { g.hidden = !g.dataset.only.split(' ').includes(mode); });
+  $('#rrToggleWrap').style.display = (mode === 'points') ? '' : 'none';
+}
+ $$('.mode-tab').forEach(t => t.addEventListener('click', () => { applyMode(t.dataset.mode); recalc(true); }));
+
+Object.values(inputs).forEach(el => {
+  el.addEventListener('input', () => recalc(false));
+  el.addEventListener('keydown', e => { if (e.key === 'Enter'){ e.preventDefault(); recalc(true); } });
+});
+ $('#precSel').addEventListener('change', e => { state.dp = +e.target.value; recalc(false); });
+ $('#rrToggle').addEventListener('change', e => { state.showRR = e.target.checked; greq(); });
+
+ $('#resetBtn').addEventListener('click', () => {
+  Object.values(inputs).forEach(i => { i.value = ''; i.classList.remove('bad'); });
+  recalc(true);
+  inputs.x1.focus();
+});
+
+const EXAMPLES = {
+  e1: { mode: 'points',   v: { x1: '1',  y1: '2',  x2: '4', y2: '8' } },
+  e2: { mode: 'points',   v: { x1: '-1', y1: '4',  x2: '3', y2: '-8' } },
+  e3: { mode: 'points',   v: { x1: '3',  y1: '1',  x2: '3', y2: '-4' } },
+  e4: { mode: 'points',   v: { x1: '-2', y1: '-3', x2: '2', y2: '-3' } },
+  e5: { mode: 'slope',    v: { m: '3/4', x1: '-2', y1: '1' } },
+  e6: { mode: 'equation', v: { a: '2', b: '-4', c: '8' } }
+};
+ $$('.ex-chip').forEach(ch => ch.addEventListener('click', () => {
+  const ex = EXAMPLES[ch.dataset.ex];
+  if (!ex) return;
+  applyMode(ex.mode);
+  Object.values(inputs).forEach(i => { i.value = ''; i.classList.remove('bad'); });
+  Object.entries(ex.v).forEach(([k, v]) => { inputs[k].value = v; });
+  recalc(true);
+  const card = $('#inputCard');
+  card.classList.add('flash');
+  setTimeout(() => card.classList.remove('flash'), 900);
+}));
+
+/* copy results */
+function copyText(t){
+  if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t);
+  return new Promise(res => {
+    const ta = document.createElement('textarea');
+    ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); }catch(e){}
+    ta.remove(); res();
+  });
+}
+function buildCopyText(){
+  if (!lastCopy) return null;
+  const c = lastCopy;
+  const L = ['SLOPE CALCULATOR — StudyWithSTEM',
+             'https://studywithstem.github.io/tools/mathematics/slope-calculator/', ''];
+  if (c.mode === 'points') L.push('Points: ' + c.pts);
+  if (c.mode === 'slope') L.push('Given: ' + c.given);
+  if (c.mode === 'equation') L.push('Equation: ' + c.given);
+  L.push('');
+  L.push('Slope m = ' + (c.vertical ? 'undefined (vertical)' : c.mStr));
+  L.push('Type: ' + c.badge);
+  L.push('Angle: ' + c.angStr + ' (' + c.radStr + ' rad)');
+  L.push('Grade: ' + c.gradeStr);
+  L.push('y-intercept: ' + c.yintStr);
+  L.push('x-intercept: ' + c.xintStr);
+  L.push('Perpendicular slope: ' + c.perpStr);
+  if (c.mode === 'points'){ L.push('Distance: ' + c.distStr); L.push('Midpoint: ' + c.midStr); }
+  L.push('');
+  L.push('Slope-intercept form: ' + c.si);
+  L.push('Standard form: ' + c.std);
+  if (c.ps) L.push('Point-slope form: ' + c.ps);
+  L.push('');
+  c.steps.forEach((s, i) => L.push((i + 1) + '. ' + s.k + ': ' + s.t));
+  return L.join('\n');
+}
+ $('#copyBtn').addEventListener('click', () => {
+  const t = buildCopyText();
+  if (!t){ setStatus('NOTHING TO COPY YET — ENTER SOME VALUES FIRST', ''); return; }
+  copyText(t).then(() => {
+    E.copyLbl.textContent = 'Copied ✓';
+    setTimeout(() => { E.copyLbl.textContent = 'Copy results'; }, 1600);
+  }).catch(() => {
+    E.copyLbl.textContent = 'Copy failed';
+    setTimeout(() => { E.copyLbl.textContent = 'Copy results'; }, 1600);
+  });
+});
+
+/* ---------- init ---------- */
+recalc(true);
+
+/* ---------- self-tests (visible in the console) ---------- */
+(function runSelfTests(){
+  const approx = (a, b) => Math.abs(a - b) <= 1e-9 * Math.max(1, Math.abs(a), Math.abs(b));
+  const TESTS = [
+    ['slope (0,0)→(1,1) is 1',                 () => approx(computeFromPoints(0,0,1,1).m, 1)],
+    ['slope (2,3)→(5,11) is 8/3',              () => approx(computeFromPoints(2,3,5,11).m, 8/3)],
+    ['intercept (2,3)→(5,11) is −7/3',         () => approx(computeFromPoints(2,3,5,11).b, -7/3)],
+    ['vertical line detected',                 () => computeFromPoints(3,1,3,-4).vertical === true],
+    ['vertical distance is 5',                 () => approx(deriveExtras(computeFromPoints(3,1,3,-4)).dist, 5)],
+    ['horizontal slope is 0',                  () => computeFromPoints(-2,5,4,5).m === 0],
+    ['negative slope (1,4)→(3,−8) is −6',       () => approx(computeFromPoints(1,4,3,-8).m, -6)],
+    ['midpoint (1,2),(5,8) is (3,5)',           () => { const r = deriveExtras(computeFromPoints(1,2,5,8)); return approx(r.midX,3) && approx(r.midY,5); }],
+    ['angle of m=1 is 45°',                    () => approx(angleOf({ m: 1, vertical: false }), 45)],
+    ['angle of m=−1 is 135°',                  () => approx(angleOf({ m: -1, vertical: false }), 135)],
+    ['angle of vertical line is 90°',          () => angleOf({ vertical: true }) === 90],
+    ['grade of m=0.25 is 25%',                 () => approx(0.25 * 100, 25)],
+    ['y = 2x − 4 formats correctly',           () => slopeInterceptStr(2, -4) === 'y = 2x − 4'],
+    ['standard form (1,2),(3,6) → 2x − y = 0', () => standardStr.apply(null, stdFrom(computeFromPoints(1,2,3,6))) === '2x − y = 0'],
+    ['2x − 4y = 8 gives m=0.5, b=−2',          () => { const r = computeFromEquation(2,-4,8); return approx(r.m, .5) && approx(r.b, -2); }],
+    ['standard form of 2x−4y=8 reduces to x − 2y = 4', () => standardStr.apply(null, stdFrom(computeFromEquation(2,-4,8))) === 'x − 2y = 4'],
+    ['point-slope m=2 at (2,3)',               () => pointSlopeStr(2, 2, 3) === 'y − 3 = 2(x − 2)'],
+    ['x-intercept of line m=2 through (3,2) is 2', () => approx(deriveExtras(computeFromSlopePoint(2,3,2)).xInt, 2)],
+    ['perpendicular of m=2 is −1/2',            () => perpSlope({ m: 2, vertical: false }) === -0.5],
+    ['perpendicular of vertical is 0',          () => perpSlope({ vertical: true }) === 0],
+    ['perpendicular of m=0 is undefined',       () => perpSlope({ m: 0, vertical: false }) === undefined],
+    ['parse "3/4" → 0.75',                      () => parseVal('3/4') === 0.75],
+    ['parse "−1,5" → −1.5 (unicode minus + comma)', () => parseVal('−1,5') === -1.5],
+    ['parse "" → null',                         () => parseVal('') === null],
+    ['parse "abc" → NaN',                       () => Number.isNaN(parseVal('abc'))],
+    ['vertical from equation B=0, x = C/A',     () => { const r = computeFromEquation(4,0,6); return r.vertical && approx(r.xLine, 1.5); }],
+    ['equation with A=B=0 rejected',            () => computeFromEquation(0,0,5) === null]
+  ];
+  let pass = 0; const fails = [];
+  TESTS.forEach(([name, fn]) => { try{ if (fn()) pass++; else fails.push(name); }catch(e){ fails.push(name + ' (threw)'); } });
+  console.log('%c[Slope Calculator] self-tests: ' + pass + '/' + TESTS.length + ' passed', 'color:#3ED9B5;font-weight:700');
+  if (fails.length) console.warn('[Slope Calculator] FAILED:', fails);
+})();
+
+})();
+
+/* =========================================================
+   FOOTER STARFIELD — Three.js star drift, theme-aware
+========================================================= */
+(function(){
+  const cv = $('#starfield');
+  if (!cv || !HAS3D) return;
+
+  const renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  const scene  = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, 1, .1, 300);
+  camera.position.z = 60;
+
+  const N = 320;
+  const pos = new Float32Array(N * 3);
+  for (let i = 0; i < N; i++){
+    pos[i*3]   = (Math.random() - .5) * 160;
+    pos[i*3+1] = (Math.random() - .5) * 90;
+    pos[i*3+2] = (Math.random() - .5) * 100;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const mat = themedMat(new THREE.PointsMaterial({ size: 1.6, map: SPRITE, depthWrite: false, sizeAttenuation: true }), 0xF1EDE2, 0x0B2545, .8, .5);
+  const stars = new THREE.Points(geo, mat);
+  scene.add(stars);
+
+  function resize(){
+    const w = cv.clientWidth || 1, h = cv.clientHeight || 1;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  addEventListener('resize', resize);
+  resize();
+
+  let t = 0, running = false;
+  function frame(){
+    if (!running) return;
+    requestAnimationFrame(frame);
+    if (!RM){
+      t += .016;
+      stars.rotation.y = Math.sin(t * .12) * .16;
+      stars.rotation.x = Math.cos(t * .09) * .1;
+    }
+    tickTheme();
+    renderer.render(scene, camera);
+  }
+  new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting && !running){ running = true; frame(); }
+      else if (!e.isIntersecting){ running = false; }
+    });
+  }, { threshold: 0 }).observe(cv);
+})();
+</script>
+</body>
+</html>
