@@ -305,14 +305,18 @@ body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
 .pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
 .pf-text .hl{color:var(--accent); font-style:italic;}
 .pf-text p{max-width:44ch; color:var(--muted);}
-.pf-form{display:flex; gap:10px; flex-wrap:wrap;}
-.pf-form input{
-  min-width:240px; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
   padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
 }
 .pf-form input::placeholder{color:var(--faint);}
 .pf-form input:focus{outline:none; border-color:var(--accent);}
-@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%;} .pf-form input{flex:1; min-width:0;} }
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
 
 /* ================= FOOTER ================= */
 footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
@@ -526,7 +530,12 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
       <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
     </div>
     <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
       <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
       <button class="btn-ticket" type="submit">
         <span>Subscribe</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
