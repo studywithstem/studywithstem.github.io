@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Periodic Table Calculator — Interactive Chart with Element Details, Filters & Search | StudyWithSTEM</title>
+<meta name="description" content="Explore an interactive periodic table of all 118 elements — search by name or symbol, filter by category or state, and view atomic mass, electron configuration, electronegativity and more. Free, no sign-up.">
+<meta name="keywords" content="periodic table, interactive periodic table, periodic table of elements, element finder, atomic mass calculator, electron configuration, periodic table with electronegativity, chemistry calculator, periodic table search, periodic table filter, free periodic table tool">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/chemistry/periodic-table/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Periodic Table Calculator — Interactive Chart with Element Details, Filters & Search | StudyWithSTEM">
+<meta property="og:description" content="An interactive periodic table of all 118 elements — search, filter by category or state of matter, and view atomic mass, electron configuration and electronegativity for every element. Free and runs in your browser.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/chemistry/periodic-table/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/periodic-table.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM Interactive Periodic Table — free online chemistry tool">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Periodic Table Calculator — Interactive Chart & Element Explorer | StudyWithSTEM">
+<meta name="twitter:description" content="Search, filter and explore all 118 elements — atomic mass, electron configuration, electronegativity and more, instantly.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/periodic-table.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Chemistry", "item": "https://studywithstem.github.io/tools/chemistry/" },
+    { "@type": "ListItem", "position": 4, "name": "Periodic Table", "item": "https://studywithstem.github.io/tools/chemistry/periodic-table/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Periodic Table Calculator",
+  "url": "https://studywithstem.github.io/tools/chemistry/periodic-table/",
+  "description": "Free interactive periodic table covering all 118 elements. Search by name or symbol, filter by category or state of matter, and view atomic mass, electron configuration, electronegativity, discovery year and more for every element.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "All 118 elements with full detail cards",
+    "Search by element name, symbol or atomic number",
+    "Filter by category, period, block or state of matter",
+    "Atomic mass, electron configuration and electronegativity for every element",
+    "Element comparison and quick facts"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many elements are on the periodic table?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There are 118 confirmed elements, from hydrogen (atomic number 1) to oganesson (atomic number 118). This tool includes all of them, including the synthetic superheavy elements added most recently." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the periodic table organized?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Elements are arranged left to right by increasing atomic number, in rows called periods and columns called groups. Elements in the same group generally share similar chemical behavior because they have the same number of outer-shell electrons." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does an element's category mean, like alkali metal or noble gas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Category groups elements by shared chemical behavior. Alkali metals are highly reactive soft metals, noble gases are largely unreactive, halogens are reactive nonmetals, and so on. Use the category filter on this tool to highlight any group across the whole table at once." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is atomic mass and why isn't it a whole number?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Atomic mass is the weighted average mass of an element's naturally occurring isotopes, measured in atomic mass units (u). Because most elements have multiple isotopes with different masses and abundances, the average rarely lands on a whole number." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is electronegativity?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Electronegativity measures how strongly an atom attracts shared electrons in a chemical bond, on the Pauling scale. Fluorine has the highest electronegativity of any element. Noble gases and a few synthetic elements have no established value since they rarely form bonds." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find an element's electron configuration?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Search or click any element in this tool and its detail card shows the full electron configuration in noble-gas shorthand, along with the per-shell electron distribution." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this periodic table tool free, and is my data sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It is completely free and runs entirely in your browser — nothing you search or click is uploaded, logged, or sent to a server. No account, no sign-up, no limits." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= PERIODIC TABLE TOOL (page-specific layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+  padding:24px;
+}
+
+/* --- controls bar --- */
+.pt-controls{display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:20px;}
+.pt-search{position:relative; flex:1 1 240px; min-width:200px;}
+.pt-search svg{position:absolute; left:14px; top:50%; transform:translateY(-50%); width:16px; height:16px; color:var(--faint); pointer-events:none;}
+.pt-search input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:12px 14px 12px 40px; color:var(--ink); font:600 .92rem var(--f-sans); transition:border-color .25s;
+}
+.pt-search input:focus{outline:none; border-color:var(--accent);}
+.pt-search input::placeholder{color:var(--faint); font-weight:500;}
+
+.pt-select{position:relative; flex:0 0 auto;}
+.pt-select select{
+  appearance:none; -webkit-appearance:none; cursor:pointer;
+  background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:12px 32px 12px 14px; color:var(--ink); font:600 .82rem var(--f-sans); transition:border-color .25s;
+}
+.pt-select select:focus{outline:none; border-color:var(--accent);}
+.pt-select select option{background:var(--bg); color:var(--ink);}
+.pt-select svg{position:absolute; right:11px; top:50%; transform:translateY(-50%); width:13px; height:13px; color:var(--faint); pointer-events:none;}
+
+.pt-reset{
+  flex:0 0 auto; cursor:pointer; font:700 .68rem var(--f-mono); letter-spacing:.08em; color:var(--muted);
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:10px; padding:12px 14px;
+  transition:color .2s, border-color .2s;
+}
+.pt-reset:hover{color:var(--accent); border-color:var(--accent);}
+
+.pt-count{font:600 .68rem var(--f-mono); letter-spacing:.08em; color:var(--faint); margin-bottom:14px;}
+.pt-count b{color:var(--accent);}
+
+/* --- legend --- */
+.pt-legend{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;}
+.pt-leg{
+  display:inline-flex; align-items:center; gap:7px; cursor:pointer; user-select:none;
+  font:700 .6rem var(--f-mono); letter-spacing:.05em; color:var(--muted);
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:7px 11px;
+  transition:color .2s, border-color .2s, opacity .2s;
+}
+.pt-leg i{width:9px; height:9px; border-radius:3px; flex:none;}
+.pt-leg:hover{color:var(--ink);}
+.pt-leg.dim{opacity:.32;}
+.pt-leg.active{color:var(--ink); border-color:var(--edge-strong);}
+
+/* --- category colors (dark-friendly, distinct) --- */
+:root{
+  --c-alkali-metal:#F0B65C; --c-alkaline-earth:#E8935C; --c-transition-metal:#6FA8E3;
+  --c-post-transition:#7EC8B0; --c-metalloid:#B590E3; --c-nonmetal:#6FE3D0;
+  --c-halogen:#E36F9C; --c-noble-gas:#9C8CF0; --c-lanthanide:#E3C36F;
+  --c-actinide:#E38C6F; --c-unknown:#8A98A8;
+}
+
+/* --- grid table --- */
+.pt-scroll{overflow-x:auto; padding-bottom:8px; -webkit-overflow-scrolling:touch;}
+.pt-grid{
+  display:grid; grid-template-columns:repeat(18, minmax(46px, 1fr)); gap:4px;
+  min-width:940px;
+}
+.pt-cell{
+  position:relative; aspect-ratio:1; border-radius:6px; cursor:pointer;
+  border:1px solid var(--edge); background:var(--bg);
+  display:flex; flex-direction:column; justify-content:space-between; padding:5px 6px;
+  transition:transform .15s ease, border-color .15s ease, opacity .2s ease, box-shadow .15s ease;
+}
+.pt-cell:hover{ transform:translateY(-2px); border-color:var(--accent); box-shadow:0 6px 16px rgba(0,0,0,.18); z-index:2;}
+.pt-cell .pn{font:700 .55rem var(--f-mono); color:var(--faint);}
+.pt-cell .ps{font:700 1.05rem/1 var(--f-disp); color:var(--ink);}
+.pt-cell .pname{font:600 .48rem/1.1 var(--f-sans); color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.pt-cell.dim{opacity:.16; pointer-events:none;}
+.pt-cell.hide{display:none;}
+.pt-cell.placeholder{background:none; border:none; cursor:default; pointer-events:none;}
+.pt-cell.placeholder:hover{transform:none; box-shadow:none;}
+.pt-cell.lawide{font:700 .5rem var(--f-mono); color:var(--faint); display:flex; align-items:center; justify-content:center; border-style:dashed; cursor:default;}
+
+/* category left-edge accent stripe */
+.pt-cell::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; border-radius:6px 0 0 6px; background:var(--cat-color, var(--edge-strong));}
+.pt-cell[data-cat="alkali-metal"]{--cat-color:var(--c-alkali-metal);}
+.pt-cell[data-cat="alkaline-earth"]{--cat-color:var(--c-alkaline-earth);}
+.pt-cell[data-cat="transition-metal"]{--cat-color:var(--c-transition-metal);}
+.pt-cell[data-cat="post-transition"]{--cat-color:var(--c-post-transition);}
+.pt-cell[data-cat="metalloid"]{--cat-color:var(--c-metalloid);}
+.pt-cell[data-cat="nonmetal"]{--cat-color:var(--c-nonmetal);}
+.pt-cell[data-cat="halogen"]{--cat-color:var(--c-halogen);}
+.pt-cell[data-cat="noble-gas"]{--cat-color:var(--c-noble-gas);}
+.pt-cell[data-cat="lanthanide"]{--cat-color:var(--c-lanthanide);}
+.pt-cell[data-cat="actinide"]{--cat-color:var(--c-actinide);}
+.pt-cell[data-cat="unknown"]{--cat-color:var(--c-unknown);}
+
+.pt-lawide-row{margin-top:4px;}
+
+@media (max-width:640px){
+  .pt-cell .pname{display:none;}
+  .pt-cell .ps{font-size:.92rem;}
+}
+
+/* --- detail card (appears below grid on select) --- */
+.pt-detail{
+  margin-top:22px; border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px;
+  padding:24px; display:none;
+}
+.pt-detail.show{display:block;}
+.pd-top{display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap; justify-content:space-between;}
+.pd-id{display:flex; align-items:center; gap:16px;}
+.pd-sym{
+  width:74px; height:74px; border-radius:12px; flex:none; position:relative;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  border:1px solid var(--edge-strong); background:var(--panel);
+}
+.pd-sym::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; border-radius:12px 0 0 12px; background:var(--cat-color, var(--accent));}
+.pd-sym .s{font:700 1.7rem/1 var(--f-disp); color:var(--ink);}
+.pd-sym .n{font:700 .6rem var(--f-mono); color:var(--faint); margin-top:2px;}
+.pd-name h3{font:600 1.5rem/1.15 var(--f-disp); letter-spacing:-.01em;}
+.pd-cat{display:inline-flex; align-items:center; gap:7px; font:700 .62rem var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:8px;}
+.pd-cat i{width:8px; height:8px; border-radius:2px; background:var(--cat-color, var(--accent));}
+.pd-close{
+  cursor:pointer; width:38px; height:38px; border-radius:50%; flex:none;
+  display:grid; place-items:center; border:1px solid var(--edge-strong); background:var(--panel); color:var(--muted);
+  transition:color .2s, border-color .2s;
+}
+.pd-close:hover{color:var(--accent); border-color:var(--accent);}
+.pd-close svg{width:15px; height:15px;}
+
+.pd-summary{margin-top:16px; color:var(--muted); font-size:.92rem; max-width:70ch;}
+
+.pd-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:14px; margin-top:20px;}
+.pd-stat{border:1px dashed var(--edge-strong); border-radius:10px; padding:12px 14px;}
+.pd-stat .k{font:700 .58rem var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--faint);}
+.pd-stat .v{font:700 .96rem var(--f-mono); color:var(--ink); margin-top:6px; word-break:break-word;}
+
+.pd-nav{display:flex; gap:10px; margin-top:20px;}
+.pd-nav button{
+  flex:1; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;
+  font:600 .8rem var(--f-sans); color:var(--muted); border:1px solid var(--edge-strong); background:var(--panel);
+  border-radius:10px; padding:11px; transition:color .2s, border-color .2s;
+}
+.pd-nav button:hover{color:var(--accent); border-color:var(--accent);}
+.pd-nav button svg{width:14px; height:14px;}
+
+.pt-empty{display:none; text-align:center; padding:50px 20px; color:var(--faint); font:600 .8rem var(--f-mono); letter-spacing:.06em;}
+.pt-empty.show{display:block;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
+}
+.fx .formula sup{font-size:.6em;}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .tool-shell{padding:16px;}
+  .pt-controls{flex-direction:column; align-items:stretch;}
+  .pt-select, .pt-reset{width:100%;}
+  .pt-select select{width:100%;}
+  .pd-top{flex-direction:column;}
+  .pd-nav{flex-direction:column;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · CHEMISTRY</p>
+    <h1>Periodic Table</h1>
+    <p class="lede">Search, filter and click through all 118 elements — mass, electron configuration and more, instantly.</p>
+    <span class="updated"><i></i>118 ELEMENTS · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE PERIODIC TABLE</span>
+      <h2>Click any element for the full picture.</h2>
+      <p>Search by name, symbol or atomic number, filter by category or state of matter, then tap an element to see its mass, electron configuration, electronegativity and more.</p>
+    </div>
+
+    <div class="tool-shell">
+
+      <div class="pt-controls">
+        <div class="pt-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="pt-search" placeholder="Search name, symbol or number…" aria-label="Search elements" autocomplete="off">
+        </div>
+        <div class="pt-select">
+          <select id="pt-filter-state" aria-label="Filter by state of matter">
+            <option value="">All states</option>
+            <option value="Solid">Solid</option>
+            <option value="Liquid">Liquid</option>
+            <option value="Gas">Gas</option>
+          </select>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="pt-select">
+          <select id="pt-filter-block" aria-label="Filter by block">
+            <option value="">All blocks</option>
+            <option value="s">s-block</option>
+            <option value="p">p-block</option>
+            <option value="d">d-block</option>
+            <option value="f">f-block</option>
+          </select>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <button class="pt-reset" id="pt-reset" type="button">RESET FILTERS</button>
+      </div>
+
+      <div class="pt-count" id="pt-count"></div>
+
+      <div class="pt-legend" id="pt-legend">
+        <button type="button" class="pt-leg" data-cat="alkali-metal"><i style="background:var(--c-alkali-metal)"></i>Alkali metal</button>
+        <button type="button" class="pt-leg" data-cat="alkaline-earth"><i style="background:var(--c-alkaline-earth)"></i>Alkaline earth</button>
+        <button type="button" class="pt-leg" data-cat="transition-metal"><i style="background:var(--c-transition-metal)"></i>Transition metal</button>
+        <button type="button" class="pt-leg" data-cat="post-transition"><i style="background:var(--c-post-transition)"></i>Post-transition metal</button>
+        <button type="button" class="pt-leg" data-cat="metalloid"><i style="background:var(--c-metalloid)"></i>Metalloid</button>
+        <button type="button" class="pt-leg" data-cat="nonmetal"><i style="background:var(--c-nonmetal)"></i>Nonmetal</button>
+        <button type="button" class="pt-leg" data-cat="halogen"><i style="background:var(--c-halogen)"></i>Halogen</button>
+        <button type="button" class="pt-leg" data-cat="noble-gas"><i style="background:var(--c-noble-gas)"></i>Noble gas</button>
+        <button type="button" class="pt-leg" data-cat="lanthanide"><i style="background:var(--c-lanthanide)"></i>Lanthanide</button>
+        <button type="button" class="pt-leg" data-cat="actinide"><i style="background:var(--c-actinide)"></i>Actinide</button>
+        <button type="button" class="pt-leg" data-cat="unknown"><i style="background:var(--c-unknown)"></i>Unknown</button>
+      </div>
+
+      <div class="pt-scroll">
+        <div class="pt-grid" id="pt-grid" role="grid" aria-label="Periodic table of elements"></div>
+      </div>
+
+      <p class="pt-empty" id="pt-empty">NO ELEMENTS MATCH THOSE FILTERS</p>
+
+      <div class="pt-detail" id="pt-detail" role="region" aria-live="polite">
+        <div class="pd-top">
+          <div class="pd-id">
+            <div class="pd-sym" id="pd-sym">
+              <span class="s" id="pd-s"></span>
+              <span class="n" id="pd-n"></span>
+            </div>
+            <div class="pd-name">
+              <h3 id="pd-name"></h3>
+              <span class="pd-cat" id="pd-cat"><i></i><span id="pd-cat-text"></span></span>
+            </div>
+          </div>
+          <button class="pd-close" id="pd-close" type="button" aria-label="Close details">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <p class="pd-summary" id="pd-summary"></p>
+        <div class="pd-grid" id="pd-grid"></div>
+        <div class="pd-nav">
+          <button type="button" id="pd-prev">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            Previous element
+          </button>
+          <button type="button" id="pd-next">
+            Next element
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE</span>
+      <h2>Find any element in three moves.</h2>
+      <p>No manual required — but here's the entire flow.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n mono">STEP 01</span>
+        <h3>Search or filter</h3>
+        <p>Type a name, symbol or atomic number into the search box, or narrow the table down by <strong>state of matter</strong> or <strong>block</strong> using the dropdowns.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 02</span>
+        <h3>Spot a category</h3>
+        <p>Tap any chip in the legend — alkali metal, noble gas, halogen and so on — to highlight every element in that family across the whole table at once.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 03</span>
+        <h3>Click an element</h3>
+        <p>Selecting a tile opens its full detail card: atomic mass, electron configuration, electron shells, electronegativity, phase at room temperature and discovery year.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 04</span>
+        <h3>Step through neighbors</h3>
+        <p>Use <strong>Previous</strong> and <strong>Next</strong> on the detail card to move through elements in atomic-number order without returning to the grid each time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEY FACTS ============ -->
+<section class="sec" id="formulas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · READING THE TABLE</span>
+      <h2>What the rows and columns mean.</h2>
+      <p>Three ideas explain almost everything about how the table is laid out.</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>Groups (columns)</h3>
+        <div class="formula">18 groups, numbered 1–18</div>
+        <p>Elements in the same group share the same number of outer-shell electrons, which is why they tend to react in similar ways — group 1 metals are all soft and highly reactive, group 18 gases are all inert.</p>
+      </div>
+      <div class="fx">
+        <h3>Periods (rows)</h3>
+        <div class="formula">7 periods, top to bottom</div>
+        <p>Each new period starts a new electron shell. Moving left to right across a period, atomic number rises by one each time and properties shift gradually from metallic to nonmetallic.</p>
+      </div>
+      <div class="fx">
+        <h3>Blocks</h3>
+        <div class="formula">s · p · d · f</div>
+        <p>Block tells you which type of orbital holds the outermost electron — s and p blocks form the main table body, d-block elements are the transition metals, and f-block elements are the lanthanides and actinides shown below.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-layout">
+    <div class="sec-head">
+      <span class="sec-idx mono">04 · FAQ</span>
+      <h2>Questions people actually ask.</h2>
+      <p>The short answers — with the long ones one tap away.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>How many elements are on the periodic table?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>There are <strong>118 confirmed elements</strong>, from hydrogen (atomic number 1) to oganesson (atomic number 118). This tool includes all of them, including the synthetic superheavy elements added most recently.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How is the periodic table organized?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Elements are arranged left to right by increasing atomic number, in rows called <strong>periods</strong> and columns called <strong>groups</strong>. Elements in the same group generally share similar chemical behavior because they have the same number of outer-shell electrons.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What does an element's category mean, like alkali metal or noble gas?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Category groups elements by shared chemical behavior. Alkali metals are highly reactive soft metals, noble gases are largely unreactive, halogens are reactive nonmetals, and so on. Use the <code>legend</code> on this tool to highlight any category across the whole table at once.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What is atomic mass and why isn't it a whole number?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Atomic mass is the weighted average mass of an element's naturally occurring isotopes, measured in atomic mass units (u). Because most elements have multiple isotopes with different masses and abundances, the average rarely lands on a whole number.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What is electronegativity?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Electronegativity measures how strongly an atom attracts shared electrons in a chemical bond, on the Pauling scale. Fluorine has the highest electronegativity of any element. Noble gases and a few synthetic elements have no established value since they rarely form bonds.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I find an element's electron configuration?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Search or click any element in this tool and its detail card shows the full <code>electron configuration</code> in noble-gas shorthand, along with the per-shell electron distribution.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this tool free, and where does my data go?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>It's completely free and runs entirely in your browser — nothing you search or click is uploaded, logged, or sent to any server. No account, no sign-up, no limits.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER — same footer as every page ============ -->
+<!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
+<section class="pre-footer" id="subscribe">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">SUBSCRIBE</span>
+      <h2>Never miss a <span class="hl">drop.</span></h2>
+      <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
+      <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Poster-deep STEM infographics, engineered to stick. New drop every Friday.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span>studywithstem@gmail.com<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Post</a></li>
+          <li><a href="/page/about/">About</a></li>
+          <li><a href="/page/faq/">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/page/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="/page/copyrights/">Copyrights</a></li>
+          <li><a href="/page/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/></svg>
+            Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="foot-mid">
+      <span class="foot-meta" id="footYear">© STUDYWITHSTEM</span>
+      <span class="foot-meta">DESIGNED &amp; ENGINEERED FOR THE CURIOUS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================
+   BASICS
+========================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS3D = typeof THREE !== 'undefined';
+
+/* =========================================================
+   THEME SYSTEM — one source of truth for CSS *and* WebGL
+   (only the footer starfield uses Three.js on this page).
+========================================================= */
+let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
+let themeTarget = themeMix;
+const themed = [];
+
+function applyRec(r, mix){
+  r.m.color.copy(r.d).lerp(r.l, mix);
+  r.m.opacity = r.dOp + (r.lOp - r.dOp) * mix;
+  r.m.blending = mix < .5 ? THREE.AdditiveBlending : THREE.NormalBlending;
+}
+function themedMat(mat, darkHex, lightHex, darkOp, lightOp){
+  const rec = { m: mat, d: new THREE.Color(darkHex), l: new THREE.Color(lightHex), dOp: darkOp, lOp: lightOp };
+  mat.transparent = true;
+  themed.push(rec);
+  applyRec(rec, themeMix);
+  return mat;
+}
+function tickTheme(){
+  if (themeMix === themeTarget) return;
+  if (RM) themeMix = themeTarget;
+  else {
+    themeMix += (themeTarget - themeMix) * .1;
+    if (Math.abs(themeTarget - themeMix) < .001) themeMix = themeTarget;
+  }
+  themed.forEach(r => applyRec(r, themeMix));
+}
+
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  themeTarget = t === 'light' ? 1 : 0;
+  try{ localStorage.setItem('sws-theme', t); }catch(e){}
+  const b = $('#themeToggle');
+  if (b) b.setAttribute('aria-pressed', String(t === 'light'));
+  const root = document.documentElement;
+  root.classList.add('theme-anim');
+  clearTimeout(setTheme._t);
+  setTheme._t = setTimeout(() => root.classList.remove('theme-anim'), 650);
+}
+(function(){
+  const b = $('#themeToggle');
+  if (b){
+    b.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+    b.addEventListener('click', () =>
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+  }
+})();
+
+let SPRITE = null;
+if (HAS3D){
+  try{
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const x = c.getContext('2d');
+    const g = x.createRadialGradient(32, 32, 0, 32, 32, 30);
+    g.addColorStop(0, 'rgba(255,255,255,1)');
+    g.addColorStop(.5, 'rgba(255,255,255,.45)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+    SPRITE = new THREE.CanvasTexture(c);
+  }catch(e){}
+}
+
+/* =========================================================
+   NAV — hide on scroll down, scroll-progress segment.
+========================================================= */
+const nav = $('#nav');
+const progBar = $('.nav-progress');
+const progSeg = $('#navProg');
+let lastY = 0, sTick = false;
+
+function updProg(){
+  if (!progSeg || !progBar) return;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const p = max > 0 ? Math.min(1, scrollY / max) : 0;
+  const bw = progBar.clientWidth;
+  if (!bw) return;
+  const sw = Math.max(40, Math.min(90, bw * .12));
+  progSeg.style.width = sw + 'px';
+  progSeg.style.transform = 'translateX(' + (p * (bw - sw)) + 'px)';
+}
+function onScroll(){
+  const y = scrollY;
+  nav.classList.toggle('scrolled', y > 8);
+  const menuOpen = document.body.classList.contains('menu-open');
+  if (y > lastY && y > 180 && !menuOpen) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  updProg();
+}
+addEventListener('scroll', () => {
+  if (!sTick){ sTick = true; requestAnimationFrame(() => { onScroll(); sTick = false; }); }
+}, { passive: true });
+addEventListener('resize', updProg);
+addEventListener('load', updProg);
+onScroll();
+
+/* mobile menu */
+(function(){
+  const burger = $('#burger');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('#mmenu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+})();
+
+/* footer reveal + back-to-top + year */
+(function(){
+  const foot = $('#footer');
+  if (foot) new IntersectionObserver((es, o) => {
+    es.forEach(e => { if (e.isIntersecting){ foot.classList.add('in'); o.disconnect(); } });
+  }, { threshold: .12 }).observe(foot);
+
+  const bt = $('#backTop');
+  if (bt) bt.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+  const yr = $('#footYear');
+  if (yr) yr.textContent = '© ' + new Date().getFullYear() + ' STUDYWITHSTEM';
+})();
+
+/* =========================================================
+   PERIODIC TABLE TOOL — all data & logic run locally
+========================================================= */
+(function(){
+  'use strict';
+
+  const ELEMENTS = [{"n":1,"s":"H","name":"Hydrogen","mass":1.008,"cat":"nonmetal","group":1,"period":1,"block":"s","phase":"Gas","electrons":"1","config":"1s1","en":2.2,"discovered":"1766","summary":"The lightest and most abundant element in the universe, forming the bulk of stars and powering fusion in the Sun."},{"n":2,"s":"He","name":"Helium","mass":4.0026,"cat":"noble-gas","group":18,"period":1,"block":"s","phase":"Gas","electrons":"2","config":"1s2","en":null,"discovered":"1868","summary":"An inert gas used in balloons, cooling MRI magnets, and giving voices a squeaky pitch when inhaled."},{"n":3,"s":"Li","name":"Lithium","mass":6.94,"cat":"alkali-metal","group":1,"period":2,"block":"s","phase":"Solid","electrons":"2, 1","config":"[He] 2s1","en":0.98,"discovered":"1817","summary":"A soft, silvery metal that powers rechargeable batteries in phones, laptops and electric vehicles."},{"n":4,"s":"Be","name":"Beryllium","mass":9.0122,"cat":"alkaline-earth","group":2,"period":2,"block":"s","phase":"Solid","electrons":"2, 2","config":"[He] 2s2","en":1.57,"discovered":"1798","summary":"A lightweight, stiff metal used in aerospace components and X-ray equipment windows."},{"n":5,"s":"B","name":"Boron","mass":10.81,"cat":"metalloid","group":13,"period":2,"block":"p","phase":"Solid","electrons":"2, 3","config":"[He] 2s2 2p1","en":2.04,"discovered":"1808","summary":"A metalloid used to strengthen glass (borosilicate) and in fiberglass and detergents."},{"n":6,"s":"C","name":"Carbon","mass":12.011,"cat":"nonmetal","group":14,"period":2,"block":"p","phase":"Solid","electrons":"2, 4","config":"[He] 2s2 2p2","en":2.55,"discovered":"Ancient","summary":"The backbone of all known life, found in every organic molecule, diamonds and graphite."},{"n":7,"s":"N","name":"Nitrogen","mass":14.007,"cat":"nonmetal","group":15,"period":2,"block":"p","phase":"Gas","electrons":"2, 5","config":"[He] 2s2 2p3","en":3.04,"discovered":"1772","summary":"Makes up 78% of Earth's atmosphere and is essential to amino acids, proteins and fertilizers."},{"n":8,"s":"O","name":"Oxygen","mass":15.999,"cat":"nonmetal","group":16,"period":2,"block":"p","phase":"Gas","electrons":"2, 6","config":"[He] 2s2 2p4","en":3.44,"discovered":"1774","summary":"Essential for respiration in most life forms and makes up about 21% of the air we breathe."},{"n":9,"s":"F","name":"Fluorine","mass":18.998,"cat":"halogen","group":17,"period":2,"block":"p","phase":"Gas","electrons":"2, 7","config":"[He] 2s2 2p5","en":3.98,"discovered":"1886","summary":"The most reactive and electronegative element, used in toothpaste and non-stick coatings."},{"n":10,"s":"Ne","name":"Neon","mass":20.18,"cat":"noble-gas","group":18,"period":2,"block":"p","phase":"Gas","electrons":"2, 8","config":"[He] 2s2 2p6","en":null,"discovered":"1898","summary":"An inert gas famous for glowing reddish-orange in the electrified signs that bear its name."},{"n":11,"s":"Na","name":"Sodium","mass":22.99,"cat":"alkali-metal","group":1,"period":3,"block":"s","phase":"Solid","electrons":"2, 8, 1","config":"[Ne] 3s1","en":0.93,"discovered":"1807","summary":"A soft reactive metal that combines with chlorine to form table salt, essential to nerve function."},{"n":12,"s":"Mg","name":"Magnesium","mass":24.305,"cat":"alkaline-earth","group":2,"period":3,"block":"s","phase":"Solid","electrons":"2, 8, 2","config":"[Ne] 3s2","en":1.31,"discovered":"1755","summary":"A lightweight structural metal also vital to chlorophyll in plants and human muscle function."},{"n":13,"s":"Al","name":"Aluminium","mass":26.982,"cat":"post-transition","group":13,"period":3,"block":"p","phase":"Solid","electrons":"2, 8, 3","config":"[Ne] 3s2 3p1","en":1.61,"discovered":"1825","summary":"A lightweight, corrosion-resistant metal used in cans, foil, aircraft and construction."},{"n":14,"s":"Si","name":"Silicon","mass":28.085,"cat":"metalloid","group":14,"period":3,"block":"p","phase":"Solid","electrons":"2, 8, 4","config":"[Ne] 3s2 3p2","en":1.9,"discovered":"1824","summary":"The backbone of computer chips and solar cells, and the second most abundant element in Earth's crust."},{"n":15,"s":"P","name":"Phosphorus","mass":30.974,"cat":"nonmetal","group":15,"period":3,"block":"p","phase":"Solid","electrons":"2, 8, 5","config":"[Ne] 3s2 3p3","en":2.19,"discovered":"1669","summary":"Essential to DNA, ATP and bone structure, and used heavily in fertilizers."},{"n":16,"s":"S","name":"Sulfur","mass":32.06,"cat":"nonmetal","group":16,"period":3,"block":"p","phase":"Solid","electrons":"2, 8, 6","config":"[Ne] 3s2 3p4","en":2.58,"discovered":"Ancient","summary":"A yellow solid used to vulcanize rubber and manufacture sulfuric acid, one of the most-produced chemicals."},{"n":17,"s":"Cl","name":"Chlorine","mass":35.45,"cat":"halogen","group":17,"period":3,"block":"p","phase":"Gas","electrons":"2, 8, 7","config":"[Ne] 3s2 3p5","en":3.16,"discovered":"1774","summary":"A pungent, greenish gas used to disinfect drinking water and swimming pools."},{"n":18,"s":"Ar","name":"Argon","mass":39.948,"cat":"noble-gas","group":18,"period":3,"block":"p","phase":"Gas","electrons":"2, 8, 8","config":"[Ne] 3s2 3p6","en":null,"discovered":"1894","summary":"An inert gas used to fill incandescent light bulbs and shield welding from oxidation."},{"n":19,"s":"K","name":"Potassium","mass":39.098,"cat":"alkali-metal","group":1,"period":4,"block":"s","phase":"Solid","electrons":"2, 8, 8, 1","config":"[Ar] 4s1","en":0.82,"discovered":"1807","summary":"A soft reactive metal critical to nerve signaling and found in bananas and fertilizers."},{"n":20,"s":"Ca","name":"Calcium","mass":40.078,"cat":"alkaline-earth","group":2,"period":4,"block":"s","phase":"Solid","electrons":"2, 8, 8, 2","config":"[Ar] 4s2","en":1.0,"discovered":"1808","summary":"The most abundant mineral in the human body, forming bones and teeth."},{"n":21,"s":"Sc","name":"Scandium","mass":44.956,"cat":"transition-metal","group":3,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 9, 2","config":"[Ar] 3d1 4s2","en":1.36,"discovered":"1879","summary":"A rare, lightweight metal used in aerospace alloys and high-intensity stadium lighting."},{"n":22,"s":"Ti","name":"Titanium","mass":47.867,"cat":"transition-metal","group":4,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 10, 2","config":"[Ar] 3d2 4s2","en":1.54,"discovered":"1791","summary":"A strong, corrosion-resistant, lightweight metal used in jet engines, implants and paint pigment."},{"n":23,"s":"V","name":"Vanadium","mass":50.942,"cat":"transition-metal","group":5,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 11, 2","config":"[Ar] 3d3 4s2","en":1.63,"discovered":"1801","summary":"Hardens steel alloys used in tools, springs and jet engine components."},{"n":24,"s":"Cr","name":"Chromium","mass":51.996,"cat":"transition-metal","group":6,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 13, 1","config":"[Ar] 3d5 4s1","en":1.66,"discovered":"1797","summary":"Gives stainless steel its shine and corrosion resistance, and colors rubies and emeralds."},{"n":25,"s":"Mn","name":"Manganese","mass":54.938,"cat":"transition-metal","group":7,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 13, 2","config":"[Ar] 3d5 4s2","en":1.55,"discovered":"1774","summary":"Vital to steel production, dramatically increasing hardness and strength."},{"n":26,"s":"Fe","name":"Iron","mass":55.845,"cat":"transition-metal","group":8,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 14, 2","config":"[Ar] 3d6 4s2","en":1.83,"discovered":"Ancient","summary":"The most widely used metal on Earth, forming steel, and carries oxygen in human blood."},{"n":27,"s":"Co","name":"Cobalt","mass":58.933,"cat":"transition-metal","group":9,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 15, 2","config":"[Ar] 3d7 4s2","en":1.88,"discovered":"1735","summary":"A key ingredient in rechargeable battery cathodes and vivid blue pigments."},{"n":28,"s":"Ni","name":"Nickel","mass":58.693,"cat":"transition-metal","group":10,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 16, 2","config":"[Ar] 3d8 4s2","en":1.91,"discovered":"1751","summary":"Used in stainless steel, coins and rechargeable batteries for its corrosion resistance."},{"n":29,"s":"Cu","name":"Copper","mass":63.546,"cat":"transition-metal","group":11,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 18, 1","config":"[Ar] 3d10 4s1","en":1.9,"discovered":"Ancient","summary":"An excellent electrical conductor used in wiring, plumbing, and one of the first metals humans worked."},{"n":30,"s":"Zn","name":"Zinc","mass":65.38,"cat":"transition-metal","group":12,"period":4,"block":"d","phase":"Solid","electrons":"2, 8, 18, 2","config":"[Ar] 3d10 4s2","en":1.65,"discovered":"1746","summary":"Used to galvanize steel against rust and is an essential trace mineral in human nutrition."},{"n":31,"s":"Ga","name":"Gallium","mass":69.723,"cat":"post-transition","group":13,"period":4,"block":"p","phase":"Solid","electrons":"2, 8, 18, 3","config":"[Ar] 3d10 4s2 4p1","en":1.81,"discovered":"1875","summary":"A metal that melts near room temperature, used in LEDs and semiconductors."},{"n":32,"s":"Ge","name":"Germanium","mass":72.63,"cat":"metalloid","group":14,"period":4,"block":"p","phase":"Solid","electrons":"2, 8, 18, 4","config":"[Ar] 3d10 4s2 4p2","en":2.01,"discovered":"1886","summary":"A semiconductor used in fiber optics and early transistor technology."},{"n":33,"s":"As","name":"Arsenic","mass":74.922,"cat":"metalloid","group":15,"period":4,"block":"p","phase":"Solid","electrons":"2, 8, 18, 5","config":"[Ar] 3d10 4s2 4p3","en":2.18,"discovered":"Ancient","summary":"A notorious poison historically, now used in trace amounts in semiconductors."},{"n":34,"s":"Se","name":"Selenium","mass":78.971,"cat":"nonmetal","group":16,"period":4,"block":"p","phase":"Solid","electrons":"2, 8, 18, 6","config":"[Ar] 3d10 4s2 4p4","en":2.55,"discovered":"1817","summary":"An essential trace nutrient used in antioxidant enzymes and photocopier drums."},{"n":35,"s":"Br","name":"Bromine","mass":79.904,"cat":"halogen","group":17,"period":4,"block":"p","phase":"Liquid","electrons":"2, 8, 18, 7","config":"[Ar] 3d10 4s2 4p5","en":2.96,"discovered":"1826","summary":"One of only two elements liquid at room temperature, used in flame retardants."},{"n":36,"s":"Kr","name":"Krypton","mass":83.798,"cat":"noble-gas","group":18,"period":4,"block":"p","phase":"Gas","electrons":"2, 8, 18, 8","config":"[Ar] 3d10 4s2 4p6","en":3.0,"discovered":"1898","summary":"An inert gas used in high-performance camera flashes and some fluorescent lighting."},{"n":37,"s":"Rb","name":"Rubidium","mass":85.468,"cat":"alkali-metal","group":1,"period":5,"block":"s","phase":"Solid","electrons":"2, 8, 18, 8, 1","config":"[Kr] 5s1","en":0.82,"discovered":"1861","summary":"A highly reactive soft metal used in atomic clocks and research applications."},{"n":38,"s":"Sr","name":"Strontium","mass":87.62,"cat":"alkaline-earth","group":2,"period":5,"block":"s","phase":"Solid","electrons":"2, 8, 18, 8, 2","config":"[Kr] 5s2","en":0.95,"discovered":"1790","summary":"Produces the brilliant red color in fireworks and flares."},{"n":39,"s":"Y","name":"Yttrium","mass":88.906,"cat":"transition-metal","group":3,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 9, 2","config":"[Kr] 4d1 5s2","en":1.22,"discovered":"1794","summary":"Used in LED phosphors, camera lenses and superconductors."},{"n":40,"s":"Zr","name":"Zirconium","mass":91.224,"cat":"transition-metal","group":4,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 10, 2","config":"[Kr] 4d2 5s2","en":1.33,"discovered":"1789","summary":"Highly corrosion-resistant, used in nuclear reactor cladding and ceramic-like jewelry."},{"n":41,"s":"Nb","name":"Niobium","mass":92.906,"cat":"transition-metal","group":5,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 12, 1","config":"[Kr] 4d4 5s1","en":1.6,"discovered":"1801","summary":"A key ingredient in superconducting magnets and high-strength steel alloys."},{"n":42,"s":"Mo","name":"Molybdenum","mass":95.95,"cat":"transition-metal","group":6,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 13, 1","config":"[Kr] 4d5 5s1","en":2.16,"discovered":"1781","summary":"Strengthens steel at high temperatures, used in aircraft parts and industrial motors."},{"n":43,"s":"Tc","name":"Technetium","mass":98,"cat":"transition-metal","group":7,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 13, 2","config":"[Kr] 4d5 5s2","en":1.9,"discovered":"1937","summary":"The first artificially produced element, now used in medical diagnostic imaging."},{"n":44,"s":"Ru","name":"Ruthenium","mass":101.07,"cat":"transition-metal","group":8,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 15, 1","config":"[Kr] 4d7 5s1","en":2.2,"discovered":"1844","summary":"A rare platinum-group metal used to harden electrical contacts and in solar cell research."},{"n":45,"s":"Rh","name":"Rhodium","mass":102.91,"cat":"transition-metal","group":9,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 16, 1","config":"[Kr] 4d8 5s1","en":2.28,"discovered":"1803","summary":"One of the rarest precious metals, essential in catalytic converters."},{"n":46,"s":"Pd","name":"Palladium","mass":106.42,"cat":"transition-metal","group":10,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 18","config":"[Kr] 4d10","en":2.2,"discovered":"1803","summary":"A silvery precious metal central to catalytic converters and hydrogen storage."},{"n":47,"s":"Ag","name":"Silver","mass":107.87,"cat":"transition-metal","group":11,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 18, 1","config":"[Kr] 4d10 5s1","en":1.93,"discovered":"Ancient","summary":"The best electrical and thermal conductor of any metal, prized in jewelry and electronics."},{"n":48,"s":"Cd","name":"Cadmium","mass":112.41,"cat":"transition-metal","group":12,"period":5,"block":"d","phase":"Solid","electrons":"2, 8, 18, 18, 2","config":"[Kr] 4d10 5s2","en":1.69,"discovered":"1817","summary":"Once common in rechargeable NiCd batteries and yellow pigments, now heavily restricted for toxicity."},{"n":49,"s":"In","name":"Indium","mass":114.82,"cat":"post-transition","group":13,"period":5,"block":"p","phase":"Solid","electrons":"2, 8, 18, 18, 3","config":"[Kr] 4d10 5s2 5p1","en":1.78,"discovered":"1863","summary":"Used in the transparent conductive coatings of touchscreens and flat-panel displays."},{"n":50,"s":"Sn","name":"Tin","mass":118.71,"cat":"post-transition","group":14,"period":5,"block":"p","phase":"Solid","electrons":"2, 8, 18, 18, 4","config":"[Kr] 4d10 5s2 5p2","en":1.96,"discovered":"Ancient","summary":"Alloyed with copper to make bronze, and widely used to coat steel cans and in solder."},{"n":51,"s":"Sb","name":"Antimony","mass":121.76,"cat":"metalloid","group":15,"period":5,"block":"p","phase":"Solid","electrons":"2, 8, 18, 18, 5","config":"[Kr] 4d10 5s2 5p3","en":2.05,"discovered":"Ancient","summary":"Used in flame retardants and alloyed with lead in batteries."},{"n":52,"s":"Te","name":"Tellurium","mass":127.6,"cat":"metalloid","group":16,"period":5,"block":"p","phase":"Solid","electrons":"2, 8, 18, 18, 6","config":"[Kr] 4d10 5s2 5p4","en":2.1,"discovered":"1782","summary":"Used in thin-film solar panels and to improve the machinability of steel."},{"n":53,"s":"I","name":"Iodine","mass":126.9,"cat":"halogen","group":17,"period":5,"block":"p","phase":"Solid","electrons":"2, 8, 18, 18, 7","config":"[Kr] 4d10 5s2 5p5","en":2.66,"discovered":"1811","summary":"Essential for thyroid hormone production and used as a disinfectant for wounds."},{"n":54,"s":"Xe","name":"Xenon","mass":131.29,"cat":"noble-gas","group":18,"period":5,"block":"p","phase":"Gas","electrons":"2, 8, 18, 18, 8","config":"[Kr] 4d10 5s2 5p6","en":2.6,"discovered":"1898","summary":"An inert gas used in high-intensity car headlights and ion propulsion for spacecraft."},{"n":55,"s":"Cs","name":"Caesium","mass":132.91,"cat":"alkali-metal","group":1,"period":6,"block":"s","phase":"Solid","electrons":"2, 8, 18, 18, 8, 1","config":"[Xe] 6s1","en":0.79,"discovered":"1860","summary":"Defines the second via atomic clocks and is the most electropositive stable element."},{"n":56,"s":"Ba","name":"Barium","mass":137.33,"cat":"alkaline-earth","group":2,"period":6,"block":"s","phase":"Solid","electrons":"2, 8, 18, 18, 8, 2","config":"[Xe] 6s2","en":0.89,"discovered":"1808","summary":"Used as a contrast agent for medical X-ray imaging of the digestive tract."},{"n":57,"s":"La","name":"Lanthanum","mass":138.91,"cat":"lanthanide","group":3,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 18, 9, 2","config":"[Xe] 5d1 6s2","en":1.1,"discovered":"1839","summary":"Used in camera lenses, studio lighting carbon arcs, and hybrid car battery alloys."},{"n":58,"s":"Ce","name":"Cerium","mass":140.12,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 19, 9, 2","config":"[Xe] 4f1 5d1 6s2","en":1.12,"discovered":"1803","summary":"The most abundant rare-earth element, used in catalytic converters and glass polishing."},{"n":59,"s":"Pr","name":"Praseodymium","mass":140.91,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 21, 8, 2","config":"[Xe] 4f3 6s2","en":1.13,"discovered":"1885","summary":"Used to color glass and ceramics yellow-green and in strong magnet alloys."},{"n":60,"s":"Nd","name":"Neodymium","mass":144.24,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 22, 8, 2","config":"[Xe] 4f4 6s2","en":1.14,"discovered":"1885","summary":"The core of the strongest permanent magnets, used in headphones, motors and wind turbines."},{"n":61,"s":"Pm","name":"Promethium","mass":145,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 23, 8, 2","config":"[Xe] 4f5 6s2","en":1.13,"discovered":"1945","summary":"A radioactive element with no stable isotopes, used in niche luminous paint and batteries."},{"n":62,"s":"Sm","name":"Samarium","mass":150.36,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 24, 8, 2","config":"[Xe] 4f6 6s2","en":1.17,"discovered":"1879","summary":"Used in high-temperature magnets and in cancer treatment radiotherapy."},{"n":63,"s":"Eu","name":"Europium","mass":151.96,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 25, 8, 2","config":"[Xe] 4f7 6s2","en":1.2,"discovered":"1901","summary":"Provides the red and blue phosphors in television and monitor screens, and euro banknote security."},{"n":64,"s":"Gd","name":"Gadolinium","mass":157.25,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 25, 9, 2","config":"[Xe] 4f7 5d1 6s2","en":1.2,"discovered":"1880","summary":"Used as a contrast agent in MRI scans due to its magnetic properties."},{"n":65,"s":"Tb","name":"Terbium","mass":158.93,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 27, 8, 2","config":"[Xe] 4f9 6s2","en":1.1,"discovered":"1843","summary":"Used in solid-state devices, fuel cells and green phosphors."},{"n":66,"s":"Dy","name":"Dysprosium","mass":162.5,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 28, 8, 2","config":"[Xe] 4f10 6s2","en":1.22,"discovered":"1886","summary":"Added to neodymium magnets to keep them working at high temperatures, key in EV motors."},{"n":67,"s":"Ho","name":"Holmium","mass":164.93,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 29, 8, 2","config":"[Xe] 4f11 6s2","en":1.23,"discovered":"1878","summary":"Has the highest magnetic strength of any element, used in medical lasers."},{"n":68,"s":"Er","name":"Erbium","mass":167.26,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 30, 8, 2","config":"[Xe] 4f12 6s2","en":1.24,"discovered":"1843","summary":"Amplifies signals in fiber-optic communication cables spanning the globe."},{"n":69,"s":"Tm","name":"Thulium","mass":168.93,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 31, 8, 2","config":"[Xe] 4f13 6s2","en":1.25,"discovered":"1879","summary":"The rarest naturally occurring lanthanide, used in portable X-ray devices."},{"n":70,"s":"Yb","name":"Ytterbium","mass":173.05,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 8, 2","config":"[Xe] 4f14 6s2","en":1.1,"discovered":"1878","summary":"Used in atomic clocks and stress gauges for measuring seismic activity."},{"n":71,"s":"Lu","name":"Lutetium","mass":174.97,"cat":"lanthanide","group":null,"period":6,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 9, 2","config":"[Xe] 4f14 5d1 6s2","en":1.27,"discovered":"1907","summary":"The densest and hardest lanthanide, used in PET scan detectors and petroleum refining catalysts."},{"n":72,"s":"Hf","name":"Hafnium","mass":178.49,"cat":"transition-metal","group":4,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 10, 2","config":"[Xe] 4f14 5d2 6s2","en":1.3,"discovered":"1923","summary":"Used in nuclear reactor control rods and advanced microprocessor transistors."},{"n":73,"s":"Ta","name":"Tantalum","mass":180.95,"cat":"transition-metal","group":5,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 11, 2","config":"[Xe] 4f14 5d3 6s2","en":1.5,"discovered":"1802","summary":"Highly corrosion-resistant, essential in compact capacitors inside smartphones."},{"n":74,"s":"W","name":"Tungsten","mass":183.84,"cat":"transition-metal","group":6,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 12, 2","config":"[Xe] 4f14 5d4 6s2","en":2.36,"discovered":"1783","summary":"Has the highest melting point of any metal, used in light bulb filaments and drill bits."},{"n":75,"s":"Re","name":"Rhenium","mass":186.21,"cat":"transition-metal","group":7,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 13, 2","config":"[Xe] 4f14 5d5 6s2","en":1.9,"discovered":"1925","summary":"One of the rarest elements in Earth's crust, vital to jet engine superalloys."},{"n":76,"s":"Os","name":"Osmium","mass":190.23,"cat":"transition-metal","group":8,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 14, 2","config":"[Xe] 4f14 5d6 6s2","en":2.2,"discovered":"1803","summary":"The densest naturally occurring element, used in fountain pen tips and electrical contacts."},{"n":77,"s":"Ir","name":"Iridium","mass":192.22,"cat":"transition-metal","group":9,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 15, 2","config":"[Xe] 4f14 5d7 6s2","en":2.2,"discovered":"1803","summary":"Extremely corrosion-resistant, used in spark plugs and the original metre-kilogram standard."},{"n":78,"s":"Pt","name":"Platinum","mass":195.08,"cat":"transition-metal","group":10,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 17, 1","config":"[Xe] 4f14 5d9 6s1","en":2.28,"discovered":"1735","summary":"A dense precious metal essential to catalytic converters and fine jewelry."},{"n":79,"s":"Au","name":"Gold","mass":196.97,"cat":"transition-metal","group":11,"period":6,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 18, 1","config":"[Xe] 4f14 5d10 6s1","en":2.54,"discovered":"Ancient","summary":"Prized for millennia for its luster and resistance to tarnish, used in jewelry and electronics."},{"n":80,"s":"Hg","name":"Mercury","mass":200.59,"cat":"transition-metal","group":12,"period":6,"block":"d","phase":"Liquid","electrons":"2, 8, 18, 32, 18, 2","config":"[Xe] 4f14 5d10 6s2","en":2.0,"discovered":"Ancient","summary":"The only metal liquid at room temperature, once common in thermometers and barometers."},{"n":81,"s":"Tl","name":"Thallium","mass":204.38,"cat":"post-transition","group":13,"period":6,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 18, 3","config":"[Xe] 4f14 5d10 6s2 6p1","en":1.62,"discovered":"1861","summary":"A highly toxic heavy metal once used in rat poison, now restricted to niche electronics."},{"n":82,"s":"Pb","name":"Lead","mass":207.2,"cat":"post-transition","group":14,"period":6,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 18, 4","config":"[Xe] 4f14 5d10 6s2 6p2","en":1.87,"discovered":"Ancient","summary":"A dense, soft metal historically used in pipes and paint, now mainly found in car batteries."},{"n":83,"s":"Bi","name":"Bismuth","mass":208.98,"cat":"post-transition","group":15,"period":6,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 18, 5","config":"[Xe] 4f14 5d10 6s2 6p3","en":2.02,"discovered":"Ancient","summary":"Forms striking rainbow-hued crystals and is used in stomach-settling medicines."},{"n":84,"s":"Po","name":"Polonium","mass":209,"cat":"post-transition","group":16,"period":6,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 18, 6","config":"[Xe] 4f14 5d10 6s2 6p4","en":2.0,"discovered":"1898","summary":"An intensely radioactive element discovered by Marie Curie, used in anti-static devices."},{"n":85,"s":"At","name":"Astatine","mass":210,"cat":"metalloid","group":17,"period":6,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 18, 7","config":"[Xe] 4f14 5d10 6s2 6p5","en":2.2,"discovered":"1940","summary":"One of the rarest naturally occurring elements, studied for targeted cancer radiotherapy."},{"n":86,"s":"Rn","name":"Radon","mass":222,"cat":"noble-gas","group":18,"period":6,"block":"p","phase":"Gas","electrons":"2, 8, 18, 32, 18, 8","config":"[Xe] 4f14 5d10 6s2 6p6","en":2.2,"discovered":"1900","summary":"A radioactive gas that can seep into basements from soil, a known cause of lung cancer."},{"n":87,"s":"Fr","name":"Francium","mass":223,"cat":"alkali-metal","group":1,"period":7,"block":"s","phase":"Solid","electrons":"2, 8, 18, 32, 18, 8, 1","config":"[Rn] 7s1","en":0.7,"discovered":"1939","summary":"One of the rarest natural elements, so radioactive it exists only fleetingly."},{"n":88,"s":"Ra","name":"Radium","mass":226,"cat":"alkaline-earth","group":2,"period":7,"block":"s","phase":"Solid","electrons":"2, 8, 18, 32, 18, 8, 2","config":"[Rn] 7s2","en":0.9,"discovered":"1898","summary":"A luminous radioactive element that once glowed in watch dials, now known highly hazardous."},{"n":89,"s":"Ac","name":"Actinium","mass":227,"cat":"actinide","group":3,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 18, 9, 2","config":"[Rn] 6d1 7s2","en":1.1,"discovered":"1899","summary":"A rare radioactive metal that glows faintly blue in the dark and lends its name to the actinide series."},{"n":90,"s":"Th","name":"Thorium","mass":232.04,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 18, 10, 2","config":"[Rn] 6d2 7s2","en":1.3,"discovered":"1829","summary":"A radioactive metal studied as a potential safer alternative nuclear fuel to uranium."},{"n":91,"s":"Pa","name":"Protactinium","mass":231.04,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 20, 9, 2","config":"[Rn] 5f2 6d1 7s2","en":1.5,"discovered":"1913","summary":"A rare, highly radioactive and toxic element with almost no practical uses outside research."},{"n":92,"s":"U","name":"Uranium","mass":238.03,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 21, 9, 2","config":"[Rn] 5f3 6d1 7s2","en":1.38,"discovered":"1789","summary":"The heaviest naturally occurring element, fueling nuclear power plants and historically weapons."},{"n":93,"s":"Np","name":"Neptunium","mass":237,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 22, 9, 2","config":"[Rn] 5f4 6d1 7s2","en":1.36,"discovered":"1940","summary":"The first transuranium element ever synthesized, produced in nuclear reactors."},{"n":94,"s":"Pu","name":"Plutonium","mass":244,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 24, 8, 2","config":"[Rn] 5f6 7s2","en":1.28,"discovered":"1940","summary":"A man-made radioactive element used as fuel in nuclear reactors and historically in weapons."},{"n":95,"s":"Am","name":"Americium","mass":243,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 25, 8, 2","config":"[Rn] 5f7 7s2","en":1.3,"discovered":"1944","summary":"Found in trace amounts inside household smoke detectors as an ionizing radiation source."},{"n":96,"s":"Cm","name":"Curium","mass":247,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 25, 9, 2","config":"[Rn] 5f7 6d1 7s2","en":1.3,"discovered":"1944","summary":"Named after Marie and Pierre Curie, used as a power source in some space probes."},{"n":97,"s":"Bk","name":"Berkelium","mass":247,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 27, 8, 2","config":"[Rn] 5f9 7s2","en":1.3,"discovered":"1949","summary":"A synthetic element produced in only milligram quantities for scientific research."},{"n":98,"s":"Cf","name":"Californium","mass":251,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 28, 8, 2","config":"[Rn] 5f10 7s2","en":1.3,"discovered":"1950","summary":"Used as a portable neutron source for detecting metal fatigue and starting nuclear reactors."},{"n":99,"s":"Es","name":"Einsteinium","mass":252,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 29, 8, 2","config":"[Rn] 5f11 7s2","en":1.3,"discovered":"1952","summary":"First discovered in the debris of a hydrogen bomb test, named after Albert Einstein."},{"n":100,"s":"Fm","name":"Fermium","mass":257,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 30, 8, 2","config":"[Rn] 5f12 7s2","en":1.3,"discovered":"1952","summary":"Named after physicist Enrico Fermi, exists only in laboratory quantities."},{"n":101,"s":"Md","name":"Mendelevium","mass":258,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 31, 8, 2","config":"[Rn] 5f13 7s2","en":1.3,"discovered":"1955","summary":"Named after Dmitri Mendeleev, creator of the periodic table itself."},{"n":102,"s":"No","name":"Nobelium","mass":259,"cat":"actinide","group":null,"period":7,"block":"f","phase":"Solid","electrons":"2, 8, 18, 32, 32, 8, 2","config":"[Rn] 5f14 7s2","en":1.3,"discovered":"1958","summary":"A synthetic element named after Alfred Nobel, produced atom by atom in accelerators."},{"n":103,"s":"Lr","name":"Lawrencium","mass":266,"cat":"actinide","group":null,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 8, 3","config":"[Rn] 5f14 7s2 7p1","en":1.3,"discovered":"1961","summary":"The last of the actinide series, named after physicist Ernest Lawrence."},{"n":104,"s":"Rf","name":"Rutherfordium","mass":267,"cat":"transition-metal","group":4,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 10, 2","config":"[Rn] 5f14 6d2 7s2","en":null,"discovered":"1969","summary":"A synthetic superheavy element that decays within seconds of being created."},{"n":105,"s":"Db","name":"Dubnium","mass":268,"cat":"transition-metal","group":5,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 11, 2","config":"[Rn] 5f14 6d3 7s2","en":null,"discovered":"1970","summary":"A synthetic element named after the Russian city of Dubna, produced only in accelerators."},{"n":106,"s":"Sg","name":"Seaborgium","mass":269,"cat":"transition-metal","group":6,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 12, 2","config":"[Rn] 5f14 6d4 7s2","en":null,"discovered":"1974","summary":"Named after chemist Glenn Seaborg, one of the few elements named after a living person."},{"n":107,"s":"Bh","name":"Bohrium","mass":270,"cat":"transition-metal","group":7,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 13, 2","config":"[Rn] 5f14 6d5 7s2","en":null,"discovered":"1981","summary":"Named after physicist Niels Bohr, exists for only fractions of a second."},{"n":108,"s":"Hs","name":"Hassium","mass":269,"cat":"transition-metal","group":8,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 14, 2","config":"[Rn] 5f14 6d6 7s2","en":null,"discovered":"1984","summary":"A superheavy synthetic element named after the German state of Hesse."},{"n":109,"s":"Mt","name":"Meitnerium","mass":278,"cat":"unknown","group":9,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 15, 2","config":"[Rn] 5f14 6d7 7s2","en":null,"discovered":"1982","summary":"Named after physicist Lise Meitner, one of very few elements honoring a woman scientist."},{"n":110,"s":"Ds","name":"Darmstadtium","mass":281,"cat":"unknown","group":10,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 17, 1","config":"[Rn] 5f14 6d9 7s1","en":null,"discovered":"1994","summary":"Named after Darmstadt, Germany, where it was first synthesized."},{"n":111,"s":"Rg","name":"Roentgenium","mass":282,"cat":"unknown","group":11,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 17, 2","config":"[Rn] 5f14 6d10 7s1","en":null,"discovered":"1994","summary":"Named after Wilhelm R\u00f6ntgen, discoverer of X-rays."},{"n":112,"s":"Cn","name":"Copernicium","mass":285,"cat":"transition-metal","group":12,"period":7,"block":"d","phase":"Solid","electrons":"2, 8, 18, 32, 32, 18, 2","config":"[Rn] 5f14 6d10 7s2","en":null,"discovered":"1996","summary":"Named after astronomer Nicolaus Copernicus, may behave like a volatile gas at room temperature."},{"n":113,"s":"Nh","name":"Nihonium","mass":286,"cat":"post-transition","group":13,"period":7,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 32, 18, 3","config":"[Rn] 5f14 6d10 7s2 7p1","en":null,"discovered":"2004","summary":"The first element discovered in Asia, named after Japan (Nihon)."},{"n":114,"s":"Fl","name":"Flerovium","mass":289,"cat":"post-transition","group":14,"period":7,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 32, 18, 4","config":"[Rn] 5f14 6d10 7s2 7p2","en":null,"discovered":"1998","summary":"Named after physicist Georgy Flyorov, part of the theorized 'island of stability'."},{"n":115,"s":"Mc","name":"Moscovium","mass":290,"cat":"post-transition","group":15,"period":7,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 32, 18, 5","config":"[Rn] 5f14 6d10 7s2 7p3","en":null,"discovered":"2003","summary":"Named after the Moscow region where it was first synthesized."},{"n":116,"s":"Lv","name":"Livermorium","mass":293,"cat":"post-transition","group":16,"period":7,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 32, 18, 6","config":"[Rn] 5f14 6d10 7s2 7p4","en":null,"discovered":"2000","summary":"Named after Lawrence Livermore National Laboratory in California."},{"n":117,"s":"Ts","name":"Tennessine","mass":294,"cat":"halogen","group":17,"period":7,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 32, 18, 7","config":"[Rn] 5f14 6d10 7s2 7p5","en":null,"discovered":"2010","summary":"Named after the U.S. state of Tennessee, one of the newest confirmed elements."},{"n":118,"s":"Og","name":"Oganesson","mass":294,"cat":"noble-gas","group":18,"period":7,"block":"p","phase":"Solid","electrons":"2, 8, 18, 32, 32, 18, 8","config":"[Rn] 5f14 6d10 7s2 7p6","en":null,"discovered":"2002","summary":"The heaviest known element, named after nuclear physicist Yuri Oganessian while he was alive."}];
+
+  const CAT_LABEL = {
+    'alkali-metal':'Alkali metal','alkaline-earth':'Alkaline earth metal','transition-metal':'Transition metal',
+    'post-transition':'Post-transition metal','metalloid':'Metalloid','nonmetal':'Nonmetal',
+    'halogen':'Halogen','noble-gas':'Noble gas','lanthanide':'Lanthanide','actinide':'Actinide','unknown':'Unknown'
+  };
+
+  const grid = $('#pt-grid');
+  const countEl = $('#pt-count');
+  const emptyEl = $('#pt-empty');
+  const searchEl = $('#pt-search');
+  const stateEl = $('#pt-filter-state');
+  const blockEl = $('#pt-filter-block');
+  const resetBtn = $('#pt-reset');
+  const legend = $('#pt-legend');
+  const detail = $('#pt-detail');
+
+  let activeCat = null;
+  let selectedN = null;
+
+  function fmtMass(m){
+    if (m === null || m === undefined) return '—';
+    return (Math.round(m * 1000) / 1000).toString();
+  }
+
+  function cellHTML(el){
+    return '<div class="pt-cell" data-n="' + el.n + '" data-cat="' + el.cat +
+      '" data-state="' + el.phase + '" data-block="' + el.block +
+      '" style="grid-column:' + el.group + '; grid-row:' + el.period + ';" tabindex="0" role="gridcell" ' +
+      'aria-label="' + el.name + ', atomic number ' + el.n + '">' +
+      '<span class="pn">' + el.n + '</span>' +
+      '<span class="ps">' + el.s + '</span>' +
+      '<span class="pname">' + el.name + '</span>' +
+      '</div>';
+  }
+
+  function fBlockCellHTML(el, col){
+    return '<div class="pt-cell" data-n="' + el.n + '" data-cat="' + el.cat +
+      '" data-state="' + el.phase + '" data-block="' + el.block +
+      '" style="grid-column:' + col + '; grid-row:1;" tabindex="0" role="gridcell" ' +
+      'aria-label="' + el.name + ', atomic number ' + el.n + '">' +
+      '<span class="pn">' + el.n + '</span>' +
+      '<span class="ps">' + el.s + '</span>' +
+      '<span class="pname">' + el.name + '</span>' +
+      '</div>';
+  }
+
+  function build(){
+    let html = '';
+    // Main grid: only elements with a defined group land here (La and Ac included, as row-openers)
+    ELEMENTS.forEach(el => {
+      if (el.group){ html += cellHTML(el); }
+    });
+    grid.innerHTML = html;
+
+    // lanthanide/actinide overflow rows: elements 58-71 and 90-103 (no group), shown below the main table
+    const lanth = ELEMENTS.filter(e => e.cat === 'lanthanide' && !e.group);
+    const actin = ELEMENTS.filter(e => e.cat === 'actinide' && !e.group);
+
+    let laRow = '<div class="pt-lawide-row" style="display:grid; grid-template-columns:repeat(18, minmax(46px,1fr)); gap:4px; margin-top:4px;">';
+    laRow += '<div class="pt-cell lawide" style="grid-column:1/4; grid-row:1;">57–71</div>';
+    lanth.forEach((el,i) => { laRow += fBlockCellHTML(el, i + 4); });
+    laRow += '</div>';
+
+    let acRow = '<div class="pt-lawide-row" style="display:grid; grid-template-columns:repeat(18, minmax(46px,1fr)); gap:4px; margin-top:4px;">';
+    acRow += '<div class="pt-cell lawide" style="grid-column:1/4; grid-row:1;">89–103</div>';
+    actin.forEach((el,i) => { acRow += fBlockCellHTML(el, i + 4); });
+    acRow += '</div>';
+
+    grid.insertAdjacentHTML('afterend', laRow + acRow);
+
+    bindCellEvents();
+  }
+
+  function bindCellEvents(){
+    $$('.pt-cell[data-n]').forEach(cell => {
+      cell.addEventListener('click', () => selectElement(parseInt(cell.dataset.n, 10)));
+      cell.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); selectElement(parseInt(cell.dataset.n, 10)); }
+      });
+    });
+  }
+
+  function applyFilters(){
+    const q = searchEl.value.trim().toLowerCase();
+    const stateVal = stateEl.value;
+    const blockVal = blockEl.value;
+    let visible = 0;
+
+    $$('.pt-cell[data-n]').forEach(cell => {
+      const n = parseInt(cell.dataset.n, 10);
+      const el = ELEMENTS.find(e => e.n === n);
+      let match = true;
+
+      if (q){
+        const hay = (el.name + ' ' + el.s + ' ' + el.n).toLowerCase();
+        if (hay.indexOf(q) === -1) match = false;
+      }
+      if (stateVal && el.phase !== stateVal) match = false;
+      if (blockVal && el.block !== blockVal) match = false;
+
+      const catDim = activeCat && el.cat !== activeCat;
+
+      cell.classList.toggle('hide', !match);
+      cell.classList.toggle('dim', match && catDim);
+
+      if (match) visible++;
+    });
+
+    countEl.innerHTML = 'SHOWING <b>' + visible + '</b> OF 118 ELEMENTS';
+    emptyEl.classList.toggle('show', visible === 0);
+  }
+
+  function selectElement(n){
+    const el = ELEMENTS.find(e => e.n === n);
+    if (!el) return;
+    selectedN = n;
+
+    $('#pd-sym').style.setProperty('--cat-color', 'var(--c-' + el.cat + ', var(--accent))');
+    $('#pd-s').textContent = el.s;
+    $('#pd-n').textContent = el.n;
+    $('#pd-name').textContent = el.name;
+    $('#pd-cat i').style.background = 'var(--c-' + el.cat + ', var(--accent))';
+    $('#pd-cat-text').textContent = CAT_LABEL[el.cat] || el.cat;
+    $('#pd-summary').textContent = el.summary;
+
+    const stats = [
+      ['Atomic mass', fmtMass(el.mass) + ' u'],
+      ['Phase', el.phase],
+      ['Period / Group', el.period + ' / ' + (el.group || '—')],
+      ['Block', el.block + '-block'],
+      ['Electron config', el.config],
+      ['Electrons per shell', el.electrons],
+      ['Electronegativity', el.en !== null ? el.en.toFixed(2) + ' (Pauling)' : 'Not established'],
+      ['Discovered', el.discovered]
+    ];
+    $('#pd-grid').innerHTML = stats.map(s =>
+      '<div class="pd-stat"><div class="k">' + s[0] + '</div><div class="v">' + s[1] + '</div></div>'
+    ).join('');
+
+    detail.classList.add('show');
+
+    if (window.innerWidth < 880){
+      detail.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' });
+    }
+  }
+
+  $('#pd-close').addEventListener('click', () => { detail.classList.remove('show'); selectedN = null; });
+  $('#pd-prev').addEventListener('click', () => {
+    if (selectedN === null) return;
+    const idx = Math.max(1, selectedN - 1);
+    selectElement(idx);
+  });
+  $('#pd-next').addEventListener('click', () => {
+    if (selectedN === null) return;
+    const idx = Math.min(118, selectedN + 1);
+    selectElement(idx);
+  });
+
+  legend.addEventListener('click', e => {
+    const btn = e.target.closest('.pt-leg');
+    if (!btn) return;
+    const cat = btn.dataset.cat;
+    activeCat = activeCat === cat ? null : cat;
+    $$('.pt-leg').forEach(l => l.classList.toggle('active', l.dataset.cat === activeCat));
+    applyFilters();
+  });
+
+  searchEl.addEventListener('input', applyFilters);
+  stateEl.addEventListener('change', applyFilters);
+  blockEl.addEventListener('change', applyFilters);
+  resetBtn.addEventListener('click', () => {
+    searchEl.value = ''; stateEl.value = ''; blockEl.value = ''; activeCat = null;
+    $$('.pt-leg').forEach(l => l.classList.remove('active'));
+    applyFilters();
+  });
+
+  build();
+  applyFilters();
+})();
+
+/* =========================================================
+   FOOTER STARFIELD — quiet drift, pauses when off-screen
+========================================================= */
+(function(){
+  const canvas = $('#starfield');
+  if (!canvas) return;
+  if (!HAS3D){ canvas.style.display = 'none'; return; }
+
+  let renderer, scene, camera, pts, raf = null;
+
+  try{
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+    renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+    scene  = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(60, 1, .1, 100);
+    camera.position.z = 15;
+
+    const N = RM ? 80 : 150;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++){
+      pos[i*3]   = (Math.random() - .5) * 36;
+      pos[i*3+1] = (Math.random() - .5) * 22;
+      pos[i*3+2] = (Math.random() - .5) * 12;
+    }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+
+    const mat = new THREE.PointsMaterial({ size: .09, depthWrite: false, map: SPRITE });
+    themedMat(mat, 0xF1EDE2, 0x0B2545, .9, .55);
+    pts = new THREE.Points(geo, mat);
+    scene.add(pts);
+
+    function size(){
+      const r = canvas.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      renderer.setSize(r.width, r.height, false);
+      camera.aspect = r.width / r.height;
+      camera.updateProjectionMatrix();
+    }
+    size();
+    addEventListener('resize', size);
+    addEventListener('load', size);
+
+    function frame(){
+      tickTheme();
+      pts.rotation.y += .0008;
+      pts.rotation.x = Math.sin(Date.now() * .00006) * .05;
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(frame);
+    }
+    function start(){ if (!raf && !RM) raf = requestAnimationFrame(frame); }
+    function stop(){ if (raf){ cancelAnimationFrame(raf); raf = null; } }
+
+    if (RM){
+      tickTheme();
+      renderer.render(scene, camera);
+    } else {
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+      }, { threshold: 0 }).observe(canvas);
+      start();
+    }
+  }catch(e){
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
