@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ============ ESSENTIAL META — this page's own values ============ -->
-<title>Molecular Formula Calculator — Free Online Tool for Empirical & Molecular Formulas | StudyWithSTEM</title>
-<meta name="description" content="Free online molecular formula calculator — determine empirical and molecular formulas from percent composition or mass data, with full step-by-step solutions. No sign-up.">
-<meta name="keywords" content="molecular formula calculator, empirical formula calculator, determine molecular formula, formula from percent composition, chemistry tool, free online chemistry, molar mass, molecular weight">
+<title>Molecular Formula Calculator — Empirical to Molecular Formula & Percent Composition Tool | StudyWithSTEM</title>
+<meta name="description" content="Free molecular formula calculator — convert an empirical formula to a molecular formula, find a formula from percent composition, and simplify any formula to its empirical form. No sign-up.">
+<meta name="keywords" content="molecular formula calculator, empirical formula calculator, empirical to molecular formula, percent composition to empirical formula, find molecular formula from percent composition, simplify chemical formula, chemical formula calculator, free online chemistry tool">
 <meta name="author" content="StudyWithSTEM">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0B2545">
@@ -18,8 +18,8 @@
 <!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="StudyWithSTEM">
-<meta property="og:title" content="Molecular Formula Calculator — Empirical & Molecular Formulas | StudyWithSTEM">
-<meta property="og:description" content="Free molecular formula calculator — find empirical and molecular formulas from percent composition or mass data, with full step-by-step solutions. Instant results.">
+<meta property="og:title" content="Molecular Formula Calculator — Empirical to Molecular Formula & Percent Composition | StudyWithSTEM">
+<meta property="og:description" content="Free molecular formula calculator with four modes — convert empirical to molecular formulas, build a formula from percent composition, and simplify any formula down to its empirical form.">
 <meta property="og:url" content="https://studywithstem.github.io/tools/chemistry/molecular-formula/">
 <meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/molecular-formula.jpg">
 <meta property="og:image:alt" content="StudyWithSTEM Molecular Formula Calculator — free online chemistry tool">
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@studywithstem">
 <meta name="twitter:title" content="Molecular Formula Calculator — Free Online Tool | StudyWithSTEM">
-<meta name="twitter:description" content="Find empirical and molecular formulas from percent composition or mass data — instant chemistry answers with full step-by-step solutions.">
+<meta name="twitter:description" content="Convert empirical to molecular formulas, build a formula from percent composition, and simplify any formula — instant chemistry answers with full working shown.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/molecular-formula.jpg">
 
 <!-- ============ ICONS — identical on every page ============ -->
@@ -76,7 +76,7 @@
   "@type": "WebApplication",
   "name": "Molecular Formula Calculator",
   "url": "https://studywithstem.github.io/tools/chemistry/molecular-formula/",
-  "description": "Free online molecular formula calculator that determines empirical and molecular formulas from percent composition or mass data, with full step-by-step solutions and molar mass breakdown.",
+  "description": "Free online molecular formula calculator with four modes: convert an empirical formula to a molecular formula using molar mass, find an empirical formula from percent composition, build a molecular formula directly from percent composition and molar mass, and simplify any molecular formula down to its empirical formula.",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Any",
   "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
@@ -84,10 +84,10 @@
   "inLanguage": "en",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "featureList": [
-    "Empirical formula from percent composition or mass",
-    "Molecular formula from empirical formula and molar mass",
-    "Step-by-step solution with mole ratios and multipliers",
-    "Full molar mass breakdown for each formula"
+    "Empirical formula to molecular formula conversion using molar mass",
+    "Percent composition to empirical formula",
+    "Percent composition and molar mass to molecular formula",
+    "Simplify any molecular formula down to its empirical formula"
   ]
 }
 </script>
@@ -98,28 +98,28 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is a molecular formula?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A molecular formula shows the exact number of each type of atom in a molecule. For example, glucose is C₆H₁₂O₆ — six carbon, twelve hydrogen, and six oxygen atoms. It is a whole-number multiple of the empirical formula." }
+      "name": "What is the difference between an empirical and a molecular formula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An empirical formula shows the simplest whole-number ratio of atoms in a compound, while a molecular formula shows the actual number of each atom in one molecule. The molecular formula is always a whole-number multiple of the empirical formula — for example, the empirical formula CH2O becomes the molecular formula C6H12O6 for glucose." }
     },
     {
       "@type": "Question",
-      "name": "What is the difference between empirical and molecular formula?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The empirical formula is the simplest whole-number ratio of atoms in a compound (e.g., CH₂O for glucose). The molecular formula is the actual number of atoms in a molecule (e.g., C₆H₁₂O₆). The molecular formula is always a whole-number multiple of the empirical formula." }
+      "name": "How do you find a molecular formula from an empirical formula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide the compound's actual molar mass by the empirical formula's mass to get a whole number n, then multiply every subscript in the empirical formula by n. Enter both values in the Empirical to molecular tab and the calculator does this automatically." }
     },
     {
       "@type": "Question",
-      "name": "How do you find the molecular formula from percent composition?",
-      "acceptedAnswer": { "@type": "Answer", "text": "First convert the percent composition to moles by dividing each percentage by the element's atomic mass. Then divide all mole values by the smallest one to get the empirical formula. Finally, divide the given molar mass by the empirical formula mass to get the multiplier, and multiply the empirical formula by that number." }
+      "name": "How do you find an empirical formula from percent composition?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Treat each percentage as grams in a 100 g sample, divide each by its element's atomic mass to get moles, then divide every mole value by the smallest one. If the results aren't whole numbers, multiply all of them by the same small integer until they are — those become the formula's subscripts. The Percent composition to empirical tab runs this calculation for any set of elements." }
     },
     {
       "@type": "Question",
-      "name": "Can this calculator determine the molecular formula from mass data?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enter the mass of each element in grams and the total molar mass of the compound (if known). The calculator converts masses to moles, finds the simplest ratio, and determines the molecular formula automatically." }
+      "name": "Can you find a molecular formula directly from percent composition?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. First find the empirical formula from the percent composition, then divide the compound's known molar mass by the empirical formula's mass to get the multiplier. The Percent composition to molecular tab combines both steps in one calculation." }
     },
     {
       "@type": "Question",
-      "name": "What if the molar mass is not known?",
-      "acceptedAnswer": { "@type": "Answer", "text": "If the molar mass is not provided, the calculator will still determine the empirical formula from the given composition. The molecular formula requires the molar mass to find the multiplier." }
+      "name": "How do you simplify a molecular formula to its empirical formula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Find the greatest common divisor of all the subscripts in the formula and divide each one by it. For C6H12O6 the subscripts 6, 12 and 6 share a greatest common divisor of 6, giving the empirical formula CH2O. The Simplify formula tab does this for any formula you enter." }
     },
     {
       "@type": "Question",
@@ -339,7 +339,7 @@ body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
 .page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
 .page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
 
-/* ================= TOOL LAYOUT ================= */
+/* ================= MOLECULAR FORMULA CALCULATOR (page-specific layout) ================= */
 [hidden]{display:none !important;}
 
 .tool{padding:64px 0 96px;}
@@ -392,17 +392,6 @@ body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
 .t-pair{display:grid; grid-template-columns:1fr .95fr; gap:10px;}
 .t-pair .t-num input{padding-right:15px;}
 
-.t-select{position:relative;}
-.t-select select{
-  width:100%; height:100%; appearance:none; -webkit-appearance:none; cursor:pointer;
-  background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
-  padding:13px 34px 13px 15px; color:var(--ink); font:.9rem var(--f-sans); transition:border-color .25s;
-}
-.t-select select:focus{outline:none; border-color:var(--accent);}
-.t-select select option{background:var(--bg); color:var(--ink);}
-.t-select svg{position:absolute; right:12px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--faint); pointer-events:none; transition:color .25s;}
-.t-select:focus-within svg{color:var(--accent);}
-
 .t-examples{display:flex; flex-wrap:wrap; gap:8px;}
 .t-chip{
   font:700 .6rem var(--f-mono); letter-spacing:.07em; color:var(--muted); white-space:nowrap; cursor:pointer;
@@ -436,26 +425,49 @@ body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
 .res-hero{padding:18px 2px 14px;}
 .res-hero .rl{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);}
 .res-hero .rv{display:block; font:700 clamp(1.9rem, 4.5vw, 2.5rem)/1.05 var(--f-mono); color:var(--accent); margin-top:8px; letter-spacing:-.02em; word-break:break-word;}
-.res-hero .rv sup{font-size:.55em;}
+.res-hero .rv sub{font-size:.6em;}
 .res-hero .rs{display:block; font:600 .76rem/1.6 var(--f-mono); color:var(--muted); margin-top:7px; word-break:break-word;}
-.res-hero .rs sup{font-size:.6em;}
+.res-hero .rs sub{font-size:.7em;}
 
 .res-row{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:11px 2px; border-top:1px dashed var(--edge);}
 .res-row .rk{font:.82rem var(--f-sans); color:var(--muted);}
 .res-row .rvv{font:700 .84rem var(--f-mono); color:var(--ink); text-align:right; word-break:break-word;}
 .res-row .rvv small{display:block; font:600 .64rem/1.5 var(--f-mono); color:var(--faint); margin-top:3px;}
-.res-row .rvv sup, .res-formula sup{font-size:.6em;}
+.res-row .rvv sub{font-size:.72em;}
 
 .res-formula{
   margin:14px 2px 4px; padding:12px 14px; border:1px dashed var(--edge-strong); border-radius:10px;
   font:600 .72rem/1.8 var(--f-mono); color:var(--muted); overflow-x:auto; white-space:nowrap;
 }
 .res-formula b{color:var(--accent);}
+.res-formula sub{font-size:.7em;}
 
 .t-wait{
   margin:14px 2px 6px; padding:30px 16px; border:1px dashed var(--edge); border-radius:10px;
   font:600 .7rem var(--f-mono); letter-spacing:.08em; color:var(--faint); text-align:center;
 }
+
+/* ---- percent-composition rows ---- */
+.pc-rows{display:grid; gap:9px; margin-bottom:12px;}
+.pc-row{display:grid; grid-template-columns:1fr 1fr 40px; gap:8px; align-items:center;}
+.pc-row input[type="text"], .pc-row input[type="number"]{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:11px 12px; color:var(--ink); font:700 .92rem var(--f-mono); transition:border-color .25s;
+}
+.pc-row input:focus{outline:none; border-color:var(--accent);}
+.pc-remove{
+  width:40px; height:40px; border:1px solid var(--edge-strong); background:var(--panel); border-radius:10px;
+  color:var(--muted); cursor:pointer; font:700 1rem var(--f-mono); transition:color .2s, border-color .2s;
+}
+.pc-remove:hover{color:var(--amber); border-color:var(--amber);}
+.pc-add{
+  display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+  font:700 .64rem var(--f-mono); letter-spacing:.08em; color:var(--accent);
+  border:1px dashed var(--edge-strong); background:var(--panel); border-radius:10px; padding:10px 14px;
+  transition:border-color .2s;
+}
+.pc-add:hover{border-color:var(--accent);}
+.pc-sum{margin-top:9px; font:600 .68rem var(--f-mono); letter-spacing:.04em; color:var(--faint);}
 
 /* ================= CONTENT SECTIONS ================= */
 .sec{padding:84px 0; border-top:1px solid var(--edge);}
@@ -479,7 +491,7 @@ body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
   font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
   border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
 }
-.fx .formula sup{font-size:.6em;}
+.fx .formula sub{font-size:.7em;}
 .fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
 
 .faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
@@ -497,7 +509,7 @@ details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.8
 details.faq-item .faq-body p + p{margin-top:10px;}
 details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
 
-/* ================= SUBSCRIBE STRIP ================= */
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
 .pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
 .pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
 .pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
@@ -588,11 +600,13 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
   footer{padding:78px 0 30px;}
   .steps-grid, .fx-grid{grid-template-columns:1fr;}
   .sec{padding:64px 0;}
-  .res-heroes{grid-template-columns:1fr; gap:10px;}
   .ttab{padding:15px 13px; font-size:.76rem;}
   .t-num input{padding:12px 52px 12px 14px; font-size:.98rem;}
   .t-formula input{padding:12px 14px; font-size:1.05rem;}
   .t-pair{grid-template-columns:1fr; gap:8px;}
+  .pc-row{grid-template-columns:1fr 1fr 36px; gap:6px;}
+  .pc-row input[type="text"], .pc-row input[type="number"]{padding:10px 10px; font-size:.86rem;}
+  .pc-remove{width:36px; height:36px;}
 }
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
@@ -676,8 +690,8 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
   <div class="wrap">
     <p class="kicker">FREE TOOL · CHEMISTRY</p>
     <h1>Molecular Formula Calculator</h1>
-    <p class="lede">Find the empirical and molecular formula from percent composition or mass data — with full step-by-step solutions.</p>
-    <span class="updated"><i></i>EMPIRICAL + MOLECULAR · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+    <p class="lede">Convert between empirical and molecular formulas, or build one straight from percent composition — all instantly.</p>
+    <span class="updated"><i></i>4 MODES · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
   </div>
 </header>
 
@@ -687,94 +701,166 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-idx mono">01 · THE CALCULATOR</span>
-      <h2>Two ways to get the formula.</h2>
-      <p>Choose your input — percent composition or mass of each element — and get both the empirical and molecular formula with a complete step-by-step breakdown.</p>
+      <h2>Four calculators, one panel.</h2>
+      <p>Pick a mode below — every result shows its full working, from mole ratios to the final whole-number formula.</p>
     </div>
 
     <div class="tool-shell">
 
       <div class="tool-tabs" role="tablist" aria-label="Molecular formula calculator modes">
-        <button class="ttab active" id="tab-pct" role="tab" aria-selected="true"  data-tab="pct" type="button"><span class="mono">01</span>Percent composition</button>
-        <button class="ttab" id="tab-mass" role="tab" aria-selected="false" data-tab="mass" type="button"><span class="mono">02</span>Element masses</button>
+        <button class="ttab active" id="tab-e2m" role="tab" aria-selected="true"  data-tab="e2m" type="button"><span class="mono">01</span>Empirical → Molecular</button>
+        <button class="ttab" id="tab-pce" role="tab" aria-selected="false" data-tab="pce" type="button"><span class="mono">02</span>% Comp → Empirical</button>
+        <button class="ttab" id="tab-pcm" role="tab" aria-selected="false" data-tab="pcm" type="button"><span class="mono">03</span>% Comp → Molecular</button>
+        <button class="ttab" id="tab-simp" role="tab" aria-selected="false" data-tab="simp" type="button"><span class="mono">04</span>Simplify formula</button>
       </div>
 
-      <!-- ========== PANEL 1 · PERCENT COMPOSITION ========== -->
-      <div class="tpanel active" id="panel-pct" role="tabpanel" aria-labelledby="tab-pct">
+      <!-- ========== PANEL 1 · EMPIRICAL → MOLECULAR ========== -->
+      <div class="tpanel active" id="panel-e2m" role="tabpanel" aria-labelledby="tab-e2m">
         <div class="tool-grid">
 
           <div class="t-inputs">
             <div class="t-field">
-              <label>Element percentages</label>
-              <div id="pct-rows"></div>
-              <button type="button" class="t-chip" id="pct-add" style="margin-top:10px;">+ ADD ELEMENT</button>
-              <p class="hint">Enter the percentage by mass of each element. The total should sum to 100%.</p>
+              <label for="e2m-formula">Empirical formula</label>
+              <div class="t-formula"><input type="text" id="e2m-formula" value="CH2O" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+              <p class="hint">The simplest whole-number ratio of atoms in the compound.</p>
             </div>
             <div class="t-field">
-              <label for="pct-molar-mass">Total molar mass (optional)</label>
-              <div class="t-num"><input type="number" id="pct-molar-mass" placeholder="e.g. 180.16" min="0" step="any" inputmode="decimal" autocomplete="off"><span class="suf">g/mol</span></div>
-              <p class="hint">Provide the molar mass to get the molecular formula. Leave blank for the empirical formula only.</p>
+              <label for="e2m-mass">Molar mass of the compound</label>
+              <div class="t-num"><input type="number" id="e2m-mass" value="180.16" min="0" step="any" inputmode="decimal" autocomplete="off"><span class="suf">g/mol</span></div>
+              <p class="hint">The actual measured molar mass — usually given or found experimentally.</p>
             </div>
             <div class="t-field">
               <label>One-click examples</label>
               <div class="t-examples">
-                <button type="button" class="t-chip" data-example="glucose">GLUCOSE · C₆H₁₂O₆</button>
-                <button type="button" class="t-chip" data-example="water">WATER · H₂O</button>
-                <button type="button" class="t-chip" data-example="ethanol">ETHANOL · C₂H₆O</button>
+                <button type="button" class="t-chip" data-formula="CH2O" data-mass="180.16">GLUCOSE · CH2O, 180.16</button>
+                <button type="button" class="t-chip" data-formula="CH" data-mass="78.11">BENZENE · CH, 78.11</button>
+                <button type="button" class="t-chip" data-formula="NO2" data-mass="92.02">N2O4 · NO2, 92.02</button>
               </div>
             </div>
-            <p class="t-err" id="pct-err" role="alert"></p>
+            <p class="t-err" id="e2m-err" role="alert"></p>
           </div>
 
           <div class="t-results">
             <div class="res-head">
               <span class="rl">RESULTS</span>
-              <button class="t-copy" type="button" id="pct-copy" aria-label="Copy results">
+              <button class="t-copy" type="button" id="e2m-copy" aria-label="Copy results">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
                 <span>COPY</span>
               </button>
             </div>
-            <div id="pct-out"><div class="t-wait">ENTER COMPOSITION — RESULTS APPEAR HERE INSTANTLY</div></div>
+            <div id="e2m-out"></div>
           </div>
 
         </div>
       </div>
 
-      <!-- ========== PANEL 2 · ELEMENT MASSES ========== -->
-      <div class="tpanel" id="panel-mass" role="tabpanel" aria-labelledby="tab-mass">
+      <!-- ========== PANEL 2 · % COMPOSITION → EMPIRICAL ========== -->
+      <div class="tpanel" id="panel-pce" role="tabpanel" aria-labelledby="tab-pce">
         <div class="tool-grid">
 
           <div class="t-inputs">
             <div class="t-field">
-              <label>Element masses</label>
-              <div id="mass-rows"></div>
-              <button type="button" class="t-chip" id="mass-add" style="margin-top:10px;">+ ADD ELEMENT</button>
-              <p class="hint">Enter the mass of each element in grams from a sample or combustion analysis.</p>
-            </div>
-            <div class="t-field">
-              <label for="mass-molar-mass">Total molar mass (optional)</label>
-              <div class="t-num"><input type="number" id="mass-molar-mass" placeholder="e.g. 180.16" min="0" step="any" inputmode="decimal" autocomplete="off"><span class="suf">g/mol</span></div>
-              <p class="hint">Provide the molar mass to get the molecular formula. Leave blank for the empirical formula only.</p>
+              <label>Element &amp; percent composition</label>
+              <div class="pc-rows" id="pce-rows"></div>
+              <button type="button" class="pc-add" id="pce-add">+ ADD ELEMENT</button>
+              <p class="pc-sum" id="pce-sum"></p>
             </div>
             <div class="t-field">
               <label>One-click examples</label>
               <div class="t-examples">
-                <button type="button" class="t-chip" data-example="glucose-mass">GLUCOSE · C₆H₁₂O₆</button>
-                <button type="button" class="t-chip" data-example="water-mass">WATER · H₂O</button>
-                <button type="button" class="t-chip" data-example="ethanol-mass">ETHANOL · C₂H₆O</button>
+                <button type="button" class="t-chip" data-pce="glucose">GLUCOSE · C 40.0 / H 6.7 / O 53.3</button>
+                <button type="button" class="t-chip" data-pce="benzene">BENZENE · C 92.3 / H 7.7</button>
+                <button type="button" class="t-chip" data-pce="water">WATER · H 11.19 / O 88.81</button>
               </div>
             </div>
-            <p class="t-err" id="mass-err" role="alert"></p>
+            <p class="t-err" id="pce-err" role="alert"></p>
           </div>
 
           <div class="t-results">
             <div class="res-head">
               <span class="rl">RESULTS</span>
-              <button class="t-copy" type="button" id="mass-copy" aria-label="Copy results">
+              <button class="t-copy" type="button" id="pce-copy" aria-label="Copy results">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
                 <span>COPY</span>
               </button>
             </div>
-            <div id="mass-out"><div class="t-wait">ENTER MASSES — RESULTS APPEAR HERE INSTANTLY</div></div>
+            <div id="pce-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 3 · % COMPOSITION → MOLECULAR ========== -->
+      <div class="tpanel" id="panel-pcm" role="tabpanel" aria-labelledby="tab-pcm">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label>Element &amp; percent composition</label>
+              <div class="pc-rows" id="pcm-rows"></div>
+              <button type="button" class="pc-add" id="pcm-add">+ ADD ELEMENT</button>
+              <p class="pc-sum" id="pcm-sum"></p>
+            </div>
+            <div class="t-field">
+              <label for="pcm-mass">Molar mass of the compound</label>
+              <div class="t-num"><input type="number" id="pcm-mass" value="180.16" min="0" step="any" inputmode="decimal" autocomplete="off"><span class="suf">g/mol</span></div>
+              <p class="hint">The actual measured molar mass of the full molecule.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-pcm="glucose">GLUCOSE · 180.16 G/MOL</button>
+                <button type="button" class="t-chip" data-pcm="benzene">BENZENE · 78.11 G/MOL</button>
+              </div>
+            </div>
+            <p class="t-err" id="pcm-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="pcm-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="pcm-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 4 · SIMPLIFY FORMULA ========== -->
+      <div class="tpanel" id="panel-simp" role="tabpanel" aria-labelledby="tab-simp">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="simp-formula">Molecular formula</label>
+              <div class="t-formula"><input type="text" id="simp-formula" value="C6H12O6" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+              <p class="hint">Any formula with whole-number subscripts — parentheses are supported too.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-formula="C6H12O6">GLUCOSE · C6H12O6</button>
+                <button type="button" class="t-chip" data-formula="H2O2">HYDROGEN PEROXIDE · H2O2</button>
+                <button type="button" class="t-chip" data-formula="N2O4">N2O4</button>
+                <button type="button" class="t-chip" data-formula="Fe2O3">IRON(III) OXIDE · Fe2O3</button>
+              </div>
+            </div>
+            <p class="t-err" id="simp-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="simp-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="simp-out"></div>
           </div>
 
         </div>
@@ -789,57 +875,57 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-idx mono">02 · HOW TO USE</span>
-      <h2>From percentages to formula in four steps.</h2>
-      <p>No manual required — here's the entire flow.</p>
+      <h2>Two numbers in, a formula out.</h2>
+      <p>No manual required — but here's the entire flow in four moves.</p>
     </div>
     <div class="steps-grid">
       <div class="step">
         <span class="n mono">STEP 01</span>
-        <h3>Choose your data</h3>
-        <p><strong>Percent composition</strong> if you have percentages by mass. <strong>Element masses</strong> if you have actual grams from a sample.</p>
+        <h3>Pick a mode</h3>
+        <p><strong>Empirical → Molecular</strong> when you already have both. <strong>% Comp → Empirical</strong> or <strong>% Comp → Molecular</strong> when you're starting from lab data. <strong>Simplify</strong> to reduce any formula.</p>
       </div>
       <div class="step">
         <span class="n mono">STEP 02</span>
-        <h3>Enter the values</h3>
-        <p>Add each element and its percentage or mass. If you know the compound's molar mass, enter it too — that unlocks the molecular formula.</p>
+        <h3>Enter what you know</h3>
+        <p>Type a formula, add element/percent rows with the <strong>+</strong> button, or key in a molar mass — whatever the mode calls for. The example chips fill everything in with one tap.</p>
       </div>
       <div class="step">
         <span class="n mono">STEP 03</span>
         <h3>Read the results</h3>
-        <p>The empirical formula appears first. With a molar mass, the molecular formula is calculated and shown with the multiplier.</p>
+        <p>The final formula sits up top with proper subscripts. Mole ratios, atomic masses, and the multiplier used sit below it, and the full calculation sits at the bottom.</p>
       </div>
       <div class="step">
         <span class="n mono">STEP 04</span>
-        <h3>Follow the steps</h3>
-        <p>Every result includes the full worked solution: moles, mole ratios, the simplest ratio, and the multiplier used.</p>
+        <h3>Trust the checks</h3>
+        <p>Unknown elements, mismatched parentheses, and impossible values all get flagged with a plain-English reason instead of a wrong answer. Copy any result set with one click.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ THE FORMULAS ============ -->
+<!-- ============ THE FORMULA ============ -->
 <section class="sec" id="formulas">
   <div class="wrap">
     <div class="sec-head">
-      <span class="sec-idx mono">03 · THE MATH</span>
-      <h2>How the formula is found.</h2>
-      <p>Every calculation follows the same classic sequence.</p>
+      <span class="sec-idx mono">03 · THE FORMULA</span>
+      <h2>The logic behind every mode.</h2>
+      <p>Three relationships cover everything this tool calculates.</p>
     </div>
     <div class="fx-grid">
       <div class="fx">
-        <h3>Moles from percent</h3>
-        <div class="formula">n = % ÷ A</div>
-        <p>Divide each element's percentage by its atomic mass to get moles (assuming 100 g of sample).</p>
+        <h3>Empirical → molecular</h3>
+        <div class="formula">n = M ÷ Mₑ &nbsp;→&nbsp; ×n each subscript</div>
+        <p>Divide the compound's molar mass by the empirical formula's mass to get a whole number, then multiply every subscript by it.</p>
       </div>
       <div class="fx">
-        <h3>Simplest ratio</h3>
-        <div class="formula">ratio = nᵢ ÷ n<sub>smallest</sub></div>
-        <p>Divide every mole value by the smallest one to get the empirical formula subscripts.</p>
+        <h3>% composition → empirical</h3>
+        <div class="formula">nᵢ = %ᵢ ÷ Aᵢ &nbsp;→&nbsp; ÷ smallest</div>
+        <p>Treat each percentage as grams per 100 g, convert to moles, then divide every value by the smallest to get a ratio.</p>
       </div>
       <div class="fx">
-        <h3>Molecular multiplier</h3>
-        <div class="formula">k = M ÷ M<sub>empirical</sub></div>
-        <p>Divide the given molar mass by the empirical formula mass to get the whole-number multiplier.</p>
+        <h3>Simplifying a formula</h3>
+        <div class="formula">Divide all subscripts by their GCD</div>
+        <p>Find the greatest common divisor shared by every subscript in the formula and divide each one by it.</p>
       </div>
     </div>
   </div>
@@ -855,34 +941,35 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
     </div>
     <div class="faq-list">
       <details class="faq-item" open>
-        <summary>What is a molecular formula?<span class="pm">+</span></summary>
-        <div class="faq-body"><p>A molecular formula shows the exact number of each type of atom in a molecule. For example, glucose is <code>C₆H₁₂O₆</code> — six carbon, twelve hydrogen, and six oxygen atoms. It is a whole-number multiple of the empirical formula.</p></div>
+        <summary>What is the difference between an empirical and a molecular formula?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>An empirical formula shows the simplest whole-number ratio of atoms in a compound, while a molecular formula shows the actual number of each atom in one molecule. The molecular formula is always a whole-number multiple of the empirical formula — the empirical formula <code>CH2O</code> becomes <code>C6H12O6</code> for glucose.</p></div>
       </details>
       <details class="faq-item">
-        <summary>What is the difference between empirical and molecular formula?<span class="pm">+</span></summary>
-        <div class="faq-body"><p>The empirical formula is the simplest whole-number ratio of atoms in a compound (e.g., <code>CH₂O</code> for glucose). The molecular formula is the actual number of atoms in a molecule (e.g., <code>C₆H₁₂O₆</code>). The molecular formula is always a whole-number multiple of the empirical formula.</p></div>
+        <summary>How do you find a molecular formula from an empirical formula?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Divide the compound's actual molar mass by the empirical formula's mass to get a whole number <code>n</code>, then multiply every subscript in the empirical formula by <code>n</code>. Enter both values in the <strong>Empirical → Molecular</strong> tab and the calculator does this automatically.</p></div>
       </details>
       <details class="faq-item">
-        <summary>How do you find the molecular formula from percent composition?<span class="pm">+</span></summary>
-        <div class="faq-body"><p>First convert the percent composition to moles by dividing each percentage by the element's atomic mass. Then divide all mole values by the smallest one to get the empirical formula. Finally, divide the given molar mass by the empirical formula mass to get the multiplier, and multiply the empirical formula by that number.</p></div>
+        <summary>How do you find an empirical formula from percent composition?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Treat each percentage as grams in a 100 g sample, divide each by its element's atomic mass to get moles, then divide every mole value by the smallest one. If the results aren't whole numbers, multiply all of them by the same small integer until they are. The <strong>% Comp → Empirical</strong> tab runs this for any set of elements.</p></div>
       </details>
       <details class="faq-item">
-        <summary>Can this calculator determine the molecular formula from mass data?<span class="pm">+</span></summary>
-        <div class="faq-body"><p>Yes. Enter the mass of each element in grams and the total molar mass of the compound (if known). The calculator converts masses to moles, finds the simplest ratio, and determines the molecular formula automatically.</p></div>
+        <summary>Can you find a molecular formula directly from percent composition?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Yes. First find the empirical formula from the percent composition, then divide the compound's known molar mass by the empirical formula's mass to get the multiplier. The <strong>% Comp → Molecular</strong> tab combines both steps in one calculation.</p></div>
       </details>
       <details class="faq-item">
-        <summary>What if the molar mass is not known?<span class="pm">+</span></summary>
-        <div class="faq-body"><p>If the molar mass is not provided, the calculator will still determine the empirical formula from the given composition. The molecular formula requires the molar mass to find the multiplier.</p></div>
+        <summary>How do you simplify a molecular formula to its empirical formula?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Find the greatest common divisor of all the subscripts in the formula and divide each one by it. For <code>C6H12O6</code> the subscripts 6, 12 and 6 share a greatest common divisor of 6, giving <code>CH2O</code>. The <strong>Simplify formula</strong> tab does this for any formula you enter.</p></div>
       </details>
       <details class="faq-item">
-        <summary>Is this tool free, and is my data sent anywhere?<span class="pm">+</span></summary>
-        <div class="faq-body"><p>It is completely free and runs entirely in your browser — nothing you type is uploaded, logged, or sent to a server. No account, no sign-up, no limits.</p></div>
+        <summary>Is this tool free, and where does my data go?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>It's completely free and runs entirely in your browser — nothing you type is uploaded, logged, or sent to any server. No account, no sign-up, no limits.</p></div>
       </details>
     </div>
   </div>
 </section>
 </main>
 
+<!-- ============ FOOTER — same footer as every page ============ -->
 <!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
 <section class="pre-footer" id="subscribe">
   <div class="wrap pre-footer-inner">
@@ -909,7 +996,6 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer id="footer">
   <canvas id="starfield" aria-hidden="true"></canvas>
   <div class="wrap">
@@ -1000,6 +1086,7 @@ const HAS3D = typeof THREE !== 'undefined';
 
 /* =========================================================
    THEME SYSTEM — one source of truth for CSS *and* WebGL
+   (only the footer starfield uses Three.js on this page).
 ========================================================= */
 let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
 let themeTarget = themeMix;
@@ -1130,6 +1217,25 @@ onScroll();
 (function(){
   'use strict';
 
+  /* ---------- number formatting ---------- */
+  function expHTML(x){
+    if (x === 0) return '0';
+    const parts = x.toExponential(3).split('e');
+    let m = parts[0];
+    if (m.indexOf('.') > -1) m = m.replace(/0+$/, '').replace(/\.$/, '');
+    return m + '×10<sup>' + parseInt(parts[1], 10) + '</sup>';
+  }
+  function fmt(x, sig){
+    sig = sig || 6;
+    if (x === null || x === undefined || !isFinite(x)) return '—';
+    if (x === 0) return '0';
+    const ax = Math.abs(x);
+    if (ax < 1e-6 || ax >= 1e12) return expHTML(x);
+    let s = x.toPrecision(sig);
+    if (s.indexOf('.') > -1) s = s.replace(/0+$/, '').replace(/\.$/, '');
+    return s;
+  }
+
   /* ---------- periodic table: symbol -> [name, atomic mass] ---------- */
   const ELEMENTS = {
     H:['Hydrogen',1.008], He:['Helium',4.0026], Li:['Lithium',6.94], Be:['Beryllium',9.0122],
@@ -1164,52 +1270,113 @@ onScroll();
     Ts:['Tennessine',294], Og:['Oganesson',294]
   };
 
-  const AVOGADRO = 6.02214076e23;
-
-  /* ---------- number & formatting helpers ---------- */
-  function expHTML(x){
-    if (x === 0) return '0';
-    const parts = x.toExponential(3).split('e');
-    let m = parts[0];
-    if (m.indexOf('.') > -1) m = m.replace(/0+$/, '').replace(/\.$/, '');
-    return m + '×10<sup>' + parseInt(parts[1], 10) + '</sup>';
-  }
-  function fmt(x, sig){
-    sig = sig || 6;
-    if (x === null || x === undefined || !isFinite(x)) return '—';
-    if (x === 0) return '0';
-    const ax = Math.abs(x);
-    if (ax < 1e-6 || ax >= 1e12) return expHTML(x);
-    let s = x.toPrecision(sig);
-    if (s.indexOf('.') > -1) s = s.replace(/0+$/, '').replace(/\.$/, '');
-    return s;
-  }
-
-  /* ---------- formula builders ---------- */
-  function buildFormula(counts){
-    let out = '';
-    for (const el in counts){
-      out += el;
-      if (counts[el] > 1) out += counts[el];
+  /* ---------- formula parser (shared logic, no hydrate dots needed here) ---------- */
+  function tokenize(str){
+    const tokens = [];
+    let i = 0;
+    while (i < str.length){
+      const c = str[i];
+      if (c === '(' || c === '['){ tokens.push(c); i++; continue; }
+      if (c === ')' || c === ']'){ tokens.push(c); i++; continue; }
+      if (/[A-Z]/.test(c)){
+        let sym = c; i++;
+        while (i < str.length && /[a-z]/.test(str[i])){ sym += str[i]; i++; }
+        tokens.push(sym);
+        continue;
+      }
+      if (/[0-9.]/.test(c)){
+        let num = c; i++;
+        while (i < str.length && /[0-9.]/.test(str[i])){ num += str[i]; i++; }
+        tokens.push(num);
+        continue;
+      }
+      throw new Error('Unexpected character "' + c + '" in the formula.');
     }
-    return out;
+    return tokens;
   }
-
+  function parseTokens(tokens){
+    let pos = 0;
+    function peek(){ return tokens[pos]; }
+    function isNum(t){ return t !== undefined && /^\d+\.?\d*$/.test(t); }
+    function parseGroup(){
+      const counts = {};
+      while (pos < tokens.length && peek() !== ')' && peek() !== ']'){
+        const tok = tokens[pos];
+        if (tok === '(' || tok === '['){
+          const opener = tok; pos++;
+          const inner = parseGroup();
+          const closer = peek();
+          if ((opener === '(' && closer !== ')') || (opener === '[' && closer !== ']')){
+            throw new Error('Mismatched parentheses in the formula.');
+          }
+          pos++;
+          let mult = 1;
+          if (isNum(peek())){ mult = parseFloat(tokens[pos]); pos++; }
+          for (const el in inner) counts[el] = (counts[el] || 0) + inner[el] * mult;
+        } else if (/^[A-Z][a-z]*$/.test(tok)){
+          pos++;
+          if (!ELEMENTS[tok]) throw new Error('"' + tok + '" isn\u2019t a recognised element symbol.');
+          let count = 1;
+          if (isNum(peek())){ count = parseFloat(tokens[pos]); pos++; }
+          counts[tok] = (counts[tok] || 0) + count;
+        } else {
+          throw new Error('Couldn\u2019t read the formula near "' + tok + '".');
+        }
+      }
+      return counts;
+    }
+    const counts = parseGroup();
+    if (pos !== tokens.length) throw new Error('Mismatched parentheses in the formula.');
+    return counts;
+  }
+  function parseFormula(formula){
+    formula = (formula || '').replace(/\s+/g, '');
+    if (!formula) throw new Error('Enter a chemical formula.');
+    const counts = parseTokens(tokenize(formula));
+    if (Object.keys(counts).length === 0) throw new Error('Enter a chemical formula.');
+    return counts;
+  }
   function molarMassOf(counts){
     let M = 0;
     for (const el in counts) M += counts[el] * ELEMENTS[el][1];
     return M;
   }
+  function buildFormulaHTML(counts){
+    return Object.keys(counts).map(el => {
+      const n = counts[el];
+      return el + (n > 1 ? '<sub>' + fmt(n, 6) + '</sub>' : '');
+    }).join('');
+  }
+  function buildFormulaPlain(counts){
+    return Object.keys(counts).map(el => {
+      const n = counts[el];
+      return el + (n > 1 ? fmt(n, 6) : '');
+    }).join('');
+  }
+  function gcdAll(nums){
+    function gcd(a, b){ a = Math.round(a); b = Math.round(b); while (b){ [a, b] = [b, a % b]; } return a; }
+    return nums.reduce((a, b) => gcd(a, b));
+  }
+
+  /* ---------- ratio-to-whole-number helper for % composition ---------- */
+  function toWholeRatios(ratios){
+    const TOL = 0.08;
+    for (let k = 1; k <= 8; k++){
+      const scaled = ratios.map(r => r * k);
+      if (scaled.every(v => Math.abs(v - Math.round(v)) < TOL)) return { whole: scaled.map(v => Math.round(v)), k };
+    }
+    return { whole: ratios.map(v => Math.round(v)), k: 1 };
+  }
 
   /* ---------- shared UI helpers ---------- */
-  const summaries = { pct:'', mass:'' };
+  const summaries = { e2m:'', pce:'', pcm:'', simp:'' };
   function errShow(el, msg){
     el.textContent = msg || '';
     el.classList.toggle('show', !!msg);
   }
   function fail(out, err, msg, key){
     errShow(err, msg || '');
-    out.innerHTML = '<div class="t-wait">ENTER VALID DATA — RESULTS APPEAR HERE INSTANTLY</div>';
+    out.innerHTML = '<div class="t-wait">ENTER VALID VALUES — RESULTS APPEAR HERE INSTANTLY</div>';
     summaries[key] = '';
   }
   function rowHTML(key, val, sub){
@@ -1218,319 +1385,233 @@ onScroll();
   }
   const TAG = 'Calculated with the StudyWithSTEM Molecular Formula Calculator';
 
-  function formulaBreakdownHTML(counts){
-    let h = '';
-    for (const el in counts){
-      const n = counts[el], A = ELEMENTS[el][1], sub = n * A;
-      h += rowHTML(el + ' × ' + fmt(n, 6), fmt(sub) + ' g/mol', ELEMENTS[el][0] + ' · ' + fmt(A, 6) + ' g/mol each');
-    }
-    return h;
-  }
+  /* =================== TAB 1 · EMPIRICAL → MOLECULAR =================== */
+  function renderE2M(){
+    const out = $('#e2m-out'), err = $('#e2m-err');
+    const formulaStr = $('#e2m-formula').value;
+    const massVal = parseFloat($('#e2m-mass').value);
+    let counts;
+    try { counts = parseFormula(formulaStr); }
+    catch (e) { return fail(out, err, e.message, 'e2m'); }
+    if (isNaN(massVal)) return fail(out, err, '', 'e2m');
+    if (massVal <= 0) return fail(out, err, 'Molar mass must be greater than zero.', 'e2m');
 
-  /* ---------- core: compute formula from moles ---------- */
-  function computeFormula(molesMap, targetMolarMass){
-    const entries = [];
-    for (const el in molesMap){
-      const n = molesMap[el];
-      if (n > 0) entries.push({ el: el, n: n });
-    }
-    if (entries.length === 0) return null;
-
-    const minN = Math.min(...entries.map(e => e.n));
-    entries.forEach(e => e.ratio = e.n / minN);
-
-    // find multiplier to make all ratios integers (within tolerance)
-    let multiplier = 1;
-    for (let m = 1; m <= 100; m++){
-      let ok = true;
-      for (const e of entries){
-        const val = e.ratio * m;
-        if (Math.abs(val - Math.round(val)) > 0.03){ ok = false; break; }
-      }
-      if (ok){ multiplier = m; break; }
-    }
-
-    const empirical = {};
-    entries.forEach(e => {
-      empirical[e.el] = Math.round(e.ratio * multiplier);
-    });
-
-    const empMass = molarMassOf(empirical);
-    let molecular = null;
-    let molMultiplier = null;
-
-    if (targetMolarMass && targetMolarMass > 0 && empMass > 0){
-      const k = targetMolarMass / empMass;
-      const kRound = Math.round(k);
-      if (kRound >= 1 && Math.abs(k - kRound) < 0.08){
-        molMultiplier = kRound;
-        molecular = {};
-        for (const el in empirical) molecular[el] = empirical[el] * kRound;
-      } else {
-        // try to find best integer multiplier within a wider range
-        for (let m = 1; m <= 20; m++){
-          if (Math.abs(targetMolarMass / empMass - m) < 0.15){
-            molMultiplier = m;
-            molecular = {};
-            for (const el in empirical) molecular[el] = empirical[el] * m;
-            break;
-          }
-        }
-      }
-    }
-
-    return { entries, empirical, empMass, molecular, molMultiplier, targetMolarMass };
-  }
-
-  /* ---------- render helpers for results ---------- */
-  function renderSteps(container, result, inputType){
-    let h = '<div class="res-hero">';
-    h += '<span class="rl">Empirical formula</span>';
-    h += '<span class="rv">' + buildFormula(result.empirical) + '</span>';
-    h += '<span class="rs">Empirical formula mass: ' + fmt(result.empMass) + ' g/mol</span>';
-    h += '</div>';
-
-    if (result.molecular){
-      h += '<div class="res-hero" style="padding-top:0;">';
-      h += '<span class="rl">Molecular formula</span>';
-      h += '<span class="rv">' + buildFormula(result.molecular) + '</span>';
-      h += '<span class="rs">Multiplier (k) = ' + result.molMultiplier + ' — molar mass ' + fmt(result.targetMolarMass) + ' g/mol ÷ ' + fmt(result.empMass) + ' g/mol</span>';
-      h += '</div>';
-    } else if (result.targetMolarMass){
-      h += '<div class="res-row"><span class="rk">Molecular formula</span><span class="rvv" style="color:var(--amber);">Molar mass doesn\u2019t match a whole-number multiple</span></div>';
-    } else {
-      h += '<div class="res-row"><span class="rk">Molecular formula</span><span class="rvv" style="color:var(--faint);">Enter molar mass to find it</span></div>';
-    }
-
-    h += '<div style="margin-top:14px;padding-top:4px;border-top:1px dashed var(--edge);">';
-    h += '<span style="display:block;font:700 .62rem var(--f-mono);letter-spacing:.15em;color:var(--faint);margin-bottom:8px;">STEP-BY-STEP</span>';
-
-    // Step 1: convert to moles
-    h += '<div class="res-row" style="border-top:none;padding-top:6px;">';
-    h += '<span class="rk" style="font-weight:600;color:var(--accent);">1 · Convert to moles</span>';
-    h += '<span class="rvv" style="font-size:.7rem;color:var(--muted);font-weight:600;">';
-    if (inputType === 'percent'){
-      h += 'Divide each % by atomic mass';
-    } else {
-      h += 'Divide each mass by atomic mass';
-    }
-    h += '</span></div>';
-
-    result.entries.forEach(e => {
-      h += '<div class="res-row" style="padding:6px 2px;border-top-style:dotted;">';
-      h += '<span class="rk" style="font-size:.76rem;">' + e.el + ' → ' + fmt(e.n, 6) + ' mol</span>';
-      h += '<span class="rvv" style="font-size:.7rem;color:var(--faint);font-weight:400;">' + ELEMENTS[e.el][0] + '</span>';
-      h += '</div>';
-    });
-
-    // Step 2: simplest ratio
-    h += '<div class="res-row" style="border-top:1px dashed var(--edge);">';
-    h += '<span class="rk" style="font-weight:600;color:var(--accent);">2 · Divide by smallest (' + fmt(result.entries.reduce((a,b) => a.n < b.n ? a : b).n, 4) + ')</span>';
-    h += '<span class="rvv" style="font-size:.7rem;color:var(--muted);font-weight:600;">→ simplest ratio</span>';
-    h += '</div>';
-
-    const smallest = Math.min(...result.entries.map(e => e.n));
-    result.entries.forEach(e => {
-      h += '<div class="res-row" style="padding:6px 2px;border-top-style:dotted;">';
-      h += '<span class="rk" style="font-size:.76rem;">' + e.el + ': ' + fmt(e.n, 4) + ' ÷ ' + fmt(smallest, 4) + ' = ' + fmt(e.ratio, 4) + '</span>';
-      h += '<span class="rvv" style="font-size:.7rem;color:var(--faint);font-weight:400;">→ ' + Math.round(e.ratio * 1) + '</span>';
-      h += '</div>';
-    });
-
-    if (result.molecular){
-      h += '<div class="res-row" style="border-top:1px dashed var(--edge);">';
-      h += '<span class="rk" style="font-weight:600;color:var(--accent);">3 · Find multiplier</span>';
-      h += '<span class="rvv" style="font-size:.7rem;color:var(--muted);font-weight:600;">k = ' + result.molMultiplier + '</span>';
-      h += '</div>';
-      h += '<div class="res-formula" style="margin-top:6px;">Molecular formula = (' + buildFormula(result.empirical) + ') × ' + result.molMultiplier + ' = <b>' + buildFormula(result.molecular) + '</b></div>';
-    } else {
-      h += '<div class="res-formula" style="margin-top:6px;">Empirical formula = <b>' + buildFormula(result.empirical) + '</b></div>';
-    }
-
-    h += '</div>';
-    return h;
-  }
-
-  /* =================== TAB 1 · PERCENT COMPOSITION =================== */
-  let pctRowCount = 0;
-
-  function addPctRow(el, pct){
-    const container = $('#pct-rows');
-    const id = 'pct-row-' + (pctRowCount++);
-    const row = document.createElement('div');
-    row.className = 't-pair';
-    row.style.marginBottom = '8px';
-    row.id = id;
-    row.innerHTML = `
-      <div class="t-select" style="min-width:0;">
-        <select class="pct-el" aria-label="Element">
-          ${Object.keys(ELEMENTS).map(sym => `<option value="${sym}" ${sym === el ? 'selected' : ''}>${sym} — ${ELEMENTS[sym][0]}</option>`).join('')}
-        </select>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-      </div>
-      <div class="t-num" style="position:relative;">
-        <input type="number" class="pct-val" value="${pct !== undefined ? pct : ''}" placeholder="%" min="0" step="any" inputmode="decimal" aria-label="Percent">
-        <span class="suf" style="right:12px;">%</span>
-      </div>
-      <button type="button" class="pct-del" aria-label="Remove element" style="position:absolute;right:-2px;top:-2px;width:20px;height:20px;border-radius:50%;border:1px solid var(--edge-strong);background:var(--bg);color:var(--faint);font-size:12px;cursor:pointer;display:grid;place-items:center;line-height:1;">×</button>
-    `;
-    row.querySelector('.pct-del').addEventListener('click', () => { row.remove(); renderPct(); });
-    row.querySelector('.pct-el').addEventListener('change', renderPct);
-    row.querySelector('.pct-val').addEventListener('input', renderPct);
-    container.appendChild(row);
-    renderPct();
-  }
-
-  function renderPct(){
-    const out = $('#pct-out'), err = $('#pct-err');
-    const rows = $$('#pct-rows .t-pair');
-    const data = [];
-    let totalPct = 0;
-    let valid = true;
-
-    rows.forEach(row => {
-      const el = row.querySelector('.pct-el').value;
-      const pctVal = parseFloat(row.querySelector('.pct-val').value);
-      if (!isNaN(pctVal) && pctVal > 0){
-        data.push({ el: el, pct: pctVal });
-        totalPct += pctVal;
-      }
-    });
-
-    if (data.length === 0){
-      return fail(out, err, '', 'pct');
-    }
+    const empMass = molarMassOf(counts);
+    let n = Math.round(massVal / empMass);
+    if (n < 1) n = 1;
+    const molCounts = {};
+    for (const el in counts) molCounts[el] = counts[el] * n;
+    const molMass = molarMassOf(molCounts);
 
     errShow(err, '');
-    const targetMolarMass = parseFloat($('#pct-molar-mass').value) || null;
-
-    // convert % to moles
-    const molesMap = {};
-    data.forEach(d => {
-      molesMap[d.el] = d.pct / ELEMENTS[d.el][1];
-    });
-
-    const result = computeFormula(molesMap, targetMolarMass);
-    if (!result){
-      return fail(out, err, 'Could not compute a formula from these values.', 'pct');
-    }
-
-    let h = renderSteps(out, result, 'percent');
-
-    // Add molar mass breakdown of the molecular (or empirical) formula
-    const displayFormula = result.molecular || result.empirical;
-    const displayM = molarMassOf(displayFormula);
-    h += '<div style="margin-top:14px;padding-top:10px;border-top:1px dashed var(--edge-strong);">';
-    h += '<span style="display:block;font:700 .62rem var(--f-mono);letter-spacing:.15em;color:var(--faint);margin-bottom:8px;">MOLAR MASS BREAKDOWN — ' + buildFormula(displayFormula) + '</span>';
-    h += formulaBreakdownHTML(displayFormula);
-    h += '<div class="res-formula" style="margin-top:8px;">Total molar mass = <b>' + fmt(displayM) + ' g/mol</b></div>';
-    h += '</div>';
-
+    let h = '<div class="res-hero"><span class="rl">Molecular formula</span>' +
+            '<span class="rv">' + buildFormulaHTML(molCounts) + '</span>' +
+            '<span class="rs">molar mass ' + fmt(molMass) + ' g/mol</span></div>';
+    h += rowHTML('Empirical formula', buildFormulaHTML(counts));
+    h += rowHTML('Empirical formula mass', fmt(empMass) + ' g/mol');
+    h += rowHTML('Given molar mass', fmt(massVal) + ' g/mol');
+    h += rowHTML('Multiplier n', fmt(n, 4), fmt(massVal, 6) + ' ÷ ' + fmt(empMass, 6) + ' = ' + fmt(massVal / empMass, 6));
+    h += '<div class="res-formula">n = M ÷ M<sub>e</sub> = ' + fmt(massVal) + ' ÷ ' + fmt(empMass) + ' ≈ <b>' + n + '</b> → ' +
+         buildFormulaHTML(counts) + ' × ' + n + ' = <b>' + buildFormulaHTML(molCounts) + '</b></div>';
     out.innerHTML = h;
 
-    // summary for copy
-    const lines = [];
-    lines.push('Percent composition:');
-    data.forEach(d => lines.push('  ' + d.el + ': ' + fmt(d.pct) + '%'));
-    lines.push('Empirical formula: ' + buildFormula(result.empirical));
-    lines.push('Empirical formula mass: ' + fmt(result.empMass) + ' g/mol');
-    if (result.molecular){
-      lines.push('Molecular formula: ' + buildFormula(result.molecular));
-      lines.push('Multiplier: ' + result.molMultiplier);
-    }
-    if (targetMolarMass) lines.push('Target molar mass: ' + fmt(targetMolarMass) + ' g/mol');
-    lines.push(TAG);
-    summaries.pct = lines.join('\n');
+    summaries.e2m = [
+      'Empirical formula: ' + buildFormulaPlain(counts) + ' (' + fmt(empMass) + ' g/mol)',
+      'Given molar mass: ' + fmt(massVal) + ' g/mol',
+      'Multiplier n = ' + n,
+      'Molecular formula: ' + buildFormulaPlain(molCounts) + ' (' + fmt(molMass) + ' g/mol)',
+      TAG
+    ].join('\n');
   }
 
-  /* =================== TAB 2 · ELEMENT MASSES =================== */
-  let massRowCount = 0;
+  /* =================== SHARED: PERCENT-COMPOSITION ROW MANAGER =================== */
+  function makeRowManager(containerId, addBtnId, sumId, onChange){
+    const container = $(containerId);
+    const sumEl = sumId ? $(sumId) : null;
 
-  function addMassRow(el, mass){
-    const container = $('#mass-rows');
-    const id = 'mass-row-' + (massRowCount++);
-    const row = document.createElement('div');
-    row.className = 't-pair';
-    row.style.marginBottom = '8px';
-    row.id = id;
-    row.innerHTML = `
-      <div class="t-select" style="min-width:0;">
-        <select class="mass-el" aria-label="Element">
-          ${Object.keys(ELEMENTS).map(sym => `<option value="${sym}" ${sym === el ? 'selected' : ''}>${sym} — ${ELEMENTS[sym][0]}</option>`).join('')}
-        </select>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-      </div>
-      <div class="t-num" style="position:relative;">
-        <input type="number" class="mass-val" value="${mass !== undefined ? mass : ''}" placeholder="g" min="0" step="any" inputmode="decimal" aria-label="Mass in grams">
-        <span class="suf" style="right:12px;">g</span>
-      </div>
-      <button type="button" class="mass-del" aria-label="Remove element" style="position:absolute;right:-2px;top:-2px;width:20px;height:20px;border-radius:50%;border:1px solid var(--edge-strong);background:var(--bg);color:var(--faint);font-size:12px;cursor:pointer;display:grid;place-items:center;line-height:1;">×</button>
-    `;
-    row.querySelector('.mass-del').addEventListener('click', () => { row.remove(); renderMass(); });
-    row.querySelector('.mass-el').addEventListener('change', renderMass);
-    row.querySelector('.mass-val').addEventListener('input', renderMass);
-    container.appendChild(row);
-    renderMass();
+    function normalizeSymbol(v){
+      v = v.trim();
+      if (!v) return '';
+      return v.charAt(0).toUpperCase() + v.slice(1).toLowerCase();
+    }
+    function updateSum(){
+      if (!sumEl) return;
+      const rows = collect(true);
+      const sum = rows.reduce((a, r) => a + r.pct, 0);
+      sumEl.textContent = rows.length ? ('Percentages total ' + fmt(sum, 5) + '%' + (Math.abs(sum - 100) > 1 ? ' — check this adds to ~100%' : '')) : '';
+    }
+    function addRow(el, pct){
+      const row = document.createElement('div');
+      row.className = 'pc-row';
+      row.innerHTML =
+        '<input type="text" class="pc-el" placeholder="Element e.g. C" value="' + (el || '') + '" autocomplete="off" autocapitalize="off" spellcheck="false">' +
+        '<input type="number" class="pc-pct" placeholder="% e.g. 40.0" value="' + (pct !== undefined ? pct : '') + '" step="any" inputmode="decimal" autocomplete="off">' +
+        '<button type="button" class="pc-remove" aria-label="Remove element">×</button>';
+      const elInput = row.querySelector('.pc-el');
+      const pctInput = row.querySelector('.pc-pct');
+      const rmBtn = row.querySelector('.pc-remove');
+      elInput.addEventListener('input', () => { onChange(); updateSum(); });
+      elInput.addEventListener('blur', () => { elInput.value = normalizeSymbol(elInput.value); onChange(); updateSum(); });
+      pctInput.addEventListener('input', () => { onChange(); updateSum(); });
+      rmBtn.addEventListener('click', () => {
+        if (container.children.length <= 2) return;
+        row.remove(); onChange(); updateSum();
+      });
+      container.appendChild(row);
+    }
+    function setRows(list){
+      container.innerHTML = '';
+      list.forEach(r => addRow(r.el, r.pct));
+      onChange(); updateSum();
+    }
+    function collect(silent){
+      const rows = [];
+      $$('.pc-row', container).forEach(row => {
+        const el = normalizeSymbol(row.querySelector('.pc-el').value);
+        const pct = parseFloat(row.querySelector('.pc-pct').value);
+        if (el && !isNaN(pct)) rows.push({ el, pct });
+      });
+      return rows;
+    }
+    $(addBtnId).addEventListener('click', () => { addRow('', ''); onChange(); updateSum(); });
+
+    return { addRow, setRows, collect, updateSum };
   }
 
-  function renderMass(){
-    const out = $('#mass-out'), err = $('#mass-err');
-    const rows = $$('#mass-rows .t-pair');
-    const data = [];
-    let totalMass = 0;
-
-    rows.forEach(row => {
-      const el = row.querySelector('.mass-el').value;
-      const m = parseFloat(row.querySelector('.mass-val').value);
-      if (!isNaN(m) && m > 0){
-        data.push({ el: el, mass: m });
-        totalMass += m;
-      }
-    });
-
-    if (data.length === 0){
-      return fail(out, err, '', 'mass');
+  function pctToEmpiricalCounts(rows){
+    for (const r of rows){
+      if (!ELEMENTS[r.el]) throw new Error('"' + r.el + '" isn\u2019t a recognised element symbol.');
+      if (r.pct <= 0) throw new Error('Percentages must be greater than zero.');
     }
+    const moles = rows.map(r => ({ el: r.el, m: r.pct / ELEMENTS[r.el][1] }));
+    const minMoles = Math.min(...moles.map(m => m.m));
+    const ratios = moles.map(m => m.m / minMoles);
+    const { whole, k } = toWholeRatios(ratios);
+    const counts = {};
+    moles.forEach((m, i) => { counts[m.el] = whole[i]; });
+    return { counts, moles, ratios, k };
+  }
+
+  /* =================== TAB 2 · % COMPOSITION → EMPIRICAL =================== */
+  const pceMgr = makeRowManager('#pce-rows', '#pce-add', '#pce-sum', renderPCE);
+
+  function renderPCE(){
+    const out = $('#pce-out'), err = $('#pce-err');
+    const rows = pceMgr.collect();
+    if (rows.length < 2) return fail(out, err, 'Add at least two elements with a percent each.', 'pce');
+    let result;
+    try { result = pctToEmpiricalCounts(rows); }
+    catch (e) { return fail(out, err, e.message, 'pce'); }
 
     errShow(err, '');
-    const targetMolarMass = parseFloat($('#mass-molar-mass').value) || null;
-
-    // convert masses to moles
-    const molesMap = {};
-    data.forEach(d => {
-      molesMap[d.el] = d.mass / ELEMENTS[d.el][1];
+    const { counts, moles, ratios } = result;
+    const empMass = molarMassOf(counts);
+    let h = '<div class="res-hero"><span class="rl">Empirical formula</span>' +
+            '<span class="rv">' + buildFormulaHTML(counts) + '</span>' +
+            '<span class="rs">formula mass ' + fmt(empMass) + ' g/mol</span></div>';
+    moles.forEach((m, i) => {
+      h += rowHTML(m.el + ' (' + fmt(rows[i].pct, 5) + '%)', fmt(ratios[i], 5) + ' ratio', fmt(m.m, 6) + ' mol per 100 g');
     });
-
-    const result = computeFormula(molesMap, targetMolarMass);
-    if (!result){
-      return fail(out, err, 'Could not compute a formula from these values.', 'mass');
-    }
-
-    let h = renderSteps(out, result, 'mass');
-
-    const displayFormula = result.molecular || result.empirical;
-    const displayM = molarMassOf(displayFormula);
-    h += '<div style="margin-top:14px;padding-top:10px;border-top:1px dashed var(--edge-strong);">';
-    h += '<span style="display:block;font:700 .62rem var(--f-mono);letter-spacing:.15em;color:var(--faint);margin-bottom:8px;">MOLAR MASS BREAKDOWN — ' + buildFormula(displayFormula) + '</span>';
-    h += formulaBreakdownHTML(displayFormula);
-    h += '<div class="res-formula" style="margin-top:8px;">Total molar mass = <b>' + fmt(displayM) + ' g/mol</b></div>';
-    h += '</div>';
-
+    h += '<div class="res-formula">' + moles.map((m, i) => m.el + ': ' + fmt(rows[i].pct, 5) + '÷' + fmt(ELEMENTS[m.el][1], 6) + '=' + fmt(m.m, 6)).join('  ·  ') +
+         ' → <b>' + buildFormulaHTML(counts) + '</b></div>';
     out.innerHTML = h;
 
-    const lines = [];
-    lines.push('Element masses:');
-    data.forEach(d => lines.push('  ' + d.el + ': ' + fmt(d.mass) + ' g'));
-    lines.push('Empirical formula: ' + buildFormula(result.empirical));
-    lines.push('Empirical formula mass: ' + fmt(result.empMass) + ' g/mol');
-    if (result.molecular){
-      lines.push('Molecular formula: ' + buildFormula(result.molecular));
-      lines.push('Multiplier: ' + result.molMultiplier);
-    }
-    if (targetMolarMass) lines.push('Target molar mass: ' + fmt(targetMolarMass) + ' g/mol');
-    lines.push(TAG);
-    summaries.mass = lines.join('\n');
+    summaries.pce = [
+      ...rows.map(r => r.el + ': ' + fmt(r.pct, 5) + '%'),
+      'Empirical formula: ' + buildFormulaPlain(counts) + ' (' + fmt(empMass) + ' g/mol)',
+      TAG
+    ].join('\n');
   }
+
+  /* =================== TAB 3 · % COMPOSITION → MOLECULAR =================== */
+  const pcmMgr = makeRowManager('#pcm-rows', '#pcm-add', '#pcm-sum', renderPCM);
+
+  function renderPCM(){
+    const out = $('#pcm-out'), err = $('#pcm-err');
+    const rows = pcmMgr.collect();
+    const massVal = parseFloat($('#pcm-mass').value);
+    if (rows.length < 2) return fail(out, err, 'Add at least two elements with a percent each.', 'pcm');
+    if (isNaN(massVal) || massVal <= 0) return fail(out, err, 'Enter the compound\u2019s molar mass (greater than zero).', 'pcm');
+    let result;
+    try { result = pctToEmpiricalCounts(rows); }
+    catch (e) { return fail(out, err, e.message, 'pcm'); }
+
+    errShow(err, '');
+    const { counts } = result;
+    const empMass = molarMassOf(counts);
+    let n = Math.round(massVal / empMass);
+    if (n < 1) n = 1;
+    const molCounts = {};
+    for (const el in counts) molCounts[el] = counts[el] * n;
+    const molMass = molarMassOf(molCounts);
+
+    let h = '<div class="res-hero"><span class="rl">Molecular formula</span>' +
+            '<span class="rv">' + buildFormulaHTML(molCounts) + '</span>' +
+            '<span class="rs">molar mass ' + fmt(molMass) + ' g/mol</span></div>';
+    h += rowHTML('Empirical formula', buildFormulaHTML(counts));
+    h += rowHTML('Empirical formula mass', fmt(empMass) + ' g/mol');
+    h += rowHTML('Given molar mass', fmt(massVal) + ' g/mol');
+    h += rowHTML('Multiplier n', fmt(n, 4));
+    h += '<div class="res-formula">' + buildFormulaHTML(counts) + ' → n = ' + fmt(massVal) + '÷' + fmt(empMass) + '≈<b>' + n + '</b> → <b>' + buildFormulaHTML(molCounts) + '</b></div>';
+    out.innerHTML = h;
+
+    summaries.pcm = [
+      ...rows.map(r => r.el + ': ' + fmt(r.pct, 5) + '%'),
+      'Empirical formula: ' + buildFormulaPlain(counts) + ' (' + fmt(empMass) + ' g/mol)',
+      'Given molar mass: ' + fmt(massVal) + ' g/mol, n = ' + n,
+      'Molecular formula: ' + buildFormulaPlain(molCounts) + ' (' + fmt(molMass) + ' g/mol)',
+      TAG
+    ].join('\n');
+  }
+
+  /* =================== TAB 4 · SIMPLIFY FORMULA =================== */
+  function renderSimp(){
+    const out = $('#simp-out'), err = $('#simp-err');
+    const formulaStr = $('#simp-formula').value;
+    let counts;
+    try { counts = parseFormula(formulaStr); }
+    catch (e) { return fail(out, err, e.message, 'simp'); }
+
+    const rounded = Object.keys(counts).map(el => counts[el]);
+    if (rounded.some(v => Math.abs(v - Math.round(v)) > 1e-6)){
+      return fail(out, err, 'Simplifying needs whole-number subscripts.', 'simp');
+    }
+    errShow(err, '');
+
+    const g = gcdAll(rounded);
+    const empCounts = {};
+    for (const el in counts) empCounts[el] = counts[el] / g;
+    const molMass = molarMassOf(counts);
+    const empMass = molarMassOf(empCounts);
+
+    let h = '<div class="res-hero"><span class="rl">Empirical formula</span>' +
+            '<span class="rv">' + buildFormulaHTML(empCounts) + '</span>' +
+            '<span class="rs">formula mass ' + fmt(empMass) + ' g/mol</span></div>';
+    h += rowHTML('Original formula', buildFormulaHTML(counts));
+    h += rowHTML('Molar mass', fmt(molMass) + ' g/mol');
+    h += rowHTML('Greatest common divisor', String(g));
+    h += rowHTML('Multiplier back to molecular', 'n = ' + g);
+    h += '<div class="res-formula">GCD(' + rounded.join(', ') + ') = <b>' + g + '</b> → ' + buildFormulaHTML(counts) + ' ÷ ' + g + ' = <b>' + buildFormulaHTML(empCounts) + '</b></div>';
+    out.innerHTML = h;
+
+    summaries.simp = [
+      'Formula: ' + buildFormulaPlain(counts) + ' (' + fmt(molMass) + ' g/mol)',
+      'GCD of subscripts = ' + g,
+      'Empirical formula: ' + buildFormulaPlain(empCounts) + ' (' + fmt(empMass) + ' g/mol)',
+      TAG
+    ].join('\n');
+  }
+
+  /* ---------- example presets ---------- */
+  const PCE_PRESETS = {
+    glucose: [{ el:'C', pct:40.0 }, { el:'H', pct:6.7 }, { el:'O', pct:53.3 }],
+    benzene: [{ el:'C', pct:92.3 }, { el:'H', pct:7.7 }],
+    water:   [{ el:'H', pct:11.19 }, { el:'O', pct:88.81 }]
+  };
+  const PCM_PRESETS = {
+    glucose: { rows:[{ el:'C', pct:40.0 }, { el:'H', pct:6.7 }, { el:'O', pct:53.3 }], mass:180.16 },
+    benzene: { rows:[{ el:'C', pct:92.3 }, { el:'H', pct:7.7 }], mass:78.11 }
+  };
 
   /* ---------- tabs ---------- */
   $$('.ttab').forEach(btn => btn.addEventListener('click', () => {
@@ -1542,42 +1623,23 @@ onScroll();
   }));
 
   /* ---------- example chips ---------- */
-  $$('.t-chip[data-example]').forEach(chip => chip.addEventListener('click', function(){
-    const example = this.dataset.example;
-
-    const examples = {
-      glucose: { type:'pct', el:['C','H','O'], vals:[40.00, 6.71, 53.29], mm:180.16 },
-      water:   { type:'pct', el:['H','O'], vals:[11.19, 88.81], mm:18.015 },
-      ethanol: { type:'pct', el:['C','H','O'], vals:[52.14, 13.13, 34.73], mm:46.07 },
-      'glucose-mass': { type:'mass', el:['C','H','O'], vals:[40.00, 6.71, 53.29], mm:180.16 },
-      'water-mass':   { type:'mass', el:['H','O'], vals:[11.19, 88.81], mm:18.015 },
-      'ethanol-mass': { type:'mass', el:['C','H','O'], vals:[52.14, 13.13, 34.73], mm:46.07 }
-    };
-
-    const ex = examples[example];
-    if (!ex) return;
-
-    if (ex.type === 'pct'){
-      $('#tab-pct').click();
-      // clear existing rows
-      $$('#pct-rows .t-pair').forEach(r => r.remove());
-      pctRowCount = 0;
-      ex.el.forEach((el, i) => addPctRow(el, ex.vals[i]));
-      $('#pct-molar-mass').value = ex.mm || '';
-      renderPct();
-    } else {
-      $('#tab-mass').click();
-      $$('#mass-rows .t-pair').forEach(r => r.remove());
-      massRowCount = 0;
-      ex.el.forEach((el, i) => addMassRow(el, ex.vals[i]));
-      $('#mass-molar-mass').value = ex.mm || '';
-      renderMass();
+  $$('.t-chip').forEach(chip => chip.addEventListener('click', function(){
+    const d = this.dataset;
+    if (this.closest('#panel-e2m') && d.formula !== undefined && d.mass !== undefined){
+      $('#e2m-formula').value = d.formula; $('#e2m-mass').value = d.mass; renderE2M(); return;
+    }
+    if (this.closest('#panel-pce') && d.pce !== undefined){
+      pceMgr.setRows(PCE_PRESETS[d.pce]); return;
+    }
+    if (this.closest('#panel-pcm') && d.pcm !== undefined){
+      const preset = PCM_PRESETS[d.pcm];
+      $('#pcm-mass').value = preset.mass;
+      pcmMgr.setRows(preset.rows); return;
+    }
+    if (this.closest('#panel-simp') && d.formula !== undefined){
+      $('#simp-formula').value = d.formula; renderSimp(); return;
     }
   }));
-
-  /* ---------- add buttons ---------- */
-  $('#pct-add').addEventListener('click', () => addPctRow('C', ''));
-  $('#mass-add').addEventListener('click', () => addMassRow('C', ''));
 
   /* ---------- copy buttons ---------- */
   function bindCopy(btnId, key){
@@ -1607,31 +1669,27 @@ onScroll();
       }
     });
   }
-  bindCopy('#pct-copy', 'pct');
-  bindCopy('#mass-copy', 'mass');
+  bindCopy('#e2m-copy', 'e2m');
+  bindCopy('#pce-copy', 'pce');
+  bindCopy('#pcm-copy', 'pcm');
+  bindCopy('#simp-copy', 'simp');
 
-  /* ---------- molar mass input listeners ---------- */
-  $('#pct-molar-mass').addEventListener('input', renderPct);
-  $('#mass-molar-mass').addEventListener('input', renderMass);
+  /* ---------- live wiring ---------- */
+  $('#e2m-formula').addEventListener('input', renderE2M);
+  $('#e2m-mass').addEventListener('input', renderE2M);
 
-  /* ---------- first paint ---------- */
-  // seed with glucose example
-  $('#pct-rows').innerHTML = '';
-  pctRowCount = 0;
-  addPctRow('C', 40.00);
-  addPctRow('H', 6.71);
-  addPctRow('O', 53.29);
-  $('#pct-molar-mass').value = 180.16;
+  $('#pcm-mass').addEventListener('input', renderPCM);
 
-  $('#mass-rows').innerHTML = '';
-  massRowCount = 0;
-  addMassRow('C', 40.00);
-  addMassRow('H', 6.71);
-  addMassRow('O', 53.29);
-  $('#mass-molar-mass').value = 180.16;
+  $('#simp-formula').addEventListener('input', renderSimp);
 
-  renderPct();
-  renderMass();
+  /* ---------- initial rows + first paint ---------- */
+  pceMgr.setRows(PCE_PRESETS.glucose);
+  pcmMgr.setRows(PCM_PRESETS.glucose.rows);
+  $('#pcm-mass').value = PCM_PRESETS.glucose.mass;
+
+  renderE2M();
+  renderPCM();
+  renderSimp();
 })();
 
 /* =========================================================
