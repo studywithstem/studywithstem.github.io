@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Gravitation Calculator — Free Online Tool for Gravitational Force, Surface Gravity, Orbital Velocity & Escape Velocity | StudyWithSTEM</title>
+<meta name="description" content="Free online gravitation calculator — compute gravitational force between two masses, surface gravity and weight on any planet, orbital velocity and period, and escape velocity. Instant answers with formulas and steps. No sign-up.">
+<meta name="keywords" content="gravitation calculator, gravitational force calculator, newtons law of universal gravitation calculator, surface gravity calculator, gravitational acceleration calculator, orbital velocity calculator, orbital period calculator, escape velocity calculator, weight on other planets calculator, free online physics tool">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/physics/gravitation-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Gravitation Calculator — Force, Surface Gravity, Orbits & Escape Velocity | StudyWithSTEM">
+<meta property="og:description" content="Free gravitation calculator with four modes — gravitational force between two masses, surface gravity and weight, orbital speed and period, and escape velocity. Instant results with formulas and steps.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/physics/gravitation-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/gravitation-calculator.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM Gravitation Calculator — free online physics tool">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Gravitation Calculator — Free Online Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Gravitational force, surface gravity, orbital velocity and escape velocity — instant answers with formulas and steps.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/gravitation-calculator.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Physics", "item": "https://studywithstem.github.io/tools/physics/" },
+    { "@type": "ListItem", "position": 4, "name": "Gravitation Calculator", "item": "https://studywithstem.github.io/tools/physics/gravitation-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gravitation Calculator",
+  "url": "https://studywithstem.github.io/tools/physics/gravitation-calculator/",
+  "description": "Free online gravitation calculator with four modes: gravitational force between two masses, surface gravity and weight on any body, orbital velocity and period, and escape velocity. Shows formulas and substitution steps for every result.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Gravitational force between any two masses with unit conversion (g to solar masses, cm to AU)",
+    "Surface gravity and your weight on any planet, moon or star",
+    "Orbital velocity and orbital period for any circular orbit",
+    "Escape velocity for any planet, moon or star"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Newton's law of universal gravitation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Every mass in the universe pulls on every other mass with a force acting along the line joining their centers: F = G·m₁·m₂ / r². The force grows in proportion to each mass and shrinks with the square of the distance between the centers — double the distance and the pull drops to a quarter. The same law describes an apple falling, the Moon orbiting Earth and galaxies holding together." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the gravitational constant G, and how is it different from g?",
+      "acceptedAnswer": { "@type": "Answer", "text": "G = 6.6743×10⁻¹¹ N·m²/kg² is a universal constant — the same everywhere in the universe, first measured in Henry Cavendish's lab experiment. Lowercase g is different: it is the acceleration a body's surface produces (g = GM/R²) and changes from world to world — 9.81 m/s² on Earth, 1.62 on the Moon." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the gravitational force between two objects?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Put the masses in kilograms and the center-to-center distance in meters, then apply F = G·m₁·m₂ / r². Two people standing a meter apart pull on each other with about 3×10⁻⁷ N — imperceptible. Earth and the Moon pull with about 1.98×10²⁰ N. The calculator converts units for you, from grams to solar masses and from centimeters to astronomical units." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find gravity and my weight on other planets?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use g = GM/R² with the planet's mass and radius. The Surface gravity tab has one-click presets: the Moon gives 1.62 m/s², Mars 3.73 m/s², Jupiter about 25.9 m/s². Your weight there is simply your mass multiplied by that g — your mass never changes, but the scale reading does." }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly does gravity weaken with distance?",
+      "acceptedAnswer": { "@type": "Answer", "text": "By the inverse-square law: at twice the distance the force is four times weaker; at ten times the distance, one hundred times weaker. Gravity never reaches exactly zero, though — even at the ISS's 400 km altitude it is still about 89% as strong as on the ground." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is orbital velocity, and why do astronauts float?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Orbital speed for a circular orbit is v = √(GM/r), measured from the body's center — about 7.7 km/s for the ISS. One full lap takes T = 2π·√(r³/GM), roughly 92 minutes. Astronauts float not because gravity is gone but because the station is in continuous free fall around Earth." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is escape velocity, and why is it the same for every object?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Escape velocity is the minimum launch speed needed to leave a body's gravity forever: vₑ = √(2GM/R) — 11.19 km/s from Earth. It does not involve the object's own mass at all, because it is an energy-per-kilogram requirement, so a pebble and a spacecraft need exactly the same speed." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this calculator free, and is my data sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Completely free, with no sign-up and no limits. Everything runs in your browser — nothing you type is uploaded, logged or sent to a server, and results update live as you type." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= TOOL PANELS (page-specific layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.tool-tabs{display:flex; border-bottom:1px solid var(--edge); overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.tool-tabs::-webkit-scrollbar{display:none;}
+.ttab{
+  flex:1 0 auto; padding:17px 18px; background:none; border:none; cursor:pointer; white-space:nowrap;
+  position:relative; margin-bottom:-1px; font:600 .82rem/1.1 var(--f-sans); color:var(--muted);
+  transition:color .25s, background .25s;
+}
+.ttab .mono{font:700 .58rem var(--f-mono); letter-spacing:.08em; color:var(--faint); margin-right:9px;}
+.ttab::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--accent); transform:scaleX(0); transition:transform .3s ease;}
+.ttab:hover{color:var(--ink); background:var(--panel);}
+.ttab.active{color:var(--accent);}
+.ttab.active .mono{color:var(--accent);}
+.ttab.active::after{transform:scaleX(1);}
+
+.tpanel{display:none; padding:30px;}
+.tpanel.active{display:block;}
+.tool-grid{display:grid; grid-template-columns:.92fr 1.08fr; gap:32px; align-items:start;}
+
+.t-field{margin-bottom:20px;}
+.t-field:last-child{margin-bottom:0;}
+.t-field>label{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;}
+.t-field .hint{font:.76rem/1.5 var(--f-sans); color:var(--faint); margin-top:7px;}
+
+.t-num{position:relative;}
+.t-num input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 58px 13px 15px; color:var(--ink); font:600 1.04rem var(--f-mono); transition:border-color .25s;
+}
+.t-num input:focus{outline:none; border-color:var(--accent);}
+.t-num .suf{position:absolute; right:14px; top:50%; transform:translateY(-50%); font:700 .68rem var(--f-mono); letter-spacing:.06em; color:var(--faint); pointer-events:none;}
+
+.t-select{position:relative;}
+.t-select select{
+  width:100%; appearance:none; -webkit-appearance:none; cursor:pointer;
+  background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 42px 13px 15px; color:var(--ink); font:.9rem var(--f-sans); transition:border-color .25s;
+}
+.t-select select:focus{outline:none; border-color:var(--accent);}
+.t-select select option{background:var(--bg); color:var(--ink);}
+.t-select svg{position:absolute; right:14px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--faint); pointer-events:none; transition:color .25s;}
+.t-select:focus-within svg{color:var(--accent);}
+
+.t-examples{display:flex; flex-wrap:wrap; gap:8px;}
+.t-chip{
+  font:700 .6rem var(--f-mono); letter-spacing:.07em; color:var(--muted); white-space:nowrap; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:8px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.t-chip:hover{color:var(--accent); border-color:var(--accent);}
+
+.t-err{
+  display:none; margin-top:16px; font:600 .72rem/1.6 var(--f-mono); color:var(--amber);
+  border:1px dashed var(--amber); border-radius:10px; padding:11px 13px;
+}
+.t-err.show{display:block;}
+
+.t-results{
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px;
+  padding:20px 20px 16px; position:sticky; top:calc(var(--navh) + 18px);
+}
+.res-head{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:2px 2px 14px; border-bottom:1px dashed var(--edge-strong);}
+.res-head .rl{font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint);}
+
+.t-copy{
+  display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  font:700 .6rem var(--f-mono); letter-spacing:.1em; color:var(--muted);
+  border:1px solid var(--edge-strong); background:var(--panel); border-radius:8px; padding:8px 11px;
+  transition:color .25s, border-color .25s;
+}
+.t-copy svg{width:12px; height:12px;}
+.t-copy:hover, .t-copy.done{color:var(--accent); border-color:var(--accent);}
+
+.res-hero{padding:18px 2px 14px;}
+.res-hero .rl{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);}
+.res-hero .rv{display:block; font:700 clamp(1.9rem, 4.5vw, 2.5rem)/1.05 var(--f-mono); color:var(--accent); margin-top:8px; letter-spacing:-.02em; word-break:break-word;}
+.res-hero .rv sup{font-size:.55em;}
+.res-hero .rs{display:block; font:600 .76rem/1.6 var(--f-mono); color:var(--muted); margin-top:7px; word-break:break-word;}
+.res-hero .rs sup{font-size:.6em;}
+.res-heroes{display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:16px 0 8px;}
+.res-heroes .res-hero{padding:0;}
+
+.res-row{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:11px 2px; border-top:1px dashed var(--edge);}
+.res-row .rk{font:.82rem var(--f-sans); color:var(--muted);}
+.res-row .rvv{font:700 .84rem var(--f-mono); color:var(--ink); text-align:right; word-break:break-word;}
+.res-row .rvv small{display:block; font:600 .64rem/1.5 var(--f-mono); color:var(--faint); margin-top:3px;}
+.res-row .rvv sup, .res-formula sup{font-size:.6em;}
+
+.res-formula{
+  margin:14px 2px 4px; padding:12px 14px; border:1px dashed var(--edge-strong); border-radius:10px;
+  font:600 .72rem/1.8 var(--f-mono); color:var(--muted); overflow-x:auto; white-space:nowrap;
+}
+.res-formula b{color:var(--accent);}
+
+.t-wait{
+  margin:14px 2px 6px; padding:30px 16px; border:1px dashed var(--edge); border-radius:10px;
+  font:600 .7rem var(--f-mono); letter-spacing:.08em; color:var(--faint); text-align:center;
+}
+
+.t-seg{display:flex; border:1px solid var(--edge-strong); border-radius:10px; overflow:hidden; margin-bottom:20px;}
+.t-seg button{
+  flex:1; padding:11px 10px; background:none; border:none; cursor:pointer;
+  font:600 .78rem/1.2 var(--f-sans); color:var(--muted); transition:background .25s, color .25s;
+}
+.t-seg button + button{border-left:1px solid var(--edge-strong);}
+.t-seg button.active{background:var(--accent); color:var(--accent-ink); font-weight:700;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
+}
+.fx .formula sup{font-size:.6em;}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+.pf-msg{display:none; font:700 .62rem/1.5 var(--f-mono); letter-spacing:.1em; color:var(--accent);}
+.pf-msg.show{display:block;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .tool-grid{grid-template-columns:1fr; gap:24px;}
+  .t-results{position:static;}
+  .tpanel{padding:22px 18px 26px;}
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .res-heroes{grid-template-columns:1fr; gap:10px;}
+  .ttab{padding:15px 13px; font-size:.76rem;}
+  .t-num input{padding:12px 52px 12px 14px; font-size:.98rem;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+
+/* ================= GRAVITATION CALCULATOR — page-specific additions ================= */
+.t-duo{display:grid; grid-template-columns:1fr 128px; gap:10px;}
+.t-duo .t-num input{padding-right:15px;}
+.t-duo .t-select select{padding:13px 34px 13px 13px; font:600 .84rem var(--f-mono);}
+@media (max-width:640px){
+  .t-duo{grid-template-columns:1fr 104px;}
+  .t-duo .t-select select{padding:12px 30px 12px 11px; font-size:.78rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · PHYSICS</p>
+    <h1>Gravitation Calculator</h1>
+    <p class="lede">Gravity between any two masses — force, surface gravity, orbits and escape velocity — worked out instantly, with the formula and the numbers behind every answer shown right next to it.</p>
+    <span class="updated"><i></i>4 MODES · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE CALCULATOR</span>
+      <h2>One law of gravity, four questions.</h2>
+      <p>Pick a mode below — everything recalculates live as you type, units convert themselves, and every result explains itself.</p>
+    </div>
+
+    <div class="tool-shell">
+
+      <div class="tool-tabs" role="tablist" aria-label="Gravitation calculator modes">
+        <button class="ttab active" id="tab-force" role="tab" aria-selected="true"  data-tab="force" type="button"><span class="mono">01</span>Gravitational force</button>
+        <button class="ttab" id="tab-grav" role="tab" aria-selected="false" data-tab="grav" type="button"><span class="mono">02</span>Surface gravity</button>
+        <button class="ttab" id="tab-orbit" role="tab" aria-selected="false" data-tab="orbit" type="button"><span class="mono">03</span>Orbit &amp; period</button>
+        <button class="ttab" id="tab-esc" role="tab" aria-selected="false" data-tab="esc" type="button"><span class="mono">04</span>Escape velocity</button>
+      </div>
+
+      <!-- ========== PANEL 1 · GRAVITATIONAL FORCE ========== -->
+      <div class="tpanel active" id="panel-force" role="tabpanel" aria-labelledby="tab-force">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="f-m1">First mass · m₁</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="f-m1" value="60" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="f-m1u" aria-label="Unit for the first mass">
+                    <option value="kg" selected>kg</option>
+                    <option value="g">g</option>
+                    <option value="tonne">tonne</option>
+                    <option value="Me">M⊕</option>
+                    <option value="Ms">M☉</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">Any object — a person, a planet, a star. 1 M⊕ = 5.972×10²⁴ kg, 1 M☉ = 1.989×10³⁰ kg.</p>
+            </div>
+            <div class="t-field">
+              <label for="f-m2">Second mass · m₂</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="f-m2" value="80" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="f-m2u" aria-label="Unit for the second mass">
+                    <option value="kg" selected>kg</option>
+                    <option value="g">g</option>
+                    <option value="tonne">tonne</option>
+                    <option value="Me">M⊕</option>
+                    <option value="Ms">M☉</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The other object. Swap m₁ and m₂ — the force on each is identical (Newton's third law).</p>
+            </div>
+            <div class="t-field">
+              <label for="f-r">Distance between centers · r</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="f-r" value="1" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="f-ru" aria-label="Unit for the distance">
+                    <option value="m" selected>m</option>
+                    <option value="cm">cm</option>
+                    <option value="km">km</option>
+                    <option value="Re">R⊕</option>
+                    <option value="AU">AU</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">Center-to-center, not surface-to-surface. 1 R⊕ = 6,371 km, 1 AU = 149.6 million km.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-m1="1" data-m1u="Me" data-m2="0.0123" data-m2u="Me" data-r="384400" data-ru="km">EARTH ↔ MOON</button>
+                <button type="button" class="t-chip" data-m1="1" data-m1u="Me" data-m2="1" data-m2u="Ms" data-r="1" data-ru="AU">EARTH ↔ SUN</button>
+                <button type="button" class="t-chip" data-m1="70" data-m1u="kg" data-m2="1" data-m2u="Me" data-r="1" data-ru="Re">YOU ↔ EARTH</button>
+                <button type="button" class="t-chip" data-m1="70" data-m1u="kg" data-m2="70" data-m2u="kg" data-r="1" data-ru="m">TWO PEOPLE · 1 M</button>
+              </div>
+            </div>
+            <p class="t-err" id="err-force" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="copy-force" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="out-force"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 2 · SURFACE GRAVITY ========== -->
+      <div class="tpanel" id="panel-grav" role="tabpanel" aria-labelledby="tab-grav">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="g-m">Mass of the body · M</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="g-m" value="1" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="g-mu" aria-label="Unit for the mass">
+                    <option value="Me" selected>M⊕</option>
+                    <option value="kg">kg</option>
+                    <option value="g">g</option>
+                    <option value="tonne">tonne</option>
+                    <option value="Ms">M☉</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The world you're standing on — a planet, moon or star. Presets below fill in real bodies.</p>
+            </div>
+            <div class="t-field">
+              <label for="g-r">Mean radius of the body · R</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="g-r" value="1" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="g-ru" aria-label="Unit for the radius">
+                    <option value="Re" selected>R⊕</option>
+                    <option value="m">m</option>
+                    <option value="cm">cm</option>
+                    <option value="km">km</option>
+                    <option value="AU">AU</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">Center to surface. Earth: 6,371 km; Moon: 1,737 km; Sun: 695,700 km.</p>
+            </div>
+            <div class="t-field">
+              <label for="g-test">Your mass — optional</label>
+              <div class="t-num">
+                <input type="number" id="g-test" value="70" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">KG</span>
+              </div>
+              <p class="hint">Enter your mass to see what you'd weigh there. Leave it empty to skip the weight line.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-m="1" data-mu="Me" data-r="1" data-ru="Re">EARTH</button>
+                <button type="button" class="t-chip" data-m="0.0123" data-mu="Me" data-r="0.2727" data-ru="Re">MOON</button>
+                <button type="button" class="t-chip" data-m="0.10745" data-mu="Me" data-r="0.532" data-ru="Re">MARS</button>
+                <button type="button" class="t-chip" data-m="317.8" data-mu="Me" data-r="10.97" data-ru="Re">JUPITER</button>
+                <button type="button" class="t-chip" data-m="1" data-mu="Ms" data-r="695700" data-ru="km">SUN</button>
+              </div>
+            </div>
+            <p class="t-err" id="err-grav" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="copy-grav" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="out-grav"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 3 · ORBIT CALCULATOR ========== -->
+      <div class="tpanel" id="panel-orbit" role="tabpanel" aria-labelledby="tab-orbit">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="v-m">Central mass · M</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="v-m" value="1" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="v-mu" aria-label="Unit for the central mass">
+                    <option value="Me" selected>M⊕</option>
+                    <option value="kg">kg</option>
+                    <option value="g">g</option>
+                    <option value="tonne">tonne</option>
+                    <option value="Ms">M☉</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The body being orbited — Earth for satellites, the Sun for planets.</p>
+            </div>
+            <div class="t-field">
+              <label for="v-r">Orbit radius · r</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="v-r" value="6771" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="v-ru" aria-label="Unit for the orbit radius">
+                    <option value="km" selected>km</option>
+                    <option value="m">m</option>
+                    <option value="cm">cm</option>
+                    <option value="Re">R⊕</option>
+                    <option value="AU">AU</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">Measured from the center of the central body, not from its surface — the ISS orbits at R⊕ + 400 km ≈ 6,771 km.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-m="1" data-mu="Me" data-r="6771" data-ru="km">ISS · 400 KM ALT</button>
+                <button type="button" class="t-chip" data-m="1" data-mu="Me" data-r="42164" data-ru="km">GEOSTATIONARY</button>
+                <button type="button" class="t-chip" data-m="1" data-mu="Me" data-r="384400" data-ru="km">MOON'S ORBIT</button>
+                <button type="button" class="t-chip" data-m="1" data-mu="Ms" data-r="1" data-ru="AU">EARTH ↔ SUN</button>
+              </div>
+            </div>
+            <p class="t-err" id="err-orbit" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="copy-orbit" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="out-orbit"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 4 · ESCAPE VELOCITY ========== -->
+      <div class="tpanel" id="panel-esc" role="tabpanel" aria-labelledby="tab-esc">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="e-m">Mass of the body · M</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="e-m" value="1" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="e-mu" aria-label="Unit for the mass">
+                    <option value="Me" selected>M⊕</option>
+                    <option value="kg">kg</option>
+                    <option value="g">g</option>
+                    <option value="tonne">tonne</option>
+                    <option value="Ms">M☉</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The world you're leaving — its gravity is what you must beat.</p>
+            </div>
+            <div class="t-field">
+              <label for="e-r">Radius of the body · R</label>
+              <div class="t-duo">
+                <div class="t-num">
+                  <input type="number" id="e-r" value="1" min="0" step="any" inputmode="decimal" autocomplete="off">
+                </div>
+                <div class="t-select">
+                  <select id="e-ru" aria-label="Unit for the radius">
+                    <option value="Re" selected>R⊕</option>
+                    <option value="m">m</option>
+                    <option value="cm">cm</option>
+                    <option value="km">km</option>
+                    <option value="AU">AU</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">You launch from the surface, so use the body's radius, center to surface.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-m="1" data-mu="Me" data-r="1" data-ru="Re">EARTH</button>
+                <button type="button" class="t-chip" data-m="0.0123" data-mu="Me" data-r="0.2727" data-ru="Re">MOON</button>
+                <button type="button" class="t-chip" data-m="0.10745" data-mu="Me" data-r="0.532" data-ru="Re">MARS</button>
+                <button type="button" class="t-chip" data-m="1" data-mu="Ms" data-r="695700" data-ru="km">SUN</button>
+              </div>
+            </div>
+            <p class="t-err" id="err-esc" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="copy-esc" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="out-esc"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE</span>
+      <h2>Two masses to a full answer, in four steps.</h2>
+      <p>No manual unit conversion, no sign-up — the panel handles grams to solar masses and centimeters to astronomical units for you.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n">01</span>
+        <h3>Pick your question</h3>
+        <p>Four tabs cover the four classic questions: how hard do two objects pull on each other, how strong is gravity on a surface, how fast must something orbit, and how fast to escape forever.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3>Enter masses &amp; distance</h3>
+        <p>Type any values and choose a unit per field — kg, tonnes, Earth or solar masses; centimeters up to astronomical units. Or tap a preset chip for real bodies like Earth, the Moon or Mars.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3>Read the live answer</h3>
+        <p>Results update as you type: a headline number, plain-language context, the quantities in SI units, and the formula with your numbers substituted in, step by step.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h3>Copy or keep exploring</h3>
+        <p>One click copies the whole result — values, units and formula — for your notes or homework. Switch tabs anytime; each mode keeps its own inputs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE FORMULAS ============ -->
+<section class="sec" id="formulas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · THE FORMULAS</span>
+      <h2>Six formulas, one constant.</h2>
+      <p>Everything this calculator does comes from Newton's law of universal gravitation and a single universal constant, G = 6.6743×10⁻¹¹ N·m²/kg².</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>Universal gravitation</h3>
+        <div class="formula">F = G·m₁·m₂ / r²</div>
+        <p>The pull between two masses, measured center to center. Double either mass and F doubles; double the distance and F falls to a quarter.</p>
+      </div>
+      <div class="fx">
+        <h3>Surface gravity</h3>
+        <div class="formula">g = G·M / R²</div>
+        <p>The acceleration every object experiences at a body's surface — 9.81 m/s² on Earth, set by Earth's mass and radius alone.</p>
+      </div>
+      <div class="fx">
+        <h3>Weight</h3>
+        <div class="formula">W = m·g</div>
+        <p>Your weight is your mass times the local g. Your mass is the same everywhere; your weight changes from world to world.</p>
+      </div>
+      <div class="fx">
+        <h3>Orbital velocity</h3>
+        <div class="formula">v = √(G·M / r)</div>
+        <p>The exact speed for a circular orbit at radius r — fast enough that "falling around" the body replaces falling into it.</p>
+      </div>
+      <div class="fx">
+        <h3>Orbital period</h3>
+        <div class="formula">T = 2π·√(r³ / G·M)</div>
+        <p>Time for one full orbit. Notice the r³ inside the root — orbit further out and the period grows fast (Kepler's third law).</p>
+      </div>
+      <div class="fx">
+        <h3>Escape velocity</h3>
+        <div class="formula">vₑ = √(2·G·M / R)</div>
+        <p>The minimum speed to leave a body's gravity forever — always √2 times the speed of a surface-skimming orbit, and independent of the object's own mass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="sec-head">
+        <span class="sec-idx mono">04 · FAQ</span>
+        <h2>Gravity, answered.</h2>
+        <p>The questions students ask most about gravitation — short, straight answers, all consistent with what the calculator above computes.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What is Newton's law of universal gravitation?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Every mass in the universe pulls on every other mass with a force that acts along the line joining their centers: <code>F = G·m₁·m₂ / r²</code>. The force grows in proportion to each mass and shrinks with the square of the distance between the centers — double the distance and the pull drops to a quarter. The same law describes an apple falling, the Moon orbiting Earth and galaxies holding together.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the gravitational constant G, and how is it different from g?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p><code>G = 6.6743×10⁻¹¹ N·m²/kg²</code> is a universal constant — the same everywhere in the universe, first measured in Henry Cavendish's lab experiment. Lowercase <code>g</code> is different: it is the acceleration a body's surface produces (<code>g = GM/R²</code>) and changes from world to world — 9.81 m/s² on Earth, 1.62 on the Moon.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I calculate the gravitational force between two objects?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Put the masses in kilograms and the center-to-center distance in meters, then apply <code>F = G·m₁·m₂ / r²</code>. Two people standing a meter apart pull on each other with about 3×10⁻⁷ N — imperceptible. Earth and the Moon pull with about 1.98×10²⁰ N. The calculator converts units for you, from grams to solar masses and from centimeters to astronomical units.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I find gravity and my weight on other planets?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Use <code>g = GM/R²</code> with the planet's mass and radius. The Surface gravity tab has one-click presets: the Moon gives 1.62 m/s², Mars 3.73 m/s², Jupiter about 25.9 m/s². Your weight there is simply your mass multiplied by that g — your mass never changes, but the scale reading does.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How quickly does gravity weaken with distance?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>By the inverse-square law: at twice the distance the force is four times weaker; at ten times the distance, one hundred times weaker. Gravity never reaches exactly zero, though — even at the ISS's 400 km altitude it is still about 89% as strong as on the ground.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is orbital velocity, and why do astronauts float?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Orbital speed for a circular orbit is <code>v = √(GM/r)</code>, measured from the body's center — about 7.7 km/s for the ISS. One full lap takes <code>T = 2π·√(r³/GM)</code>, roughly 92 minutes. Astronauts float not because gravity is gone but because the station is in continuous free fall around Earth.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is escape velocity, and why is it the same for every object?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Escape velocity is the minimum launch speed needed to leave a body's gravity forever: <code>vₑ = √(2GM/R)</code> — 11.19 km/s from Earth. It doesn't involve the object's own mass at all, because it is an energy-per-kilogram requirement, so a pebble and a spacecraft need exactly the same speed.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this calculator free, and is my data sent anywhere?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Completely free, with no sign-up and no limits. Everything runs in your browser — nothing you type is uploaded, logged or sent to a server, and results update live as you type.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ SUBSCRIBE STRIP (upper footer) ============ -->
+<section class="pre-footer">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx">NEWSLETTER · FREE</span>
+      <h2>Every new tool, straight to your <span class="hl">inbox</span>.</h2>
+      <p>New calculators, physics explainers and study material — zero spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="subForm" novalidate>
+      <input type="text" id="subName" placeholder="Your name" autocomplete="name">
+      <input type="email" id="subEmail" placeholder="Your email" required autocomplete="email">
+      <label class="pf-check">
+        <input type="checkbox" id="subAgree" required>
+        <span>I agree to receive emails and accept the <a href="/page/subscription/">subscription terms</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="pf-msg" id="pfMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand" aria-label="StudyWithSTEM home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Free STEM tools, calculators and study notes — built by students, for students. No sign-ups, no paywalls, just physics.</p>
+        <div class="foot-terminal"><span class="p">&gt;_</span> SYSTEM ONLINE — GRAVITY NOMINAL <span class="cursor"></span></div>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Home</a></li>
+          <li><a href="/tools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Tools</a></li>
+          <li><a href="/posts/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Post</a></li>
+          <li><a href="/page/contact/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Contact</a></li>
+          <li><a href="/page/subscription/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Subscription</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/tools/physics/gravitation-calculator/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Gravitation</a></li>
+          <li><a href="/tools/mathematics/probability-calculator/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Probability</a></li>
+          <li><a href="/tools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>All tools</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>X (Twitter)</a></li>
+          <li><a href="mailto:studywithstem@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Buy us a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span><b>G</b> = 6.674×10⁻¹¹ m³·kg⁻¹·s⁻² · </span>
+        <span><b>c</b> = 2.998×10⁸ m·s⁻¹ · </span>
+        <span><b>h</b> = 6.626×10⁻³⁴ J·s · </span>
+        <span><b>k_B</b> = 1.381×10⁻²³ J·K⁻¹ · </span>
+        <span><b>N_A</b> = 6.022×10²³ mol⁻¹ · </span>
+        <span><b>e</b> = 1.602×10⁻¹⁹ C · </span>
+        <span><b>mₑ</b> = 9.109×10⁻³¹ kg · </span>
+        <span><b>mₚ</b> = 1.673×10⁻²⁷ kg · </span>
+        <span><b>R</b> = 8.314 J·mol⁻¹·K⁻¹ · </span>
+        <span><b>σ</b> = 5.670×10⁻⁸ W·m⁻²·K⁻⁴ · </span>
+        <span><b>g⊕</b> = 9.807 m·s⁻² · </span>
+        <span><b>vₑ⊕</b> = 11.19 km·s⁻¹ · </span>
+        <span><b>G</b> = 6.674×10⁻¹¹ m³·kg⁻¹·s⁻² · </span>
+        <span><b>c</b> = 2.998×10⁸ m·s⁻¹ · </span>
+        <span><b>h</b> = 6.626×10⁻³⁴ J·s · </span>
+        <span><b>k_B</b> = 1.381×10⁻²³ J·K⁻¹ · </span>
+        <span><b>N_A</b> = 6.022×10²³ mol⁻¹ · </span>
+        <span><b>e</b> = 1.602×10⁻¹⁹ C · </span>
+        <span><b>mₑ</b> = 9.109×10⁻³¹ kg · </span>
+        <span><b>mₚ</b> = 1.673×10⁻²⁷ kg · </span>
+        <span><b>R</b> = 8.314 J·mol⁻¹·K⁻¹ · </span>
+        <span><b>σ</b> = 5.670×10⁻⁸ W·m⁻²·K⁻⁴ · </span>
+        <span><b>g⊕</b> = 9.807 m·s⁻² · </span>
+        <span><b>vₑ⊕</b> = 11.19 km·s⁻¹ · </span>
+      </div>
+    </div>
+
+    <div class="foot-mid">
+      <span class="foot-meta">© 2025 STUDYWITHSTEM · MADE FOR CURIOUS MINDS</span>
+      <button id="backTop" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   SITE CHROME — nav, theme, mobile menu, footer, starfield
+   ============================================================ */
+(function(){
+  'use strict';
+
+  var nav = document.getElementById('nav');
+  var prog = document.getElementById('navProg');
+  var lastY = window.scrollY;
+
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 8);
+    if (y > lastY && y > 220 && !document.body.classList.contains('menu-open')) nav.classList.add('hide');
+    else nav.classList.remove('hide');
+    lastY = y;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (h > 0){
+      prog.style.width = (y / h * 100).toFixed(2) + '%';
+      prog.style.transform = 'none';
+    }
+  }, { passive:true });
+
+  /* theme toggle */
+  var tt = document.getElementById('themeToggle');
+  function setPressed(){ tt.setAttribute('aria-pressed', document.documentElement.dataset.theme === 'light' ? 'true' : 'false'); }
+  setPressed();
+  tt.addEventListener('click', function(){
+    var next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.body.classList.add('theme-anim');
+    document.documentElement.dataset.theme = next;
+    try{ localStorage.setItem('sws-theme', next); }catch(e){}
+    setPressed();
+    window.dispatchEvent(new Event('themechange'));
+    setTimeout(function(){ document.body.classList.remove('theme-anim'); }, 560);
+  });
+
+  /* mobile menu */
+  var burger = document.getElementById('burger'), mmenu = document.getElementById('mmenu');
+  function closeMenu(){
+    document.body.classList.remove('menu-open', 'locked');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Open menu');
+  }
+  burger.addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu-open');
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  mmenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+
+  /* back to top */
+  var bt = document.getElementById('backTop');
+  if (bt) bt.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
+
+  /* footer reveal */
+  var foot = document.querySelector('footer');
+  if ('IntersectionObserver' in window && foot){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    io.observe(foot);
+  } else if (foot){ foot.classList.add('in'); }
+
+  /* starfield */
+  var cv = document.getElementById('starfield');
+  if (cv && cv.getContext){
+    var ctx = cv.getContext('2d');
+    var stars = [], W = 0, H = 0, raf = null, running = false;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function starColor(){ return document.documentElement.dataset.theme === 'light' ? '11,37,69' : '241,237,226'; }
+    function resize(){
+      var r = cv.getBoundingClientRect();
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = cv.width = Math.max(1, Math.round(r.width * dpr));
+      H = cv.height = Math.max(1, Math.round(r.height * dpr));
+      var n = Math.min(160, Math.max(40, Math.round((r.width * r.height) / 9000)));
+      stars = [];
+      for (var i = 0; i < n; i++) stars.push({
+        x: Math.random() * W, y: Math.random() * H,
+        r: (Math.random() * 1.3 + 0.35),
+        ph: Math.random() * Math.PI * 2,
+        sp: 0.4 + Math.random() * 1.6
+      });
+      if (reduce) drawFrame(0);
+    }
+    function drawFrame(t){
+      ctx.clearRect(0, 0, W, H);
+      var col = starColor();
+      for (var i = 0; i < stars.length; i++){
+        var s = stars[i];
+        var a = 0.15 + 0.75 * Math.abs(Math.sin(t / 1000 * s.sp + s.ph));
+        ctx.fillStyle = 'rgba(' + col + ',' + a.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, 6.2832);
+        ctx.fill();
+      }
+    }
+    function loop(t){ if (!running) return; drawFrame(t); raf = requestAnimationFrame(loop); }
+    function start(){ if (!running && !reduce){ running = true; raf = requestAnimationFrame(loop); } }
+    function stop(){ running = false; if (raf) cancelAnimationFrame(raf); }
+    window.addEventListener('resize', function(){ clearTimeout(cv._rt); cv._rt = setTimeout(resize, 150); });
+    window.addEventListener('themechange', function(){ if (reduce) drawFrame(0); });
+    resize();
+    if ('IntersectionObserver' in window){
+      var fio = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if (e.isIntersecting) start(); else stop(); });
+      }, { threshold: 0.05 });
+      fio.observe(cv);
+    } else if (!reduce){ start(); }
+  }
+
+  /* subscribe form (static hosting — inline confirmation only) */
+  var form = document.getElementById('subForm');
+  if (form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = document.getElementById('pfMsg');
+      var email = document.getElementById('subEmail');
+      var agree = document.getElementById('subAgree');
+      var text;
+      if (!email.value || email.value.indexOf('@') < 1) text = 'ENTER A VALID EMAIL ADDRESS';
+      else if (!agree || !agree.checked) text = 'PLEASE TICK THE CONSENT BOX';
+      else { text = 'SIGNAL RECEIVED — WELCOME ABOARD'; form.reset(); }
+      msg.textContent = text;
+      msg.classList.add('show');
+      setTimeout(function(){ msg.classList.remove('show'); }, 4200);
+    });
+  }
+})();
+
+/* ============================================================
+   GRAVITATION CALCULATOR
+   ============================================================ */
+(function(){
+  'use strict';
+
+  /* ---------- physical constants & unit tables ---------- */
+  var G   = 6.6743e-11;          // gravitational constant, m³·kg⁻¹·s⁻²
+  var G0  = 9.80665;             // standard Earth surface gravity, m/s²
+  var VEE = 11186;               // Earth escape velocity reference, m/s
+  var MU  = { g:1e-3, kg:1, tonne:1e3, Me:5.9722e24, Ms:1.9885e30 };   // mass → kg
+  var LU  = { cm:0.01, m:1, km:1e3, Re:6.371e6, AU:1.495978707e11 };   // length → m
+
+  var el = function(id){ return document.getElementById(id); };
+  var COPY = {};
+
+  /* ---------- formatting ---------- */
+  function roundSig(x, sig){ return Number(x.toPrecision(sig || 4)); }
+
+  function sciParts(x){
+    if (!isFinite(x) || x === 0) return null;
+    var neg = x < 0, a = Math.abs(x);
+    var exp = Math.floor(Math.log10(a));
+    var mant = a / Math.pow(10, exp);
+    mant = Math.round(mant * 1000) / 1000;
+    if (mant >= 10){ mant /= 10; exp += 1; }
+    var ms = mant.toFixed(3);
+    if (ms.indexOf('.') > -1) ms = ms.replace(/0+$/, '').replace(/\.$/, '');
+    return { neg: neg, mant: ms, exp: exp };
+  }
+  function sciHTML(x, unit){
+    var p = sciParts(x);
+    if (!p) return (x === 0 && isFinite(x)) ? '0' + (unit ? ' ' + unit : '') : '—';
+    return (p.neg ? '−' : '') + p.mant + '×10<sup>' + String(p.exp).replace('-', '−') + '</sup>' + (unit ? ' ' + unit : '');
+  }
+  function sciTxt(x, unit){
+    var p = sciParts(x);
+    if (!p) return (x === 0 && isFinite(x)) ? '0' + (unit ? ' ' + unit : '') : '—';
+    return (p.neg ? '-' : '') + p.mant + '×10^' + p.exp + (unit ? ' ' + unit : '');
+  }
+  function niceHTML(x, unit, sig){
+    if (!isFinite(x)) return '—';
+    var a = Math.abs(x);
+    if (a !== 0 && (a < 1e-3 || a >= 1e7)) return sciHTML(x, unit);
+    return roundSig(x, sig).toLocaleString('en-US', { maximumFractionDigits: 4 }) + (unit ? ' ' + unit : '');
+  }
+  function niceTxt(x, unit, sig){
+    if (!isFinite(x)) return '—';
+    var a = Math.abs(x);
+    if (a !== 0 && (a < 1e-3 || a >= 1e7)) return sciTxt(x, unit);
+    return roundSig(x, sig).toLocaleString('en-US', { maximumFractionDigits: 4 }) + (unit ? ' ' + unit : '');
+  }
+  function speedH(ms){ return (isFinite(ms) && ms >= 1000) ? niceHTML(ms / 1000, 'km/s') : niceHTML(ms, 'm/s'); }
+  function speedT(ms){ return (isFinite(ms) && ms >= 1000) ? niceTxt(ms / 1000, 'km/s') : niceTxt(ms, 'm/s'); }
+  function lenH(x){ return (isFinite(x) && x >= 1000) ? niceHTML(x / 1000, 'km') : niceHTML(x, 'm'); }
+  function timeFmt(sec, plain){
+    if (!isFinite(sec) || sec < 0) return '—';
+    var f = plain ? niceTxt : niceHTML;
+    if (sec < 120)      return f(sec, 's');
+    if (sec < 7200)     return f(sec / 60, 'min');
+    if (sec < 172800)   return f(sec / 3600, 'h');
+    if (sec < 6.912e7)  return f(sec / 86400, 'd');
+    return f(sec / 31557600, 'yr');
+  }
+  function rowHTML(k, v){ return '<div class="res-row"><span class="rk">' + k + '</span><span class="rvv">' + v + '</span></div>'; }
+
+  /* ---------- input reading & error helpers ---------- */
+  function readVal(id, name, note){
+    var raw = el(id).value;
+    var x = parseFloat(raw);
+    if (raw === '' || !isFinite(x)) return { err: 'Enter a number for ' + name + '.' };
+    if (x > 1e250) return { err: name + ' is too large — the calculation would overflow. Try bigger units like M⊕, M☉ or AU.' };
+    if (x <= 0) return { err: name + ' must be greater than zero' + (note || '') + '.' };
+    return { val: x };
+  }
+  function fail(key, msg){
+    var e = el('err-' + key);
+    e.textContent = msg;
+    e.classList.add('show');
+    el('out-' + key).innerHTML = '<p class="t-wait">RESULTS ON HOLD — FIX THE VALUE FLAGGED ABOVE</p>';
+    COPY[key] = null;
+  }
+  function pass(key){
+    var e = el('err-' + key);
+    e.classList.remove('show');
+    e.textContent = '';
+  }
+
+  /* ---------- PANEL 1 · gravitational force ---------- */
+  function calcForce(){
+    var m1 = readVal('f-m1', 'The first mass', ' — mass can’t be zero or negative');
+    if (m1.err) return fail('force', m1.err);
+    var m2 = readVal('f-m2', 'The second mass', ' — mass can’t be zero or negative');
+    if (m2.err) return fail('force', m2.err);
+    var rr = readVal('f-r', 'The distance', ' — the formula divides by r², and gravity is undefined at r = 0');
+    if (rr.err) return fail('force', rr.err);
+
+    var M1 = m1.val * MU[el('f-m1u').value];
+    var M2 = m2.val * MU[el('f-m2u').value];
+    var r  = rr.val * LU[el('f-ru').value];
+    var F  = G * M1 * M2 / (r * r);
+    if (!isFinite(F)) return fail('force', 'These values overflow the calculation — try smaller numbers or bigger units.');
+
+    pass('force');
+
+    var ctx;
+    if (F < 1e-6)      ctx = 'far too weak to ever feel — gravity between everyday objects is almost nothing';
+    else if (F < 1)    ctx = 'tiny — roughly the weight of a speck of dust on Earth';
+    else if (F < 1e5)  ctx = 'an everyday-sized force';
+    else if (F < 1e15) ctx = 'planet-scale — strong enough to steer moons and spacecraft';
+    else               ctx = 'cosmic scale — the kind of force that binds stars and galaxies';
+
+    var html = '<div class="res-hero"><span class="rl">GRAVITATIONAL FORCE</span><span class="rv">' + sciHTML(F, 'N') + '</span><span class="rs">' + ctx + '</span></div>';
+    html += rowHTML('Mass m₁ in SI units', sciHTML(M1, 'kg'));
+    html += rowHTML('Mass m₂ in SI units', sciHTML(M2, 'kg'));
+    html += rowHTML('Center-to-center distance', niceHTML(r, 'm'));
+    if (F >= 0.01 && F < 1e9){
+      html += rowHTML('Equal to holding', niceHTML(F / G0, 'kg') + ' <small>of weight on Earth</small>');
+    }
+    html += rowHTML('Gravitational constant G', '6.6743×10<sup>−11</sup> N·m²·kg<sup>−2</sup>');
+    html += '<div class="res-formula">F = G·m₁·m₂ / r² = 6.6743×10<sup>−11</sup> × ' + sciHTML(M1) + ' × ' + sciHTML(M2) + ' ÷ (' + sciHTML(r) + ')² = <b>' + sciHTML(F, 'N') + '</b></div>';
+    el('out-force').innerHTML = html;
+
+    COPY.force = [
+      'StudyWithSTEM · Gravitation Calculator',
+      'Mode: gravitational force — Newton’s law of universal gravitation',
+      'm1 = ' + sciTxt(M1, 'kg'),
+      'm2 = ' + sciTxt(M2, 'kg'),
+      'r  = ' + sciTxt(r, 'm'),
+      'F  = ' + sciTxt(F, 'N'),
+      'Formula: F = G·m1·m2 / r²   (G = 6.6743×10^-11 N·m²/kg²)'
+    ].join('\n');
+  }
+
+  /* ---------- PANEL 2 · surface gravity ---------- */
+  function calcGrav(){
+    var mm = readVal('g-m', 'The mass of the body', ' — mass can’t be zero or negative');
+    if (mm.err) return fail('grav', mm.err);
+    var rr = readVal('g-r', 'The radius of the body', ' — g needs R > 0');
+    if (rr.err) return fail('grav', rr.err);
+
+    var M = mm.val * MU[el('g-mu').value];
+    var R = rr.val * LU[el('g-ru').value];
+    var g = G * M / (R * R);
+    if (!isFinite(g)) return fail('grav', 'These values overflow the calculation — try smaller numbers or bigger units.');
+
+    /* optional test mass → weight */
+    var weightHTML = '', weightTXT = [];
+    var tRaw = el('g-test').value.trim();
+    if (tRaw !== ''){
+      var tm = parseFloat(tRaw);
+      if (!isFinite(tm) || tm < 0) return fail('grav', 'The test mass must be a positive number (or leave it empty).');
+      var W = tm * g;
+      weightHTML = rowHTML('Weight of a ' + niceHTML(tm, 'kg') + ' mass here', niceHTML(W, 'N') + ' <small>= ' + niceHTML(W / G0, 'kg') + ' on an Earth scale</small>');
+      weightTXT = ['Test mass: ' + niceTxt(tm, 'kg'), 'Weight there: ' + niceTxt(W, 'N') + ' (' + niceTxt(W / G0, 'kg') + ' on an Earth scale)'];
+    }
+
+    pass('grav');
+
+    var ratio = g / G0;
+    var ctx;
+    if (ratio < 0.05)      ctx = 'so gentle you could jump several meters high';
+    else if (ratio < 0.5)  ctx = 'moon-like — a fraction of Earth’s pull';
+    else if (ratio < 0.85) ctx = 'between the Moon and Earth — light but familiar';
+    else if (ratio < 1.15) ctx = 'about the same pull you feel on Earth';
+    else if (ratio < 2)    ctx = 'heavier than Earth — every step feels loaded';
+    else if (ratio < 5)    ctx = 'heavy — walking would feel like carrying a big backpack';
+    else                   ctx = 'crushing — far beyond human tolerance';
+
+    var html = '<div class="res-hero"><span class="rl">SURFACE GRAVITY</span><span class="rv">' + niceHTML(g, 'm/s²') + '</span><span class="rs">' + ctx + ' — every object falls at this rate, whatever its own mass</span></div>';
+    html += rowHTML('Compared to Earth', niceHTML(ratio, 'g', 3) + ' <small>Earth = 9.807 m/s²</small>');
+    html += weightHTML;
+    html += '<div class="res-formula">g = G·M / R² = 6.6743×10<sup>−11</sup> × ' + sciHTML(M) + ' ÷ (' + sciHTML(R) + ')² = <b>' + niceHTML(g, 'm/s²') + '</b></div>';
+    el('out-grav').innerHTML = html;
+
+    COPY.grav = [
+      'StudyWithSTEM · Gravitation Calculator',
+      'Mode: surface gravity',
+      'M = ' + sciTxt(M, 'kg'),
+      'R = ' + sciTxt(R, 'm'),
+      'g = ' + niceTxt(g, 'm/s²') + '  (' + niceTxt(ratio, 'g', 3) + ' — Earth = 9.807 m/s²)'
+    ].concat(weightTXT).concat(['Formula: g = G·M / R²']).join('\n');
+  }
+
+  /* ---------- PANEL 3 · orbit calculator ---------- */
+  function calcOrbit(){
+    var mm = readVal('v-m', 'The central mass', ' — mass can’t be zero or negative');
+    if (mm.err) return fail('orbit', mm.err);
+    var rr = readVal('v-r', 'The orbit radius', ' — measured from the center, it must be greater than zero');
+    if (rr.err) return fail('orbit', rr.err);
+
+    var M = mm.val * MU[el('v-mu').value];
+    var r = rr.val * LU[el('v-ru').value];
+    var v = Math.sqrt(G * M / r);
+    var T = 2 * Math.PI * Math.sqrt(r * r * r / (G * M));
+    var gLoc = G * M / (r * r);
+    if (!isFinite(v) || !isFinite(T) || !isFinite(gLoc)) return fail('orbit', 'These values overflow the calculation — try smaller numbers or bigger units.');
+
+    pass('orbit');
+
+    var html = '<div class="res-heroes">';
+    html += '<div class="res-hero"><span class="rl">ORBITAL SPEED</span><span class="rv">' + speedH(v) + '</span><span class="rs">= ' + niceHTML(v, 'm/s') + ' — the speed that holds a circular orbit at this radius</span></div>';
+    html += '<div class="res-hero"><span class="rl">ORBITAL PERIOD</span><span class="rv">' + timeFmt(T, false) + '</span><span class="rs">= ' + niceHTML(T, 's') + ' for one full lap</span></div>';
+    html += '</div>';
+    html += rowHTML('Gravity at this radius', niceHTML(gLoc, 'm/s²') + ' <small>the pull that bends the path into a circle</small>');
+    html += rowHTML('Orbit circumference 2πr', lenH(2 * Math.PI * r));
+    html += '<div class="res-formula">v = √(G·M / r) = √(6.6743×10<sup>−11</sup> × ' + sciHTML(M) + ' ÷ ' + sciHTML(r) + ') = <b>' + speedH(v) + '</b></div>';
+    html += '<div class="res-formula">T = 2π·√(r³ / G·M) = 2π·√((' + sciHTML(r) + ')³ ÷ ' + sciHTML(G * M) + ') = <b>' + timeFmt(T, false) + '</b></div>';
+    el('out-orbit').innerHTML = html;
+
+    COPY.orbit = [
+      'StudyWithSTEM · Gravitation Calculator',
+      'Mode: orbit calculator',
+      'M = ' + sciTxt(M, 'kg'),
+      'r = ' + sciTxt(r, 'm') + '  (center-to-center)',
+      'v = ' + speedT(v) + '  (' + niceTxt(v, 'm/s') + ')',
+      'T = ' + timeFmt(T, true) + '  (' + niceTxt(T, 's') + ')',
+      'Gravity at r = ' + niceTxt(gLoc, 'm/s²'),
+      'Formulas: v = √(G·M/r) · T = 2π·√(r³/G·M)'
+    ].join('\n');
+  }
+
+  /* ---------- PANEL 4 · escape velocity ---------- */
+  function calcEsc(){
+    var mm = readVal('e-m', 'The mass of the body', ' — mass can’t be zero or negative');
+    if (mm.err) return fail('esc', mm.err);
+    var rr = readVal('e-r', 'The radius of the body', ' — vₑ needs R > 0');
+    if (rr.err) return fail('esc', rr.err);
+
+    var M  = mm.val * MU[el('e-mu').value];
+    var R  = rr.val * LU[el('e-ru').value];
+    var ve = Math.sqrt(2 * G * M / R);
+    var g  = G * M / (R * R);
+    if (!isFinite(ve) || !isFinite(g)) return fail('esc', 'These values overflow the calculation — try smaller numbers or bigger units.');
+
+    pass('esc');
+
+    var html = '<div class="res-hero"><span class="rl">ESCAPE VELOCITY</span><span class="rv">' + speedH(ve) + '</span><span class="rs">minimum speed to leave this body’s gravity forever — the same for a pebble or a rocket</span></div>';
+    html += rowHTML('In meters per second', niceHTML(ve, 'm/s'));
+    html += rowHTML('Compared to Earth', niceHTML(ve / VEE, '', 3) + '× <small>Earth = 11.19 km/s</small>');
+    html += rowHTML('Surface gravity here', niceHTML(g, 'm/s²') + ' <small>from the same M and R</small>');
+    html += '<div class="res-formula">vₑ = √(2·G·M / R) = √(2 × 6.6743×10<sup>−11</sup> × ' + sciHTML(M) + ' ÷ ' + sciHTML(R) + ') = <b>' + speedH(ve) + '</b></div>';
+    el('out-esc').innerHTML = html;
+
+    COPY.esc = [
+      'StudyWithSTEM · Gravitation Calculator',
+      'Mode: escape velocity',
+      'M = ' + sciTxt(M, 'kg'),
+      'R = ' + sciTxt(R, 'm'),
+      've = ' + speedT(ve) + '  (' + niceTxt(ve, 'm/s') + ')',
+      'Formula: ve = √(2·G·M / R)'
+    ].join('\n');
+  }
+
+  /* ---------- tabs ---------- */
+  var tabs = document.querySelectorAll('.ttab');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){
+        var on = (x === t);
+        x.classList.toggle('active', on);
+        x.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      document.querySelectorAll('.tpanel').forEach(function(p){
+        p.classList.toggle('active', p.id === 'panel-' + t.dataset.tab);
+      });
+    });
+  });
+
+  /* ---------- live listeners ---------- */
+  function listen(ids, fn){
+    ids.forEach(function(id){
+      var n = el(id);
+      if (!n) return;
+      n.addEventListener('input', fn);
+      n.addEventListener('change', fn);
+    });
+  }
+  listen(['f-m1', 'f-m2', 'f-r', 'f-m1u', 'f-m2u', 'f-ru'], calcForce);
+  listen(['g-m', 'g-r', 'g-test', 'g-mu', 'g-ru'], calcGrav);
+  listen(['v-m', 'v-r', 'v-mu', 'v-ru'], calcOrbit);
+  listen(['e-m', 'e-r', 'e-mu', 'e-ru'], calcEsc);
+
+  /* ---------- preset chips ---------- */
+  function bindChips(panelId, map, fn){
+    document.querySelectorAll('#' + panelId + ' .t-chip').forEach(function(ch){
+      ch.addEventListener('click', function(){
+        Object.keys(map).forEach(function(k){
+          var n = el(map[k]);
+          if (n && ch.dataset[k] !== undefined) n.value = ch.dataset[k];
+        });
+        fn();
+      });
+    });
+  }
+  bindChips('panel-force', { m1:'f-m1', m1u:'f-m1u', m2:'f-m2', m2u:'f-m2u', r:'f-r', ru:'f-ru' }, calcForce);
+  bindChips('panel-grav',  { m:'g-m',  mu:'g-mu',  r:'g-r',  ru:'g-ru'  }, calcGrav);
+  bindChips('panel-orbit', { m:'v-m',  mu:'v-mu',  r:'v-r',  ru:'v-ru'  }, calcOrbit);
+  bindChips('panel-esc',   { m:'e-m',  mu:'e-mu',  r:'e-r',  ru:'e-ru'  }, calcEsc);
+
+  /* ---------- copy buttons ---------- */
+  function bindCopy(btnId, key){
+    var btn = el(btnId);
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var txt = COPY[key];
+      if (!txt) return;
+      function done(){
+        var s = btn.querySelector('span');
+        btn.classList.add('done');
+        if (s) s.textContent = 'COPIED';
+        setTimeout(function(){ btn.classList.remove('done'); if (s) s.textContent = 'COPY'; }, 1500);
+      }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = txt;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try{ document.execCommand('copy'); done(); }catch(e){}
+        document.body.removeChild(ta);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done, fallback);
+      } else fallback();
+    });
+  }
+  bindCopy('copy-force', 'force');
+  bindCopy('copy-grav',  'grav');
+  bindCopy('copy-orbit', 'orbit');
+  bindCopy('copy-esc',   'esc');
+
+  /* ---------- first paint ---------- */
+  calcForce();
+  calcGrav();
+  calcOrbit();
+  calcEsc();
+})();
+</script>
+</body>
+</html>
