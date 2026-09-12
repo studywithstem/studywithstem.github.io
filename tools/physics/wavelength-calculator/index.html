@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Wavelength Calculator — Free Online Tool for Wavelength, Frequency, Wave Speed &amp; Photon Energy | StudyWithSTEM</title>
+<meta name="description" content="Free wavelength calculator for sound, light and string waves — enter any two of wavelength, frequency and speed for instant answers with formulas and steps. No sign-up.">
+<meta name="keywords" content="wavelength calculator, calculate wavelength, wavelength formula, frequency calculator, wave speed calculator, wavelength to frequency converter, frequency to wavelength, sound wavelength calculator, speed of sound calculator, light wavelength calculator, photon energy calculator, wave on a string calculator, free online physics tool">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/physics/wavelength-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Wavelength Calculator — Sound, Light &amp; Photon Energy Modes | StudyWithSTEM">
+<meta property="og:description" content="Four modes — any wave, light &amp; photon energy, sound in air or water, and waves on a string. Instant answers with formulas, steps and unit conversion.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/physics/wavelength-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/wavelength-calculator.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM Wavelength Calculator — free online physics tool">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Wavelength Calculator — Free Online Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Wavelength, frequency, wave speed and photon energy — instant answers with formulas and steps for sound, light and string waves.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/wavelength-calculator.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Physics", "item": "https://studywithstem.github.io/tools/physics/" },
+    { "@type": "ListItem", "position": 4, "name": "Wavelength Calculator", "item": "https://studywithstem.github.io/tools/physics/wavelength-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Wavelength Calculator",
+  "url": "https://studywithstem.github.io/tools/physics/wavelength-calculator/",
+  "description": "Free online wavelength calculator with four modes: any wave (solve wavelength, frequency or wave speed from the other two), light and photon energy with EM spectrum bands, sound waves with temperature-dependent speed and material presets, and waves on a string from tension and linear density. Shows formulas and steps for every result.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Solve wavelength, frequency or wave speed from the other two, with smart unit picks",
+    "Light mode: photon energy in eV, EM spectrum band, colour and wavelength inside media",
+    "Sound mode: speed of sound from air temperature or presets for water, glass, steel and more",
+    "String mode: wave speed from tension and linear density, plus period and wavenumber everywhere"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula for wavelength?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide the wave's speed by its frequency: λ = v ÷ f. A 440 Hz sound wave moving at 343 m/s has a wavelength of 343 ÷ 440 ≈ 0.78 m. Keep speed in m/s and frequency in Hz and the wavelength comes out in metres — the same triangle also gives f = v ÷ λ and v = λ × f." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the wavelength of a sound wave?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Take the speed of sound in the medium and divide by the frequency. In air the speed depends on temperature — about 331 m/s at 0 °C and 343 m/s at 20 °C — so a 440 Hz concert A stretches about 0.78 m from compression to compression. The Sound waves tab computes the speed from your air temperature, or uses preset speeds for water, glass, steel and aluminium." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the wavelength of light?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the speed of light, c = 299,792,458 m/s. Green 532 nm laser light has a frequency of f = c ÷ λ ≈ 563 THz, and each of its photons carries E = hc ÷ λ ≈ 2.33 eV. The Light & photons tab converts between wavelength, frequency and photon energy in a single step and names the EM band the value falls in." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does wavelength change when a wave enters a new medium?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — but frequency never changes. When light passes from air into water it slows to c ÷ 1.33, so its wavelength shrinks by the same factor: 532 nm green light becomes about 399 nm inside water. The colour is unchanged, because colour tracks frequency, not wavelength. Pick a medium in the Light & photons tab to see both wavelengths side by side." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the wavelength range of visible light?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 380 nm (violet) to 750 nm (red). Shorter than 380 nm you are in ultraviolet, then X-rays and gamma rays; longer than 750 nm lies infrared, then microwaves and radio waves. Visible light covers less than an octave of frequency — a narrow window of the full electromagnetic spectrum." }
+    },
+    {
+      "@type": "Question",
+      "name": "How are wavelength, frequency and period related?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Frequency counts cycles per second; period is its flip side in seconds per cycle: T = 1 ÷ f. Wavelength connects them to speed through v = λ × f. A 100 MHz FM radio wave, for instance, repeats every 10 ns and measures about 3 m from crest to crest." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert wavelength to photon energy?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use E = h × c ÷ λ, where h = 6.626×10⁻³⁴ J·s is Planck's constant. Divide the energy in joules by 1.602×10⁻¹⁹ to get electronvolts. A shortcut worth memorising: λ in nm multiplied by E in eV is about 1240 — handy for quick estimates in physics and chemistry." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the calculator free, and is my data sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It is completely free and runs entirely in your browser — nothing you type is uploaded, logged or sent to a server. No account, no sign-up, no limits, and it keeps working offline once the page has loaded." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= WAVELENGTH CALCULATOR (page-specific layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.tool-tabs{display:flex; border-bottom:1px solid var(--edge); overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.tool-tabs::-webkit-scrollbar{display:none;}
+.ttab{
+  flex:1 0 auto; padding:17px 18px; background:none; border:none; cursor:pointer; white-space:nowrap;
+  position:relative; margin-bottom:-1px; font:600 .82rem/1.1 var(--f-sans); color:var(--muted);
+  transition:color .25s, background .25s;
+}
+.ttab .mono{font:700 .58rem var(--f-mono); letter-spacing:.08em; color:var(--faint); margin-right:9px;}
+.ttab::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--accent); transform:scaleX(0); transition:transform .3s ease;}
+.ttab:hover{color:var(--ink); background:var(--panel);}
+.ttab.active{color:var(--accent);}
+.ttab.active .mono{color:var(--accent);}
+.ttab.active::after{transform:scaleX(1);}
+
+.tpanel{display:none; padding:30px;}
+.tpanel.active{display:block;}
+.tool-grid{display:grid; grid-template-columns:.92fr 1.08fr; gap:32px; align-items:start;}
+
+.t-field{margin-bottom:20px;}
+.t-field:last-child{margin-bottom:0;}
+.t-field>label{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;}
+.t-field .hint{font:.76rem/1.5 var(--f-sans); color:var(--faint); margin-top:7px;}
+
+.t-num{position:relative;}
+.t-num input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 58px 13px 15px; color:var(--ink); font:600 1.04rem var(--f-mono); transition:border-color .25s;
+}
+.t-num input:focus{outline:none; border-color:var(--accent);}
+.t-num .suf{position:absolute; right:14px; top:50%; transform:translateY(-50%); font:700 .68rem var(--f-mono); letter-spacing:.06em; color:var(--faint); pointer-events:none;}
+
+/* unit selector tucked inside a number input */
+.t-num.has-u input{padding-right:92px;}
+.sufsel{
+  position:absolute; right:7px; top:50%; transform:translateY(-50%);
+  appearance:none; -webkit-appearance:none; cursor:pointer;
+  background:var(--panel); border:1px solid var(--edge); border-radius:7px;
+  color:var(--muted); font:700 .64rem var(--f-mono); letter-spacing:.04em;
+  padding:7px 8px; transition:color .2s, border-color .2s;
+}
+.sufsel:hover, .t-num:focus-within .sufsel{color:var(--accent); border-color:var(--accent);}
+.sufsel option{background:var(--bg); color:var(--ink);}
+
+.t-select{position:relative;}
+.t-select select{
+  width:100%; appearance:none; -webkit-appearance:none; cursor:pointer;
+  background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 42px 13px 15px; color:var(--ink); font:.9rem var(--f-sans); transition:border-color .25s;
+}
+.t-select select:focus{outline:none; border-color:var(--accent);}
+.t-select select option{background:var(--bg); color:var(--ink);}
+.t-select svg{position:absolute; right:14px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--faint); pointer-events:none; transition:color .25s;}
+.t-select:focus-within svg{color:var(--accent);}
+
+.t-examples{display:flex; flex-wrap:wrap; gap:8px;}
+.t-chip{
+  font:700 .6rem var(--f-mono); letter-spacing:.07em; color:var(--muted); white-space:nowrap; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:8px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.t-chip:hover{color:var(--accent); border-color:var(--accent);}
+
+.t-err{
+  display:none; margin-top:16px; font:600 .72rem/1.6 var(--f-mono); color:var(--amber);
+  border:1px dashed var(--amber); border-radius:10px; padding:11px 13px;
+}
+.t-err.show{display:block;}
+
+.t-results{
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px;
+  padding:20px 20px 16px; position:sticky; top:calc(var(--navh) + 18px);
+}
+.res-head{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:2px 2px 14px; border-bottom:1px dashed var(--edge-strong);}
+.res-head .rl{font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint);}
+
+.t-copy{
+  display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  font:700 .6rem var(--f-mono); letter-spacing:.1em; color:var(--muted);
+  border:1px solid var(--edge-strong); background:var(--panel); border-radius:8px; padding:8px 11px;
+  transition:color .25s, border-color .25s;
+}
+.t-copy svg{width:12px; height:12px;}
+.t-copy:hover, .t-copy.done{color:var(--accent); border-color:var(--accent);}
+
+.res-hero{padding:18px 2px 14px;}
+.res-hero .rl{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);}
+.res-hero .rv{display:block; font:700 clamp(1.9rem, 4.5vw, 2.5rem)/1.05 var(--f-mono); color:var(--accent); margin-top:8px; letter-spacing:-.02em; word-break:break-word;}
+.res-hero .rv sup{font-size:.55em;}
+.res-hero .rs{display:block; font:600 .76rem/1.6 var(--f-mono); color:var(--muted); margin-top:7px; word-break:break-word;}
+.res-hero .rs sup{font-size:.6em;}
+.res-heroes{display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:16px 0 8px;}
+.res-heroes .res-hero{padding:0;}
+
+.res-row{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:11px 2px; border-top:1px dashed var(--edge);}
+.res-row .rk{font:.82rem var(--f-sans); color:var(--muted);}
+.res-row .rvv{font:700 .84rem var(--f-mono); color:var(--ink); text-align:right; word-break:break-word;}
+.res-row .rvv small{display:block; font:600 .64rem/1.5 var(--f-mono); color:var(--faint); margin-top:3px;}
+.res-row .rvv sup, .res-formula sup{font-size:.6em;}
+
+.res-formula{
+  margin:14px 2px 4px; padding:12px 14px; border:1px dashed var(--edge-strong); border-radius:10px;
+  font:600 .72rem/1.8 var(--f-mono); color:var(--muted); overflow-x:auto; white-space:nowrap;
+}
+.res-formula b{color:var(--accent);}
+
+/* unit + colour-dot accents inside result values */
+.res-row .rvv .u{font-size:.82em; color:var(--muted); margin-left:4px; letter-spacing:.02em;}
+.res-hero .rv .u{font-size:.5em; margin-left:6px; letter-spacing:.06em; color:var(--muted);}
+.res-dot{display:inline-block; width:11px; height:11px; border-radius:50%; margin-left:8px; border:1px solid var(--edge-strong); box-shadow:0 0 10px currentColor;}
+
+.t-wait{
+  margin:14px 2px 6px; padding:30px 16px; border:1px dashed var(--edge); border-radius:10px;
+  font:600 .7rem var(--f-mono); letter-spacing:.08em; color:var(--faint); text-align:center;
+}
+
+.t-seg{display:flex; border:1px solid var(--edge-strong); border-radius:10px; overflow:hidden; margin-bottom:20px;}
+.t-seg button{
+  flex:1; padding:11px 10px; background:none; border:none; cursor:pointer;
+  font:600 .78rem/1.2 var(--f-sans); color:var(--muted); transition:background .25s, color .25s;
+}
+.t-seg button + button{border-left:1px solid var(--edge-strong);}
+.t-seg button.active{background:var(--accent); color:var(--accent-ink); font-weight:700;}
+.t-field .t-seg{margin-bottom:0;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
+}
+.fx .formula sup{font-size:.6em;}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* FAQ side note */
+.faq-note{margin-top:30px; border:1px dashed var(--edge-strong); border-radius:12px; padding:18px 20px; background:var(--panel);}
+.faq-note .fn-k{display:block; font:700 .62rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.faq-note p{margin-top:10px; font-size:.84rem; color:var(--muted);}
+.faq-cta{display:inline-flex; align-items:center; gap:8px; margin-top:14px; font:700 .64rem var(--f-mono); letter-spacing:.1em; color:var(--ink); border:1px solid var(--edge-strong); border-radius:8px; padding:10px 13px; transition:color .25s, border-color .25s;}
+.faq-cta svg{width:12px; height:12px; color:var(--accent);}
+.faq-cta:hover{color:var(--accent); border-color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .tool-grid{grid-template-columns:1fr; gap:24px;}
+  .t-results{position:static;}
+  .tpanel{padding:22px 18px 26px;}
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .res-heroes{grid-template-columns:1fr; gap:10px;}
+  .ttab{padding:15px 13px; font-size:.76rem;}
+  .t-num input{padding:12px 52px 12px 14px; font-size:.98rem;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · PHYSICS</p>
+    <h1>Wavelength Calculator</h1>
+    <p class="lede">Sound, light, strings or any wave in between — enter what you know and get wavelength, frequency and speed instantly, with the formula and full working shown beside every answer.</p>
+    <span class="updated"><i></i>4 MODES · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE CALCULATOR</span>
+      <h2>Four modes, one panel.</h2>
+      <p>Pick a tab below — everything recalculates live as you type, and every result explains itself.</p>
+    </div>
+
+    <div class="tool-shell">
+
+      <div class="tool-tabs" role="tablist" aria-label="Wavelength calculator modes">
+        <button class="ttab active" id="tab-wave" role="tab" aria-selected="true"  data-tab="wave" type="button"><span class="mono">01</span>Any wave</button>
+        <button class="ttab" id="tab-light" role="tab" aria-selected="false" data-tab="light" type="button"><span class="mono">02</span>Light &amp; photons</button>
+        <button class="ttab" id="tab-sound" role="tab" aria-selected="false" data-tab="sound" type="button"><span class="mono">03</span>Sound waves</button>
+        <button class="ttab" id="tab-string" role="tab" aria-selected="false" data-tab="string" type="button"><span class="mono">04</span>String waves</button>
+      </div>
+
+      <!-- ========== PANEL 1 · ANY WAVE ========== -->
+      <div class="tpanel active" id="panel-wave" role="tabpanel" aria-labelledby="tab-wave">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="w-target">Find the…</label>
+              <div class="t-select">
+                <select id="w-target">
+                  <option value="lambda" selected>Wavelength λ</option>
+                  <option value="freq">Frequency f</option>
+                  <option value="speed">Wave speed v</option>
+                </select>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <p class="hint">Switching targets keeps your numbers — the panel simply solves for the third quantity.</p>
+            </div>
+
+            <div class="t-field" id="w-l-field" hidden>
+              <label for="w-l">Wavelength λ</label>
+              <div class="t-num has-u">
+                <input type="number" id="w-l" value="0.78" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <select class="sufsel" id="w-l-u" aria-label="Wavelength unit">
+                  <option value="nm">nm</option><option value="µm">µm</option><option value="mm">mm</option><option value="cm">cm</option><option value="m" selected>m</option><option value="km">km</option>
+                </select>
+              </div>
+              <p class="hint">The length of one full cycle — crest to crest, or compression to compression.</p>
+            </div>
+
+            <div class="t-field" id="w-f-field">
+              <label for="w-f">Frequency f</label>
+              <div class="t-num has-u">
+                <input type="number" id="w-f" value="440" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <select class="sufsel" id="w-f-u" aria-label="Frequency unit">
+                  <option value="Hz" selected>Hz</option><option value="kHz">kHz</option><option value="MHz">MHz</option><option value="GHz">GHz</option><option value="THz">THz</option>
+                </select>
+              </div>
+              <p class="hint">Cycles per second — 440 Hz is the concert A that orchestras tune to.</p>
+            </div>
+
+            <div class="t-field" id="w-v-field">
+              <label for="w-v">Wave speed v</label>
+              <div class="t-num has-u">
+                <input type="number" id="w-v" value="343" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <select class="sufsel" id="w-v-u" aria-label="Speed unit">
+                  <option value="m/s" selected>m/s</option><option value="km/h">km/h</option><option value="mph">mph</option><option value="ft/s">ft/s</option>
+                </select>
+              </div>
+              <p class="hint">Light ≈ 299,792,458 m/s · sound in air ≈ 343 m/s · sound in water ≈ 1,481 m/s.</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-target="lambda" data-f="440" data-fu="Hz" data-v="343" data-vu="m/s">SOUND A4 · 440 HZ</button>
+                <button type="button" class="t-chip" data-target="lambda" data-f="100" data-fu="MHz" data-v="299792458" data-vu="m/s">FM RADIO · 100 MHZ</button>
+                <button type="button" class="t-chip" data-target="freq" data-l="450" data-lu="nm" data-v="299792458" data-vu="m/s">BLUE LIGHT · 450 NM</button>
+                <button type="button" class="t-chip" data-target="speed" data-l="150" data-lu="m" data-f="0.07" data-fu="Hz">OCEAN SWELL · 150 M, 0.07 HZ</button>
+              </div>
+            </div>
+            <p class="t-err" id="w-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="w-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="w-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 2 · LIGHT & PHOTONS ========== -->
+      <div class="tpanel" id="panel-light" role="tabpanel" aria-labelledby="tab-light">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label>I know the…</label>
+              <div class="t-seg" id="p-seg">
+                <button type="button" class="active" data-mode="wl">Wavelength</button>
+                <button type="button" data-mode="fr">Frequency</button>
+                <button type="button" data-mode="en">Photon energy</button>
+              </div>
+            </div>
+
+            <div class="t-field">
+              <label for="p-in" id="p-in-label">Wavelength λ — in vacuum</label>
+              <div class="t-num has-u">
+                <input type="number" id="p-in" value="532" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <select class="sufsel" id="p-in-u" aria-label="Input unit">
+                  <option value="nm" selected>nm</option><option value="µm">µm</option><option value="mm">mm</option><option value="cm">cm</option><option value="m">m</option><option value="km">km</option>
+                </select>
+              </div>
+              <p class="hint" id="p-in-hint">The wave’s length in empty space — “550 nm light” means exactly this. Inside a material it shortens to λ ÷ n.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="p-med">Travelling through</label>
+              <div class="t-select">
+                <select id="p-med">
+                  <option value="vac" selected>Vacuum — n = 1</option>
+                  <option value="air">Air — n ≈ 1.0003</option>
+                  <option value="water">Water — n ≈ 1.33</option>
+                  <option value="glass">Crown glass — n ≈ 1.52</option>
+                  <option value="diamond">Diamond — n ≈ 2.42</option>
+                </select>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <p class="hint">Only speed and wavelength change with the medium — frequency and photon energy never do.</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-mode="wl" data-val="532" data-unit="nm">GREEN LASER · 532 NM</button>
+                <button type="button" class="t-chip" data-mode="fr" data-val="100" data-unit="MHz">FM RADIO · 100 MHZ</button>
+                <button type="button" class="t-chip" data-mode="fr" data-val="2.45" data-unit="GHz">MICROWAVE OVEN · 2.45 GHZ</button>
+                <button type="button" class="t-chip" data-mode="en" data-val="12" data-unit="keV">X-RAY · 12 KEV</button>
+              </div>
+            </div>
+            <p class="t-err" id="p-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="p-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="p-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 3 · SOUND WAVES ========== -->
+      <div class="tpanel" id="panel-sound" role="tabpanel" aria-labelledby="tab-sound">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="so-f">Frequency f</label>
+              <div class="t-num has-u">
+                <input type="number" id="so-f" value="440" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <select class="sufsel" id="so-f-u" aria-label="Frequency unit">
+                  <option value="Hz" selected>Hz</option><option value="kHz">kHz</option>
+                </select>
+              </div>
+              <p class="hint">Cycles per second — 440 Hz is the note most instruments tune to.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="so-med">Where is the sound travelling?</label>
+              <div class="t-select">
+                <select id="so-med">
+                  <option value="air" selected>Air — speed from temperature</option>
+                  <option value="water">Fresh water (20 °C) — 1,481 m/s</option>
+                  <option value="sea">Seawater (20 °C) — 1,522 m/s</option>
+                  <option value="glass">Glass — 4,540 m/s</option>
+                  <option value="steel">Steel — 5,960 m/s</option>
+                  <option value="alu">Aluminium — 6,320 m/s</option>
+                </select>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <p class="hint">Sound races through liquids and metals far faster than through air.</p>
+            </div>
+
+            <div class="t-field" id="so-t-field">
+              <label for="so-t">Air temperature</label>
+              <div class="t-num">
+                <input type="number" id="so-t" value="20" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">°C</span>
+              </div>
+              <p class="hint">Speed rises with temperature — 331 m/s at 0 °C, about 343 m/s at 20 °C.</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-f="440" data-fu="Hz" data-med="air" data-t="20">A4 · 440 HZ</button>
+                <button type="button" class="t-chip" data-f="261.63" data-fu="Hz" data-med="air" data-t="20">MIDDLE C · 261.63 HZ</button>
+                <button type="button" class="t-chip" data-f="150" data-fu="Hz" data-med="air" data-t="20">HUMAN VOICE · 150 HZ</button>
+                <button type="button" class="t-chip" data-f="40" data-fu="kHz" data-med="air" data-t="20">ULTRASOUND · 40 KHZ</button>
+              </div>
+            </div>
+            <p class="t-err" id="so-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="so-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="so-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 4 · STRING WAVES ========== -->
+      <div class="tpanel" id="panel-string" role="tabpanel" aria-labelledby="tab-string">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="st-t">String tension F</label>
+              <div class="t-num has-u">
+                <input type="number" id="st-t" value="68" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <select class="sufsel" id="st-t-u" aria-label="Tension unit">
+                  <option value="N" selected>N</option><option value="lbf">lbf</option>
+                </select>
+              </div>
+              <p class="hint">How hard the string is stretched. Guitar strings sit near 60–80 N; piano strings can top 700 N.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="st-mu">Linear density µ</label>
+              <div class="t-num has-u">
+                <input type="number" id="st-mu" value="0.4" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <select class="sufsel" id="st-mu-u" aria-label="Density unit">
+                  <option value="g/m" selected>g/m</option><option value="kg/m">kg/m</option>
+                </select>
+              </div>
+              <p class="hint">Mass per metre of string. A steel guitar high E ≈ 0.4 g/m; a wound bass E ≈ 35 g/m.</p>
+            </div>
+
+            <div class="t-field">
+              <label for="st-f">Frequency f</label>
+              <div class="t-num">
+                <input type="number" id="st-f" value="329.63" min="0" step="any" inputmode="decimal" autocomplete="off">
+                <span class="suf">HZ</span>
+              </div>
+              <p class="hint">The note the string plays — its fundamental frequency.</p>
+            </div>
+
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-t="68" data-tu="N" data-mu="0.4" data-muu="g/m" data-f="329.63">GUITAR HIGH E · E4</button>
+                <button type="button" class="t-chip" data-t="68" data-tu="N" data-mu="5.8" data-muu="g/m" data-f="82.41">GUITAR LOW E · E2</button>
+                <button type="button" class="t-chip" data-t="700" data-tu="N" data-mu="5.7" data-muu="g/m" data-f="440">PIANO · A4</button>
+                <button type="button" class="t-chip" data-t="180" data-tu="N" data-mu="35" data-muu="g/m" data-f="41.2">BASS · E1</button>
+              </div>
+            </div>
+            <p class="t-err" id="st-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="st-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="st-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE</span>
+      <h2>Four steps, ten seconds.</h2>
+      <p>No manual needed — pick a mode, type two numbers, and read your answer with the working shown.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n">STEP 01</span>
+        <h3>Pick your wave</h3>
+        <p>Choose the tab that matches your problem — a general wave, light, sound in a material, or a wave travelling along a stretched string.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 02</span>
+        <h3>Enter what you know</h3>
+        <p>Any two of wavelength, frequency and speed — or a photon energy for light. Set units from the small dropdowns, or tap an example chip to load everything at once.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 03</span>
+        <h3>Read the live answer</h3>
+        <p>The big number is your result. The rows beneath add period, wavenumber and unit conversions — plus the EM band for light and the nearest musical note for sound.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 04</span>
+        <h3>Trust the working</h3>
+        <p>Every answer shows its formula with your numbers substituted — perfect for homework. One tap on COPY takes the whole summary with you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE FORMULAS ============ -->
+<section class="sec" id="formulas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · THE FORMULAS</span>
+      <h2>Every formula it uses.</h2>
+      <p>Nothing hidden — these six relations power every number on this page.</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>The wavelength formula</h3>
+        <div class="formula">λ = v ÷ f</div>
+        <p>Wave speed divided by frequency — the distance one full cycle covers. 343 m/s at 440 Hz gives the 0.78 m concert A.</p>
+      </div>
+      <div class="fx">
+        <h3>Frequency</h3>
+        <div class="formula">f = v ÷ λ</div>
+        <p>The same triangle rearranged: how many cycles pass a point each second when you already know the spacing and the speed.</p>
+      </div>
+      <div class="fx">
+        <h3>Period &amp; wavenumber</h3>
+        <div class="formula">T = 1/f · k = 2π/λ</div>
+        <p>Period is seconds per cycle; wavenumber is radians per metre — the wave’s frequency written in space instead of time.</p>
+      </div>
+      <div class="fx">
+        <h3>Photon energy</h3>
+        <div class="formula">E = h·c ÷ λ</div>
+        <p>h = 6.626×10<sup>−34</sup> J·s and c = 2.998×10<sup>8</sup> m/s. Visible light spans about 1.6–3.3 eV, and λ(nm) × E(eV) ≈ 1240.</p>
+      </div>
+      <div class="fx">
+        <h3>Speed of sound in air</h3>
+        <div class="formula">v = 331.3 × √(1 + T/273.15)</div>
+        <p>T is the Celsius temperature — at 20 °C this gives 343.2 m/s. The shortcut v ≈ 331.3 + 0.606·T stays close near room temperature.</p>
+      </div>
+      <div class="fx">
+        <h3>Wave on a string</h3>
+        <div class="formula">v = √(F ÷ µ)</div>
+        <p>Tension F over linear density µ, square-rooted. Combine with λ = v ÷ f to find the wavelength of the note the string sounds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div>
+        <div class="sec-head">
+          <span class="sec-idx mono">04 · QUESTIONS</span>
+          <h2>Wavelength, decoded.</h2>
+          <p>The questions students actually ask about λ — answered in plain language, with the numbers to back them up.</p>
+        </div>
+        <div class="faq-note">
+          <span class="fn-k">// STILL STUCK?</span>
+          <p>Something not adding up? Send us the numbers and we’ll help you work it through.</p>
+          <a href="/page/contact/" class="faq-cta">CONTACT US
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is the formula for wavelength?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Divide the wave’s speed by its frequency: <code>λ = v ÷ f</code>. A 440 Hz sound wave moving at 343 m/s has a wavelength of 343 ÷ 440 ≈ 0.78 m.</p>
+            <p>Keep speed in m/s and frequency in Hz and the wavelength comes out in metres — the same triangle also gives <code>f = v ÷ λ</code> and <code>v = λ × f</code>.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I calculate the wavelength of a sound wave?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Take the speed of sound in the medium and divide by the frequency. In air the speed depends on temperature — about 331 m/s at 0 °C and 343 m/s at 20 °C — so a 440 Hz concert A stretches about 0.78 m from compression to compression.</p>
+            <p>The Sound waves tab computes the speed from your air temperature, or uses preset speeds for water, glass, steel and aluminium.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I calculate the wavelength of light?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Use the speed of light, c = 299,792,458 m/s. Green 532 nm laser light has a frequency of <code>f = c ÷ λ ≈ 563 THz</code>, and each of its photons carries <code>E = hc ÷ λ ≈ 2.33 eV</code>.</p>
+            <p>The Light &amp; photons tab converts between wavelength, frequency and photon energy in a single step, and names the EM band the value falls in.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does wavelength change when a wave enters a new medium?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Yes — but frequency never changes. When light passes from air into water it slows to c ÷ 1.33, so its wavelength shrinks by the same factor: 532 nm green light becomes about 399 nm inside water.</p>
+            <p>The colour is unchanged, because colour tracks frequency, not wavelength. Pick a medium in the Light &amp; photons tab to see both wavelengths side by side.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the wavelength range of visible light?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Roughly 380 nm (violet) to 750 nm (red). Shorter than 380 nm you are in ultraviolet, then X-rays and gamma rays; longer than 750 nm lies infrared, then microwaves and radio waves.</p>
+            <p>Visible light covers less than an octave of frequency — a narrow window of the full electromagnetic spectrum.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How are wavelength, frequency and period related?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Frequency counts cycles per second; period is its flip side in seconds per cycle: <code>T = 1 ÷ f</code>. Wavelength connects them to speed through <code>v = λ × f</code>.</p>
+            <p>A 100 MHz FM radio wave, for instance, repeats every 10 ns and measures about 3 m from crest to crest.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I convert wavelength to photon energy?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>Use <code>E = h × c ÷ λ</code>, where h = 6.626×10<sup>−34</sup> J·s is Planck’s constant. Divide the energy in joules by 1.602×10<sup>−19</sup> to get electronvolts.</p>
+            <p>A shortcut worth memorising: <code>λ(nm) × E(eV) ≈ 1240</code> — handy for quick estimates in physics and chemistry exams.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the calculator free, and is my data sent anywhere?<span class="pm">+</span></summary>
+          <div class="faq-body">
+            <p>It is completely free and runs entirely in your browser — nothing you type is uploaded, logged or sent to a server.</p>
+            <p>No account, no sign-up, no limits, and it keeps working offline once the page has loaded.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ SUBSCRIBE STRIP (upper footer — unchanged) ============ -->
+<section class="pre-footer">
+  <div class="wrap">
+    <div class="pre-footer-inner">
+      <div class="pf-text">
+        <span class="sec-idx">THE NEWSLETTER</span>
+        <h2>New tools, straight to <span class="hl">your inbox.</span></h2>
+        <p>Free emails when we publish a new calculator, cheat sheet or study guide. No spam — unsubscribe any time.</p>
+      </div>
+      <form class="pf-form" id="subForm" novalidate>
+        <input type="text" placeholder="Your name" aria-label="Your name" autocomplete="name">
+        <input type="email" placeholder="you@email.com" aria-label="Your email address" autocomplete="email" required>
+        <label class="pf-check">
+          <input type="checkbox" required>
+          <span>I agree to the <a href="/page/privacy/">privacy policy</a> and to receive email from StudyWithSTEM.</span>
+        </label>
+        <button class="btn-ticket" type="submit">
+          <span>Subscribe free</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (unchanged) ============ -->
+<footer>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand" aria-label="StudyWithSTEM home">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Free study tools and guides for STEM students — fast, clean and actually useful.</p>
+        <span class="foot-terminal"><span class="p">~/study-with-stem $</span> learn · calculate · repeat <span class="cursor"></span></span>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Home</a></li>
+          <li><a href="/tools/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Tools</a></li>
+          <li><a href="/posts/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Posts</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="/page/contact/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Contact</a></li>
+          <li><a href="/page/subscription/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Subscription</a></li>
+          <li><a href="/page/privacy/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>Privacy</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><path d="M6 2v3M10 2v3M14 2v3"/></svg>Buy us a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span><b>c</b> = 2.998×10<sup>8</sup> m/s · </span><span><b>h</b> = 6.626×10<sup>−34</sup> J·s · </span><span><b>g</b> = 9.807 m/s² · </span><span><b>G</b> = 6.674×10<sup>−11</sup> N·m²/kg² · </span><span><b>e</b> = 1.602×10<sup>−19</sup> C · </span><span><b>k_B</b> = 1.381×10<sup>−23</sup> J/K · </span><span><b>N_A</b> = 6.022×10<sup>23</sup> /mol · </span><span><b>R</b> = 8.314 J/(mol·K) · </span><span><b>σ</b> = 5.670×10<sup>−8</sup> W/(m²·K⁴) · </span><span><b>m_e</b> = 9.109×10<sup>−31</sup> kg · </span>
+        <span><b>c</b> = 2.998×10<sup>8</sup> m/s · </span><span><b>h</b> = 6.626×10<sup>−34</sup> J·s · </span><span><b>g</b> = 9.807 m/s² · </span><span><b>G</b> = 6.674×10<sup>−11</sup> N·m²/kg² · </span><span><b>e</b> = 1.602×10<sup>−19</sup> C · </span><span><b>k_B</b> = 1.381×10<sup>−23</sup> J/K · </span><span><b>N_A</b> = 6.022×10<sup>23</sup> /mol · </span><span><b>R</b> = 8.314 J/(mol·K) · </span><span><b>σ</b> = 5.670×10<sup>−8</sup> W/(m²·K⁴) · </span><span><b>m_e</b> = 9.109×10<sup>−31</sup> kg · </span>
+      </div>
+    </div>
+
+    <div class="foot-mid">
+      <span class="foot-meta">© 2025 STUDYWITHSTEM · MADE FOR STUDENTS, BY STUDENTS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var $ = function(id){ return document.getElementById(id); };
+
+/* ================= NAV / MENU / THEME ================= */
+var nav = $('nav'), prog = $('navProg'), lastY = window.scrollY || 0;
+function onScroll(){
+  var y = window.scrollY || window.pageYOffset || 0;
+  nav.classList.toggle('scrolled', y > 8);
+  if (y > lastY && y > 140 && !document.body.classList.contains('menu-open')) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  var p = max > 0 ? Math.min(1, y / max) : 0;
+  var w = prog.parentNode.clientWidth;
+  prog.style.transform = 'translateX(' + (-90 + p * (w + 10)) + 'px)';
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+var burger = $('burger');
+function closeMenu(){
+  document.body.classList.remove('menu-open');
+  document.body.classList.remove('locked');
+  burger.setAttribute('aria-expanded', 'false');
+}
+burger.addEventListener('click', function(){
+  var open = document.body.classList.toggle('menu-open');
+  document.body.classList.toggle('locked', open);
+  burger.setAttribute('aria-expanded', String(open));
+});
+[].forEach.call(document.querySelectorAll('.mmenu a'), function(a){ a.addEventListener('click', closeMenu); });
+
+var tt = $('themeToggle');
+tt.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+tt.addEventListener('click', function(){
+  var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.body.classList.add('theme-anim');
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem('sws-theme', next); } catch(e){}
+  tt.setAttribute('aria-pressed', String(next === 'light'));
+  setTimeout(function(){ document.body.classList.remove('theme-anim'); }, 600);
+});
+
+/* ================= FOOTER ================= */
+var foot = document.querySelector('footer');
+if ('IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ foot.classList.add('in'); io.disconnect(); } });
+  }, { threshold: .12 });
+  io.observe(foot);
+} else { foot.classList.add('in'); }
+
+ $('backTop').addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+var subForm = $('subForm');
+if (subForm){
+  subForm.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var em = subForm.querySelector('input[type="email"]');
+    var cb = subForm.querySelector('input[type="checkbox"]');
+    if (!em.value || em.value.indexOf('@') === -1){ em.focus(); return; }
+    if (cb && !cb.checked){ cb.focus(); return; }
+    var btn = subForm.querySelector('.btn-ticket span');
+    if (btn) btn.textContent = 'SUBSCRIBED — CHECK YOUR INBOX';
+  });
+}
+
+/* starfield */
+(function(){
+  var cv = $('starfield');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var stars = [], W = 0, Hh = 0;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){
+    W = cv.width = cv.offsetWidth;
+    Hh = cv.height = cv.offsetHeight;
+    var n = Math.max(40, Math.min(170, Math.round(W * Hh / 9000)));
+    stars = [];
+    for (var i = 0; i < n; i++){
+      stars.push({ x: Math.random()*W, y: Math.random()*Hh, r: Math.random()*1.1 + .25, s: Math.random()*.22 + .05, p: Math.random()*Math.PI*2 });
+    }
+    if (reduced) draw(0);
+  }
+  function draw(t){
+    ctx.clearRect(0, 0, W, Hh);
+    var light = document.documentElement.dataset.theme === 'light';
+    for (var i = 0; i < stars.length; i++){
+      var st = stars[i];
+      if (!reduced){ st.y += st.s; if (st.y > Hh){ st.y = -2; st.x = Math.random()*W; } }
+      var a = .3 + .7 * Math.abs(Math.sin(t / 1500 + st.p));
+      ctx.beginPath();
+      ctx.arc(st.x, st.y, st.r, 0, 6.2832);
+      ctx.fillStyle = light ? 'rgba(11,37,69,' + (a * .45).toFixed(3) + ')' : 'rgba(241,237,226,' + a.toFixed(3) + ')';
+      ctx.fill();
+    }
+  }
+  function loop(t){ draw(t); requestAnimationFrame(loop); }
+  size();
+  window.addEventListener('resize', size);
+  if (!reduced) requestAnimationFrame(loop);
+})();
+
+/* ================= WAVELENGTH CALCULATOR ================= */
+var C = 299792458, HP = 6.62607015e-34, EVJ = 1.602176634e-19;
+var TOOL_URL = 'https://studywithstem.github.io/tools/physics/wavelength-calculator/';
+
+var LENu  = { 'nm':1e-9, 'µm':1e-6, 'mm':1e-3, 'cm':1e-2, 'm':1, 'km':1e3 };
+var FREQu = { 'Hz':1, 'kHz':1e3, 'MHz':1e6, 'GHz':1e9, 'THz':1e12 };
+var SPDu  = { 'm/s':1, 'km/h':1/3.6, 'mph':0.44704, 'ft/s':0.3048 };
+var ENU   = { 'eV':EVJ, 'keV':EVJ*1e3, 'MeV':EVJ*1e6 };
+var TENu  = { 'N':1, 'lbf':4.4482216152605 };
+var MUu   = { 'g/m':1e-3, 'kg/m':1 };
+var MEDIA = {
+  'vac':{ n:1, name:'vacuum' }, 'air':{ n:1.0003, name:'air' },
+  'water':{ n:1.333, name:'water' }, 'glass':{ n:1.52, name:'crown glass' }, 'diamond':{ n:2.42, name:'diamond' }
+};
+var SNDv = { 'water':1481, 'sea':1522, 'glass':4540, 'steel':5960, 'alu':6320 };
+var SNDn = { 'water':'fresh water', 'sea':'seawater', 'glass':'glass', 'steel':'steel', 'alu':'aluminium' };
+
+/* ---------- formatting helpers ---------- */
+function sci(x){
+  var e = Math.floor(Math.log10(Math.abs(x)));
+  var m = x / Math.pow(10, e);
+  var ms = m.toFixed(2);
+  if (parseFloat(ms) >= 10){ ms = '1.00'; e += 1; }
+  return ms + '×10<sup>' + e + '</sup>';
+}
+function fmtP(x, p){
+  if (x === null || x === undefined || !isFinite(x)) return '—';
+  if (x === 0) return '0';
+  var a = Math.abs(x);
+  if (a >= 1e6 || a < 1e-3) return sci(x);
+  return String(parseFloat(x.toPrecision(p || 6)));
+}
+function fmtC(x, d){
+  if (!isFinite(x)) return '—';
+  return x.toLocaleString('en-US', { maximumFractionDigits: (d === undefined ? 2 : d) });
+}
+function plain(h){ return String(h).replace(/<sup>/gi, '^').replace(/<\/sup>/gi, '').replace(/<[^>]*>/g, ''); }
+function sig(x){ return isFinite(x) ? String(parseFloat(x.toPrecision(6))) : ''; }
+function readPos(el){
+  var s = (el.value || '').trim();
+  if (s === '') return null;
+  var n = Number(s);
+  if (!isFinite(n) || n <= 0) return null;
+  return n;
+}
+function niceLen(m){
+  if (m >= 1000) return [m/1000, 'km'];
+  if (m >= 1) return [m, 'm'];
+  if (m >= 0.01) return [m*100, 'cm'];
+  if (m >= 0.001) return [m*1000, 'mm'];
+  if (m >= 1e-6) return [m*1e6, 'µm'];
+  return [m*1e9, 'nm'];
+}
+function niceFreq(f){
+  if (f >= 1e12) return [f/1e12, 'THz'];
+  if (f >= 1e9) return [f/1e9, 'GHz'];
+  if (f >= 1e6) return [f/1e6, 'MHz'];
+  if (f >= 1e3) return [f/1e3, 'kHz'];
+  return [f, 'Hz'];
+}
+function niceTime(t){
+  if (t >= 1) return [t, 's'];
+  if (t >= 1e-3) return [t*1e3, 'ms'];
+  if (t >= 1e-6) return [t*1e6, 'µs'];
+  if (t >= 1e-9) return [t*1e9, 'ns'];
+  if (t >= 1e-12) return [t*1e12, 'ps'];
+  if (t >= 1e-15) return [t*1e15, 'fs'];
+  return [t*1e18, 'as'];
+}
+function nearestNote(f){
+  if (f < 16 || f > 7900) return null;
+  var n = Math.round(12 * Math.log2(f / 440));
+  var names = ['A','A#','B','C','C#','D','D#','E','F','F#','G','G#'];
+  var idx = ((n % 12) + 12) % 12;
+  var oct = 4 + Math.floor((n + 9) / 12);
+  var exact = 440 * Math.pow(2, n / 12);
+  var cents = Math.round(1200 * Math.log2(f / exact));
+  return { name: names[idx] + oct, cents: cents };
+}
+function emBand(nm){
+  if (nm < 0.01) return 'Gamma rays';
+  if (nm < 10) return 'X-rays';
+  if (nm < 380) return 'Ultraviolet';
+  if (nm <= 750) return 'Visible light';
+  if (nm < 1e6) return 'Infrared';
+  if (nm < 1e9) return 'Microwaves';
+  return 'Radio waves';
+}
+function colorOf(nm){
+  if (nm < 450) return ['violet', '#7a5cff'];
+  if (nm < 495) return ['blue', '#2e7cff'];
+  if (nm < 570) return ['green', '#1fc762'];
+  if (nm < 590) return ['yellow', '#ffd21f'];
+  if (nm < 620) return ['orange', '#ff8c1a'];
+  return ['red', '#ff3b30'];
+}
+
+/* ---------- render helpers ---------- */
+function hero(rl, rv, rs){ return '<div class="res-hero"><span class="rl">' + rl + '</span><span class="rv">' + rv + '</span><span class="rs">' + rs + '</span></div>'; }
+function row(k, v, sub){ return '<div class="res-row"><span class="rk">' + k + '</span><span class="rvv">' + v + (sub ? '<small>' + sub + '</small>' : '') + '</span></div>'; }
+function formula(t){ return '<div class="res-formula">' + t + '</div>'; }
+function waitBox(){ return '<div class="t-wait">WAITING FOR VALID INPUT — RESULTS APPEAR HERE LIVE</div>'; }
+function unit(u){ return ' <span class="u">' + u + '</span>'; }
+function fail(errEl, outEl, msg){
+  errEl.textContent = msg;
+  errEl.classList.add('show');
+  outEl.innerHTML = waitBox();
+}
+
+var waveLast = null;
+var COPY = { wave:'', light:'', sound:'', str:'' };
+
+/* ================= PANEL 1 · ANY WAVE ================= */
+function calcWave(){
+  var target = $('w-target').value;
+  $('w-l-field').hidden = (target === 'lambda');
+  $('w-f-field').hidden = (target === 'freq');
+  $('w-v-field').hidden = (target === 'speed');
+  var out = $('w-out'), err = $('w-err');
+  err.classList.remove('show');
+
+  var lam = null, f = null, v = null;
+  if (target === 'lambda'){
+    f = readPos($('w-f')); v = readPos($('w-v'));
+    if (f === null) return fail(err, out, 'Enter a frequency greater than zero — cycles per second.');
+    if (v === null) return fail(err, out, 'Enter a wave speed greater than zero, in ' + $('w-v-u').value + '.');
+    f *= FREQu[$('w-f-u').value]; v *= SPDu[$('w-v-u').value];
+    lam = v / f;
+  } else if (target === 'freq'){
+    lam = readPos($('w-l')); v = readPos($('w-v'));
+    if (lam === null) return fail(err, out, 'Enter a wavelength greater than zero — the length of one full cycle.');
+    if (v === null) return fail(err, out, 'Enter a wave speed greater than zero, in ' + $('w-v-u').value + '.');
+    lam *= LENu[$('w-l-u').value]; v *= SPDu[$('w-v-u').value];
+    f = v / lam;
+  } else {
+    lam = readPos($('w-l')); f = readPos($('w-f'));
+    if (lam === null) return fail(err, out, 'Enter a wavelength greater than zero — the length of one full cycle.');
+    if (f === null) return fail(err, out, 'Enter a frequency greater than zero — cycles per second.');
+    lam *= LENu[$('w-l-u').value]; f *= FREQu[$('w-f-u').value];
+    v = lam * f;
+  }
+  if (!isFinite(lam) || !isFinite(f) || !isFinite(v) || lam <= 0 || f <= 0 || v <= 0){
+    return fail(err, out, 'That combination is too extreme to compute — try more moderate numbers.');
+  }
+  waveLast = { lam: lam, f: f, v: v };
+
+  var T = 1 / f, k = 2 * Math.PI / lam, w = 2 * Math.PI * f;
+  var nl = niceLen(lam), nf = niceFreq(f), nt = niceTime(T);
+  var spdSub = (v < 1e6)
+    ? fmtC(v * 3.6, 0) + ' km/h · ' + fmtC(v / 0.44704, 0) + ' mph'
+    : '≈ ' + fmtP(v / C, 3) + ' × c';
+
+  var html = '';
+  if (target === 'lambda'){
+    html += hero('WAVELENGTH λ', fmtP(nl[0], 4) + unit(nl[1]), 'λ = v ÷ f');
+  } else if (target === 'freq'){
+    html += hero('FREQUENCY f', fmtP(nf[0], 4) + unit(nf[1]), 'f = v ÷ λ');
+  } else {
+    html += hero('WAVE SPEED v', fmtP(v, 4) + unit('m/s'), 'v = λ × f');
+  }
+  html += row('Wavelength', fmtP(nl[0], 6) + unit(nl[1]), fmtP(lam, 4) + ' m');
+  html += row('Frequency', fmtP(nf[0], 6) + unit(nf[1]), 'period T = 1/f = ' + fmtP(nt[0], 4) + ' ' + nt[1]);
+  html += row('Wave speed', fmtP(v, 6) + unit('m/s'), spdSub);
+  html += row('Wavenumber k = 2π/λ', fmtP(k, 6) + unit('rad/m'));
+  html += row('Angular frequency ω = 2πf', fmtP(w, 6) + unit('rad/s'));
+  var fTxt;
+  if (target === 'lambda')    fTxt = 'λ = v ÷ f = ' + fmtP(v,4) + ' m/s ÷ ' + fmtP(f,4) + ' Hz = ' + fmtP(lam,4) + ' m';
+  else if (target === 'freq') fTxt = 'f = v ÷ λ = ' + fmtP(v,4) + ' m/s ÷ ' + fmtP(lam,4) + ' m = ' + fmtP(f,4) + ' Hz';
+  else                        fTxt = 'v = λ × f = ' + fmtP(lam,4) + ' m × ' + fmtP(f,4) + ' Hz = ' + fmtP(v,4) + ' m/s';
+  html += formula(fTxt);
+  out.innerHTML = html;
+
+  COPY.wave = 'WAVELENGTH CALCULATOR · ANY WAVE — StudyWithSTEM\n'
+    + 'Wavelength λ = ' + fmtP(nl[0], 4) + ' ' + nl[1] + '\n'
+    + 'Frequency f = ' + fmtP(nf[0], 6) + ' ' + nf[1] + '\n'
+    + 'Wave speed v = ' + fmtP(v, 6) + ' m/s\n'
+    + 'Period T = ' + fmtP(nt[0], 4) + ' ' + nt[1] + '\n'
+    + 'Wavenumber k = ' + fmtP(k, 6) + ' rad/m\n'
+    + plain(fTxt) + '\n' + TOOL_URL;
+}
+
+/* ================= PANEL 2 · LIGHT & PHOTONS ================= */
+var lightMode = 'wl';
+var segBtns = [].slice.call(document.querySelectorAll('#p-seg button'));
+
+function setLightUnits(m){
+  var sel = $('p-in-u');
+  var opts = { wl:['nm','µm','mm','cm','m','km'], fr:['Hz','kHz','MHz','GHz','THz'], en:['eV','keV','MeV'] };
+  var def = { wl:'nm', fr:'THz', en:'eV' }[m];
+  sel.innerHTML = '';
+  opts[m].forEach(function(u){
+    var o = document.createElement('option');
+    o.value = u; o.textContent = u;
+    sel.appendChild(o);
+  });
+  sel.value = def;
+}
+function lightLabels(){
+  var L = {
+    wl:['Wavelength λ — in vacuum', 'The wave’s length in empty space — “550 nm light” means exactly this. Inside a material it shortens to λ ÷ n.'],
+    fr:['Frequency f', 'Cycles per second — the one wave property that never changes, in any material.'],
+    en:['Photon energy E', 'Energy carried by a single photon — visible light spans roughly 1.6 to 3.3 eV.']
+  }[lightMode];
+  $('p-in-label').textContent = L[0];
+  $('p-in-hint').textContent = L[1];
+}
+function setLightMode(m){
+  if (m === lightMode) return;
+  var cur = readPos($('p-in'));
+  var lam0 = null, f = null, E = null;
+  if (cur !== null){
+    if (lightMode === 'wl') lam0 = cur * LENu[$('p-in-u').value];
+    else if (lightMode === 'fr') f = cur * FREQu[$('p-in-u').value];
+    else E = cur * ENU[$('p-in-u').value];
+  }
+  lightMode = m;
+  segBtns.forEach(function(b){ b.classList.toggle('active', b.dataset.mode === m); });
+  setLightUnits(m);
+  lightLabels();
+  if (cur !== null){
+    if (m === 'wl'){
+      if (lam0 === null) lam0 = (f !== null) ? C / f : HP * C / E;
+      var nl = niceLen(lam0);
+      $('p-in').value = sig(nl[0]); $('p-in-u').value = nl[1];
+    } else if (m === 'fr'){
+      if (f === null) f = (lam0 !== null) ? C / lam0 : E / HP;
+      var nf = niceFreq(f);
+      $('p-in').value = sig(nf[0]); $('p-in-u').value = nf[1];
+    } else {
+      if (E === null) E = (lam0 !== null) ? HP * C / lam0 : HP * f;
+      var ev = E / EVJ, uu = 'eV', vv = ev;
+      if (ev >= 1e6){ uu = 'MeV'; vv = ev / 1e6; }
+      else if (ev >= 1e3){ uu = 'keV'; vv = ev / 1e3; }
+      $('p-in').value = sig(vv); $('p-in-u').value = uu;
+    }
+  } else {
+    $('p-in').value = { wl:'532', fr:'563.5', en:'2.33' }[m];
+  }
+  calcLight();
+}
+function calcLight(){
+  var out = $('p-out'), err = $('p-err');
+  err.classList.remove('show');
+  var a = readPos($('p-in'));
+  if (a === null){
+    return fail(err, out, 'Enter a value greater than zero for ' +
+      (lightMode === 'wl' ? 'the wavelength' : lightMode === 'fr' ? 'the frequency' : 'the photon energy') + '.');
+  }
+  var med = MEDIA[$('p-med').value];
+  var lam0, f, E;
+  if (lightMode === 'wl'){ lam0 = a * LENu[$('p-in-u').value]; f = C / lam0; E = HP * f; }
+  else if (lightMode === 'fr'){ f = a * FREQu[$('p-in-u').value]; lam0 = C / f; E = HP * f; }
+  else { E = a * ENU[$('p-in-u').value]; f = E / HP; lam0 = C / f; }
+  if (!isFinite(lam0) || !isFinite(f) || !isFinite(E) || lam0 <= 0 || f <= 0 || E <= 0){
+    return fail(err, out, 'That value is too extreme to compute — try a different unit.');
+  }
+
+  var nm = lam0 * 1e9;
+  var nl = niceLen(lam0), nf = niceFreq(f), nt = niceTime(1 / f);
+  var eEv = E / EVJ;
+  var band = emBand(nm);
+  var col = (nm >= 380 && nm <= 750) ? colorOf(nm) : null;
+  var inMed = med.n > 1.001;
+  var nlmed = inMed ? niceLen(lam0 / med.n) : null;
+
+  var html = '';
+  if (lightMode === 'wl'){
+    html += hero('FREQUENCY f', fmtP(nf[0], 4) + unit(nf[1]), 'f = c ÷ λ');
+  } else if (lightMode === 'fr'){
+    html += hero('VACUUM WAVELENGTH λ', fmtP(nl[0], 4) + unit(nl[1]), 'λ = c ÷ f');
+  } else {
+    html += hero('VACUUM WAVELENGTH λ', fmtP(nl[0], 4) + unit(nl[1]), 'λ = hc ÷ E');
+  }
+  html += row('Photon energy', fmtP(eEv, 4) + unit('eV'), fmtP(E, 3) + ' J');
+  html += row('Vacuum wavelength λ', fmtP(nl[0], 6) + unit(nl[1]), fmtP(lam0, 4) + ' m');
+  html += row('Frequency', fmtP(nf[0], 6) + unit(nf[1]), fmtP(f, 4) + ' Hz');
+  if (inMed){
+    html += row('λ in ' + med.name, fmtP(nlmed[0], 4) + unit(nlmed[1]), 'λ ÷ ' + med.n + ' — frequency unchanged');
+    html += row('Speed in ' + med.name, fmtP(C / med.n, 4) + unit('m/s'), 'c ÷ ' + med.n);
+  }
+  html += row('EM band', band + (col ? ' — ' + col[0] + '<span class="res-dot" style="background:' + col[1] + ';color:' + col[1] + '"></span>' : ''), col ? 'approximate screen colour' : '');
+  html += row('Period T = 1/f', fmtP(nt[0], 4) + ' ' + nt[1]);
+  var fTxt;
+  if (lightMode === 'wl')       fTxt = 'f = c ÷ λ = ' + fmtP(C,4) + ' m/s ÷ ' + fmtP(lam0,4) + ' m = ' + fmtP(f,4) + ' Hz';
+  else if (lightMode === 'fr')  fTxt = 'λ = c ÷ f = ' + fmtP(C,4) + ' m/s ÷ ' + fmtP(f,4) + ' Hz = ' + fmtP(lam0,4) + ' m';
+  else                          fTxt = 'λ = hc ÷ E = ' + fmtP(HP,3) + ' × ' + fmtP(C,3) + ' ÷ ' + fmtP(E,3) + ' J = ' + fmtP(lam0,4) + ' m';
+  html += formula(fTxt);
+  out.innerHTML = html;
+
+  COPY.light = 'WAVELENGTH CALCULATOR · LIGHT MODE — StudyWithSTEM\n'
+    + 'Input: ' + $('p-in').value + ' ' + $('p-in-u').value + ' · medium: ' + med.name + '\n'
+    + 'Vacuum wavelength λ = ' + fmtP(nl[0], 4) + ' ' + nl[1] + '\n'
+    + 'Frequency f = ' + fmtP(nf[0], 6) + ' ' + nf[1] + '\n'
+    + 'Photon energy E = ' + fmtP(eEv, 4) + ' eV (' + fmtP(E, 3) + ' J)\n'
+    + 'EM band: ' + band + (col ? ' — ' + col[0] : '') + '\n'
+    + (inMed ? 'In ' + med.name + ': λ = ' + fmtP(nlmed[0], 4) + ' ' + nlmed[1] + ', v = ' + fmtP(C / med.n, 4) + ' m/s\n' : '')
+    + plain(fTxt) + '\n' + TOOL_URL;
+}
+
+/* ================= PANEL 3 · SOUND WAVES ================= */
+function calcSound(){
+  var out = $('so-out'), err = $('so-err');
+  err.classList.remove('show');
+  var isAir = $('so-med').value === 'air';
+  $('so-t-field').hidden = !isAir;
+
+  var f = readPos($('so-f'));
+  if (f === null) return fail(err, out, 'Enter a frequency greater than zero — cycles per second.');
+  f *= FREQu[$('so-f-u').value];
+
+  var v = null, medLabel = '', t = null;
+  if (isAir){
+    var ts = ($('so-t').value || '').trim();
+    t = Number(ts);
+    if (ts === '' || !isFinite(t)) return fail(err, out, 'Enter the air temperature in °C — try 20 for a typical room.');
+    if (t <= -273.15) return fail(err, out, 'Temperature can’t go below absolute zero (−273.15 °C).');
+    if (t > 2000) return fail(err, out, 'That temperature is beyond the formula’s sensible range — keep it under 2000 °C.');
+    v = 331.3 * Math.sqrt(1 + t / 273.15);
+    medLabel = 'air at ' + fmtP(t, 4) + ' °C';
+  } else {
+    var mv = $('so-med').value;
+    v = SNDv[mv];
+    medLabel = SNDn[mv];
+  }
+
+  var lam = v / f;
+  if (!isFinite(lam) || lam <= 0) return fail(err, out, 'Those numbers are too extreme to compute.');
+
+  var T = 1 / f, k = 2 * Math.PI / lam;
+  var nl = niceLen(lam), nt = niceTime(T), nf = niceFreq(f);
+  var note = nearestNote(f);
+  var noteSub = '';
+  if (note){
+    noteSub = 'nearest note ' + note.name + (note.cents === 0 ? ' · in tune' : ' · ' + (note.cents > 0 ? '+' : '') + note.cents + ' cents');
+  }
+
+  var html = hero('WAVELENGTH λ', fmtP(nl[0], 4) + unit(nl[1]), 'λ = v ÷ f · in ' + medLabel);
+  html += row('Wave speed', fmtP(v, 6) + unit('m/s'), fmtC(v * 3.6, 0) + ' km/h · ' + fmtC(v / 0.44704, 0) + ' mph');
+  html += row('Frequency', fmtP(nf[0], 6) + unit(nf[1]), noteSub);
+  html += row('Period T = 1/f', fmtP(nt[0], 4) + ' ' + nt[1]);
+  html += row('Wavenumber k = 2π/λ', fmtP(k, 6) + unit('rad/m'));
+  if (isAir) html += row('Air temperature', fmtP(t, 4) + ' °C', fmtC(t * 9 / 5 + 32, 0) + ' °F');
+  var fTxt = 'λ = v ÷ f = ' + fmtP(v, 4) + ' m/s ÷ ' + fmtP(f, 4) + ' Hz = ' + fmtP(lam, 4) + ' m';
+  if (isAir) html += formula('v = 331.3 × √(1 + T ÷ 273.15) = 331.3 × √(1 + ' + fmtP(t, 4) + ' ÷ 273.15) = ' + fmtP(v, 4) + ' m/s');
+  html += formula(fTxt);
+  out.innerHTML = html;
+
+  COPY.sound = 'WAVELENGTH CALCULATOR · SOUND MODE — StudyWithSTEM\n'
+    + 'Frequency f = ' + fmtP(nf[0], 6) + ' ' + nf[1] + '\n'
+    + 'Medium: ' + medLabel + ' → v = ' + fmtP(v, 4) + ' m/s\n'
+    + 'Wavelength λ = ' + fmtP(nl[0], 4) + ' ' + nl[1] + '\n'
+    + 'Period T = ' + fmtP(nt[0], 4) + ' ' + nt[1] + '\n'
+    + (note ? 'Nearest note: ' + note.name + (note.cents === 0 ? ' (in tune)' : ' (' + (note.cents > 0 ? '+' : '') + note.cents + ' cents)') + '\n' : '')
+    + plain(fTxt) + '\n' + TOOL_URL;
+}
+
+/* ================= PANEL 4 · STRING WAVES ================= */
+function calcString(){
+  var out = $('st-out'), err = $('st-err');
+  err.classList.remove('show');
+  var F = readPos($('st-t'));
+  if (F === null) return fail(err, out, 'Enter a string tension greater than zero, in ' + $('st-t-u').value + '.');
+  var mu = readPos($('st-mu'));
+  if (mu === null) return fail(err, out, 'Enter a linear density greater than zero, in ' + $('st-mu-u').value + '.');
+  var f = readPos($('st-f'));
+  if (f === null) return fail(err, out, 'Enter a frequency greater than zero, in Hz.');
+  F *= TENu[$('st-t-u').value];
+  mu *= MUu[$('st-mu-u').value];
+  var v = Math.sqrt(F / mu);
+  var lam = v / f;
+  if (!isFinite(v) || !isFinite(lam) || v <= 0 || lam <= 0){
+    return fail(err, out, 'Those numbers are too extreme to compute — try more moderate values.');
+  }
+
+  var nl = niceLen(lam), nt = niceTime(1 / f);
+  var html = hero('WAVELENGTH λ', fmtP(nl[0], 4) + unit(nl[1]), 'λ = v ÷ f · v = √(F ÷ µ)');
+  html += row('Wave speed', fmtP(v, 6) + unit('m/s'), 'v = √(F ÷ µ) = √(' + fmtP(F, 4) + ' ÷ ' + fmtP(mu, 4) + ')');
+  html += row('Frequency', fmtP(f, 6) + unit('Hz'), 'period T = 1/f = ' + fmtP(nt[0], 4) + ' ' + nt[1]);
+  html += row('Tension F', fmtP(F, 6) + unit('N'), fmtC(F / 4.4482216152605, 1) + ' lbf');
+  html += row('Linear density µ', fmtP(mu * 1000, 6) + unit('g/m'), fmtP(mu, 6) + ' kg/m');
+  var fTxt = 'λ = √(F ÷ µ) ÷ f = √(' + fmtP(F, 4) + ' N ÷ ' + fmtP(mu, 4) + ' kg/m) ÷ ' + fmtP(f, 4) + ' Hz = ' + fmtP(lam, 4) + ' m';
+  html += formula(fTxt);
+  out.innerHTML = html;
+
+  COPY.str = 'WAVELENGTH CALCULATOR · STRING MODE — StudyWithSTEM\n'
+    + 'Tension F = ' + fmtP(F, 6) + ' N\n'
+    + 'Linear density µ = ' + fmtP(mu * 1000, 6) + ' g/m\n'
+    + 'Frequency f = ' + fmtP(f, 6) + ' Hz\n'
+    + 'Wave speed v = ' + fmtP(v, 6) + ' m/s\n'
+    + 'Wavelength λ = ' + fmtP(nl[0], 4) + ' ' + nl[1] + '\n'
+    + plain(fTxt) + '\n' + TOOL_URL;
+}
+
+/* ================= TABS ================= */
+var tabs = [].slice.call(document.querySelectorAll('.ttab'));
+var panels = [].slice.call(document.querySelectorAll('.tpanel'));
+tabs.forEach(function(t){
+  t.addEventListener('click', function(){
+    tabs.forEach(function(x){
+      x.classList.toggle('active', x === t);
+      x.setAttribute('aria-selected', x === t ? 'true' : 'false');
+    });
+    panels.forEach(function(p){ p.classList.toggle('active', p.id === 'panel-' + t.dataset.tab); });
+  });
+});
+
+/* ================= LIVE RECALCULATION ================= */
+function calcAll(){ calcWave(); calcLight(); calcSound(); calcString(); }
+[].slice.call(document.querySelectorAll('#calculator input, #calculator select')).forEach(function(el){
+  if (el.id === 'w-target') return;
+  el.addEventListener('input', calcAll);
+  el.addEventListener('change', calcAll);
+});
+
+ $('w-target').addEventListener('change', function(){
+  if (waveLast){
+    var nl = niceLen(waveLast.lam), nf = niceFreq(waveLast.f), v = waveLast.v;
+    $('w-l-u').value = nl[1]; $('w-l').value = sig(nl[0]);
+    $('w-f-u').value = nf[1]; $('w-f').value = sig(nf[0]);
+    var vu = $('w-v-u').value;
+    $('w-v').value = sig(vu === 'km/h' ? v * 3.6 : vu === 'mph' ? v / 0.44704 : vu === 'ft/s' ? v / 0.3048 : v);
+  }
+  calcWave();
+});
+
+segBtns.forEach(function(b){ b.addEventListener('click', function(){ setLightMode(b.dataset.mode); }); });
+
+/* ================= EXAMPLE CHIPS ================= */
+function onChips(sel, fn){
+  [].slice.call(document.querySelectorAll(sel + ' .t-chip')).forEach(function(c){
+    c.addEventListener('click', function(){ fn(c); });
+  });
+}
+onChips('#panel-wave', function(c){
+  var d = c.dataset;
+  if (d.target) $('w-target').value = d.target;
+  if (d.l !== undefined){ $('w-l').value = d.l; if (d.lu) $('w-l-u').value = d.lu; }
+  if (d.f !== undefined){ $('w-f').value = d.f; if (d.fu) $('w-f-u').value = d.fu; }
+  if (d.v !== undefined){ $('w-v').value = d.v; if (d.vu) $('w-v-u').value = d.vu; }
+  calcWave();
+});
+onChips('#panel-light', function(c){
+  var d = c.dataset;
+  if (d.mode){
+    lightMode = d.mode;
+    segBtns.forEach(function(b){ b.classList.toggle('active', b.dataset.mode === lightMode); });
+    setLightUnits(lightMode);
+    lightLabels();
+  }
+  if (d.unit) $('p-in-u').value = d.unit;
+  if (d.val !== undefined) $('p-in').value = d.val;
+  calcLight();
+});
+onChips('#panel-sound', function(c){
+  var d = c.dataset;
+  if (d.f !== undefined){ $('so-f').value = d.f; if (d.fu) $('so-f-u').value = d.fu; }
+  if (d.med) $('so-med').value = d.med;
+  if (d.t !== undefined) $('so-t').value = d.t;
+  calcSound();
+});
+onChips('#panel-string', function(c){
+  var d = c.dataset;
+  if (d.t !== undefined){ $('st-t').value = d.t; if (d.tu) $('st-t-u').value = d.tu; }
+  if (d.mu !== undefined){ $('st-mu').value = d.mu; if (d.muu) $('st-mu-u').value = d.muu; }
+  if (d.f !== undefined) $('st-f').value = d.f;
+  calcString();
+});
+
+/* ================= COPY BUTTONS ================= */
+function fallbackCopy(txt){
+  var ta = document.createElement('textarea');
+  ta.value = txt;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch(e){}
+  ta.remove();
+}
+[['w-copy','wave'], ['p-copy','light'], ['so-copy','sound'], ['st-copy','str']].forEach(function(pair){
+  var btn = $(pair[0]);
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+    var txt = COPY[pair[1]];
+    if (!txt) return;
+    var sp = btn.querySelector('span');
+    var old = sp.textContent;
+    var done = function(){
+      sp.textContent = 'COPIED';
+      btn.classList.add('done');
+      setTimeout(function(){ sp.textContent = old; btn.classList.remove('done'); }, 1500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(done, function(){ fallbackCopy(txt); done(); });
+    } else { fallbackCopy(txt); done(); }
+  });
+});
+
+/* ================= INIT ================= */
+setLightUnits(lightMode);
+lightLabels();
+calcAll();
+})();
+</script>
+</body>
+</html>
