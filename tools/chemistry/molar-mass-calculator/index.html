@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Molar Mass Calculator — Free Online Tool for Molar Mass, Percent Composition & Mole Conversions | StudyWithSTEM</title>
+<meta name="description" content="Free online molar mass calculator — find molar mass from any chemical formula, convert grams to moles or moles to grams, and get percent composition instantly. No sign-up.">
+<meta name="keywords" content="molar mass calculator, calculate molar mass, chemical formula calculator, molecular weight calculator, grams to moles calculator, moles to grams calculator, percent composition calculator, atomic mass calculator, free online chemistry tool">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/chemistry/molar-mass-calculator/">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Molar Mass Calculator — Molar Mass, Percent Composition & Mole Conversions | StudyWithSTEM">
+<meta property="og:description" content="Free molar mass calculator with four modes — compute molar mass, convert grams to moles or moles to grams, and find percent composition. Instant results with a full element breakdown.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/chemistry/molar-mass-calculator/">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/molar-mass-calculator.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM Molar Mass Calculator — free online chemistry tool">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Molar Mass Calculator — Free Online Tool | StudyWithSTEM">
+<meta name="twitter:description" content="Compute molar mass, convert grams to moles or moles to grams, and find percent composition — instant chemistry answers with a full element breakdown.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/molar-mass-calculator.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Chemistry", "item": "https://studywithstem.github.io/tools/chemistry/" },
+    { "@type": "ListItem", "position": 4, "name": "Molar Mass Calculator", "item": "https://studywithstem.github.io/tools/chemistry/molar-mass-calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Molar Mass Calculator",
+  "url": "https://studywithstem.github.io/tools/chemistry/molar-mass-calculator/",
+  "description": "Free online molar mass calculator with four modes: compute molar mass from any chemical formula, convert grams to moles, convert moles to grams, and find percent composition by mass. Shows a full element-by-element breakdown for every result.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Molar mass calculation from any chemical formula, including parentheses and hydrates",
+    "Grams to moles conversion",
+    "Moles to grams conversion",
+    "Percent composition by mass for every element in a formula"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is molar mass?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Molar mass is the mass of one mole of a substance, measured in grams per mole (g/mol). It's found by adding up the atomic masses of every atom in the chemical formula, each multiplied by how many times that atom appears." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate molar mass from a chemical formula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Type the formula into the Molar mass tab — parentheses, subscripts and hydrates like CuSO4·5H2O all work. The calculator parses every atom, multiplies each element's atomic mass by how many times it appears, and adds the results together to get the total molar mass in g/mol, with a full per-element breakdown." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert grams to moles?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide the mass by the molar mass: n = m ÷ M. Enter the formula and the mass in the Grams to moles tab and the calculator works out the molar mass automatically, then returns the number of moles and formula units." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert moles to grams?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Multiply the number of moles by the molar mass: m = n × M. Enter the formula and the number of moles in the Moles to grams tab and the calculator returns the mass in grams, kilograms, milligrams, pounds and ounces." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is percent composition and how is it calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Percent composition is the percentage of a compound's total mass contributed by each element. For each element it's calculated as (count × atomic mass ÷ molar mass) × 100. The Percent composition tab lists this for every element in a formula, ranked from largest to smallest share." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this calculator handle hydrates like CuSO4·5H2O?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Write the water molecules after a middle dot or asterisk, such as CuSO4·5H2O or CuSO4*5H2O, and the calculator adds the water's atoms into the total molar mass and breakdown automatically." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this tool free, and is my data sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It is completely free and runs entirely in your browser — nothing you type is uploaded, logged, or sent to a server. No account, no sign-up, no limits." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, non-3D) ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= MOLAR MASS CALCULATOR (page-specific layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.tool-tabs{display:flex; border-bottom:1px solid var(--edge); overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.tool-tabs::-webkit-scrollbar{display:none;}
+.ttab{
+  flex:1 0 auto; padding:17px 18px; background:none; border:none; cursor:pointer; white-space:nowrap;
+  position:relative; margin-bottom:-1px; font:600 .82rem/1.1 var(--f-sans); color:var(--muted);
+  transition:color .25s, background .25s;
+}
+.ttab .mono{font:700 .58rem var(--f-mono); letter-spacing:.08em; color:var(--faint); margin-right:9px;}
+.ttab::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--accent); transform:scaleX(0); transition:transform .3s ease;}
+.ttab:hover{color:var(--ink); background:var(--panel);}
+.ttab.active{color:var(--accent);}
+.ttab.active .mono{color:var(--accent);}
+.ttab.active::after{transform:scaleX(1);}
+
+.tpanel{display:none; padding:30px;}
+.tpanel.active{display:block;}
+.tool-grid{display:grid; grid-template-columns:.92fr 1.08fr; gap:32px; align-items:start;}
+
+.t-field{margin-bottom:20px;}
+.t-field:last-child{margin-bottom:0;}
+.t-field>label{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;}
+.t-field .hint{font:.76rem/1.5 var(--f-sans); color:var(--faint); margin-top:7px;}
+
+.t-num{position:relative;}
+.t-num input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 58px 13px 15px; color:var(--ink); font:600 1.04rem var(--f-mono); transition:border-color .25s;
+}
+.t-num input:focus{outline:none; border-color:var(--accent);}
+.t-num .suf{position:absolute; right:14px; top:50%; transform:translateY(-50%); font:700 .68rem var(--f-mono); letter-spacing:.06em; color:var(--faint); pointer-events:none;}
+
+.t-formula input{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 15px; color:var(--ink); font:700 1.15rem var(--f-mono); letter-spacing:.01em; transition:border-color .25s;
+}
+.t-formula input:focus{outline:none; border-color:var(--accent);}
+
+.t-pair{display:grid; grid-template-columns:1fr .95fr; gap:10px;}
+.t-pair .t-num input{padding-right:15px;}
+
+.t-select{position:relative;}
+.t-select select{
+  width:100%; height:100%; appearance:none; -webkit-appearance:none; cursor:pointer;
+  background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 34px 13px 15px; color:var(--ink); font:.9rem var(--f-sans); transition:border-color .25s;
+}
+.t-select select:focus{outline:none; border-color:var(--accent);}
+.t-select select option{background:var(--bg); color:var(--ink);}
+.t-select svg{position:absolute; right:12px; top:50%; transform:translateY(-50%); width:14px; height:14px; color:var(--faint); pointer-events:none; transition:color .25s;}
+.t-select:focus-within svg{color:var(--accent);}
+
+.t-examples{display:flex; flex-wrap:wrap; gap:8px;}
+.t-chip{
+  font:700 .6rem var(--f-mono); letter-spacing:.07em; color:var(--muted); white-space:nowrap; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:8px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.t-chip:hover{color:var(--accent); border-color:var(--accent);}
+
+.t-err{
+  display:none; margin-top:16px; font:600 .72rem/1.6 var(--f-mono); color:var(--amber);
+  border:1px dashed var(--amber); border-radius:10px; padding:11px 13px;
+}
+.t-err.show{display:block;}
+
+.t-results{
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px;
+  padding:20px 20px 16px; position:sticky; top:calc(var(--navh) + 18px);
+}
+.res-head{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:2px 2px 14px; border-bottom:1px dashed var(--edge-strong);}
+.res-head .rl{font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint);}
+
+.t-copy{
+  display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+  font:700 .6rem var(--f-mono); letter-spacing:.1em; color:var(--muted);
+  border:1px solid var(--edge-strong); background:var(--panel); border-radius:8px; padding:8px 11px;
+  transition:color .25s, border-color .25s;
+}
+.t-copy svg{width:12px; height:12px;}
+.t-copy:hover, .t-copy.done{color:var(--accent); border-color:var(--accent);}
+
+.res-hero{padding:18px 2px 14px;}
+.res-hero .rl{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint);}
+.res-hero .rv{display:block; font:700 clamp(1.9rem, 4.5vw, 2.5rem)/1.05 var(--f-mono); color:var(--accent); margin-top:8px; letter-spacing:-.02em; word-break:break-word;}
+.res-hero .rv sup{font-size:.55em;}
+.res-hero .rs{display:block; font:600 .76rem/1.6 var(--f-mono); color:var(--muted); margin-top:7px; word-break:break-word;}
+.res-hero .rs sup{font-size:.6em;}
+.res-heroes{display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:16px 0 8px;}
+.res-heroes .res-hero{padding:0;}
+
+.res-row{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:11px 2px; border-top:1px dashed var(--edge);}
+.res-row .rk{font:.82rem var(--f-sans); color:var(--muted);}
+.res-row .rvv{font:700 .84rem var(--f-mono); color:var(--ink); text-align:right; word-break:break-word;}
+.res-row .rvv small{display:block; font:600 .64rem/1.5 var(--f-mono); color:var(--faint); margin-top:3px;}
+.res-row .rvv sup, .res-formula sup{font-size:.6em;}
+
+.res-formula{
+  margin:14px 2px 4px; padding:12px 14px; border:1px dashed var(--edge-strong); border-radius:10px;
+  font:600 .72rem/1.8 var(--f-mono); color:var(--muted); overflow-x:auto; white-space:nowrap;
+}
+.res-formula b{color:var(--accent);}
+
+.t-wait{
+  margin:14px 2px 6px; padding:30px 16px; border:1px dashed var(--edge); border-radius:10px;
+  font:600 .7rem var(--f-mono); letter-spacing:.08em; color:var(--faint); text-align:center;
+}
+
+.t-seg{display:flex; border:1px solid var(--edge-strong); border-radius:10px; overflow:hidden; margin-bottom:20px;}
+.t-seg button{
+  flex:1; padding:11px 10px; background:none; border:none; cursor:pointer;
+  font:600 .78rem/1.2 var(--f-sans); color:var(--muted); transition:background .25s, color .25s;
+}
+.t-seg button + button{border-left:1px solid var(--edge-strong);}
+.t-seg button.active{background:var(--accent); color:var(--accent-ink); font-weight:700;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
+}
+.fx .formula sup{font-size:.6em;}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .tool-grid{grid-template-columns:1fr; gap:24px;}
+  .t-results{position:static;}
+  .tpanel{padding:22px 18px 26px;}
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .res-heroes{grid-template-columns:1fr; gap:10px;}
+  .ttab{padding:15px 13px; font-size:.76rem;}
+  .t-num input{padding:12px 52px 12px 14px; font-size:.98rem;}
+  .t-formula input{padding:12px 14px; font-size:1.05rem;}
+  .t-pair{grid-template-columns:1fr; gap:8px;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · CHEMISTRY</p>
+    <h1>Molar Mass Calculator</h1>
+    <p class="lede">Type any chemical formula to get its molar mass, percent composition, and convert between grams and moles — all instantly.</p>
+    <span class="updated"><i></i>4 MODES · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="calculator">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE CALCULATOR</span>
+      <h2>Four calculators, one panel.</h2>
+      <p>Pick a mode below — type any valid chemical formula, including parentheses and hydrates, and every result comes with a full element-by-element breakdown.</p>
+    </div>
+
+    <div class="tool-shell">
+
+      <div class="tool-tabs" role="tablist" aria-label="Molar mass calculator modes">
+        <button class="ttab active" id="tab-mm" role="tab" aria-selected="true"  data-tab="mm" type="button"><span class="mono">01</span>Molar mass</button>
+        <button class="ttab" id="tab-g2m" role="tab" aria-selected="false" data-tab="g2m" type="button"><span class="mono">02</span>Grams to moles</button>
+        <button class="ttab" id="tab-m2g" role="tab" aria-selected="false" data-tab="m2g" type="button"><span class="mono">03</span>Moles to grams</button>
+        <button class="ttab" id="tab-pct" role="tab" aria-selected="false" data-tab="pct" type="button"><span class="mono">04</span>% composition</button>
+      </div>
+
+      <!-- ========== PANEL 1 · MOLAR MASS ========== -->
+      <div class="tpanel active" id="panel-mm" role="tabpanel" aria-labelledby="tab-mm">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="mm-formula">Chemical formula</label>
+              <div class="t-formula"><input type="text" id="mm-formula" value="C6H12O6" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+              <p class="hint">Use parentheses for groups and a middle dot or asterisk for hydrates, e.g. CuSO4·5H2O.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-formula="H2O">WATER · H2O</button>
+                <button type="button" class="t-chip" data-formula="C6H12O6">GLUCOSE · C6H12O6</button>
+                <button type="button" class="t-chip" data-formula="Fe2(SO4)3">IRON(III) SULFATE</button>
+                <button type="button" class="t-chip" data-formula="CuSO4*5H2O">COPPER SULFATE HYDRATE</button>
+              </div>
+            </div>
+            <p class="t-err" id="mm-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="mm-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="mm-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 2 · GRAMS TO MOLES ========== -->
+      <div class="tpanel" id="panel-g2m" role="tabpanel" aria-labelledby="tab-g2m">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="g2m-formula">Chemical formula</label>
+              <div class="t-formula"><input type="text" id="g2m-formula" value="H2O" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+              <p class="hint">The substance whose moles you want to find.</p>
+            </div>
+            <div class="t-field">
+              <label for="g2m-mass">Mass</label>
+              <div class="t-pair">
+                <div class="t-num"><input type="number" id="g2m-mass" value="18" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+                <div class="t-select">
+                  <select id="g2m-mass-u">
+                    <option value="g" selected>g</option>
+                    <option value="kg">kg</option>
+                    <option value="mg">mg</option>
+                    <option value="lb">lb</option>
+                    <option value="oz">oz</option>
+                  </select>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+              </div>
+              <p class="hint">The amount of the substance you're starting with.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-formula="H2O" data-mass="18" data-massu="g">18 G OF WATER</button>
+                <button type="button" class="t-chip" data-formula="NaCl" data-mass="58.44" data-massu="g">58.44 G OF NaCl</button>
+                <button type="button" class="t-chip" data-formula="C6H12O6" data-mass="1" data-massu="kg">1 KG OF GLUCOSE</button>
+              </div>
+            </div>
+            <p class="t-err" id="g2m-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="g2m-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="g2m-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 3 · MOLES TO GRAMS ========== -->
+      <div class="tpanel" id="panel-m2g" role="tabpanel" aria-labelledby="tab-m2g">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="m2g-formula">Chemical formula</label>
+              <div class="t-formula"><input type="text" id="m2g-formula" value="NaCl" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+              <p class="hint">The substance whose mass you want to find.</p>
+            </div>
+            <div class="t-field">
+              <label for="m2g-moles">Moles</label>
+              <div class="t-num"><input type="number" id="m2g-moles" value="1" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+              <p class="hint">The known amount of substance, in moles.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-formula="NaCl" data-moles="1">1 MOL NaCl</button>
+                <button type="button" class="t-chip" data-formula="H2O" data-moles="2">2 MOL H2O</button>
+                <button type="button" class="t-chip" data-formula="CO2" data-moles="0.5">0.5 MOL CO2</button>
+              </div>
+            </div>
+            <p class="t-err" id="m2g-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="m2g-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="m2g-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== PANEL 4 · PERCENT COMPOSITION ========== -->
+      <div class="tpanel" id="panel-pct" role="tabpanel" aria-labelledby="tab-pct">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+            <div class="t-field">
+              <label for="pct-formula">Chemical formula</label>
+              <div class="t-formula"><input type="text" id="pct-formula" value="CaCO3" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+              <p class="hint">See what share of the total mass each element contributes.</p>
+            </div>
+            <div class="t-field">
+              <label>One-click examples</label>
+              <div class="t-examples">
+                <button type="button" class="t-chip" data-formula="H2O">H2O</button>
+                <button type="button" class="t-chip" data-formula="NaCl">NaCl</button>
+                <button type="button" class="t-chip" data-formula="C6H12O6">C6H12O6</button>
+                <button type="button" class="t-chip" data-formula="CaCO3">CaCO3</button>
+              </div>
+            </div>
+            <p class="t-err" id="pct-err" role="alert"></p>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULTS</span>
+              <button class="t-copy" type="button" id="pct-copy" aria-label="Copy results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span>COPY</span>
+              </button>
+            </div>
+            <div id="pct-out"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE</span>
+      <h2>A formula in, an answer out.</h2>
+      <p>No manual required — but here's the entire flow in four moves.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n mono">STEP 01</span>
+        <h3>Pick a mode</h3>
+        <p><strong>Molar mass</strong> for a formula alone. <strong>Grams to moles</strong> or <strong>Moles to grams</strong> for the two conversions. <strong>% composition</strong> to see each element's share of the mass.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 02</span>
+        <h3>Type the formula</h3>
+        <p>Standard notation works as-is — capital-then-lowercase symbols, numbers for counts, parentheses for groups, and a middle dot or asterisk before a hydrate's water. The example chips fill everything in with one tap.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 03</span>
+        <h3>Read the results</h3>
+        <p>The main answer sits up top in large type. A full per-element breakdown sits below it, and the exact calculation with your numbers substituted sits at the bottom.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 04</span>
+        <h3>Trust the checks</h3>
+        <p>Typos, unknown elements, mismatched parentheses, and impossible values like negative mass all get flagged with a plain-English reason instead of a wrong answer. Copy any result set with one click.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE FORMULA ============ -->
+<section class="sec" id="formulas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · THE FORMULA</span>
+      <h2>One idea, three ways to use it.</h2>
+      <p>Every mode above builds on the same relationship between mass, moles, and atomic weight.</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>Molar mass</h3>
+        <div class="formula">M = Σ (nᵢ · Aᵢ)</div>
+        <p>Multiply each element's atom count by its atomic mass, then add every element together. Result comes out in grams per mole (g/mol).</p>
+      </div>
+      <div class="fx">
+        <h3>Mass ↔ moles</h3>
+        <div class="formula">n = m ÷ M &nbsp;|&nbsp; m = n · M</div>
+        <p>Divide mass by molar mass to get moles, or multiply moles by molar mass to get mass back.</p>
+      </div>
+      <div class="fx">
+        <h3>Percent composition</h3>
+        <div class="formula">%El = (nᵢ·Aᵢ ÷ M) × 100</div>
+        <p>Each element's contribution to the molar mass, divided by the total, gives its share of the compound's mass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-layout">
+    <div class="sec-head">
+      <span class="sec-idx mono">04 · FAQ</span>
+      <h2>Questions people actually ask.</h2>
+      <p>The short answers — with the long ones one tap away.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>What is molar mass?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Molar mass is the mass of one mole of a substance, measured in grams per mole (g/mol). It's found by adding up the atomic masses of every atom in the chemical formula, each multiplied by how many times that atom appears.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How do you calculate molar mass from a chemical formula?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Type the formula into the <strong>Molar mass</strong> tab — parentheses, subscripts and hydrates like <code>CuSO4·5H2O</code> all work. The calculator parses every atom, multiplies each element's atomic mass by its count, and adds the results together for the total molar mass and a full per-element breakdown.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I convert grams to moles?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Divide mass by molar mass: <code>n = m ÷ M</code>. Enter the formula and the mass in the <strong>Grams to moles</strong> tab and the calculator works out the molar mass automatically, then returns the number of moles and formula units.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I convert moles to grams?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Multiply moles by molar mass: <code>m = n × M</code>. Enter the formula and the number of moles in the <strong>Moles to grams</strong> tab and the calculator returns mass in grams, kilograms, milligrams, pounds and ounces.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What is percent composition and how is it calculated?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Percent composition is the share of a compound's total mass contributed by each element, calculated as <code>(count × atomic mass ÷ molar mass) × 100</code>. The <strong>% composition</strong> tab lists this for every element, ranked from largest to smallest share.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Can this calculator handle hydrates like CuSO4·5H2O?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Yes. Write the water molecules after a middle dot or asterisk, such as <code>CuSO4·5H2O</code> or <code>CuSO4*5H2O</code>, and the calculator adds the water's atoms into the total molar mass and breakdown automatically.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this tool free, and where does my data go?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>It's completely free and runs entirely in your browser — nothing you type is uploaded, logged, or sent to any server. No account, no sign-up, no limits.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER — same footer as every page ============ -->
+<!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
+<section class="pre-footer" id="subscribe">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">SUBSCRIBE</span>
+      <h2>Never miss a <span class="hl">drop.</span></h2>
+      <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
+      <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Poster-deep STEM infographics, engineered to stick. New drop every Friday.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span>studywithstem@gmail.com<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Post</a></li>
+          <li><a href="/page/about/">About</a></li>
+          <li><a href="/page/faq/">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/page/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="/page/copyrights/">Copyrights</a></li>
+          <li><a href="/page/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/></svg>
+            Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="foot-mid">
+      <span class="foot-meta" id="footYear">© STUDYWITHSTEM</span>
+      <span class="foot-meta">DESIGNED &amp; ENGINEERED FOR THE CURIOUS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================
+   BASICS
+========================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS3D = typeof THREE !== 'undefined';
+
+/* =========================================================
+   THEME SYSTEM — one source of truth for CSS *and* WebGL
+   (only the footer starfield uses Three.js on this page).
+========================================================= */
+let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
+let themeTarget = themeMix;
+const themed = [];
+
+function applyRec(r, mix){
+  r.m.color.copy(r.d).lerp(r.l, mix);
+  r.m.opacity = r.dOp + (r.lOp - r.dOp) * mix;
+  r.m.blending = mix < .5 ? THREE.AdditiveBlending : THREE.NormalBlending;
+}
+function themedMat(mat, darkHex, lightHex, darkOp, lightOp){
+  const rec = { m: mat, d: new THREE.Color(darkHex), l: new THREE.Color(lightHex), dOp: darkOp, lOp: lightOp };
+  mat.transparent = true;
+  themed.push(rec);
+  applyRec(rec, themeMix);
+  return mat;
+}
+function tickTheme(){
+  if (themeMix === themeTarget) return;
+  if (RM) themeMix = themeTarget;
+  else {
+    themeMix += (themeTarget - themeMix) * .1;
+    if (Math.abs(themeTarget - themeMix) < .001) themeMix = themeTarget;
+  }
+  themed.forEach(r => applyRec(r, themeMix));
+}
+
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  themeTarget = t === 'light' ? 1 : 0;
+  try{ localStorage.setItem('sws-theme', t); }catch(e){}
+  const b = $('#themeToggle');
+  if (b) b.setAttribute('aria-pressed', String(t === 'light'));
+  const root = document.documentElement;
+  root.classList.add('theme-anim');
+  clearTimeout(setTheme._t);
+  setTheme._t = setTimeout(() => root.classList.remove('theme-anim'), 650);
+}
+(function(){
+  const b = $('#themeToggle');
+  if (b){
+    b.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+    b.addEventListener('click', () =>
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+  }
+})();
+
+let SPRITE = null;
+if (HAS3D){
+  try{
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const x = c.getContext('2d');
+    const g = x.createRadialGradient(32, 32, 0, 32, 32, 30);
+    g.addColorStop(0, 'rgba(255,255,255,1)');
+    g.addColorStop(.5, 'rgba(255,255,255,.45)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+    SPRITE = new THREE.CanvasTexture(c);
+  }catch(e){}
+}
+
+/* =========================================================
+   NAV — hide on scroll down, scroll-progress segment.
+========================================================= */
+const nav = $('#nav');
+const progBar = $('.nav-progress');
+const progSeg = $('#navProg');
+let lastY = 0, sTick = false;
+
+function updProg(){
+  if (!progSeg || !progBar) return;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const p = max > 0 ? Math.min(1, scrollY / max) : 0;
+  const bw = progBar.clientWidth;
+  if (!bw) return;
+  const sw = Math.max(40, Math.min(90, bw * .12));
+  progSeg.style.width = sw + 'px';
+  progSeg.style.transform = 'translateX(' + (p * (bw - sw)) + 'px)';
+}
+function onScroll(){
+  const y = scrollY;
+  nav.classList.toggle('scrolled', y > 8);
+  const menuOpen = document.body.classList.contains('menu-open');
+  if (y > lastY && y > 180 && !menuOpen) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  updProg();
+}
+addEventListener('scroll', () => {
+  if (!sTick){ sTick = true; requestAnimationFrame(() => { onScroll(); sTick = false; }); }
+}, { passive: true });
+addEventListener('resize', updProg);
+addEventListener('load', updProg);
+onScroll();
+
+/* mobile menu */
+(function(){
+  const burger = $('#burger');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('#mmenu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+})();
+
+/* footer reveal + back-to-top + year */
+(function(){
+  const foot = $('#footer');
+  if (foot) new IntersectionObserver((es, o) => {
+    es.forEach(e => { if (e.isIntersecting){ foot.classList.add('in'); o.disconnect(); } });
+  }, { threshold: .12 }).observe(foot);
+
+  const bt = $('#backTop');
+  if (bt) bt.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+  const yr = $('#footYear');
+  if (yr) yr.textContent = '© ' + new Date().getFullYear() + ' STUDYWITHSTEM';
+})();
+
+/* =========================================================
+   MOLAR MASS CALCULATOR — all math + parsing runs locally, live
+========================================================= */
+(function(){
+  'use strict';
+
+  /* ---------- number & formatting helpers ---------- */
+  function expHTML(x){
+    if (x === 0) return '0';
+    const parts = x.toExponential(3).split('e');
+    let m = parts[0];
+    if (m.indexOf('.') > -1) m = m.replace(/0+$/, '').replace(/\.$/, '');
+    return m + '×10<sup>' + parseInt(parts[1], 10) + '</sup>';
+  }
+  function fmt(x, sig){
+    sig = sig || 6;
+    if (x === null || x === undefined || !isFinite(x)) return '—';
+    if (x === 0) return '0';
+    const ax = Math.abs(x);
+    if (ax < 1e-6 || ax >= 1e12) return expHTML(x);
+    let s = x.toPrecision(sig);
+    if (s.indexOf('.') > -1) s = s.replace(/0+$/, '').replace(/\.$/, '');
+    return s;
+  }
+
+  /* ---------- periodic table: symbol -> [name, atomic mass] ---------- */
+  const ELEMENTS = {
+    H:['Hydrogen',1.008], He:['Helium',4.0026], Li:['Lithium',6.94], Be:['Beryllium',9.0122],
+    B:['Boron',10.81], C:['Carbon',12.011], N:['Nitrogen',14.007], O:['Oxygen',15.999],
+    F:['Fluorine',18.998], Ne:['Neon',20.180], Na:['Sodium',22.990], Mg:['Magnesium',24.305],
+    Al:['Aluminium',26.982], Si:['Silicon',28.085], P:['Phosphorus',30.974], S:['Sulfur',32.06],
+    Cl:['Chlorine',35.45], Ar:['Argon',39.948], K:['Potassium',39.098], Ca:['Calcium',40.078],
+    Sc:['Scandium',44.956], Ti:['Titanium',47.867], V:['Vanadium',50.942], Cr:['Chromium',51.996],
+    Mn:['Manganese',54.938], Fe:['Iron',55.845], Co:['Cobalt',58.933], Ni:['Nickel',58.693],
+    Cu:['Copper',63.546], Zn:['Zinc',65.38], Ga:['Gallium',69.723], Ge:['Germanium',72.630],
+    As:['Arsenic',74.922], Se:['Selenium',78.971], Br:['Bromine',79.904], Kr:['Krypton',83.798],
+    Rb:['Rubidium',85.468], Sr:['Strontium',87.62], Y:['Yttrium',88.906], Zr:['Zirconium',91.224],
+    Nb:['Niobium',92.906], Mo:['Molybdenum',95.95], Tc:['Technetium',98], Ru:['Ruthenium',101.07],
+    Rh:['Rhodium',102.906], Pd:['Palladium',106.42], Ag:['Silver',107.868], Cd:['Cadmium',112.414],
+    In:['Indium',114.818], Sn:['Tin',118.710], Sb:['Antimony',121.760], Te:['Tellurium',127.60],
+    I:['Iodine',126.904], Xe:['Xenon',131.293], Cs:['Caesium',132.905], Ba:['Barium',137.327],
+    La:['Lanthanum',138.905], Ce:['Cerium',140.116], Pr:['Praseodymium',140.908], Nd:['Neodymium',144.242],
+    Pm:['Promethium',145], Sm:['Samarium',150.36], Eu:['Europium',151.964], Gd:['Gadolinium',157.25],
+    Tb:['Terbium',158.925], Dy:['Dysprosium',162.500], Ho:['Holmium',164.930], Er:['Erbium',167.259],
+    Tm:['Thulium',168.934], Yb:['Ytterbium',173.045], Lu:['Lutetium',174.967], Hf:['Hafnium',178.49],
+    Ta:['Tantalum',180.948], W:['Tungsten',183.84], Re:['Rhenium',186.207], Os:['Osmium',190.23],
+    Ir:['Iridium',192.217], Pt:['Platinum',195.084], Au:['Gold',196.967], Hg:['Mercury',200.592],
+    Tl:['Thallium',204.38], Pb:['Lead',207.2], Bi:['Bismuth',208.980], Po:['Polonium',209],
+    At:['Astatine',210], Rn:['Radon',222], Fr:['Francium',223], Ra:['Radium',226],
+    Ac:['Actinium',227], Th:['Thorium',232.038], Pa:['Protactinium',231.036], U:['Uranium',238.029],
+    Np:['Neptunium',237], Pu:['Plutonium',244], Am:['Americium',243], Cm:['Curium',247],
+    Bk:['Berkelium',247], Cf:['Californium',251], Es:['Einsteinium',252], Fm:['Fermium',257],
+    Md:['Mendelevium',258], No:['Nobelium',259], Lr:['Lawrencium',262], Rf:['Rutherfordium',267],
+    Db:['Dubnium',268], Sg:['Seaborgium',271], Bh:['Bohrium',272], Hs:['Hassium',270],
+    Mt:['Meitnerium',276], Ds:['Darmstadtium',281], Rg:['Roentgenium',280], Cn:['Copernicium',285],
+    Nh:['Nihonium',284], Fl:['Flerovium',289], Mc:['Moscovium',288], Lv:['Livermorium',293],
+    Ts:['Tennessine',294], Og:['Oganesson',294]
+  };
+
+  const AVOGADRO = 6.02214076e23;
+  const MASS_UNITS = { g:1, kg:1000, mg:0.001, lb:453.59237, oz:28.349523125 };
+  const MASS_LABEL = { g:'g', kg:'kg', mg:'mg', lb:'lb', oz:'oz' };
+
+  /* ---------- formula parser: throws Error with a friendly message ---------- */
+  function tokenize(str){
+    const tokens = [];
+    let i = 0;
+    while (i < str.length){
+      const c = str[i];
+      if (c === '(' || c === '['){ tokens.push(c); i++; continue; }
+      if (c === ')' || c === ']'){ tokens.push(c); i++; continue; }
+      if (/[A-Z]/.test(c)){
+        let sym = c; i++;
+        while (i < str.length && /[a-z]/.test(str[i])){ sym += str[i]; i++; }
+        tokens.push(sym);
+        continue;
+      }
+      if (/[0-9.]/.test(c)){
+        let num = c; i++;
+        while (i < str.length && /[0-9.]/.test(str[i])){ num += str[i]; i++; }
+        tokens.push(num);
+        continue;
+      }
+      throw new Error('Unexpected character "' + c + '" in the formula.');
+    }
+    return tokens;
+  }
+
+  function parseTokens(tokens){
+    let pos = 0;
+    function peek(){ return tokens[pos]; }
+    function isNum(t){ return t !== undefined && /^\d+\.?\d*$/.test(t); }
+    function parseGroup(depth){
+      const counts = {};
+      while (pos < tokens.length && peek() !== ')' && peek() !== ']'){
+        const tok = tokens[pos];
+        if (tok === '(' || tok === '['){
+          const opener = tok; pos++;
+          const inner = parseGroup(depth + 1);
+          const closer = peek();
+          if ((opener === '(' && closer !== ')') || (opener === '[' && closer !== ']')){
+            throw new Error('Mismatched parentheses in the formula.');
+          }
+          pos++;
+          let mult = 1;
+          if (isNum(peek())){ mult = parseFloat(tokens[pos]); pos++; }
+          for (const el in inner) counts[el] = (counts[el] || 0) + inner[el] * mult;
+        } else if (/^[A-Z][a-z]*$/.test(tok)){
+          pos++;
+          if (!ELEMENTS[tok]) throw new Error('"' + tok + '" isn\u2019t a recognised element symbol.');
+          let count = 1;
+          if (isNum(peek())){ count = parseFloat(tokens[pos]); pos++; }
+          counts[tok] = (counts[tok] || 0) + count;
+        } else {
+          throw new Error('Couldn\u2019t read the formula near "' + tok + '".');
+        }
+      }
+      return counts;
+    }
+    const counts = parseGroup(0);
+    if (pos !== tokens.length) throw new Error('Mismatched parentheses in the formula.');
+    return counts;
+  }
+
+  function parseSegment(seg){
+    seg = seg.trim();
+    if (!seg) return {};
+    let coeff = 1, rest = seg;
+    const m = seg.match(/^(\d+\.?\d*)([A-Z(\[].*)$/);
+    if (m){ coeff = parseFloat(m[1]); rest = m[2]; }
+    const counts = parseTokens(tokenize(rest));
+    const out = {};
+    for (const el in counts) out[el] = counts[el] * coeff;
+    return out;
+  }
+
+  function parseFormula(formula){
+    formula = (formula || '').replace(/\s+/g, '');
+    if (!formula) throw new Error('Enter a chemical formula.');
+    const segments = formula.split(/[·*]/);
+    const total = {};
+    for (const seg of segments){
+      const counts = parseSegment(seg);
+      for (const el in counts) total[el] = (total[el] || 0) + counts[el];
+    }
+    if (Object.keys(total).length === 0) throw new Error('Enter a chemical formula.');
+    return total;
+  }
+
+  function molarMassOf(counts){
+    let M = 0;
+    for (const el in counts) M += counts[el] * ELEMENTS[el][1];
+    return M;
+  }
+
+  /* ---------- shared UI helpers ---------- */
+  const summaries = { mm:'', g2m:'', m2g:'', pct:'' };
+  function errShow(el, msg){
+    el.textContent = msg || '';
+    el.classList.toggle('show', !!msg);
+  }
+  function fail(out, err, msg, key){
+    errShow(err, msg || '');
+    out.innerHTML = '<div class="t-wait">ENTER A VALID FORMULA — RESULTS APPEAR HERE INSTANTLY</div>';
+    summaries[key] = '';
+  }
+  function rowHTML(key, val, sub){
+    return '<div class="res-row"><span class="rk">' + key + '</span><span class="rvv">' +
+           val + (sub ? '<small>' + sub + '</small>' : '') + '</span></div>';
+  }
+  const TAG = 'Calculated with the StudyWithSTEM Molar Mass Calculator';
+
+  function formulaBreakdownHTML(counts){
+    let h = '';
+    for (const el in counts){
+      const n = counts[el], A = ELEMENTS[el][1], sub = n * A;
+      h += rowHTML(el + ' × ' + fmt(n, 6), fmt(sub) + ' g/mol', ELEMENTS[el][0] + ' · ' + fmt(A, 6) + ' g/mol each');
+    }
+    return h;
+  }
+
+  /* =================== TAB 1 · MOLAR MASS =================== */
+  function renderMM(){
+    const out = $('#mm-out'), err = $('#mm-err');
+    const formula = $('#mm-formula').value;
+    let counts;
+    try { counts = parseFormula(formula); }
+    catch (e) { return fail(out, err, e.message, 'mm'); }
+
+    errShow(err, '');
+    const M = molarMassOf(counts);
+    let h = '<div class="res-hero"><span class="rl">Molar mass</span>' +
+            '<span class="rv">' + fmt(M) + ' <span style="font-size:.5em;">g/mol</span></span>' +
+            '<span class="rs">' + fmt(M / 1000, 6) + ' kg/mol · ' + fmt(M / 453.59237, 6) + ' lb/mol</span></div>';
+    h += formulaBreakdownHTML(counts);
+    const parts = Object.keys(counts).map(el => fmt(counts[el], 6) + '×' + fmt(ELEMENTS[el][1], 6));
+    h += '<div class="res-formula">M = ' + parts.join(' + ') + ' = <b>' + fmt(M) + ' g/mol</b></div>';
+    out.innerHTML = h;
+
+    const lines = Object.keys(counts).map(el =>
+      ELEMENTS[el][0] + ' (' + el + ') × ' + fmt(counts[el], 6) + ' = ' + fmt(counts[el] * ELEMENTS[el][1]) + ' g/mol');
+    summaries.mm = ['Formula: ' + formula.trim(), ...lines, 'Molar mass = ' + fmt(M) + ' g/mol', TAG].join('\n');
+  }
+
+  /* =================== TAB 2 · GRAMS TO MOLES =================== */
+  function renderG2M(){
+    const out = $('#g2m-out'), err = $('#g2m-err');
+    const formula = $('#g2m-formula').value;
+    const massVal = parseFloat($('#g2m-mass').value), unit = $('#g2m-mass-u').value;
+    let counts;
+    try { counts = parseFormula(formula); }
+    catch (e) { return fail(out, err, e.message, 'g2m'); }
+    if (isNaN(massVal)) return fail(out, err, '', 'g2m');
+    if (massVal < 0) return fail(out, err, 'Mass can\u2019t be negative.', 'g2m');
+
+    errShow(err, '');
+    const M = molarMassOf(counts);
+    const grams = massVal * MASS_UNITS[unit];
+    const moles = grams / M;
+    const units = moles * AVOGADRO;
+
+    let h = '<div class="res-hero"><span class="rl">Moles</span>' +
+            '<span class="rv">' + fmt(moles) + ' <span style="font-size:.5em;">mol</span></span>' +
+            '<span class="rs">' + fmt(units, 5) + ' formula units</span></div>';
+    h += rowHTML('Molar mass used', fmt(M) + ' g/mol');
+    h += rowHTML('Mass used', fmt(grams) + ' g', unit !== 'g' ? fmt(massVal) + ' ' + MASS_LABEL[unit] + ' converted' : '');
+    h += '<div class="res-formula">n = m ÷ M = ' + fmt(grams) + ' g ÷ ' + fmt(M) + ' g/mol = <b>' + fmt(moles) + ' mol</b></div>';
+    out.innerHTML = h;
+
+    summaries.g2m = [
+      'Formula: ' + formula.trim(),
+      'Molar mass = ' + fmt(M) + ' g/mol',
+      'Mass = ' + fmt(massVal) + ' ' + MASS_LABEL[unit] + ' (' + fmt(grams) + ' g)',
+      'Moles = ' + fmt(moles) + ' mol  (' + fmt(units, 5) + ' formula units)',
+      TAG
+    ].join('\n');
+  }
+
+  /* =================== TAB 3 · MOLES TO GRAMS =================== */
+  function renderM2G(){
+    const out = $('#m2g-out'), err = $('#m2g-err');
+    const formula = $('#m2g-formula').value;
+    const molesVal = parseFloat($('#m2g-moles').value);
+    let counts;
+    try { counts = parseFormula(formula); }
+    catch (e) { return fail(out, err, e.message, 'm2g'); }
+    if (isNaN(molesVal)) return fail(out, err, '', 'm2g');
+    if (molesVal < 0) return fail(out, err, 'Moles can\u2019t be negative.', 'm2g');
+
+    errShow(err, '');
+    const M = molarMassOf(counts);
+    const grams = molesVal * M;
+    const units = molesVal * AVOGADRO;
+
+    let h = '<div class="res-hero"><span class="rl">Mass</span>' +
+            '<span class="rv">' + fmt(grams) + ' <span style="font-size:.5em;">g</span></span>' +
+            '<span class="rs">' + fmt(grams / 1000, 6) + ' kg · ' + fmt(grams / 453.59237, 6) + ' lb</span></div>';
+    h += rowHTML('Milligrams', fmt(grams / 0.001) + ' mg');
+    h += rowHTML('Ounces', fmt(grams / 28.349523125) + ' oz');
+    h += rowHTML('Molar mass used', fmt(M) + ' g/mol');
+    h += rowHTML('Formula units', fmt(units, 5));
+    h += '<div class="res-formula">m = n × M = ' + fmt(molesVal, 6) + ' mol × ' + fmt(M) + ' g/mol = <b>' + fmt(grams) + ' g</b></div>';
+    out.innerHTML = h;
+
+    summaries.m2g = [
+      'Formula: ' + formula.trim(),
+      'Molar mass = ' + fmt(M) + ' g/mol',
+      'Moles = ' + fmt(molesVal, 6) + ' mol',
+      'Mass = ' + fmt(grams) + ' g  =  ' + fmt(grams / 1000, 6) + ' kg  =  ' + fmt(grams / 453.59237, 6) + ' lb',
+      TAG
+    ].join('\n');
+  }
+
+  /* =================== TAB 4 · PERCENT COMPOSITION =================== */
+  function renderPct(){
+    const out = $('#pct-out'), err = $('#pct-err');
+    const formula = $('#pct-formula').value;
+    let counts;
+    try { counts = parseFormula(formula); }
+    catch (e) { return fail(out, err, e.message, 'pct'); }
+
+    errShow(err, '');
+    const M = molarMassOf(counts);
+    const entries = Object.keys(counts).map(el => {
+      const sub = counts[el] * ELEMENTS[el][1];
+      return { el, n: counts[el], sub, pct: (sub / M) * 100 };
+    }).sort((a, b) => b.pct - a.pct);
+
+    const top = entries[0];
+    let h = '<div class="res-hero"><span class="rl">Largest share</span>' +
+            '<span class="rv">' + top.el + ' <span style="font-size:.5em;">' + fmt(top.pct, 4) + '%</span></span>' +
+            '<span class="rs">Molar mass ' + fmt(M) + ' g/mol</span></div>';
+    entries.forEach(e => {
+      h += rowHTML(ELEMENTS[e.el][0] + ' (' + e.el + ' × ' + fmt(e.n, 6) + ')', fmt(e.pct, 5) + '%', fmt(e.sub) + ' g/mol of the total');
+    });
+    h += '<div class="res-formula">%El = (n·A ÷ M) × 100 — shares always sum to <b>100%</b></div>';
+    out.innerHTML = h;
+
+    summaries.pct = [
+      'Formula: ' + formula.trim(),
+      'Molar mass = ' + fmt(M) + ' g/mol',
+      ...entries.map(e => ELEMENTS[e.el][0] + ' (' + e.el + '): ' + fmt(e.pct, 5) + '%'),
+      TAG
+    ].join('\n');
+  }
+
+  /* ---------- tabs ---------- */
+  $$('.ttab').forEach(btn => btn.addEventListener('click', () => {
+    $$('.ttab').forEach(b => {
+      b.classList.toggle('active', b === btn);
+      b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+    });
+    $$('.tpanel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + btn.dataset.tab));
+  }));
+
+  /* ---------- example chips ---------- */
+  $$('.t-chip').forEach(chip => chip.addEventListener('click', function(){
+    const d = this.dataset;
+    if (this.closest('#panel-mm') && d.formula !== undefined){
+      $('#mm-formula').value = d.formula; renderMM(); return;
+    }
+    if (this.closest('#panel-g2m') && d.formula !== undefined && d.mass !== undefined){
+      $('#g2m-formula').value = d.formula; $('#g2m-mass').value = d.mass; $('#g2m-mass-u').value = d.massu;
+      renderG2M(); return;
+    }
+    if (this.closest('#panel-m2g') && d.formula !== undefined && d.moles !== undefined){
+      $('#m2g-formula').value = d.formula; $('#m2g-moles').value = d.moles;
+      renderM2G(); return;
+    }
+    if (this.closest('#panel-pct') && d.formula !== undefined){
+      $('#pct-formula').value = d.formula; renderPct(); return;
+    }
+  }));
+
+  /* ---------- copy buttons ---------- */
+  function bindCopy(btnId, key){
+    const btn = $(btnId);
+    if (!btn) return;
+    btn.addEventListener('click', async function(){
+      const txt = summaries[key];
+      if (!txt) return;
+      let ok = false;
+      try{ await navigator.clipboard.writeText(txt); ok = true; }
+      catch(e){
+        try{
+          const ta = document.createElement('textarea');
+          ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.select();
+          ok = document.execCommand('copy');
+          ta.remove();
+        }catch(_){}
+      }
+      if (ok){
+        const span = btn.querySelector('span');
+        const old = span.textContent;
+        span.textContent = 'COPIED';
+        btn.classList.add('done');
+        clearTimeout(btn._t);
+        btn._t = setTimeout(() => { span.textContent = old; btn.classList.remove('done'); }, 1600);
+      }
+    });
+  }
+  bindCopy('#mm-copy', 'mm');
+  bindCopy('#g2m-copy', 'g2m');
+  bindCopy('#m2g-copy', 'm2g');
+  bindCopy('#pct-copy', 'pct');
+
+  /* ---------- live wiring ---------- */
+  $('#mm-formula').addEventListener('input', renderMM);
+
+  $('#g2m-formula').addEventListener('input', renderG2M);
+  $('#g2m-mass').addEventListener('input', renderG2M);
+  $('#g2m-mass-u').addEventListener('change', renderG2M);
+
+  $('#m2g-formula').addEventListener('input', renderM2G);
+  $('#m2g-moles').addEventListener('input', renderM2G);
+
+  $('#pct-formula').addEventListener('input', renderPct);
+
+  /* ---------- first paint ---------- */
+  renderMM();
+  renderG2M();
+  renderM2G();
+  renderPct();
+})();
+
+/* =========================================================
+   FOOTER STARFIELD — quiet drift, pauses when off-screen
+========================================================= */
+(function(){
+  const canvas = $('#starfield');
+  if (!canvas) return;
+  if (!HAS3D){ canvas.style.display = 'none'; return; }
+
+  let renderer, scene, camera, pts, raf = null;
+
+  try{
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+    renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+    scene  = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(60, 1, .1, 100);
+    camera.position.z = 15;
+
+    const N = RM ? 80 : 150;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++){
+      pos[i*3]   = (Math.random() - .5) * 36;
+      pos[i*3+1] = (Math.random() - .5) * 22;
+      pos[i*3+2] = (Math.random() - .5) * 12;
+    }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+
+    const mat = new THREE.PointsMaterial({ size: .09, depthWrite: false, map: SPRITE });
+    themedMat(mat, 0xF1EDE2, 0x0B2545, .9, .55);
+    pts = new THREE.Points(geo, mat);
+    scene.add(pts);
+
+    function size(){
+      const r = canvas.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      renderer.setSize(r.width, r.height, false);
+      camera.aspect = r.width / r.height;
+      camera.updateProjectionMatrix();
+    }
+    size();
+    addEventListener('resize', size);
+    addEventListener('load', size);
+
+    function frame(){
+      tickTheme();
+      pts.rotation.y += .0008;
+      pts.rotation.x = Math.sin(Date.now() * .00006) * .05;
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(frame);
+    }
+    function start(){ if (!raf && !RM) raf = requestAnimationFrame(frame); }
+    function stop(){ if (raf){ cancelAnimationFrame(raf); raf = null; } }
+
+    if (RM){
+      tickTheme();
+      renderer.render(scene, camera);
+    } else {
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+      }, { threshold: 0 }).observe(canvas);
+      start();
+    }
+  }catch(e){
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
