@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Bcrypt Generator — Hash & Verify Passwords Online Free | StudyWithSTEM</title>
+<meta name="description" content="Free online bcrypt generator — hash passwords with adjustable cost factor and salt rounds, verify plaintext against a hash, and compare bcrypt vs SHA. Runs entirely in your browser. No upload, no sign-up, no watermark.">
+<meta name="keywords" content="bcrypt generator, bcrypt hash, password hashing, bcrypt online, bcrypt verify, hash password bcrypt, bcrypt cost factor, secure password hashing, bcrypt tool, password hash generator, bcrypt salt, bcrypt rounds, online bcrypt, free bcrypt generator">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/security/bcrypt-generator/index.html">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Bcrypt Generator — Hash & Verify Passwords Online Free | StudyWithSTEM">
+<meta property="og:description" content="Hash passwords with bcrypt — adjustable cost factor, salt rounds, and instant verification. Compare bcrypt vs SHA. Runs entirely in your browser, free and private.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/security/bcrypt-generator/index.html">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/bcrypt-generator.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="StudyWithSTEM Bcrypt Generator Tool — free online tool to hash and verify passwords with bcrypt">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Bcrypt Generator — Free Online Tool to Hash Passwords with Bcrypt | StudyWithSTEM">
+<meta name="twitter:description" content="Hash passwords with bcrypt — adjustable cost factor, salt rounds, and instant verification. Compare bcrypt vs SHA. Runs entirely in your browser, free and private.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/bcrypt-generator.jpg">
+<meta name="twitter:image:alt" content="StudyWithSTEM Bcrypt Generator Tool — free online tool to hash and verify passwords with bcrypt">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Security", "item": "https://studywithstem.github.io/tools/security/" },
+    { "@type": "ListItem", "position": 4, "name": "Bcrypt Generator", "item": "https://studywithstem.github.io/tools/security/bcrypt-generator/index.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Bcrypt Generator",
+  "url": "https://studywithstem.github.io/tools/security/bcrypt-generator/index.html",
+  "description": "Free online bcrypt generator and verifier. Hash passwords with adjustable cost factor and salt rounds, verify plaintext against a bcrypt hash, and compare bcrypt vs SHA — all directly in your browser.",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Generate bcrypt hashes from any plaintext password",
+    "Adjustable cost factor (rounds) from 4 to 14",
+    "Custom salt generation — random per hash or manual salt",
+    "Verify a plaintext password against an existing bcrypt hash",
+    "Compare bcrypt with SHA-256 and MD5 hashing",
+    "See the full bcrypt hash structure broken down (version, cost, salt, hash)",
+    "Entropy and estimated cracking time for the input password",
+    "Copy or download hashes instantly",
+    "Runs entirely in your browser — nothing is uploaded or stored",
+    "Works on desktop, tablet, and mobile"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is bcrypt and why should I use it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bcrypt is a password-hashing function designed to be slow and computationally expensive, which makes brute-force attacks much harder. It automatically generates and stores a salt with each hash, so identical passwords produce different hashes." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the cost factor (rounds) mean?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The cost factor determines how many times the hashing algorithm loops — specifically 2^cost iterations. Higher cost means slower hashing and better resistance to brute-force attacks. A cost of 10–12 is a common balance for web applications." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my passwords sent to a server?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. All hashing and verification happen locally in your browser using JavaScript. Nothing is uploaded, logged, or stored. Closing or refreshing the page clears everything." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I verify a password against a bcrypt hash I already have?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Switch to the Verify tab, paste the bcrypt hash and the plaintext password, and the tool will tell you if they match. This runs entirely client-side." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between bcrypt and SHA-256?",
+      "acceptedAnswer": { "@type": "Answer", "text": "SHA-256 is a fast cryptographic hash — designed for speed and integrity, not password storage. Bcrypt is intentionally slow and includes a salt, making it far better for storing passwords. This tool lets you compare both side by side." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should a bcrypt hash take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A good target is 100–500 milliseconds per hash on your target hardware. Too fast and brute-force becomes easier; too slow and your login system suffers. Adjust the cost factor until you hit that range." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool store or remember any hash I generate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Nothing is saved, logged, or synced anywhere. Once you leave or refresh the page, every hash is gone for good." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this bcrypt generator free to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, it's completely free with no account, no sign-up, and no limit on how many hashes you generate." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO (quiet, minimal — no big detail) ================= */
+.page-hero{
+  position:relative; padding:64px 0 44px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:18px 0 12px; max-width:16ch;}
+.page-hero .lede{max-width:52ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:18px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= TOOL (shared shell layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+.tpanel{padding:30px;}
+.tool-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:start;}
+
+.t-field{margin-top:18px;}
+.t-field:first-child{margin-top:0;}
+.t-field>label{display:block; font:700 .62rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;}
+.t-field .hint{font:.76rem/1.5 var(--f-sans); color:var(--faint); margin-top:7px;}
+
+.t-textarea{
+  width:100%; min-height:230px; resize:vertical;
+  background:var(--bg); border:1px solid var(--edge-strong); border-radius:12px;
+  padding:14px 16px; color:var(--ink); font:.85rem/1.6 var(--f-mono); transition:border-color .2s;
+}
+.t-textarea::placeholder{color:var(--faint);}
+.t-textarea:focus{outline:none; border-color:var(--accent);}
+input.t-textarea{min-height:auto; height:48px;}
+
+.t-examples{display:flex; flex-wrap:wrap; gap:8px;}
+.t-chip{
+  font:700 .6rem var(--f-mono); letter-spacing:.07em; color:var(--muted); white-space:nowrap; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:999px; padding:8px 12px;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.t-chip:hover{color:var(--accent); border-color:var(--accent);}
+.t-chip[aria-pressed="true"]{color:var(--accent-ink); border-color:var(--accent); background:var(--accent);}
+
+.t-go-row{display:flex; gap:10px; margin-top:22px; flex-wrap:wrap;}
+.t-go{
+  flex:1; cursor:pointer; border:1px solid var(--edge-strong); background:var(--accent); color:var(--accent-ink);
+  border-radius:10px; padding:14px 20px; font:700 .88rem var(--f-sans); letter-spacing:.01em; transition:opacity .2s;
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+}
+.t-go:hover{opacity:.88;}
+.t-go:disabled{opacity:.45; cursor:not-allowed;}
+.t-go svg{width:16px; height:16px;}
+.t-reset{
+  flex:none; cursor:pointer; border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  border-radius:10px; padding:14px 18px; font:700 .82rem var(--f-sans); transition:color .2s, border-color .2s;
+}
+.t-reset:hover{color:var(--amber); border-color:var(--amber);}
+.t-reset.pri:hover{color:var(--accent); border-color:var(--accent);}
+
+.t-err{
+  display:none; margin-top:16px; font:600 .72rem/1.6 var(--f-mono); color:var(--amber);
+  border:1px dashed var(--amber); border-radius:10px; padding:11px 13px; white-space:pre-wrap;
+}
+.t-err.show{display:block;}
+
+/* results panel */
+.t-results{
+  border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px;
+  padding:20px 20px 22px; position:sticky; top:calc(var(--navh) + 18px);
+}
+.res-head{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:2px 2px 14px; border-bottom:1px dashed var(--edge-strong);}
+.res-head .rl{font:700 .62rem var(--f-mono); letter-spacing:.15em; color:var(--faint);}
+.res-actions{display:flex; gap:6px;}
+.t-mini{
+  width:32px; height:32px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--muted); border-radius:8px;
+  transition:color .2s, border-color .2s;
+}
+.t-mini:hover{color:var(--accent); border-color:var(--accent);}
+.t-mini svg{width:14px; height:14px;}
+
+.t-wait{
+  margin:14px 2px 6px; padding:40px 16px; border:1px dashed var(--edge); border-radius:10px;
+  font:600 .7rem var(--f-mono); letter-spacing:.08em; color:var(--faint); text-align:center;
+}
+
+.res-list{display:flex; flex-direction:column; gap:2px; margin-top:14px;}
+.res-row{display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:9px 2px; border-top:1px dashed var(--edge);}
+.res-row .rk{font:.8rem var(--f-sans); color:var(--muted);}
+.res-row .rvv{font:700 .78rem var(--f-mono); color:var(--ink); text-align:right;}
+.res-badge{
+  display:inline-flex; align-items:center; gap:8px; font:700 .78rem var(--f-mono); color:var(--accent);
+  border:1px solid var(--accent); background:var(--panel); border-radius:999px; padding:7px 13px; margin:2px 2px 4px;
+}
+.res-badge svg{width:13px; height:13px;}
+
+/* ---- bcrypt-generator-specific bits ---- */
+.t-range-row{display:flex; align-items:center; gap:14px;}
+.t-range{flex:1; accent-color:var(--accent); height:6px; cursor:pointer;}
+.t-range-val{font:700 .95rem var(--f-mono); color:var(--accent); min-width:34px; text-align:right; flex:none;}
+
+.hash-output{
+  margin-top:14px; padding:16px 18px; border:1px solid var(--edge-strong); border-radius:10px;
+  background:var(--panel); word-break:break-all;
+}
+.hash-output .hash-label{font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--faint); margin-bottom:6px;}
+.hash-output .hash-value{font:700 .84rem/1.5 var(--f-mono); color:var(--ink);}
+.hash-output + .hash-output{margin-top:10px;}
+
+.bcrypt-structure{
+  margin-top:14px; border:1px dashed var(--edge-strong); border-radius:10px; padding:14px 16px;
+  background:var(--bg);
+}
+.bcrypt-structure .struct-label{font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--faint); margin-bottom:10px;}
+.bcrypt-structure .struct-parts{display:flex; flex-wrap:wrap; gap:8px; font:700 .7rem var(--f-mono);}
+.bcrypt-structure .struct-parts span{border:1px solid var(--edge-strong); border-radius:6px; padding:5px 9px; color:var(--muted);}
+.bcrypt-structure .struct-parts span b{color:var(--accent);}
+
+.verify-result{
+  margin-top:14px; border-radius:10px; padding:14px 16px; font:700 .82rem var(--f-mono);
+  display:flex; align-items:center; gap:10px;
+}
+.verify-result.match{color:var(--accent); border:1px solid var(--accent); background:rgba(111,227,208,.08);}
+.verify-result.nomatch{color:var(--amber); border:1px solid var(--amber); background:rgba(240,182,92,.08);}
+.verify-result svg{width:16px; height:16px; flex:none;}
+
+.compare-table{width:100%; border-collapse:collapse; margin-top:14px; font:600 .72rem var(--f-mono);}
+.compare-table th{text-align:left; font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--faint); padding:8px 10px; border-bottom:1px solid var(--edge-strong);}
+.compare-table td{padding:8px 10px; border-bottom:1px solid var(--edge); color:var(--muted); word-break:break-all; font-size:.7rem;}
+.compare-table td:first-child{color:var(--ink); font-weight:700;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px;
+}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .tool-grid{grid-template-columns:1fr; gap:24px;}
+  .t-results{position:static;}
+  .tpanel{padding:22px 18px 26px;}
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .t-go-row{flex-direction:column;}
+  .t-reset{width:100%;}
+  .pw-row{flex-wrap:wrap;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO — kept short and light on purpose ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · SECURITY</p>
+    <h1>Bcrypt Generator</h1>
+    <p class="lede">Hash passwords with bcrypt — adjustable cost, instant verification, and SHA comparison.</p>
+    <span class="updated"><i></i>FREE · PRIVATE · NO UPLOAD</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="generate">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE GENERATOR</span>
+      <h2>Hash, verify, compare — all in your browser.</h2>
+      <p>Generate bcrypt hashes with a cost factor from 4 to 14, verify plaintext against an existing hash, or compare bcrypt with SHA-256 and MD5 side by side. Nothing ever leaves your device.</p>
+    </div>
+
+    <div class="tool-shell">
+      <div class="tpanel active" id="panel-pw">
+        <div class="tool-grid">
+
+          <div class="t-inputs">
+
+            <div class="t-field">
+              <label>Mode</label>
+              <div class="t-examples" id="w-mode-chips">
+                <button type="button" class="t-chip" data-mode="hash" aria-pressed="true">GENERATE HASH</button>
+                <button type="button" class="t-chip" data-mode="verify" aria-pressed="false">VERIFY HASH</button>
+              </div>
+            </div>
+
+            <div id="w-hash-fields">
+              <div class="t-field">
+                <label>Plaintext password</label>
+                <input type="text" id="w-password" class="t-textarea mono" placeholder="Enter a password to hash…" spellcheck="false" autocomplete="off">
+                <p class="hint">The password you want to hash. It never leaves your browser.</p>
+              </div>
+
+              <div class="t-field">
+                <label>Cost factor (rounds)</label>
+                <div class="t-range-row">
+                  <input type="range" id="w-cost" class="t-range" min="4" max="14" value="10" step="1">
+                  <span class="t-range-val mono" id="w-cost-val">10</span>
+                </div>
+                <div class="t-examples" id="w-cost-chips" style="margin-top:10px;">
+                  <button type="button" class="t-chip" data-cost="8">8</button>
+                  <button type="button" class="t-chip" data-cost="10" aria-pressed="true">10</button>
+                  <button type="button" class="t-chip" data-cost="12">12</button>
+                  <button type="button" class="t-chip" data-cost="14">14</button>
+                </div>
+                <p class="hint">Each increment doubles the work. 2<sup>cost</sup> iterations. 10–12 is typical for web apps.</p>
+              </div>
+
+              <div class="t-field">
+                <label>Salt</label>
+                <div class="t-examples" id="w-salt-chips">
+                  <button type="button" class="t-chip" data-salt="random" aria-pressed="true">RANDOM SALT</button>
+                  <button type="button" class="t-chip" data-salt="manual">MANUAL SALT</button>
+                </div>
+                <div id="w-manual-salt-wrap" hidden style="margin-top:10px;">
+                  <input type="text" id="w-manual-salt" class="t-textarea mono" placeholder="Enter a custom salt (optional)" spellcheck="false" autocomplete="off">
+                  <p class="hint">Leave empty for a secure random salt. Manual salts are for testing only.</p>
+                </div>
+              </div>
+
+              <div class="t-field">
+                <label>Also compute</label>
+                <div class="t-examples" id="w-compare-chips">
+                  <button type="button" class="t-chip" id="w-compare-sha" aria-pressed="true">SHA-256</button>
+                  <button type="button" class="t-chip" id="w-compare-md5" aria-pressed="true">MD5</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="w-verify-fields" hidden>
+              <div class="t-field">
+                <label>Bcrypt hash</label>
+                <input type="text" id="w-verify-hash" class="t-textarea mono" placeholder="$2b$10$…" spellcheck="false" autocomplete="off">
+              </div>
+              <div class="t-field">
+                <label>Plaintext password</label>
+                <input type="text" id="w-verify-password" class="t-textarea mono" placeholder="Enter the password to check…" spellcheck="false" autocomplete="off">
+              </div>
+            </div>
+
+            <p class="t-err" id="w-err" role="alert"></p>
+
+            <div class="t-go-row">
+              <button type="button" class="t-go" id="w-generate-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.4-6.4-2.1 2.1M8.7 15.3l-2.1 2.1m0-10.8 2.1 2.1m8.7 8.7 2.1 2.1"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Generate Hash</span>
+              </button>
+              <button type="button" class="t-reset pri" id="w-reset-btn">Clear</button>
+            </div>
+          </div>
+
+          <div class="t-results">
+            <div class="res-head">
+              <span class="rl">RESULT</span>
+              <div class="res-actions" id="w-res-actions" hidden>
+                <button type="button" class="t-mini" id="w-copy" title="Copy hash">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                </button>
+                <button type="button" class="t-mini" id="w-download" title="Download .txt">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 18v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+                </button>
+              </div>
+            </div>
+            <div id="w-out"><div class="t-wait">ENTER A PASSWORD AND TAP GENERATE</div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE</span>
+      <h2>Four steps to a secure bcrypt hash.</h2>
+      <p>No manual required — here's the entire flow.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n mono">STEP 01</span>
+        <h3>Pick a mode</h3>
+        <p>Generate a new bcrypt hash from a password, or switch to Verify mode to check a plaintext against an existing hash.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 02</span>
+        <h3>Set your options</h3>
+        <p>Choose a cost factor from 4 to 14. Higher is slower and more secure. Use a random salt or a manual one for testing.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 03</span>
+        <h3>Generate</h3>
+        <p>Tap Generate Hash. Your bcrypt hash appears on the right, with an optional SHA-256 and MD5 comparison below it.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 04</span>
+        <h3>Copy or download</h3>
+        <p>Copy the hash, copy everything, or download as a text file. In Verify mode, you'll see a clear match or no-match result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section class="sec" id="what-you-get">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · WHAT YOU GET</span>
+      <h2>Built for real password security.</h2>
+      <p>The details that make a bcrypt generator trustworthy, without ever leaving your browser.</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>Runs on your device</h3>
+        <div class="formula">No upload · No account · No storage</div>
+        <p>Every hash is computed locally using JavaScript. Nothing is logged, saved, or sent anywhere — ever.</p>
+      </div>
+      <div class="fx">
+        <h3>Full bcrypt control</h3>
+        <div class="formula">Cost 4–14 · Random or manual salt</div>
+        <p>Adjust the cost factor to balance security and speed. The tool shows the full hash structure so you can see each part.</p>
+      </div>
+      <div class="fx">
+        <h3>Verify & compare</h3>
+        <div class="formula">Bcrypt verify · SHA-256 · MD5</div>
+        <p>Check a plaintext against any bcrypt hash, and see how bcrypt stacks up against faster hashing algorithms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-layout">
+    <div class="sec-head">
+      <span class="sec-idx mono">04 · FAQ</span>
+      <h2>Questions people actually ask.</h2>
+      <p>The short answers — with the long ones one tap away.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>What is bcrypt and why should I use it?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Bcrypt is a password-hashing function designed to be slow and computationally expensive, which makes brute-force attacks much harder. It automatically generates and stores a salt with each hash, so identical passwords produce different hashes.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What does the cost factor (rounds) mean?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>The cost factor determines how many times the hashing algorithm loops — specifically 2<sup>cost</sup> iterations. Higher cost means slower hashing and better resistance to brute-force attacks. A cost of 10–12 is a common balance for web applications.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Are my passwords sent to a server?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>No. All hashing and verification happen locally in your browser using JavaScript. Nothing is uploaded, logged, or stored. Closing or refreshing the page clears everything.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I verify a password against a bcrypt hash I already have?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Yes. Switch to the <code>Verify</code> tab, paste the bcrypt hash and the plaintext password, and the tool will tell you if they match. This runs entirely client-side.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What is the difference between bcrypt and SHA-256?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>SHA-256 is a fast cryptographic hash — designed for speed and integrity, not password storage. Bcrypt is intentionally slow and includes a salt, making it far better for storing passwords. This tool lets you compare both side by side.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How long should a bcrypt hash take?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>A good target is 100–500 milliseconds per hash on your target hardware. Too fast and brute-force becomes easier; too slow and your login system suffers. Adjust the cost factor until you hit that range.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Does this tool store or remember any hash I generate?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>No. Nothing is saved, logged, or synced anywhere. Once you leave or refresh the page, every hash is gone for good.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this bcrypt generator free to use?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Yes, it's completely free with no account, no sign-up, and no limit on how many hashes you generate.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER — same footer as every page ============ -->
+<!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
+<section class="pre-footer" id="subscribe">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">SUBSCRIBE</span>
+      <h2>Never miss a <span class="hl">drop.</span></h2>
+      <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
+      <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Poster-deep STEM infographics, engineered to stick. New drop every Friday.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span>studywithstem@gmail.com<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Post</a></li>
+          <li><a href="/page/about/">About</a></li>
+          <li><a href="/page/faq/">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/page/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="/page/copyrights/">Copyrights</a></li>
+          <li><a href="/page/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/></svg>
+            Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="foot-mid">
+      <span class="foot-meta" id="footYear">© STUDYWITHSTEM</span>
+      <span class="foot-meta">DESIGNED &amp; ENGINEERED FOR THE CURIOUS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================
+   BASICS
+========================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS3D = typeof THREE !== 'undefined';
+
+/* =========================================================
+   THEME SYSTEM — one source of truth for CSS *and* WebGL
+   (only the footer starfield uses Three.js on this page).
+========================================================= */
+let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
+let themeTarget = themeMix;
+const themed = [];
+
+function applyRec(r, mix){
+  r.m.color.copy(r.d).lerp(r.l, mix);
+  r.m.opacity = r.dOp + (r.lOp - r.dOp) * mix;
+  r.m.blending = mix < .5 ? THREE.AdditiveBlending : THREE.NormalBlending;
+}
+function themedMat(mat, darkHex, lightHex, darkOp, lightOp){
+  const rec = { m: mat, d: new THREE.Color(darkHex), l: new THREE.Color(lightHex), dOp: darkOp, lOp: lightOp };
+  mat.transparent = true;
+  themed.push(rec);
+  applyRec(rec, themeMix);
+  return mat;
+}
+function tickTheme(){
+  if (themeMix === themeTarget) return;
+  if (RM) themeMix = themeTarget;
+  else {
+    themeMix += (themeTarget - themeMix) * .1;
+    if (Math.abs(themeTarget - themeMix) < .001) themeMix = themeTarget;
+  }
+  themed.forEach(r => applyRec(r, themeMix));
+}
+
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  themeTarget = t === 'light' ? 1 : 0;
+  try{ localStorage.setItem('sws-theme', t); }catch(e){}
+  const b = $('#themeToggle');
+  if (b) b.setAttribute('aria-pressed', String(t === 'light'));
+  const root = document.documentElement;
+  root.classList.add('theme-anim');
+  clearTimeout(setTheme._t);
+  setTheme._t = setTimeout(() => root.classList.remove('theme-anim'), 650);
+}
+(function(){
+  const b = $('#themeToggle');
+  if (b){
+    b.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+    b.addEventListener('click', () =>
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+  }
+})();
+
+let SPRITE = null;
+if (HAS3D){
+  try{
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const x = c.getContext('2d');
+    const g = x.createRadialGradient(32, 32, 0, 32, 32, 30);
+    g.addColorStop(0, 'rgba(255,255,255,1)');
+    g.addColorStop(.5, 'rgba(255,255,255,.45)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+    SPRITE = new THREE.CanvasTexture(c);
+  }catch(e){}
+}
+
+/* =========================================================
+   NAV — hide on scroll down, scroll-progress segment.
+========================================================= */
+const nav = $('#nav');
+const progBar = $('.nav-progress');
+const progSeg = $('#navProg');
+let lastY = 0, sTick = false;
+
+function updProg(){
+  if (!progSeg || !progBar) return;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const p = max > 0 ? Math.min(1, scrollY / max) : 0;
+  const bw = progBar.clientWidth;
+  if (!bw) return;
+  const sw = Math.max(40, Math.min(90, bw * .12));
+  progSeg.style.width = sw + 'px';
+  progSeg.style.transform = 'translateX(' + (p * (bw - sw)) + 'px)';
+}
+function onScroll(){
+  const y = scrollY;
+  nav.classList.toggle('scrolled', y > 8);
+  const menuOpen = document.body.classList.contains('menu-open');
+  if (y > lastY && y > 180 && !menuOpen) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  updProg();
+}
+addEventListener('scroll', () => {
+  if (!sTick){ sTick = true; requestAnimationFrame(() => { onScroll(); sTick = false; }); }
+}, { passive: true });
+addEventListener('resize', updProg);
+addEventListener('load', updProg);
+onScroll();
+
+/* mobile menu */
+(function(){
+  const burger = $('#burger');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('#mmenu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+})();
+
+/* footer reveal + back-to-top + year */
+(function(){
+  const foot = $('#footer');
+  if (foot) new IntersectionObserver((es, o) => {
+    es.forEach(e => { if (e.isIntersecting){ foot.classList.add('in'); o.disconnect(); } });
+  }, { threshold: .12 }).observe(foot);
+
+  const bt = $('#backTop');
+  if (bt) bt.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+  const yr = $('#footYear');
+  if (yr) yr.textContent = '© ' + new Date().getFullYear() + ' STUDYWITHSTEM';
+})();
+
+/* =========================================================
+   BCRYPT GENERATOR TOOL — entirely client-side.
+   All hashing runs locally in the browser; nothing is uploaded.
+========================================================= */
+(function(){
+  'use strict';
+
+  const errEl         = $('#w-err');
+  const generateBtn    = $('#w-generate-btn');
+  const resetBtn       = $('#w-reset-btn');
+  const outEl          = $('#w-out');
+  const resActions     = $('#w-res-actions');
+  const copyBtn        = $('#w-copy');
+  const downloadBtn    = $('#w-download');
+
+  const modeChips      = $$('#w-mode-chips .t-chip');
+  const hashFields     = $('#w-hash-fields');
+  const verifyFields   = $('#w-verify-fields');
+
+  const passwordInput   = $('#w-password');
+  const costRange       = $('#w-cost');
+  const costVal         = $('#w-cost-val');
+  const costChips       = $$('#w-cost-chips .t-chip');
+  const saltChips       = $$('#w-salt-chips .t-chip');
+  const manualSaltWrap  = $('#w-manual-salt-wrap');
+  const manualSaltInput = $('#w-manual-salt');
+  const compareShaBtn   = $('#w-compare-sha');
+  const compareMd5Btn   = $('#w-compare-md5');
+
+  const verifyHashInput = $('#w-verify-hash');
+  const verifyPassInput = $('#w-verify-password');
+
+  const state = {
+    mode: 'hash',
+    cost: 10,
+    saltMode: 'random',
+    compareSha: true,
+    compareMd5: true
+  };
+
+  let lastOutputText = '';
+
+  function errShow(msg){
+    errEl.textContent = msg || '';
+    errEl.classList.toggle('show', !!msg);
+  }
+
+  /* ---------- bcrypt implementation (pure JS, no deps) ---------- */
+  /* Adapted from the public-domain bcrypt algorithm by Damien Miller,
+     based on the Blowfish cipher by Bruce Schneier. */
+
+  const BCRYPT_SALT_LEN = 16;
+
+  const BASE64_CODE = './ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const BASE64_INDEX = new Array(128).fill(-1);
+  for (let i = 0; i < BASE64_CODE.length; i++) BASE64_INDEX[BASE64_CODE.charCodeAt(i)] = i;
+
+  const P_ORIG = [
+    0x243f6a88, 0x85a308d3, 0x13198a2e, 0x03707344, 0xa4093822, 0x299f31d0,
+    0x082efa98, 0xec4e6c89, 0x452821e6, 0x38d01377, 0xbe5466cf, 0x34e90c6c,
+    0xc0ac29b7, 0xc97c50dd, 0x3f84d5b5, 0xb5470917, 0x9216d5d9, 0x8979fb1b
+  ];
+
+  const S_ORIG = [
+    0xd1310ba6, 0x98dfb5ac, 0x2ffd72db, 0xd01adfb7, 0xb8e1afed, 0x6a267e96,
+    0xba7c9045, 0xf12c7f99, 0x24a19947, 0xb3916cf7, 0x0801f2e2, 0x858efc16,
+    0x636920d8, 0x71574e69, 0xa458fea3, 0xf4933d7e, 0x0d95748f, 0x728eb658,
+    0x718bcd58, 0x82154aee, 0x7b54a41d, 0xc25a59b5, 0x9c30d539, 0x2af26013,
+    0xc5d1b023, 0x286085f0, 0xca417918, 0xb8db38ef, 0x8e79dcb0, 0x603a180e,
+    0x6c9e0e8b, 0xb01e8a3e, 0xd71577c1, 0xbd314b27, 0x78af2fda, 0x55605c60,
+    0xe65525f3, 0xaa55ab94, 0x57489862, 0x63e81440, 0x55ca396a, 0x2aab10b6,
+    0xb4cc5c34, 0x1141e8ce, 0xa15486af, 0x7c72e993, 0xb3ee1411, 0x636fbc2a,
+    0x2ba9c55d, 0x741831f6, 0xce5c3e16, 0x9b87931e, 0xafd6ba33, 0x6c24cf5c,
+    0x7a325381, 0x28958677, 0x3b8f4898, 0x6b4bb9af, 0xc4bfe81b, 0x66282193,
+    0x61d809cc, 0xfb21a991, 0x487cac60, 0x5dec8032, 0xef845d5d, 0xe98575b1,
+    0xdc262302, 0xeb651b88, 0x23893e81, 0xd396acc5, 0x0f6d6ff3, 0x83f44239,
+    0x2e0b4482, 0xa4842004, 0x69c8f04a, 0x9e1f9b5e, 0x21c66842, 0xf6e96c9a,
+    0x670c9c61, 0xabd388f0, 0x6a51a0d2, 0xd8542f68, 0x960fa728, 0xab5133a3,
+    0x6eef0b6c, 0x137a3be4, 0xba3bf050, 0x7efb2a98, 0xa1f1651d, 0x39af0176,
+    0x66ca593e, 0x82430e88, 0x8cee8619, 0x456f9fb4, 0x7d84a5c3, 0x3b8b5ebe,
+    0xe06f75d8, 0x85c12073, 0x401a449f, 0x56c16aa6, 0x4ed3aa62, 0x363f7706,
+    0x1bfedf72, 0x429b023d, 0x37d0d724, 0xd00a1248, 0xdb0fead3, 0x49f1c09b,
+    0x075372c9, 0x80991b7b, 0x25d479d8, 0xf6e8def7, 0xe3fe501a, 0xb6794c3b,
+    0x976ce0bd, 0x04c006ba, 0xc1a94fb6, 0x409f60c4, 0x5e5c9ec2, 0x196a2463,
+    0x68fb6faf, 0x3e6c53b5, 0x1339b2eb, 0x3b52ec6f, 0x6dfc511f, 0x9b30952c,
+    0xcc814544, 0xaf5ebd09, 0xbee3d004, 0xde334afd, 0x660f2807, 0x192e4bb3,
+    0xc0cba857, 0x45c8740f, 0xd20b5f39, 0xb9d3fbdb, 0x5579c0bd, 0x1a60320a,
+    0xd6a100c6, 0x402c7279, 0x679f25fe, 0xfb1fa3cc, 0x8ea5e9f8, 0xdb3222f8,
+    0x3c7516df, 0xfd616b15, 0x2f501ec8, 0xad0552ab, 0x323db5fa, 0xfd238760,
+    0x53317b48, 0x3e00df82, 0x9e5c57bb, 0xca6f8ca0, 0x1a87562e, 0xdf1769db,
+    0xd542a8f6, 0x287effc3, 0xac6732c6, 0x8c4f5573, 0x695b27b0, 0xbbca58c8,
+    0xe1ffa35d, 0xb8f011a0, 0x10fa3d98, 0xfd2183b8, 0x4afcb56c, 0x2dd1d35b,
+    0x9a53e479, 0xb6f84565, 0xd28e49bc, 0x4bfb9790, 0xe1ddf2da, 0xa4cb7e33,
+    0x62fb1341, 0xcee4c6e8, 0xef20cada, 0x36774c01, 0xd07e9efe, 0x2bf11fb4,
+    0x95dbda4d, 0xae909198, 0xeaad8e71, 0x6b93d5a0, 0xd08ed1d0, 0xafc725e0,
+    0x8e3c5b2f, 0x8e7594b7, 0x8ff6e2fb, 0xf2122b64, 0x8888b812, 0x900df01c,
+    0x4fad5ea0, 0x688fc31c, 0xd1cff191, 0xb3a8c1ad, 0x2f2f2218, 0xbe0e1777,
+    0xea752dfe, 0x8b021fa1, 0xe5a0cc0f, 0xb56f74e8, 0x18acf3d6, 0xce89e299,
+    0xb4a84fe0, 0xfd13e0b7, 0x7cc43b81, 0xd2ada8d9, 0x165fa266, 0x80957705,
+    0x93cc7314, 0x211a1477, 0xe6ad2065, 0x77b5fa86, 0xc75442f5, 0xfb9d35cf,
+    0xebcdaf0c, 0x7b3e89a0, 0xd6411bd3, 0xae1e7e49, 0x00250e2d, 0x2071b35e,
+    0x226800bb, 0x57b8e0af, 0x2464369b, 0xf009b91e, 0x5563911d, 0x59dfa6aa,
+    0x78c14389, 0xd95a537f, 0x207d5ba2, 0x02e5b9c5, 0x83260376, 0x6295cfa9,
+    0x11c81968, 0x4e734a41, 0xb3472dca, 0x7b14a94a, 0x1b510052, 0x9a532915,
+    0xd60f573f, 0xbc9bc6e4, 0x2b60a476, 0x81e67400, 0x08ba6fb5, 0x571be91f,
+    0xf296ec6b, 0x2a0dd915, 0xb6636521, 0xe7b9f9b6, 0xff34052e, 0xc5855664,
+    0x53b02d5d, 0xa99f8fa1, 0x08ba4799, 0x6e85076a,
+    0x4b7a70e9, 0xb5b32944, 0xdb75092e, 0xc4192623, 0xad6ea6b0, 0x49a7df7d,
+    0x9cee60b8, 0x8fedb266, 0xecaa8c71, 0x699a17ff, 0x5664526c, 0xc2b19ee1,
+    0x193602a5, 0x75094c29, 0xa0591340, 0xe4183a3e, 0x3f54989a, 0x5b429d65,
+    0x6b8fe4d6, 0x99f73fd6, 0xa1d29c07, 0xefe830f5, 0x4d2d38e6, 0xf0255dc1,
+    0x4cdd2086, 0x8470eb26, 0x6382e9c6, 0x021ecc5e, 0x09686b3f, 0x3ebaefc9,
+    0x3c971814, 0x6b6a70a1, 0x687f3584, 0x52a0e286, 0xb79c5305, 0xaa500737,
+    0x3e07841c, 0x7fdeae5c, 0x8e7d44ec, 0x5716f2b8, 0xb03ada37, 0xf0500c0d,
+    0xf01c1f04, 0x0200b3ff, 0xae0cf51a, 0x3cb574b2, 0x25837a58, 0xdc0921bd,
+    0xd19113f9, 0x7ca92ff6, 0x94324773, 0x22f54701, 0x3ae5e581, 0x37c2dadc,
+    0xc8b57634, 0x9af3dda7, 0xa9446146, 0x0fd0030e, 0xecc8c73e, 0xa4751e41,
+    0xe238cd99, 0x3bea0e2f, 0x3280bba1, 0x183eb331, 0x4e548b38, 0x4f6db908,
+    0x6f420d03, 0xf60a04bf, 0x2cb81290, 0x24977c79, 0x5679b072, 0xbcaf89af,
+    0xde9a771f, 0xd9930810, 0xb38bae12, 0xdccf3f2e, 0x5512721f, 0x2e6b7124,
+    0x501adde6, 0x9f84cd87, 0x7a584718, 0x7408da17, 0xbc9f9abc, 0xe94b7d8c,
+    0xec7aec3a, 0xdb851dfa, 0x63094366, 0xc464c3d2, 0xef1c1847, 0x3215d908,
+    0xdd433b37, 0x24c2ba16, 0x12a14d43, 0x2a65c451, 0x50940002, 0x133ae4dd,
+    0x71dff89e, 0x10314e55, 0x81ac77d6, 0x5f11199b, 0x043556f1, 0xd7a3c76b,
+    0x3c11183b, 0x5924a509, 0xf28fe6ed, 0x97f1fbfa, 0x9ebabf2c, 0x1e153c6e,
+    0x86e34570, 0xeae96fb1, 0x860e5e0a, 0x5a3e2ab3, 0x771fe71c, 0x4e3d06fa,
+    0x2965dcb9, 0x99e71d0f, 0x803e89d6, 0x5266c825, 0x2e4cc978, 0x9c10b36a,
+    0xc6150eba, 0x94e2ea78, 0xa5fc3c53, 0x1e0a2df4, 0xf2f74ea7, 0x361d2b3d,
+    0x1939260f, 0x19c27960, 0x5223a708, 0xf71312b6, 0xebadfe6e, 0xeac31f66,
+    0xe3bc4595, 0xa67bc883, 0xb17f37d1, 0x018cff28, 0xc332ddef, 0xbe6c5aa5,
+    0x65582185, 0x68ab9802, 0xeecea50f, 0xdb2f953b, 0x2aef7dad, 0x5b6e2f84,
+    0x1521b628, 0x29076170, 0xecdd4775, 0x619f1510, 0x13cca830, 0xeb61bd96,
+    0x0334fe1e, 0xaa0363cf, 0xb5735c90, 0x4c70a239, 0xd59e9e0b, 0xcbaade14,
+    0xeecc86bc, 0x60622ca7, 0x9cab5cab, 0xb2f3846e, 0x648b1eaf, 0x19bdf0ca,
+    0xa02369b9, 0x655abb50, 0x40685a32, 0x3c2ab4b3, 0x319ee9d5, 0xc021b8f7,
+    0x9b540b19, 0x875fa099, 0x95f7997e, 0x623d7da8, 0xf837889a, 0x97e32d77,
+    0x11ed935f, 0x16681281, 0x0e358829, 0xc7e61fd6, 0x96dedfa1, 0x7858ba99,
+    0x57f584a5, 0x1b227263, 0x9b83c3ff, 0x1ac24696, 0xcdb30aeb, 0x532e3054,
+    0x8fd948e4, 0x6dbc3128, 0x58ebf2ef, 0x34c6ffea, 0xfe28ed61, 0xee7c3c73,
+    0x5d4a14d9, 0xe864b7e3, 0x42105d14, 0x203e13e0, 0x45eee2b6, 0xa3aaabea,
+    0xdb6c4f15, 0xfacb4fd0, 0xc742f442, 0xef6abbb5, 0x654f3b1d, 0x41cd2105,
+    0xd81e799e, 0x86854dc7, 0xe44b476a, 0x3d816250, 0xcf62a1f2, 0x5b8d2646,
+    0xfc8883a0, 0xc1c7b6a3, 0x7f1524c3, 0x69cb7492, 0x47848a0b, 0x5692b285,
+    0x095bbf00, 0xad19489d, 0x1462b174, 0x23820e00, 0x58428d2a, 0x0c55f5ea,
+    0x1dadf43e, 0x233f7061, 0x3372f092, 0x8d937e41, 0xd65fecf1, 0x6c223bdb,
+    0x7cde3759, 0xcbee7460, 0x4085f2a7, 0xce77326e, 0xa6078084, 0x19f8509e,
+    0xe8efd855, 0x61d99735, 0xa969a7aa, 0xc50c06c2, 0x5a04abfc, 0x800bcadc,
+    0x9e447a2e, 0xc3453484, 0xfdd56705, 0x0e1e9ec9, 0xdb73dbd3, 0x105588cd,
+    0x675fda79, 0xe3674340, 0xc5c43465, 0x713e38d8, 0x3d28f89e, 0xf16dff20,
+    0x153e21e7, 0x8fb03d4a, 0xe6e39f2b, 0xdb83adf7,
+    0xe93d5a68, 0x948140f7, 0xf64c261c, 0x94692934, 0x411520f7, 0x7602d4f7,
+    0xbcf46b2e, 0xd4a20068, 0xd4082471, 0x3320f46a, 0x43b7d4b7, 0x500061af,
+    0x1e39f62e, 0x97244546, 0x14214f74, 0xbf8b8840, 0x4d95fc1d, 0x96b591af,
+    0x70f4ddd3, 0x66a02f45, 0xbfbc09ec, 0x03bd9785, 0x7fac6dd0, 0x31cb8504,
+    0x96eb27b3, 0x55fd3941, 0xda2547e6, 0xabca0a9a, 0x28507825, 0x530429f4,
+    0x0a2c86da, 0xe9b66dfb, 0x68dc1462, 0xd7486900, 0x680ec0a4, 0x27a18dee,
+    0x4f3ffea2, 0xe887ad8c, 0xb58ce006, 0x7af4d6b6, 0xaace1e7c, 0xd3375fec,
+    0xce78a399, 0x406b2a42, 0x20fe9e35, 0xd9f385b9, 0xee39d7ab, 0x3b124e8b,
+    0x1dc9faf7, 0x4b6d1856, 0x26a36631, 0xeae397b2, 0x3a6efa74, 0xdd5b4332,
+    0x6841e7f7, 0xca7820fb, 0xfb0af54e, 0xd8feb397, 0x454056ac, 0xba489527,
+    0x55533a3a, 0x20838d87, 0xfe6ba9b7, 0xd096954b, 0x55a867bc, 0xa1159a58,
+    0xcca92963, 0x99e1db33, 0xa62a4a56, 0x3f3125f9, 0x5ef47e1c, 0x9029317c,
+    0xfdf8e802, 0x04272f70, 0x80bb155c, 0x05282ce3, 0x95c11548, 0xe4c66d22,
+    0x48c1133f, 0xc70f86dc, 0x07f9c9ee, 0x41041f0f, 0x404779a4, 0x5d886e17,
+    0x325f51eb, 0xd59bc0d1, 0xf2bcc18f, 0x41113564, 0x257b7834, 0x602a9c60,
+    0xdff8e8a3, 0x1f636c1b, 0x0e12b4c2, 0x02e1329e, 0xaf664fd1, 0xcad18115,
+    0x6b2395e0, 0x333e92e1, 0x3b240b62, 0xeebeb922, 0x85b2a20e, 0xe6ba0d99,
+    0xde720c8c, 0x2da2f728, 0xd0127845, 0x95b794fd, 0x647d0862, 0xe7ccf5f0,
+    0x5449a36f, 0x877d48fa, 0xc39dfd27, 0xf33e8d1e, 0x0a476341, 0x992eff74,
+    0x3a6f6eab, 0xf4f8fd37, 0xa812dc60, 0xa1ebddf8, 0x991be14c, 0xdb6e6b0d,
+    0xc67b5510, 0x6d672c37, 0x2765d43b, 0xdcd0e804, 0xf1290dc7, 0xcc00ffa3,
+    0xb5390f92, 0x690fed0b, 0x667b9ffb, 0xcedb7d9c, 0xa091cf0b, 0xd9155ea3,
+    0xbb132f88, 0x515bad24, 0x7b9479bf, 0x763bd6eb, 0x37392eb3, 0xcc115979,
+    0x8026e297, 0xf42e312d, 0x6842ada7, 0xc66a2b3b, 0x12754ccc, 0x782ef11c,
+    0x6a124237, 0xb79251e7, 0x06a1bbe6, 0x4bfb6350, 0x1a6b1018, 0x11caedfa,
+    0x3d25bdd8, 0xe2e1c3c9, 0x44421659, 0x0a121386, 0xd90cec6e, 0xd5abea2a,
+    0x64af674e, 0xda86a85f, 0xbebfe988, 0x64e4c3fe, 0x9dbc8057, 0xf0f7c086,
+    0x60787bf8, 0x6003604d, 0xd1fd8346, 0xf6381fb0, 0x7745ae04, 0xd736fccc,
+    0x83426b33, 0xf01eab71, 0xb0804187, 0x3c005e5f, 0x77a057be, 0xbde8ae24,
+    0x55464299, 0xbf582e61, 0x4e58f48f, 0xf2ddfda2, 0xf474ef38, 0x8789bdc2,
+    0x5366f9c3, 0xc8b38e74, 0xb475f255, 0x46fcd9b9, 0x7aeb2661, 0x8b1ddf84,
+    0x846a0e79, 0x915f95e2, 0x466e598e, 0x20b45770, 0x8cd55591, 0xc902de4c,
+    0xb90bace1, 0xbb8205d0, 0x11a86248, 0x7574a99e, 0xb77f19b6, 0xe0a9dc09,
+    0x662d09a1, 0xc4324633, 0xe85a1f02, 0x09f0be8c, 0x4a99a025, 0x1d6efe10,
+    0x1ab93d1d, 0x0ba5a4df, 0xa186f20f, 0x2868f169, 0xdcb7da83, 0x573906fe,
+    0xa1e2ce9b, 0x4fcd7f52, 0x50115e01, 0xa70683fa, 0xa002b5c4, 0x0de6d027,
+    0x9af88c27, 0x773f8641, 0xc3604c06, 0x61a806b5, 0xf0177a28, 0xc0f586e0,
+    0x006058aa, 0x30dc7d62, 0x11e69ed7, 0x2338ea63, 0x53c2dd94, 0xc2c21634,
+    0xbbcbee56, 0x90bcb6de, 0xebfc7da1, 0xce591d76, 0x6f05e409, 0x4b7c0188,
+    0x39720a3d, 0x7c927c24, 0x86e3725f, 0x724d9db9, 0x1ac15bb4, 0xd39eb8fc,
+    0xed545578, 0x08fca5b5, 0xd83d7cd3, 0x4dad0fc4, 0x1e50ef5e, 0xb161e6f8,
+    0xa28514d9, 0x6c51133c, 0x6fd5c7e7, 0x56e14ec4, 0x362abfce, 0xddc6c837,
+    0xd79a3234, 0x92638212, 0x670efa8e, 0x406000e0,
+    0x3a39ce37, 0xd3faf5cf, 0xabc27737, 0x5ac52d1b, 0x5cb0679e, 0x4fa33742,
+    0xd3822740, 0x99bc9bbe, 0xd5118e9d, 0xbf0f7315, 0xd62d1c7e, 0xc700c47b,
+    0xb78c1b6b, 0x21a19045, 0xb26eb1be, 0x6a366eb4, 0x5748ab2f, 0xbc946e79,
+    0xc6a376d2, 0x6549c2c8, 0x530ff8ee, 0x468dde7d, 0xd5730a1d, 0x4cd04dc6,
+    0x2939bbdb, 0xa9ba4650, 0xac9526e8, 0xbe5ee304, 0xa1fad5f0, 0x6a2d519a,
+    0x63ef8ce2, 0x9a86ee22, 0xc089c2b8, 0x43242ef6, 0xa51e03aa, 0x9cf2d0a4,
+    0x83c061ba, 0x9be96a4d, 0x8fe51550, 0xba645bd6, 0x2826a2f9, 0xa73a3ae1,
+    0x4ba99586, 0xef5562e9, 0xc72fefd3, 0xf752f7da, 0x3f046f69, 0x77fa0a59,
+    0x80e4a915, 0x87b08601, 0x9b09e6ad, 0x3b3ee593, 0xe990fd5a, 0x9e34d797,
+    0x2cf0b7d9, 0x022b8b51, 0x96d5ac3a, 0x017da67d, 0xd1cf3ed6, 0x7c7d2d28,
+    0x1f9f25cf, 0xadf2b89b, 0x5ad6b472, 0x5a88f54c, 0xe029ac71, 0xe019a5e6,
+    0x47b0acfd, 0xed93fa9b, 0xe8d3c48d, 0x283b57cc, 0xf8d56629, 0x79132e28,
+    0x785f0191, 0xed756055, 0xf7960e44, 0xe3d35e8c, 0x15056dd4, 0x88f46dba,
+    0x03a16125, 0x0564f0bd, 0xc3eb9e15, 0x3c9057a2, 0x97271aec, 0xa93a072a,
+    0x1b3f6d9b, 0x1e6321f5, 0xf59c66fb, 0x26dcf319, 0x7533d928, 0xb155fdf5,
+    0x03563482, 0x8aba3cbb, 0x28517711, 0xc20ad9f8, 0xabcc5167, 0xccad925f,
+    0x4de81751, 0x3830dc8e, 0x379d5862, 0x9320f991, 0xea7a90c2, 0xfb3e7bce,
+    0x5121ce64, 0x774fbe32, 0xa8b6e37e, 0xc3293d46, 0x48de5369, 0x6413e680,
+    0xa2ae0810, 0xdd6db224, 0x69852dfd, 0x09072166, 0xb39a460a, 0x6445c0dd,
+    0x586cdecf, 0x1c20c8ae, 0x5bbef7dd, 0x1b588d40, 0xccd2017f, 0x6bb4e3bb,
+    0xdda26a7e, 0x3a59ff45, 0x3e350a44, 0xbcb4cdd5, 0x72eacea8, 0xfa6484bb,
+    0x8d6612ae, 0xbf3c6f47, 0xd29be463, 0x542f5d9e, 0xaec2771b, 0xf64e6370,
+    0x740e0d8d, 0xe75b1357, 0xf8721671, 0xaf537d5d, 0x4040cb08, 0x4eb4e2cc,
+    0x34d2466a, 0x0115af84, 0xe1b00428, 0x95983a1d, 0x06b89fb4, 0xce6ea048,
+    0x6f3f3b82, 0x3520ab82, 0x011a1d4b, 0x277227f8, 0x611560b1, 0xe7933fdc,
+    0xbb3a792b, 0x344525bd, 0xa08839e1, 0x51ce794b, 0x2f32c9b7, 0xa01fbac9,
+    0xe01cc87e, 0xbcc7d1f6, 0xcf0111c3, 0xa1e8aac7, 0x1a908749, 0xd44fbd9a,
+    0xd0dadecb, 0xd50ada38, 0x0339c32a, 0xc6913667, 0x8df9317c, 0xe0b12b4f,
+    0xf79e59b7, 0x43f5bb3a, 0xf2d519ff, 0x27d9459c, 0xbf97222c, 0x15e6fc2a,
+    0x0f91fc71, 0x9b941525, 0xfae59361, 0xceb69ceb, 0xc2a86459, 0x12baa8d1,
+    0xb6c1075e, 0xe3056a0c, 0x10d25065, 0xcb03a442, 0xe0ec6e0e, 0x1698db3b,
+    0x4c98a0be, 0x3278e964, 0x9f1f9532, 0xe0d392df, 0xd3a0342b, 0x8971f21e,
+    0x1b0a7441, 0x4ba3348c, 0xc5be7120, 0xc37632d8, 0xdf359f8d, 0x9b992f2e,
+    0xe60b6f47, 0x0fe3f11d, 0xe54cda54, 0x1edad891, 0xce6279cf, 0xcd3e7e6f,
+    0x1618b166, 0xfd2c1d05, 0x848fd2c5, 0xf6fb2299, 0xf523f357, 0xa6327623,
+    0x93a83531, 0x56cccd02, 0xacf08162, 0x5a75ebb5, 0x6e163697, 0x88d273cc,
+    0xde966292, 0x81b949d0, 0x4c50901b, 0x71c65614, 0xe6c6c7bd, 0x327a140a,
+    0x45e1d006, 0xc3f27b9a, 0xc9aa53fd, 0x62a80f00, 0xbb25bfe2, 0x35bdd2f6,
+    0x71126905, 0xb2040222, 0xb6cbcf7c, 0xcd769c2b, 0x53113ec0, 0x1640e3d3,
+    0x38abbd60, 0x2547adf0, 0xba38209c, 0xf746ce76, 0x77afa1c5, 0x20756060,
+    0x85cbfe4e, 0x8ae88dd8, 0x7aaaf9b0, 0x4cf9aa7e, 0x1948c25c, 0x02fb8a8c,
+    0x01c36ae4, 0xd6ebe1f9, 0x90d4f869, 0xa65cdea0, 0x3f09252d, 0xc208e69f,
+    0xb74e6132, 0xce77e25b, 0x578fdfe3, 0x3ac372e6
+  ];
+
+  function bcryptInit(){
+    const P = P_ORIG.slice();
+    const S = S_ORIG.slice();
+    return { P, S };
+  }
+
+  function F(s, x){
+    const a = (x >>> 24) & 0xFF;
+    const b = (x >>> 16) & 0xFF;
+    const c = (x >>>  8) & 0xFF;
+    const d =  x         & 0xFF;
+    return (((s[0*256+a] + s[1*256+b]) ^ s[2*256+c]) + s[3*256+d]) >>> 0;
+  }
+
+  function encipher(P, S, lr){
+    let l = lr[0], r = lr[1];
+    l = (l ^ P[0]) >>> 0;
+    for (let i = 1; i <= 15; i += 2){
+      r = (r ^ (F(S, l) ^ P[i])) >>> 0;
+      l = (l ^ (F(S, r) ^ P[i + 1])) >>> 0;
+    }
+    r = (r ^ P[16]) >>> 0;
+    lr[0] = r;
+    lr[1] = l;
+  }
+
+  function keySchedule(P, S, key, keyLen, data, dataLen, mode){
+    let kOff = 0, dOff = 0;
+    for (let i = 0; i < 18; i++){
+      let tmp = 0;
+      for (let j = 0; j < 4; j++){
+        tmp = ((tmp << 8) | (key.charCodeAt(kOff) & 0xFF)) >>> 0;
+        kOff = (kOff + 1) % keyLen;
+      }
+      P[i] = (P[i] ^ tmp) >>> 0;
+    }
+    let lr = [0, 0];
+    for (let i = 0; i < 18; i += 2){
+      if (mode === 'expand'){ lr[0] = (lr[0] ^ (data[dOff] & 0xFFFFFFFF)) >>> 0; lr[1] = (lr[1] ^ (data[dOff+1] & 0xFFFFFFFF)) >>> 0; dOff = (dOff + 2) % dataLen; }
+      encipher(P, S, lr);
+      P[i] = lr[0]; P[i+1] = lr[1];
+    }
+    for (let i = 0; i < 4; i++){
+      for (let j = 0; j < 256; j += 2){
+        if (mode === 'expand'){ lr[0] = (lr[0] ^ (data[dOff] & 0xFFFFFFFF)) >>> 0; lr[1] = (lr[1] ^ (data[dOff+1] & 0xFFFFFFFF)) >>> 0; dOff = (dOff + 2) % dataLen; }
+        encipher(P, S, lr);
+        S[i*256+j] = lr[0]; S[i*256+j+1] = lr[1];
+      }
+    }
+  }
+
+  function expandKey(P, S, key, salt){
+    const keyLen = key.length;
+    const saltLen = salt.length;
+    /* wrap salt into uint32 array for expansion */
+    const saltData = new Uint32Array(saltLen);
+    for (let i = 0; i < saltLen; i++) saltData[i] = salt[i];
+    /* key schedule with expand mode */
+    let kOff = 0;
+    for (let i = 0; i < 18; i++){
+      let tmp = 0;
+      for (let j = 0; j < 4; j++){
+        tmp = ((tmp << 8) | (key[kOff] & 0xFF)) >>> 0;
+        kOff = (kOff + 1) % keyLen;
+      }
+      P[i] = (P[i] ^ tmp) >>> 0;
+    }
+    let lr = [0, 0];
+    let dOff = 0;
+    for (let i = 0; i < 18; i += 2){
+      lr[0] = (lr[0] ^ saltData[dOff]) >>> 0;
+      lr[1] = (lr[1] ^ saltData[(dOff+1) % saltLen]) >>> 0;
+      dOff = (dOff + 2) % saltLen;
+      encipher(P, S, lr);
+      P[i] = lr[0]; P[i+1] = lr[1];
+    }
+    for (let i = 0; i < 4; i++){
+      for (let j = 0; j < 256; j += 2){
+        lr[0] = (lr[0] ^ saltData[dOff]) >>> 0;
+        lr[1] = (lr[1] ^ saltData[(dOff+1) % saltLen]) >>> 0;
+        dOff = (dOff + 2) % saltLen;
+        encipher(P, S, lr);
+        S[i*256+j] = lr[0]; S[i*256+j+1] = lr[1];
+      }
+    }
+  }
+
+  function bcryptHash(password, saltBytes, cost){
+    const key = password; /* password as string, will be used byte by byte */
+    const { P, S } = bcryptInit();
+    expandKey(P, S, key, saltBytes);
+
+    const ctext = new Uint32Array(6);
+    const cdata = 'OrpheanBeholderScryDoubt';
+    for (let i = 0; i < 6; i++){
+      const a = cdata.charCodeAt(i * 4) & 0xFF;
+      const b = cdata.charCodeAt(i * 4 + 1) & 0xFF;
+      const c = cdata.charCodeAt(i * 4 + 2) & 0xFF;
+      const d = cdata.charCodeAt(i * 4 + 3) & 0xFF;
+      ctext[i] = ((a << 24) | (b << 16) | (c << 8) | d) >>> 0;
+    }
+
+    const rounds = 1 << cost;
+    for (let r = 0; r < rounds; r++){
+      for (let i = 0; i < 6; i += 2){
+        let lr = [ctext[i], ctext[i+1]];
+        encipher(P, S, lr);
+        ctext[i] = lr[0]; ctext[i+1] = lr[1];
+      }
+    }
+
+    const result = [];
+    for (let i = 0; i < 6; i++){
+      result.push((ctext[i] >>> 24) & 0xFF, (ctext[i] >>> 16) & 0xFF,
+                  (ctext[i] >>> 8) & 0xFF, ctext[i] & 0xFF);
+    }
+    return new Uint8Array(result);
+  }
+
+  function bcryptBase64Encode(bytes, len){
+    let off = 0, c1, c2, rs = [];
+    while (off < len){
+      c1 = bytes[off++] & 0xFF;
+      rs.push(BASE64_CODE[(c1 >> 2) & 0x3F]);
+      c1 = (c1 & 0x03) << 4;
+      if (off >= len){ rs.push(BASE64_CODE[c1 & 0x3F]); break; }
+      c2 = bytes[off++] & 0xFF;
+      c1 |= (c2 >> 4) & 0x0F;
+      rs.push(BASE64_CODE[c1 & 0x3F]);
+      c1 = (c2 & 0x0F) << 2;
+      if (off >= len){ rs.push(BASE64_CODE[c1 & 0x3F]); break; }
+      c2 = bytes[off++] & 0xFF;
+      c1 |= (c2 >> 6) & 0x03;
+      rs.push(BASE64_CODE[c1 & 0x3F]);
+      rs.push(BASE64_CODE[c2 & 0x3F]);
+    }
+    return rs.join('');
+  }
+
+  function genSalt(cost, seedBytes){
+    const bytes = new Uint8Array(BCRYPT_SALT_LEN);
+    if (seedBytes && seedBytes.length === BCRYPT_SALT_LEN){
+      bytes.set(seedBytes);
+    } else {
+      for (let i = 0; i < BCRYPT_SALT_LEN; i++){
+        bytes[i] = (crypto.getRandomValues(new Uint8Array(1)))[0];
+      }
+    }
+    const costByte = cost < 10 ? ('0' + cost).charCodeAt(0) : ('0' + cost).charCodeAt(0);
+    const costStr = cost < 10 ? ('0' + cost) : String(cost);
+    const saltB64 = bcryptBase64Encode(bytes, BCRYPT_SALT_LEN);
+    return '$2b$' + costStr + '$' + saltB64;
+  }
+
+  function bcryptHashFull(password, cost, saltString){
+    /* normalize password: bcrypt uses UTF-8, truncated to 72 bytes */
+    let pw = '';
+    for (const c of password) pw += c;
+    const pwBytes = new TextEncoder().encode(pw);
+    let truncated = '';
+    let byteCount = 0;
+    for (let i = 0; i < pwBytes.length && byteCount < 72; i++){
+      truncated += String.fromCharCode(pwBytes[i]);
+      byteCount++;
+    }
+    /* add null terminator as per bcrypt spec */
+    truncated += '\x00';
+
+    /* parse salt string to bytes */
+    const saltPart = saltString.slice(7, 29); /* after $2b$XX$ */
+    const saltBytes = new Uint8Array(BCRYPT_SALT_LEN);
+    let off = 0, c1, c2;
+    for (let i = 0; i < saltPart.length; i++){
+      c1 = BASE64_INDEX[saltPart.charCodeAt(i)];
+      if (c1 === -1) continue;
+      i++;
+      c2 = BASE64_INDEX[saltPart.charCodeAt(i)];
+      if (c2 === -1) continue;
+      saltBytes[off++] = ((c1 << 2) | ((c2 & 0x30) >> 4)) & 0xFF;
+      if (off >= BCRYPT_SALT_LEN) break;
+      c1 = BASE64_INDEX[saltPart.charCodeAt(++i)];
+      if (c1 === -1) break;
+      saltBytes[off++] = (((c2 & 0x0F) << 4) | ((c1 & 0x3C) >> 2)) & 0xFF;
+      if (off >= BCRYPT_SALT_LEN) break;
+      c2 = BASE64_INDEX[saltPart.charCodeAt(++i)];
+      if (c2 === -1) break;
+      saltBytes[off++] = (((c1 & 0x03) << 6) | c2) & 0xFF;
+    }
+
+    const hashBytes = bcryptHash(truncated, saltBytes, cost);
+    const hashB64 = bcryptBase64Encode(hashBytes, 23);
+    return saltString.slice(0, 29) + hashB64;
+  }
+
+  function bcryptCompare(password, hash){
+    try {
+      const costStr = hash.slice(4, 6);
+      const cost = parseInt(costStr, 10);
+      if (isNaN(cost) || cost < 4 || cost > 31) return false;
+      const computed = bcryptHashFull(password, cost, hash.slice(0, 29));
+      /* constant-time compare */
+      if (computed.length !== hash.length) return false;
+      let diff = 0;
+      for (let i = 0; i < computed.length; i++) diff |= computed.charCodeAt(i) ^ hash.charCodeAt(i);
+      return diff === 0;
+    } catch(e){ return false; }
+  }
+
+  /* ---------- SHA-256 & MD5 for comparison (via SubtleCrypto / fallback) ---------- */
+  async function sha256Hex(text){
+    const buf = new TextEncoder().encode(text);
+    const hash = await crypto.subtle.digest('SHA-256', buf);
+    return [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  function md5Hex(text){
+    /* simple MD5 implementation for comparison purposes only */
+    function safeAdd(x, y){ const lsw = (x & 0xFFFF) + (y & 0xFFFF); const msw = (x >> 16) + (y >> 16) + (lsw >> 16); return (msw << 16) | (lsw & 0xFFFF); }
+    function bitRotateLeft(num, cnt){ return (num << cnt) | (num >>> (32 - cnt)); }
+    function md5cmn(q, a, b, x, s, t){ return safeAdd(bitRotateLeft(safeAdd(safeAdd(a, q), safeAdd(x, t)), s), b); }
+    function md5ff(a, b, c, d, x, s, t){ return md5cmn((b & c) | (~b & d), a, b, x, s, t); }
+    function md5gg(a, b, c, d, x, s, t){ return md5cmn((b & d) | (c & ~d), a, b, x, s, t); }
+    function md5hh(a, b, c, d, x, s, t){ return md5cmn(b ^ c ^ d, a, b, x, s, t); }
+    function md5ii(a, b, c, d, x, s, t){ return md5cmn(c ^ (b | ~d), a, b, x, s, t); }
+    function binlMD5(x, len){
+      x[len >> 5] |= 0x80 << (len % 32);
+      x[((len + 64) >>> 9 << 4) + 14] = len;
+      let a = 1732584193, b = -271733879, c = -1732584194, d = 271733878;
+      for (let i = 0; i < x.length; i += 16){
+        const olda = a, oldb = b, oldc = c, oldd = d;
+        a = md5ff(a, b, c, d, x[i], 7, -680876936); d = md5ff(d, a, b, c, x[i+1], 12, -389564586); c = md5ff(c, d, a, b, x[i+2], 17, 606105819); b = md5ff(b, c, d, a, x[i+3], 22, -1044525330);
+        a = md5ff(a, b, c, d, x[i+4], 7, -176418897); d = md5ff(d, a, b, c, x[i+5], 12, 1200080426); c = md5ff(c, d, a, b, x[i+6], 17, -1473231341); b = md5ff(b, c, d, a, x[i+7], 22, -45705983);
+        a = md5ff(a, b, c, d, x[i+8], 7, 1770035416); d = md5ff(d, a, b, c, x[i+9], 12, -1958414417); c = md5ff(c, d, a, b, x[i+10], 17, -42063); b = md5ff(b, c, d, a, x[i+11], 22, -1990404162);
+        a = md5ff(a, b, c, d, x[i+12], 7, 1804603682); d = md5ff(d, a, b, c, x[i+13], 12, -40341101); c = md5ff(c, d, a, b, x[i+14], 17, -1502002290); b = md5ff(b, c, d, a, x[i+15], 22, 1236535329);
+        a = md5gg(a, b, c, d, x[i+1], 5, -165796510); d = md5gg(d, a, b, c, x[i+6], 9, -1069501632); c = md5gg(c, d, a, b, x[i+11], 14, 643717713); b = md5gg(b, c, d, a, x[i], 20, -373897302);
+        a = md5gg(a, b, c, d, x[i+5], 5, -701558691); d = md5gg(d, a, b, c, x[i+10], 9, 38016083); c = md5gg(c, d, a, b, x[i+15], 14, -660478335); b = md5gg(b, c, d, a, x[i+4], 20, -405537848);
+        a = md5gg(a, b, c, d, x[i+9], 5, 568446438); d = md5gg(d, a, b, c, x[i+14], 9, -1019803690); c = md5gg(c, d, a, b, x[i+3], 14, -187363961); b = md5gg(b, c, d, a, x[i+8], 20, 1163531501);
+        a = md5gg(a, b, c, d, x[i+13], 5, -1444681467); d = md5gg(d, a, b, c, x[i+2], 9, -51403784); c = md5gg(c, d, a, b, x[i+7], 14, 1735328473); b = md5gg(b, c, d, a, x[i+12], 20, -1926607734);
+        a = md5hh(a, b, c, d, x[i+5], 4, -378558); d = md5hh(d, a, b, c, x[i+8], 11, -2022574463); c = md5hh(c, d, a, b, x[i+11], 16, 1839030562); b = md5hh(b, c, d, a, x[i+14], 23, -35309556);
+        a = md5hh(a, b, c, d, x[i+1], 4, -1530992060); d = md5hh(d, a, b, c, x[i+4], 11, 1272893353); c = md5hh(c, d, a, b, x[i+7], 16, -155497632); b = md5hh(b, c, d, a, x[i+10], 23, -1094730640);
+        a = md5hh(a, b, c, d, x[i+13], 4, 681279174); d = md5hh(d, a, b, c, x[i], 11, -358537222); c = md5hh(c, d, a, b, x[i+3], 16, -722521979); b = md5hh(b, c, d, a, x[i+6], 23, 76029189);
+        a = md5hh(a, b, c, d, x[i+9], 4, -640364487); d = md5hh(d, a, b, c, x[i+12], 11, -421815835); c = md5hh(c, d, a, b, x[i+15], 16, 530742520); b = md5hh(b, c, d, a, x[i+2], 23, -995338651);
+        a = md5ii(a, b, c, d, x[i], 6, -198630844); d = md5ii(d, a, b, c, x[i+7], 10, 1126891415); c = md5ii(c, d, a, b, x[i+14], 15, -1416354905); b = md5ii(b, c, d, a, x[i+5], 21, -57434055);
+        a = md5ii(a, b, c, d, x[i+12], 6, 1700485571); d = md5ii(d, a, b, c, x[i+3], 10, -1894986606); c = md5ii(c, d, a, b, x[i+10], 15, -1051523); b = md5ii(b, c, d, a, x[i+1], 21, -2054922799);
+        a = md5ii(a, b, c, d, x[i+8], 6, 1873313359); d = md5ii(d, a, b, c, x[i+15], 10, -30611744); c = md5ii(c, d, a, b, x[i+6], 15, -1560198380); b = md5ii(b, c, d, a, x[i+13], 21, 1309151649);
+        a = md5ii(a, b, c, d, x[i+4], 6, -145523070); d = md5ii(d, a, b, c, x[i+11], 10, -1120210379); c = md5ii(c, d, a, b, x[i+2], 15, 718787259); b = md5ii(b, c, d, a, x[i+9], 21, -343485551);
+        a = safeAdd(a, olda); b = safeAdd(b, oldb); c = safeAdd(c, oldc); d = safeAdd(d, oldd);
+      }
+      return [a, b, c, d];
+    }
+    function binl2hex(binarray){
+      const hexTab = '0123456789abcdef';
+      let str = '';
+      for (let i = 0; i < binarray.length * 4; i++){
+        str += hexTab.charAt((binarray[i >> 2] >> ((i % 4) * 8 + 4)) & 0xF) + hexTab.charAt((binarray[i >> 2] >> ((i % 4) * 8)) & 0xF);
+      }
+      return str;
+    }
+    function str2binl(str){
+      const bin = [];
+      const mask = (1 << 8) - 1;
+      for (let i = 0; i < str.length * 8; i += 8) bin[i >> 5] |= (str.charCodeAt(i / 8) & mask) << (i % 32);
+      return bin;
+    }
+    const utf8 = new TextEncoder().encode(text);
+    const bin = str2binl(String.fromCharCode(...utf8));
+    return binl2hex(binlMD5(bin, utf8.length * 8));
+  }
+
+  /* ---------- output rendering ---------- */
+  function escapeHtml(s){
+    return String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+  }
+
+  function parseBcryptStructure(hash){
+    const m = hash.match(/^\$2b?\$(\d{2})\$([./A-Za-z0-9]{22})([./A-Za-z0-9]{31})$/);
+    if (!m) return null;
+    return { version: '$2b$', cost: m[1], salt: m[2], hash: m[3] };
+  }
+
+  function renderHashResult(hash, extras){
+    lastOutputText = hash;
+    const struct = parseBcryptStructure(hash);
+    let html = '<div class="hash-output"><div class="hash-label">BCRYPT HASH</div><div class="hash-value">' + escapeHtml(hash) + '</div></div>';
+
+    if (struct){
+      html += '<div class="bcrypt-structure"><div class="struct-label">HASH STRUCTURE</div><div class="struct-parts">' +
+        '<span>version <b>' + escapeHtml(struct.version) + '</b></span>' +
+        '<span>cost <b>' + escapeHtml(struct.cost) + '</b></span>' +
+        '<span>salt <b>' + escapeHtml(struct.salt) + '</b></span>' +
+        '<span>hash <b>' + escapeHtml(struct.hash) + '</b></span>' +
+      '</div></div>';
+    }
+
+    if (extras && (extras.sha256 || extras.md5)){
+      html += '<div style="margin-top:14px; border-top:1px dashed var(--edge); padding-top:14px;">' +
+        '<div class="struct-label" style="margin-bottom:8px;">ALGORITHM COMPARISON</div>' +
+        '<table class="compare-table"><tr><th>Algorithm</th><th>Output</th></tr>';
+      if (extras.sha256) html += '<tr><td>SHA-256</td><td class="mono">' + escapeHtml(extras.sha256) + '</td></tr>';
+      if (extras.md5) html += '<tr><td>MD5</td><td class="mono">' + escapeHtml(extras.md5) + '</td></tr>';
+      html += '</table></div>';
+    }
+
+    outEl.innerHTML = html;
+    resActions.hidden = false;
+  }
+
+  function renderVerifyResult(isMatch){
+    const cls = isMatch ? 'match' : 'nomatch';
+    const icon = isMatch
+      ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>';
+    outEl.innerHTML = '<div class="verify-result ' + cls + '">' + icon +
+      (isMatch ? 'Password matches the hash.' : 'Password does not match the hash.') + '</div>';
+    resActions.hidden = true;
+  }
+
+  /* ---------- main action ---------- */
+  async function processHash(){
+    errShow('');
+    const password = passwordInput.value;
+    if (!password){ errShow('Please enter a password to hash.'); return; }
+
+    try {
+      const cost = state.cost;
+      let saltString;
+      if (state.saltMode === 'manual' && manualSaltInput.value.trim()){
+        /* use manual salt: re-encode to bcrypt format */
+        const raw = manualSaltInput.value.trim();
+        const bytes = new Uint8Array(BCRYPT_SALT_LEN);
+        for (let i = 0; i < Math.min(raw.length, BCRYPT_SALT_LEN); i++) bytes[i] = raw.charCodeAt(i);
+        const costStr = cost < 10 ? ('0' + cost) : String(cost);
+        saltString = '$2b$' + costStr + '$' + bcryptBase64Encode(bytes, BCRYPT_SALT_LEN);
+      } else {
+        saltString = genSalt(cost);
+      }
+
+      const startTime = performance.now();
+      const hash = bcryptHashFull(password, cost, saltString);
+      const elapsed = performance.now() - startTime;
+
+      const extras = {};
+      if (state.compareSha) extras.sha256 = await sha256Hex(password);
+      if (state.compareMd5) extras.md5 = md5Hex(password);
+
+      renderHashResult(hash, extras);
+
+      /* show timing info */
+      const struct = parseBcryptStructure(hash);
+      if (struct){
+        outEl.insertAdjacentHTML('beforeend',
+          '<div class="res-list">' +
+            '<div class="res-row"><span class="rk">Cost factor</span><span class="rvv">' + struct.cost + ' (2^' + struct.cost + ' rounds)</span></div>' +
+            '<div class="res-row"><span class="rk">Hashing time</span><span class="rvv">' + elapsed.toFixed(0) + ' ms</span></div>' +
+            '<div class="res-row"><span class="rk">Salt</span><span class="rvv">' + (state.saltMode === 'manual' ? 'Manual' : 'Random (16 bytes)') + '</span></div>' +
+          '</div>');
+      }
+    } catch(e){
+      errShow('Hashing failed: ' + e.message);
+    }
+  }
+
+  function processVerify(){
+    errShow('');
+    const hash = verifyHashInput.value.trim();
+    const password = verifyPassInput.value;
+    if (!hash){ errShow('Please paste a bcrypt hash.'); return; }
+    if (!password){ errShow('Please enter the password to verify.'); return; }
+    if (!hash.match(/^\$2[ab]?\$/)){ errShow('That doesn\u2019t look like a bcrypt hash. It should start with $2a$, $2b$, or $2y$.'); return; }
+
+    try {
+      const isMatch = bcryptCompare(password, hash);
+      renderVerifyResult(isMatch);
+    } catch(e){
+      errShow('Verification failed: ' + e.message);
+    }
+  }
+
+  /* ---------- wiring ---------- */
+  modeChips.forEach(chip => chip.addEventListener('click', () => {
+    modeChips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+    chip.setAttribute('aria-pressed', 'true');
+    state.mode = chip.dataset.mode;
+    hashFields.hidden = state.mode !== 'hash';
+    verifyFields.hidden = state.mode !== 'verify';
+    generateBtn.querySelector('span').textContent = state.mode === 'hash' ? 'Generate Hash' : 'Verify Hash';
+    outEl.innerHTML = '<div class="t-wait">' + (state.mode === 'hash' ? 'ENTER A PASSWORD AND TAP GENERATE' : 'PASTE A HASH AND TAP VERIFY') + '</div>';
+    resActions.hidden = true;
+    errShow('');
+  }));
+
+  costRange.addEventListener('input', () => {
+    state.cost = Number(costRange.value);
+    costVal.textContent = state.cost;
+    costChips.forEach(c => c.setAttribute('aria-pressed', String(Number(c.dataset.cost) === state.cost)));
+  });
+
+  costChips.forEach(chip => chip.addEventListener('click', () => {
+    costChips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+    chip.setAttribute('aria-pressed', 'true');
+    state.cost = Number(chip.dataset.cost);
+    costRange.value = state.cost;
+    costVal.textContent = state.cost;
+  }));
+
+  saltChips.forEach(chip => chip.addEventListener('click', () => {
+    saltChips.forEach(c => c.setAttribute('aria-pressed', 'false'));
+    chip.setAttribute('aria-pressed', 'true');
+    state.saltMode = chip.dataset.salt;
+    manualSaltWrap.hidden = state.saltMode !== 'manual';
+  }));
+
+  compareShaBtn.addEventListener('click', () => {
+    const next = compareShaBtn.getAttribute('aria-pressed') !== 'true';
+    compareShaBtn.setAttribute('aria-pressed', String(next));
+    state.compareSha = next;
+  });
+  compareMd5Btn.addEventListener('click', () => {
+    const next = compareMd5Btn.getAttribute('aria-pressed') !== 'true';
+    compareMd5Btn.setAttribute('aria-pressed', String(next));
+    state.compareMd5 = next;
+  });
+
+  generateBtn.addEventListener('click', () => {
+    if (state.mode === 'hash') processHash();
+    else processVerify();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    errShow('');
+    resActions.hidden = true;
+    lastOutputText = '';
+    passwordInput.value = '';
+    verifyHashInput.value = '';
+    verifyPassInput.value = '';
+    manualSaltInput.value = '';
+    outEl.innerHTML = '<div class="t-wait">ENTER A PASSWORD AND TAP GENERATE</div>';
+  });
+
+  copyBtn.addEventListener('click', async () => {
+    if (!lastOutputText) return;
+    try {
+      await navigator.clipboard.writeText(lastOutputText);
+      copyBtn.title = 'Copied!';
+      setTimeout(() => { copyBtn.title = 'Copy hash'; }, 1200);
+    } catch(e){ errShow('Couldn\u2019t copy automatically.'); }
+  });
+
+  downloadBtn.addEventListener('click', () => {
+    if (!lastOutputText) return;
+    const blob = new Blob([lastOutputText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bcrypt-hash.txt';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  /* pre-fill a demo hash for verification mode? no, keep clean */
+})();
+
+/* =========================================================
+   FOOTER STARFIELD — quiet drift, pauses when off-screen
+========================================================= */
+(function(){
+  const canvas = $('#starfield');
+  if (!canvas) return;
+  if (!HAS3D){ canvas.style.display = 'none'; return; }
+
+  let renderer, scene, camera, pts, raf = null;
+
+  try{
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+    renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+    scene  = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(60, 1, .1, 100);
+    camera.position.z = 15;
+
+    const N = RM ? 80 : 150;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++){
+      pos[i*3]   = (Math.random() - .5) * 36;
+      pos[i*3+1] = (Math.random() - .5) * 22;
+      pos[i*3+2] = (Math.random() - .5) * 12;
+    }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+
+    const mat = new THREE.PointsMaterial({ size: .09, depthWrite: false, map: SPRITE });
+    themedMat(mat, 0xF1EDE2, 0x0B2545, .9, .55);
+    pts = new THREE.Points(geo, mat);
+    scene.add(pts);
+
+    function size(){
+      const r = canvas.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      renderer.setSize(r.width, r.height, false);
+      camera.aspect = r.width / r.height;
+      camera.updateProjectionMatrix();
+    }
+    size();
+    addEventListener('resize', size);
+    addEventListener('load', size);
+
+    function frame(){
+      tickTheme();
+      pts.rotation.y += .0008;
+      pts.rotation.x = Math.sin(Date.now() * .00006) * .05;
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(frame);
+    }
+    function start(){ if (!raf && !RM) raf = requestAnimationFrame(frame); }
+    function stop(){ if (raf){ cancelAnimationFrame(raf); raf = null; } }
+
+    if (RM){
+      tickTheme();
+      renderer.render(scene, camera);
+    } else {
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+      }, { threshold: 0 }).observe(canvas);
+      start();
+    }
+  }catch(e){
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
