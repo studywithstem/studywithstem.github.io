@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+<!-- ============ CHARSET & VIEWPORT — identical on every page, keep first ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ ESSENTIAL META — this page's own values ============ -->
+<title>Molecular Geometry Explorer — Interactive VSEPR Shapes, Bond Angles & 3D Molecule Builder | StudyWithSTEM</title>
+<meta name="description" content="Free interactive molecular geometry explorer: build molecules, drag to rotate 3D shapes, zoom into bond angles, and see VSEPR geometry, lone pairs, and hybridization update live. No sign-up, runs in your browser.">
+<meta name="keywords" content="molecular geometry explorer, interactive VSEPR model, 3D molecule builder, bond angle tool, electron pair geometry, molecular shapes simulator, chemistry 3D viewer, lone pair diagram, hybridization chart, free chemistry tool, interactive molecule diagram">
+<meta name="author" content="StudyWithSTEM">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://studywithstem.github.io/tools/chemistry/molecular-geometry/index.html">
+
+<!-- ============ SOCIAL MEDIA META (Open Graph + Twitter/X Card) — this page's own values ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StudyWithSTEM">
+<meta property="og:title" content="Molecular Geometry Explorer — Interactive VSEPR Shapes, Bond Angles & 3D Molecule Builder | StudyWithSTEM">
+<meta property="og:description" content="Build molecules, drag to rotate 3D shapes, zoom into bond angles, and watch VSEPR geometry, lone pairs, and hybridization update live. Free, interactive, no sign-up — runs entirely in your browser.">
+<meta property="og:url" content="https://studywithstem.github.io/tools/chemistry/molecular-geometry/index.html">
+<meta property="og:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/molecular-geometry.jpg">
+<meta property="og:image:alt" content="StudyWithSTEM Molecular Geometry Explorer — interactive VSEPR model and 3D molecule builder">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@studywithstem">
+<meta name="twitter:title" content="Molecular Geometry Explorer — Interactive VSEPR Shapes & 3D Molecule Builder | StudyWithSTEM">
+<meta name="twitter:description" content="Build molecules, drag to rotate 3D shapes, zoom into bond angles, and watch VSEPR geometry, lone pairs, and hybridization update live. Free and interactive.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/studywithstem/studywithstem.github.io/refs/heads/main/images/tool-images/molecular-geometry.jpg">
+
+<!-- ============ ICONS — identical on every page ============ -->
+<link rel="icon" type="image/png" href="/images/studywithstem.png">
+<link rel="apple-touch-icon" href="/images/studywithstem.png">
+
+<!-- ============ SCHEMA MARKUP (JSON-LD) — Organization + WebSite blocks are site-wide ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/",
+  "logo": "https://studywithstem.github.io/images/studywithstem.png",
+  "sameAs": [
+    "https://instagram.com/studywithstem",
+    "https://x.com/studywithstem",
+    "https://buymeacoffee.com/studywithstem"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "StudyWithSTEM",
+  "url": "https://studywithstem.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://studywithstem.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://studywithstem.github.io/tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Chemistry", "item": "https://studywithstem.github.io/tools/chemistry/" },
+    { "@type": "ListItem", "position": 4, "name": "Molecular Geometry", "item": "https://studywithstem.github.io/tools/chemistry/molecular-geometry/index.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Molecular Geometry Explorer",
+  "url": "https://studywithstem.github.io/tools/chemistry/molecular-geometry/index.html",
+  "description": "Free interactive molecular geometry explorer covering VSEPR shapes, bond angles, lone pairs, and 3D molecule building for common geometries from linear to octahedral.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Works in all modern browsers.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Drag-to-rotate interactive 3D molecular models",
+    "Build molecules with up to 6 electron domains",
+    "Live VSEPR geometry and bond angle readout",
+    "Lone pair visualization and hybridization display",
+    "Zoom into bond angles and atomic positions"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is VSEPR theory?",
+      "acceptedAnswer": { "@type": "Answer", "text": "VSEPR stands for Valence Shell Electron Pair Repulsion. It states that electron pairs around a central atom arrange themselves as far apart as possible to minimize repulsion. This determines the electron-pair geometry, and the molecular geometry is what you get after accounting for lone pairs." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do lone pairs affect molecular shape?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lone pairs occupy more space than bonding pairs because they are held by only one nucleus. This extra repulsion pushes bonding pairs closer together, reducing bond angles. For example, methane (CH4) has 109.5° angles, but ammonia (NH3) with one lone pair has 107°, and water (H2O) with two lone pairs has 104.5°." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the main molecular geometries?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The main geometries based on electron domains are: linear (2 domains), trigonal planar (3), tetrahedral (4), trigonal bipyramidal (5), and octahedral (6). When lone pairs are present, the molecular shape changes to bent, trigonal pyramidal, seesaw, T-shaped, or square pyramidal." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you determine hybridization?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hybridization is determined by the number of electron domains around the central atom: 2 domains = sp, 3 = sp², 4 = sp³, 5 = sp³d, and 6 = sp³d². This explains the geometry and bond angles observed in the molecule." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between electron geometry and molecular geometry?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Electron geometry includes all electron domains (bonding pairs and lone pairs) around the central atom. Molecular geometry describes only the positions of the atoms, ignoring lone pairs. For example, water has tetrahedral electron geometry but bent molecular geometry." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are bond angles important?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bond angles determine the 3D shape of a molecule, which in turn affects its physical properties, reactivity, and how it interacts with other molecules. Small changes in bond angles can dramatically change a molecule's behavior, especially in biological systems like enzymes and receptors." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this molecular geometry explorer free, and is my data sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It is completely free and runs entirely in your browser — nothing you build or click is uploaded, logged, or sent to a server. No account, no sign-up, no limits." }
+    }
+  ]
+}
+</script>
+
+<!-- ============ SITE VERIFICATION — identical on every page ============ -->
+<meta name="msvalidate.01" content="386462691C1A17F5B34B8BD63D31FF2E" />
+<meta name="google-site-verification" content="1QZcgczBHQpCu3SkgY_-7vUioZsEhXQHMd9V8LPUxzk" />
+<meta name="p:domain_verify" content="8a871994560fc9df4aa0f8be3cfd47a7"/>
+
+<!-- ============ GOOGLE ANALYTICS (gtag.js) — identical on every page ============ -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9WC5XBZ16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E9WC5XBZ16');
+</script>
+
+<!-- set theme before first paint (no flash) -->
+<script>
+(function(){ try{
+  var t = localStorage.getItem('sws-theme');
+  if(!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+}catch(e){} })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --f-disp:'Fraunces',Georgia,serif;
+  --f-sans:'Space Grotesk','Segoe UI',sans-serif;
+  --f-mono:'Space Mono',ui-monospace,'SF Mono',monospace;
+  --navh:76px;
+}
+html[data-theme="dark"]{
+  --bg:#0B1B33;  --bg2:#0F2340;
+  --ink:#F1EDE2; --muted:rgba(241,237,226,.62); --faint:rgba(241,237,226,.4);
+  --accent:#6FE3D0; --accent-ink:#0B2545; --teal:#3ED9B5;
+  --amber:#F0B65C; --amber-deep:#E8A33D;
+  --edge:rgba(241,237,226,.13); --edge-strong:rgba(241,237,226,.32);
+  --nav-bg:rgba(11,27,51,.55); --nav-bg-2:rgba(9,22,42,.85);
+  --panel:rgba(241,237,226,.04);
+  color-scheme:dark;
+}
+html[data-theme="light"]{
+  --bg:#F6F3EB;  --bg2:#EFEAE0;
+  --ink:#0B2545; --muted:#55677E; --faint:#8A98A8;
+  --accent:#0E7C87; --accent-ink:#F6F3EB; --teal:#1B9AA6;
+  --amber:#E8A33D; --amber-deep:#B9761C;
+  --edge:rgba(11,37,69,.15); --edge-strong:rgba(11,37,69,.42);
+  --nav-bg:rgba(246,243,235,.6); --nav-bg-2:rgba(246,243,235,.92);
+  --panel:rgba(11,37,69,.045);
+  color-scheme:light;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--f-sans); font-size:16px; line-height:1.6;
+  color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body.locked{overflow:hidden;}
+a{color:inherit; text-decoration:none;}
+img,svg,canvas{display:block;}
+ul,ol{list-style:none;}
+.mono{font-family:var(--f-mono);}
+.wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+::selection{background:var(--accent); color:var(--accent-ink);}
+:focus-visible{outline:2px dashed var(--accent); outline-offset:3px;}
+
+/* page texture: dark = dot matrix, light = graph paper */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .mmenu{
+  background-image:radial-gradient(circle, rgba(241,237,226,.055) 1px, transparent 1.3px);
+  background-size:26px 26px;
+}
+html[data-theme="light"] body,
+html[data-theme="light"] .mmenu{
+  background-image:
+    linear-gradient(rgba(11,37,69,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,37,69,.05) 1px, transparent 1px);
+  background-size:44px 44px;
+}
+
+/* smooth cross-fade of every CSS color while switching themes */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after{
+  transition:background-color .5s ease, color .5s ease, border-color .5s ease,
+             fill .5s ease, stroke .5s ease, opacity .5s ease !important;
+}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky; top:0; z-index:60;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(150%);
+  backdrop-filter:blur(14px) saturate(150%);
+  transition:background .35s, transform .45s ease, box-shadow .35s;
+}
+nav.hide{transform:translateY(-105%);}
+nav.scrolled{background:var(--nav-bg-2); box-shadow:0 1px 0 var(--edge);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:var(--navh); gap:14px;}
+
+.brand{display:flex; align-items:center; gap:11px; font:700 1.12rem/1 var(--f-sans); letter-spacing:-.015em;}
+.brand .stem{color:var(--accent);}
+.brand-mark{width:30px; height:30px; flex:none;}
+.brand-mark svg{width:30px; height:30px; display:block;}
+.brand-mark svg path:nth-child(1){stroke:var(--ink); transition:stroke .4s;}
+.brand-mark svg path:nth-child(2){stroke:var(--teal); transition:stroke .4s;}
+
+.navlinks{display:flex; gap:2px; font:500 .92rem var(--f-sans); color:var(--muted);}
+.navlinks a{position:relative; display:inline-flex; align-items:baseline; gap:7px; padding:10px 14px; border-radius:8px; transition:color .25s, background .25s;}
+.navlinks a i{font:700 .56rem var(--f-mono); font-style:normal; color:var(--accent); opacity:0; transform:translateX(-5px); transition:opacity .25s, transform .25s;}
+.navlinks a::after{content:""; position:absolute; left:14px; right:14px; bottom:6px; height:2px; background:var(--accent); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .3s ease;}
+.navlinks a:hover{color:var(--ink); background:var(--panel);}
+.navlinks a:hover i{opacity:1; transform:none;}
+.navlinks a.active{color:var(--ink);}
+.navlinks a.active i{opacity:1; transform:none;}
+.navlinks a.active::after{transform:scaleX(1);}
+
+.nav-right{display:flex; align-items:center; gap:14px;}
+.nav-social{display:flex; align-items:center; gap:9px;}
+.nav-social a{width:34px; height:34px; display:grid; place-items:center; border:1px solid var(--edge); border-radius:50%; color:var(--muted); transition:color .25s, border-color .25s, background .25s;}
+.nav-social a svg{width:14px; height:14px;}
+.nav-social a:hover{color:var(--accent); border-color:var(--accent); background:var(--panel);}
+
+/* theme switcher */
+.theme-toggle{
+  position:relative; width:56px; height:30px; flex:none; cursor:pointer;
+  border-radius:999px; border:1px solid var(--edge-strong); background:var(--panel);
+  transition:border-color .3s;
+}
+.theme-toggle:hover{border-color:var(--accent);}
+.tt-knob{
+  position:absolute; top:3px; left:3px; width:22px; height:22px; border-radius:50%;
+  background:var(--ink); display:grid; place-items:center;
+  transition:transform .45s cubic-bezier(.55,-.25,.3,1.3), background .4s;
+}
+html[data-theme="light"] .tt-knob{transform:translateX(26px); background:var(--accent);}
+.tt-knob svg{position:absolute; width:12px; height:12px; color:var(--bg); transition:opacity .3s, transform .45s;}
+html[data-theme="light"] .tt-knob .tt-sun{color:var(--accent-ink);}
+html[data-theme="dark"]  .tt-knob .tt-sun{opacity:0; transform:rotate(90deg) scale(.4);}
+html[data-theme="light"] .tt-knob .tt-moon{opacity:0; transform:rotate(-90deg) scale(.4);}
+
+/* ticket button — clipped corner, accent fill sweeps in on hover */
+.btn-ticket{
+  position:relative; overflow:hidden; cursor:pointer; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 20px; font:600 .88rem/1 var(--f-sans); letter-spacing:.01em;
+  color:var(--ink); background:var(--panel); border:1px solid var(--edge-strong);
+  clip-path:polygon(0 0, calc(100% - 11px) 0, 100% 11px, 100% 100%, 0 100%);
+  transition:color .32s, border-color .32s;
+}
+.btn-ticket::before{content:""; position:absolute; inset:0; background:var(--accent); transform:translateX(-102%); transition:transform .42s cubic-bezier(.76,0,.24,1);}
+.btn-ticket>*{position:relative; z-index:1;}
+.btn-ticket:hover{color:var(--accent-ink); border-color:var(--accent);}
+.btn-ticket:hover::before{transform:none;}
+.btn-ticket svg{width:14px; height:14px; transition:transform .3s;}
+.btn-ticket:hover svg{transform:translateX(4px);}
+
+.burger{display:none; width:42px; height:42px; flex:none; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:none; border:1px solid var(--edge-strong); border-radius:50%; cursor:pointer;}
+.burger span{width:16px; height:2px; background:var(--ink); transition:transform .35s ease;}
+body.menu-open .burger span:first-child{transform:translateY(4px) rotate(45deg);}
+body.menu-open .burger span:last-child{transform:translateY(-4px) rotate(-45deg);}
+
+/* scroll-progress hairline under the nav */
+.nav-progress{height:2px; background:var(--edge); position:relative; overflow:hidden;}
+.nav-progress i{position:absolute; top:0; left:0; height:100%; width:80px; background:var(--accent); transform:translateX(-90px);}
+
+/* ================= MOBILE MENU ================= */
+.mmenu{
+  position:fixed; inset:0; z-index:55; background:var(--bg);
+  display:flex; flex-direction:column; justify-content:center; padding:100px 26px 44px;
+  transform:translateY(-102%); visibility:hidden;
+  transition:transform .55s cubic-bezier(.2,.8,.25,1), visibility 0s .55s;
+}
+body.menu-open .mmenu{transform:none; visibility:visible; transition:transform .55s cubic-bezier(.2,.8,.25,1);}
+.mmenu a.mlink{
+  display:flex; align-items:baseline; gap:16px;
+  font:600 1.9rem/1.2 var(--f-disp); color:var(--ink);
+  padding:13px 4px; border-bottom:1px solid var(--edge);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease var(--d,0s), transform .45s cubic-bezier(.2,.8,.3,1) var(--d,0s);
+}
+.mmenu a.mlink .mono{font:700 .68rem var(--f-mono); color:var(--accent);}
+body.menu-open .mmenu a.mlink{opacity:1; transform:none;}
+.mmenu .btn-ticket{margin-top:30px; align-self:flex-start; opacity:0; transform:translateY(14px);
+  transition:opacity .45s ease .45s, transform .45s cubic-bezier(.2,.8,.3,1) .45s;}
+body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
+.mmenu-social{display:flex; gap:18px; margin-top:28px;}
+.mmenu-social a{font:700 .66rem var(--f-mono); letter-spacing:.12em; color:var(--muted); transition:color .25s;}
+.mmenu-social a:hover{color:var(--accent);}
+
+/* ================= PAGE HERO ================= */
+.page-hero{
+  position:relative; padding:76px 0 54px; border-bottom:1px solid var(--edge); overflow:hidden;
+}
+.page-hero::before{
+  content:""; position:absolute; top:-120px; right:-120px; width:360px; height:360px; border-radius:50%;
+  background:radial-gradient(circle, var(--accent) 0%, transparent 68%); opacity:.14; pointer-events:none;
+}
+.page-hero .kicker{font:700 .68rem var(--f-mono); letter-spacing:.2em; color:var(--accent); display:flex; align-items:center; gap:14px;}
+.page-hero .kicker::before{content:""; width:34px; height:2px; background:var(--accent);}
+.page-hero h1{font:600 clamp(2rem, 4.4vw, 3.1rem)/1.1 var(--f-disp); letter-spacing:-.015em; margin:20px 0 14px; max-width:16ch;}
+.page-hero .lede{max-width:56ch; color:var(--muted); font-size:1.02rem;}
+.page-hero .updated{margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:600 .66rem var(--f-mono); letter-spacing:.1em; color:var(--faint); border:1px solid var(--edge-strong); padding:8px 13px; border-radius:999px;}
+.page-hero .updated i{width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+
+/* ================= MOLECULAR GEOMETRY (page-specific layout) ================= */
+[hidden]{display:none !important;}
+
+.tool{padding:64px 0 96px;}
+.sec-head .sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec-head h2{font:600 clamp(1.55rem, 3vw, 2.15rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 10px;}
+.sec-head p{color:var(--muted); max-width:62ch;}
+.tool .sec-head{margin-bottom:28px;}
+
+.tool-shell{
+  border:1px solid var(--edge-strong); background:var(--panel);
+  clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+  padding:24px;
+}
+
+.mol-layout{display:grid; grid-template-columns:1.25fr 1fr; gap:28px; align-items:start;}
+@media (max-width:980px){ .mol-layout{grid-template-columns:1fr;} }
+
+/* ---- canvas stage ---- */
+.mol-stage{
+  position:relative; border:1px solid var(--edge-strong); background:var(--bg); border-radius:16px;
+  aspect-ratio:1/1; overflow:hidden; touch-action:none; cursor:grab; user-select:none;
+}
+.mol-stage.grabbing{cursor:grabbing;}
+.mol-stage svg{width:100%; height:100%; display:block;}
+.mol-stage-hint{
+  position:absolute; left:14px; bottom:14px; z-index:3; display:flex; gap:8px; flex-wrap:wrap;
+  pointer-events:none;
+}
+.mol-stage-hint span{
+  font:700 .58rem var(--f-mono); letter-spacing:.06em; color:var(--faint);
+  background:var(--panel); border:1px solid var(--edge-strong); border-radius:999px; padding:6px 10px;
+  backdrop-filter:blur(6px);
+}
+.mol-zoom{position:absolute; right:14px; top:14px; z-index:3; display:flex; flex-direction:column; gap:6px;}
+.mol-zoom button{
+  width:32px; height:32px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink); border-radius:8px;
+  font:700 1rem var(--f-sans); transition:background .2s, color .2s, border-color .2s;
+}
+.mol-zoom button:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+
+/* particle / label tooltip that follows hover */
+.mol-tip{
+  position:absolute; z-index:4; pointer-events:none; opacity:0; transform:translate(-50%,-130%) scale(.94);
+  transition:opacity .16s ease, transform .16s ease;
+  font:600 .74rem var(--f-mono); color:var(--ink); background:var(--bg2); border:1px solid var(--edge-strong);
+  border-radius:8px; padding:7px 10px; white-space:nowrap;
+}
+.mol-tip.show{opacity:1; transform:translate(-50%,-145%) scale(1);}
+.mol-tip b{color:var(--accent);}
+
+/* ---- side panel ---- */
+.mol-panel{display:grid; gap:18px;}
+
+.mol-picker label, .mol-steppers .st-label{
+  display:block; font:700 .64rem var(--f-mono); letter-spacing:.09em; text-transform:uppercase; color:var(--faint); margin-bottom:8px;
+}
+.mol-select{
+  width:100%; background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 14px; color:var(--ink); font:600 .96rem var(--f-sans); appearance:none; -webkit-appearance:none; cursor:pointer;
+  padding-right:38px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238A98A8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 12px center; background-size:14px;
+  transition:border-color .25s;
+}
+.mol-select:focus{outline:none; border-color:var(--accent);}
+
+.shape-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-top:12px;}
+.shape-btn{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
+  padding:10px 4px; cursor:pointer; border:1px solid var(--edge-strong); background:var(--bg); border-radius:8px;
+  transition:background .18s, color .18s, border-color .18s, transform .12s;
+  text-align:center;
+}
+.shape-btn .ico{font:700 1.1rem var(--f-mono); color:var(--accent); line-height:1;}
+.shape-btn .lbl{font:600 .55rem var(--f-mono); letter-spacing:.04em; color:var(--muted); text-transform:uppercase;}
+.shape-btn:hover{border-color:var(--accent); transform:translateY(-1px);}
+.shape-btn.active{background:var(--accent); border-color:var(--accent);}
+.shape-btn.active .ico{color:var(--accent-ink);}
+.shape-btn.active .lbl{color:var(--accent-ink); opacity:.85;}
+
+.mol-steppers{display:grid; gap:12px; margin-top:4px;}
+.stepper-row{display:flex; align-items:center; justify-content:space-between; gap:10px; border:1px dashed var(--edge-strong); border-radius:10px; padding:10px 12px;}
+.stepper-row .st-name{display:flex; align-items:center; gap:9px; font:600 .86rem var(--f-sans); color:var(--ink);}
+.stepper-row .dot{width:11px; height:11px; border-radius:50%; flex:none;}
+.dot.bond{background:#6FE3D0;}
+.dot.lone{background:#F0B65C;}
+.stepper-controls{display:flex; align-items:center; gap:8px;}
+.stepper-controls button{
+  width:28px; height:28px; border-radius:7px; cursor:pointer; display:grid; place-items:center;
+  border:1px solid var(--edge-strong); background:var(--bg); color:var(--ink); font:700 1rem var(--f-mono);
+  transition:background .18s, color .18s, border-color .18s;
+}
+.stepper-controls button:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+.stepper-controls button:disabled{opacity:.35; cursor:not-allowed; background:var(--bg); color:var(--ink); border-color:var(--edge-strong);}
+.stepper-controls .val{min-width:26px; text-align:center; font:700 .92rem var(--f-mono); color:var(--ink);}
+
+.mol-reset{
+  cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  font:700 .82rem var(--f-sans); color:var(--ink); background:var(--bg); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:12px; transition:border-color .2s, color .2s;
+}
+.mol-reset:hover{border-color:var(--accent); color:var(--accent);}
+.mol-reset svg{width:14px; height:14px;}
+
+.mol-readout{border:1px solid var(--edge-strong); background:var(--bg); border-radius:14px; padding:20px;}
+.mr-top{display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+.mr-name{font:600 clamp(1.3rem,3vw,1.7rem)/1.1 var(--f-disp); color:var(--ink);}
+.mr-formula{font:700 1.05rem var(--f-mono); color:var(--accent);}
+.mr-geom{
+  font:700 .68rem var(--f-mono); letter-spacing:.06em; text-transform:uppercase; border-radius:999px;
+  padding:6px 12px; margin-top:12px; display:inline-flex; align-items:center; gap:7px;
+  background:var(--panel); border:1px solid var(--edge-strong); color:var(--muted);
+}
+.mr-geom.highlight{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+
+.mr-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(110px,1fr)); gap:10px; margin-top:18px;}
+.mr-stat{border:1px dashed var(--edge-strong); border-radius:10px; padding:11px 13px;}
+.mr-stat .k{font:700 .56rem var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--faint);}
+.mr-stat .v{font:700 .95rem var(--f-mono); color:var(--ink); margin-top:6px;}
+
+.mr-detail{margin-top:16px; padding-top:16px; border-top:1px dashed var(--edge-strong);}
+.mr-detail .k{font:700 .6rem var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--faint); margin-bottom:9px;}
+.angle-bars{display:grid; gap:8px;}
+.angle-row{display:flex; align-items:center; gap:10px;}
+.angle-row .an{font:700 .72rem var(--f-mono); color:var(--faint); width:52px; flex:none;}
+.angle-bar-track{flex:1; height:9px; border-radius:5px; background:var(--panel); border:1px solid var(--edge); overflow:hidden;}
+.angle-bar-fill{height:100%; border-radius:5px; background:var(--accent); transition:width .35s cubic-bezier(.2,.8,.3,1);}
+.angle-row .av{font:700 .72rem var(--f-mono); color:var(--ink); width:44px; text-align:right; flex:none;}
+
+/* ================= CONTENT SECTIONS ================= */
+.sec{padding:84px 0; border-top:1px solid var(--edge);}
+
+.steps-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; margin-top:36px;}
+.step{
+  border:1px solid var(--edge); background:var(--panel); padding:22px 20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.step .n{font:700 .68rem var(--f-mono); letter-spacing:.14em; color:var(--accent);}
+.step h3{font:600 1.05rem/1.25 var(--f-disp); margin:10px 0 8px;}
+.step p{font-size:.86rem; color:var(--muted);}
+
+.fx-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:36px;}
+.fx{
+  border:1px solid var(--edge); background:var(--panel); padding:20px;
+  clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.fx h3{font:600 1rem/1.25 var(--f-disp); margin-bottom:11px;}
+.fx .formula{
+  font:600 .78rem/1.7 var(--f-mono); color:var(--accent); background:var(--bg);
+  border:1px dashed var(--edge-strong); border-radius:8px; padding:10px 12px; overflow-x:auto; white-space:nowrap;
+}
+.fx .formula sup{font-size:.6em;}
+.fx p{font-size:.82rem; color:var(--muted); margin-top:11px;}
+
+.faq-layout{display:grid; grid-template-columns:.8fr 1.2fr; gap:52px; align-items:start;}
+.faq-list{display:grid; gap:12px;}
+details.faq-item{border:1px solid var(--edge); background:var(--panel); border-radius:12px; overflow:hidden;}
+details.faq-item summary{
+  list-style:none; cursor:pointer; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  font:600 .95rem/1.4 var(--f-sans); color:var(--ink); transition:color .2s;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{color:var(--accent);}
+details.faq-item summary .pm{font:700 .95rem var(--f-mono); color:var(--accent); flex:none; transition:transform .3s;}
+details.faq-item[open] summary .pm{transform:rotate(45deg);}
+details.faq-item .faq-body{padding:0 20px 18px; color:var(--muted); font-size:.88rem;}
+details.faq-item .faq-body p + p{margin-top:10px;}
+details.faq-item .faq-body code{font:600 .8rem var(--f-mono); color:var(--accent);}
+
+/* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
+.pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
+.pre-footer-inner{display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.pf-text h2{font:600 clamp(1.6rem, 2.8vw, 2.2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:10px 0 8px;}
+.pf-text .hl{color:var(--accent); font-style:italic;}
+.pf-text p{max-width:44ch; color:var(--muted);}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.pf-form{display:flex; flex-direction:column; gap:12px; width:100%; max-width:360px;}
+.pf-form input[type="text"], .pf-form input[type="email"]{
+  width:100%; background:var(--panel); border:1px solid var(--edge-strong); border-radius:10px;
+  padding:13px 16px; color:var(--ink); font:.92rem var(--f-sans); transition:border-color .25s;
+}
+.pf-form input::placeholder{color:var(--faint);}
+.pf-form input:focus{outline:none; border-color:var(--accent);}
+.pf-form .btn-ticket{align-self:flex-start;}
+.pf-check{display:flex; align-items:flex-start; gap:10px; text-align:left; font:.8rem/1.5 var(--f-sans); color:var(--muted);}
+.pf-check input[type="checkbox"]{margin-top:3px; width:16px; height:16px; flex:none; accent-color:var(--accent);}
+.pf-check a{color:var(--accent); text-decoration:underline;}
+@media (max-width:640px){ .pre-footer{padding:56px 0;} .pf-form{width:100%; max-width:none;} }
+
+/* ================= FOOTER ================= */
+footer{position:relative; background:var(--bg2); border-top:1px solid var(--edge); overflow:hidden; padding:96px 0 34px;}
+#starfield{position:absolute; inset:0; width:100%; height:100%; opacity:.9; pointer-events:none; transition:opacity .5s;}
+html[data-theme="light"] #starfield{opacity:.55;}
+footer .wrap{position:relative; z-index:1;}
+
+.foot-top{display:grid; grid-template-columns:1.5fr .8fr .8fr 1fr; gap:44px;}
+.foot-brand .brand{margin-bottom:16px;}
+.foot-tag{font:.8rem var(--f-mono); color:var(--muted); max-width:34ch; line-height:1.7; margin-bottom:24px;}
+.foot-terminal{display:inline-flex; align-items:center; gap:8px; font:.78rem var(--f-mono); color:var(--accent);
+  background:var(--panel); border:1px solid var(--edge-strong); padding:9px 13px;
+  clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
+.foot-terminal .p{color:var(--faint);}
+.cursor{width:7px; height:14px; background:var(--accent); animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+
+.foot-col h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); margin-bottom:17px;}
+.foot-col ul{display:grid; gap:11px;}
+.foot-col a{position:relative; display:inline-flex; align-items:center; gap:9px; padding-left:18px; color:var(--muted); font-size:.92rem; transition:color .25s;}
+.foot-col a::before{content:""; position:absolute; left:0; top:50%; width:10px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .28s;}
+.foot-col a:hover{color:var(--ink);}
+.foot-col a:hover::before{transform:scaleX(1);}
+.foot-col a svg{width:14px; height:14px; color:var(--accent); flex:none;}
+
+/* staggered reveal */
+.foot-top>*{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1);}
+footer.in .foot-top>*:nth-child(1){opacity:1; transform:none; transition-delay:0s;}
+footer.in .foot-top>*:nth-child(2){opacity:1; transform:none; transition-delay:.09s;}
+footer.in .foot-top>*:nth-child(3){opacity:1; transform:none; transition-delay:.18s;}
+footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.27s;}
+
+/* constants ticker */
+.ticker{position:relative; z-index:1; margin-top:72px; border-top:1px solid var(--edge); border-bottom:1px solid var(--edge); overflow:hidden; padding:11px 0;}
+.ticker-track{display:flex; width:max-content; animation:tick 70s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{font:.68rem var(--f-mono); letter-spacing:.12em; color:var(--faint); white-space:nowrap;}
+.ticker-track b{color:var(--accent); font-weight:700;}
+@keyframes tick{to{transform:translateX(-50%);} }
+
+.foot-mid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:28px;}
+.foot-meta{font:600 .62rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
+#backTop{
+  width:46px; height:46px; display:grid; place-items:center; cursor:pointer;
+  border:1px solid var(--edge-strong); background:var(--panel); color:var(--ink);
+  clip-path:polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%);
+  transition:background .3s, color .3s, border-color .3s;
+}
+#backTop:hover{background:var(--accent); color:var(--accent-ink); border-color:var(--accent);}
+#backTop svg{width:15px; height:15px; transition:transform .3s;}
+#backTop:hover svg{transform:translateY(-3px);}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){ .foot-top{grid-template-columns:1fr 1fr; row-gap:46px;} }
+@media (max-width:960px){ .steps-grid{grid-template-columns:1fr 1fr;} .fx-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:940px){
+  .navlinks, .nav-social{display:none;}
+  .burger{display:flex;}
+}
+@media (max-width:880px){
+  .faq-layout{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:780px){ nav .btn-ticket{display:none;} }
+@media (max-width:640px){
+  .wrap{padding:0 20px;}
+  .foot-top{grid-template-columns:1fr;}
+  footer{padding:78px 0 30px;}
+  .steps-grid, .fx-grid{grid-template-columns:1fr;}
+  .sec{padding:64px 0;}
+  .tool-shell{padding:16px;}
+  .shape-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER — same nav + mobile menu as every page ============ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="StudyWithSTEM home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      StudyWith<span class="stem">STEM</span>
+    </a>
+
+    <div class="navlinks" id="navlinks">
+      <a href="/"><i>01</i>Home</a>
+      <a href="/tools/" class="active"><i>02</i>Tools</a>
+      <a href="/posts/"><i>03</i>Post</a>
+      <a href="/page/contact/"><i>04</i>Contact</a>
+      <a href="/page/subscription/"><i>05</i>Subscription</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark theme" aria-pressed="false">
+        <span class="tt-knob">
+          <svg class="tt-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+      </button>
+
+      <div class="nav-social">
+        <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow" aria-label="StudyWithSTEM on X">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+        </a>
+        <a href="mailto:studywithstem@gmail.com" aria-label="Email StudyWithSTEM">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+        </a>
+      </div>
+
+      <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+        <span>Become a member</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-progress"><i id="navProg"></i></div>
+</nav>
+
+<div class="mmenu" id="mmenu">
+  <a class="mlink" style="--d:.08s" href="/"><span class="mono">01</span>Home</a>
+  <a class="mlink" style="--d:.15s" href="/tools/"><span class="mono">02</span>Tools</a>
+  <a class="mlink" style="--d:.22s" href="/posts/"><span class="mono">03</span>Post</a>
+  <a class="mlink" style="--d:.29s" href="/page/contact/"><span class="mono">04</span>Contact</a>
+  <a class="mlink" style="--d:.36s" href="/page/subscription/"><span class="mono">05</span>Subscription</a>
+  <a class="btn-ticket" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+    <span>Become a member</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="mmenu-social">
+    <a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">INSTAGRAM</a>
+    <a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">X</a>
+    <a href="mailto:studywithstem@gmail.com">EMAIL</a>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="wrap">
+    <p class="kicker">FREE TOOL · CHEMISTRY</p>
+    <h1>Molecular Geometry</h1>
+    <p class="lede">Drag to rotate the 3D shape, click to build it, zoom into bond angles. A real VSEPR model you can explore from any angle.</p>
+    <span class="updated"><i></i>5 GEOMETRIES · NO SIGN-UP · RUNS IN YOUR BROWSER</span>
+  </div>
+</header>
+
+<!-- ============ THE TOOL ============ -->
+<main>
+<section class="tool" id="explorer">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">01 · THE MODEL</span>
+      <h2>Build a molecule, then spin it around.</h2>
+      <p>Pick a geometry or adjust bonding pairs and lone pairs. Drag anywhere on the model to rotate it, scroll or pinch to zoom, and hover a particle to see what it is.</p>
+    </div>
+
+    <div class="tool-shell">
+      <div class="mol-layout">
+
+        <!-- ===== STAGE ===== -->
+        <div>
+          <div class="mol-stage" id="molStage">
+            <svg id="molSvg" viewBox="-260 -260 520 520" aria-label="Interactive VSEPR molecular geometry diagram"></svg>
+            <div class="mol-tip" id="molTip"></div>
+            <div class="mol-zoom">
+              <button type="button" id="zoomIn" aria-label="Zoom in">+</button>
+              <button type="button" id="zoomOut" aria-label="Zoom out">−</button>
+            </div>
+            <div class="mol-stage-hint">
+              <span>DRAG TO ROTATE</span>
+              <span>SCROLL TO ZOOM</span>
+              <span>HOVER A PARTICLE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CONTROLS ===== -->
+        <div class="mol-panel">
+
+          <div class="mol-picker">
+            <label>Geometry preset</label>
+            <select class="mol-select" id="geometrySelect">
+              <option value="linear">Linear — 2 domains</option>
+              <option value="trigonal-planar">Trigonal Planar — 3 domains</option>
+              <option value="tetrahedral" selected>Tetrahedral — 4 domains</option>
+              <option value="trigonal-bipyramidal">Trigonal Bipyramidal — 5 domains</option>
+              <option value="octahedral">Octahedral — 6 domains</option>
+              <option value="bent">Bent — 2 bonds + 2 lone pairs</option>
+              <option value="trigonal-pyramidal">Trigonal Pyramidal — 3 bonds + 1 lone pair</option>
+            </select>
+            <div class="shape-grid" id="shapeGrid"></div>
+          </div>
+
+          <div class="mol-steppers">
+            <span class="st-label">Or build it yourself</span>
+
+            <div class="stepper-row">
+              <span class="st-name"><span class="dot bond"></span>Bonding pairs</span>
+              <div class="stepper-controls">
+                <button type="button" data-part="bonds" data-dir="-1" aria-label="Remove a bonding pair">−</button>
+                <span class="val" id="valBonds">4</span>
+                <button type="button" data-part="bonds" data-dir="1" aria-label="Add a bonding pair">+</button>
+              </div>
+            </div>
+            <div class="stepper-row">
+              <span class="st-name"><span class="dot lone"></span>Lone pairs</span>
+              <div class="stepper-controls">
+                <button type="button" data-part="lone" data-dir="-1" aria-label="Remove a lone pair">−</button>
+                <span class="val" id="valLone">0</span>
+                <button type="button" data-part="lone" data-dir="1" aria-label="Add a lone pair">+</button>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="mol-reset" id="molReset">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+            Reset to tetrahedral
+          </button>
+
+          <div class="mol-readout">
+            <div class="mr-top">
+              <div>
+                <div class="mr-name" id="mrName">Tetrahedral</div>
+                <span class="mr-formula" id="mrFormula">AX₄</span>
+              </div>
+              <span class="mr-geom highlight" id="mrGeom">109.5° BOND ANGLE</span>
+            </div>
+
+            <div class="mr-grid">
+              <div class="mr-stat"><div class="k">Electron domains</div><div class="v" id="mrDomains">4</div></div>
+              <div class="mr-stat"><div class="k">Bonding pairs</div><div class="v" id="mrBonds">4</div></div>
+              <div class="mr-stat"><div class="k">Lone pairs</div><div class="v" id="mrLone">0</div></div>
+              <div class="mr-stat"><div class="k">Hybridization</div><div class="v" id="mrHybrid">sp³</div></div>
+            </div>
+
+            <div class="mr-detail">
+              <div class="k">Bond angles</div>
+              <div class="angle-bars" id="angleBars"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO USE ============ -->
+<section class="sec" id="how-to-use">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">02 · HOW TO USE</span>
+      <h2>Everything responds to a click or a drag.</h2>
+      <p>No menus to dig through — the whole model is the interface.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="n mono">STEP 01</span>
+        <h3>Pick a geometry preset</h3>
+        <p>Choose a shape from the dropdown or click a tile in the mini grid — the model rebuilds itself instantly with the right angles and positions.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 02</span>
+        <h3>Spin and zoom the model</h3>
+        <p>Click and drag anywhere on the stage to rotate the molecule in 3D, and use the + / − buttons or your scroll wheel to zoom into the central atom.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 03</span>
+        <h3>Adjust bonds and lone pairs</h3>
+        <p>Use the bonding pair and lone pair steppers to morph the shape and watch the geometry name, bond angles and hybridization update live.</p>
+      </div>
+      <div class="step">
+        <span class="n mono">STEP 04</span>
+        <h3>Hover to identify a particle</h3>
+        <p>Hover any bonded atom or lone pair to see exactly what it is and where it sits in the structure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ READING THE DIAGRAM ============ -->
+<section class="sec" id="reading-the-model">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx mono">03 · READING THE DIAGRAM</span>
+      <h2>What you're actually looking at.</h2>
+      <p>The model is drawn to make three real chemical facts easy to see, not just decorative motion.</p>
+    </div>
+    <div class="fx-grid">
+      <div class="fx">
+        <h3>The central atom</h3>
+        <div class="formula">central atom (teal) + bonded atoms (amber)</div>
+        <p>The atom in the middle is where all the action happens. Its bonding pairs and lone pairs determine the entire shape of the molecule through VSEPR repulsion.</p>
+      </div>
+      <div class="fx">
+        <h3>Lone pairs</h3>
+        <div class="formula">lone pair (grey) — extra repulsion</div>
+        <p>Lone pairs are shown as fuzzy clouds because they occupy more space than bonding pairs. They squeeze bond angles smaller — which is why water is 104.5° instead of 109.5°.</p>
+      </div>
+      <div class="fx">
+        <h3>Bond angles</h3>
+        <div class="formula">electron domains → geometry → angle</div>
+        <p>The angle between bonded atoms is determined purely by how many electron domains surround the central atom. The readout panel shows the ideal angle for each geometry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-layout">
+    <div class="sec-head">
+      <span class="sec-idx mono">04 · FAQ</span>
+      <h2>Questions people actually ask.</h2>
+      <p>The short answers — with the long ones one tap away.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>What is VSEPR theory?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>VSEPR stands for <strong>Valence Shell Electron Pair Repulsion</strong>. It states that electron pairs around a central atom arrange themselves as far apart as possible to minimize repulsion. This determines the electron-pair geometry, and the molecular geometry is what you get after accounting for lone pairs.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How do lone pairs affect molecular shape?<span class="pm">+</span></summary>
+        <div class="faq-body"><p><strong>Lone pairs</strong> occupy more space than bonding pairs because they are held by only one nucleus. This extra repulsion pushes bonding pairs closer together, reducing bond angles. For example, methane (CH₄) has 109.5° angles, but ammonia (NH₃) with one lone pair has 107°, and water (H₂O) with two lone pairs has 104.5°.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What are the main molecular geometries?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>The main geometries based on electron domains are: <code>linear</code> (2 domains), <code>trigonal planar</code> (3), <code>tetrahedral</code> (4), <code>trigonal bipyramidal</code> (5), and <code>octahedral</code> (6). When lone pairs are present, the molecular shape changes to bent, trigonal pyramidal, seesaw, T-shaped, or square pyramidal.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How do you determine hybridization?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>Hybridization is determined by the number of electron domains around the central atom: <code>2 domains = sp</code>, <code>3 = sp²</code>, <code>4 = sp³</code>, <code>5 = sp³d</code>, and <code>6 = sp³d²</code>. This explains the geometry and bond angles observed in the molecule.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What is the difference between electron geometry and molecular geometry?<span class="pm">+</span></summary>
+        <div class="faq-body"><p><strong>Electron geometry</strong> includes all electron domains (bonding pairs and lone pairs) around the central atom. <strong>Molecular geometry</strong> describes only the positions of the atoms, ignoring lone pairs. For example, water has tetrahedral electron geometry but bent molecular geometry.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Why are bond angles important?<span class="pm">+</span></summary>
+        <div class="faq-body"><p><strong>Bond angles</strong> determine the 3D shape of a molecule, which in turn affects its physical properties, reactivity, and how it interacts with other molecules. Small changes in bond angles can dramatically change a molecule's behavior, especially in biological systems like enzymes and receptors.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this tool free, and where does my data go?<span class="pm">+</span></summary>
+        <div class="faq-body"><p>It's completely free and runs entirely in your browser — nothing you build or click is uploaded, logged, or sent to any server. No account, no sign-up, no limits.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER — same footer as every page ============ -->
+<!-- ============ SUBSCRIBE STRIP — sits directly above the footer, ships with it ============ -->
+<section class="pre-footer" id="subscribe">
+  <div class="wrap pre-footer-inner">
+    <div class="pf-text">
+      <span class="sec-idx mono">SUBSCRIBE</span>
+      <h2>Never miss a <span class="hl">drop.</span></h2>
+      <p>New posters, tools and posts — straight to your inbox, every Friday. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="pf-form" id="sib-form" method="POST" action="https://d542c79e.sibforms.com/serve/MUIFAGuMeRGR42gVtTmSsRobxYRs_G04Y7cusZhxRqd8unwt9h7gvpt58mY8ywBN2FiwGDN_LI4ai9J_-o4IYSD79L76aJnhOZFksMCbiHrupMzqMb1sfyZc2io6xbhvGZNiGFlWrveHgYJPHkrXmzEWwWEDniJcbEz5g8z8KVeDmRQ8K2OttTJKkg3J2zqniztrH-2AgZvyHPT_hQ==">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="Your name" aria-label="Name" autocomplete="off" required>
+      <input type="email" id="EMAIL" name="EMAIL" placeholder="you@example.com" aria-label="Email address" autocomplete="off" required>
+      <label class="pf-check">
+        <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" required>
+        <span>I agree to receive newsletters and accept the <a href="/page/privacy-policy/">privacy policy</a>.</span>
+      </label>
+      <button class="btn-ticket" type="submit">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none !important">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M11 4Q21 8 11 12Q21 16 11 20Q21 24 11 28" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M21 4Q11 8 21 12Q11 16 21 20Q11 24 21 28" stroke-width="3.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          StudyWith<span class="stem">STEM</span>
+        </a>
+        <p class="foot-tag">Poster-deep STEM infographics, engineered to stick. New drop every Friday.</p>
+        <span class="foot-terminal"><span class="p">&gt;</span>studywithstem@gmail.com<span class="cursor"></span></span>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/posts/">Post</a></li>
+          <li><a href="/page/about/">About</a></li>
+          <li><a href="/page/faq/">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/page/contact/">Contact</a></li>
+          <li><a href="/page/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/page/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="/page/copyrights/">Copyrights</a></li>
+          <li><a href="/page/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            Instagram</a></li>
+          <li><a href="https://x.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+            X</a></li>
+          <li><a href="mailto:studywithstem@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+            Email</a></li>
+          <li><a href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z"/><path d="M16 10h2a2.5 2.5 0 0 1 0 5h-2"/></svg>
+            Buy me a coffee</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+      <span><b>π</b> = 3.14159265 &nbsp;·&nbsp; <b>c</b> = 299 792 458 m/s &nbsp;·&nbsp; <b>e</b> = 2.71828183 &nbsp;·&nbsp; <b>ħ</b> = 1.054571817×10⁻³⁴ J·s &nbsp;·&nbsp; <b>G</b> = 6.67430×10⁻¹¹ m³/kg·s² &nbsp;·&nbsp; <b>Nᴀ</b> = 6.02214076×10²³ mol⁻¹ &nbsp;·&nbsp; <b>φ</b> = 1.61803399 &nbsp;·&nbsp; <b>k_B</b> = 1.380649×10⁻²³ J/K &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="foot-mid">
+      <span class="foot-meta" id="footYear">© STUDYWITHSTEM</span>
+      <span class="foot-meta">DESIGNED &amp; ENGINEERED FOR THE CURIOUS</span>
+      <button id="backTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================
+   BASICS
+========================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS3D = typeof THREE !== 'undefined';
+
+/* =========================================================
+   THEME SYSTEM — one source of truth for CSS *and* WebGL
+========================================================= */
+let themeMix = document.documentElement.dataset.theme === 'light' ? 1 : 0;
+let themeTarget = themeMix;
+const themed = [];
+
+function applyRec(r, mix){
+  r.m.color.copy(r.d).lerp(r.l, mix);
+  r.m.opacity = r.dOp + (r.lOp - r.dOp) * mix;
+  r.m.blending = mix < .5 ? THREE.AdditiveBlending : THREE.NormalBlending;
+}
+function themedMat(mat, darkHex, lightHex, darkOp, lightOp){
+  const rec = { m: mat, d: new THREE.Color(darkHex), l: new THREE.Color(lightHex), dOp: darkOp, lOp: lightOp };
+  mat.transparent = true;
+  themed.push(rec);
+  applyRec(rec, themeMix);
+  return mat;
+}
+function tickTheme(){
+  if (themeMix === themeTarget) return;
+  if (RM) themeMix = themeTarget;
+  else {
+    themeMix += (themeTarget - themeMix) * .1;
+    if (Math.abs(themeTarget - themeMix) < .001) themeMix = themeTarget;
+  }
+  themed.forEach(r => applyRec(r, themeMix));
+}
+
+function setTheme(t){
+  document.documentElement.dataset.theme = t;
+  themeTarget = t === 'light' ? 1 : 0;
+  try{ localStorage.setItem('sws-theme', t); }catch(e){}
+  const b = $('#themeToggle');
+  if (b) b.setAttribute('aria-pressed', String(t === 'light'));
+  const root = document.documentElement;
+  root.classList.add('theme-anim');
+  clearTimeout(setTheme._t);
+  setTheme._t = setTimeout(() => root.classList.remove('theme-anim'), 650);
+}
+(function(){
+  const b = $('#themeToggle');
+  if (b){
+    b.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'light'));
+    b.addEventListener('click', () =>
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+  }
+})();
+
+let SPRITE = null;
+if (HAS3D){
+  try{
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const x = c.getContext('2d');
+    const g = x.createRadialGradient(32, 32, 0, 32, 32, 30);
+    g.addColorStop(0, 'rgba(255,255,255,1)');
+    g.addColorStop(.5, 'rgba(255,255,255,.45)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+    SPRITE = new THREE.CanvasTexture(c);
+  }catch(e){}
+}
+
+/* =========================================================
+   NAV — hide on scroll down, scroll-progress segment.
+========================================================= */
+const nav = $('#nav');
+const progBar = $('.nav-progress');
+const progSeg = $('#navProg');
+let lastY = 0, sTick = false;
+
+function updProg(){
+  if (!progSeg || !progBar) return;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const p = max > 0 ? Math.min(1, scrollY / max) : 0;
+  const bw = progBar.clientWidth;
+  if (!bw) return;
+  const sw = Math.max(40, Math.min(90, bw * .12));
+  progSeg.style.width = sw + 'px';
+  progSeg.style.transform = 'translateX(' + (p * (bw - sw)) + 'px)';
+}
+function onScroll(){
+  const y = scrollY;
+  nav.classList.toggle('scrolled', y > 8);
+  const menuOpen = document.body.classList.contains('menu-open');
+  if (y > lastY && y > 180 && !menuOpen) nav.classList.add('hide');
+  else nav.classList.remove('hide');
+  lastY = y;
+  updProg();
+}
+addEventListener('scroll', () => {
+  if (!sTick){ sTick = true; requestAnimationFrame(() => { onScroll(); sTick = false; }); }
+}, { passive: true });
+addEventListener('resize', updProg);
+addEventListener('load', updProg);
+onScroll();
+
+/* mobile menu */
+(function(){
+  const burger = $('#burger');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    document.body.classList.toggle('locked', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('#mmenu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+})();
+
+/* footer reveal + back-to-top + year */
+(function(){
+  const foot = $('#footer');
+  if (foot) new IntersectionObserver((es, o) => {
+    es.forEach(e => { if (e.isIntersecting){ foot.classList.add('in'); o.disconnect(); } });
+  }, { threshold: .12 }).observe(foot);
+
+  const bt = $('#backTop');
+  if (bt) bt.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+  const yr = $('#footYear');
+  if (yr) yr.textContent = '© ' + new Date().getFullYear() + ' STUDYWITHSTEM';
+})();
+
+/* =========================================================
+   MOLECULAR GEOMETRY EXPLORER — interactive VSEPR model
+========================================================= */
+(function(){
+  'use strict';
+
+  const NS = 'http://www.w3.org/2000/svg';
+
+  // Geometry data
+  const GEOMETRIES = {
+    'linear': {
+      name: 'Linear', formula: 'AX₂', domains: 2, bonds: 2, lone: 0,
+      hybrid: 'sp', angles: [{ label: 'H–A–H', value: 180 }],
+      positions: [
+        { x: 1, y: 0, z: 0 },
+        { x: -1, y: 0, z: 0 }
+      ]
+    },
+    'trigonal-planar': {
+      name: 'Trigonal Planar', formula: 'AX₃', domains: 3, bonds: 3, lone: 0,
+      hybrid: 'sp²', angles: [{ label: 'X–A–X', value: 120 }],
+      positions: [
+        { x: 1, y: 0, z: 0 },
+        { x: -0.5, y: 0.866, z: 0 },
+        { x: -0.5, y: -0.866, z: 0 }
+      ]
+    },
+    'tetrahedral': {
+      name: 'Tetrahedral', formula: 'AX₄', domains: 4, bonds: 4, lone: 0,
+      hybrid: 'sp³', angles: [{ label: 'X–A–X', value: 109.5 }],
+      positions: [
+        { x: 1, y: 1, z: 1 },
+        { x: 1, y: -1, z: -1 },
+        { x: -1, y: 1, z: -1 },
+        { x: -1, y: -1, z: 1 }
+      ]
+    },
+    'trigonal-bipyramidal': {
+      name: 'Trigonal Bipyramidal', formula: 'AX₅', domains: 5, bonds: 5, lone: 0,
+      hybrid: 'sp³d', angles: [{ label: 'Axial–Eq', value: 90 }, { label: 'Eq–Eq', value: 120 }, { label: 'Axial–Axial', value: 180 }],
+      positions: [
+        { x: 0, y: 1.2, z: 0 },
+        { x: 0, y: -1.2, z: 0 },
+        { x: 1.1, y: 0, z: 0 },
+        { x: -0.55, y: 0, z: 0.953 },
+        { x: -0.55, y: 0, z: -0.953 }
+      ]
+    },
+    'octahedral': {
+      name: 'Octahedral', formula: 'AX₆', domains: 6, bonds: 6, lone: 0,
+      hybrid: 'sp³d²', angles: [{ label: 'X–A–X', value: 90 }, { label: 'Trans', value: 180 }],
+      positions: [
+        { x: 1, y: 0, z: 0 },
+        { x: -1, y: 0, z: 0 },
+        { x: 0, y: 1, z: 0 },
+        { x: 0, y: -1, z: 0 },
+        { x: 0, y: 0, z: 1 },
+        { x: 0, y: 0, z: -1 }
+      ]
+    },
+    'bent': {
+      name: 'Bent', formula: 'AX₂E₂', domains: 4, bonds: 2, lone: 2,
+      hybrid: 'sp³', angles: [{ label: 'H–A–H', value: 104.5 }],
+      positions: [
+        { x: 0.8, y: 0.6, z: 0 },
+        { x: -0.8, y: 0.6, z: 0 }
+      ],
+      lonePositions: [
+        { x: 0, y: -0.5, z: 0.8 },
+        { x: 0, y: -0.5, z: -0.8 }
+      ]
+    },
+    'trigonal-pyramidal': {
+      name: 'Trigonal Pyramidal', formula: 'AX₃E', domains: 4, bonds: 3, lone: 1,
+      hybrid: 'sp³', angles: [{ label: 'H–A–H', value: 107 }],
+      positions: [
+        { x: 1, y: -0.5, z: 0 },
+        { x: -0.5, y: -0.5, z: 0.866 },
+        { x: -0.5, y: -0.5, z: -0.866 }
+      ],
+      lonePositions: [
+        { x: 0, y: 0.8, z: 0 }
+      ]
+    }
+  };
+
+  /* ---------- state ---------- */
+  let state = { bonds: 4, lone: 0 };
+  let rotX = -0.35, rotY = 0.5;
+  let zoom = 1;
+  let currentPreset = 'tetrahedral';
+
+  /* ---------- helpers ---------- */
+  function el(tag, attrs){
+    const n = document.createElementNS(NS, tag);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+
+  function normalize(v){
+    const len = Math.sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
+    if (len === 0) return { x:0, y:0, z:0 };
+    return { x: v.x/len, y: v.y/len, z: v.z/len };
+  }
+
+  function project(x, y, z, cx, cy, scale){
+    const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+    const y1 = y * cosX - z * sinX;
+    const z1 = y * sinX + z * cosX;
+    const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+    const x2 = x * cosY + z1 * sinY;
+    const z2 = -x * sinY + z1 * cosY;
+    const persp = 620 / (620 - z2);
+    return { x: cx + x2 * scale * persp, y: cy + y1 * scale * persp, z: z2, s: persp };
+  }
+
+  /* ---------- generate positions for current state ---------- */
+  function getGeometryData(){
+    const key = currentPreset;
+    const preset = GEOMETRIES[key];
+    if (!preset) return { bonds: [], lone: [], name: 'Custom', formula: '', hybrid: '', angles: [] };
+
+    let bondPositions = [];
+    let lonePositions = [];
+
+    if (key === 'bent' || key === 'trigonal-pyramidal'){
+      // Use preset positions
+      bondPositions = preset.positions.map(p => normalize(p));
+      lonePositions = (preset.lonePositions || []).map(p => normalize(p));
+    } else if (key === 'tetrahedral' && state.lone > 0){
+      // Adjust tetrahedral for lone pairs
+      const base = GEOMETRIES['tetrahedral'].positions.map(p => normalize(p));
+      bondPositions = base.slice(0, 4 - state.lone);
+      lonePositions = base.slice(4 - state.lone);
+    } else if (key === 'trigonal-planar' && state.lone > 0){
+      const base = GEOMETRIES['trigonal-planar'].positions.map(p => normalize(p));
+      bondPositions = base.slice(0, 3 - state.lone);
+      lonePositions = base.slice(3 - state.lone);
+    } else {
+      bondPositions = preset.positions.map(p => normalize(p));
+      lonePositions = [];
+    }
+
+    // Determine actual geometry name based on bond and lone counts
+    const totalDomains = bondPositions.length + lonePositions.length;
+    let name = preset.name;
+    let formula = preset.formula;
+    let hybrid = preset.hybrid;
+    let angles = preset.angles;
+
+    // Override for lone pair cases
+    if (lonePositions.length > 0){
+      if (bondPositions.length === 2 && lonePositions.length === 2){
+        name = 'Bent'; formula = 'AX₂E₂'; hybrid = 'sp³';
+        angles = [{ label: 'H–A–H', value: 104.5 }];
+      } else if (bondPositions.length === 3 && lonePositions.length === 1){
+        name = 'Trigonal Pyramidal'; formula = 'AX₃E'; hybrid = 'sp³';
+        angles = [{ label: 'H–A–H', value: 107 }];
+      } else if (bondPositions.length === 2 && lonePositions.length === 1){
+        name = 'Bent'; formula = 'AX₂E'; hybrid = 'sp²';
+        angles = [{ label: 'H–A–H', value: 118 }];
+      }
+    }
+
+    // For manual override when user adjusts steppers
+    if (state.bonds !== preset.bonds || state.lone !== preset.lone){
+      if (state.bonds === 2 && state.lone === 0){
+        name = 'Linear'; formula = 'AX₂'; hybrid = 'sp';
+        angles = [{ label: 'H–A–H', value: 180 }];
+        bondPositions = GEOMETRIES['linear'].positions.map(p => normalize(p));
+        lonePositions = [];
+      } else if (state.bonds === 3 && state.lone === 0){
+        name = 'Trigonal Planar'; formula = 'AX₃'; hybrid = 'sp²';
+        angles = [{ label: 'H–A–H', value: 120 }];
+        bondPositions = GEOMETRIES['trigonal-planar'].positions.map(p => normalize(p));
+        lonePositions = [];
+      } else if (state.bonds === 4 && state.lone === 0){
+        name = 'Tetrahedral'; formula = 'AX₄'; hybrid = 'sp³';
+        angles = [{ label: 'H–A–H', value: 109.5 }];
+        bondPositions = GEOMETRIES['tetrahedral'].positions.map(p => normalize(p));
+        lonePositions = [];
+      } else if (state.bonds === 2 && state.lone === 2){
+        name = 'Bent'; formula = 'AX₂E₂'; hybrid = 'sp³';
+        angles = [{ label: 'H–A–H', value: 104.5 }];
+        bondPositions = GEOMETRIES['bent'].positions.map(p => normalize(p));
+        lonePositions = GEOMETRIES['bent'].lonePositions.map(p => normalize(p));
+      } else if (state.bonds === 3 && state.lone === 1){
+        name = 'Trigonal Pyramidal'; formula = 'AX₃E'; hybrid = 'sp³';
+        angles = [{ label: 'H–A–H', value: 107 }];
+        bondPositions = GEOMETRIES['trigonal-pyramidal'].positions.map(p => normalize(p));
+        lonePositions = GEOMETRIES['trigonal-pyramidal'].lonePositions.map(p => normalize(p));
+      }
+    }
+
+    return { bonds: bondPositions, lone: lonePositions, name, formula, hybrid, angles, totalDomains };
+  }
+
+  /* ---------- SVG drawing ---------- */
+  const svg = $('#molSvg');
+  const tip = $('#molTip');
+  const stage = $('#molStage');
+
+  function showTip(evt, html){
+    const rect = stage.getBoundingClientRect();
+    const cx = (evt.clientX !== undefined ? evt.clientX : evt.touches[0].clientX) - rect.left;
+    const cy = (evt.clientY !== undefined ? evt.clientY : evt.touches[0].clientY) - rect.top;
+    tip.style.left = cx + 'px';
+    tip.style.top = cy + 'px';
+    tip.innerHTML = html;
+    tip.classList.add('show');
+  }
+  function hideTip(){ tip.classList.remove('show'); }
+
+  let orbitPhase = 0;
+
+  function draw(){
+    svg.innerHTML = '';
+    const cx = 0, cy = 0;
+    const scale = zoom * 130;
+
+    const geo = getGeometryData();
+    const allPoints = [];
+
+    // Central atom
+    const centerProj = project(0, 0, 0, cx, cy, scale);
+    allPoints.push({ kind: 'center', x: centerProj.x, y: centerProj.y, z: centerProj.z, s: centerProj.s });
+
+    // Bonding atoms
+    geo.bonds.forEach((p, i) => {
+      const proj = project(p.x, p.y, p.z, cx, cy, scale);
+      allPoints.push({ kind: 'bond', x: proj.x, y: proj.y, z: proj.z, s: proj.s, idx: i, pos: p });
+    });
+
+    // Lone pairs
+    geo.lone.forEach((p, i) => {
+      const proj = project(p.x, p.y, p.z, cx, cy, scale);
+      allPoints.push({ kind: 'lone', x: proj.x, y: proj.y, z: proj.z, s: proj.s, idx: i, pos: p });
+    });
+
+    // Sort by z (painter's algorithm)
+    allPoints.sort((a,b) => a.z - b.z);
+
+    // Draw bonds (lines from center to bonding atoms)
+    const bondLines = [];
+    allPoints.forEach(it => {
+      if (it.kind === 'bond' || it.kind === 'lone'){
+        const center = allPoints.find(p => p.kind === 'center');
+        if (center){
+          bondLines.push({
+            x1: center.x, y1: center.y,
+            x2: it.x, y2: it.y,
+            z: (center.z + it.z) / 2,
+            kind: it.kind
+          });
+        }
+      }
+    });
+    bondLines.sort((a,b) => a.z - b.z);
+
+    bondLines.forEach(line => {
+      const g = el('line', {
+        x1: line.x1, y1: line.y1, x2: line.x2, y2: line.y2,
+        stroke: line.kind === 'bond' ? 'var(--accent)' : 'var(--muted)',
+        'stroke-width': line.kind === 'bond' ? '3' : '2',
+        'stroke-dasharray': line.kind === 'lone' ? '4 4' : 'none',
+        'stroke-opacity': line.kind === 'bond' ? '0.8' : '0.5'
+      });
+      svg.appendChild(g);
+    });
+
+    // Draw atoms
+    allPoints.forEach(it => {
+      if (it.kind === 'center'){
+        const g = el('circle', {
+          cx: it.x, cy: it.y, r: Math.max(12, 14 * it.s * zoom),
+          fill: 'var(--accent)', 'fill-opacity': '0.9',
+          stroke: 'var(--bg)', 'stroke-width': '2'
+        });
+        g.style.cursor = 'pointer';
+        g.addEventListener('mouseenter', e => showTip(e, 'Central Atom <b>A</b>'));
+        g.addEventListener('mousemove', e => showTip(e, 'Central Atom <b>A</b>'));
+        g.addEventListener('mouseleave', hideTip);
+        svg.appendChild(g);
+      } else if (it.kind === 'bond'){
+        const g = el('circle', {
+          cx: it.x, cy: it.y, r: Math.max(9, 11 * it.s * zoom),
+          fill: 'var(--amber)', 'fill-opacity': '0.9',
+          stroke: 'var(--bg)', 'stroke-width': '1.5'
+        });
+        g.style.cursor = 'pointer';
+        g.addEventListener('mouseenter', e => showTip(e, 'Bonded Atom <b>X</b><br>Bond pair'));
+        g.addEventListener('mousemove', e => showTip(e, 'Bonded Atom <b>X</b><br>Bond pair'));
+        g.addEventListener('mouseleave', hideTip);
+        svg.appendChild(g);
+      } else if (it.kind === 'lone'){
+        const g = el('circle', {
+          cx: it.x, cy: it.y, r: Math.max(8, 10 * it.s * zoom),
+          fill: 'var(--muted)', 'fill-opacity': '0.6',
+          stroke: 'var(--bg)', 'stroke-width': '1.5'
+        });
+        g.style.cursor = 'pointer';
+        g.addEventListener('mouseenter', e => showTip(e, 'Lone Pair <b>E</b><br>Extra repulsion'));
+        g.addEventListener('mousemove', e => showTip(e, 'Lone Pair <b>E</b><br>Extra repulsion'));
+        g.addEventListener('mouseleave', hideTip);
+        svg.appendChild(g);
+      }
+    });
+
+    // Nucleus glow (subtle)
+    const glow = el('circle', {
+      cx: 0, cy: 0, r: Math.max(20, 25 * zoom),
+      fill: 'var(--accent)', 'fill-opacity': '0.08'
+    });
+    svg.insertBefore(glow, svg.firstChild);
+  }
+
+  /* ---------- readout ---------- */
+  const mrName = $('#mrName'), mrFormula = $('#mrFormula'), mrGeom = $('#mrGeom');
+  const mrDomains = $('#mrDomains'), mrBonds = $('#mrBonds'), mrLone = $('#mrLone'), mrHybrid = $('#mrHybrid');
+  const angleBars = $('#angleBars');
+  const valBonds = $('#valBonds'), valLone = $('#valLone');
+
+  function updateReadout(){
+    const geo = getGeometryData();
+    mrName.textContent = geo.name;
+    mrFormula.textContent = geo.formula;
+    mrHybrid.textContent = geo.hybrid;
+    mrDomains.textContent = geo.totalDomains || 0;
+    mrBonds.textContent = state.bonds;
+    mrLone.textContent = state.lone;
+
+    valBonds.textContent = state.bonds;
+    valLone.textContent = state.lone;
+
+    if (geo.angles && geo.angles.length > 0){
+      const mainAngle = geo.angles[0];
+      mrGeom.textContent = mainAngle.value + '° BOND ANGLE';
+      mrGeom.className = 'mr-geom highlight';
+
+      angleBars.innerHTML = geo.angles.map(a => {
+        const pct = Math.min(100, (a.value / 180) * 100);
+        return '<div class="angle-row">' +
+          '<span class="an">' + a.label + '</span>' +
+          '<div class="angle-bar-track"><div class="angle-bar-fill" style="width:' + pct + '%"></div></div>' +
+          '<span class="av">' + a.value + '°</span>' +
+        '</div>';
+      }).join('');
+    } else {
+      mrGeom.textContent = '—';
+      mrGeom.className = 'mr-geom';
+      angleBars.innerHTML = '';
+    }
+
+    // Update select
+    const sel = $('#geometrySelect');
+    if (sel) sel.value = currentPreset;
+
+    // Update active tile
+    $$('.shape-btn').forEach(b => b.classList.toggle('active', b.dataset.geo === currentPreset));
+  }
+
+  /* ---------- populate shape grid ---------- */
+  const shapeGrid = $('#shapeGrid');
+  const shapeList = [
+    { key: 'linear', ico: '—', lbl: 'Linear' },
+    { key: 'trigonal-planar', ico: '△', lbl: 'Trigonal Planar' },
+    { key: 'tetrahedral', ico: '◆', lbl: 'Tetrahedral' },
+    { key: 'trigonal-bipyramidal', ico: '⬟', lbl: 'Trigonal Bipyramidal' },
+    { key: 'octahedral', ico: '⬢', lbl: 'Octahedral' },
+    { key: 'bent', ico: '∨', lbl: 'Bent' },
+    { key: 'trigonal-pyramidal', ico: '▲', lbl: 'Trigonal Pyramidal' }
+  ];
+  shapeGrid.innerHTML = shapeList.map(s =>
+    '<button type="button" class="shape-btn" data-geo="' + s.key + '">' +
+      '<span class="ico">' + s.ico + '</span>' +
+      '<span class="lbl">' + s.lbl + '</span>' +
+    '</button>'
+  ).join('');
+
+  /* ---------- event listeners ---------- */
+  $('#geometrySelect').addEventListener('change', function(){
+    currentPreset = this.value;
+    const preset = GEOMETRIES[currentPreset];
+    if (preset){
+      state.bonds = preset.bonds;
+      state.lone = preset.lone;
+    }
+    render();
+  });
+
+  shapeGrid.addEventListener('click', e => {
+    const btn = e.target.closest('.shape-btn');
+    if (!btn) return;
+    currentPreset = btn.dataset.geo;
+    const preset = GEOMETRIES[currentPreset];
+    if (preset){
+      state.bonds = preset.bonds;
+      state.lone = preset.lone;
+    }
+    render();
+  });
+
+  $$('.stepper-controls button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const part = btn.dataset.part;
+      const dir = Number(btn.dataset.dir);
+      const min = part === 'bonds' ? 2 : 0;
+      const max = part === 'bonds' ? 6 : 3;
+      state[part] = Math.max(min, Math.min(max, state[part] + dir));
+      // If total domains > 6, clamp
+      if (state.bonds + state.lone > 6){
+        state[part] = state[part] - dir;
+      }
+      render();
+    });
+  });
+
+  $('#molReset').addEventListener('click', () => {
+    currentPreset = 'tetrahedral';
+    const preset = GEOMETRIES[currentPreset];
+    state.bonds = preset.bonds;
+    state.lone = preset.lone;
+    render();
+  });
+
+  /* ---------- zoom controls ---------- */
+  $('#zoomIn').addEventListener('click', () => { zoom = Math.min(2.2, zoom + 0.18); draw(); });
+  $('#zoomOut').addEventListener('click', () => { zoom = Math.max(0.55, zoom - 0.18); draw(); });
+
+  /* ---------- drag to rotate ---------- */
+  let dragging = false, lastX = 0, lastY = 0;
+
+  function pointerDown(x, y){
+    dragging = true; lastX = x; lastY = y;
+    stage.classList.add('grabbing');
+  }
+  function pointerMove(x, y){
+    if (!dragging) return;
+    const dx = x - lastX, dy = y - lastY;
+    rotY += dx * 0.008;
+    rotX += dy * 0.008;
+    rotX = Math.max(-1.2, Math.min(1.2, rotX));
+    lastX = x; lastY = y;
+    draw();
+  }
+  function pointerUp(){
+    dragging = false; stage.classList.remove('grabbing');
+  }
+
+  stage.addEventListener('mousedown', e => pointerDown(e.clientX, e.clientY));
+  window.addEventListener('mousemove', e => pointerMove(e.clientX, e.clientY));
+  window.addEventListener('mouseup', pointerUp);
+
+  stage.addEventListener('touchstart', e => {
+    if (e.touches.length === 1) pointerDown(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  stage.addEventListener('touchmove', e => {
+    if (e.touches.length === 1){
+      pointerMove(e.touches[0].clientX, e.touches[0].clientY);
+      e.preventDefault();
+    }
+  }, { passive: false });
+  stage.addEventListener('touchend', pointerUp);
+
+  stage.addEventListener('wheel', e => {
+    e.preventDefault();
+    zoom = Math.max(0.55, Math.min(2.2, zoom - e.deltaY * 0.001));
+    draw();
+  }, { passive: false });
+
+  /* ---------- animation ---------- */
+  function tick(){
+    if (!dragging && !RM) orbitPhase += 0.006;
+    draw();
+    requestAnimationFrame(tick);
+  }
+
+  /* ---------- initial render ---------- */
+  function render(){
+    updateReadout();
+    draw();
+  }
+
+  render();
+  requestAnimationFrame(tick);
+
+})();
+
+/* =========================================================
+   FOOTER STARFIELD — quiet drift, pauses when off-screen
+========================================================= */
+(function(){
+  const canvas = $('#starfield');
+  if (!canvas) return;
+  if (!HAS3D){ canvas.style.display = 'none'; return; }
+
+  let renderer, scene, camera, pts, raf = null;
+
+  try{
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+    renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(60, 1, .1, 100);
+    camera.position.z = 15;
+
+    const N = RM ? 80 : 150;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++){
+      pos[i*3]   = (Math.random() - .5) * 36;
+      pos[i*3+1] = (Math.random() - .5) * 22;
+      pos[i*3+2] = (Math.random() - .5) * 12;
+    }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+
+    const mat = new THREE.PointsMaterial({ size: .09, depthWrite: false, map: SPRITE });
+    themedMat(mat, 0xF1EDE2, 0x0B2545, .9, .55);
+    pts = new THREE.Points(geo, mat);
+    scene.add(pts);
+
+    function size(){
+      const r = canvas.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      renderer.setSize(r.width, r.height, false);
+      camera.aspect = r.width / r.height;
+      camera.updateProjectionMatrix();
+    }
+    size();
+    addEventListener('resize', size);
+    addEventListener('load', size);
+
+    function frame(){
+      tickTheme();
+      pts.rotation.y += .0008;
+      pts.rotation.x = Math.sin(Date.now() * .00006) * .05;
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(frame);
+    }
+    function start(){ if (!raf && !RM) raf = requestAnimationFrame(frame); }
+    function stop(){ if (raf){ cancelAnimationFrame(raf); raf = null; } }
+
+    if (RM){
+      tickTheme();
+      renderer.render(scene, camera);
+    } else {
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+      }, { threshold: 0 }).observe(canvas);
+      start();
+    }
+  }catch(e){
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
