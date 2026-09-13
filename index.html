@@ -285,15 +285,115 @@ body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
 .hero-foot i::after{content:""; position:absolute; top:0; left:-18px; width:18px; height:100%; background:var(--accent); animation:scan 2.8s ease-in-out infinite;}
 @keyframes scan{0%{left:-18px;} 60%,100%{left:56px;}}
 
+/* ================= HOME BODY — new content sections ================= */
+.sec{padding:100px 0; border-top:1px solid var(--edge); scroll-margin-top:110px;}
+.sec:first-of-type{border-top:none; padding-top:64px;}
+.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
+.sec h2{font:600 clamp(1.6rem, 2.8vw, 2.3rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 0;}
+.sec h2 .hl{color:var(--accent); font-style:italic;}
+.sec > .wrap > p.lede-p{max-width:58ch; color:var(--muted); margin-top:14px;}
+
+.section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+.section-head .head-text{max-width:56ch;}
+
+/* stat rail under hero */
+.stat-rail-wrap{border-top:1px solid var(--edge); border-bottom:1px solid var(--edge);}
+.stat-rail{display:grid; grid-template-columns:repeat(4,1fr);}
+.stat-rail li{padding:30px 22px; border-left:1px solid var(--edge);}
+.stat-rail li:first-child{border-left:none;}
+.stat-rail b{display:block; font:600 2rem/1 var(--f-disp); color:var(--ink);}
+.stat-rail span{display:block; margin-top:8px; font:600 .68rem var(--f-mono); letter-spacing:.1em; color:var(--faint);}
+
+/* poster strip */
+.poster-row{display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:42px;}
+.poster-card{position:relative; overflow:hidden; border:1px solid var(--edge); aspect-ratio:3/4; background:var(--panel); display:block;}
+.poster-card img{width:100%; height:100%; object-fit:cover; transition:transform .5s cubic-bezier(.2,.7,.3,1), filter .5s;}
+.poster-card:hover img{transform:scale(1.07);}
+.poster-cap{
+  position:absolute; inset:auto 0 0 0; padding:26px 12px 12px;
+  font:600 .72rem/1.3 var(--f-mono); color:#fff; letter-spacing:.01em;
+  background:linear-gradient(to top, rgba(4,10,20,.88), transparent);
+}
+.poster-more{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+  border:1px dashed var(--edge-strong); aspect-ratio:3/4; color:var(--muted);
+  font:600 .78rem var(--f-sans); text-align:center; padding:14px; transition:border-color .25s, color .25s;
+}
+.poster-more:hover{border-color:var(--accent); color:var(--accent);}
+.poster-more svg{width:18px; height:18px;}
+
+/* posts grid */
+.post-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:42px;}
+.post-card{display:flex; flex-direction:column; border:1px solid var(--edge); background:var(--panel); transition:border-color .25s, transform .3s;}
+.post-card:hover{border-color:var(--edge-strong); transform:translateY(-5px);}
+.post-card .thumb{aspect-ratio:16/11; overflow:hidden;}
+.post-card .thumb img{width:100%; height:100%; object-fit:cover; transition:transform .5s;}
+.post-card:hover .thumb img{transform:scale(1.05);}
+.post-card .body{padding:16px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1;}
+.post-card .tag{font:700 .6rem var(--f-mono); letter-spacing:.12em; color:var(--teal);}
+.post-card h3{font:600 1rem/1.4 var(--f-disp); letter-spacing:-.005em;}
+.post-card .rmore{margin-top:auto; font:600 .74rem var(--f-sans); color:var(--muted); display:flex; align-items:center; gap:6px;}
+.post-card .rmore svg{width:11px; height:11px;}
+
+/* tools grid */
+.tool-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:42px;}
+.tool-card{display:flex; flex-direction:column; border:1px solid var(--edge); background:var(--panel); transition:border-color .25s, transform .3s;}
+.tool-card:hover{border-color:var(--edge-strong); transform:translateY(-5px);}
+.tool-card .thumb{aspect-ratio:16/10; overflow:hidden;}
+.tool-card .thumb img{width:100%; height:100%; object-fit:cover;}
+.tool-card .body{padding:14px 16px 16px;}
+.tool-card .cat{font:700 .58rem var(--f-mono); letter-spacing:.12em; color:var(--amber);}
+.tool-card h3{font:600 .98rem var(--f-sans); margin-top:6px; letter-spacing:-.005em;}
+
+/* category directory */
+.cat-cols{display:grid; grid-template-columns:1fr 1fr; gap:0 48px; margin-top:42px;}
+.cat-cols h4{font:700 .64rem var(--f-mono); letter-spacing:.15em; text-transform:uppercase; color:var(--faint); padding-bottom:14px; border-bottom:1px solid var(--edge);}
+.dir-list{border-top:1px solid var(--edge);}
+.dir-list li a{display:grid; grid-template-columns:1fr auto auto; gap:16px; align-items:baseline; padding:15px 4px; border-bottom:1px solid var(--edge); transition:background .25s, padding-left .25s;}
+.dir-list li a:hover{background:var(--panel); padding-left:8px;}
+.dir-list .name{font-weight:600;}
+.dir-list .count{font:600 .68rem var(--f-mono); color:var(--faint);}
+.dir-list svg{width:13px; height:13px; color:var(--accent); opacity:0; transform:translateX(-4px); transition:opacity .25s, transform .25s;}
+.dir-list li a:hover svg{opacity:1; transform:none;}
+
+/* support / about split */
+.split{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:center; margin-top:42px;}
+.split-card{border:1px solid var(--edge); background:var(--panel); padding:34px; clip-path:polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);}
+.split-card h3{font:600 1.15rem var(--f-disp); margin-bottom:10px;}
+.split-card p{color:var(--muted); font-size:.92rem; margin-bottom:20px;}
+.split-actions{display:flex; gap:14px; flex-wrap:wrap;}
+
+/* faq */
+.faq{margin-top:34px; border-top:1px solid var(--edge); max-width:100%;}
+.faq details{border-bottom:1px solid var(--edge);}
+.faq summary{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:19px 4px; cursor:pointer; font-weight:600; list-style:none; transition:color .25s;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary:hover{color:var(--accent);}
+.faq summary::after{content:"+"; font:400 1.25rem/1 var(--f-mono); color:var(--accent); transition:transform .3s;}
+.faq details[open] summary::after{transform:rotate(45deg);}
+.faq .faq-a{padding:0 4px 20px; color:var(--muted); max-width:70ch;}
+
+@media (max-width:1020px){
+  .post-grid, .tool-grid{grid-template-columns:repeat(2,1fr);}
+  .poster-row{grid-template-columns:repeat(3,1fr);}
+  .stat-rail{grid-template-columns:repeat(2,1fr);}
+  .stat-rail li:nth-child(3){border-left:none;}
+  .split{grid-template-columns:1fr; gap:34px;}
+}
+@media (max-width:640px){
+  .post-grid, .tool-grid{grid-template-columns:1fr;}
+  .poster-row{grid-template-columns:repeat(2,1fr);}
+  .stat-rail{grid-template-columns:1fr;}
+  .stat-rail li{border-left:none; border-top:1px solid var(--edge);}
+  .stat-rail li:first-child{border-top:none;}
+  .cat-cols{grid-template-columns:1fr; gap:34px;}
+  .sec{padding:72px 0;}
+}
+
 /* ================= DEMO PAGE SECTIONS ================= */
 .demo-note{padding-top:44px;}
 .demo-chip{display:inline-block; font:700 .6rem var(--f-mono); letter-spacing:.16em; color:var(--accent);
   border:1px solid var(--accent); padding:7px 14px; clip-path:polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);}
-.sec{padding:100px 0; border-top:1px solid var(--edge); scroll-margin-top:110px;}
-.sec:first-of-type{border-top:none; padding-top:60px;}
-.sec-idx{font:700 .68rem var(--f-mono); letter-spacing:.18em; color:var(--accent);}
-.sec h2{font:600 clamp(1.5rem, 2.6vw, 2rem)/1.15 var(--f-disp); letter-spacing:-.01em; margin:12px 0 16px;}
-.sec p{max-width:62ch; color:var(--muted);}
 
 .tool-index{margin-top:38px; border-top:1px solid var(--edge); max-width:760px;}
 .tool-index li{display:grid; grid-template-columns:2.4rem 1fr auto; gap:18px; align-items:baseline; padding:17px 4px; border-bottom:1px solid var(--edge); transition:background .25s;}
@@ -303,15 +403,6 @@ body.menu-open .mmenu .btn-ticket{opacity:1; transform:none;}
 .tool-index .meta{font:600 .64rem var(--f-mono); letter-spacing:.1em; color:var(--faint);}
 
 .price-note{margin-top:14px; font:600 .66rem var(--f-mono); letter-spacing:.12em; color:var(--faint);}
-
-.faq{margin-top:34px; border-top:1px solid var(--edge); max-width:740px;}
-.faq details{border-bottom:1px solid var(--edge);}
-.faq summary{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:19px 4px; cursor:pointer; font-weight:600; list-style:none; transition:color .25s;}
-.faq summary::-webkit-details-marker{display:none;}
-.faq summary:hover{color:var(--accent);}
-.faq summary::after{content:"+"; font:400 1.25rem/1 var(--f-mono); color:var(--accent); transition:transform .3s;}
-.faq details[open] summary::after{transform:rotate(45deg);}
-.faq .faq-a{padding:0 4px 20px; color:var(--muted); max-width:60ch;}
 
 /* ================= SUBSCRIBE STRIP (upper footer, part of the footer group) ================= */
 .pre-footer{background:var(--bg2); border-top:1px solid var(--edge); padding:72px 0;}
@@ -495,17 +586,273 @@ footer.in .foot-top>*:nth-child(4){opacity:1; transform:none; transition-delay:.
   </div>
 </header>
 
-<!-- ============ DEMO PAGE CONTENT — replace on real pages ============ -->
+<!-- ============ HOME PAGE BODY ============ -->
 <main>
-  <div class="wrap demo-note"><span class="demo-chip">TEMPLATE PREVIEW — CONTENT BELOW IS PLACEHOLDER</span></div>
 
-  <section class="sec" id="content">
+  <!-- stat rail -->
+  <section class="stat-rail-wrap" aria-label="Site at a glance">
     <div class="wrap">
-      <span class="sec-idx mono">SEC / 01</span>
-      <h2>Dummy content</h2>
-      <p>This is placeholder body copy. Swap this section out for the real content of whichever page this header and footer get dropped into.</p>
+      <ul class="stat-rail mono">
+        <li><b>160+</b><span>FREE TOOLS, 10 SUBJECTS</span></li>
+        <li><b>40</b><span>DEEP-DIVE ARTICLES</span></li>
+        <li><b>96</b><span>PRINT-READY POSTERS</span></li>
+        <li><b>52</b><span>NEW DROPS A YEAR</span></li>
+      </ul>
     </div>
   </section>
+
+  <!-- 01 — poster wall -->
+  <section class="sec" id="posters">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="head-text">
+          <span class="sec-idx mono">SEC / 01</span>
+          <h2>This week's <span class="hl">drop.</span></h2>
+          <p class="lede-p">Six new posters land every Friday — each one a full subject boiled down to a single diagram. High-resolution, free to save, built for the wall above your desk.</p>
+        </div>
+        <a class="link-ghost" href="/images/infographics/index.html">See the full archive
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="poster-row">
+        <a class="poster-card" href="/images/infographics/Fibonacci%20Numbers.png" target="_blank" rel="noopener">
+          <img src="/images/infographics/Fibonacci%20Numbers.png" alt="Fibonacci Numbers infographic" loading="lazy">
+          <span class="poster-cap">Fibonacci Numbers</span>
+        </a>
+        <a class="poster-card" href="/images/infographics/Complex%20Numbers.png" target="_blank" rel="noopener">
+          <img src="/images/infographics/Complex%20Numbers.png" alt="Complex Numbers infographic" loading="lazy">
+          <span class="poster-cap">Complex Numbers</span>
+        </a>
+        <a class="poster-card" href="/images/infographics/Fluid%20Dynamics.png" target="_blank" rel="noopener">
+          <img src="/images/infographics/Fluid%20Dynamics.png" alt="Fluid Dynamics infographic" loading="lazy">
+          <span class="poster-cap">Fluid Dynamics</span>
+        </a>
+        <a class="poster-card" href="/images/infographics/Dark%20Energy.png" target="_blank" rel="noopener">
+          <img src="/images/infographics/Dark%20Energy.png" alt="Dark Energy infographic" loading="lazy">
+          <span class="poster-cap">Dark Energy</span>
+        </a>
+        <a class="poster-card" href="/images/infographics/Matter%20Waves.png" target="_blank" rel="noopener">
+          <img src="/images/infographics/Matter%20Waves.png" alt="Matter Waves infographic" loading="lazy">
+          <span class="poster-cap">Matter Waves</span>
+        </a>
+        <a class="poster-more" href="/images/infographics/index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span>90 more<br>in the archive</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 — posts by subject -->
+  <section class="sec" id="reading">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="head-text">
+          <span class="sec-idx mono">SEC / 02</span>
+          <h2>Something to <span class="hl">read.</span></h2>
+          <p class="lede-p">Ten explainers apiece in biology, chemistry, math and physics — the ideas behind the posters, written out in plain language.</p>
+        </div>
+        <a class="link-ghost" href="/posts/">Browse all posts
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="post-grid">
+        <a class="post-card" href="/posts/physics/how-does-gravity-work-understanding-gravity-with-examples/">
+          <div class="thumb"><img src="/images/post-images/physics/how-does-gravity-work-understanding-gravity-with-examples.jpg" alt="How does gravity work" loading="lazy"></div>
+          <div class="body">
+            <span class="tag mono">PHYSICS</span>
+            <h3>How Does Gravity Work?</h3>
+            <span class="rmore">Read the post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="post-card" href="/posts/biology/what-is-photosynthesis-the-complete-process-explained/">
+          <div class="thumb"><img src="/images/post-images/what-is-photosynthesis-the-complete-process-explained.jpg" alt="What is photosynthesis" loading="lazy"></div>
+          <div class="body">
+            <span class="tag mono">BIOLOGY</span>
+            <h3>What Is Photosynthesis?</h3>
+            <span class="rmore">Read the post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="post-card" href="/posts/chemistry/what-is-an-atom-structure-parts-and-how-atoms-work/">
+          <div class="thumb"><img src="/images/post-images/what-is-an-atom-structure-parts-and-how-atoms-work.jpg" alt="What is an atom" loading="lazy"></div>
+          <div class="body">
+            <span class="tag mono">CHEMISTRY</span>
+            <h3>What Is an Atom?</h3>
+            <span class="rmore">Read the post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="post-card" href="/posts/mathematics/what-is-calculus-derivatives-and-integrals-explained-simply/">
+          <div class="thumb"><img src="/images/post-images/mathematics/what-is-calculus-derivatives-and-integrals-explained-simply.jpg" alt="What is calculus" loading="lazy"></div>
+          <div class="body">
+            <span class="tag mono">MATHEMATICS</span>
+            <h3>What Is Calculus?</h3>
+            <span class="rmore">Read the post <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — tools -->
+  <section class="sec" id="tools">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="head-text">
+          <span class="sec-idx mono">SEC / 03</span>
+          <h2>Tools you'll actually <span class="hl">reach for.</span></h2>
+          <p class="lede-p">Calculators, converters and diagrams for every subject on the site — no sign-up, no install, runs straight in the browser.</p>
+        </div>
+        <a class="link-ghost" href="/tools/">See every tool
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="tool-grid">
+        <a class="tool-card" href="/tools/mathematics/scientific-calculator/">
+          <div class="thumb"><img src="/images/tool-images/scientific-calculator.jpg" alt="Scientific calculator" loading="lazy"></div>
+          <div class="body"><span class="cat mono">MATH</span><h3>Scientific Calculator</h3></div>
+        </a>
+        <a class="tool-card" href="/tools/chemistry/periodic-table/">
+          <div class="thumb"><img src="/images/tool-images/periodic-table.jpg" alt="Periodic table" loading="lazy"></div>
+          <div class="body"><span class="cat mono">CHEMISTRY</span><h3>Periodic Table</h3></div>
+        </a>
+        <a class="tool-card" href="/tools/biology/interactive-cell/">
+          <div class="thumb"><img src="/images/tool-images/interactive-cell.jpg" alt="Interactive cell diagram" loading="lazy"></div>
+          <div class="body"><span class="cat mono">BIOLOGY</span><h3>Interactive Cell</h3></div>
+        </a>
+        <a class="tool-card" href="/tools/physics/projectile-motion/">
+          <div class="thumb"><img src="/images/tool-images/projectile-motion.jpg" alt="Projectile motion simulator" loading="lazy"></div>
+          <div class="body"><span class="cat mono">PHYSICS</span><h3>Projectile Motion</h3></div>
+        </a>
+        <a class="tool-card" href="/tools/converters/unit-converter/">
+          <div class="thumb"><img src="/images/tool-images/unit-converter.jpg" alt="Unit converter" loading="lazy"></div>
+          <div class="body"><span class="cat mono">CONVERTERS</span><h3>Unit Converter</h3></div>
+        </a>
+        <a class="tool-card" href="/tools/security/password-generator/">
+          <div class="thumb"><img src="/images/tool-images/password-generator.jpg" alt="Password generator" loading="lazy"></div>
+          <div class="body"><span class="cat mono">SECURITY</span><h3>Password Generator</h3></div>
+        </a>
+        <a class="tool-card" href="/tools/developer/json-formatter/">
+          <div class="thumb"><img src="/images/tool-images/json-formatter.jpg" alt="JSON formatter" loading="lazy"></div>
+          <div class="body"><span class="cat mono">DEVELOPER</span><h3>JSON Formatter</h3></div>
+        </a>
+        <a class="tool-card" href="/tools/pdf/pdf-merger/">
+          <div class="thumb"><img src="/images/tool-images/pdf-merger.jpg" alt="PDF merger" loading="lazy"></div>
+          <div class="body"><span class="cat mono">PDF</span><h3>PDF Merger</h3></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 — full category directory -->
+  <section class="sec" id="directory">
+    <div class="wrap">
+      <span class="sec-idx mono">SEC / 04</span>
+      <h2>Every subject, one <span class="hl">map.</span></h2>
+      <p class="lede-p">Two libraries, ten subjects each. Pick a lane and go deep.</p>
+
+      <div class="cat-cols">
+        <div>
+          <h4>Tools by subject</h4>
+          <ul class="dir-list">
+            <li><a href="/tools/biology/"><span class="name">Biology</span><span class="count mono">15 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/chemistry/"><span class="name">Chemistry</span><span class="count mono">26 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/mathematics/"><span class="name">Mathematics</span><span class="count mono">22 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/physics/"><span class="name">Physics</span><span class="count mono">20 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/developer/"><span class="name">Developer</span><span class="count mono">23 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/converters/"><span class="name">Converters</span><span class="count mono">13 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/networking/"><span class="name">Networking</span><span class="count mono">11 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/security/"><span class="name">Security</span><span class="count mono">10 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/pdf/"><span class="name">PDF</span><span class="count mono">10 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/tools/text/"><span class="name">Text</span><span class="count mono">9 tools</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Reading by subject</h4>
+          <ul class="dir-list">
+            <li><a href="/posts/biology/"><span class="name">Biology</span><span class="count mono">10 posts</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/posts/chemistry/"><span class="name">Chemistry</span><span class="count mono">10 posts</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/posts/mathematics/"><span class="name">Mathematics</span><span class="count mono">10 posts</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/posts/physics/"><span class="name">Physics</span><span class="count mono">10 posts</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          </ul>
+          <h4 style="margin-top:38px;">Site</h4>
+          <ul class="dir-list">
+            <li><a href="/page/about/"><span class="name">About StudyWithSTEM</span><span class="count mono">&nbsp;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/page/faq/"><span class="name">FAQ</span><span class="count mono">&nbsp;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li><a href="/page/sitemap/"><span class="name">Full sitemap</span><span class="count mono">&nbsp;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — support / membership -->
+  <section class="sec" id="support">
+    <div class="wrap">
+      <span class="sec-idx mono">SEC / 05</span>
+      <h2>Free to use, kept alive by <span class="hl">readers.</span></h2>
+      <p class="lede-p">Every tool and poster on this site stays free. Members and one-off supporters are what pay for the hosting and the Friday drop.</p>
+
+      <div class="split">
+        <div class="split-card">
+          <h3>Become a member</h3>
+          <p>Get early access to new posters, vote on next week's subject, and back the site directly — cancel whenever you like.</p>
+          <div class="split-actions">
+            <a class="btn-ticket" href="/page/membership/">
+              <span>See membership</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="link-ghost" href="https://buymeacoffee.com/studywithstem" target="_blank" rel="noopener noreferrer nofollow">Buy one coffee instead
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="split-card">
+          <h3>Just want the Friday email</h3>
+          <p>One email a week: the new poster, the new posts, nothing else. Unsubscribe from the link at the bottom any time.</p>
+          <div class="split-actions">
+            <a class="btn-ticket" href="/page/subscription/">
+              <span>Subscribe for free</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — faq preview -->
+  <section class="sec" id="faq-preview">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="head-text">
+          <span class="sec-idx mono">SEC / 06</span>
+          <h2>Quick <span class="hl">questions.</span></h2>
+        </div>
+        <a class="link-ghost" href="/page/faq/">Read the full FAQ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>Are the tools and posters actually free?</summary>
+          <p class="faq-a">Yes — every tool and every poster on the site is free to use and free to save. Membership and one-off support just help keep the lights on.</p>
+        </details>
+        <details>
+          <summary>Do I need an account to use a calculator or converter?</summary>
+          <p class="faq-a">No sign-up, no install. Every tool runs straight in your browser and works the same on desktop and mobile.</p>
+        </details>
+        <details>
+          <summary>How often does new content go up?</summary>
+          <p class="faq-a">A new poster drops every Friday, alongside new posts and tools as they're finished across the ten subject areas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- ============ FOOTER — copy this block into every page ============ -->
