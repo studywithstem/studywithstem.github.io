@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IGFETCH — local Instagram bulk retriever</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+  :root{
+    --bg:#0c0e09; --panel:#10130c; --panel2:#161a0f;
+    --line:#232919; --line2:#313824;
+    --txt:#e7ecda; --dim:#8a927b; --faint:#565f49;
+    --acc:#c6f24e; --acc2:#d8fa78; --acc-ink:#141a06;
+    --warn:#f0bd49; --err:#ff6d5a;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --disp:'Space Grotesk',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--txt);font-family:var(--disp);font-size:14px;overflow:hidden}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:var(--line2);border:2px solid var(--bg)}
+  ::-webkit-scrollbar-track{background:transparent}
+  :focus-visible{outline:1px solid var(--acc);outline-offset:2px}
+
+  #app{display:grid;grid-template-columns:372px 1fr;height:100vh}
+
+  /* ============ LEFT RAIL ============ */
+  #rail{border-right:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;overflow-y:auto;min-height:0}
+  .brand{padding:18px 20px 15px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;flex:none}
+  .mark{width:38px;height:38px;background:var(--acc);color:var(--acc-ink);display:grid;place-items:center;flex:none}
+  .brand h1{font-size:19px;font-weight:700;letter-spacing:.02em;line-height:1}
+  .brand h1 span{color:var(--acc)}
+  .brand small{display:block;font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.16em;margin-top:5px}
+
+  .sect{padding:14px 20px;border-bottom:1px solid var(--line);flex:none}
+  .slabel{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--dim);margin-bottom:11px}
+  .slabel::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .modes{display:flex;flex-direction:column;gap:5px}
+  .mode{display:flex;gap:11px;align-items:center;padding:9px 10px;border:1px solid transparent;background:none;color:var(--dim);cursor:pointer;text-align:left;font-family:var(--mono);border-radius:2px;transition:.15s}
+  .mode:hover{color:var(--txt);border-color:var(--line2)}
+  .mode.on{color:var(--txt);border-color:var(--acc);background:rgba(198,242,78,.05)}
+  .mode.on .mi{color:var(--acc)}
+  .mi{flex:none;display:grid;place-items:center}
+  .mt{min-width:0}
+  .mt b{font-size:11px;letter-spacing:.09em;font-weight:600;display:block}
+  .mt span{font-size:9.5px;color:var(--faint);display:block;margin-top:3px;line-height:1.45}
+
+  textarea{width:100%;background:#0a0c07;border:1px solid var(--line2);color:var(--txt);font-family:var(--mono);font-size:11.5px;line-height:1.75;padding:10px 11px;min-height:96px;resize:vertical;border-radius:2px;outline:none}
+  textarea:focus{border-color:var(--acc)}
+  .hint{font-family:var(--mono);font-size:9.5px;color:var(--faint);margin-top:8px;line-height:1.65}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:10px 12px;border:1px solid var(--line2);background:transparent;color:var(--txt);cursor:pointer;border-radius:2px;transition:border-color .15s,color .15s,background .15s}
+  .btn:hover{border-color:var(--acc);color:var(--acc)}
+  .btn:active{transform:translateY(1px)}
+  .btn.primary{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+  .btn.primary:hover{background:var(--acc2);color:var(--acc-ink)}
+  .btn.wide{width:100%;margin-top:10px}
+  .btn.sm{padding:6px 9px;font-size:9.5px}
+  .btn.icon{padding:0;width:28px;height:28px}
+  .btn:disabled{opacity:.4;pointer-events:none}
+
+  .rspacer{flex:1}
+
+  .statsect{border-bottom:1px solid var(--line);flex:none}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+  .stat{background:var(--panel);padding:13px 20px 11px}
+  .stat b{font-family:var(--mono);font-size:20px;font-weight:600;display:block;font-variant-numeric:tabular-nums;line-height:1}
+  .stat span{font-family:var(--mono);font-size:8.5px;letter-spacing:.18em;color:var(--dim);display:block;margin-top:7px}
+  .stat.ok b{color:var(--acc)} .stat.err b{color:var(--err)}
+
+  details.reality{padding:0 20px;font-family:var(--mono);flex:none}
+  details.reality summary{list-style:none;cursor:pointer;display:flex;gap:9px;align-items:center;font-size:10px;letter-spacing:.16em;color:var(--warn);padding:13px 0}
+  details.reality summary::-webkit-details-marker{display:none}
+  details.reality[open] summary{border-bottom:1px dashed var(--line);margin-bottom:11px}
+  details.reality ul{list-style:none;padding-bottom:14px}
+  details.reality li{font-size:10.5px;color:var(--dim);line-height:1.65;margin:0 0 9px 15px;position:relative}
+  details.reality li::before{content:"—";position:absolute;left:-15px;color:var(--faint)}
+  details.reality li b{color:var(--txt);font-weight:500}
+  .rfoot{padding:12px 20px 16px;font-family:var(--mono);font-size:8.5px;color:var(--faint);letter-spacing:.1em;text-align:center;flex:none}
+
+  /* ============ MAIN ============ */
+  #main{display:flex;flex-direction:column;min-width:0;min-height:0}
+  #topbar{height:42px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 18px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--dim);background:var(--panel);flex:none}
+  #topbar .tinfo{color:var(--faint)}
+  .led{display:flex;align-items:center;gap:8px;margin-left:auto;color:var(--dim)}
+  .led i{width:7px;height:7px;border-radius:50%;background:var(--faint)}
+  .led.busy i{background:var(--warn);animation:pulse 1s infinite}
+  .led.work i{background:var(--acc);animation:pulse .7s infinite}
+  @keyframes pulse{50%{opacity:.25}}
+
+  #queueWrap{flex:1;display:flex;flex-direction:column;min-height:0;position:relative}
+  .paneHead{display:flex;align-items:center;gap:10px;padding:9px 18px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--dim);border-bottom:1px solid var(--line);flex:none;background:var(--panel)}
+  .paneHead .grow{flex:1}
+  .qcount{color:var(--acc)}
+
+  #gprog{display:none;align-items:center;gap:12px;padding:8px 18px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10px;color:var(--acc);background:var(--panel);flex:none}
+  #gprog .bar{flex:1;height:3px;background:var(--line)}
+  #gprog .bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .2s}
+
+  #qlist{flex:1;overflow-y:auto;min-height:0}
+
+  /* empty state */
+  #empty{position:absolute;inset:0;overflow-y:auto;padding:56px 52px;background:radial-gradient(circle,#171c10 1px,transparent 1.1px) 0 0/28px 28px,var(--bg)}
+  .e-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.24em;color:var(--acc);margin-bottom:20px}
+  .e-title{font-size:clamp(26px,3.2vw,38px);font-weight:600;line-height:1.14;letter-spacing:-.01em;max-width:640px}
+  .e-title em{font-style:normal;color:var(--acc)}
+  .e-sub{margin-top:16px;color:var(--dim);font-size:14.5px;line-height:1.75;max-width:580px}
+  #pipe{margin:42px 0 10px;max-width:640px;width:100%;display:block}
+  #pipe .flow{animation:dash 1.1s linear infinite}
+  @keyframes dash{to{stroke-dashoffset:-10}}
+  .e-steps{display:flex;gap:14px;align-items:center;font-family:var(--mono);font-size:11px;color:var(--dim);flex-wrap:wrap}
+  .e-steps b{color:var(--acc);font-weight:600;margin-right:8px}
+  .e-steps i{color:var(--faint);font-style:normal}
+
+  /* queue rows */
+  .row{border-bottom:1px solid var(--line);position:relative;animation:rin .25s ease}
+  @keyframes rin{from{opacity:0;transform:translateY(4px)}}
+  .rmain{display:flex;align-items:center;gap:12px;padding:11px 18px;cursor:pointer}
+  .rmain:hover{background:var(--panel)}
+  .ridx{font-family:var(--mono);font-size:10px;color:var(--faint);width:22px;flex:none}
+  .rkind{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;border:1px solid var(--line2);padding:3px 6px;color:var(--dim);flex:none;border-radius:2px}
+  .rtarget{font-family:var(--mono);font-size:12.5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .rtick{margin-left:auto;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;color:var(--dim);min-width:0;justify-content:flex-end;flex:none;max-width:42%}
+  .rtick .dot{width:7px;height:7px;border-radius:50%;background:var(--faint);flex:none}
+  .rtick .ttext{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .row[data-st="resolve"] .dot{background:var(--warn);animation:pulse .9s infinite}
+  .row[data-st="ready"] .dot{background:var(--acc)}
+  .row[data-st="fetch"] .dot{background:var(--acc);animation:pulse .55s infinite}
+  .row[data-st="saved"] .dot{background:var(--acc)}
+  .row[data-st="saved"] .ttext{color:var(--acc)}
+  .row[data-st="fail"] .dot{background:var(--err)}
+  .row[data-st="fail"] .ttext{color:var(--err)}
+  .expand{transition:transform .2s;color:var(--dim);flex:none}
+  .row.open .expand{transform:rotate(180deg)}
+  .rprog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;display:none}
+  .rprog i{display:block;height:100%;background:var(--acc);width:0}
+  .row[data-st="fetch"] .rprog{display:block}
+
+  .rdetail{display:none;padding:2px 18px 16px 52px;border-top:1px dashed var(--line)}
+  .row.open .rdetail{display:block}
+  .thumbs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0 4px}
+  .thumb{position:relative;width:64px;height:64px;border:1px solid var(--line2);padding:0;background:#000;cursor:zoom-in;overflow:hidden;border-radius:2px}
+  .thumb img,.thumb video{width:100%;height:100%;object-fit:cover;display:block}
+  .thumb:hover{border-color:var(--acc)}
+  .thumb .vic{position:absolute;right:3px;bottom:3px;color:#fff;background:rgba(0,0,0,.55);padding:2px;display:grid;place-items:center;border-radius:2px}
+  .thumb .dl{position:absolute;inset:0;display:none;place-items:center;background:rgba(10,12,6,.62);color:var(--acc)}
+  .thumb:hover .dl{display:grid}
+  .rmeta{font-family:var(--mono);font-size:10.5px;color:var(--dim);line-height:1.75;padding:4px 0}
+  .rmeta .err{color:var(--err)}
+  .rlab{display:block;margin-top:10px;color:var(--faint);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+  .recent{display:flex;gap:6px;overflow-x:auto;padding-top:8px}
+  .recent a{flex:none;width:44px;height:44px;border:1px solid var(--line2);overflow:hidden;border-radius:2px}
+  .recent img{width:100%;height:100%;object-fit:cover;display:block}
+  .recent a:hover{border-color:var(--acc)}
+  .ractions{display:flex;gap:8px;flex-wrap:wrap;padding-top:10px}
+  .rlog{font-family:var(--mono);font-size:9.5px;color:var(--faint);line-height:1.9;padding-top:10px;max-height:130px;overflow-y:auto;white-space:pre-wrap;word-break:break-word}
+  .rlog .ok{color:var(--acc)} .rlog .warn{color:var(--warn)} .rlog .err{color:var(--err)}
+
+  /* log pane */
+  #logWrap{flex:none;border-top:1px solid var(--line);display:flex;flex-direction:column;background:var(--panel)}
+  #logWrap.min #log{display:none}
+  #logWrap.min #btnLogMin{transform:rotate(180deg)}
+  #log{height:166px;overflow-y:auto;padding:10px 18px;font-family:var(--mono);font-size:10.5px;line-height:1.95}
+  #log .ln{display:flex;gap:12px}
+  #log .t{color:var(--faint);flex:none}
+  #log .m{color:var(--dim);min-width:0;word-break:break-word}
+  #log .ok .m{color:var(--acc)} #log .warn .m{color:var(--warn)} #log .err .m{color:var(--err)}
+  #btnLogMin{transition:transform .2s}
+
+  /* toasts */
+  #toasts{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px;z-index:60}
+  .toast{display:flex;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line2);border-left:2px solid var(--acc);padding:10px 14px;font-family:var(--mono);font-size:11px;max-width:360px;animation:tin .22s ease}
+  .toast.err{border-left-color:var(--err)} .toast.warn{border-left-color:var(--warn)}
+  .toast.out{animation:tout .25s ease forwards}
+  @keyframes tin{from{transform:translateX(14px);opacity:0}}
+  @keyframes tout{to{transform:translateX(14px);opacity:0}}
+
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:rgba(8,10,5,.94);z-index:50;display:none;align-items:center;justify-content:center}
+  #lb.on{display:flex}
+  #lb .lbar{position:fixed;top:0;left:0;right:0;display:flex;gap:10px;align-items:center;padding:11px 18px;font-family:var(--mono);font-size:11px;color:var(--dim);background:var(--panel);border-bottom:1px solid var(--line)}
+  #lb .lname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:44vw}
+  #lb .grow{flex:1}
+  #lb .media{display:flex;align-items:center;justify-content:center;max-width:90vw;max-height:84vh}
+  #lb img,#lb video{max-width:88vw;max-height:80vh;border:1px solid var(--line2);display:block}
+
+  #btnClearAll:hover{border-color:var(--err);color:var(--err)}
+
+  @media(max-width:960px){
+    body{overflow:auto}
+    #app{grid-template-columns:1fr;height:auto}
+    #rail{border-right:0;border-bottom:1px solid var(--line);overflow:visible}
+    #main{min-height:100vh}
+    #qlist{max-height:58vh}
+    #empty{position:static;padding:36px 24px}
+  }
+</style>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ================= LEFT RAIL ================= -->
+  <aside id="rail">
+    <header class="brand">
+      <div class="mark">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9"/><path d="m8 8 4 4 4-4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+      </div>
+      <div>
+        <h1>IG<span>FETCH</span></h1>
+        <small>LOCAL BULK RETRIEVER · V1.0</small>
+      </div>
+    </header>
+
+    <section class="sect">
+      <div class="slabel">MODE</div>
+      <div class="modes">
+        <button class="mode on" data-mode="profiles">
+          <span class="mi"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <span class="mt"><b>PROFILES</b><span>HD profile pictures, by username</span></span>
+        </button>
+        <button class="mode" data-mode="posts">
+          <span class="mi"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5M2 15h5M17 9h5M17 15h5"/></svg></span>
+          <span class="mt"><b>POSTS &amp; REELS</b><span>media from any public post / reel</span></span>
+        </button>
+        <button class="mode" data-mode="direct">
+          <span class="mi"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+          <span class="mt"><b>DIRECT CDN URLS</b><span>raw scontent links — always works</span></span>
+        </button>
+        <button class="mode" data-mode="paste">
+          <span class="mi"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></span>
+          <span class="mt"><b>PASTE SOURCE</b><span>extract media from page HTML / JSON</span></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="sect">
+      <div class="slabel">TARGETS</div>
+
+      <div class="ipanel" data-panel="profiles">
+        <textarea id="taProfiles" spellcheck="false" placeholder="@nasa&#10;natgeo&#10;instagram.com/natgeo"></textarea>
+        <div class="hint">one per line — @handle, bare username or profile URL. Post / reel links pasted here are routed as posts.</div>
+        <button class="btn primary wide" data-add>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          ADD TO QUEUE
+        </button>
+        <div class="hint">ctrl + enter also adds</div>
+      </div>
+
+      <div class="ipanel" data-panel="posts" hidden>
+        <textarea id="taPosts" spellcheck="false" placeholder="https://www.instagram.com/reel/CxYZ…/&#10;https://www.instagram.com/p/Cabc…/&#10;CxYzAbCdEfG"></textarea>
+        <div class="hint">full post / reel / tv links, or bare shortcodes. A profile's /reels link is routed as a profile.</div>
+        <button class="btn primary wide" data-add>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          ADD TO QUEUE
+        </button>
+        <div class="hint">ctrl + enter also adds</div>
+      </div>
+
+      <div class="ipanel" data-panel="direct" hidden>
+        <textarea id="taDirect" spellcheck="false" placeholder="https://scontent-xxx.cdninstagram.com/v/t51…jpg?…&#10;https://scontent-xxx.cdninstagram.com/v/t66…mp4?…"></textarea>
+        <div class="hint">raw scontent…cdninstagram.com links (jpg / mp4). Grab them from DevTools → Network → Img or Media — or via Paste source. This mode never gets blocked.</div>
+        <button class="btn primary wide" data-add>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          ADD TO QUEUE
+        </button>
+        <div class="hint">ctrl + enter also adds</div>
+      </div>
+
+      <div class="ipanel" data-panel="paste" hidden>
+        <textarea id="taPaste" data-extract spellcheck="false" style="min-height:170px" placeholder="Paste page source (?__a=1 JSON, View-Source HTML, or anything containing cdninstagram / fbcdn links)…"></textarea>
+        <div class="hint">parsed locally in this tab — nothing is sent anywhere. Right-click an Instagram page → View Page Source → select all → paste here.</div>
+        <button class="btn primary wide" id="btnExtract">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          EXTRACT MEDIA URLS
+        </button>
+      </div>
+    </section>
+
+    <section class="sect">
+      <div class="slabel">SESSION ACTIONS</div>
+      <div style="display:flex;gap:8px">
+        <button class="btn primary" id="btnDlAll" style="flex:1">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+          DOWNLOAD ALL
+        </button>
+        <button class="btn" id="btnZip" style="flex:1">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"/><path d="M10 13h4"/></svg>
+          SAVE AS ZIP
+        </button>
+      </div>
+    </section>
+
+    <div class="rspacer"></div>
+
+    <section class="statsect">
+      <div class="stats">
+        <div class="stat ok"><b id="stReady">00</b><span>RESOLVED</span></div>
+        <div class="stat"><b id="stSaved">00</b><span>FILES SAVED</span></div>
+        <div class="stat err"><b id="stFail">00</b><span>FAILED</span></div>
+        <div class="stat"><b id="stBytes">0 B</b><span>DATA PULLED</span></div>
+      </div>
+    </section>
+
+    <details class="reality">
+      <summary>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+        REALITY CHECK
+      </summary>
+      <ul>
+        <li><b>Everything runs in this tab.</b> No backend, no account, no API keys — lookups go through Instagram's public endpoints via open CORS relays.</li>
+        <li><b>Instagram rate-limits anonymous traffic — hard.</b> If lookups fail, wait about a minute and hit retry. Or skip its API entirely: Direct URLs and Paste source keep working even while Instagram is blocking.</li>
+        <li><b>Public content only.</b> Nothing here bypasses a login wall or reaches private accounts.</li>
+        <li><b>Respect the creators.</b> Save only what you have the right to save, and keep Instagram's terms in mind.</li>
+      </ul>
+    </details>
+    <div class="rfoot">PUBLIC CONTENT ONLY · NOTHING HERE BYPASSES A LOGIN</div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main">
+    <div id="topbar">
+      <span id="modeEcho">MODE / PROFILES</span>
+      <span class="tinfo">CORS RELAYS ×5 · WORKERS ×2</span>
+      <span class="led" id="led"><i></i><span id="ledTxt">ENGINE IDLE</span></span>
+    </div>
+
+    <div id="queueWrap">
+      <div class="paneHead">
+        <span>QUEUE</span><span class="qcount" id="qCount">0</span>
+        <span class="grow"></span>
+        <button class="btn sm icon" id="btnRetryF" title="retry failed items">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg>
+        </button>
+        <button class="btn sm icon" id="btnClearDone" title="clear finished items">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+        </button>
+        <button class="btn sm icon" id="btnClearAll" title="clear the whole queue">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="gprog"><span id="gptxt"></span><div class="bar"><i id="gpbar"></i></div></div>
+      <div id="qlist"></div>
+
+      <!-- first-run state -->
+      <div id="empty">
+        <div class="e-kicker">// IGFETCH · 100% CLIENT-SIDE · NO SERVER · NO KEYS</div>
+        <h2 class="e-title">Bulk-retrieve <em>profile pics, reels &amp; post media</em> — straight from your browser to your disk.</h2>
+        <p class="e-sub">Paste usernames or links; IGFETCH resolves them through Instagram's public endpoints, previews every file, then saves them one by one or packed into a single ZIP. When Instagram's rate-limiter kicks in, Direct-URL and Paste-source modes keep working.</p>
+        <svg id="pipe" viewBox="0 0 640 118" fill="none" font-family="JetBrains Mono, monospace">
+          <defs>
+            <marker id="parr" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0 0L8 4L0 8Z" fill="#565f49"/>
+            </marker>
+          </defs>
+          <line class="flow" x1="188" y1="60" x2="226" y2="60" stroke="#565f49" stroke-dasharray="5 5" marker-end="url(#parr)"/>
+          <line class="flow" x1="416" y1="60" x2="454" y2="60" stroke="#565f49" stroke-dasharray="5 5" marker-end="url(#parr)"/>
+          <rect x="14" y="32" width="170" height="56" stroke="#313824" fill="#10130c"/>
+          <text x="99" y="56" text-anchor="middle" font-size="11" fill="#e7ecda" letter-spacing="1.5">INSTAGRAM.COM</text>
+          <text x="99" y="74" text-anchor="middle" font-size="9" fill="#8a927b">public endpoints only</text>
+          <rect x="232" y="32" width="180" height="56" stroke="#c6f24e" fill="#10130c"/>
+          <text x="322" y="56" text-anchor="middle" font-size="11" fill="#c6f24e" letter-spacing="1.5">IGFETCH CORE</text>
+          <text x="322" y="74" text-anchor="middle" font-size="9" fill="#8a927b">this tab · zero backend</text>
+          <rect x="460" y="32" width="166" height="56" stroke="#313824" fill="#10130c"/>
+          <text x="543" y="56" text-anchor="middle" font-size="11" fill="#e7ecda" letter-spacing="1.5">YOUR MACHINE</text>
+          <text x="543" y="74" text-anchor="middle" font-size="9" fill="#8a927b">files · zip · previews</text>
+          <text x="207" y="22" text-anchor="middle" font-size="8.5" fill="#565f49" letter-spacing="1">embeds · api</text>
+          <text x="435" y="22" text-anchor="middle" font-size="8.5" fill="#565f49" letter-spacing="1">blob → disk</text>
+        </svg>
+        <div class="e-steps">
+          <span><b>01</b> pick a mode</span><i>→</i>
+          <span><b>02</b> paste targets</span><i>→</i>
+          <span><b>03</b> bulk save · zip</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="logWrap">
+      <div class="paneHead">
+        <span>ENGINE LOG</span>
+        <span class="grow"></span>
+        <button class="btn sm icon" id="btnLogClr" title="clear log">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="btn sm icon" id="btnLogMin" title="collapse / expand log">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div id="log"></div>
+    </div>
+  </main>
+</div>
+
+<div id="toasts"></div>
+<div id="lb"></div>
+
+<script>
+'use strict';
+/* ============================================================
+   helpers
+============================================================ */
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const pad2 = n => String(n).padStart(2,'0');
+function fmtBytes(n){ if(!n) return '0 B'; const u=['B','kB','MB','GB']; let i=0; while(n>=1024&&i<3){n/=1024;i++;} return (i?n.toFixed(1):Math.round(n))+' '+u[i]; }
+function stamp(){ const d=new Date(); return `${d.getFullYear()}${pad2(d.getMonth()+1)}${pad2(d.getDate())}-${pad2(d.getHours())}${pad2(d.getMinutes())}`; }
+function nowT(){ return new Date().toTimeString().slice(0,8); }
+function safeJson(t){ try{ return JSON.parse(t); }catch{ return null; } }
+function ent(s){ return String(s).replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#0?39;/g,"'"); }
+function errmsg(e){ if(!e) return 'unknown error'; if(e.name==='AbortError') return 'timeout'; return String(e.message||e).slice(0,90); }
+function guessType(u){ return /\.(mp4|mov|m4v|webm)(\?|$)/i.test(u) ? 'video' : 'image'; }
+
+/* JSON-in-JSON in Instagram HTML is escaped one or more times.
+   Un-escape repeatedly, then strip leftover backslashes —
+   safe for our purpose (we only regex https URLs out afterwards). */
+function deepUnescape(s){
+  let out = s;
+  for(let i=0;i<4;i++){
+    const nx = out
+      .replace(/\\u([0-9a-fA-F]{4})/g, (_,h)=>String.fromCharCode(parseInt(h,16)))
+      .replace(/\\\//g,'/')
+      .replace(/\\"/g,'"');
+    if(nx===out) break;
+    out = nx;
+  }
+  return out.replace(/\\/g,'');
+}
+
+function fileNameFromUrl(url, ext='jpg'){
+  let name='';
+  try{ const u=new URL(url); const seg=(u.pathname.split('/').filter(Boolean).pop()||'').replace(/[^a-zA-Z0-9._-]/g,''); if(seg) name=seg; }catch{}
+  if(!name || !/\.[a-z0-9]{2,5}$/i.test(name)) name=(name||'media')+'.'+ext;
+  if(name.length>58) name=name.slice(-58);
+  return name;
+}
+function uniqueName(n){
+  if(!usedNames.has(n)){ usedNames.add(n); return n; }
+  const dot=n.lastIndexOf('.'); const base=dot>0?n.slice(0,dot):n; const ex=dot>0?n.slice(dot):'';
+  let i=2,c; do{ c=`${base}_${i}${ex}`; i++; }while(usedNames.has(c));
+  usedNames.add(c); return c;
+}
+function shortUrl(u){
+  try{ const x=new URL(u); const seg=(x.pathname.split('/').filter(Boolean).pop()||'').slice(0,14); return x.hostname.split('.')[0]+' · '+(seg||'media'); }
+  catch{ return u.slice(0,42); }
+}
+function saveBlob(blob, name){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 60000);
+}
+
+/* ============================================================
+   icons (dynamic spots)
+============================================================ */
+const ICONS={
+  film:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5M2 15h5M17 9h5M17 15h5"/>',
+  download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/>',
+  retry:'<path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/>',
+  x:'<path d="M18 6 6 18M6 6l12 12"/>',
+  check:'<path d="M20 6 9 17l-5-5"/>',
+  alert:'<path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/>',
+  external:'<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/>'
+};
+const icon=(n,s=14)=>`<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]||''}</svg>`;
+
+/* ============================================================
+   state
+============================================================ */
+const state={ items:[], bytes:0 };
+const bulk={ active:false };
+let uid=1, jobNo=0;
+const mid=()=> 'm'+(uid++);
+const usedNames=new Set();
+let mode='profiles';
+
+/* ============================================================
+   toast + engine log
+============================================================ */
+function toast(msg, kind='ok'){
+  const t=document.createElement('div');
+  t.className='toast '+kind;
+  t.innerHTML=`${icon(kind==='ok'?'check':'alert',14)}<span>${esc(msg)}</span>`;
+  $('#toasts').appendChild(t);
+  setTimeout(()=>{ t.classList.add('out'); setTimeout(()=>t.remove(),260); }, 3800);
+}
+let autoscroll=true;
+function log(msg, level='dim'){
+  const box=$('#log');
+  const ln=document.createElement('div');
+  ln.className='ln '+level;
+  ln.innerHTML=`<span class="t">${nowT()}</span><span class="m">${esc(msg)}</span>`;
+  box.appendChild(ln);
+  while(box.children.length>400) box.firstChild.remove();
+  if(autoscroll) box.scrollTop=box.scrollHeight;
+}
+ $('#log').addEventListener('scroll',()=>{ const b=$('#log'); autoscroll=b.scrollTop+b.clientHeight>=b.scrollHeight-30; });
+
+function itemLog(it,msg,level='dim'){
+  log(it? `${it.logTag} ${msg}` : msg, level);
+  if(!it) return;
+  it.logs.push({t:nowT(),msg,level});
+  if(it.logs.length>60) it.logs.shift();
+  it.tickMsg=msg;
+  if(it.status==='resolve'||it.status==='fetch') setTick(it);
+  if(it.open) renderRlog(it);
+}
+
+/* ============================================================
+   CORS relays + network core
+============================================================ */
+const PROXIES=[
+  { name:'corsproxy.io',     hdr:true,  build:u=>`https://corsproxy.io/?url=${encodeURIComponent(u)}` },
+  { name:'cors.workers.dev', hdr:true,  build:u=>`https://test.cors.workers.dev/?${u}` },
+  { name:'cors.eu.org',      hdr:true,  build:u=>`https://cors.eu.org/${u}` },
+  { name:'allorigins',       hdr:false, build:u=>`https://api.allorigins.win/raw?url=${encodeURIComponent(u)}` },
+  { name:'codetabs',         hdr:false, build:u=>`https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}` },
+];
+const IG_APP_ID='936619743392459'; // public web-app id used by instagram.com itself
+
+function fetchWithTimeout(url, ms=20000, opts={}){
+  const c=new AbortController();
+  const t=setTimeout(()=>c.abort(), ms);
+  return fetch(url, {...opts, signal:c.signal}).finally(()=>clearTimeout(t));
+}
+
+/* GET a text resource through the relay chain, with per-relay logging */
+async function proxiedText(url,{headers={},item=null,tag='fetch'}={}){
+  const need=Object.keys(headers).length>0;
+  let lastErr=new Error('no relay available');
+  for(const p of PROXIES){
+    if(need && !p.hdr) continue; // this endpoint needs custom headers → only header-forwarding relays
+    itemLog(item,`→ ${tag} · ${p.name}`,'dim');
+    try{
+      const res=await fetchWithTimeout(p.build(url),22000,{headers});
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const text=await res.text();
+      if(!text || text.length<10) throw new Error('empty body');
+      itemLog(item,`· ok 200 · ${fmtBytes(text.length)} · ${p.name}`,'ok');
+      return text;
+    }catch(e){ lastErr=e; itemLog(item,`· ${p.name}: ${errmsg(e)}`,'warn'); }
+  }
+  throw lastErr;
+}
+
+/* pull binary bytes for a CDN url: direct first, then relays, with progress */
+async function streamToBlob(res,onProg){
+  const total=+res.headers.get('content-length')||0;
+  if(!res.body || !res.body.getReader){ const b=await res.blob(); onProg&&onProg(b.size,b.size); return b; }
+  const reader=res.body.getReader(); const chunks=[]; let got=0;
+  for(;;){ const {done,value}=await reader.read(); if(done) break; chunks.push(value); got+=value.length; onProg&&onProg(got,total); }
+  return new Blob(chunks);
+}
+async function fetchBlob(url,{item=null,onProg=null}={}){
+  const tries=[{name:'direct'},...PROXIES];
+  let lastErr=new Error('download failed');
+  for(const p of tries){
+    itemLog(item,`→ pull file · ${p.name}`,'dim');
+    try{
+      const res=await fetchWithTimeout(p.build?p.build(url):url, 90000);
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      if(/text\/html/i.test(res.headers.get('content-type')||'')) throw new Error('got HTML (blocked)');
+      const blob=await streamToBlob(res,onProg);
+      if(blob.size<512) throw new Error('file too small ('+blob.size+' B)');
+      itemLog(item,`· got ${fmtBytes(blob.size)} via ${p.name}`,'ok');
+      return blob;
+    }catch(e){ lastErr=e; itemLog(item,`· ${p.name}: ${errmsg(e)}`,'warn'); }
+  }
+  throw lastErr;
+}
+
+/* ============================================================
+   resolvers (public endpoints, multi-strategy with fallbacks)
+============================================================ */
+async function resolveProfile(it){
+  const uname=it.input;
+
+  /* strategy 1 — the same web_profile_info endpoint instagram.com calls itself */
+  try{
+    const text=await proxiedText(
+      `https://www.instagram.com/api/v1/users/web_profile_info/?username=${encodeURIComponent(uname)}`,
+      { headers:{'X-IG-App-ID':IG_APP_ID}, item:it, tag:'profile_api' });
+    const j=safeJson(text);
+    const u=j && j.data && j.data.user;
+    if(u && (u.profile_pic_url_hd||u.profile_pic_url)){
+      const pic=u.profile_pic_url_hd||u.profile_pic_url;
+      const posts=((u.edge_owner_to_timeline_media||{}).edges||[]).map(e=>e&&e.node).filter(Boolean);
+      it.profile={ full:u.full_name||'', followers:u.follower_count|0, verified:!!u.verified };
+      it.recent=posts.map(n=>({sc:n.shortcode, thumb:n.thumbnail_src||n.display_url})).filter(r=>r.sc);
+      it.media=[{id:mid(),url:pic,type:'image',filename:`${uname}_profile_hd.jpg`,note:'HD profile picture'}];
+      itemLog(it,`profile ok · ${it.profile.followers.toLocaleString('en-US')} followers · ${it.recent.length} recent posts visible`,'ok');
+      return;
+    }
+    throw new Error(j ? 'user not found' : 'bad payload');
+  }catch(e1){ itemLog(it,`profile_api failed (${errmsg(e1)}) — falling back`,'warn'); }
+
+  /* strategy 2 — legacy topsearch endpoint (standard-res pic) */
+  try{
+    const text=await proxiedText(
+      `https://www.instagram.com/web/search/topsearch/?context=blended&query=${encodeURIComponent(uname)}`,
+      {item:it,tag:'topsearch'});
+    const j=safeJson(text);
+    const hit=((j&&j.users)||[]).map(x=>x&&x.user).find(u=>u&&u.username&&u.username.toLowerCase()===uname.toLowerCase());
+    if(hit&&hit.profile_pic_url){
+      it.media=[{id:mid(),url:hit.profile_pic_url,type:'image',filename:`${uname}_profile.jpg`,note:'profile picture (standard-res)'}];
+      itemLog(it,'topsearch hit · standard-res picture (api path was blocked)','ok');
+      return;
+    }
+    throw new Error('no user in results');
+  }catch(e2){ itemLog(it,'topsearch failed — falling back','warn'); }
+
+  /* strategy 3 — scrape the profile page for og:image / embedded pic url */
+  const text=await proxiedText(`https://www.instagram.com/${uname}/`,{item:it,tag:'page_html'});
+  const flat=deepUnescape(text);
+  const m=flat.match(/profile_pic_url(?:_hd)?"\s*:\s*"(https:[^"]+)"/) || flat.match(/og:image"[^>]*content="(https:[^"]+)"/);
+  if(m){
+    it.media=[{id:mid(),url:ent(m[1]),type:'image',filename:`${uname}_profile.jpg`,note:'profile picture'}];
+    itemLog(it,'page scrape ok','ok');
+    return;
+  }
+  throw new Error('all strategies blocked — wait ~60s and retry, or use Direct URLs / Paste source');
+}
+
+async function resolvePost(it){
+  const sc=it.input;
+  const attempts=[
+    {url:`https://www.instagram.com/p/${sc}/embed/captioned/`,   tag:'embed'},
+    {url:`https://www.instagram.com/reel/${sc}/embed/captioned/`, tag:'embed·reel'},
+    {url:`https://www.instagram.com/p/${sc}/?__a=1&__d=dis`,      tag:'legacy_api'},
+  ];
+  let lastErr=null;
+  for(const a of attempts){
+    try{
+      const text=await proxiedText(a.url,{item:it,tag:a.tag});
+      if(text.length<500) throw new Error('empty page');
+      const flat=deepUnescape(text);
+      const found=[]; const seenK=new Set();
+      const push=(url,type,note)=>{
+        url=ent(String(url).trim());
+        if(!/^https:\/\//.test(url)) return;
+        if(!/(cdninstagram|fbcdn)\.com/i.test(url)) return;
+        if(/\/(s\d{2,3}x\d{2,3}|p150x150)\//.test(url)) return; // skip tiny thumbnails
+        const k=url.split('?')[0];
+        if(seenK.has(k)) return; seenK.add(k);
+        found.push({id:mid(),url,type,note,filename:fileNameFromUrl(url,type==='video'?'mp4':'jpg')});
+      };
+      for(const m of flat.matchAll(/"video_url"\s*:\s*"(https:[^"]+)"/g)) push(m[1],'video','video');
+      for(const m of flat.matchAll(/"display_url"\s*:\s*"(https:[^"]+)"/g)) push(m[1],'image','image');
+      if(!found.length){ const m=flat.match(/og:image"[^>]*content="(https:[^"]+)"/); if(m) push(m[1],'image','og:image'); }
+      if(found.length){
+        found.forEach(f=>{ f.filename=`${sc}_${f.filename}`; });
+        it.media=found;
+        const t=flat.match(/og:title"\s+content="([^"]{0,140})"/);
+        it.caption=t?ent(t[1]):'';
+        itemLog(it,`embed ok · ${found.length} media (${found.filter(f=>f.type==='video').length} video)`,'ok');
+        return;
+      }
+      lastErr=new Error('no media in payload (post may be private or blocked)');
+    }catch(e){ lastErr=e; itemLog(it,`${a.tag} failed (${errmsg(e)})`,'warn'); }
+  }
+  throw lastErr||new Error('unresolvable');
+}
+
+/* ============================================================
+   resolve engine (concurrency 2, gentle pacing)
+============================================================ */
+const engine={ q:[], active:0 };
+function setEngine(m){
+  const led=$('#led');
+  led.className='led'+(m==='resolve'?' busy':m==='fetch'?' work':'');
+  $('#ledTxt').textContent='ENGINE '+(m==='idle'?'IDLE':m==='resolve'?'RESOLVING':'FETCHING');
+}
+function scheduleResolve(it){ engine.q.push(it); pump(); }
+function pump(){
+  while(engine.active<2 && engine.q.length){
+    const it=engine.q.shift();
+    engine.active++;
+    if(engine.mode==='idle'&&!bulk.active) setEngine('resolve');
+    runItem(it).finally(()=>{
+      engine.active--;
+      if(!engine.active&&!engine.q.length&&!bulk.active) setEngine('idle');
+      else if(!engine.active&&engine.q.length) pump();
+    });
+  }
+  if(!engine.active&&!engine.q.length&&!bulk.active) setEngine('idle');
+}
+async function runItem(it){
+  if(it.removed) return;
+  setStatus(it,'resolve');
+  try{
+    if(it.kind==='profile') await resolveProfile(it);
+    else await resolvePost(it);
+    if(!it.media||!it.media.length) throw new Error('no media found');
+    setStatus(it,'ready');
+    toast(`${it.label} — ${it.media.length} media resolved`,'ok');
+  }catch(e){
+    it.error=errmsg(e);
+    setStatus(it,'fail');
+    itemLog(it,`failed — ${it.error}`,'err');
+    toast(`${it.label} — failed`,'err');
+  }
+  if(!it.removed){ updateRow(it); updateStats(); }
+  await sleep(450); // be gentle with the endpoints
+}
+
+/* ============================================================
+   queue rows
+============================================================ */
+const KIND_LABEL={profile:'PROFILE',post:'POST/REEL',direct:'CDN URL'};
+function tickText(it){
+  switch(it.status){
+    case 'queued':  return 'queued';
+    case 'resolve': return it.tickMsg||'resolving…';
+    case 'ready':   return `ready · ${it.media?it.media.length:0} media`;
+    case 'fetch':   return it.tickMsg||'fetching…';
+    case 'saved':   return `saved · ${it.media?it.media.filter(m=>m.saved).length:0}/${it.media?it.media.length:0}`;
+    case 'fail':    return (it.error||'failed').slice(0,80);
+  }
+  return '';
+}
+function setTick(it){ if(it.el) it.el.querySelector('.ttext').textContent=tickText(it); }
+function setStatus(it,s){
+  it.status=s;
+  if(it.el){ it.el.dataset.st=s; setTick(it); const bar=it.el.querySelector('.rprog i'); if(bar&&s!=='fetch') bar.style.width='0'; }
+}
+function renderRlog(it){
+  if(!it.el||!it.open) return;
+  it.el.querySelector('.rlog').innerHTML=it.logs.map(l=>`<span class="${l.level}">${l.t} ${esc(l.msg)}</span>`).join('\n');
+}
+
+function buildRow(it){
+  jobNo++;
+  const row=document.createElement('div');
+  row.className='row'; row.dataset.id=it.id; row.dataset.st=it.status;
+  row.innerHTML=`
+    <div class="rmain">
+      <span class="ridx">${pad2(jobNo)}</span>
+      <span class="rkind">${KIND_LABEL[it.kind]||it.kind}</span>
+      <span class="rtarget" title="${esc(it.labelLong||it.label)}">${esc(it.label)}</span>
+      <span class="rtick"><i class="dot"></i><span class="ttext">${esc(tickText(it))}</span></span>
+      <button class="btn icon sm expand" data-act="expand" title="details">${icon('x',0)}</button>
+    </div>
+    <div class="rprog"><i></i></div>
+    <div class="rdetail">
+      <div class="thumbs"></div>
+      <div class="rmeta"></div>
+      <div class="ractions"></div>
+      <div class="rlog"></div>
+    </div>`;
+  row.querySelector('.expand').innerHTML=`<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`;
+  $('#qlist').appendChild(row);
+  it.el=row; it.open=false;
+  $('#qlist').scrollTop=$('#qlist').scrollHeight;
+  updateRow(it);
+}
+
+function metaHTML(it){
+  if(it.status==='fail') return `<span class="err">${esc(it.error||'failed')}</span>`;
+  if(!it.media) return `<span>${it.status==='queued'?'waiting for an engine slot':'resolving through public endpoints…'}</span>`;
+  const parts=[];
+  if(it.kind==='profile'&&it.profile){
+    if(it.profile.full) parts.push(esc(it.profile.full));
+    if(it.profile.followers) parts.push(it.profile.followers.toLocaleString('en-US')+' followers');
+  }
+  it.media.forEach(m=>parts.push(
+    `${m.type==='video'?'video':'image'} · ${esc(m.filename)}`+
+    (m.blob?` · ${fmtBytes(m.blob.size)}`:'')+
+    (m.saved?' · saved':'')+
+    (m.error?` · <span class="err">${esc(m.error)}</span>`:'')
+  ));
+  if(it.caption) parts.push('“'+esc(it.caption.slice(0,110))+'”');
+  let html=parts.join('<br>')||'<span>—</span>';
+  if(it.kind==='profile'&&it.recent&&it.recent.length){
+    html+=`<span class="rlab">recent ${it.recent.length} posts · click to open — “queue recent posts” grabs them all</span>`;
+    html+=`<div class="recent">${it.recent.map(r=>`<a href="https://www.instagram.com/p/${esc(r.sc)}/" target="_blank" rel="noopener" title="open ${esc(r.sc)}"><img src="${esc(r.thumb)}" loading="lazy" alt=""></a>`).join('')}</div>`;
+  }
+  return html;
+}
+function actionsHTML(it){
+  const a=[];
+  if(it.status==='ready'||it.status==='saved'||it.status==='fail'){
+    if(it.media&&it.media.length&&it.status!=='fail')
+      a.push(`<button class="btn sm primary" data-act="save">${icon('download',13)} ${it.status==='saved'?'save again':'save'}</button>`);
+    if(it.status==='fail')
+      a.push(`<button class="btn sm primary" data-act="retry">${icon('retry',13)} retry</button>`);
+    if(it.kind==='profile'&&it.recent&&it.recent.length&&it.status!=='fail')
+      a.push(`<button class="btn sm" data-act="queueposts">${icon('film',13)} queue ${it.recent.length} recent posts</button>`);
+    if(it.openUrl)
+      a.push(`<button class="btn sm" data-act="open">${icon('external',13)} open</button>`);
+  }
+  if(it.status==='queued'||it.status==='resolve')
+    a.push(`<button class="btn sm" data-act="cancel">${icon('x',13)} cancel</button>`);
+  return a.join('');
+}
+
+function updateRow(it){
+  if(!it.el||it.removed) return;
+  it.el.dataset.st=it.status;
+  setTick(it);
+  const th=it.el.querySelector('.thumbs');
+  if(it.media&&(it.status==='ready'||it.status==='saved'||it.status==='fetch')){
+    if(th.children.length!==it.media.length||it.thumbsDirty){
+      it.thumbsDirty=false;
+      th.innerHTML=it.media.map(m=>`
+        <button class="thumb" data-mid="${m.id}" title="${esc(m.note||m.filename)}${m.saved?' · saved':''}">
+          ${m.type==='video'
+            ? `<video src="${esc(m.url)}" muted playsinline preload="metadata"></video><span class="vic">${icon('film',12)}</span>`
+            : `<img src="${esc(m.url)}" alt="" loading="lazy">`}
+          <span class="dl">${icon('download',15)}</span>
+        </button>`).join('');
+      th.querySelectorAll('video').forEach(v=>v.addEventListener('loadedmetadata',()=>{ try{v.currentTime=.35;}catch{} }));
+    }
+    th.style.display='flex';
+  }else{ th.innerHTML=''; th.style.display='none'; }
+  it.el.querySelector('.rmeta').innerHTML=metaHTML(it);
+  it.el.querySelector('.ractions').innerHTML=actionsHTML(it);
+  if(it.open) renderRlog(it);
+}
+
+/* ============================================================
+   item lifecycle
+============================================================ */
+function addItem(t){
+  const it={id:'i'+(uid++),kind:t.kind,input:t.input,status:'queued',logs:[],media:t.media||null,tickMsg:'',error:null,open:false,el:null,removed:false};
+  if(t.kind==='profile'){ it.label='@'+t.input; it.logTag='[@'+t.input+']'; it.openUrl='https://www.instagram.com/'+t.input+'/'; }
+  else if(t.kind==='post'){ it.label=t.share?'share link':t.input; it.logTag='['+t.input+']'; it.openUrl='https://www.instagram.com/p/'+t.input+'/'; }
+  else{ it.label=shortUrl(t.input); it.logTag='[cdn]'; it.openUrl=t.input; }
+  it.labelLong=t.input;
+  if(t.share){ it.status='fail'; it.error='Share links must be opened in a browser first — copy the /p/… or /reel/… URL from the address bar, then paste that.'; }
+  state.items.push(it);
+  buildRow(it);
+  if(t.media&&t.media.length&&it.status==='queued'){
+    it.status='ready';
+    itemLog(it,'direct target · no lookup needed','ok');
+    updateRow(it);
+  }else if(it.status==='queued'){
+    itemLog(it,'queued for resolution','dim');
+    scheduleResolve(it);
+  }else updateRow(it);
+  updateStats();
+  return it;
+}
+function removeItem(it){
+  it.removed=true;
+  const i=state.items.indexOf(it); if(i>-1) state.items.splice(i,1);
+  if(it.el) it.el.remove();
+  updateStats();
+}
+function retryItem(it){
+  it.error=null;
+  if(it.media&&it.media.length){
+    it.media.forEach(m=>{ m.error=null; });
+    setStatus(it,'ready'); updateRow(it);
+    toast(`${it.label} — back to ready, hit save to retry`,'ok');
+  }else{
+    it.logs=[]; setStatus(it,'queued'); itemLog(it,'re-queued','dim'); updateRow(it); scheduleResolve(it);
+  }
+}
+function retryFailed(){
+  const f=state.items.filter(i=>i.status==='fail');
+  if(!f.length) return toast('No failed targets to retry','warn');
+  f.forEach(retryItem);
+  toast(`Retrying ${f.length} target${f.length>1?'s':''}`,'ok');
+}
+function clearDone(){
+  const d=state.items.filter(i=>i.status==='saved');
+  if(!d.length) return toast('Nothing saved to clear','warn');
+  d.forEach(removeItem);
+  toast(`Cleared ${d.length} finished item${d.length>1?'s':''}`,'ok');
+}
+function clearAll(){
+  if(!state.items.length) return;
+  [...state.items].forEach(removeItem);
+  usedNames.clear(); jobNo=0;
+  toast('Queue cleared','ok');
+}
+function queuePosts(it){
+  let n=0;
+  it.recent.forEach(r=>{
+    if(state.items.some(x=>x.kind==='post'&&x.input===r.sc)) return;
+    addItem({kind:'post',input:r.sc}); n++;
+  });
+  toast(n?`Queued ${n} recent posts from ${it.label}`:'All recent posts are already in the queue', n?'ok':'warn');
+}
+
+/* ============================================================
+   saving (individual, bulk, zip)
+============================================================ */
+function markSaved(m){ m.saved=true; if(!m.counted&&m.blob){ m.counted=true; state.bytes+=m.blob.size; } }
+function rowProgress(it,got,total){
+  it.tickMsg=`↓ ${fmtBytes(got)}${total?' / '+fmtBytes(total):''}`;
+  setTick(it);
+  if(it.el){ const bar=it.el.querySelector('.rprog i'); if(bar&&total) bar.style.width=Math.min(100,got/total*100)+'%'; }
+}
+async function saveMedia(it,m){
+  setStatus(it,'fetch');
+  try{
+    if(!m.blob) m.blob=await fetchBlob(m.url,{item:it,onProg:(a,b)=>rowProgress(it,a,b)});
+    saveBlob(m.blob,uniqueName(m.filename));
+    markSaved(m); m.error=null;
+  }catch(e){ m.error=errmsg(e); itemLog(it,`media failed: ${m.error}`,'err'); }
+  const anySaved=it.media.some(x=>x.saved);
+  const allErr=it.media.every(x=>x.error);
+  setStatus(it,anySaved?'saved':(allErr?'fail':it.status));
+  if(allErr) it.error=it.media.map(x=>x.error).filter(Boolean)[0];
+  it.tickMsg=null; it.thumbsDirty=true;
+  updateRow(it); updateStats();
+}
+async function saveItem(it){
+  if(!it.media||!it.media.length) return;
+  for(const m of it.media){ await saveMedia(it,m); await sleep(260); }
+  const n=it.media.filter(m=>m.saved).length;
+  toast(`${it.label} — saved ${n}/${it.media.length}`, n===it.media.length?'ok':'warn');
+}
+
+function gshow(){ $('#gprog').style.display='flex'; }
+function ghide(){ $('#gprog').style.display='none'; }
+function gset(done,total,label){
+  $('#gptxt').textContent=`BULK ${done}/${total}${label?' · '+label:''}`;
+  $('#gpbar').style.width=(total?done/total*100:0)+'%';
+}
+
+async function downloadAll(){
+  if(bulk.active) return toast('A bulk job is already running','warn');
+  const jobs=[];
+  state.items.forEach(it=>{ if(it.media) it.media.forEach(m=>{ if(!m.saved) jobs.push({it,m}); }); });
+  if(!jobs.length){
+    const any=state.items.some(it=>it.media&&it.media.some(m=>m.saved));
+    return toast(any?'All resolved media is already saved — use SAVE AS ZIP to pack them':'Nothing resolved to download yet','warn');
+  }
+  bulk.active=true; setEngine('fetch'); gshow();
+  let done=0,ok=0;
+  for(const {it,m} of jobs){
+    gset(done,jobs.length,`${it.label} · ${m.filename}`);
+    await saveMedia(it,m);
+    if(m.saved){ ok++; await sleep(260); }
+    done++; gset(done,jobs.length);
+  }
+  bulk.active=false; ghide();
+  setEngine(engine.active?'resolve':'idle');
+  toast(`Bulk save finished — ${ok}/${jobs.length} files`, ok===jobs.length?'ok':'err');
+}
+
+async function zipAll(){
+  if(bulk.active) return toast('A bulk job is already running','warn');
+  if(typeof JSZip==='undefined') return toast('ZIP library failed to load — check your connection','err');
+  const jobs=[];
+  state.items.forEach(it=>{ if(it.media) it.media.forEach(m=>jobs.push({it,m})); });
+  if(!jobs.length) return toast('Nothing to pack — resolve some targets first','warn');
+  bulk.active=true; setEngine('fetch'); gshow();
+  const zip=new JSZip(); let done=0,packed=0;
+  for(const {it,m} of jobs){
+    gset(done,jobs.length,`pulling ${m.filename}`);
+    try{
+      if(!m.blob){ setStatus(it,'fetch'); m.blob=await fetchBlob(m.url,{item:it,onProg:(a,b)=>rowProgress(it,a,b)}); }
+      if(m.blob){ zip.file(uniqueName(m.filename),m.blob); packed++; markSaved(m); }
+    }catch(e){ m.error=errmsg(e); }
+    updateRow(it); done++; gset(done,jobs.length);
+  }
+  gset(1,1,'packing zip…');
+  const blob=await zip.generateAsync({type:'blob',compression:'STORE'}); // jpg/mp4 don't compress
+  saveBlob(blob,`igfetch_${stamp()}.zip`);
+  ghide(); bulk.active=false; setEngine(engine.active?'resolve':'idle'); updateStats();
+  toast(`ZIP saved — ${packed}/${jobs.length} files packed`, packed===jobs.length?'ok':'warn');
+}
+
+/* ============================================================
+   lightbox
+============================================================ */
+function openLb(it,m){
+  const lb=$('#lb');
+  lb.innerHTML=`
+    <div class="lbar">
+      <span class="lname">${esc(m.filename)}</span>
+      <span class="grow"></span>
+      <button class="btn sm" data-lb="save">${icon('download',13)} save</button>
+      <button class="btn sm" data-lb="close">${icon('x',13)} close</button>
+    </div>
+    <div class="media">${m.type==='video'
+      ? `<video src="${esc(m.url)}" controls autoplay muted playsinline></video>`
+      : `<img src="${esc(m.url)}" alt="">`}</div>`;
+  lb.classList.add('on');
+  lb.querySelector('[data-lb=close]').onclick=closeLb;
+  lb.querySelector('[data-lb=save]').onclick=async e=>{ e.stopPropagation(); await saveMedia(it,m); closeLb(); };
+  lb.onclick=e=>{ if(e.target===lb||e.target.classList.contains('media')) closeLb(); };
+}
+function closeLb(){ const lb=$('#lb'); lb.classList.remove('on'); lb.innerHTML=''; }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLb(); });
+
+/* ============================================================
+   input parsing
+============================================================ */
+const RESERVED=new Set(['p','reel','reels','tv','explore','accounts','stories','direct','share','about','legal','developer','directory','web','api','static','graphql','emails','push','invites']);
+const POST_URL_RE=/(?:instagram\.com|instagr\.am)\/(?:[A-Za-z0-9._]+\/)?(?:p|reel|reels|tv)\/([A-Za-z0-9_-]{5,})/i;
+
+function parseTargets(text,md){
+  const chunks=text.split(/[\s,;]+/).map(s=>s.trim().replace(/[)»>]+$/,'')).filter(Boolean);
+  const out=[],bad=[],seenHere=new Set();
+  const push=(t)=>{ const key=t.kind+':'+t.input.toLowerCase(); if(seenHere.has(key)) return; seenHere.add(key); out.push(t); };
+
+  for(const c of chunks){
+    if(md==='profiles'){
+      const pm=c.match(POST_URL_RE);
+      if(pm){ push({kind:'post',input:pm[1]}); continue; }       // pasted a post link → route as post
+      let name=c.replace(/^@/,'');
+      const m=c.match(/(?:instagram\.com|instagr\.am)\/@?([A-Za-z0-9._]{1,30})/i);
+      if(m) name=m[1];
+      name=name.replace(/\/+$/,'');
+      if(!/^[A-Za-z0-9._]{1,30}$/.test(name)||RESERVED.has(name.toLowerCase())){ bad.push(c); continue; }
+      push({kind:'profile',input:name});
+    }
+    else if(md==='posts'){
+      if(/(instagram\.com|instagr\.am)\/share\//i.test(c)){ out.push({kind:'post',input:c,share:true}); continue; }
+      const rm=c.match(/(?:instagram\.com|instagr\.am)\/@?([A-Za-z0-9._]{1,30})\/reels\/?$/i);
+      if(rm&&!RESERVED.has(rm[1].toLowerCase())){ push({kind:'profile',input:rm[1]}); continue; } // profile's reels tab → profile
+      let m=c.match(POST_URL_RE);
+      if(!m&&/^[A-Za-z0-9_-]{10,}$/.test(c)) m=[null,c]; // bare shortcode
+      if(!m){ bad.push(c); continue; }
+      push({kind:'post',input:m[1]});
+    }
+    else{
+      if(!/^https?:\/\/\S+$/.test(c)){ bad.push(c); continue; }
+      push({kind:'direct',input:c});
+    }
+  }
+  return {out,bad};
+}
+
+/* local extraction from pasted HTML / JSON — never touches the network */
+function extractFromText(text){
+  const flat=deepUnescape(text);
+  const found=[]; const seenK=new Set();
+  const add=(url,type,src)=>{
+    url=ent(String(url).trim());
+    if(!/^https?:\/\//.test(url)) return;
+    if(!/(cdninstagram|fbcdn)\.com/i.test(url)) return;
+    if(/\/(s\d{2,3}x\d{2,3}|p150x150)\//.test(url)) return; // skip tiny thumbnails
+    const k=url.split('?')[0];
+    if(seenK.has(k)) return; seenK.add(k);
+    found.push({url,type:type||guessType(url),src});
+  };
+  const patterns=[
+    [/profile_pic_url_hd"?\s*:\s*"(https:[^"]+)"/g,'image','profile_pic_url_hd'],
+    [/profile_pic_url"?\s*:\s*"(https:[^"]+)"/g,'image','profile_pic_url'],
+    [/video_url"?\s*:\s*"(https:[^"]+)"/g,'video','video_url'],
+    [/display_url"?\s*:\s*"(https:[^"]+)"/g,'image','display_url'],
+    [/og:image"[^>]*content="(https:[^"]+)"/g,'image','og:image'],
+  ];
+  for(const [re,ty,src] of patterns) for(const m of flat.matchAll(re)) add(m[1],ty,src);
+  for(const m of flat.matchAll(/https?:\/\/[^\s"'<>]+/g)) add(m[0]); // catch-all for pasted network-tab URLs
+  return found;
+}
+
+/* ============================================================
+   stats
+============================================================ */
+function updateStats(){
+  let ready=0,savedF=0,fail=0;
+  state.items.forEach(it=>{
+    if(it.media&&it.media.length) ready++;
+    if(it.status==='fail') fail++;
+    if(it.media) it.media.forEach(m=>{ if(m.saved) savedF++; });
+  });
+  $('#stReady').textContent=pad2(ready);
+  $('#stSaved').textContent=pad2(savedF);
+  $('#stFail').textContent=pad2(fail);
+  $('#stBytes').textContent=fmtBytes(state.bytes);
+  $('#qCount').textContent=state.items.length;
+  $('#empty').style.display=state.items.length?'none':'block';
+}
+
+/* ============================================================
+   wiring
+============================================================ */
+ $$('.mode').forEach(b=>b.addEventListener('click',()=>{
+  $$('.mode').forEach(x=>x.classList.toggle('on',x===b));
+  mode=b.dataset.mode;
+  $$('.ipanel').forEach(p=>p.hidden=p.dataset.panel!==mode);
+  $('#modeEcho').textContent='MODE / '+b.querySelector('b').textContent;
+}));
+
+function onAdd(){
+  const ta=$(`.ipanel[data-panel="${mode}"] textarea`);
+  if(!ta) return;
+  const {out,bad}=parseTargets(ta.value,mode);
+  if(mode==='direct'){
+    out.forEach(t=>{
+      const ty=guessType(t.input);
+      t.media=[{id:mid(),url:t.input,type:ty,filename:fileNameFromUrl(t.input,ty==='video'?'mp4':'jpg'),note:'direct link'}];
+    });
+  }
+  if(!out.length){
+    if(bad.length) toast(`No valid targets — “${bad[0].slice(0,40)}” isn't recognized`,'err');
+    else toast('Nothing to add — paste some targets first','warn');
+    return;
+  }
+  out.forEach(addItem);
+  if(bad.length) toast(`${bad.length} unrecognizable ${bad.length>1?'entries':'entry'} skipped`,'warn');
+  if(out.length>25) toast('Heads up: big batches get rate-limited — expect some failures','warn');
+  else toast(`Queued ${out.length} target${out.length>1?'s':''}`,'ok');
+  ta.value='';
+}
+ $$('[data-add]').forEach(b=>b.addEventListener('click',onAdd));
+
+ $('#btnExtract').addEventListener('click',()=>{
+  const ta=$('#taPaste');
+  if(!ta.value.trim()) return toast('Paste some page source or JSON first','warn');
+  const found=extractFromText(ta.value);
+  if(!found.length) return toast('No media URLs found in that text','err');
+  found.forEach(f=>addItem({kind:'direct',input:f.url,media:[{id:mid(),url:f.url,type:f.type,filename:fileNameFromUrl(f.url,f.type==='video'?'mp4':'jpg'),note:f.src}]}));
+  toast(`Extracted ${found.length} media URL${found.length>1?'s':''} → queue`,'ok');
+  ta.value='';
+});
+
+ $$('.ipanel textarea').forEach(ta=>ta.addEventListener('keydown',e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key==='Enter'){ e.preventDefault(); ta.dataset.extract!==undefined?$('#btnExtract').click():onAdd(); }
+}));
+
+ $('#qlist').addEventListener('click',e=>{
+  const rowEl=e.target.closest('.row'); if(!rowEl) return;
+  const it=state.items.find(x=>x.id===rowEl.dataset.id); if(!it) return;
+  const actBtn=e.target.closest('[data-act]');
+  if(actBtn){
+    const act=actBtn.dataset.act;
+    if(act==='expand'){ it.open=!it.open; rowEl.classList.toggle('open',it.open); if(it.open) renderRlog(it); return; }
+    if(act==='save'){ saveItem(it); return; }
+    if(act==='retry'){ retryItem(it); return; }
+    if(act==='open'){ window.open(it.openUrl,'_blank','noopener'); return; }
+    if(act==='cancel'){ removeItem(it); toast(`${it.label} — removed`,'ok'); return; }
+    if(act==='queueposts'){ queuePosts(it); return; }
+  }
+  const th=e.target.closest('.thumb');
+  if(th&&it.media){
+    const m=it.media.find(x=>x.id===th.dataset.mid);
+    if(!m) return;
+    if(e.target.closest('.dl')) saveMedia(it,m); // hover overlay = quick save
+    else openLb(it,m);                           // click = full preview
+    return;
+  }
+  if(e.target.closest('.rmain')){ it.open=!it.open; rowEl.classList.toggle('open',it.open); if(it.open) renderRlog(it); }
+});
+
+ $('#btnDlAll').onclick=downloadAll;
+ $('#btnZip').onclick=zipAll;
+ $('#btnRetryF').onclick=retryFailed;
+ $('#btnClearDone').onclick=clearDone;
+ $('#btnClearAll').onclick=clearAll;
+ $('#btnLogClr').onclick=()=>{ $('#log').innerHTML=''; log('log cleared','dim'); };
+ $('#btnLogMin').onclick=()=>$('#logWrap').classList.toggle('min');
+
+/* ============================================================
+   boot
+============================================================ */
+log('igfetch v1.0 — local engine online','ok');
+log('no server · no keys · no tracking — public GETs via open CORS relays only','dim');
+log('pick a mode on the left and paste targets to begin','dim');
+updateStats();
+</script>
+</body>
+</html>
