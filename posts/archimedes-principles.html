@@ -30,6 +30,8 @@ figcaption{font-size:11px;color:#475569}
 .ttl h1{font:700 clamp(34px,6vw,64px)/1.1 Georgia,serif;color:#fff;margin-bottom:10px}
 .ttl h1+p{color:#0369a1;font-size:20px;margin-bottom:22px}
 .wide{display:block;overflow:auto}
+.sl.bis{display:flex;align-items:center;justify-content:center;text-align:center}
+.ar{font-family:"Traditional Arabic","Amiri","Noto Naskh Arabic","Scheherazade New","Geeza Pro","Sakkal Majalla",serif;font-size:clamp(54px,10vw,140px);line-height:1.7;color:#0c4a6e}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
 .cd{background:#ffffff;border:1px solid #94a3b8;border-top:4px solid #0369a1;border-radius:12px;padding:14px;cursor:pointer}
 .cd i{font-size:34px;font-style:normal}.cd h3{color:#fff}
@@ -54,8 +56,8 @@ figcaption{font-size:11px;color:#475569}
 const $=s=>document.querySelector(s);
 /* ---------- media: swap/add Wikimedia Commons file names (or any URL). Failed loads hide themselves ---------- */
 const CM=f=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(f)+'?width=500';
-const MEDIA={4:{img:CM('Cappadocia Balloon Inflating Wikimedia Commons.jpg'),cap:'A hot air balloon being inflated'},
- 5:{img:CM('Emma Maersk 2.jpg'),cap:'A steel container ship — it floats!'}};
+const MEDIA={5:{img:CM('Cappadocia Balloon Inflating Wikimedia Commons.jpg'),cap:'A hot air balloon being inflated'},
+ 6:{img:CM('Emma Maersk 2.jpg'),cap:'A steel container ship — it floats!'}};
 /* ---------- audio (synthesised, no files) ---------- */
 let ac,on=0,amb;const AC=()=>ac||(ac=new(window.AudioContext||window.webkitAudioContext)());
 function noise(d,f,v,loop){const a=AC(),n=a.sampleRate*d,b=a.createBuffer(1,n,a.sampleRate),x=b.getChannelData(0);for(let i=0;i<n;i++)x[i]=Math.random()*2-1;const s=a.createBufferSource();s.buffer=b;s.loop=!!loop;const fl=a.createBiquadFilter();fl.type='lowpass';fl.frequency.value=f;const g=a.createGain();g.gain.setValueAtTime(v,a.currentTime);if(!loop)g.gain.exponentialRampToValueAtTime(.001,a.currentTime+d);s.connect(fl);fl.connect(g);g.connect(a.destination);s.start();return s}
@@ -67,8 +69,8 @@ const VO=['1','2','3'].map(n=>{const a=new Audio(VB+n+'.mp3');a.preload='auto';r
 let vm=1,vf=0,blk=0;
 function stopV(){VO.forEach(a=>{a.pause();try{a.currentTime=0}catch(e){}})}
 function vplay(k){stopV();if(!(vm||vf))return;VO[k].play().catch(()=>{blk=1})}
-$('#vo').onclick=()=>{vm=!vm;$('#vo').textContent='🎙 Voice: '+(vm?'On':'Off');stopV();if(vm){if(cur==0)ST[0].t0=null;else if(cur==1)vplay(2)}};
-addEventListener('pointerdown',()=>{if(blk){blk=0;if(cur==0)ST[0].t0=null;else if(cur==1)vplay(2)}},true);
+$('#vo').onclick=()=>{vm=!vm;$('#vo').textContent='🎙 Voice: '+(vm?'On':'Off');stopV();if(vm){if(cur==1)ST[1].t0=null;else if(cur==2)vplay(2)}};
+addEventListener('pointerdown',()=>{if(blk){blk=0;if(cur==1)ST[1].t0=null;else if(cur==2)vplay(2)}},true);
 /* ---------- drawing helpers ---------- */
 const T=(c,s,x,y,col='#0b2a4a',z=13,al='left')=>{c.fillStyle=col;c.font=z+'px system-ui';c.textAlign=al;c.fillText(s,x,y)};
 function Ar(c,x,y,dx,dy,col,lab){c.strokeStyle=c.fillStyle=col;c.lineWidth=3;c.beginPath();c.moveTo(x,y);c.lineTo(x+dx,y+dy);c.stroke();const a=Math.atan2(dy,dx),X=x+dx,Y=y+dy;c.beginPath();c.moveTo(X,Y);c.lineTo(X-10*Math.cos(a-.4),Y-10*Math.sin(a-.4));c.lineTo(X-10*Math.cos(a+.4),Y-10*Math.sin(a+.4));c.fill();if(lab)T(c,lab,X+8,Y+(dy<0?-4:14),col,14)}
@@ -142,7 +144,7 @@ function ship(c,a){c.fillStyle='#b3261e';c.beginPath();c.moveTo(-110,-25);c.line
  c.fillStyle='#f4f4f4';c.fillRect(30,-62,50,37);c.fillRect(44,-78,26,16);c.fillStyle='#4a6fa5';for(let q=0;q<3;q++)c.fillRect(36+q*14,-54,8,7);c.fillStyle='#d62828';c.fillRect(8,-66,14,22);c.fillStyle='#111';c.fillRect(8,-66,14,5)}
 /* ---------- slides ---------- */
 const S=[
-{cls:'cin',html:`<canvas width=960 height=540></canvas><i class=bar></i><i class=bar></i><div class=ct><p id=cA style="top:12%">Why does a giant steel ship float…</p><p id=cB style="top:30%">…while a tiny iron nail sinks?</p><p id=cC style="top:12%">In our daily life many objects float — <b>logs, ships</b>, etc. — while some objects sink, like <b>nails, stones</b>, etc.</p><div id=cT><button onclick="go(1)" style="font-size:18px;padding:10px 26px">Begin the lesson ▶</button></div></div><div class=cb><button onclick="vf=0;ST[0].t0=null">↻ Replay</button><button onclick="vf=1;ST[0].t0=null">🎙 Play voice</button><button onclick="go(1)">Skip ▶</button></div>`,d:intro},
+{cls:'cin',html:`<canvas width=960 height=540></canvas><i class=bar></i><i class=bar></i><div class=ct><p id=cA style="top:12%">Why does a giant steel ship float…</p><p id=cB style="top:30%">…while a tiny iron nail sinks?</p><p id=cC style="top:12%">In our daily life many objects float — <b>logs, ships</b>, etc. — while some objects sink, like <b>nails, stones</b>, etc.</p><div id=cT><button onclick="go(2)" style="font-size:18px;padding:10px 26px">Begin the lesson ▶</button></div></div><div class=cb><button onclick="vf=0;ST[1].t0=null">↻ Replay</button><button onclick="vf=1;ST[1].t0=null">🎙 Play voice</button><button onclick="go(2)">Skip ▶</button></div>`,d:intro},
 {t:'The answer is hidden in the Eureka story of Archimedes',p:"<b>Syracuse, about 250 BC.</b> King Hiero gave a goldsmith pure gold to make a crown. He suspected the goldsmith kept some gold and mixed in cheaper silver, but the crown must not be damaged. He asked Archimedes to find out.<br><br>Weight alone could not tell, and the crown's odd shape made its volume impossible to measure. Then, while stepping into a full bath, Archimedes noticed the water spilling over — <b>the spilled water had the same volume as the part of his body under water.</b><br><br>Gold is denser than silver, so a fake crown of the same mass has a bigger volume and pushes out more water. He ran home shouting <b>“Eureka!”</b>",eq:'Volume of water displaced = Volume of the body immersed',d:eureka},
 {t:"Archimedes' Principle &amp; Upthrust",p:"<b>Upthrust:</b> when a body is partly or fully immersed in a fluid, the fluid pushes it upward with a force called upthrust (the buoyant force).<br><b>Archimedes' Principle:</b> the upthrust on a body equals the weight of the fluid displaced by it. It acts vertically upward through the centre of gravity of the displaced fluid.",eq:'F<sub>b</sub> = weight of fluid displaced<br>F<sub>b</sub> = m<sub>f</sub> g = ρ<sub>f</sub> V<sub>sub</sub> g<br><small style="font-size:12px">ρ<sub>f</sub> = fluid density (kg/m³) · V<sub>sub</sub> = submerged volume (m³) · g = 9.8 m/s² · F<sub>b</sub> in newton (N)</small>',
  c:[{id:'sub',l:'Fraction of body submerged',min:0,max:100,val:40,u:'%'}],
@@ -227,10 +229,11 @@ const S=[
 {cls:'wide',html:`<div class=qz style="max-width:900px"><h2>9. Thank You · Q&amp;A</h2><img src="https://drive.google.com/thumbnail?id=15CtHQEH8KBv73_erJyIJ9lWK9X3IB7lE&sz=w1600" alt="Thank you" style="width:100%;max-height:calc(100vh - 230px);object-fit:contain;border-radius:14px;border:1px solid #94a3b8;margin-top:12px" onerror="var n=this.dataset.n=(+this.dataset.n||0)+1,u=['https://lh3.googleusercontent.com/d/15CtHQEH8KBv73_erJyIJ9lWK9X3IB7lE=w1600','https://drive.google.com/uc?export=view&amp;id=15CtHQEH8KBv73_erJyIJ9lWK9X3IB7lE'];if(u[n-1])this.src=u[n-1];else{this.insertAdjacentHTML('afterend','<p style=color:#475569>Image could not load. In Google Drive set sharing to Anyone with the link.</p>');this.remove()}"></div>`}
 ];
 S.splice(8,0,S.splice(5,1)[0]);S.splice(8,0,S.splice(6,1)[0]);[S[5],S[7]]=[S[7],S[5]];
+S.unshift({cls:'bis',html:'<div class=ar dir=rtl lang=ar>بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>'});
 /* ---------- engine ---------- */
 const deck=$('#deck'),V=S.map(()=>({})),ST=S.map(()=>({})),secs=[];let cur=0;
 S.forEach((s,i)=>{const e=document.createElement('section');e.className='sl'+(s.cls?' '+s.cls:'');
- e.innerHTML=s.html||`<div class=vw><canvas width=600 height=360></canvas></div><div class=R><h2>${i}. ${s.t}</h2><p>${s.p}</p><div class=eq>${s.eq}</div><div class=ctl></div><div class=pre></div><div class=out></div><figure></figure></div>`;
+ e.innerHTML=s.html||`<div class=vw><canvas width=600 height=360></canvas></div><div class=R><h2>${i-1}. ${s.t}</h2><p>${s.p}</p><div class=eq>${s.eq}</div><div class=ctl></div><div class=pre></div><div class=out></div><figure></figure></div>`;
  deck.append(e);secs.push(e);if(!s.c)return;
  const upd=()=>{if(s.o)e.querySelector('.out').innerHTML=s.o(V[i])};
  s.c.forEach(k=>{V[i][k.id]=k.val;const l=document.createElement('label');l.innerHTML=`<span>${k.l}</span><b></b>`;const r=document.createElement('input');r.type='range';r.min=k.min;r.max=k.max;r.step=k.step||1;r.value=k.val;r.id='r'+i+k.id;
@@ -238,8 +241,8 @@ S.forEach((s,i)=>{const e=document.createElement('section');e.className='sl'+(s.
  (s.pre||[]).forEach(([n,o])=>{const b=document.createElement('button');b.textContent=n;b.onclick=()=>{for(const k in o){const r=$('#r'+i+k);r.value=o[k];r.oninput()}sfx('bub')};e.querySelector('.pre').append(b)});
  const m=MEDIA[i];if(m)e.querySelector('figure').innerHTML=`<img src="${m.img}" alt="${m.cap}" loading=lazy onerror="this.closest('figure').remove()"><figcaption>${m.cap} · Wikimedia Commons</figcaption>`});
 
-{const b=document.createElement('button');b.textContent='🎙 Play voice';b.onclick=()=>{vf=1;vplay(2)};secs[1].querySelector('.pre').append(b)}
-secs[7].querySelector('figure').innerHTML='<video controls loop playsinline preload="metadata" src="https://github.com/studywithstem/studywithstem.github.io/raw/refs/heads/main/posts/video1.mp4" style="width:100%;border-radius:10px;margin-top:12px;background:#000"></video><figcaption>Video: how a submarine dives and surfaces</figcaption>';
+{const b=document.createElement('button');b.textContent='🎙 Play voice';b.onclick=()=>{vf=1;vplay(2)};secs[2].querySelector('.pre').append(b)}
+secs[8].querySelector('figure').innerHTML='<video controls loop playsinline preload="metadata" src="https://github.com/studywithstem/studywithstem.github.io/raw/refs/heads/main/posts/video1.mp4" style="width:100%;border-radius:10px;margin-top:12px;background:#000"></video><figcaption>Video: how a submarine dives and surfaces</figcaption>';
 /* ---------- 3D scenes (Three.js). Each returns tanks of liquid with objects; physics = Archimedes ---------- */
 const M3={
 2:v=>{const f=v.sub/100;return{cap:'The body is held at a set depth. Spilled water collects in the second beaker.',tanks:[{x:-1.8,rf:1000,h0:1.6,fixed:1,lab:'Overflow can',objs:[{rho:2000,h:1,col:0x9aa7b4,f,noA:1}]},{x:1.8,rf:1000,h0:.05,extra:f,lab:'Displaced '+(f*200).toFixed(0)+' mL',objs:[]}]}},
@@ -247,7 +250,7 @@ const M3={
 6:v=>({cap:'Fill the ballast tanks and the submarine glides down; blow them out and it rises.',tanks:[{x:0,rf:1000,h0:1.9,lab:'ρ sub '+(900+2*v.fill),objs:[{rho:900+2*v.fill,h:.55,sx:1.5,sz:.55,sf:.52,shape:'sph',col:0x4b5563}]}]}),
 7:v=>{const a=v.air/100;return{cap:'Same steel, different shape. The grey hull encloses a pale block of air.',tanks:[{x:0,R:1.8,rf:1000,h0:1.9,lab:'Hull vs nail',objs:[{rho:7800*(1-a),h:.6,sx:1.3,sz:.9,x:.45,col:0xb3261e,air:a},{rho:7800,h:.1,sx:1,sz:.1,x:-.8,col:0x7f8a94}]}]}},
 };
-{const m={2:2,5:3,6:7,7:5},N={};for(const k in M3)N[m[k]]=M3[k];for(const k in M3)delete M3[k];Object.assign(M3,N)}
+{const m={2:3,5:4,6:8,7:6},N={};for(const k in M3)N[m[k]]=M3[k];for(const k in M3)delete M3[k];Object.assign(M3,N)}
 const on3={},R3={};
 
 function drag(el,s){let dx=null;el.onpointerdown=e=>{dx=[e.clientX,e.clientY];s.auto=0};addEventListener('pointerup',()=>dx=null);
@@ -294,7 +297,7 @@ for(const k in M3){const i=+k,e=secs[i].querySelector('.vw'),cv=e.querySelector(
  tg.innerHTML='<button class=a>2D diagram</button><button>3D view · drag to rotate, scroll to zoom</button>';const[b2,b3]=tg.children;
  b2.onclick=()=>{on3[i]=0;cv.hidden=false;t3.hidden=true;b2.className='a';b3.className=''};b3.onclick=()=>{on3[i]=1;cv.hidden=true;t3.hidden=false;b3.className='a';b2.className=''};e.append(t3,tg,cp)}
 document.querySelectorAll('.cd').forEach(c=>c.onclick=()=>sfx(c.dataset.k));
-function go(n){n=Math.max(0,Math.min(S.length-1,n));if(n!=cur){sfx('splash');stopV();vf=0;if(n==1)vplay(2)}cur=n;secs.forEach((e,i)=>{e.classList.toggle('on',i==n);e.classList.toggle('p',i<n)});$('#pg').textContent=(n+1)+' / '+S.length}
+function go(n){n=Math.max(0,Math.min(S.length-1,n));if(n!=cur){sfx('splash');stopV();vf=0;if(n==2)vplay(2)}cur=n;secs.forEach((e,i)=>{e.classList.toggle('on',i==n);e.classList.toggle('p',i<n)});$('#pg').textContent=(n+1)+' / '+S.length}
 $('#pv').onclick=()=>go(cur-1);$('#nx').onclick=()=>go(cur+1);addEventListener('keydown',e=>{if(e.key=='ArrowRight')go(cur+1);if(e.key=='ArrowLeft')go(cur-1)});
 (function loop(t){const s=S[cur],cv=secs[cur].querySelector('canvas');if(on3[cur]){try{r3(cur)}catch(e){console.error(e);on3[cur]=0;const q=secs[cur];q.querySelector('canvas').hidden=false;q.querySelector('.t3').hidden=true;q.querySelector('.cap').textContent='3D view could not start on this device; showing the 2D diagram.'}}else if(cv&&s.d){const c=cv.getContext('2d');c.clearRect(0,0,600,360);s.d(c,V[cur],t/1000,ST[cur])}requestAnimationFrame(loop)})(0);
 go(0);
