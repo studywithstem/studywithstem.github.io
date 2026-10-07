@@ -55,15 +55,15 @@ const $=s=>document.querySelector(s);
 /* ---------- media: swap/add Wikimedia Commons file names (or any URL). Failed loads hide themselves ---------- */
 const CM=f=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(f)+'?width=500';
 const MEDIA={4:{img:CM('Cappadocia Balloon Inflating Wikimedia Commons.jpg'),cap:'A hot air balloon being inflated'},
- 7:{img:CM('Emma Maersk 2.jpg'),cap:'A steel container ship — it floats!'}};
+ 5:{img:CM('Emma Maersk 2.jpg'),cap:'A steel container ship — it floats!'}};
 /* ---------- audio (synthesised, no files) ---------- */
 let ac,on=0,amb;const AC=()=>ac||(ac=new(window.AudioContext||window.webkitAudioContext)());
 function noise(d,f,v,loop){const a=AC(),n=a.sampleRate*d,b=a.createBuffer(1,n,a.sampleRate),x=b.getChannelData(0);for(let i=0;i<n;i++)x[i]=Math.random()*2-1;const s=a.createBufferSource();s.buffer=b;s.loop=!!loop;const fl=a.createBiquadFilter();fl.type='lowpass';fl.frequency.value=f;const g=a.createGain();g.gain.setValueAtTime(v,a.currentTime);if(!loop)g.gain.exponentialRampToValueAtTime(.001,a.currentTime+d);s.connect(fl);fl.connect(g);g.connect(a.destination);s.start();return s}
 function sfx(k){if(!on)return;if(k=='splash')return noise(.6,1800,.35);const a=AC(),o=a.createOscillator(),g=a.createGain(),t=a.currentTime,d=k=='ding';o.connect(g);g.connect(a.destination);o.frequency.setValueAtTime(d?880:300,t);o.frequency.exponentialRampToValueAtTime(d?1320:900,t+.15);g.gain.setValueAtTime(.2,t);g.gain.exponentialRampToValueAtTime(.001,t+.25);o.start(t);o.stop(t+.3)}
 $('#snd').onclick=()=>{on=!on;$('#snd').textContent=on?'🔊 Sound on':'🔇 Sound off';if(on){amb=noise(2,500,.05,1);sfx('splash')}else amb&&amb.stop()};
 /* ---------- voice-over (mp3). Header toggle = autoplay On/Off; "Play voice" buttons play on demand ---------- */
-const VB='https://github.com/studywithstem/studywithstem.github.io/raw/refs/heads/main/posts/audio/';
-const VO=['voice%201','voice%202','voice%203'].map(n=>{const a=new Audio(VB+n+'.mp3');a.preload='auto';return a});
+const VB='https://github.com/studywithstem/studywithstem.github.io/raw/refs/heads/main/posts/';
+const VO=['1','2','3'].map(n=>{const a=new Audio(VB+n+'.mp3');a.preload='auto';return a});
 let vm=1,vf=0,blk=0;
 function stopV(){VO.forEach(a=>{a.pause();try{a.currentTime=0}catch(e){}})}
 function vplay(k){stopV();if(!(vm||vf))return;VO[k].play().catch(()=>{blk=1})}
@@ -82,7 +82,7 @@ function fd(id,T,a,b,c2,d2,keep){const e=document.getElementById(id);if(!e)retur
 function intro(c,v,t,st){const wl=300,fl=500,cl=(x,a,b)=>Math.max(a,Math.min(b,x));
  if(st.t0==null||t-(st.last||0)>.4){st.t0=t;st.pt=t;stopV();st.v1=st.v2=0;st.p=[];st.rp=[];st.b=[];st.o=[{k:'log',x:250,t:3.6,r:17,rest:wl-4},{k:'ship',x:480,t:4.6,r:24,rest:wl-8},{k:'nail',x:690,t:5.8,r:6},{k:'stone',x:810,t:6.8,r:30}].map(o=>({...o,y:-90,vy:0}))}
  st.last=t;const T=t-st.t0,dt=Math.min(.05,t-st.pt);st.pt=t;
- if(T>=.5&&!st.v1){st.v1=1;vplay(0)}if(T>=9.4&&!st.v2){st.v2=1;vplay(1)}fd('cA',T,.5,1.6,8.4,9.2);fd('cB',T,2,3,8.4,9.2);fd('cC',T,9.4,10.4,21.4,22.2);fd('cT',T,22.4,23.4,0,0,1);
+ if(T>=.5&&!st.v1){st.v1=1;vplay(0)}if(T>=8&&!st.v2){st.v2=1;vplay(1)}fd('cA',T,.5,1.6,7,7.8);fd('cB',T,2,3,7,7.8);fd('cC',T,8,9,17.5,18.3);fd('cT',T,18.5,19.5,0,0,1);
  st.o.forEach(o=>{if(T<o.t)return;const sk=!o.rest;
   if(!o.hit){o.vy+=900*dt;o.y+=o.vy*dt;if(o.y>wl-8){o.hit=1;const sp=Math.min(o.vy,700);st.rp.push({x:o.x,r:6,l:1});for(let i=0;i<16;i++)st.p.push({x:o.x+(Math.random()-.5)*30,y:wl,vx:(Math.random()-.5)*160,vy:-sp*(.25+Math.random()*.4),l:1});sfx('splash')}}
   else{o.vy+=(sk?260-o.vy*2.4:(o.rest-o.y)*45-o.vy*4.5)*dt;o.y+=o.vy*dt;if(sk&&o.y>fl-o.r){o.y=fl-o.r;o.vy=0}if(sk&&o.vy>20&&Math.random()<.2)st.b.push({x:o.x+(Math.random()-.5)*10,y:o.y,l:1})}});
@@ -106,7 +106,7 @@ function intro(c,v,t,st){const wl=300,fl=500,cl=(x,a,b)=>Math.max(a,Math.min(b,x
  st.p=st.p.filter(q=>(q.l-=dt*1.4)>0);st.p.forEach(q=>{q.vy+=600*dt;q.x+=q.vx*dt;q.y+=q.vy*dt;c.fillStyle='rgba(255,255,255,'+q.l+')';c.beginPath();c.arc(q.x,q.y,2.5,0,7);c.fill()});
  st.rp=st.rp.filter(q=>(q.l-=dt*.7)>0);st.rp.forEach(q=>{q.r+=70*dt;c.strokeStyle='rgba(255,255,255,'+q.l*.7+')';c.beginPath();c.ellipse(q.x,wl+2,q.r,q.r*.18,0,0,7);c.stroke()});
  st.b=st.b.filter(q=>(q.l-=dt*.6)>0);st.b.forEach(q=>{q.y-=40*dt;c.strokeStyle='rgba(255,255,255,'+q.l+')';c.lineWidth=1.5;c.beginPath();c.arc(q.x,q.y,3,0,7);c.stroke()});
- const la=cl((T-8.6)/1,0,1)*(T<21.4?1:cl(1-(T-21.4)/.8,0,1));if(la>0){c.globalAlpha=la;c.font='bold 26px Georgia';c.textAlign='center';c.shadowColor='#000';c.shadowBlur=10;
+ const la=cl((T-8.6)/1,0,1)*(T<17.5?1:cl(1-(T-17.5)/.8,0,1));if(la>0){c.globalAlpha=la;c.font='bold 26px Georgia';c.textAlign='center';c.shadowColor='#000';c.shadowBlur=10;
   [['Log · floats',250,wl-60,'#9be7a8'],['Ship · floats',480,wl-110,'#9be7a8'],['Nail · sinks',690,fl-60,'#ff9b8f'],['Stone · sinks',810,fl-80,'#ff9b8f']].forEach(([s,x,y,k])=>{c.fillStyle=k;c.fillText(s,x,y)});c.shadowBlur=0;c.globalAlpha=1}
  c.restore();g=c.createRadialGradient(480,270,220,480,270,600);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,.6)');c.fillStyle=g;c.fillRect(0,0,960,540);c.fillStyle='rgba(0,0,0,'+cl(1-T/1.2,0,1)+')';c.fillRect(0,0,960,540)}
 /* ---------- Eureka bathtub animation (16 s loop) ---------- */
@@ -226,7 +226,7 @@ const S=[
  o:v=>{const rw=q=>1000*(1-(q+288.9414)/(508929.2*(q+68.12963))*Math.pow(q-3.9863,2)),a=rw(v.th),b=rw(v.tc),f=rw(v.tf);return `ρ hot ${a.toFixed(1)} · cold ${b.toFixed(1)} · fresh ${f.toFixed(1)} kg/m³<br>Compared with cold water the ship draws <b>${((b/a-1)*100).toFixed(1)}% more</b> in hot water and ${((b/f-1)*100).toFixed(1)}% more in fresh water (real values).`}},
 {cls:'wide',html:`<div class=qz style="max-width:900px"><h2>9. Thank You · Q&amp;A</h2><img src="https://drive.google.com/thumbnail?id=15CtHQEH8KBv73_erJyIJ9lWK9X3IB7lE&sz=w1600" alt="Thank you" style="width:100%;max-height:calc(100vh - 230px);object-fit:contain;border-radius:14px;border:1px solid #164e63;margin-top:12px" onerror="var n=this.dataset.n=(+this.dataset.n||0)+1,u=['https://lh3.googleusercontent.com/d/15CtHQEH8KBv73_erJyIJ9lWK9X3IB7lE=w1600','https://drive.google.com/uc?export=view&amp;id=15CtHQEH8KBv73_erJyIJ9lWK9X3IB7lE'];if(u[n-1])this.src=u[n-1];else{this.insertAdjacentHTML('afterend','<p style=color:#7aa2c8>Image could not load. In Google Drive set sharing to Anyone with the link.</p>');this.remove()}"></div>`}
 ];
-S.splice(8,0,S.splice(5,1)[0]);S.splice(8,0,S.splice(6,1)[0]);
+S.splice(8,0,S.splice(5,1)[0]);S.splice(8,0,S.splice(6,1)[0]);[S[5],S[7]]=[S[7],S[5]];
 /* ---------- engine ---------- */
 const deck=$('#deck'),V=S.map(()=>({})),ST=S.map(()=>({})),secs=[];let cur=0;
 S.forEach((s,i)=>{const e=document.createElement('section');e.className='sl'+(s.cls?' '+s.cls:'');
@@ -239,6 +239,7 @@ S.forEach((s,i)=>{const e=document.createElement('section');e.className='sl'+(s.
  const m=MEDIA[i];if(m)e.querySelector('figure').innerHTML=`<img src="${m.img}" alt="${m.cap}" loading=lazy onerror="this.closest('figure').remove()"><figcaption>${m.cap} · Wikimedia Commons</figcaption>`});
 
 {const b=document.createElement('button');b.textContent='🎙 Play voice';b.onclick=()=>{vf=1;vplay(2)};secs[1].querySelector('.pre').append(b)}
+secs[7].querySelector('figure').innerHTML='<video controls loop playsinline preload="metadata" src="https://github.com/studywithstem/studywithstem.github.io/raw/refs/heads/main/posts/video1.mp4" style="width:100%;border-radius:10px;margin-top:12px;background:#000"></video><figcaption>Video: how a submarine dives and surfaces</figcaption>';
 /* ---------- 3D scenes (Three.js). Each returns tanks of liquid with objects; physics = Archimedes ---------- */
 const M3={
 2:v=>{const f=v.sub/100;return{cap:'The body is held at a set depth. Spilled water collects in the second beaker.',tanks:[{x:-1.8,rf:1000,h0:1.6,fixed:1,lab:'Overflow can',objs:[{rho:2000,h:1,col:0x9aa7b4,f,noA:1}]},{x:1.8,rf:1000,h0:.05,extra:f,lab:'Displaced '+(f*200).toFixed(0)+' mL',objs:[]}]}},
@@ -246,7 +247,7 @@ const M3={
 6:v=>({cap:'Fill the ballast tanks and the submarine glides down; blow them out and it rises.',tanks:[{x:0,rf:1000,h0:1.9,lab:'ρ sub '+(900+2*v.fill),objs:[{rho:900+2*v.fill,h:.55,sx:1.5,sz:.55,sf:.52,shape:'sph',col:0x4b5563}]}]}),
 7:v=>{const a=v.air/100;return{cap:'Same steel, different shape. The grey hull encloses a pale block of air.',tanks:[{x:0,R:1.8,rf:1000,h0:1.9,lab:'Hull vs nail',objs:[{rho:7800*(1-a),h:.6,sx:1.3,sz:.9,x:.45,col:0xb3261e,air:a},{rho:7800,h:.1,sx:1,sz:.1,x:-.8,col:0x7f8a94}]}]}},
 };
-{const m={2:2,5:3,6:5,7:7},N={};for(const k in M3)N[m[k]]=M3[k];for(const k in M3)delete M3[k];Object.assign(M3,N)}
+{const m={2:2,5:3,6:7,7:5},N={};for(const k in M3)N[m[k]]=M3[k];for(const k in M3)delete M3[k];Object.assign(M3,N)}
 const on3={},R3={};
 
 function drag(el,s){let dx=null;el.onpointerdown=e=>{dx=[e.clientX,e.clientY];s.auto=0};addEventListener('pointerup',()=>dx=null);
